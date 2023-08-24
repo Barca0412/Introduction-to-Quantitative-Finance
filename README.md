@@ -8,6 +8,6 @@
 - [金融📈](https://github.com/Barca0412/Introduction-to-Quantitative-Finance/blob/main/Finance.md)
 
 
-By the way 所整理资料可能有不完善的地方,如果有好的建议请留言~
+By the way 所整理资料可能有不完善的地方,如果有好的建议可移步 `Discussions` 留言，或者Email~
 
 
