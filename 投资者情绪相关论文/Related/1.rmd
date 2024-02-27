@@ -1,0 +1,33 @@
+,--
+,,tle: "圆圆"
+author: "齐国皓"
+date: "2022-10-02"
+output: html_document
+---
+
+```{r}
+
+id <- sample(1:17,8)
+d1 <- data.frame(
+  name=c("Alice Chen","Boris Lee","Carlo Cheung","David Wong","Elisa Ho","Flora Au","George,, Chow","Helen Wu","Ivan Ma","Jack Mak","Kevin Chen"),
+  acc_no=c(87441,96205,51649,41692,53681,35460,80733,54406,87636,43973,92221),
+  sex=c('f','m','f','m','f','f','m','f','m','m','m'),
+  age=c(23,30,19,21,18,23,29,25,31,27,25)
+)
+
+
+write.csv(d1,"C:/Users/1/Desktop/dddd.csv")
+
+getwd()
+```
+
+```{r}
+library(RODBC)
+
+z <- odbcConnectExcel2007("C:/Users/1/Desktop/data/value effect.xls")
+data <- sqlFetch(z,"Sheet1")
+data
+?attach
+
+```
+
