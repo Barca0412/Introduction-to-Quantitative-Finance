@@ -1,0 +1,93 @@
+技术指标编写说明：
+此说明需配合邢不行—各类技术指标合集共同使用。
+
+技术指标公式名词解释：
+OPEN：开盘价
+HIGH：最高价
+CLOSE：收盘价
+LOW：最低价
+
+
+基础指标运算（取整列数据运算）
+假设条件为取每天的收盘价/成交量/开盘价
+table['收盘价']
+table['成交量']
+table['开盘价']
+假设条件为 CLOSE + OPEN 
+table['结果'] = table['收盘价'] + table['开盘价']
+假设条件为 CLOSE / OPEN 
+table['结果'] = table['收盘价'] / table['开盘价']
+
+
+REF(X,N)：N 天前 X 的值，比如 REF(CLOSE,4) 为 4 天前的收盘价
+假设条件为 REF(收盘价,4）
+table['4日前收盘价'] = table['收盘价'].shift(4)
+
+
+IF(COND,A,B)：如果满足条件 COND 则取值为 A，否则为 B
+假设条件为 IF(收盘价>开盘价，收盘价，开盘价)
+table.loc[table['收盘价'] > table['开盘价'], '结果'] = table['收盘价']
+table.loc[table['收盘价'] <= table['开盘价'], '结果'] = table['开盘价']
+
+
+SUM(X,N)：过去 N 天指标 X 的和
+假设条件为 SUM(成交量，10)
+table['10日收盘价总和'] = table['成交量'].rolling(10).sum()
+
+
+CUMSUM(X)：X 的累积和
+假设条件为 CUMSUM('成交量')
+table['成交量累计和'] = table['成交量'].cumsum()
+
+
+MAX(X,N)：过去 N 天指标 X 的最大值
+假设条件为 MAX(收盘价，10)
+table['10日收盘价最大值'] = table['收盘价'].rolling(10).max()
+
+
+MIN(X,N)：过去 N 天指标 X 的最小值
+假设条件为 MIN(收盘价，10)
+table['10日收盘价最小值'] = table['收盘价'].rolling(10).min()
+
+
+MAX(A,B,...)：A,B,...中最大的值
+假设条件为 MAX(开盘价，收盘价)
+table['最大值'] = table[['开盘价','收盘价']].max(axis=1)
+
+
+MIN(A,B,...)：A,B,...中最小的值
+假设条件为 MIN(开盘价，收盘价)
+table['最小值'] = table[['开盘价','收盘价']].min(axis=1)
+
+
+ABS(X)：X 的绝对值
+假设条件为 ABS(收盘价-开盘价)
+table['绝对值'] = abs(table['收盘价'] - table['开盘价'])
+
+
+MA(X,N)：移动平均线，即过去 N 天 X 的平均值
+假设条件为 MA(收盘价,5)
+table['MA'] = table['收盘价'].rolling(5).mean()
+
+
+EMA(X,N)：指数移动平均线，EMA=2/(N+1)* X+(N-1)/(N+1)*REF(EMA,1)
+假设条件为 EMA(收盘价,10)
+table['EMA'] = table['收盘价'].ewm(span=10, adjust=False).mean()
+
+
+SMA(X,N,M)：简单移动平均线，SMA=M/N*X+(N-M)/N*REF(SMA,1)
+假设条件为 SMA(收盘价,10,3)
+table['SMA'] = table['收盘价'].ewm(span=(10-3), adjust=False).mean()
+
+
+WMA(X,N)：加权移动平均线，WMA=(N*X+(N-1)*REF(X,1)+...+1*REF(X,N-1))/(N+1)*N/2)
+假设条件为 WMA(收盘价,10)
+table['WMA'] = table['收盘价'].rolling(10).apply(lambda x: x[::-1].cumsum().sum() * 2 / 10 / (10 + 1))
+
+
+DMA(X,a)：动态移动平均线，DMA=a*X+(1-a)*REF(X,1)
+假设条件为 DMA(收盘价,10)
+table['DMA'] = table['收盘价'] * 10 + (1 - 10) * table['收盘价'].shift(1)
+
+
+
