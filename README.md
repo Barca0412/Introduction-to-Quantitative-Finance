@@ -9,6 +9,12 @@
 - 投资者情绪与行为金融相关论文🎲
 - ...
 
+待添加：
+- 量化笔试、MFE刷题📕
+- 组合优化🔢
+- 机器学习因子挖掘💻
+- ...
+
 <!-- 
 入门资料大致分成三个部分,可点进对应的子页面浏览
 - [编程与算法👨‍💻](https://github.com/Barca0412/Introduction-to-Quantitative-Finance/blob/main/Programming%20and%20Algorithm.md)
