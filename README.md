@@ -7,7 +7,7 @@
 - 技术指标回测代码👨‍💻
 - 卖方金工研报📈
 - 投资者情绪与行为金融相关论文🎲
-- 量化研究实习中的代码知识（比较零散）：https://github.com/Barca0412/Note-for-Programming
+- [量化研究实习中的代码知识（比较杂乱）](https://github.com/Barca0412/Note-for-Programming)
 - ...
 
 待添加：
