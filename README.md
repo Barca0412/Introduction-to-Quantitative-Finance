@@ -23,40 +23,33 @@
 
 <a id="section2"></a>
 # 公开资料整理
-## 数据源与数据集
-- [聚宽:JQData](https://github.com/JoinQuant/jqdatasdk)
-- [米筐投资](https://www.ricequant.com/welcome/datahub)
-- [Tushare数据](https://tushare.pro/)
-- [AKShare数据](https://akshare.akfamily.xyz/introduction.html)
-- [SmoothNLP金融文本数据集](https://github.com/smoothnlp/FinancialDatasets)
-- ...
 
-## 回测框架
-- [backtrader](https://github.com/mementum/backtrader)
-- [backtrader中文教程](https://github.com/jrothschild33/learn_backtrader)
-- [Qlib](https://github.com/microsoft/qlib)
-- [QUANTAXIS 2.0.0](https://github.com/yutiansut/QUANTAXIS)
-- [QuantLib: the free/open-source library for quantitative finance](https://github.com/lballabio/QuantLib)
-- ...
+
+## [数据源与另类数据](Introduction-to-Quantitative-Finance-1\数据源与另类数据.md)
+- 点击跳转
+
+
+## [回测框架相关](Introduction-to-Quantitative-Finance-1\回测.md)
+- 点击跳转
+
+
+
+## [因子挖掘与评估](Introduction-to-Quantitative-Finance-1\因子挖掘.md)
+- 点击跳转
+
+
+
+## [因子组合]()
+- 点击跳转
+
+## [投资组合优化与风控]()
+
+
+
+
 
 ## Quant项目
 - https://github.com/chaosquant2022/ML-Quant
-- ...
-
-## 算法因子挖掘
-- [gplearn](https://github.com/Barca0412/gplearn)
-- [Deap]()
-- [geppy](https://github.com/Barca0412/geppy)
-- [基于基因表达式规划算法的因子挖掘](https://github.com/jiangtiantu/FactorMining)
-- [gplearn_cross_factor](https://github.com/Barca0412/gplearn_cross_factor)
-- [GPLearn_Finance3D](https://github.com/Barca0412/GPLearnFinance3D)
-- [gpquant](https://github.com/Barca0412/gpquant)
-- ...
-
-
-# 风控
-- [Barra CNE6](https://github.com/ShiliangZhang-nku/Barra_CNE6)
-- [Barra-Multiple-factor-risk-model](https://github.com/hansihuang2016/Barra-Multiple-factor-risk-model)
 - ...
 
 ## 高频交易
