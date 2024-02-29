@@ -25,16 +25,16 @@
 # 公开资料整理
 
 
-## [数据源与另类数据](Introduction-to-Quantitative-Finance-1\数据源与另类数据.md)
+## [数据源与另类数据](https://github.com/Barca0412/Introduction-to-Quantitative-Finance/blob/main/%E6%95%B0%E6%8D%AE%E6%BA%90%E4%B8%8E%E5%8F%A6%E7%B1%BB%E6%95%B0%E6%8D%AE.md)
 - 点击跳转
 
 
-## [回测框架相关](Introduction-to-Quantitative-Finance-1\回测.md)
+## [回测框架相关](https://github.com/Barca0412/Introduction-to-Quantitative-Finance/blob/main/%E5%9B%9E%E6%B5%8B.md)
 - 点击跳转
 
 
 
-## [因子挖掘与评估](Introduction-to-Quantitative-Finance-1\因子挖掘.md)
+## [因子挖掘与评估](https://github.com/Barca0412/Introduction-to-Quantitative-Finance/blob/main/%E5%9B%A0%E5%AD%90%E6%8C%96%E6%8E%98.md)
 - 点击跳转
 
 
@@ -42,8 +42,8 @@
 ## [因子组合]()
 - 点击跳转
 
-## [投资组合优化与风控]()
-
+## [投资组合优化与风控](https://github.com/Barca0412/Introduction-to-Quantitative-Finance/blob/main/%E6%8A%95%E8%B5%84%E7%BB%84%E5%90%88%E4%BC%98%E5%8C%96%E4%B8%8E%E9%A3%8E%E6%8E%A7.md)
+- 点击跳转
 
 
 
