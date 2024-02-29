@@ -6,7 +6,7 @@
 | 欢迎star，欢迎一同contribute
 
 <a id="section1"></a>
-# 我的资料[上传中]
+# 我的资料
 暂时包括：
 - 量化金融、机器学习、数学参考书与资料📐
 - 技术指标回测代码👨‍💻
@@ -45,7 +45,8 @@
 ## [投资组合优化与风控](https://github.com/Barca0412/Introduction-to-Quantitative-Finance/blob/main/%E6%8A%95%E8%B5%84%E7%BB%84%E5%90%88%E4%BC%98%E5%8C%96%E4%B8%8E%E9%A3%8E%E6%8E%A7.md)
 - 点击跳转
 
-
+## [基金研究与FoF]()
+- 点击跳转
 
 
 ## Quant项目
@@ -57,6 +58,7 @@
 - [hummingbot:high-frequency crypto trading bots](https://github.com/hummingbot/hummingbot)
 - [tribeca:A high frequency, market making cryptocurrency trading platform](https://github.com/michaelgrosner/tribeca)
 - ...
+
    
 ## 基金研究
 - [FundCombination](https://github.com/MrDujing/FundCombination)
@@ -83,14 +85,20 @@
   - [Finominal](https://finominal.com/?country=US)
   - ...
 
-## 课程
+## 课程&学习
 - [金融大数据量化分析](https://github.com/plouto-quants/FBDQA-2019A)
 - [人大：《金融计量与量化策略分析》《量化投资交易策略分析与系统设计》](https://github.com/xhlgogo/Quantitative-Investment-Trading-system)
 - [Datawhale量化开源课程](https://github.com/datawhalechina/whale-quant)
-- []()
+- ...
 
 ## 一些工具[暂存]
-- 
+- [Connected papers](https://www.connectedpapers.com/)
+- [from Data to Viz](https://www.data-to-viz.com/)
+- [Python Graph Gallery](https://python-graph-gallery.com/)
+- [Z-library](https://z-library.se/?signAll=1&ts=0441&afterGeoRedirection=1)
+- [查金融工作论文:SSRN](https://www.ssrn.com/index.cfm/en/)
+- [arxiv](https://arxiv.org/)
+- ...
 
 
 
@@ -101,6 +109,10 @@
 - [金融📈](https://github.com/Barca0412/Introduction-to-Quantitative-Finance/blob/main/Finance.md)
 -->
 
-By the way 所整理资料可能有不完善的地方,如果有好的建议可移步 `Discussions` 留言，或者Email~
+-----
+
+By the way 所整理资料可能有不完善的地方,如有好的建议可移步 `Discussions` 留言
+
+或联系：📫Email：qgh124430@hnu.edu.cn, 📞Wechat：qgh985695077
 
 
