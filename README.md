@@ -23,7 +23,7 @@
 
 <div align="center">
   <br>
-  <img src="./pic/image.png" alt="图片描述" style="width: 60%;">
+  <img src="./pic/image.png" alt="图片描述" style="width: 90%;">
   <br> <br>
 </div>
 
