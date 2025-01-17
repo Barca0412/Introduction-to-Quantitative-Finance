@@ -1,5 +1,9 @@
 # 量化研究入门资料
 
+
+ ![visitors](https://visitor-badge.laobi.icu/badge?page_id=Barca0412.Barca0412)
+![Visitors](https://img.shields.io/badge/dynamic/json?color=blue&label=Visitors&query=value&url=https://api.countapi.xyz/hit/Barca0412/Introduction-to-Quantitative-Finance)
+
 目录：
 
 - [基于多因子股票量化投研框架的开源教程](#基于多因子股票量化投研框架的开源教程)
