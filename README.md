@@ -11,11 +11,18 @@
 
 -----
 
-
+<!--
 <div align="center">
   <p>欢迎star，欢迎一同contribute</p>
   <img src="./pic/star-history-2025116.png" alt="图片描述" style="width: 60%;">
   <br> <br>
+</div>
+-->
+
+<div align="center">
+ <p>欢迎star，欢迎一同contribute</p>
+  <img src="https://api.star-history.com/svg?repos=Barca0412/Introduction-to-Quantitative-Finance&type=Date" alt="Star History Chart" width="60%">
+ <br> <br>
 </div>
 
 <a id="基于多因子股票量化投研框架的开源教程"></a>
