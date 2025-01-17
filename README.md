@@ -20,30 +20,23 @@
 -->
 
 <div align="center">
-  <p>欢迎star，欢迎一同contribute</p>
+  <p>欢迎star⭐，欢迎一同contribute</p>
 </div>
 
-<div align="center">
+<div align="center" style="margin: 0 10%;">
   <table>
     <tr>
-      <td align="center">
+      <td align="center" width="50%">
         <a href='https://clustrmaps.com/site/1c3vp' title='Visit tracker'>
-          <img src='//clustrmaps.com/map_v2.png?cl=68a9f2&w=a&t=tt&d=EA5lZ0x62vTuH0tg8sz-qVIdoH8GwwB_J3Vo24wAVTk&co=ffffff&ct=000000'/>
+          <img src='https://clustrmaps.com/map_v2.png?cl=68a9f2&w=a&t=tt&d=EA5lZ0x62vTuH0tg8sz-qVIdoH8GwwB_J3Vo24wAVTk&co=ffffff&ct=000000' style="width: 60%; max-width: 300px;"/>
         </a>
       </td>
-      <td align="center">
-        <img src="https://api.star-history.com/svg?repos=Barca0412/Introduction-to-Quantitative-Finance&type=Date" alt="Star History Chart" width="60%">
+      <td align="center" width="50%">
+        <img src="https://api.star-history.com/svg?repos=Barca0412/Introduction-to-Quantitative-Finance&type=Date" alt="Star History Chart" style="width: 100%; max-width: 300px;"/>
       </td>
     </tr>
   </table>
 </div>
-
-
-
-
-<a href='https://clustrmaps.com/site/1c3vp'  title='Visit tracker'><img src='//clustrmaps.com/map_v2.png?cl=68a9f2&w=a&t=tt&d=EA5lZ0x62vTuH0tg8sz-qVIdoH8GwwB_J3Vo24wAVTk&co=ffffff&ct=000000'/></a>
-
-
 
 
 
