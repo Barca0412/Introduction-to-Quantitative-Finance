@@ -2,7 +2,7 @@
 
 
  ![visitors](https://visitor-badge.laobi.icu/badge?page_id=Barca0412.Introduction-to-Quantitative-Finance)
-![visitors](https://visitor-badge.laobi.icu/badge?page_id=Barca0412.Introduction-to-Quantitative-Finance)
+![Total Visitors](https://img.shields.io/badge/dynamic/json?color=blue&label=Total+Visitors&query=value&url=https://api.countapi.xyz/hit/Barca0412/Introduction-to-Quantitative-Finance)
 
 目录：
 
