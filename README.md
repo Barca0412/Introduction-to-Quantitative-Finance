@@ -1,4 +1,4 @@
-# 量化研究入门资料(走过路过给个star！感谢朋友们)
+# 量化研究入门资料 (走过路过给个star！感谢朋友们)
 
 
  ![visitors](https://visitor-badge.laobi.icu/badge?page_id=Barca0412.Introduction-to-Quantitative-Finance)
