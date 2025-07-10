@@ -8,7 +8,7 @@
 - [基于多因子股票量化投研框架的开源教程](#基于多因子股票量化投研框架的开源教程)
 - [我的资料](#section1)
 - [公开资料整理](#section2)
-
+- 即将周频更新**arXiv**和**SSRN** (Social Science Research Network)上**Asset Pricing、Behavioral Finance以及LLM in Quant**的论文！欢迎大家关注，如果想一起build欢迎私聊我~
 -----
 
 <!--
