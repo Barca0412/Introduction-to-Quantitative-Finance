@@ -26,21 +26,21 @@
 <div align="center" style="margin: 0 10%;">
   <table>
     <tr>
-      <td align="center" width="50%">
+      <td align="center" width="33%">
         <a href='https://clustrmaps.com/site/1c3vp' title='Visit tracker'>
           <img src='https://clustrmaps.com/map_v2.png?cl=68a9f2&w=a&t=tt&d=EA5lZ0x62vTuH0tg8sz-qVIdoH8GwwB_J3Vo24wAVTk&co=ffffff&ct=000000' style="width: 60%; max-width: 300px;"/>
         </a>
       </td>
-      <td align="center" width="50%">
+      <td align="center" width="33%">
+        <img width="341"  alt="image" src="https://github.com/user-attachments/assets/60a940e6-88b6-4c6d-ae86-6c125085ca14" />
+      </td>
+      <td align="center" width="33%">
         <img src="https://api.star-history.com/svg?repos=Barca0412/Introduction-to-Quantitative-Finance&type=Date" alt="Star History Chart" style="width: 100%; max-width: 300px;"/>
       </td>
     </tr>
   </table>
  <br> <br>
 </div>
-
-
-
 
 
 
