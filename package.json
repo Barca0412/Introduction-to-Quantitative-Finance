@@ -1,0 +1,18 @@
+{
+  "name": "quant-finance-docs",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "量化研究入门资料 - VitePress 文档站",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+    "arxiv:crawl": "python scripts/arxiv_crawler.py",
+    "arxiv:process": "python scripts/paper_processor.py",
+    "arxiv:generate": "python scripts/generate_daily.py",
+    "arxiv:update": "npm run arxiv:crawl && npm run arxiv:process && npm run arxiv:generate"
+  },
+  "devDependencies": {
+    "vitepress": "^1.3.4"
+  }
+}

@@ -1,0 +1,6 @@
+# arXiv crawler and paper processing dependencies
+# No external dependencies required - uses Python standard library only
+# 
+# Optional: For enhanced LLM processing, you can use:
+# openai>=1.0.0
+# httpx>=0.25.0

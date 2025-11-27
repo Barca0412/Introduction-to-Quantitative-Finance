@@ -1,0 +1,71 @@
+name: Daily arXiv Update
+
+on:
+  schedule:
+    # 每天 UTC 8:00 运行 (北京时间 16:00)
+    - cron: '0 8 * * *'
+  workflow_dispatch: # 允许手动触发
+
+jobs:
+  update-papers:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Crawl arXiv papers
+        run: python scripts/arxiv_crawler.py
+      
+      - name: Process papers with LLM
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_API_BASE: ${{ secrets.OPENAI_API_BASE }}
+          LLM_MODEL: ${{ secrets.LLM_MODEL }}
+        run: python scripts/paper_processor.py
+        continue-on-error: true  # LLM 处理失败不阻塞流程
+      
+      - name: Generate daily markdown
+        run: python scripts/generate_daily.py
+      
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update arXiv papers for ${{ github.event.repository.updated_at }}"
+          file_pattern: |
+            data/papers/*.json
+            data/papers/processed/*.json
+            docs/arxiv/**/*.md
+
+  build-docs:
+    needs: update-papers
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm install
+      
+      - name: Build VitePress
+        run: npm run docs:build
+      
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs/.vitepress/dist
