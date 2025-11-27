@@ -4,6 +4,8 @@ export default defineConfig({
   title: '量化研究入门',
   description: '基于多因子股票量化投研框架的开源教程',
   lang: 'zh-CN',
+  ignoreDeadLinks: true,
+  base: '/Introduction-to-Quantitative-Finance/',
   
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }]
