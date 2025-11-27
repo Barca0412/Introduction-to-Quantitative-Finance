@@ -1,5 +1,19 @@
 import { defineConfig } from 'vitepress'
 
+// 共享的快速导航配置
+const quickNav = {
+  text: '快速导航',
+  items: [
+    { text: '入门指南', link: '/guide/' },
+    { text: '数据源与另类数据', link: '/data/' },
+    { text: '因子挖掘', link: '/factors/' },
+    { text: '回测框架', link: '/backtest/' },
+    { text: '投资组合优化', link: '/portfolio/' },
+    { text: 'arXiv 日报', link: '/arxiv/' },
+    { text: '公开资源', link: '/resources/' }
+  ]
+}
+
 export default defineConfig({
   title: '量化研究入门',
   description: '基于多因子股票量化投研框架的开源教程',
@@ -33,17 +47,7 @@ export default defineConfig({
             { text: '多因子投研框架', link: '/guide/framework' }
           ]
         },
-        {
-          text: '快速导航',
-          items: [
-            { text: '数据源与另类数据', link: '/data/' },
-            { text: '因子挖掘', link: '/factors/' },
-            { text: '回测框架', link: '/backtest/' },
-            { text: '投资组合优化', link: '/portfolio/' },
-            { text: 'arXiv 日报', link: '/arxiv/' },
-            { text: '公开资源', link: '/resources/' }
-          ]
-        }
+        quickNav
       ],
       '/data/': [
         {
@@ -51,7 +55,8 @@ export default defineConfig({
           items: [
             { text: '概述', link: '/data/' }
           ]
-        }
+        },
+        quickNav
       ],
       '/factors/': [
         {
@@ -63,7 +68,8 @@ export default defineConfig({
             { text: '机器学习因子', link: '/factors/ml-factors' },
             { text: 'LLM因子挖掘', link: '/factors/llm-factors' }
           ]
-        }
+        },
+        quickNav
       ],
       '/backtest/': [
         {
@@ -71,7 +77,8 @@ export default defineConfig({
           items: [
             { text: '概述', link: '/backtest/' }
           ]
-        }
+        },
+        quickNav
       ],
       '/portfolio/': [
         {
@@ -79,7 +86,8 @@ export default defineConfig({
           items: [
             { text: '概述', link: '/portfolio/' }
           ]
-        }
+        },
+        quickNav
       ],
       '/arxiv/': [
         {
@@ -88,7 +96,8 @@ export default defineConfig({
             { text: '论文索引', link: '/arxiv/' },
             { text: '标签分类', link: '/arxiv/tags/' }
           ]
-        }
+        },
+        quickNav
       ],
       '/resources/': [
         {
@@ -96,7 +105,17 @@ export default defineConfig({
           items: [
             { text: '资源汇总', link: '/resources/' }
           ]
-        }
+        },
+        quickNav
+      ],
+      '/sentiment/': [
+        {
+          text: '投资者情绪',
+          items: [
+            { text: '概述', link: '/sentiment/' }
+          ]
+        },
+        quickNav
       ]
     },
 
