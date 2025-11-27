@@ -32,6 +32,25 @@ export default defineConfig({
             { text: '简介', link: '/guide/' },
             { text: '多因子投研框架', link: '/guide/framework' }
           ]
+        },
+        {
+          text: '快速导航',
+          items: [
+            { text: '数据源与另类数据', link: '/data/' },
+            { text: '因子挖掘', link: '/factors/' },
+            { text: '回测框架', link: '/backtest/' },
+            { text: '投资组合优化', link: '/portfolio/' },
+            { text: 'arXiv 日报', link: '/arxiv/' },
+            { text: '公开资源', link: '/resources/' }
+          ]
+        }
+      ],
+      '/data/': [
+        {
+          text: '数据源',
+          items: [
+            { text: '概述', link: '/data/' }
+          ]
         }
       ],
       '/factors/': [
