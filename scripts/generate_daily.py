@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 生成每日论文 Markdown 页面
-输出到 AI金融论文整理/ 目录 (用于 GitHub README 展示)
+输出到 论文/AI金融论文整理/ 目录 (用于 GitHub README 展示)
 """
 
 import json
@@ -15,23 +15,42 @@ DATA_DIR = PROJECT_ROOT / "data" / "papers" / "processed"
 RAW_DATA_DIR = PROJECT_ROOT / "data" / "papers"
 OUTPUT_DIR = PROJECT_ROOT / "论文" / "AI金融论文整理"
 
-# 标签到分类的映射
+# 扩展的标签到分类映射
 TAG_CATEGORIES = {
-    "LLM": "LLM in Quant",
-    "NLP": "LLM in Quant",
-    "Sentiment Analysis": "LLM in Quant",
+    # LLM & Agent
+    "LLM": "LLM & Agent",
+    "NLP": "LLM & Agent",
+    "Sentiment Analysis": "LLM & Agent",
+    "Financial Agent": "LLM & Agent",
+    # 资产定价
     "Asset Pricing": "Asset Pricing",
+    "Factor Model": "Asset Pricing",
+    "Anomaly": "Asset Pricing",
+    # 因子挖掘
     "Factor Mining": "Factor Mining",
+    # 行为金融
     "Behavioral Finance": "Behavioral Finance",
-    "Portfolio Optimization": "Portfolio & Risk",
-    "Risk Management": "Portfolio & Risk",
+    "Investor Sentiment": "Behavioral Finance",
+    # 机器学习
     "Deep Learning": "Machine Learning",
     "Reinforcement Learning": "Machine Learning",
     "Time Series": "Machine Learning",
-    "High Frequency": "Market Microstructure",
-    "Market Microstructure": "Market Microstructure",
-    "Volatility": "Derivatives & Volatility",
-    "Options": "Derivatives & Volatility",
+    "Graph Neural Network": "Machine Learning",
+    "Transformer": "Machine Learning",
+    # 投资组合与风控
+    "Portfolio Optimization": "Portfolio & Risk",
+    "Risk Management": "Portfolio & Risk",
+    # 交易与市场微观结构
+    "Algorithmic Trading": "Trading & Microstructure",
+    "High Frequency": "Trading & Microstructure",
+    "Market Microstructure": "Trading & Microstructure",
+    "Execution": "Trading & Microstructure",
+    "Market Making": "Trading & Microstructure",
+    # 衍生品
+    "Volatility": "Derivatives",
+    "Options": "Derivatives",
+    # 其他
+    "Benchmark": "Benchmark & Evaluation",
     "Quantitative Finance": "Other",
 }
 
@@ -92,7 +111,6 @@ def generate_daily_page(date: str = None):
     if date is None:
         date = datetime.now().strftime("%Y-%m-%d")
     
-    # 优先读取处理后的数据
     input_file = DATA_DIR / f"{date}.json"
     if not input_file.exists():
         input_file = RAW_DATA_DIR / f"{date}.json"
@@ -107,11 +125,9 @@ def generate_daily_page(date: str = None):
         print(f"No papers to generate for {date}")
         return None
     
-    # 创建输出目录
     daily_dir = OUTPUT_DIR / "daily"
     daily_dir.mkdir(parents=True, exist_ok=True)
     
-    # 生成 Markdown
     md = f"""# {date} AI+金融论文日报
 
 > 共收录 **{len(papers)}** 篇论文 | [返回索引](../README.md)
@@ -121,14 +137,15 @@ def generate_daily_page(date: str = None):
     categorized = categorize_papers(papers)
     
     category_order = [
-        "LLM in Quant",
+        "LLM & Agent",
         "Asset Pricing",
         "Factor Mining",
         "Machine Learning",
         "Portfolio & Risk",
         "Behavioral Finance",
-        "Market Microstructure",
-        "Derivatives & Volatility",
+        "Trading & Microstructure",
+        "Derivatives",
+        "Benchmark & Evaluation",
         "Other",
     ]
     
@@ -138,14 +155,12 @@ def generate_daily_page(date: str = None):
             for paper in categorized[category]:
                 md += generate_paper_markdown(paper)
     
-    # 写入文件
     output_file = daily_dir / f"{date}.md"
     with open(output_file, 'w', encoding='utf-8') as f:
         f.write(md)
     
     print(f"Generated: {output_file}")
     
-    # 更新索引
     update_main_index()
     
     return output_file
@@ -155,12 +170,10 @@ def update_main_index():
     """更新主索引页面"""
     daily_dir = OUTPUT_DIR / "daily"
     
-    # 收集所有日期页面
     daily_files = sorted(daily_dir.glob("*.md"), reverse=True)
     
-    # 读取论文统计
     stats = []
-    for f in daily_files[:30]:  # 最近30天
+    for f in daily_files[:30]:
         date = f.stem
         try:
             data_file = DATA_DIR / f"{date}.json"
@@ -182,7 +195,8 @@ def update_main_index():
 
 - 📰 **每日更新**: 自动抓取 q-fin、cs.LG+finance 相关论文
 - 🤖 **智能分析**: 使用大模型生成中文摘要和关键贡献
-- 🏷️ **主题分类**: Asset Pricing、LLM、Factor Mining、RL 等标签
+- 🏷️ **主题分类**: LLM & Agent、Asset Pricing、Factor Mining、RL、Trading 等标签
+- 🔄 **增量更新**: 自动去重，只处理新论文
 
 ---
 
@@ -200,11 +214,15 @@ def update_main_index():
 
 ## 🏷️ 主题分类
 
-- [LLM in Quant](./topics/llm.md) - 大语言模型在量化中的应用
-- [Asset Pricing](./topics/asset-pricing.md) - 资产定价
+- [LLM & Agent](./topics/llm-agent.md) - 大语言模型与金融智能体
+- [Asset Pricing](./topics/asset-pricing.md) - 资产定价与因子模型
 - [Factor Mining](./topics/factor-mining.md) - 因子挖掘
-- [Machine Learning](./topics/machine-learning.md) - 机器学习方法
+- [Machine Learning](./topics/machine-learning.md) - 机器学习方法 (DL/RL/GNN/Transformer)
 - [Portfolio & Risk](./topics/portfolio-risk.md) - 投资组合与风险管理
+- [Trading & Microstructure](./topics/trading.md) - 交易与市场微观结构
+- [Behavioral Finance](./topics/behavioral-finance.md) - 行为金融学
+- [Derivatives](./topics/derivatives.md) - 衍生品与波动率
+- [Benchmark](./topics/benchmark.md) - 基准测试与评估
 
 ---
 
@@ -219,9 +237,9 @@ def update_main_index():
 
 
 def main():
-    print("=" * 50)
+    print("=" * 60)
     print(f"Daily Page Generator - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    print("=" * 50)
+    print("=" * 60)
     
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     

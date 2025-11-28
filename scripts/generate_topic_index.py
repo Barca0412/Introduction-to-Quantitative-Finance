@@ -15,17 +15,17 @@ DATA_DIR = PROJECT_ROOT / "data" / "papers" / "processed"
 RAW_DATA_DIR = PROJECT_ROOT / "data" / "papers"
 OUTPUT_DIR = PROJECT_ROOT / "论文" / "AI金融论文整理" / "topics"
 
-# 主题配置
+# 扩展的主题配置
 TOPICS = {
-    "llm": {
-        "title": "LLM in Quant",
-        "description": "大语言模型在量化金融中的应用",
-        "tags": ["LLM", "NLP", "Sentiment Analysis"],
+    "llm-agent": {
+        "title": "LLM & Agent",
+        "description": "大语言模型与金融智能体在量化金融中的应用",
+        "tags": ["LLM", "NLP", "Sentiment Analysis", "Financial Agent"],
     },
     "asset-pricing": {
         "title": "Asset Pricing",
-        "description": "资产定价相关研究",
-        "tags": ["Asset Pricing"],
+        "description": "资产定价、因子模型与市场异象研究",
+        "tags": ["Asset Pricing", "Factor Model", "Anomaly"],
     },
     "factor-mining": {
         "title": "Factor Mining",
@@ -34,23 +34,33 @@ TOPICS = {
     },
     "machine-learning": {
         "title": "Machine Learning",
-        "description": "机器学习在量化中的应用",
-        "tags": ["Deep Learning", "Reinforcement Learning", "Time Series"],
+        "description": "机器学习在量化金融中的应用，包括深度学习、强化学习、图神经网络、Transformer等",
+        "tags": ["Deep Learning", "Reinforcement Learning", "Time Series", "Graph Neural Network", "Transformer"],
     },
     "portfolio-risk": {
         "title": "Portfolio & Risk",
         "description": "投资组合优化与风险管理",
         "tags": ["Portfolio Optimization", "Risk Management"],
     },
+    "trading": {
+        "title": "Trading & Microstructure",
+        "description": "交易策略、市场微观结构与高频交易",
+        "tags": ["Algorithmic Trading", "High Frequency", "Market Microstructure", "Execution", "Market Making"],
+    },
     "behavioral-finance": {
         "title": "Behavioral Finance",
-        "description": "行为金融学",
-        "tags": ["Behavioral Finance"],
+        "description": "行为金融学与投资者情绪",
+        "tags": ["Behavioral Finance", "Investor Sentiment"],
     },
-    "market-microstructure": {
-        "title": "Market Microstructure",
-        "description": "市场微观结构与高频交易",
-        "tags": ["High Frequency", "Market Microstructure"],
+    "derivatives": {
+        "title": "Derivatives",
+        "description": "衍生品定价与波动率建模",
+        "tags": ["Volatility", "Options"],
+    },
+    "benchmark": {
+        "title": "Benchmark & Evaluation",
+        "description": "金融AI基准测试与模型评估",
+        "tags": ["Benchmark"],
     },
 }
 
@@ -59,7 +69,6 @@ def load_all_papers() -> list:
     """加载所有论文数据"""
     all_papers = []
     
-    # 从处理后的数据加载
     for json_file in sorted(DATA_DIR.glob("*.json"), reverse=True):
         try:
             with open(json_file, 'r', encoding='utf-8') as f:
@@ -70,7 +79,6 @@ def load_all_papers() -> list:
         except:
             continue
     
-    # 如果没有处理后的数据，从原始数据加载
     if not all_papers:
         for json_file in sorted(RAW_DATA_DIR.glob("*.json"), reverse=True):
             if json_file.parent.name == "processed":
@@ -84,7 +92,6 @@ def load_all_papers() -> list:
             except:
                 continue
     
-    # 去重
     seen = set()
     unique = []
     for p in all_papers:
@@ -108,6 +115,11 @@ def generate_paper_entry(paper: dict) -> str:
         authors += " et al."
     md += f"**作者**: {authors}\n\n"
     
+    tags = paper.get("tags", [])[:4]
+    if tags:
+        tag_str = " ".join([f"`{tag}`" for tag in tags])
+        md += f"**标签**: {tag_str}\n\n"
+    
     if paper.get("chinese_summary"):
         md += f"{paper['chinese_summary']}\n\n"
     
@@ -118,26 +130,27 @@ def generate_paper_entry(paper: dict) -> str:
 def generate_topic_page(topic_id: str, topic_config: dict, papers: list):
     """生成单个主题页面"""
     
-    # 筛选相关论文
     relevant_papers = []
     for paper in papers:
         paper_tags = paper.get("tags", [])
-        paper_cats = paper.get("categories", [])
         
-        # 检查标签匹配
         for tag in topic_config["tags"]:
             if tag in paper_tags:
                 relevant_papers.append(paper)
                 break
     
     if not relevant_papers:
-        return
-    
-    # 按日期排序
-    relevant_papers.sort(key=lambda x: x.get("source_date", ""), reverse=True)
-    
-    # 生成 Markdown
-    md = f"""# {topic_config['title']}
+        md = f"""# {topic_config['title']}
+
+{topic_config['description']}
+
+> 暂无相关论文 | [返回索引](../README.md)
+
+"""
+    else:
+        relevant_papers.sort(key=lambda x: x.get("source_date", ""), reverse=True)
+        
+        md = f"""# {topic_config['title']}
 
 {topic_config['description']}
 
@@ -146,31 +159,29 @@ def generate_topic_page(topic_id: str, topic_config: dict, papers: list):
 ---
 
 """
+        
+        for paper in relevant_papers[:100]:
+            md += generate_paper_entry(paper)
     
-    for paper in relevant_papers[:50]:  # 限制数量
-        md += generate_paper_entry(paper)
-    
-    # 写入文件
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     output_file = OUTPUT_DIR / f"{topic_id}.md"
     
     with open(output_file, 'w', encoding='utf-8') as f:
         f.write(md)
     
-    print(f"Generated topic: {output_file} ({len(relevant_papers)} papers)")
+    count = len(relevant_papers) if relevant_papers else 0
+    print(f"Generated topic: {output_file} ({count} papers)")
 
 
 def main():
-    print("=" * 50)
+    print("=" * 60)
     print(f"Topic Index Generator - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    print("=" * 50)
+    print("=" * 60)
     
-    # 加载所有论文
     print("\nLoading papers...")
     all_papers = load_all_papers()
     print(f"Total papers: {len(all_papers)}")
     
-    # 生成各主题页面
     print("\nGenerating topic pages...")
     for topic_id, topic_config in TOPICS.items():
         generate_topic_page(topic_id, topic_config, all_papers)
