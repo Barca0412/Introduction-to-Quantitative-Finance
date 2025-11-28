@@ -1,0 +1,50 @@
+name: Daily arXiv Update
+
+on:
+  schedule:
+    # 每天 UTC 8:00 运行 (北京时间 16:00)
+    - cron: '0 8 * * *'
+  workflow_dispatch: # 允许手动触发
+
+jobs:
+  update-papers:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: pip install openai
+      
+      - name: Crawl arXiv papers
+        run: python scripts/arxiv_crawler.py
+      
+      - name: Process papers with LLM
+        env:
+          ARK_API_KEY: ${{ secrets.ARK_API_KEY }}
+        run: python scripts/paper_processor.py
+        continue-on-error: true
+      
+      - name: Generate daily markdown
+        run: python scripts/generate_daily.py
+      
+      - name: Generate topic index
+        run: python scripts/generate_topic_index.py
+      
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update arXiv papers for $(date +'%Y-%m-%d')"
+          branch: main
+          file_pattern: |
+            data/papers/*.json
+            data/papers/processed/*.json
+            AI金融论文整理/**/*.md

@@ -1,0 +1,619 @@
+[
+  {
+    "id": "2511.21556v1",
+    "title": "Informative Risk Measuresin the Banking Industry: A Proposal based on the Magnitude-Propensity Approach",
+    "abstract": "Despite decades of research in risk management, most of the literature has focused on scalar risk measures (like e.g. Value-at-Risk and Expected Shortfall). While such scalar measures provide compact and tractable summaries, they provide a poor informative value as they miss the intrinsic multivariate nature of risk.To contribute to a paradigmatic enhancement, and building on recent theoretical work by Faugeras and Pagés (2024), we propose a novel multivariate representation of risk that better reflects the structure of potential portfolio losses, while maintaining desirable properties of interpretability and analytical coherence. The proposed framework extends the classical frequency-severity approach and provides a more comprehensive characterization of extreme events. Several empirical applications based on real-world data demonstrate the feasibility, robustness and practical relevance of the methodology, suggesting its potential for both regulatory and managerial applications.",
+    "authors": [
+      "Michele Bonollo",
+      "Martino Grasselli",
+      "Gianmarco Mori",
+      "Havva Nilsu Oz"
+    ],
+    "published": "2025-11-26",
+    "categories": [
+      "q-fin.RM",
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.21556v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.21556v1",
+    "fetched_at": "2025-11-28T09:33:32.378535"
+  },
+  {
+    "id": "2511.21515v1",
+    "title": "The Quantum Network of Assets: A Non-Classical Framework for Market Correlation and Structural Risk",
+    "abstract": "Classical correlation matrices capture only linear and pairwise co-movements, leaving higher-order, nonlinear, and state-dependent interactions of financial markets unrepresented. This paper introduces the Quantum Network of Assets (QNA), a density-matrix based framework that embeds cross-asset dependencies into a quantum-information representation. The approach does not assume physical quantum effects but uses the mathematical structure of density operators, entropy, and mutual information to describe market organisation at a structural level.   Within this framework we define two structural measures: the Entanglement Risk Index (ERI), which summarises global non-separability and the compression of effective market degrees of freedom, and the Quantum Early-Warning Signal (QEWS), which tracks changes in entropy to detect latent information build-up. These measures reveal dependency geometry that classical covariance-based tools cannot capture.   Using NASDAQ-100 data from 2024-2025, we show that quantum entropy displays smoother evolution and clearer regime distinctions than classical entropy, and that ERI rises during periods of structural tightening even when volatility remains low. Around the 2025 US tariff announcement, QEWS shows a marked pre-event increase in structural tension followed by a sharp collapse after the announcement, indicating that structural transitions can precede price movements without implying predictive modelling.   QNA therefore provides a structural diagnostic of market fragility, regime shifts, and latent information flow. The framework suggests new directions for systemic risk research by linking empirical asset networks with tools from quantum information theory.",
+    "authors": [
+      "Hui Gong",
+      "Akash Sharma",
+      "Francesca Medda"
+    ],
+    "published": "2025-11-26",
+    "categories": [
+      "q-fin.RM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.21515v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.21515v1",
+    "fetched_at": "2025-11-28T09:33:32.378569"
+  },
+  {
+    "id": "2511.21221v1",
+    "title": "Portfolio Optimization via Transfer Learning",
+    "abstract": "Recognizing that asset markets generally exhibit shared informational characteristics, we develop a portfolio strategy based on transfer learning that leverages cross-market information to enhance the investment performance in the market of interest by forward validation. Our strategy asymptotically identifies and utilizes the informative datasets, selectively incorporating valid information while discarding the misleading information. This enables our strategy to achieve the maximum Sharpe ratio asymptotically. The promising performance is demonstrated by numerical studies and case studies of two portfolios: one consisting of stocks dual-listed in A-shares and H-shares, and another comprising equities from various industries of the United States.",
+    "authors": [
+      "Kexin Wang",
+      "Xiaomeng Zhang",
+      "Xinyu Zhang"
+    ],
+    "published": "2025-11-26",
+    "categories": [
+      "q-fin.PM",
+      "stat.AP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.21221v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.21221v1",
+    "fetched_at": "2025-11-28T09:33:32.378587"
+  },
+  {
+    "id": "2511.20837v1",
+    "title": "Constrained deep learning for pricing and hedging european options in incomplete markets",
+    "abstract": "In incomplete financial markets, pricing and hedging European options lack a unique no-arbitrage solution due to unhedgeable risks. This paper introduces a constrained deep learning approach to determine option prices and hedging strategies that minimize the Profit and Loss (P&L) distribution around zero. We employ a single neural network to represent the option price function, with its gradient serving as the hedging strategy, optimized via a loss function enforcing the self-financing portfolio condition. A key challenge arises from the non-smooth nature of option payoffs (e.g., vanilla calls are non-differentiable at-the-money, while digital options are discontinuous), which conflicts with the inherent smoothness of standard neural networks. To address this, we compare unconstrained networks against constrained architectures that explicitly embed the terminal payoff condition, drawing inspiration from PDE-solving techniques. Our framework assumes two tradable assets: the underlying and a liquid call option capturing volatility dynamics. Numerical experiments evaluate the method on simple options with varying non-smoothness, the exotic Equinox option, and scenarios with market jumps for robustness. Results demonstrate superior P&L distributions, highlighting the efficacy of constrained networks in handling realistic payoffs. This work advances machine learning applications in quantitative finance by integrating boundary constraints, offering a practical tool for pricing and hedging in incomplete markets.",
+    "authors": [
+      "Nicolas Baradel"
+    ],
+    "published": "2025-11-25",
+    "categories": [
+      "q-fin.CP",
+      "stat.ML"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.20837v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.20837v1",
+    "fetched_at": "2025-11-28T09:33:32.378600"
+  },
+  {
+    "id": "2511.20606v2",
+    "title": "Limit Order Book Dynamics in Matching Markets: Microstructure, Spread, and Execution Slippage",
+    "abstract": "Conventional models of matching markets assume that monetary transfers can clear markets by compensating for utility differentials. However, empirical patterns show that such transfers often fail to close structural preference gaps. This paper introduces a market microstructure framework that models matching decisions as a limit order book system with rigid bid ask spreads. Individual preferences are represented by a latent preference state matrix, where the spread between an agent's internal ask price (the unconditional maximum) and the market's best bid (the reachable maximum) creates a structural liquidity constraint. We establish a Threshold Impossibility Theorem showing that linear compensation cannot close these spreads unless it induces a categorical identity shift. A dynamic discrete choice execution model further demonstrates that matches occur only when the market to book ratio crosses a time decaying liquidity threshold, analogous to order execution under inventory pressure. Numerical experiments validate persistent slippage, regional invariance of preference orderings, and high tier zero spread executions. The model provides a unified microstructure explanation for matching failures, compensation inefficiency, and post match regret in illiquid order driven environments.",
+    "authors": [
+      "Yao Wu"
+    ],
+    "published": "2025-11-25",
+    "categories": [
+      "q-fin.TR",
+      "cs.MA",
+      "cs.SI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.20606v2",
+    "arxiv_url": "https://arxiv.org/abs/2511.20606v2",
+    "fetched_at": "2025-11-28T09:33:32.378612"
+  },
+  {
+    "id": "2511.19826v1",
+    "title": "Efficient Importance Sampling under Heston Model: Short Maturity and Deep Out-of-the-Money Options",
+    "abstract": "This paper investigates asymptotically optimal importance sampling (IS) schemes for pricing European call options under the Heston stochastic volatility model. We focus on two distinct rare-event regimes where standard Monte Carlo methods suffer from significant variance deterioration: the limit as maturity approaches zero and the limit as the strike price tends to infinity. Leveraging the large deviation principle (LDP), we design a state-dependent change of measure derived from the asymptotic behavior of the log-price cumulant generating functions. In the short-maturity regime, we rigorously prove that our proposed IS drift, inspired by the variational characterization of the rate function, achieves logarithmic efficiency (asymptotic optimality) by minimizing the decay rate of the second moment of the estimator. In the deep OTM regime, we introduce a novel slow mean-reversion scaling for the variance process, where the mean-reversion speed scales as the inverse square of the small-noise parameter (defined as the reciprocal of the log-moneyness). We establish that under this specific scaling, the variance process contributes non-trivially to the large deviation rate function, requiring a specialized Riccati analysis to verify optimality. Numerical experiments demonstrate that the proposed method yields substantial variance reduction--characterized by factors exceeding several orders of magnitude--compared to standard estimators in both asymptotic regimes.",
+    "authors": [
+      "Yun-Feng Tu",
+      "Chuan-Hsiang Han"
+    ],
+    "published": "2025-11-25",
+    "categories": [
+      "q-fin.MF",
+      "math.PR",
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.19826v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.19826v1",
+    "fetched_at": "2025-11-28T09:33:32.378625"
+  },
+  {
+    "id": "2511.19701v1",
+    "title": "Optimal dividend and capital injection under self-exciting claims",
+    "abstract": "In this paper, we study an optimal dividend and capital-injection problem in a Cramér--Lundberg model where claim arrivals follow a Hawkes process, capturing clustering effects often observed in insurance portfolios. We establish key analytical properties of the value function and characterise the optimal capital-injection strategy through an explicit threshold. We also show that the value function is the unique viscosity solution of the associated HJB variational inequality. For numerical purposes, we first compute a benchmark solution via a monotone finite-difference scheme with Howard's policy iteration. We then develop a reinforcement learning approach based on policy-gradient and actor-critic methods. The learned strategies closely match the PDE benchmark and remain stable across initial conditions. The results highlight the relevance of policy-gradient techniques for dividend optimisation under self-exciting claim dynamics and point toward scalable methods for higher-dimensional extensions.",
+    "authors": [
+      "Paulin Aubert",
+      "Etienne Chevalier",
+      "Vathana Ly Vath"
+    ],
+    "published": "2025-11-24",
+    "categories": [
+      "math.OC",
+      "math.PR",
+      "q-fin.RM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.19701v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.19701v1",
+    "fetched_at": "2025-11-28T09:33:32.378639"
+  },
+  {
+    "id": "2511.19186v1",
+    "title": "Carbon-Penalised Portfolio Insurance Strategies in a Stochastic Factor Model with Partial Information",
+    "abstract": "Given the increasing importance of environmental, social and governance (ESG) factors, particularly carbon emissions, we investigate optimal proportional portfolio insurance (PPI) strategies accounting for carbon footprint reduction. PPI strategies enable investors to mitigate downside risk while retaining the potential for upside gains. This paper aims to determine the multiplier of the PPI strategy to maximise the expected utility of the terminal cushion, where the terminal cushion is penalised proportionally to the realised volatility of stocks issued by firms operating in carbon-intensive sectors. We model the risky assets' dynamics using geometric Brownian motions whose drift rates are modulated by an unobservable common stochastic factor to capture market-specific or economy-wide state variables that are typically not directly observable. Using classical stochastic filtering theory, we formulate a suitable optimization problem and solve it for CRRA utility function. We characterise optimal carbon penalised PPI strategies and optimal value functions under full and partial information and quantify the loss of utility due incomplete information. Finally, we carry a numerical analysis showing that the proposed strategy reduces carbon emission intensity without compromising financial performance.",
+    "authors": [
+      "Katia Colaneri",
+      "Federico D'Amario",
+      "Daniele Mancinelli"
+    ],
+    "published": "2025-11-24",
+    "categories": [
+      "q-fin.PM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.19186v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.19186v1",
+    "fetched_at": "2025-11-28T09:33:32.378652"
+  },
+  {
+    "id": "2511.18804v1",
+    "title": "Sentiment Analysis of Financial Text Using Quantum Language Processing QDisCoCirc",
+    "abstract": "We apply quantum distributional compositional circuit (QDisCoCirc) to 3-class sentiment analysis of financial text. In our classical simulations, we keep the Hilbert-space dimension manageable by decomposing each sentence into short contiguous chunks. Each chunk is mapped to a shallow quantum circuit, and the resulting Bloch vectors are used as a sequence of quantum tokens. Simple averaging of chunk vectors ignores word order and syntactic roles. We therefore add a small Transformer encoder over the raw Bloch-vector sequence and attach a CCG-based type embedding to each chunk. This hybrid design preserves physically interpretable semantic axes of quantum tokens while allowing the classical side to model word order and long-range dependencies. The sequence model improves test macro-F1 over the averaging baseline and chunk-level attribution further shows that evidential mass concentrates on a small number of chunks, that type embeddings are used more reliably for correctly predicted sentences. For real-world quantum language processing applications in finance, future key challenges include circuit designs that avoid chunking and the design of inter-chunk fusion layers.",
+    "authors": [
+      "Takayuki Sakuma"
+    ],
+    "published": "2025-11-24",
+    "categories": [
+      "q-fin.GN"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.18804v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.18804v1",
+    "fetched_at": "2025-11-28T09:33:32.378663"
+  },
+  {
+    "id": "2511.18614v1",
+    "title": "A calibrated model of debt recycling with interest costs and tax shields: viability under different fiscal regimes and jurisdictions",
+    "abstract": "Debt recycling is a leveraged equity management strategy in which homeowners use accumulated home equity to finance investments, applying the resulting returns to accelerate mortgage repayment. We propose a novel framework to model equity and mortgage dynamics in presence of mortgage interest rates, borrowing costs on equity-backed credit lines, and tax shields arising from interest deductibility. The model is calibrated on three jurisdictions -- Australia, Germany, and Switzerland -- representing diverse interest rate environments and fiscal regimes. Results demonstrate that introducing positive interest rates without tax shields contracts success regions and lengthens repayment times, while tax shields partially reverse these effects by reducing effective borrowing costs and adding equity boosts from mortgage interest deductibility. Country-specific outcomes vary systematically, and rental properties consistently outperform owner-occupied housing due to mortgage interest deductibility provisions.",
+    "authors": [
+      "Carlo von der Osten",
+      "Sabrina Aufiero",
+      "Pierpaolo Vivo",
+      "Fabio Caccioli",
+      "Silvia Bartolucci"
+    ],
+    "published": "2025-11-23",
+    "categories": [
+      "q-fin.RM",
+      "cond-mat.stat-mech",
+      "econ.GN"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.18614v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.18614v1",
+    "fetched_at": "2025-11-28T09:33:32.378679"
+  },
+  {
+    "id": "2511.18578v1",
+    "title": "Re(Visiting) Time Series Foundation Models in Finance",
+    "abstract": "Financial time series forecasting is central to trading, portfolio optimization, and risk management, yet it remains challenging due to noisy, non-stationary, and heterogeneous data. Recent advances in time series foundation models (TSFMs), inspired by large language models, offer a new paradigm for learning generalizable temporal representations from large and diverse datasets. This paper presents the first comprehensive empirical study of TSFMs in global financial markets. Using a large-scale dataset of daily excess returns across diverse markets, we evaluate zero-shot inference, fine-tuning, and pre-training from scratch against strong benchmark models. We find that off-the-shelf pre-trained TSFMs perform poorly in zero-shot and fine-tuning settings, whereas models pre-trained from scratch on financial data achieve substantial forecasting and economic improvements, underscoring the value of domain-specific adaptation. Increasing the dataset size, incorporating synthetic data augmentation, and applying hyperparameter tuning further enhance performance.",
+    "authors": [
+      "Eghbal Rahimikia",
+      "Hao Ni",
+      "Weiguan Wang"
+    ],
+    "published": "2025-11-23",
+    "categories": [
+      "q-fin.CP",
+      "cs.AI",
+      "cs.LG",
+      "q-fin.PM",
+      "q-fin.PR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.18578v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.18578v1",
+    "fetched_at": "2025-11-28T09:33:32.378693"
+  },
+  {
+    "id": "2511.18169v1",
+    "title": "Superhedging under Proportional Transaction Costs in Continuous Time",
+    "abstract": "We revisit the well-studied superhedging problem under proportional transaction costs in continuous time using the recently developed tools of set-valued stochastic analysis. By relying on a simple Black-Scholes-type market model for mid-prices and using continuous trading schemes, we define a dynamic family of superhedging sets in continuous time and express them in terms of set-valued integrals. We show that these sets, defined as subsets of Lebesgue spaces at different times, form a dynamic set-valued risk measure with multi-portfolio time-consistency. Finally, we transfer the problem formulation to a path-space setting and introduce approximate versions of superhedging sets that will involve relaxing the superhedging inequality, the superhedging probability, and the solvency requirement for the superhedging strategy with a predetermined error level. In this more technical framework, we are able to relate the approximate superhedging sets at different times by means of a set-valued Bellman's principle, which we believe will pave the way for a set-valued differential structure that characterizes the superhedging sets.",
+    "authors": [
+      "Atiqah Almuzaini",
+      "Çağın Ararat",
+      "Jin Ma"
+    ],
+    "published": "2025-11-22",
+    "categories": [
+      "q-fin.RM",
+      "math.OC",
+      "math.PR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.18169v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.18169v1",
+    "fetched_at": "2025-11-28T09:33:32.378707"
+  },
+  {
+    "id": "2511.18125v1",
+    "title": "Random processes for long-term market simulations",
+    "abstract": "For long term investments, model portfolios are defined at the level of indexes, a setup known as Strategic Asset Allocation (SAA). The possible outcomes at a scale of a few decades can be obtained by Monte Carlo simulations, resulting in a probability density for the possible portfolio values at the investment horizon. Such studies are critical for long term wealth plannings, for example in the financial component of social insurances or in accumulated capital for retirement. The quality of the results depends on two inputs: the process used for the simulations and its parameters. The base model is a constant drift, a constant covariance and normal innovations, as pioneered by Bachelier. Beyond this model, this document presents in details a multivariate process that incorporate the most recent advances in the models for financial time series. This includes the negative correlations of the returns at a scale of a few years, the heteroskedasticity (i.e. the volatility' dynamics), and the fat tails and asymmetry for the distributions of returns. For the parameters, the quantitative outcomes depend critically on the estimate for the drift, because this is a non random contribution acting at each time step. Replacing the point forecast by a probabilistic forecast allows us to analyze the impact of the drift values, and then to incorporate this uncertainty in the Monte Carlo simulations.",
+    "authors": [
+      "Gilles Zumbach"
+    ],
+    "published": "2025-11-22",
+    "categories": [
+      "q-fin.RM",
+      "q-fin.ST"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.18125v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.18125v1",
+    "fetched_at": "2025-11-28T09:33:32.378717"
+  },
+  {
+    "id": "2511.18076v1",
+    "title": "Reinforcement Learning for Portfolio Optimization with a Financial Goal and Defined Time Horizons",
+    "abstract": "This research proposes an enhancement to the innovative portfolio optimization approach using the G-Learning algorithm, combined with parametric optimization via the GIRL algorithm (G-learning approach to the setting of Inverse Reinforcement Learning) as presented by. The goal is to maximize portfolio value by a target date while minimizing the investor's periodic contributions. Our model operates in a highly volatile market with a well-diversified portfolio, ensuring a low-risk level for the investor, and leverages reinforcement learning to dynamically adjust portfolio positions over time. Results show that we improved the Sharpe Ratio from 0.42, as suggested by recent studies using the same approach, to a value of 0.483 a notable achievement in highly volatile markets with diversified portfolios. The comparison between G-Learning and GIRL reveals that while GIRL optimizes the reward function parameters (e.g., lambda = 0.0012 compared to 0.002), its impact on portfolio performance remains marginal. This suggests that reinforcement learning methods, like G-Learning, already enable robust optimization. This research contributes to the growing development of reinforcement learning applications in financial decision-making, demonstrating that probabilistic learning algorithms can effectively align portfolio management strategies with investor needs.",
+    "authors": [
+      "Fermat Leukam",
+      "Rock Stephane Koffi",
+      "Prudence Djagba"
+    ],
+    "published": "2025-11-22",
+    "categories": [
+      "q-fin.PM",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.18076v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.18076v1",
+    "fetched_at": "2025-11-28T09:33:32.378731"
+  },
+  {
+    "id": "2511.17963v1",
+    "title": "Hybrid LSTM and PPO Networks for Dynamic Portfolio Optimization",
+    "abstract": "This paper introduces a hybrid framework for portfolio optimization that fuses Long Short-Term Memory (LSTM) forecasting with a Proximal Policy Optimization (PPO) reinforcement learning strategy. The proposed system leverages the predictive power of deep recurrent networks to capture temporal dependencies, while the PPO agent adaptively refines portfolio allocations in continuous action spaces, allowing the system to anticipate trends while adjusting dynamically to market shifts. Using multi-asset datasets covering U.S. and Indonesian equities, U.S. Treasuries, and major cryptocurrencies from January 2018 to December 2024, the model is evaluated against several baselines, including equal-weight, index-style, and single-model variants (LSTM-only and PPO-only). The framework's performance is benchmarked against equal-weighted, index-based, and single-model approaches (LSTM-only and PPO-only) using annualized return, volatility, Sharpe ratio, and maximum drawdown metrics, each adjusted for transaction costs. The results indicate that the hybrid architecture delivers higher returns and stronger resilience under non-stationary market regimes, suggesting its promise as a robust, AI-driven framework for dynamic portfolio optimization.",
+    "authors": [
+      "Jun Kevin",
+      "Pujianto Yugopuspito"
+    ],
+    "published": "2025-11-22",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CE",
+      "q-fin.PM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.17963v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.17963v1",
+    "fetched_at": "2025-11-28T09:33:32.378743"
+  },
+  {
+    "id": "2511.17954v1",
+    "title": "A multi-view contrastive learning framework for spatial embeddings in risk modelling",
+    "abstract": "Incorporating spatial information, particularly those influenced by climate, weather, and demographic factors, is crucial for improving underwriting precision and enhancing risk management in insurance. However, spatial data are often unstructured, high-dimensional, and difficult to integrate into predictive models. Embedding methods are needed to convert spatial data into meaningful representations for modelling tasks. We propose a novel multi-view contrastive learning framework for generating spatial embeddings that combine information from multiple spatial data sources. To train the model, we construct a spatial dataset that merges satellite imagery and OpenStreetMap features across Europe. The framework aligns these spatial views with coordinate-based encodings, producing low-dimensional embeddings that capture both spatial structure and contextual similarity. Once trained, the model generates embeddings directly from latitude-longitude pairs, enabling any dataset with coordinates to be enriched with meaningful spatial features without requiring access to the original spatial inputs. In a case study on French real estate prices, we compare models trained on raw coordinates against those using our spatial embeddings as inputs. The embeddings consistently improve predictive accuracy across generalised linear, additive, and boosting models, while providing interpretable spatial effects and demonstrating transferability to unseen regions.",
+    "authors": [
+      "Freek Holvoet",
+      "Christopher Blier-Wong",
+      "Katrien Antonio"
+    ],
+    "published": "2025-11-22",
+    "categories": [
+      "q-fin.RM",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.17954v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.17954v1",
+    "fetched_at": "2025-11-28T09:33:32.378756"
+  },
+  {
+    "id": "2511.17892v1",
+    "title": "Arbitrage-Free Bond and Yield Curve Forecasting with Neural Filters under HJM Constraints",
+    "abstract": "We develop an arbitrage-free deep learning framework for yield curve and bond price forecasting based on the Heath-Jarrow-Morton (HJM) term-structure model and a dynamic Nelson-Siegel parameterization of forward rates. Our approach embeds a no-arbitrage drift restriction into a neural state-space architecture by combining Kalman, extended Kalman, and particle filters with recurrent neural networks (LSTM/CLSTM), and introduces an explicit arbitrage error regularization (AER) term during training. The model is applied to U.S. Treasury and corporate bond data, and its performance is evaluated for both yield-space and price-space predictions at 1-day and 5-day horizons. Empirically, arbitrage regularization leads to its strongest improvements at short maturities, particularly in 5-day-ahead forecasts, increasing market-consistency as measured by bid-ask hit rates and reducing dollar-denominated prediction errors.",
+    "authors": [
+      "Xiang Gao",
+      "Cody Hyndman"
+    ],
+    "published": "2025-11-22",
+    "categories": [
+      "q-fin.MF",
+      "cs.LG",
+      "q-fin.CP",
+      "stat.ML"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.17892v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.17892v1",
+    "fetched_at": "2025-11-28T09:33:32.378768"
+  },
+  {
+    "id": "2511.19330v1",
+    "title": "Targeted Manipulation: Slope-Based Attacks on Financial Time-Series Data",
+    "abstract": "A common method of attacking deep learning models is through adversarial attacks, which occur when an attacker specifically modifies the input of a model to produce an incorrect result. Adversarial attacks have been deeply investigated in the image domain; however, there is less research in the time-series domain and very little for forecasting financial data. To address these concerns, this study aims to build upon previous research on adversarial attacks for time-series data by introducing two new slope-based methods aimed to alter the trends of the predicted stock forecast generated by an N-HiTS model. Compared to the normal N-HiTS predictions, the two new slope-based methods, the General Slope Attack and Least-Squares Slope Attack, can manipulate N-HiTS predictions by doubling the slope. These new slope attacks can bypass standard security mechanisms, such as a discriminator that filters real and perturbed inputs, reducing a 4-layered CNN's specificity to 28% and accuracy to 57%. Furthermore, the slope based methods were incorporated into a GAN architecture as a means of generating realistic synthetic data, while simultaneously fooling the model. Finally, this paper also proposes a sample malware designed to inject an adversarial attack in the model inference library, proving that ML-security research should not only focus on making the model safe, but also securing the entire pipeline.",
+    "authors": [
+      "Dominik Luszczynski"
+    ],
+    "published": "2025-11-24",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.19330v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.19330v1",
+    "fetched_at": "2025-11-28T09:33:35.936382"
+  },
+  {
+    "id": "2511.18613v1",
+    "title": "KAN vs LSTM Performance in Time Series Forecasting",
+    "abstract": "This paper compares Kolmogorov-Arnold Networks (KAN) and Long Short-Term Memory networks (LSTM) for forecasting non-deterministic stock price data, evaluating predictive accuracy versus interpretability trade-offs using Root Mean Square Error (RMSE).LSTM demonstrates substantial superiority across all tested prediction horizons, confirming their established effectiveness for sequential data modelling. Standard KAN, while offering theoretical interpretability through the Kolmogorov-Arnold representation theorem, exhibits significantly higher error rates and limited practical applicability for time series forecasting. The results confirm LSTM dominance in accuracy-critical time series applications while identifying computational efficiency as KANs' primary advantage in resource-constrained scenarios where accuracy requirements are less stringent. The findings support LSTM adoption for practical financial forecasting while suggesting that continued research into specialised KAN architectures may yield future improvements.",
+    "authors": [
+      "Tabish Ali Rather",
+      "S M Mahmudul Hasan Joy",
+      "Nadezda Sukhorukova",
+      "Federico Frascoli"
+    ],
+    "published": "2025-11-23",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.18613v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.18613v1",
+    "fetched_at": "2025-11-28T09:33:35.936424"
+  },
+  {
+    "id": "2511.19090v1",
+    "title": "Optimization of Deep Learning Models for Dynamic Market Behavior Prediction",
+    "abstract": "The advent of financial technology has witnessed a surge in the utilization of deep learning models to anticipate consumer conduct, a trend that has demonstrated considerable potential in enhancing lending strategies and bolstering market efficiency. We study multi-horizon demand forecasting on e-commerce transactions using the UCI Online Retail II dataset. Unlike prior versions of this manuscript that mixed financial-loan narratives with retail data, we focus exclusively on retail market behavior and define a clear prediction target: per SKU daily demand (or revenue) for horizons H=1,7,14. We present a hybrid sequence model that combines multi-scale temporal convolutions, a gated recurrent module, and time-aware self-attention. The model is trained with standard regression losses and evaluated under MAE, RMSE, sMAPE, MASE, and Theil's U_2 with strict time-based splits to prevent leakage. We benchmark against ARIMA/Prophet, LSTM/GRU, LightGBM, and state-of-the-art Transformer forecasters (TFT, Informer, Autoformer, N-BEATS). Results show consistent accuracy gains and improved robustness on peak/holiday periods. We further provide ablations and statistical significance tests to ensure the reliability of improvements, and we release implementation details to facilitate reproducibility.",
+    "authors": [
+      "Shenghan Zhao",
+      "Yuzhen Lin",
+      "Ximeng Yang",
+      "Qiaochu Lu",
+      "Haozhong Xue",
+      "Gaozhe Jiang"
+    ],
+    "published": "2025-11-24",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.19090v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.19090v1",
+    "fetched_at": "2025-11-28T09:33:41.059843"
+  },
+  {
+    "id": "2511.18269v1",
+    "title": "A Fair OR-ML Framework for Resource Substitution in Large-Scale Networks",
+    "abstract": "Ensuring that the right resource is available at the right location and time remains a major challenge for organizations operating large-scale logistics networks. The challenge comes from uneven demand patterns and the resulting asymmetric flow of resources across the arcs, which create persistent imbalances at the network nodes. Resource substitution among multiple, potentially composite and interchangeable, resource types is a cost-effective way to mitigate these imbalances. This leads to the resource substitution problem, which aims at determining the minimum number of resource substitutions from an initial assignment to minimize the overall network imbalance. In decentralized settings, achieving globally coordinated solutions becomes even more difficult. When substitution entails costs, effective prescriptions must also incorporate fairness and account for the individual preferences of schedulers. This paper presents a generic framework that combines operations research (OR) and machine learning (ML) to enable fair resource substitution in large networks. The OR component models and solves the resource substitution problem under a fairness lens. The ML component leverages historical data to learn schedulers' preferences, guide intelligent exploration of the decision space, and enhance computational efficiency by dynamically selecting the top-$κ$ resources for each arc in the network. The framework produces a portfolio of high-quality solutions from which schedulers can select satisfactory trade-offs. The proposed framework is applied to the network of one of the largest package delivery companies in the world, which serves as the primary motivation for this research. Computational results demonstrate substantial improvements over state-of-the-art methods, including an 80% reduction in model size and a 90% decrease in execution time while preserving optimality.",
+    "authors": [
+      "Ved Mohan",
+      "El Mehdi Er Raqabi",
+      "Pascal Van Hentenryck"
+    ],
+    "published": "2025-11-23",
+    "categories": [
+      "cs.LG",
+      "math.OC"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.18269v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.18269v1",
+    "fetched_at": "2025-11-28T09:33:44.556126"
+  },
+  {
+    "id": "2511.21537v1",
+    "title": "Context-Specific Causal Graph Discovery with Unobserved Contexts: Non-Stationarity, Regimes and Spatio-Temporal Patterns",
+    "abstract": "Real-world data, for example in climate applications, often consists of spatially gridded time series data or data with comparable structure. While the underlying system is often believed to behave similar at different points in space and time, those variations that do exist are twofold relevant: They often encode important information in and of themselves. And they may negatively affect the stability / convergence and reliability\\Slash{}validity of results of algorithms assuming stationarity or space-translation invariance. We study the information encoded in changes of the causal graph, with stability in mind. An analysis of this general task identifies two core challenges. We develop guiding principles to overcome these challenges, and provide a framework realizing these principles by modifying constraint-based causal discovery approaches on the level of independence testing. This leads to an extremely modular, easily extensible and widely applicable framework. It can leverage existing constraint-based causal discovery methods (demonstrated on IID-algorithms PC, PC-stable, FCI and time series algorithms PCMCI, PCMCI+, LPCMCI) with little to no modification. The built-in modularity allows to systematically understand and improve upon an entire array of subproblems. By design, it can be extended by leveraging insights from change-point-detection, clustering, independence-testing and other well-studied related problems. The division into more accessible sub-problems also simplifies the understanding of fundamental limitations, hyperparameters controlling trade-offs and the statistical interpretation of results. An open-source implementation will be available soon.",
+    "authors": [
+      "Martin Rabel",
+      "Jakob Runge"
+    ],
+    "published": "2025-11-26",
+    "categories": [
+      "cs.LG",
+      "math.ST"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.21537v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.21537v1",
+    "fetched_at": "2025-11-28T09:33:48.170493"
+  },
+  {
+    "id": "2511.21465v1",
+    "title": "Ensemble Performance Through the Lens of Linear Independence of Classifier Votes in Data Streams",
+    "abstract": "Ensemble learning improves classification performance by combining multiple base classifiers. While increasing the number of classifiers generally enhances accuracy, excessively large ensembles can lead to computational inefficiency and diminishing returns. This paper investigates the relationship between ensemble size and performance through the lens of linear independence among classifier votes in data streams. We propose that ensembles composed of linearly independent classifiers maximize representational capacity, particularly under a geometric model. We then generalize the importance of linear independence to the weighted majority voting problem. By modeling the probability of achieving linear independence among classifier outputs, we derive a theoretical framework that explains the trade-off between ensemble size and accuracy. Our analysis leads to a theoretical estimate of the ensemble size required to achieve a user-specified probability of linear independence. We validate our theory through experiments on both real-world and synthetic datasets using two ensemble methods, OzaBagging and GOOWE. Our results confirm that this theoretical estimate effectively identifies the point of performance saturation for robust ensembles like OzaBagging. Conversely, for complex weighting schemes like GOOWE, our framework reveals that high theoretical diversity can trigger algorithmic instability. Our implementation is publicly available to support reproducibility and future research.",
+    "authors": [
+      "Enes Bektas",
+      "Fazli Can"
+    ],
+    "published": "2025-11-26",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.21465v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.21465v1",
+    "fetched_at": "2025-11-28T09:33:48.170532"
+  },
+  {
+    "id": "2511.21342v1",
+    "title": "Generating Separated Singing Vocals Using a Diffusion Model Conditioned on Music Mixtures",
+    "abstract": "Separating the individual elements in a musical mixture is an essential process for music analysis and practice. While this is generally addressed using neural networks optimized to mask or transform the time-frequency representation of a mixture to extract the target sources, the flexibility and generalization capabilities of generative diffusion models are giving rise to a novel class of solutions for this complicated task. In this work, we explore singing voice separation from real music recordings using a diffusion model which is trained to generate the solo vocals conditioned on the corresponding mixture. Our approach improves upon prior generative systems and achieves competitive objective scores against non-generative baselines when trained with supplementary data. The iterative nature of diffusion sampling enables the user to control the quality-efficiency trade-off, and also refine the output when needed. We present an ablation study of the sampling algorithm, highlighting the effects of the user-configurable parameters.",
+    "authors": [
+      "Genís Plaja-Roglans",
+      "Yun-Ning Hung",
+      "Xavier Serra",
+      "Igor Pereira"
+    ],
+    "published": "2025-11-26",
+    "categories": [
+      "cs.SD",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.21342v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.21342v1",
+    "fetched_at": "2025-11-28T09:33:48.170560"
+  },
+  {
+    "id": "2511.21050v1",
+    "title": "Breaking the Safety-Capability Tradeoff: Reinforcement Learning with Verifiable Rewards Maintains Safety Guardrails in LLMs",
+    "abstract": "Fine-tuning large language models (LLMs) for downstream tasks typically exhibit a fundamental safety-capability tradeoff, where improving task performance degrades safety alignment even on benign datasets. This degradation persists across standard approaches including supervised finetuning (SFT) and reinforcement learning from human feedback (RLHF). While reinforcement learning with verifiable rewards (RLVR) has emerged as a promising alternative that optimizes models on objectively measurable tasks, its safety implications remain unexplored. We present the first comprehensive theoretical and empirical analysis of safety properties in RLVR. Theoretically, we derive upper bounds on safety drift under KL-constrained optimization and prove conditions under which safety degradation is eliminated. Empirically, we conduct extensive experiments across five adversarial safety benchmarks, demonstrating that RLVR can simultaneously enhance reasoning capabilities while maintaining or improving safety guardrails. Our comprehensive ablation studies examine the effects of optimization algorithms, model scale, and task domains. Our findings challenge the prevailing assumption of an inevitable safety capability trade-off, and establish that a specific training methodology can achieve both objectives simultaneously, providing insights for the safe deployment of reasoning-capable LLMs.",
+    "authors": [
+      "Dongkyu Derek Cho",
+      "Huan Song",
+      "Arijit Ghosh Chowdhury",
+      "Haotian An",
+      "Yawei Wang",
+      "Rohit Thekkanal",
+      "Negin Sokhandan",
+      "Sharlina Keshava",
+      "Hannah Marlowe"
+    ],
+    "published": "2025-11-26",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "stat.ML"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.21050v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.21050v1",
+    "fetched_at": "2025-11-28T09:33:48.170599"
+  },
+  {
+    "id": "2511.20977v1",
+    "title": "Independent policy gradient-based reinforcement learning for economic and reliable energy management of multi-microgrid systems",
+    "abstract": "Efficiency and reliability are both crucial for energy management, especially in multi-microgrid systems (MMSs) integrating intermittent and distributed renewable energy sources. This study investigates an economic and reliable energy management problem in MMSs under a distributed scheme, where each microgrid independently updates its energy management policy in a decentralized manner to optimize the long-term system performance collaboratively. We introduce the mean and variance of the exchange power between the MMS and the main grid as indicators for the economic performance and reliability of the system. Accordingly, we formulate the energy management problem as a mean-variance team stochastic game (MV-TSG), where conventional methods based on the maximization of expected cumulative rewards are unsuitable for variance metrics. To solve MV-TSGs, we propose a fully distributed independent policy gradient algorithm, with rigorous convergence analysis, for scenarios with known model parameters. For large-scale scenarios with unknown model parameters, we further develop a deep reinforcement learning algorithm based on independent policy gradients, enabling data-driven policy optimization. Numerical experiments in two scenarios validate the effectiveness of the proposed methods. Our approaches fully leverage the distributed computational capabilities of MMSs and achieve a well-balanced trade-off between economic performance and operational reliability.",
+    "authors": [
+      "Junkai Hu",
+      "Li Xia"
+    ],
+    "published": "2025-11-26",
+    "categories": [
+      "eess.SY",
+      "cs.LG",
+      "math.OC"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.20977v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.20977v1",
+    "fetched_at": "2025-11-28T09:33:48.170627"
+  },
+  {
+    "id": "2511.20909v1",
+    "title": "Evolved SampleWeights for Bias Mitigation: Effectiveness Depends on Optimization Objectives",
+    "abstract": "Machine learning models trained on real-world data may inadvertently make biased predictions that negatively impact marginalized communities. Reweighting is a method that can mitigate such bias in model predictions by assigning a weight to each data point used during model training. In this paper, we compare three methods for generating these weights: (1) evolving them using a Genetic Algorithm (GA), (2) computing them using only dataset characteristics, and (3) assigning equal weights to all data points. Model performance under each strategy was evaluated using paired predictive and fairness metrics, which also served as optimization objectives for the GA during evolution. Specifically, we used two predictive metrics (accuracy and area under the Receiver Operating Characteristic curve) and two fairness metrics (demographic parity difference and subgroup false negative fairness). Using experiments on eleven publicly available datasets (including two medical datasets), we show that evolved sample weights can produce models that achieve better trade-offs between fairness and predictive performance than alternative weighting methods. However, the magnitude of these benefits depends strongly on the choice of optimization objectives. Our experiments reveal that optimizing with accuracy and demographic parity difference metrics yields the largest number of datasets for which evolved weights are significantly better than other weighting strategies in optimizing both objectives.",
+    "authors": [
+      "Anil K. Saini",
+      "Jose Guadalupe Hernandez",
+      "Emily F. Wong",
+      "Debanshi Misra",
+      "Jason H. Moore"
+    ],
+    "published": "2025-11-25",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.NE"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.20909v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.20909v1",
+    "fetched_at": "2025-11-28T09:33:48.170663"
+  },
+  {
+    "id": "2511.19849v1",
+    "title": "Reinforcement Learning with $ω$-Regular Objectives and Constraints",
+    "abstract": "Reinforcement learning (RL) commonly relies on scalar rewards with limited ability to express temporal, conditional, or safety-critical goals, and can lead to reward hacking. Temporal logic expressible via the more general class of $ω$-regular objectives addresses this by precisely specifying rich behavioural properties. Even still, measuring performance by a single scalar (be it reward or satisfaction probability) masks safety-performance trade-offs that arise in settings with a tolerable level of risk.   We address both limitations simultaneously by combining $ω$-regular objectives with explicit constraints, allowing safety requirements and optimisation targets to be treated separately. We develop a model-based RL algorithm based on linear programming, which in the limit produces a policy maximising the probability of satisfying an $ω$-regular objective while also adhering to $ω$-regular constraints within specified thresholds. Furthermore, we establish a translation to constrained limit-average problems with optimality-preserving guarantees.",
+    "authors": [
+      "Dominik Wagner",
+      "Leon Witzman",
+      "Luke Ong"
+    ],
+    "published": "2025-11-25",
+    "categories": [
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.19849v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.19849v1",
+    "fetched_at": "2025-11-28T09:33:48.170695"
+  },
+  {
+    "id": "2511.18876v1",
+    "title": "Fairness Meets Privacy: Integrating Differential Privacy and Demographic Parity in Multi-class Classification",
+    "abstract": "The increasing use of machine learning in sensitive applications demands algorithms that simultaneously preserve data privacy and ensure fairness across potentially sensitive sub-populations. While privacy and fairness have each been extensively studied, their joint treatment remains poorly understood. Existing research often frames them as conflicting objectives, with multiple studies suggesting that strong privacy notions such as differential privacy inevitably compromise fairness. In this work, we challenge that perspective by showing that differential privacy can be integrated into a fairness-enhancing pipeline with minimal impact on fairness guarantees. We design a postprocessing algorithm, called DP2DP, that enforces both demographic parity and differential privacy. Our analysis reveals that our algorithm converges towards its demographic parity objective at essentially the same rate (up logarithmic factor) as the best non-private methods from the literature. Experiments on both synthetic and real datasets confirm our theoretical results, showing that the proposed algorithm achieves state-of-the-art accuracy/fairness/privacy trade-offs.",
+    "authors": [
+      "Lilian Say",
+      "Christophe Denis",
+      "Rafael Pinot"
+    ],
+    "published": "2025-11-24",
+    "categories": [
+      "stat.ML",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.18876v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.18876v1",
+    "fetched_at": "2025-11-28T09:33:48.170720"
+  },
+  {
+    "id": "2511.18615v1",
+    "title": "Bayesian-based Online Label Shift Estimation with Dynamic Dirichlet Priors",
+    "abstract": "Label shift, a prevalent challenge in supervised learning, arises when the class prior distribution of test data differs from that of training data, leading to significant degradation in classifier performance. To accurately estimate the test priors and enhance classification accuracy, we propose a Bayesian framework for label shift estimation, termed Full Maximum A Posterior Label Shift (FMAPLS), along with its online version, online-FMAPLS. Leveraging batch and online Expectation-Maximization (EM) algorithms, these methods jointly and dynamically optimize Dirichlet hyperparameters $\\boldsymbolα$ and class priors $\\boldsymbolπ$, thereby overcoming the rigid constraints of the existing Maximum A Posterior Label Shift (MAPLS) approach. Moreover, we introduce a linear surrogate function (LSF) to replace gradient-based hyperparameter updates, yielding closed-form solutions that reduce computational complexity while retaining asymptotic equivalence. The online variant substitutes the batch E-step with a stochastic approximation, enabling real-time adaptation to streaming data. Furthermore, our theoretical analysis reveals a fundamental trade-off between online convergence rate and estimation accuracy. Extensive experiments on CIFAR100 and ImageNet datasets under shuffled long-tail and Dirichlet test priors demonstrate that FMAPLS and online-FMAPLS respectively achieve up to 40% and 12% lower KL divergence and substantial improvements in post-shift accuracy over state-of-the-art baselines, particularly under severe class imbalance and distributional uncertainty. These results confirm the robustness, scalability, and suitability of the proposed methods for large-scale and dynamic learning scenarios.",
+    "authors": [
+      "Jiawei Hu",
+      "Javier A. Barria"
+    ],
+    "published": "2025-11-23",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.18615v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.18615v1",
+    "fetched_at": "2025-11-28T09:33:48.170744"
+  },
+  {
+    "id": "2511.18567v1",
+    "title": "In Search of Goodness: Large Scale Benchmarking of Goodness Functions for the Forward-Forward Algorithm",
+    "abstract": "The Forward-Forward (FF) algorithm offers a biologically plausible alternative to backpropagation, enabling neural networks to learn through local updates. However, FF's efficacy relies heavily on the definition of \"goodness\", which is a scalar measure of neural activity. While current implementations predominantly utilize a simple sum-of-squares metric, it remains unclear if this default choice is optimal. To address this, we benchmarked 21 distinct goodness functions across four standard image datasets (MNIST, FashionMNIST, CIFAR-10, STL-10), evaluating classification accuracy, energy consumption, and carbon footprint. We found that certain alternative goodness functions inspired from various domains significantly outperform the standard baseline. Specifically, \\texttt{game\\_theoretic\\_local} achieved 97.15\\% accuracy on MNIST, \\texttt{softmax\\_energy\\_margin\\_local} reached 82.84\\% on FashionMNIST, and \\texttt{triplet\\_margin\\_local} attained 37.69\\% on STL-10. Furthermore, we observed substantial variability in computational efficiency, highlighting a critical trade-off between predictive performance and environmental cost. These findings demonstrate that the goodness function is a pivotal hyperparameter in FF design. We release our code on \\href{https://github.com/aryashah2k/In-Search-of-Goodness}{Github} for reference and reproducibility.",
+    "authors": [
+      "Arya Shah",
+      "Vaibhav Tripathi"
+    ],
+    "published": "2025-11-23",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.18567v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.18567v1",
+    "fetched_at": "2025-11-28T09:33:48.170767"
+  },
+  {
+    "id": "2511.20605v1",
+    "title": "How to Purchase Labels? A Cost-Effective Approach Using Active Learning Markets",
+    "abstract": "We introduce and analyse active learning markets as a way to purchase labels, in situations where analysts aim to acquire additional data to improve model fitting, or to better train models for predictive analytics applications. This comes in contrast to the many proposals that already exist to purchase features and examples. By originally formalising the market clearing as an optimisation problem, we integrate budget constraints and improvement thresholds into the label acquisition process. We focus on a single-buyer-multiple-seller setup and propose the use of two active learning strategies (variance based and query-by-committee based), paired with distinct pricing mechanisms. They are compared to a benchmark random sampling approach. The proposed strategies are validated on real-world datasets from two critical application domains: real estate pricing and energy forecasting. Results demonstrate the robustness of our approach, consistently achieving superior performance with fewer labels acquired compared to conventional methods. Our proposal comprises an easy-to-implement practical solution for optimising data acquisition in resource-constrained environments.",
+    "authors": [
+      "Xiwen Huang",
+      "Pierre Pinson"
+    ],
+    "published": "2025-11-25",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.20605v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.20605v1",
+    "fetched_at": "2025-11-28T09:33:51.752763"
+  },
+  {
+    "id": "2511.20105v1",
+    "title": "Multivariate Forecasting of Bitcoin Volatility with Gradient Boosting: Deterministic, Probabilistic, and Feature Importance Perspectives",
+    "abstract": "This study investigates the application of the Light Gradient Boosting Machine (LGBM) model for both deterministic and probabilistic forecasting of Bitcoin realized volatility. Utilizing a comprehensive set of 69 predictors -- encompassing market, behavioral, and macroeconomic indicators -- we evaluate the performance of LGBM-based models and compare them with both econometric and machine learning baselines. For probabilistic forecasting, we explore two quantile-based approaches: direct quantile regression using the pinball loss function, and a residual simulation method that transforms point forecasts into predictive distributions. To identify the main drivers of volatility, we employ gain-based and permutation feature importance techniques, consistently highlighting the significance of trading volume, lagged volatility measures, investor attention, and market capitalization. The results demonstrate that LGBM models effectively capture the nonlinear and high-variance characteristics of cryptocurrency markets while providing interpretable insights into the underlying volatility dynamics.",
+    "authors": [
+      "Grzegorz Dudek",
+      "Mateusz Kasprzyk",
+      "Paweł Pełka"
+    ],
+    "published": "2025-11-25",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.20105v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.20105v1",
+    "fetched_at": "2025-11-28T09:33:51.752796"
+  },
+  {
+    "id": "2511.19486v1",
+    "title": "Efficient Inference Using Large Language Models with Limited Human Data: Fine-Tuning then Rectification",
+    "abstract": "Driven by recent advances in artificial intelligence (AI), a growing body of work demonstrates the potential of using large language models (LLMs) to generate human-like responses in market research and social science applications. Two primary approaches can be applied to improve the performance of LLMs: fine-tuning, which aligns LLM predictions more closely with human responses, and rectification, which corrects biases in LLM outputs. In this paper, we develop a framework that combines fine-tuning and rectification, and optimally allocates limited labeled samples across the two stages. Unlike the conventional objective that minimizes the mean squared prediction errors, we propose to minimize the variance of the prediction errors as the fine-tuning objective, which is optimal for the downstream rectification stage. Building on this insight, we leverage empirical scaling laws to develop a data-driven method for optimally splitting samples between the fine-tuning and rectification stages. Empirical analysis validates our framework, demonstrating improved estimation and inference performance compared to using either fine-tuning or rectification alone.",
+    "authors": [
+      "Lei Wang",
+      "Zikun Ye",
+      "Jinglong Zhao"
+    ],
+    "published": "2025-11-23",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.19486v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.19486v1",
+    "fetched_at": "2025-11-28T09:33:51.752845"
+  }
+]

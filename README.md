@@ -7,8 +7,8 @@
 
 - [基于多因子股票量化投研框架的开源教程](#基于多因子股票量化投研框架的开源教程)
 - [我的资料](#section1)
+- [AI+金融论文整理](#section-arxiv) 🆕
 - [公开资料整理](#section2)
-- 即将周频更新**arXiv**和**SSRN** (Social Science Research Network)上**Asset Pricing、Behavioral Finance以及LLM in Quant**的论文！欢迎大家关注，如果想一起build欢迎私聊我~
 -----
 
 <!--
@@ -73,6 +73,20 @@
 - 组合优化🔢
 - 机器学习因子挖掘💻
 - ...
+
+<a id="section-arxiv"></a>
+
+# AI+金融论文整理
+
+每日自动更新 arXiv 上 AI+金融相关论文，使用 LLM 生成中文概述与标签。
+
+- 📰 **每日更新**: 自动抓取 q-fin、cs.LG+finance 相关论文
+- 🤖 **智能分析**: 使用大模型生成中文摘要和关键贡献
+- 🏷️ **主题分类**: Asset Pricing、LLM、Factor Mining、RL 等标签
+
+## [📄 论文日报汇总](./AI金融论文整理/README.md)
+
+- 点击查看每日论文更新和主题分类
 
 <a id="section2"></a>
 
