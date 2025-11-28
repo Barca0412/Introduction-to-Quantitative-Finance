@@ -42,8 +42,9 @@ export default defineConfig({
       '/guide/': [
         {
           text: '入门指南',
+          link: '/guide/',
+          collapsed: false,
           items: [
-            { text: '简介', link: '/guide/' },
             { text: '多因子投研框架', link: '/guide/framework' }
           ]
         },
@@ -52,17 +53,18 @@ export default defineConfig({
       '/data/': [
         {
           text: '数据源',
-          items: [
-            { text: '概述', link: '/data/' }
-          ]
+          link: '/data/',
+          collapsed: false,
+          items: []
         },
         quickNav
       ],
       '/factors/': [
         {
           text: '因子挖掘',
+          link: '/factors/',
+          collapsed: false,
           items: [
-            { text: '概述', link: '/factors/' },
             { text: '基本面因子', link: '/factors/fundamental' },
             { text: '技术因子', link: '/factors/technical' },
             { text: '机器学习因子', link: '/factors/ml-factors' },
@@ -74,26 +76,27 @@ export default defineConfig({
       '/backtest/': [
         {
           text: '回测框架',
-          items: [
-            { text: '概述', link: '/backtest/' }
-          ]
+          link: '/backtest/',
+          collapsed: false,
+          items: []
         },
         quickNav
       ],
       '/portfolio/': [
         {
           text: '投资组合优化',
-          items: [
-            { text: '概述', link: '/portfolio/' }
-          ]
+          link: '/portfolio/',
+          collapsed: false,
+          items: []
         },
         quickNav
       ],
       '/arxiv/': [
         {
-          text: 'arXiv AI+金融论文',
+          text: 'AI+金融论文',
+          link: '/arxiv/',
+          collapsed: false,
           items: [
-            { text: '论文索引', link: '/arxiv/' },
             { text: '标签分类', link: '/arxiv/tags/' }
           ]
         },
@@ -102,18 +105,18 @@ export default defineConfig({
       '/resources/': [
         {
           text: '公开资源',
-          items: [
-            { text: '资源汇总', link: '/resources/' }
-          ]
+          link: '/resources/',
+          collapsed: false,
+          items: []
         },
         quickNav
       ],
       '/sentiment/': [
         {
           text: '投资者情绪',
-          items: [
-            { text: '概述', link: '/sentiment/' }
-          ]
+          link: '/sentiment/',
+          collapsed: false,
+          items: []
         },
         quickNav
       ]
