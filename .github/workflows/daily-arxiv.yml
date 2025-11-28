@@ -22,11 +22,12 @@ jobs:
       - name: Crawl arXiv papers
         run: python scripts/arxiv_crawler.py
       
+      - name: Install dependencies
+        run: pip install openai
+
       - name: Process papers with LLM
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_API_BASE: ${{ secrets.OPENAI_API_BASE }}
-          LLM_MODEL: ${{ secrets.LLM_MODEL }}
+          ARK_API_KEY: ${{ secrets.ARK_API_KEY }}
         run: python scripts/paper_processor.py
         continue-on-error: true  # LLM 处理失败不阻塞流程
       

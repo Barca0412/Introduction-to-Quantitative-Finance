@@ -39,3 +39,16 @@ features:
     details: 量化论坛、在线课程、开源工具汇总
     link: /resources/
 ---
+
+<div style="display: flex; justify-content: center; gap: 10px; margin: 20px 0;">
+  <a href="https://github.com/Barca0412/Introduction-to-Quantitative-Finance">
+    <img src="https://img.shields.io/github/stars/Barca0412/Introduction-to-Quantitative-Finance?style=social" alt="GitHub stars">
+  </a>
+  <a href="https://github.com/Barca0412/Introduction-to-Quantitative-Finance/fork">
+    <img src="https://img.shields.io/github/forks/Barca0412/Introduction-to-Quantitative-Finance?style=social" alt="GitHub forks">
+  </a>
+</div>
+
+<div style="display: flex; justify-content: center; margin: 20px 0;">
+  <script type='text/javascript' id='mapmyvisitors' src='https://mapmyvisitors.com/map.js?cl=080808&w=600&t=tt&d=HTlYZYSIaPIKyvbz2wgnl9IheHcvmkEUKlZxcJ9eUbk&co=ffffff&ct=808080&cmo=00a6ff&cmn=ff5c5c'></script>
+</div>
