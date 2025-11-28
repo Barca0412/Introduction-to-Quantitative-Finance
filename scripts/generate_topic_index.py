@@ -13,7 +13,7 @@ from collections import defaultdict
 PROJECT_ROOT = Path(__file__).parent.parent
 DATA_DIR = PROJECT_ROOT / "data" / "papers" / "processed"
 RAW_DATA_DIR = PROJECT_ROOT / "data" / "papers"
-OUTPUT_DIR = PROJECT_ROOT / "AI金融论文整理" / "topics"
+OUTPUT_DIR = PROJECT_ROOT / "论文" / "AI金融论文整理" / "topics"
 
 # 主题配置
 TOPICS = {

@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# VitePress (在 guohao_vitepress 分支)
+docs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Python
+__pycache__/
+*.py[cod]
+.env
+.venv
+venv/
+
+# Logs
+*.log

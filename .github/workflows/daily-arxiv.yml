@@ -47,4 +47,4 @@ jobs:
           file_pattern: |
             data/papers/*.json
             data/papers/processed/*.json
-            AI金融论文整理/**/*.md
+            论文/AI金融论文整理/**/*.md

@@ -42,18 +42,6 @@
  <br> <br>
 </div>
 
-
-# [AI+金融 📄 论文整理及每日汇总](./AI金融论文整理/README.md) (点击查看)
-
-目前是v0.1版本，每日自动更新 arXiv 上 AI+金融相关论文，使用 LLM 生成中文概述与标签。同时我们也在制作一个基于 自然语言 查询论文并个性化推荐的工具，敬请期待～
-
-- 📰 **每日更新**: 自动抓取 q-fin、cs.LG+finance 等arXiv上的相关论文（未来会补充SSRN及金融经济顶刊内容）
-- 🤔 **智能分析**: 基于大模型对摘要和关键贡献等进行分析
-- 🏷️ **主题分类**: Asset Pricing、LLM、Factor Mining、RL 等标签
-
-<a id="section2"></a>
-
-
 # 基于多因子股票量化投研框架的开源教程
 
 - 本部分计划开源自湖南大学金融科技协会Quant Group的研究内容，框架（英文版）如下图
@@ -67,8 +55,6 @@
 - 湖南大学金融科技协会的详细介绍：https://www.guohaoqi.cn/hft-association ，欢迎关注我们
 
 <a id="section1"></a>
-
-
 
 # 我的资料
 
@@ -90,17 +76,31 @@
 
 <a id="section-arxiv"></a>
 
+# AI+金融论文整理
+
+每日自动更新 arXiv 上 AI+金融相关论文，使用 LLM 生成中文概述与标签。
+
+- 📰 **每日更新**: 自动抓取 q-fin、cs.LG+finance 相关论文
+- 🤖 **智能分析**: 使用大模型生成中文摘要和关键贡献
+- 🏷️ **主题分类**: Asset Pricing、LLM、Factor Mining、RL 等标签
+
+## [📄 论文日报汇总](./论文/AI金融论文整理/README.md)
+
+- 点击查看每日论文更新和主题分类
+
+<a id="section2"></a>
+
 # 公开资料整理
 
-## [数据源与另类数据](https://github.com/Barca0412/Introduction-to-Quantitative-Finance/blob/main/%E6%95%B0%E6%8D%AE%E6%BA%90%E4%B8%8E%E5%8F%A6%E7%B1%BB%E6%95%B0%E6%8D%AE.md)
+## [数据源与另类数据](./资料/数据源与另类数据.md)
 
 - 点击跳转
 
-## [回测框架相关](https://github.com/Barca0412/Introduction-to-Quantitative-Finance/blob/main/%E5%9B%9E%E6%B5%8B.md)
+## [回测框架相关](./资料/回测.md)
 
 - 点击跳转
 
-## [因子挖掘与评估](https://github.com/Barca0412/Introduction-to-Quantitative-Finance/blob/main/%E5%9B%A0%E5%AD%90%E6%8C%96%E6%8E%98.md)
+## [因子挖掘与评估](./资料/因子挖掘.md)
 
 - 点击跳转
 
@@ -108,7 +108,7 @@
 
 - 点击跳转
 
-## [投资组合优化与风控](https://github.com/Barca0412/Introduction-to-Quantitative-Finance/blob/main/%E6%8A%95%E8%B5%84%E7%BB%84%E5%90%88%E4%BC%98%E5%8C%96%E4%B8%8E%E9%A3%8E%E6%8E%A7.md)
+## [投资组合优化与风控](./资料/投资组合优化与风控.md)
 
 - 点击跳转
 
