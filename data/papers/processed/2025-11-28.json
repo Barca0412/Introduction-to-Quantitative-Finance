@@ -1,0 +1,918 @@
+[
+  {
+    "id": "2511.21556v1",
+    "title": "Informative Risk Measuresin the Banking Industry: A Proposal based on the Magnitude-Propensity Approach",
+    "abstract": "Despite decades of research in risk management, most of the literature has focused on scalar risk measures (like e.g. Value-at-Risk and Expected Shortfall). While such scalar measures provide compact and tractable summaries, they provide a poor informative value as they miss the intrinsic multivariate nature of risk.To contribute to a paradigmatic enhancement, and building on recent theoretical work by Faugeras and Pagés (2024), we propose a novel multivariate representation of risk that better reflects the structure of potential portfolio losses, while maintaining desirable properties of interpretability and analytical coherence. The proposed framework extends the classical frequency-severity approach and provides a more comprehensive characterization of extreme events. Several empirical applications based on real-world data demonstrate the feasibility, robustness and practical relevance of the methodology, suggesting its potential for both regulatory and managerial applications.",
+    "authors": [
+      "Michele Bonollo",
+      "Martino Grasselli",
+      "Gianmarco Mori",
+      "Havva Nilsu Oz"
+    ],
+    "published": "2025-11-26",
+    "categories": [
+      "q-fin.RM",
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.21556v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.21556v1",
+    "fetched_at": "2025-11-28T11:05:14.085577",
+    "chinese_title": "银行业中的信息性风险度量：基于量级-倾向方法的提案",
+    "chinese_summary": "现有标量风险度量（如VaR、ES）因忽略风险多变量本质而信息价值不足，论文基于Faugeras和Pagés(2024)的理论工作，提出新的多变量风险表示，扩展经典频率-严重度方法以更好反映投资组合损失结构，保持可解释性与分析一致性，实证验证其在银行业监管与管理中的可行性、稳健性及实践价值。",
+    "tags": [
+      "Risk Management"
+    ],
+    "key_contributions": [
+      "扩展频率-严重度方法刻画极端事件结构，实证验证银行业应用的可行性与价值"
+    ],
+    "processed_at": "2025-11-28T11:33:45.224924"
+  },
+  {
+    "id": "2511.21515v1",
+    "title": "The Quantum Network of Assets: A Non-Classical Framework for Market Correlation and Structural Risk",
+    "abstract": "Classical correlation matrices capture only linear and pairwise co-movements, leaving higher-order, nonlinear, and state-dependent interactions of financial markets unrepresented. This paper introduces the Quantum Network of Assets (QNA), a density-matrix based framework that embeds cross-asset dependencies into a quantum-information representation. The approach does not assume physical quantum effects but uses the mathematical structure of density operators, entropy, and mutual information to describe market organisation at a structural level.   Within this framework we define two structural measures: the Entanglement Risk Index (ERI), which summarises global non-separability and the compression of effective market degrees of freedom, and the Quantum Early-Warning Signal (QEWS), which tracks changes in entropy to detect latent information build-up. These measures reveal dependency geometry that classical covariance-based tools cannot capture.   Using NASDAQ-100 data from 2024-2025, we show that quantum entropy displays smoother evolution and clearer regime distinctions than classical entropy, and that ERI rises during periods of structural tightening even when volatility remains low. Around the 2025 US tariff announcement, QEWS shows a marked pre-event increase in structural tension followed by a sharp collapse after the announcement, indicating that structural transitions can precede price movements without implying predictive modelling.   QNA therefore provides a structural diagnostic of market fragility, regime shifts, and latent information flow. The framework suggests new directions for systemic risk research by linking empirical asset networks with tools from quantum information theory.",
+    "authors": [
+      "Hui Gong",
+      "Akash Sharma",
+      "Francesca Medda"
+    ],
+    "published": "2025-11-26",
+    "categories": [
+      "q-fin.RM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.21515v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.21515v1",
+    "fetched_at": "2025-11-28T11:05:14.085598",
+    "chinese_title": "资产量子网络：市场相关性与结构风险的非经典框架",
+    "chinese_summary": "该论文针对经典相关矩阵无法捕捉高阶非线性及状态依赖交互的问题，引入基于密度矩阵的资产量子网络（QNA）框架，利用量子信息数学结构描述市场组织；定义纠缠风险指数（ERI）和量子预警信号（QEWS）两类结构指标，通过NASDAQ-100数据验证其在市场结构分析与风险预警中的优势，如ERI在结构收紧时上升、QEWS可提前显示事件前的结构张力变化。",
+    "tags": [
+      "Risk Management",
+      "Anomaly",
+      "Volatility"
+    ],
+    "key_contributions": [
+      "引入资产量子网络（QNA）框架，基于密度矩阵的量子信息数学结构，突破经典相关矩阵局限，刻画高阶非线性及状态依赖的市场依赖关系",
+      "定义纠缠风险指数（ERI）和量子预警信号（QEWS）两类结构指标，实证验证其在市场结构分析与风险预警中的独特价值"
+    ],
+    "processed_at": "2025-11-28T11:34:01.730257"
+  },
+  {
+    "id": "2511.21287v1",
+    "title": "Dynamic characterization of barycentric optimal transport problems and their martingale relaxation",
+    "abstract": "We extend the Benamou-Brenier formula from classical optimal transport to weak optimal transport and show that the barycentric optimal transport problem studied by Gozlan and Juillet has a dynamic analogue. We also investigate a martingale relaxation of this problem, and relate it to the martingale Benamou-Brenier formula of Backhoff-Veraguas, Beiglböck, Huesmann and Källblad.",
+    "authors": [
+      "Ivan Guo",
+      "Severin Nilsson",
+      "Johannes Wiesel"
+    ],
+    "published": "2025-11-26",
+    "categories": [
+      "math.PR",
+      "math.OC",
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.21287v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.21287v1",
+    "fetched_at": "2025-11-28T11:05:14.085609",
+    "chinese_title": "重心最优传输问题的动态刻画及其鞅松弛",
+    "chinese_summary": "本文将经典最优传输的Benamou-Brenier公式扩展至弱最优传输，得到重心最优传输问题的动态刻画；同时研究该问题的鞅松弛，建立其与鞅Benamou-Brenier公式的关联。",
+    "tags": [
+      "Asset Pricing",
+      "Risk Management"
+    ],
+    "key_contributions": [
+      "将经典最优传输的Benamou-Brenier公式扩展至弱最优传输，获得重心最优传输问题的动态类似物",
+      "研究重心最优传输问题的鞅松弛，关联其与鞅Benamou-Brenier公式"
+    ],
+    "processed_at": "2025-11-28T11:34:21.220723"
+  },
+  {
+    "id": "2511.21221v1",
+    "title": "Portfolio Optimization via Transfer Learning",
+    "abstract": "Recognizing that asset markets generally exhibit shared informational characteristics, we develop a portfolio strategy based on transfer learning that leverages cross-market information to enhance the investment performance in the market of interest by forward validation. Our strategy asymptotically identifies and utilizes the informative datasets, selectively incorporating valid information while discarding the misleading information. This enables our strategy to achieve the maximum Sharpe ratio asymptotically. The promising performance is demonstrated by numerical studies and case studies of two portfolios: one consisting of stocks dual-listed in A-shares and H-shares, and another comprising equities from various industries of the United States.",
+    "authors": [
+      "Kexin Wang",
+      "Xiaomeng Zhang",
+      "Xinyu Zhang"
+    ],
+    "published": "2025-11-26",
+    "categories": [
+      "q-fin.PM",
+      "stat.AP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.21221v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.21221v1",
+    "fetched_at": "2025-11-28T11:05:14.085619",
+    "chinese_title": "基于迁移学习的投资组合优化",
+    "chinese_summary": "论文针对资产市场存在共享信息特征的特点，提出基于迁移学习的投资组合策略，通过前向验证利用跨市场信息提升目标市场投资表现；该策略可渐近识别有效数据集，选择性纳入有效信息并丢弃误导信息，渐近实现最大夏普比率；数值与案例研究（A股H股双重上市股票、美国各行业股票）验证了其良好性能。",
+    "tags": [
+      "Portfolio Optimization",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出基于迁移学习的投资组合优化策略，利用资产市场共享信息特征，通过前向验证选择性纳入跨市场有效信息以提升目标市场表现",
+      "证明策略可渐近实现最大夏普比率，并通过数值实验及A股H股双重上市股票、美国各行业股票的案例验证了其性能"
+    ],
+    "processed_at": "2025-11-28T11:34:38.388111"
+  },
+  {
+    "id": "2511.20837v1",
+    "title": "Constrained deep learning for pricing and hedging european options in incomplete markets",
+    "abstract": "In incomplete financial markets, pricing and hedging European options lack a unique no-arbitrage solution due to unhedgeable risks. This paper introduces a constrained deep learning approach to determine option prices and hedging strategies that minimize the Profit and Loss (P&L) distribution around zero. We employ a single neural network to represent the option price function, with its gradient serving as the hedging strategy, optimized via a loss function enforcing the self-financing portfolio condition. A key challenge arises from the non-smooth nature of option payoffs (e.g., vanilla calls are non-differentiable at-the-money, while digital options are discontinuous), which conflicts with the inherent smoothness of standard neural networks. To address this, we compare unconstrained networks against constrained architectures that explicitly embed the terminal payoff condition, drawing inspiration from PDE-solving techniques. Our framework assumes two tradable assets: the underlying and a liquid call option capturing volatility dynamics. Numerical experiments evaluate the method on simple options with varying non-smoothness, the exotic Equinox option, and scenarios with market jumps for robustness. Results demonstrate superior P&L distributions, highlighting the efficacy of constrained networks in handling realistic payoffs. This work advances machine learning applications in quantitative finance by integrating boundary constraints, offering a practical tool for pricing and hedging in incomplete markets.",
+    "authors": [
+      "Nicolas Baradel"
+    ],
+    "published": "2025-11-25",
+    "categories": [
+      "q-fin.CP",
+      "stat.ML"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.20837v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.20837v1",
+    "fetched_at": "2025-11-28T11:05:14.085628",
+    "chinese_title": "不完全市场中欧式期权定价与对冲的约束深度学习方法",
+    "chinese_summary": "针对不完全市场中欧式期权定价与对冲无唯一无套利解的问题，论文提出约束深度学习方法，用单个神经网络表示期权价格函数（梯度为对冲策略），通过损失函数约束自融资条件；为解决期权收益非光滑与神经网络光滑性冲突，设计嵌入终端收益约束的架构，实验验证其在不同非光滑期权及跳跃场景下P&L分布更优，整合边界约束提升了机器学习在量化金融中的应用。",
+    "tags": [
+      "Deep Learning",
+      "Options",
+      "Asset Pricing",
+      "Volatility"
+    ],
+    "key_contributions": [
+      "提出约束深度学习框架，用单个神经网络同时表示期权价格与对冲策略，通过自融资条件优化解决不完全市场定价对冲问题",
+      "针对期权收益非光滑性设计嵌入终端收益约束的网络架构，提升P&L分布性能，适用于多种非光滑期权及跳跃场景"
+    ],
+    "processed_at": "2025-11-28T11:34:50.119356"
+  },
+  {
+    "id": "2511.20606v2",
+    "title": "Limit Order Book Dynamics in Matching Markets: Microstructure, Spread, and Execution Slippage",
+    "abstract": "Conventional models of matching markets assume that monetary transfers can clear markets by compensating for utility differentials. However, empirical patterns show that such transfers often fail to close structural preference gaps. This paper introduces a market microstructure framework that models matching decisions as a limit order book system with rigid bid ask spreads. Individual preferences are represented by a latent preference state matrix, where the spread between an agent's internal ask price (the unconditional maximum) and the market's best bid (the reachable maximum) creates a structural liquidity constraint. We establish a Threshold Impossibility Theorem showing that linear compensation cannot close these spreads unless it induces a categorical identity shift. A dynamic discrete choice execution model further demonstrates that matches occur only when the market to book ratio crosses a time decaying liquidity threshold, analogous to order execution under inventory pressure. Numerical experiments validate persistent slippage, regional invariance of preference orderings, and high tier zero spread executions. The model provides a unified microstructure explanation for matching failures, compensation inefficiency, and post match regret in illiquid order driven environments.",
+    "authors": [
+      "Yao Wu"
+    ],
+    "published": "2025-11-25",
+    "categories": [
+      "q-fin.TR",
+      "cs.MA",
+      "cs.SI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.20606v2",
+    "arxiv_url": "https://arxiv.org/abs/2511.20606v2",
+    "fetched_at": "2025-11-28T11:05:14.085636",
+    "chinese_title": "匹配市场中的限价订单簿动态：微观结构、价差与执行滑点",
+    "chinese_summary": "本文针对传统匹配市场模型假设货币转移可弥补效用差异但实证存在结构性偏好缺口的问题，引入基于刚性买卖价差的限价订单簿系统微观结构框架，用潜在偏好状态矩阵刻画个体偏好；建立阈值不可能定理并提出动态离散选择执行模型，数值实验验证持续滑点等现象，统一解释匹配失败、补偿低效等问题。",
+    "tags": [
+      "Market Microstructure",
+      "Execution",
+      "Behavioral Finance"
+    ],
+    "key_contributions": [
+      "构建基于刚性价差的限价订单簿微观结构框架，用潜在偏好矩阵刻画个体偏好，证明线性补偿无法填补结构性偏好缺口的阈值不可能定理",
+      "提出动态离散选择执行模型，通过数值实验验证持续滑点等现象，统一解释匹配失败、补偿低效等匹配市场问题"
+    ],
+    "processed_at": "2025-11-28T11:35:12.277170"
+  },
+  {
+    "id": "2511.19826v1",
+    "title": "Efficient Importance Sampling under Heston Model: Short Maturity and Deep Out-of-the-Money Options",
+    "abstract": "This paper investigates asymptotically optimal importance sampling (IS) schemes for pricing European call options under the Heston stochastic volatility model. We focus on two distinct rare-event regimes where standard Monte Carlo methods suffer from significant variance deterioration: the limit as maturity approaches zero and the limit as the strike price tends to infinity. Leveraging the large deviation principle (LDP), we design a state-dependent change of measure derived from the asymptotic behavior of the log-price cumulant generating functions. In the short-maturity regime, we rigorously prove that our proposed IS drift, inspired by the variational characterization of the rate function, achieves logarithmic efficiency (asymptotic optimality) by minimizing the decay rate of the second moment of the estimator. In the deep OTM regime, we introduce a novel slow mean-reversion scaling for the variance process, where the mean-reversion speed scales as the inverse square of the small-noise parameter (defined as the reciprocal of the log-moneyness). We establish that under this specific scaling, the variance process contributes non-trivially to the large deviation rate function, requiring a specialized Riccati analysis to verify optimality. Numerical experiments demonstrate that the proposed method yields substantial variance reduction--characterized by factors exceeding several orders of magnitude--compared to standard estimators in both asymptotic regimes.",
+    "authors": [
+      "Yun-Feng Tu",
+      "Chuan-Hsiang Han"
+    ],
+    "published": "2025-11-25",
+    "categories": [
+      "q-fin.MF",
+      "math.PR",
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.19826v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.19826v1",
+    "fetched_at": "2025-11-28T11:05:14.085644",
+    "chinese_title": "Heston模型下的高效重要性采样：短到期与深度虚值期权",
+    "chinese_summary": "论文针对Heston模型下短到期和深度虚值这两个稀有事件场景，基于大偏差原理设计状态依赖的测度变换；短到期 regime证明所提重要性采样漂移达对数效率（渐近最优），深度虚值 regime引入慢均值回复 scaling并通过Riccati分析验证最优性，数值实验显示方差降低超几个数量级。",
+    "tags": [
+      "Volatility",
+      "Options",
+      "Asset Pricing",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "针对Heston模型短到期和深度虚值期权，基于大偏差原理设计状态依赖的重要性采样方案，短到期 regime证明渐近最优（对数效率）",
+      "深度虚值 regime引入慢均值回复 scaling，通过Riccati分析验证最优性，数值实验显示方差大幅降低（超几个数量级）"
+    ],
+    "processed_at": "2025-11-28T11:35:27.330010"
+  },
+  {
+    "id": "2511.19701v1",
+    "title": "Optimal dividend and capital injection under self-exciting claims",
+    "abstract": "In this paper, we study an optimal dividend and capital-injection problem in a Cramér--Lundberg model where claim arrivals follow a Hawkes process, capturing clustering effects often observed in insurance portfolios. We establish key analytical properties of the value function and characterise the optimal capital-injection strategy through an explicit threshold. We also show that the value function is the unique viscosity solution of the associated HJB variational inequality. For numerical purposes, we first compute a benchmark solution via a monotone finite-difference scheme with Howard's policy iteration. We then develop a reinforcement learning approach based on policy-gradient and actor-critic methods. The learned strategies closely match the PDE benchmark and remain stable across initial conditions. The results highlight the relevance of policy-gradient techniques for dividend optimisation under self-exciting claim dynamics and point toward scalable methods for higher-dimensional extensions.",
+    "authors": [
+      "Paulin Aubert",
+      "Etienne Chevalier",
+      "Vathana Ly Vath"
+    ],
+    "published": "2025-11-24",
+    "categories": [
+      "math.OC",
+      "math.PR",
+      "q-fin.RM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.19701v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.19701v1",
+    "fetched_at": "2025-11-28T11:05:14.085653",
+    "chinese_title": "自激发索赔下的最优分红与资本注入",
+    "chinese_summary": "本文研究自激发索赔（Hawkes过程）下Cramér-Lundberg模型的最优分红与资本注入问题，建立价值函数分析性质并以显式阈值刻画最优资本注入策略，证明其为HJB变分不等式的唯一粘性解；数值上结合单调有限差分+Howard策略迭代得到基准解，提出基于策略梯度和演员-评论家的强化学习方法，学习策略匹配基准且稳定，为高维扩展提供可扩展思路。",
+    "tags": [
+      "Reinforcement Learning",
+      "Risk Management",
+      "Portfolio Optimization",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "建立自激发索赔下最优分红与资本注入问题的价值函数分析性质，以显式阈值刻画最优资本注入策略并证明其为HJB变分不等式的唯一粘性解",
+      "提出基于策略梯度和演员-评论家的强化学习方法，学习策略匹配PDE基准且稳定，为高维扩展提供可扩展途径"
+    ],
+    "processed_at": "2025-11-28T11:35:41.913663"
+  },
+  {
+    "id": "2511.19186v1",
+    "title": "Carbon-Penalised Portfolio Insurance Strategies in a Stochastic Factor Model with Partial Information",
+    "abstract": "Given the increasing importance of environmental, social and governance (ESG) factors, particularly carbon emissions, we investigate optimal proportional portfolio insurance (PPI) strategies accounting for carbon footprint reduction. PPI strategies enable investors to mitigate downside risk while retaining the potential for upside gains. This paper aims to determine the multiplier of the PPI strategy to maximise the expected utility of the terminal cushion, where the terminal cushion is penalised proportionally to the realised volatility of stocks issued by firms operating in carbon-intensive sectors. We model the risky assets' dynamics using geometric Brownian motions whose drift rates are modulated by an unobservable common stochastic factor to capture market-specific or economy-wide state variables that are typically not directly observable. Using classical stochastic filtering theory, we formulate a suitable optimization problem and solve it for CRRA utility function. We characterise optimal carbon penalised PPI strategies and optimal value functions under full and partial information and quantify the loss of utility due incomplete information. Finally, we carry a numerical analysis showing that the proposed strategy reduces carbon emission intensity without compromising financial performance.",
+    "authors": [
+      "Katia Colaneri",
+      "Federico D'Amario",
+      "Daniele Mancinelli"
+    ],
+    "published": "2025-11-24",
+    "categories": [
+      "q-fin.PM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.19186v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.19186v1",
+    "fetched_at": "2025-11-28T11:05:14.085662",
+    "chinese_title": "含部分信息的随机因子模型下碳惩罚型投资组合保险策略",
+    "chinese_summary": "论文将碳惩罚融入比例投资组合保险（PPI）策略，以降低碳足迹并平衡风险收益；用含不可观测随机因子的几何布朗运动建模风险资产，结合随机滤波理论求解CRRA效用下的最优策略，量化信息不完全的效用损失，数值分析显示策略可降碳排放强度且不损害财务表现。",
+    "tags": [
+      "Factor Model",
+      "Portfolio Optimization",
+      "Risk Management",
+      "Volatility"
+    ],
+    "key_contributions": [
+      "量化部分信息导致的效用损失，数值验证策略可降低碳排放强度且不损害财务表现"
+    ],
+    "processed_at": "2025-11-28T11:35:50.037533"
+  },
+  {
+    "id": "2511.18804v1",
+    "title": "Sentiment Analysis of Financial Text Using Quantum Language Processing QDisCoCirc",
+    "abstract": "We apply quantum distributional compositional circuit (QDisCoCirc) to 3-class sentiment analysis of financial text. In our classical simulations, we keep the Hilbert-space dimension manageable by decomposing each sentence into short contiguous chunks. Each chunk is mapped to a shallow quantum circuit, and the resulting Bloch vectors are used as a sequence of quantum tokens. Simple averaging of chunk vectors ignores word order and syntactic roles. We therefore add a small Transformer encoder over the raw Bloch-vector sequence and attach a CCG-based type embedding to each chunk. This hybrid design preserves physically interpretable semantic axes of quantum tokens while allowing the classical side to model word order and long-range dependencies. The sequence model improves test macro-F1 over the averaging baseline and chunk-level attribution further shows that evidential mass concentrates on a small number of chunks, that type embeddings are used more reliably for correctly predicted sentences. For real-world quantum language processing applications in finance, future key challenges include circuit designs that avoid chunking and the design of inter-chunk fusion layers.",
+    "authors": [
+      "Takayuki Sakuma"
+    ],
+    "published": "2025-11-24",
+    "categories": [
+      "q-fin.GN"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.18804v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.18804v1",
+    "fetched_at": "2025-11-28T11:05:14.085670",
+    "chinese_title": "基于量子分布组合电路（QDisCoCirc）的金融文本情感分析",
+    "chinese_summary": "该论文将量子分布组合电路（QDisCoCirc）应用于金融文本三分类情感分析，通过分解句子为短连续chunk并映射到浅量子电路得到Bloch向量序列；采用量子token+小Transformer编码器+CCG类型嵌入的混合设计，既保留量子语义可解释性，又能建模语序与长依赖，提升了测试macro-F1，且chunk归因显示证据集中于少数chunk、正确预测句子更可靠使用类型嵌入。",
+    "tags": [
+      "Sentiment Analysis",
+      "NLP",
+      "Transformer",
+      "Investor Sentiment"
+    ],
+    "key_contributions": [
+      "提出量子-经典混合模型（QDisCoCirc+Transformer+CCG嵌入），平衡量子语义可解释性与经典序列建模能力，提升金融文本情感分析性能",
+      "通过chunk归因分析揭示金融文本情感预测的证据分布规律，为量子语言处理在金融场景的应用提供实证支持"
+    ],
+    "processed_at": "2025-11-28T11:36:06.149061"
+  },
+  {
+    "id": "2511.18614v1",
+    "title": "A calibrated model of debt recycling with interest costs and tax shields: viability under different fiscal regimes and jurisdictions",
+    "abstract": "Debt recycling is a leveraged equity management strategy in which homeowners use accumulated home equity to finance investments, applying the resulting returns to accelerate mortgage repayment. We propose a novel framework to model equity and mortgage dynamics in presence of mortgage interest rates, borrowing costs on equity-backed credit lines, and tax shields arising from interest deductibility. The model is calibrated on three jurisdictions -- Australia, Germany, and Switzerland -- representing diverse interest rate environments and fiscal regimes. Results demonstrate that introducing positive interest rates without tax shields contracts success regions and lengthens repayment times, while tax shields partially reverse these effects by reducing effective borrowing costs and adding equity boosts from mortgage interest deductibility. Country-specific outcomes vary systematically, and rental properties consistently outperform owner-occupied housing due to mortgage interest deductibility provisions.",
+    "authors": [
+      "Carlo von der Osten",
+      "Sabrina Aufiero",
+      "Pierpaolo Vivo",
+      "Fabio Caccioli",
+      "Silvia Bartolucci"
+    ],
+    "published": "2025-11-23",
+    "categories": [
+      "q-fin.RM",
+      "cond-mat.stat-mech",
+      "econ.GN"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.18614v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.18614v1",
+    "fetched_at": "2025-11-28T11:05:14.085685",
+    "chinese_title": "考虑利息成本与税盾的债务回收校准模型：不同财政制度及辖区下的可行性",
+    "chinese_summary": "论文提出一个新框架，建模股权与抵押贷款动态并纳入抵押贷款利率、股权信贷成本及利息抵扣税盾，通过澳大利亚、德国、瑞士三个辖区校准发现：正利率无税盾会缩小成功区域、延长还款时间，税盾可部分逆转该影响；且租赁房产因税盾规定持续优于自住房产。",
+    "tags": [
+      "Asset Pricing",
+      "Risk Management",
+      "Portfolio Optimization"
+    ],
+    "key_contributions": [
+      "提出考虑利息成本与税盾的债务回收动态建模新框架",
+      "揭示不同财政制度、房产类型及利率环境下债务回收策略的可行性规律"
+    ],
+    "processed_at": "2025-11-28T11:36:18.540939"
+  },
+  {
+    "id": "2511.18578v1",
+    "title": "Re(Visiting) Time Series Foundation Models in Finance",
+    "abstract": "Financial time series forecasting is central to trading, portfolio optimization, and risk management, yet it remains challenging due to noisy, non-stationary, and heterogeneous data. Recent advances in time series foundation models (TSFMs), inspired by large language models, offer a new paradigm for learning generalizable temporal representations from large and diverse datasets. This paper presents the first comprehensive empirical study of TSFMs in global financial markets. Using a large-scale dataset of daily excess returns across diverse markets, we evaluate zero-shot inference, fine-tuning, and pre-training from scratch against strong benchmark models. We find that off-the-shelf pre-trained TSFMs perform poorly in zero-shot and fine-tuning settings, whereas models pre-trained from scratch on financial data achieve substantial forecasting and economic improvements, underscoring the value of domain-specific adaptation. Increasing the dataset size, incorporating synthetic data augmentation, and applying hyperparameter tuning further enhance performance.",
+    "authors": [
+      "Eghbal Rahimikia",
+      "Hao Ni",
+      "Weiguan Wang"
+    ],
+    "published": "2025-11-23",
+    "categories": [
+      "q-fin.CP",
+      "cs.AI",
+      "cs.LG",
+      "q-fin.PM",
+      "q-fin.PR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.18578v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.18578v1",
+    "fetched_at": "2025-11-28T11:05:14.085695",
+    "chinese_title": "重新审视金融领域的时间序列基础模型",
+    "chinese_summary": "本文是首个全面实证研究时间序列基础模型（TSFMs）在全球金融市场表现的工作，利用大规模日度超额收益数据集对比零样本推理、微调及从头预训练与基准模型的效果；发现现成预训练TSFMs在零样本和微调场景下表现不佳，但基于金融数据从头预训练的模型在预测能力和经济收益上显著提升，且增大数据集、合成数据增强及超参调优可进一步优化性能。",
+    "tags": [
+      "Time Series",
+      "Deep Learning",
+      "Transformer",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "开展金融领域TSFMs的首个全面实证研究，对比不同训练策略与基准模型在全球金融市场的表现",
+      "验证领域特定适配的关键价值，即金融数据从头预训练的TSFMs显著提升预测与经济收益，且数据集增大等方法可进一步优化"
+    ],
+    "processed_at": "2025-11-28T11:36:34.537227"
+  },
+  {
+    "id": "2511.18169v1",
+    "title": "Superhedging under Proportional Transaction Costs in Continuous Time",
+    "abstract": "We revisit the well-studied superhedging problem under proportional transaction costs in continuous time using the recently developed tools of set-valued stochastic analysis. By relying on a simple Black-Scholes-type market model for mid-prices and using continuous trading schemes, we define a dynamic family of superhedging sets in continuous time and express them in terms of set-valued integrals. We show that these sets, defined as subsets of Lebesgue spaces at different times, form a dynamic set-valued risk measure with multi-portfolio time-consistency. Finally, we transfer the problem formulation to a path-space setting and introduce approximate versions of superhedging sets that will involve relaxing the superhedging inequality, the superhedging probability, and the solvency requirement for the superhedging strategy with a predetermined error level. In this more technical framework, we are able to relate the approximate superhedging sets at different times by means of a set-valued Bellman's principle, which we believe will pave the way for a set-valued differential structure that characterizes the superhedging sets.",
+    "authors": [
+      "Atiqah Almuzaini",
+      "Çağın Ararat",
+      "Jin Ma"
+    ],
+    "published": "2025-11-22",
+    "categories": [
+      "q-fin.RM",
+      "math.OC",
+      "math.PR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.18169v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.18169v1",
+    "fetched_at": "2025-11-28T11:05:14.085705",
+    "chinese_title": "连续时间下含比例交易成本的超对冲问题",
+    "chinese_summary": "本文利用集值随机分析工具重新研究连续时间下含比例交易成本的超对冲问题，基于Black-Scholes型中间价市场模型定义动态超对冲集族并以集值积分表示，证明其为多组合时间一致的动态集值风险测度；进一步在路径空间引入带预定误差的近似超对冲集，通过集值Bellman原理关联不同时间的近似集，为刻画超对冲集的集值微分结构奠定基础。",
+    "tags": [
+      "Risk Management",
+      "Options",
+      "Portfolio Optimization"
+    ],
+    "key_contributions": [
+      "在路径空间引入带预定误差的近似超对冲集，通过集值Bellman原理关联不同时间的近似集，为刻画超对冲集的集值微分结构铺路"
+    ],
+    "processed_at": "2025-11-28T11:36:46.290419"
+  },
+  {
+    "id": "2511.18125v1",
+    "title": "Random processes for long-term market simulations",
+    "abstract": "For long term investments, model portfolios are defined at the level of indexes, a setup known as Strategic Asset Allocation (SAA). The possible outcomes at a scale of a few decades can be obtained by Monte Carlo simulations, resulting in a probability density for the possible portfolio values at the investment horizon. Such studies are critical for long term wealth plannings, for example in the financial component of social insurances or in accumulated capital for retirement. The quality of the results depends on two inputs: the process used for the simulations and its parameters. The base model is a constant drift, a constant covariance and normal innovations, as pioneered by Bachelier. Beyond this model, this document presents in details a multivariate process that incorporate the most recent advances in the models for financial time series. This includes the negative correlations of the returns at a scale of a few years, the heteroskedasticity (i.e. the volatility' dynamics), and the fat tails and asymmetry for the distributions of returns. For the parameters, the quantitative outcomes depend critically on the estimate for the drift, because this is a non random contribution acting at each time step. Replacing the point forecast by a probabilistic forecast allows us to analyze the impact of the drift values, and then to incorporate this uncertainty in the Monte Carlo simulations.",
+    "authors": [
+      "Gilles Zumbach"
+    ],
+    "published": "2025-11-22",
+    "categories": [
+      "q-fin.RM",
+      "q-fin.ST"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.18125v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.18125v1",
+    "fetched_at": "2025-11-28T11:05:14.085712",
+    "chinese_title": "长期市场模拟的随机过程",
+    "chinese_summary": "论文针对长期投资的战略资产配置（SAA），指出传统Bachelier模型的局限性，提出融入金融时间序列最新进展（收益负相关、异方差、厚尾及非对称分布）的多元随机过程；同时强调漂移项估计的关键影响，通过概率预测替代点预测将漂移不确定性纳入蒙特卡洛模拟，提升长期财富规划的模拟质量。",
+    "tags": [
+      "Time Series",
+      "Portfolio Optimization",
+      "Risk Management",
+      "Volatility"
+    ],
+    "key_contributions": [
+      "用漂移项的概率预测替代点预测，将漂移不确定性纳入蒙特卡洛模拟，优化长期投资结果的分析"
+    ],
+    "processed_at": "2025-11-28T11:36:55.699788"
+  },
+  {
+    "id": "2511.18117v1",
+    "title": "Diffusive Limit of Hawkes Driven Order Book Dynamics With Liquidity Migration",
+    "abstract": "This paper develops a theoretical mesoscopic model of the limit order book driven by multivariate Hawkes processes, designed to capture temporal self-excitation and the spatial propagation of order flow across price levels. In contrast to classical zero-intelligence or Poisson based queueing models, the proposed framework introduces mathematically defined migration events between neighbouring price levels, whose intensities are themselves governed by the underlying Hawkes structure. This provides a principled stochastic mechanism for modeling interactions between order arrivals, cancellations, and liquidity movement across adjacent queues.   Starting from a microscopic specification of Hawkes driven order flow, we derive a diffusion approximation which yields a reflected mesoscopic stochastic differential equation (SDE) system for queue volumes. The limiting generator is obtained through a Taylor expansion of the microscopic generator, demonstrating how temporal excitation together with spatial migration determine the drift and diffusion structure of the limit order book in the mesoscopic regime. The resulting model extends existing diffusion limits by incorporating correlated excitations and price level to price level liquidity movement within a unified Hawkes based formulation.   By establishing this diffusive limit, the paper provides a mathematically consistent bridge between high frequency event based models and macroscopic stochastic descriptions of market microstructure. The work is entirely theoretical and lays a foundation for future analytical and numerical developments without relying on empirical calibration.",
+    "authors": [
+      "Levon Mahseredjian"
+    ],
+    "published": "2025-11-22",
+    "categories": [
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.18117v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.18117v1",
+    "fetched_at": "2025-11-28T11:05:14.085723",
+    "chinese_title": "带流动性迁移的霍克斯驱动订单簿动力学的扩散极限",
+    "chinese_summary": "论文构建了多元霍克斯过程驱动的限价订单簿介观模型，引入相邻价格水平间流动性迁移事件（强度由霍克斯结构控制），从微观订单流出发推导扩散近似，得到反映队列容量的介观反射随机微分方程系统，建立了高频事件模型与市场微观结构宏观随机描述的数学桥梁。",
+    "tags": [
+      "Market Microstructure",
+      "High Frequency",
+      "Algorithmic Trading"
+    ],
+    "key_contributions": [
+      "提出多元霍克斯过程驱动的带流动性迁移的限价订单簿介观模型，刻画订单流的时间自激与空间传播特性",
+      "从微观霍克斯驱动订单流推导扩散近似，得到介观反射随机微分方程系统，建立高频事件模型与市场微观结构宏观随机描述的数学桥梁"
+    ],
+    "processed_at": "2025-11-28T11:37:11.116529"
+  },
+  {
+    "id": "2511.18076v1",
+    "title": "Reinforcement Learning for Portfolio Optimization with a Financial Goal and Defined Time Horizons",
+    "abstract": "This research proposes an enhancement to the innovative portfolio optimization approach using the G-Learning algorithm, combined with parametric optimization via the GIRL algorithm (G-learning approach to the setting of Inverse Reinforcement Learning) as presented by. The goal is to maximize portfolio value by a target date while minimizing the investor's periodic contributions. Our model operates in a highly volatile market with a well-diversified portfolio, ensuring a low-risk level for the investor, and leverages reinforcement learning to dynamically adjust portfolio positions over time. Results show that we improved the Sharpe Ratio from 0.42, as suggested by recent studies using the same approach, to a value of 0.483 a notable achievement in highly volatile markets with diversified portfolios. The comparison between G-Learning and GIRL reveals that while GIRL optimizes the reward function parameters (e.g., lambda = 0.0012 compared to 0.002), its impact on portfolio performance remains marginal. This suggests that reinforcement learning methods, like G-Learning, already enable robust optimization. This research contributes to the growing development of reinforcement learning applications in financial decision-making, demonstrating that probabilistic learning algorithms can effectively align portfolio management strategies with investor needs.",
+    "authors": [
+      "Fermat Leukam",
+      "Rock Stephane Koffi",
+      "Prudence Djagba"
+    ],
+    "published": "2025-11-22",
+    "categories": [
+      "q-fin.PM",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.18076v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.18076v1",
+    "fetched_at": "2025-11-28T11:05:14.085732",
+    "chinese_title": "带财务目标和确定时间范围的投资组合优化强化学习方法",
+    "chinese_summary": "论文提出结合G-Learning算法与GIRL算法（逆强化学习的G学习方法）的投资组合优化增强方法，目标是在目标日期前最大化投资组合价值并最小化投资者定期贡献，在高波动市场中使夏普比率从0.42提升至0.483，验证了强化学习方法的稳健优化能力。",
+    "tags": [
+      "Reinforcement Learning",
+      "Portfolio Optimization",
+      "Risk Management",
+      "Volatility"
+    ],
+    "key_contributions": [
+      "提出结合G-Learning与GIRL的适配财务目标和时间范围的投资组合优化增强方法",
+      "在高波动市场中显著提升夏普比率，验证强化学习的稳健优化效果"
+    ],
+    "processed_at": "2025-11-28T11:37:21.928554"
+  },
+  {
+    "id": "2511.17963v1",
+    "title": "Hybrid LSTM and PPO Networks for Dynamic Portfolio Optimization",
+    "abstract": "This paper introduces a hybrid framework for portfolio optimization that fuses Long Short-Term Memory (LSTM) forecasting with a Proximal Policy Optimization (PPO) reinforcement learning strategy. The proposed system leverages the predictive power of deep recurrent networks to capture temporal dependencies, while the PPO agent adaptively refines portfolio allocations in continuous action spaces, allowing the system to anticipate trends while adjusting dynamically to market shifts. Using multi-asset datasets covering U.S. and Indonesian equities, U.S. Treasuries, and major cryptocurrencies from January 2018 to December 2024, the model is evaluated against several baselines, including equal-weight, index-style, and single-model variants (LSTM-only and PPO-only). The framework's performance is benchmarked against equal-weighted, index-based, and single-model approaches (LSTM-only and PPO-only) using annualized return, volatility, Sharpe ratio, and maximum drawdown metrics, each adjusted for transaction costs. The results indicate that the hybrid architecture delivers higher returns and stronger resilience under non-stationary market regimes, suggesting its promise as a robust, AI-driven framework for dynamic portfolio optimization.",
+    "authors": [
+      "Jun Kevin",
+      "Pujianto Yugopuspito"
+    ],
+    "published": "2025-11-22",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CE",
+      "q-fin.PM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.17963v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.17963v1",
+    "fetched_at": "2025-11-28T11:05:14.085740",
+    "chinese_title": "混合LSTM与PPO网络用于动态投资组合优化",
+    "chinese_summary": "论文提出融合长短期记忆网络（LSTM）预测与近端策略优化（PPO）强化学习的混合框架，利用LSTM捕捉时间依赖，PPO在连续动作空间自适应优化投资组合配置；通过2018-2024年多资产（美股、印尼股市、美债、主流加密货币）数据集评估，该框架相比等权、指数及单模型基准，在非平稳市场下收益更高、韧性更强。",
+    "tags": [
+      "Portfolio Optimization",
+      "Reinforcement Learning",
+      "Deep Learning",
+      "Time Series"
+    ],
+    "key_contributions": [
+      "提出融合LSTM预测与PPO强化学习的混合框架，兼顾时间序列预测与动态投资组合优化",
+      "实证验证该框架在多资产非平稳市场下，优于传统基准及单模型（仅LSTM/仅PPO）"
+    ],
+    "processed_at": "2025-11-28T11:37:33.121231"
+  },
+  {
+    "id": "2511.17954v1",
+    "title": "A multi-view contrastive learning framework for spatial embeddings in risk modelling",
+    "abstract": "Incorporating spatial information, particularly those influenced by climate, weather, and demographic factors, is crucial for improving underwriting precision and enhancing risk management in insurance. However, spatial data are often unstructured, high-dimensional, and difficult to integrate into predictive models. Embedding methods are needed to convert spatial data into meaningful representations for modelling tasks. We propose a novel multi-view contrastive learning framework for generating spatial embeddings that combine information from multiple spatial data sources. To train the model, we construct a spatial dataset that merges satellite imagery and OpenStreetMap features across Europe. The framework aligns these spatial views with coordinate-based encodings, producing low-dimensional embeddings that capture both spatial structure and contextual similarity. Once trained, the model generates embeddings directly from latitude-longitude pairs, enabling any dataset with coordinates to be enriched with meaningful spatial features without requiring access to the original spatial inputs. In a case study on French real estate prices, we compare models trained on raw coordinates against those using our spatial embeddings as inputs. The embeddings consistently improve predictive accuracy across generalised linear, additive, and boosting models, while providing interpretable spatial effects and demonstrating transferability to unseen regions.",
+    "authors": [
+      "Freek Holvoet",
+      "Christopher Blier-Wong",
+      "Katrien Antonio"
+    ],
+    "published": "2025-11-22",
+    "categories": [
+      "q-fin.RM",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.17954v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.17954v1",
+    "fetched_at": "2025-11-28T11:05:14.085749",
+    "chinese_title": "一种用于风险建模中空间嵌入的多视图对比学习框架",
+    "chinese_summary": "论文提出多视图对比学习框架，整合卫星图像与OpenStreetMap等多源空间数据生成空间嵌入，训练后可直接从经纬度生成嵌入；在法国房价预测案例中，该嵌入显著提升各类模型精度，且具有可解释性与跨区域迁移性。",
+    "tags": [
+      "Risk Management",
+      "Deep Learning",
+      "Asset Pricing"
+    ],
+    "key_contributions": [
+      "提出多视图对比学习框架，整合多源空间数据生成可从经纬度直接获取的空间嵌入，无需原始空间输入",
+      "实证验证嵌入可提升房价预测模型精度，具备可解释性与跨区域迁移性"
+    ],
+    "processed_at": "2025-11-28T11:37:50.181113"
+  },
+  {
+    "id": "2511.17892v1",
+    "title": "Arbitrage-Free Bond and Yield Curve Forecasting with Neural Filters under HJM Constraints",
+    "abstract": "We develop an arbitrage-free deep learning framework for yield curve and bond price forecasting based on the Heath-Jarrow-Morton (HJM) term-structure model and a dynamic Nelson-Siegel parameterization of forward rates. Our approach embeds a no-arbitrage drift restriction into a neural state-space architecture by combining Kalman, extended Kalman, and particle filters with recurrent neural networks (LSTM/CLSTM), and introduces an explicit arbitrage error regularization (AER) term during training. The model is applied to U.S. Treasury and corporate bond data, and its performance is evaluated for both yield-space and price-space predictions at 1-day and 5-day horizons. Empirically, arbitrage regularization leads to its strongest improvements at short maturities, particularly in 5-day-ahead forecasts, increasing market-consistency as measured by bid-ask hit rates and reducing dollar-denominated prediction errors.",
+    "authors": [
+      "Xiang Gao",
+      "Cody Hyndman"
+    ],
+    "published": "2025-11-22",
+    "categories": [
+      "q-fin.MF",
+      "cs.LG",
+      "q-fin.CP",
+      "stat.ML"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.17892v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.17892v1",
+    "fetched_at": "2025-11-28T11:05:14.085757",
+    "chinese_title": "HJM约束下带神经滤波器的无套利债券及收益率曲线预测",
+    "chinese_summary": "本文基于Heath-Jarrow-Morton（HJM）期限结构模型和动态Nelson-Siegel前向利率参数化，开发无套利深度学习框架；通过结合卡尔曼/扩展卡尔曼/粒子滤波器与LSTM/CLSTM嵌入无套利漂移约束，训练中引入显式套利误差正则化（AER）项；实证应用于美债和企业债数据，显示该正则化在短期限（尤5天预测）提升预测性能，增强市场一致性并降低误差。",
+    "tags": [
+      "Deep Learning",
+      "Time Series",
+      "Asset Pricing",
+      "Market Microstructure"
+    ],
+    "key_contributions": [
+      "实证验证框架在美债/企业债预测中短期限性能提升，增强市场一致性并降低误差"
+    ],
+    "processed_at": "2025-11-28T11:38:10.245790"
+  },
+  {
+    "id": "2511.21378v1",
+    "title": "Anomaly Detection with Adaptive and Aggressive Rejection for Contaminated Training Data",
+    "abstract": "Handling contaminated data poses a critical challenge in anomaly detection, as traditional models assume training on purely normal data. Conventional methods mitigate contamination by relying on fixed contamination ratios, but discrepancies between assumed and actual ratios can severely degrade performance, especially in noisy environments where normal and abnormal data distributions overlap. To address these limitations, we propose Adaptive and Aggressive Rejection (AAR), a novel method that dynamically excludes anomalies using a modified z-score and Gaussian mixture model-based thresholds. AAR effectively balances the trade-off between preserving normal data and excluding anomalies by integrating hard and soft rejection strategies. Extensive experiments on two image datasets and thirty tabular datasets demonstrate that AAR outperforms the state-of-the-art method by 0.041 AUROC. By providing a scalable and reliable solution, AAR enhances robustness against contaminated datasets, paving the way for broader real-world applications in domains such as security and healthcare.",
+    "authors": [
+      "Jungi Lee",
+      "Jungkwon Kim",
+      "Chi Zhang",
+      "Kwangsun Yoo",
+      "Seok-Joo Byun"
+    ],
+    "published": "2025-11-26",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.21378v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.21378v1",
+    "fetched_at": "2025-11-28T11:05:26.408256",
+    "chinese_title": "面向污染训练数据的自适应激进拒绝异常检测方法",
+    "chinese_summary": "传统异常检测模型假设训练数据为纯正常数据，但污染数据会严重影响性能，现有方法依赖固定污染率易因实际比例偏差失效；论文提出自适应激进拒绝（AAR）方法，通过改进z-score和高斯混合模型阈值动态排除异常，结合软硬拒绝策略平衡正常数据保留与异常排除；实验表明AAR在多数据集上优于现有SOTA方法，增强污染数据鲁棒性，支持安全、医疗等领域应用。",
+    "tags": [
+      "Anomaly",
+      "Risk Management",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出自适应激进拒绝（AAR）方法，动态排除异常并平衡正常数据保留与异常排除，解决传统固定污染率导致的性能下降问题",
+      "实验验证AAR在图像和表格数据集上优于现有SOTA方法，提升污染数据鲁棒性，拓展实际应用场景"
+    ],
+    "processed_at": "2025-11-28T11:38:37.384848"
+  },
+  {
+    "id": "2511.20044v1",
+    "title": "RED-F: Reconstruction-Elimination based Dual-stream Contrastive Forecasting for Multivariate Time Series Anomaly Prediction",
+    "abstract": "The proactive prediction of anomalies (AP) in multivariate time series (MTS) is a critical challenge to ensure system dependability. The difficulty lies in identifying subtle anomaly precursors concealed within normal signals. However, existing unsupervised methods, trained exclusively on normal data, demonstrate a fundamental propensity to reconstruct normal patterns. Consequently, when confronted with weak precursors, their predictions are dominated by the normal pattern, submerging the very signal required for prediction. To contend with the limitation, we propose RED-F, a Reconstruction-Elimination based Dual-stream Contrastive Forecasting framework, comprising the Reconstruction-Elimination Model (REM) and the Dual-stream Contrastive Forecasting Model (DFM). The REM utilizes a hybrid time-frequency mechanism to mitigate the precursor, generating a purified, normal-pattern baseline. The DFM then receives this purified baseline and the original sequence which retains the precursor as parallel inputs. At the core of our framework, RED-F employs a contrastive forecast that transforms the difficult task of absolute signal detection into a simpler, more robust task of relative trajectory comparison by computing the divergence between these two predictive streams. This contrastive mechanism serves to amplify the faint precursor signal. Furthermore, the DFM is trained with a novel Multi-Series Prediction (MSP) objective, which leverages distant future context to enhance its predictive sensitivity. Extensive experiments on six real-world datasets demonstrate the superior capability of RED-F in anomaly prediction tasks.",
+    "authors": [
+      "PengYu Chen",
+      "Xiaohou Shi",
+      "Yuan Chang",
+      "Yan Sun",
+      "Sajal K. Das"
+    ],
+    "published": "2025-11-25",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.20044v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.20044v1",
+    "fetched_at": "2025-11-28T11:05:26.408437",
+    "chinese_title": "RED-F：基于重构-消除的双流对比预测框架用于多元时间序列异常预测",
+    "chinese_summary": "针对多元时间序列异常预测中弱异常前兆易被正常模式淹没的问题，提出RED-F框架：含重构-消除模型（REM）通过混合时频机制生成纯净正常基线，双流对比预测模型（DFM）以基线和原始序列为并行输入，通过对比预测放大前兆信号，且DFM采用多序列预测目标利用远期上下文增强预测能力。",
+    "tags": [
+      "Anomaly",
+      "Time Series",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出RED-F框架，通过重构-消除生成正常基线、双流对比预测放大弱异常前兆，解决现有方法难检测弱前兆的问题",
+      "DFM采用多序列预测（MSP）目标，利用远期上下文提升异常预测的准确性"
+    ],
+    "processed_at": "2025-11-28T11:38:47.522861"
+  },
+  {
+    "id": "2511.19090v1",
+    "title": "Optimization of Deep Learning Models for Dynamic Market Behavior Prediction",
+    "abstract": "The advent of financial technology has witnessed a surge in the utilization of deep learning models to anticipate consumer conduct, a trend that has demonstrated considerable potential in enhancing lending strategies and bolstering market efficiency. We study multi-horizon demand forecasting on e-commerce transactions using the UCI Online Retail II dataset. Unlike prior versions of this manuscript that mixed financial-loan narratives with retail data, we focus exclusively on retail market behavior and define a clear prediction target: per SKU daily demand (or revenue) for horizons H=1,7,14. We present a hybrid sequence model that combines multi-scale temporal convolutions, a gated recurrent module, and time-aware self-attention. The model is trained with standard regression losses and evaluated under MAE, RMSE, sMAPE, MASE, and Theil's U_2 with strict time-based splits to prevent leakage. We benchmark against ARIMA/Prophet, LSTM/GRU, LightGBM, and state-of-the-art Transformer forecasters (TFT, Informer, Autoformer, N-BEATS). Results show consistent accuracy gains and improved robustness on peak/holiday periods. We further provide ablations and statistical significance tests to ensure the reliability of improvements, and we release implementation details to facilitate reproducibility.",
+    "authors": [
+      "Shenghan Zhao",
+      "Yuzhen Lin",
+      "Ximeng Yang",
+      "Qiaochu Lu",
+      "Haozhong Xue",
+      "Gaozhe Jiang"
+    ],
+    "published": "2025-11-24",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.19090v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.19090v1",
+    "fetched_at": "2025-11-28T11:05:35.665840",
+    "chinese_title": "动态市场行为预测的深度学习模型优化",
+    "chinese_summary": "论文聚焦电商零售SKU级多horizon（H=1、7、14）日度需求/收入预测，提出融合多尺度时序卷积、门控循环模块及时序感知自注意力的混合序列模型；经严格时间分割训练评估，模型在准确率及峰值/假期稳健性上优于传统及前沿基准模型，且通过消融实验与统计显著性检验验证可靠性并开源实现。",
+    "tags": [
+      "Deep Learning",
+      "Time Series",
+      "Transformer",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出融合多尺度时序卷积、门控循环及时间感知自注意力的混合序列模型，优化电商零售多horizon需求预测",
+      "采用严格时间分割避免数据泄露，通过消融实验与统计显著性检验验证模型可靠性，且开源实现便于复现"
+    ],
+    "processed_at": "2025-11-28T11:39:02.576616"
+  },
+  {
+    "id": "2511.21537v1",
+    "title": "Context-Specific Causal Graph Discovery with Unobserved Contexts: Non-Stationarity, Regimes and Spatio-Temporal Patterns",
+    "abstract": "Real-world data, for example in climate applications, often consists of spatially gridded time series data or data with comparable structure. While the underlying system is often believed to behave similar at different points in space and time, those variations that do exist are twofold relevant: They often encode important information in and of themselves. And they may negatively affect the stability / convergence and reliability\\Slash{}validity of results of algorithms assuming stationarity or space-translation invariance. We study the information encoded in changes of the causal graph, with stability in mind. An analysis of this general task identifies two core challenges. We develop guiding principles to overcome these challenges, and provide a framework realizing these principles by modifying constraint-based causal discovery approaches on the level of independence testing. This leads to an extremely modular, easily extensible and widely applicable framework. It can leverage existing constraint-based causal discovery methods (demonstrated on IID-algorithms PC, PC-stable, FCI and time series algorithms PCMCI, PCMCI+, LPCMCI) with little to no modification. The built-in modularity allows to systematically understand and improve upon an entire array of subproblems. By design, it can be extended by leveraging insights from change-point-detection, clustering, independence-testing and other well-studied related problems. The division into more accessible sub-problems also simplifies the understanding of fundamental limitations, hyperparameters controlling trade-offs and the statistical interpretation of results. An open-source implementation will be available soon.",
+    "authors": [
+      "Martin Rabel",
+      "Jakob Runge"
+    ],
+    "published": "2025-11-26",
+    "categories": [
+      "cs.LG",
+      "math.ST"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.21537v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.21537v1",
+    "fetched_at": "2025-11-28T11:05:45.458613",
+    "chinese_title": "含未观测上下文的特定上下文因果图发现：非平稳性、机制与时空模式",
+    "chinese_summary": "针对含未观测上下文的非平稳时空数据（如气候网格时间序列），论文提出模块化因果图发现框架，通过修改约束类因果算法的独立性测试层适配数据变化，可复用PC、PCMCI等现有算法并支持结合变化点检测等方法扩展。",
+    "tags": [
+      "Time Series",
+      "Anomaly"
+    ],
+    "key_contributions": [
+      "提出模块化因果图发现框架，通过修改约束类算法的独立性测试层，适配含未观测上下文的非平稳时空数据，提升算法稳定性与可靠性",
+      "框架可复用现有PC、PCMCI等因果发现算法，支持结合变化点检测、聚类等方法扩展，模块化设计便于子问题分析与优化"
+    ],
+    "processed_at": "2025-11-28T11:39:26.612267"
+  },
+  {
+    "id": "2511.18615v1",
+    "title": "Bayesian-based Online Label Shift Estimation with Dynamic Dirichlet Priors",
+    "abstract": "Label shift, a prevalent challenge in supervised learning, arises when the class prior distribution of test data differs from that of training data, leading to significant degradation in classifier performance. To accurately estimate the test priors and enhance classification accuracy, we propose a Bayesian framework for label shift estimation, termed Full Maximum A Posterior Label Shift (FMAPLS), along with its online version, online-FMAPLS. Leveraging batch and online Expectation-Maximization (EM) algorithms, these methods jointly and dynamically optimize Dirichlet hyperparameters $\\boldsymbolα$ and class priors $\\boldsymbolπ$, thereby overcoming the rigid constraints of the existing Maximum A Posterior Label Shift (MAPLS) approach. Moreover, we introduce a linear surrogate function (LSF) to replace gradient-based hyperparameter updates, yielding closed-form solutions that reduce computational complexity while retaining asymptotic equivalence. The online variant substitutes the batch E-step with a stochastic approximation, enabling real-time adaptation to streaming data. Furthermore, our theoretical analysis reveals a fundamental trade-off between online convergence rate and estimation accuracy. Extensive experiments on CIFAR100 and ImageNet datasets under shuffled long-tail and Dirichlet test priors demonstrate that FMAPLS and online-FMAPLS respectively achieve up to 40% and 12% lower KL divergence and substantial improvements in post-shift accuracy over state-of-the-art baselines, particularly under severe class imbalance and distributional uncertainty. These results confirm the robustness, scalability, and suitability of the proposed methods for large-scale and dynamic learning scenarios.",
+    "authors": [
+      "Jiawei Hu",
+      "Javier A. Barria"
+    ],
+    "published": "2025-11-23",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.18615v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.18615v1",
+    "fetched_at": "2025-11-28T11:05:45.459062",
+    "chinese_title": "基于贝叶斯的带动态狄利克雷先验的在线标签偏移估计",
+    "chinese_summary": "针对监督学习中标签偏移（训练与测试类先验分布差异）导致分类器性能下降的问题，论文提出FMAPLS（全最大后验标签偏移）及其在线版本online-FMAPLS，通过批量/在线EM算法联合动态优化狄利克雷超参数和类先验，克服现有MAPLS的刚性约束；引入线性替代函数（LSF）得到闭式解降低计算复杂度，在线版本用随机近似实现流数据实时适应，理论分析了收敛率与精度的权衡，实验验证方法性能更优。",
+    "tags": [
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出FMAPLS及其在线版本，利用批量/在线EM算法联合动态优化狄利克雷超参数和类先验，解决现有MAPLS的刚性约束问题",
+      "引入线性替代函数（LSF）得到闭式解降低计算复杂度，在线版本实现流数据实时适应，理论分析收敛率与精度的权衡，实验验证方法优越性"
+    ],
+    "processed_at": "2025-11-28T11:40:01.496048"
+  },
+  {
+    "id": "2511.18850v1",
+    "title": "Cognitive Alpha Mining via LLM-Driven Code-Based Evolution",
+    "abstract": "Discovering effective predictive signals, or ``alphas,'' from financial data with high dimensionality and extremely low signal-to-noise ratio remains a difficult open problem. Despite progress in deep learning, genetic programming, and, more recently, large language model (LLM)--based factor generation, existing approaches still explore only a narrow region of the vast alpha search space. Neural models tend to produce opaque and fragile patterns, while symbolic or formula-based methods often yield redundant or economically ungrounded expressions that generalize poorly. Although different in form, these paradigms share a key limitation: none can conduct broad, structured, and human-like exploration that balances logical consistency with creative leaps. To address this gap, we introduce the Cognitive Alpha Mining Framework (CogAlpha), which combines code-level alpha representation with LLM-driven reasoning and evolutionary search. Treating LLMs as adaptive cognitive agents, our framework iteratively refines, mutates, and recombines alpha candidates through multi-stage prompts and financial feedback. This synergistic design enables deeper thinking, richer structural diversity, and economically interpretable alpha discovery, while greatly expanding the effective search space. Experiments on A-share equities demonstrate that CogAlpha consistently discovers alphas with superior predictive accuracy, robustness, and generalization over existing methods. Our results highlight the promise of aligning evolutionary optimization with LLM-based reasoning for automated and explainable alpha discovery. All source code will be released.",
+    "authors": [
+      "Fengyuan Liu",
+      "Huang Yi",
+      "Sichun Luo",
+      "Yuqi Wang",
+      "Yazheng Yang",
+      "Xinye Li",
+      "Zefa Hu",
+      "Junlan Feng",
+      "Qi Liu"
+    ],
+    "published": "2025-11-24",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.18850v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.18850v1",
+    "fetched_at": "2025-11-28T11:06:32.634207",
+    "chinese_title": "基于LLM驱动的代码进化的认知阿尔法挖掘",
+    "chinese_summary": "针对现有阿尔法挖掘方法搜索空间狭窄、模型不透明或经济依据不足等问题，本文提出CogAlpha框架，融合代码级阿尔法表示、LLM驱动推理与进化搜索，通过多阶段提示和金融反馈迭代优化候选阿尔法；在A股市场的实验表明，该框架挖掘的阿尔法在预测精度、鲁棒性和泛化性上均优于现有方法。",
+    "tags": [
+      "LLM",
+      "Factor Mining",
+      "Asset Pricing",
+      "Algorithmic Trading"
+    ],
+    "key_contributions": [
+      "提出CogAlpha认知阿尔法挖掘框架，结合代码级阿尔法表示、LLM驱动推理与进化搜索，平衡逻辑一致性与创造性探索，有效拓展阿尔法搜索空间",
+      "在A股市场实验验证，该框架挖掘的阿尔法具有更优的预测精度、鲁棒性与泛化性，优于现有阿尔法挖掘方法"
+    ],
+    "processed_at": "2025-11-28T11:40:27.568745"
+  },
+  {
+    "id": "2511.18177v1",
+    "title": "Rethinking Retrieval: From Traditional Retrieval Augmented Generation to Agentic and Non-Vector Reasoning Systems in the Financial Domain for Large Language Models",
+    "abstract": "Recent advancements in Retrieval-Augmented Generation (RAG) have enabled Large Language Models to answer financial questions using external knowledge bases of U.S. SEC filings, earnings reports, and regulatory documents. However, existing work lacks systematic comparison of vector-based and non-vector RAG architectures for financial documents, and the empirical impact of advanced RAG techniques on retrieval accuracy, answer quality, latency, and cost remain unclear. We present the first systematic evaluation comparing vector-based agentic RAG using hybrid search and metadata filtering against hierarchical node-based systems that traverse document structure without embeddings. We evaluate two enhancement techniques applied to the vector-based architecture, i) cross-encoder reranking for retrieval precision, and ii) small-to-big chunk retrieval for context completeness. Across 1,200 SEC 10-K, 10-Q, and 8-K filings on a 150-question benchmark, we measure retrieval metrics (MRR, Recall@5), answer quality through LLM-as-a-judge pairwise comparisons, latency, and preprocessing costs. Vector-based agentic RAG achieves a 68% win rate over hierarchical node-based systems with comparable latency (5.2 compared to 5.98 seconds). Cross-encoder reranking achieves a 59% absolute improvement at optimal parameters (10, 5) for MRR@5. Small-to-big retrieval achieves a 65% win rate over baseline chunking with only 0.2 seconds additional latency. Our findings reveal that applying advanced RAG techniques to financial Q&A systems improves retrieval accuracy, answer quality, and has cost-performance tradeoffs to be considered in production.",
+    "authors": [
+      "Elias Lumer",
+      "Matt Melich",
+      "Olivia Zino",
+      "Elena Kim",
+      "Sara Dieter",
+      "Pradeep Honaganahalli Basavaraju",
+      "Vamse Kumar Subbiah",
+      "James A. Burke",
+      "Roberto Hernandez"
+    ],
+    "published": "2025-11-22",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.18177v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.18177v1",
+    "fetched_at": "2025-11-28T11:06:32.634258",
+    "chinese_title": "重新思考检索：金融领域大语言模型从传统检索增强生成到智能体与非向量推理系统的演进",
+    "chinese_summary": "本文首次系统对比金融文档的向量基智能体RAG（混合搜索+元数据过滤）与非向量层次节点基RAG架构，评估交叉编码器重排序、小到大分块检索两种增强技术的效果；基于1200份SEC文件和150题基准，测检索指标、回答质量、 latency及成本，发现向量基智能体RAG更优，两种增强技术显著提升性能。",
+    "tags": [
+      "LLM",
+      "NLP",
+      "Financial Agent",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "首次系统对比金融文档的向量基与非向量RAG架构，多维度评估其检索准确率、回答质量、 latency及成本",
+      "验证交叉编码器重排序、小到大分块检索对向量基RAG的提升效果，给出实证结果"
+    ],
+    "processed_at": "2025-11-28T11:40:45.283565"
+  },
+  {
+    "id": "2511.18671v2",
+    "title": "Multi-Agent Cross-Entropy Method with Monotonic Nonlinear Critic Decomposition",
+    "abstract": "Cooperative multi-agent reinforcement learning (MARL) commonly adopts centralized training with decentralized execution (CTDE), where centralized critics leverage global information to guide decentralized actors. However, centralized-decentralized mismatch (CDM) arises when the suboptimal behavior of one agent degrades others' learning. Prior approaches mitigate CDM through value decomposition, but linear decompositions allow per-agent gradients at the cost of limited expressiveness, while nonlinear decompositions improve representation but require centralized gradients, reintroducing CDM. To overcome this trade-off, we propose the multi-agent cross-entropy method (MCEM), combined with monotonic nonlinear critic decomposition (NCD). MCEM updates policies by increasing the probability of high-value joint actions, thereby excluding suboptimal behaviors. For sample efficiency, we extend off-policy learning with a modified k-step return and Retrace. Analysis and experiments demonstrate that MCEM outperforms state-of-the-art methods across both continuous and discrete action benchmarks.",
+    "authors": [
+      "Yan Wang",
+      "Ke Deng",
+      "Yongli Ren"
+    ],
+    "published": "2025-11-24",
+    "categories": [
+      "cs.LG",
+      "cs.MA"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.18671v2",
+    "arxiv_url": "https://arxiv.org/abs/2511.18671v2",
+    "fetched_at": "2025-11-28T11:07:00.945684",
+    "chinese_title": "带单调非线性批评者分解的多智能体交叉熵方法",
+    "chinese_summary": "合作多智能体强化学习（MARL）的集中训练分散执行（CTDE）框架存在集中分散不匹配（CDM）问题，现有价值分解方法面临线性表达有限或非线性需集中梯度的权衡；论文提出带单调非线性批评者分解（NCD）的多智能体交叉熵方法（MCEM），通过提升高价值联合动作概率排除次优行为，还扩展了带修正k步回报和Retrace的离策略学习，实验表明其在连续与离散动作基准上优于当前最优方法。",
+    "tags": [
+      "Reinforcement Learning",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出带单调非线性批评者分解（NCD）的多智能体交叉熵方法（MCEM），解决CTDE中的CDM问题，平衡价值分解的表达能力与梯度分散性；",
+      "扩展离策略学习引入修正k步回报和Retrace提升样本效率，在连续与离散动作基准上优于SOTA合作多智能体强化学习方法。"
+    ],
+    "processed_at": "2025-11-28T11:41:22.817702"
+  },
+  {
+    "id": "2511.21101v1",
+    "title": "MortgageLLM: Domain-Adaptive Pretraining with Residual Instruction Transfer, Alignment Tuning, and Task-Specific Routing",
+    "abstract": "Large Language Models (LLMs) demonstrate exceptional capabilities across general domains, yet their application to specialized sectors such as mortgage finance requires domain-specific knowledge augmentation while preserving instruction-following fidelity. We present MortgageLLM, a novel domain-specific large language model that addresses this dual challenge. It is developed using a dual-track specialization framework from a single base model (LLaMA-3.1-8B). We opted for this dual-expert approach as a single multi-task model suffers from performance trade-offs, where optimizing for structured tasks (via SFT) degrades conversational fidelity (via DPO). Our dual-track method solves this by creating two specialists, allowing each to be optimally trained for its distinct capability. Our approach applies the instruction residual technique to restore instruction-following capabilities post-domain adaptation without supervised fine-tuning. We contribute: (1) application of this residual technique to the highly specialized mortgage finance domain; (2) a dual-expert architecture combining a conversational Q&A model and a structured task model for classification and summarization; and (3) an intelligent task routing mechanism using few-shot classification performed by one of the expert models itself. We validate our approach on domain-specific benchmarks, where our final model (MLM v2) significantly outperforms the base LLaMA-3.1-8B-Instruct, achieving an LLM-as-a-Judge summarization score of 4.58 (vs. 3.99), a Q&A score of 4.09 (vs. 4.0), and a classification score of 2.6 (vs. 1.2). On semantic similarity, our model achieved a BERTScore of 0.77 for summarization (vs. 0.74), 0.68 for Q&A (vs. 0.58), and 0.75 for classification (vs. 0.73), substantially outperforming baseline approaches.",
+    "authors": [
+      "Manish Jain",
+      "Satheesh Kumar Ponnambalam",
+      "Salman Faroz",
+      "Chandrakanth Lns",
+      "Vinay Sharma"
+    ],
+    "published": "2025-11-26",
+    "categories": [
+      "cs.CL",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.21101v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.21101v1",
+    "fetched_at": "2025-11-28T11:07:19.617929",
+    "chinese_title": "MortgageLLM：带残差指令迁移、对齐调优和任务特定路由的领域自适应预训练",
+    "chinese_summary": "论文提出抵押贷款领域专用大模型MortgageLLM，采用双轨特化框架从LLaMA-3.1-8B构建对话问答与结构化任务两个专家模型，通过指令残差技术恢复指令遵循能力并设计智能任务路由机制，在领域基准上显著优于基础模型。",
+    "tags": [
+      "LLM",
+      "NLP",
+      "Financial Agent",
+      "Transformer"
+    ],
+    "key_contributions": [
+      "将指令残差技术应用于抵押贷款金融领域",
+      "提出结合对话问答与结构化任务的双专家架构",
+      "设计基于专家模型自身少样本分类的智能任务路由机制"
+    ],
+    "processed_at": "2025-11-28T11:41:37.385028"
+  },
+  {
+    "id": "2511.19330v1",
+    "title": "Targeted Manipulation: Slope-Based Attacks on Financial Time-Series Data",
+    "abstract": "A common method of attacking deep learning models is through adversarial attacks, which occur when an attacker specifically modifies the input of a model to produce an incorrect result. Adversarial attacks have been deeply investigated in the image domain; however, there is less research in the time-series domain and very little for forecasting financial data. To address these concerns, this study aims to build upon previous research on adversarial attacks for time-series data by introducing two new slope-based methods aimed to alter the trends of the predicted stock forecast generated by an N-HiTS model. Compared to the normal N-HiTS predictions, the two new slope-based methods, the General Slope Attack and Least-Squares Slope Attack, can manipulate N-HiTS predictions by doubling the slope. These new slope attacks can bypass standard security mechanisms, such as a discriminator that filters real and perturbed inputs, reducing a 4-layered CNN's specificity to 28% and accuracy to 57%. Furthermore, the slope based methods were incorporated into a GAN architecture as a means of generating realistic synthetic data, while simultaneously fooling the model. Finally, this paper also proposes a sample malware designed to inject an adversarial attack in the model inference library, proving that ML-security research should not only focus on making the model safe, but also securing the entire pipeline.",
+    "authors": [
+      "Dominik Luszczynski"
+    ],
+    "published": "2025-11-24",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.19330v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.19330v1",
+    "fetched_at": "2025-11-28T11:07:38.239953",
+    "chinese_title": "定向操纵：基于斜率的金融时间序列数据攻击",
+    "chinese_summary": "本文针对金融时间序列预测的对抗攻击研究不足问题，提出通用斜率攻击与最小二乘斜率攻击两种方法，可使N-HiTS模型的股票预测斜率翻倍；该攻击能绕过CNN判别器等标准安全机制，还可结合GAN生成逼真合成数据，同时设计样本恶意软件证明需保护模型推理全流程。",
+    "tags": [
+      "Deep Learning",
+      "Time Series",
+      "Anomaly",
+      "Algorithmic Trading"
+    ],
+    "key_contributions": [
+      "提出两种基于斜率的对抗攻击方法，可操纵N-HiTS模型的股票预测趋势",
+      "证明该攻击能绕过标准安全机制，结合GAN生成逼真合成数据，且强调需保护模型推理全流程"
+    ],
+    "processed_at": "2025-11-28T11:41:56.792208"
+  },
+  {
+    "id": "2511.18613v1",
+    "title": "KAN vs LSTM Performance in Time Series Forecasting",
+    "abstract": "This paper compares Kolmogorov-Arnold Networks (KAN) and Long Short-Term Memory networks (LSTM) for forecasting non-deterministic stock price data, evaluating predictive accuracy versus interpretability trade-offs using Root Mean Square Error (RMSE).LSTM demonstrates substantial superiority across all tested prediction horizons, confirming their established effectiveness for sequential data modelling. Standard KAN, while offering theoretical interpretability through the Kolmogorov-Arnold representation theorem, exhibits significantly higher error rates and limited practical applicability for time series forecasting. The results confirm LSTM dominance in accuracy-critical time series applications while identifying computational efficiency as KANs' primary advantage in resource-constrained scenarios where accuracy requirements are less stringent. The findings support LSTM adoption for practical financial forecasting while suggesting that continued research into specialised KAN architectures may yield future improvements.",
+    "authors": [
+      "Tabish Ali Rather",
+      "S M Mahmudul Hasan Joy",
+      "Nadezda Sukhorukova",
+      "Federico Frascoli"
+    ],
+    "published": "2025-11-23",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2511.18613v1",
+    "arxiv_url": "https://arxiv.org/abs/2511.18613v1",
+    "fetched_at": "2025-11-28T11:07:38.240023",
+    "chinese_title": "KAN与LSTM在时间序列预测中的性能比较",
+    "chinese_summary": "本文以均方根误差（RMSE）评估预测准确性与可解释性的权衡，比较Kolmogorov-Arnold网络（KAN）与长短期记忆网络（LSTM）在非确定性股票价格时间序列预测中的性能；研究发现LSTM在所有测试预测 horizon 上表现显著更优，标准KAN误差高且实用性有限，但KAN在资源受限、精度要求较低的场景下计算效率有优势，结果支持LSTM用于实际金融预测并建议持续研究专门化KAN架构。",
+    "tags": [
+      "Deep Learning",
+      "Time Series",
+      "Asset Pricing"
+    ],
+    "key_contributions": [
+      "验证LSTM在非确定性股票价格时间序列预测中，所有测试预测 horizon 上的性能显著优于标准KAN，确认其在精度关键型时间序列应用中的主导地位",
+      "揭示标准KAN虽具理论可解释性但实际预测误差高、实用性有限，同时指出其在资源受限且精度要求较低场景下的计算效率优势，并建议持续研究专门化KAN架构以优化性能"
+    ],
+    "processed_at": "2025-11-28T11:42:28.950459"
+  }
+]
