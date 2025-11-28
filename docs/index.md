@@ -13,35 +13,29 @@ hero:
       text: 开始阅读
       link: /guide/
     - theme: alt
-      text: arXiv 论文日报
+      text: 论文日报
       link: /arxiv/
     - theme: alt
       text: GitHub
       link: https://github.com/Barca0412/Introduction-to-Quantitative-Finance
 
 features:
-  - icon: 📊
-    title: 数据源与另类数据
-    details: JQData、Tushare、AKShare 等数据获取方式
+  - title: 数据源与另类数据
+    details: JQData、Tushare、AKShare 等金融数据获取接口
     link: /data/
-  - icon: 🔍
-    title: 因子挖掘
-    details: 基本面、技术面、机器学习、LLM 因子挖掘方法
+  - title: 因子挖掘
+    details: 基本面因子、技术因子、机器学习因子、LLM因子挖掘
     link: /factors/
-  - icon: 📈
-    title: 回测框架
-    details: Backtrader、Qlib、QUANTAXIS 等回测工具
+  - title: 回测框架
+    details: Backtrader、Qlib、QUANTAXIS 等量化回测工具
     link: /backtest/
-  - icon: 💼
-    title: 投资组合优化
-    details: 凸优化、Barra 多因子风控模型
+  - title: 投资组合优化
+    details: 均值方差优化、Barra多因子风控模型
     link: /portfolio/
-  - icon: 📰
-    title: arXiv 论文日报
-    details: 每日更新 AI+金融领域最新论文，含中文概述与标签
+  - title: AI+金融论文日报
+    details: 每日自动抓取arXiv论文，LLM生成中文概述与标签分类
     link: /arxiv/
-  - icon: 📚
-    title: 公开资源
-    details: 量化论坛、课程、工具汇总
+  - title: 公开资源
+    details: 量化论坛、在线课程、开源工具汇总
     link: /resources/
 ---
