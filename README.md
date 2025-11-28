@@ -42,6 +42,18 @@
  <br> <br>
 </div>
 
+
+# [AI+金融 📄 论文整理及每日分析](./论文/AI金融论文整理/README.md)
+
+每日自动更新 arXiv 上 AI+金融相关论文，使用 LLM 生成中文概述与标签。
+
+- 📰 **每日更新**: 自动抓取arXiv上 q-fin、cs.LG+finance 相关论文
+- 🤔 **智能分析**: 使用大模型生成中文摘要和关键贡献
+- 🏷️ **主题分类**: Asset Pricing、LLM、Factor Mining、RL 等标签
+
+<a id="section2"></a>
+
+
 # 基于多因子股票量化投研框架的开源教程
 
 - 本部分计划开源自湖南大学金融科技协会Quant Group的研究内容，框架（英文版）如下图
@@ -75,20 +87,6 @@
 - ...
 
 <a id="section-arxiv"></a>
-
-# AI+金融论文整理
-
-每日自动更新 arXiv 上 AI+金融相关论文，使用 LLM 生成中文概述与标签。
-
-- 📰 **每日更新**: 自动抓取 q-fin、cs.LG+finance 相关论文
-- 🤖 **智能分析**: 使用大模型生成中文摘要和关键贡献
-- 🏷️ **主题分类**: Asset Pricing、LLM、Factor Mining、RL 等标签
-
-## [📄 论文日报汇总](./论文/AI金融论文整理/README.md)
-
-- 点击查看每日论文更新和主题分类
-
-<a id="section2"></a>
 
 # 公开资料整理
 
