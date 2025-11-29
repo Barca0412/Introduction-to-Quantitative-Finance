@@ -2,7 +2,7 @@
 
 资产定价、因子模型与市场异象研究
 
-> 共收录 **14** 篇论文 | [返回索引](../README.md)
+> 共收录 **30** 篇论文 | [返回索引](../README.md)
 
 ---
 
@@ -143,6 +143,166 @@
 **标签**: `Deep Learning` `Time Series` `Asset Pricing`
 
 本文以均方根误差（RMSE）评估预测准确性与可解释性的权衡，比较Kolmogorov-Arnold网络（KAN）与长短期记忆网络（LSTM）在非确定性股票价格时间序列预测中的性能；研究发现LSTM在所有测试预测 horizon 上表现显著更优，标准KAN误差高且实用性有限，但KAN在资源受限、精度要求较低的场景下计算效率有优势，结果支持LSTM用于实际金融预测并建议持续研究专门化KAN架构。
+
+---
+
+### [设计制造数据交易市场的声誉系统：结合Q学习和IRL估计效用的多智能体评估](https://arxiv.org/abs/2511.19930v1)
+
+**日期**: 2025-11-28 | **作者**: Kenta Yamamoto, Teruaki Hayashi
+
+**标签**: `Financial Agent` `Reinforcement Learning` `Market Microstructure` `Asset Pricing`
+
+论文针对制造数据交易市场的信息不对称问题，开发了集成强化学习（Q学习）与逆强化学习（IRL）的多智能体模拟器，评估五种声誉系统的市场效果并提出融合优势的混合机制，以提升数据价格与质量的对齐度。
+
+---
+
+### [基于人工智能的智能电网自适应控制混合信息物理框架](https://arxiv.org/abs/2511.21590v1)
+
+**日期**: 2025-11-28 | **作者**: Muhammad Siddique, Sohaib Zafar
+
+**标签**: `Anomaly` `Deep Learning` `Time Series`
+
+本文提出基于机器学习的智能电网全流程数字取证框架，整合传感器数据采集、认证通信、云存储与自动化取证分析，采用随机森林、SVM、深度神经网络等算法实现实时异常检测、事件重建及入侵分析；经仿真实验验证，该框架准确可扩展，能抵御数据篡改等网络攻击，云服务适配大数据驱动的取证工作流。
+
+---
+
+### [混合SIFT-SNN用于交通流控制基础设施的高效异常检测](https://arxiv.org/abs/2511.21337v1)
+
+**日期**: 2025-11-28 | **作者**: Munish Rathee, Boris Bačić, Maryam Doborjeh
+
+**标签**: `Anomaly` `Deep Learning`
+
+论文提出SIFT-SNN框架，整合SIFT空间特征编码、延迟驱动脉冲转换层与LIF脉冲神经网络（SNN），实现交通基础设施结构异常的实时检测；在含6000帧标注（含真实/合成不安全案例）的奥克兰海港大桥数据集上，该框架实现92.3%±0.8%准确率、单帧9.5ms推理时间，低延迟低功耗适配边缘部署，且相比CNN更具可解释性与硬件效率。
+
+---
+
+### [I-GLIDE：用于退化估计中潜在健康指标的输入分组](https://arxiv.org/abs/2511.21208v1)
+
+**日期**: 2025-11-28 | **作者**: Lucas Thil, Jesse Read, Rim Kaddah et al.
+
+**标签**: `Anomaly` `Deep Learning` `Time Series`
+
+该论文针对剩余使用寿命（RUL）预测中健康指标（HI）的不足，首次将RaPP作为HI并证明其优于传统重建误差；提出输入分组范式（I-GLIDE）隔离传感器子集建模特定退化，结合MC dropout和概率潜在空间量化不确定性以提升鲁棒性，在航空航天和制造系统数据上表现更优且具可解释性。
+
+---
+
+### [从一个攻击域到另一个攻击域：基于孪生网络的对比迁移学习用于高级持续威胁检测](https://arxiv.org/abs/2511.20500v1)
+
+**日期**: 2025-11-28 | **作者**: Sidahmed Benabderrahmane, Talal Rahwan
+
+**标签**: `Anomaly` `Deep Learning`
+
+针对高级持续威胁（APT）检测中传统方法类不平衡、高维特征、跨域迁移性差等问题，论文提出整合迁移学习、可解释AI（SHAP）、对比学习与孪生网络的混合框架——用注意力自动编码器实现跨域知识转移，SHAP筛选稳定特征降维，孪生编码器对齐源-目标表示提升异常可分性；在DARPA TC真实数据及合成攻击场景下，该方法检测性能优于经典与深度基线，具备可扩展、可解释、跨域迁移能力。
+
+---
+
+### [基于主动学习辅助注意力对抗双自动编码器的排序增强异常检测](https://arxiv.org/abs/2511.20480v1)
+
+**日期**: 2025-11-28 | **作者**: Sidahmed Benabderrahmane, James Cheney, Talal Rahwan
+
+**标签**: `Anomaly` `Deep Learning`
+
+论文针对APT攻击的异常检测问题，提出主动学习辅助的注意力对抗双自动编码器框架，通过选择性查询标注减少成本并提升检测率；在DARPA多操作系统真实不平衡溯源数据上验证，性能优于现有方法。
+
+---
+
+### [基于概念瓶颈模型的可解释视觉异常检测](https://arxiv.org/abs/2511.20088v1)
+
+**日期**: 2025-11-28 | **作者**: Arianna Stropeni, Valentina Zaccaria, Francesco Borsatti et al.
+
+**标签**: `Anomaly` `Deep Learning`
+
+本文针对视觉异常检测（VAD）模型解释缺乏语义意义的问题，提出基于概念瓶颈模型（CBM）的CONVAD方法；其核心贡献包括开发VAD用概念数据集、改进CBM架构实现概念与视觉双重解释、引入人工异常合成 pipeline 减少对稀有异常样本的依赖，且性能与经典VAD方法相当并提升可解释性。
+
+---
+
+### [基于渐进单应性引导对齐的无监督多视图视觉异常检测](https://arxiv.org/abs/2511.18766v1)
+
+**日期**: 2025-11-28 | **作者**: Xintao Chen, Xiaohao Xu, Bozhong Zheng et al.
+
+**标签**: `Anomaly` `Deep Learning`
+
+本文提出无监督多视图视觉异常检测框架ViewSense-AD（VSAD），核心通过单应性引导的多视图对齐模块（MVAM）对齐相邻视图特征区域，集成到视图对齐潜在扩散模型（VALDM）实现渐进多阶段对齐，结合融合细化模块（FRM）增强特征一致性，通过对比多级别特征与正常原型记忆库完成异常检测，在RealIAD和MANTA数据集上取得SOTA。
+
+---
+
+### [面向问题的时间序列异常检测评估指标分类](https://arxiv.org/abs/2511.18739v1)
+
+**日期**: 2025-11-28 | **作者**: Kaixiang Yang, Jiarong Liu, Yupeng Song et al.
+
+**标签**: `Anomaly` `Time Series` `Benchmark`
+
+本文针对时间序列异常检测评估的挑战，提出面向问题的指标分类框架，将20余种常用指标按6个维度（如基本准确率、时效性、标签不精确容忍度等）分类；通过实验量化各指标区分有效检测与随机噪声的能力，揭示指标适用性需与任务目标对齐，为评估提供统一分析视角。
+
+---
+
+### [多模态实时异常检测及其工业应用](https://arxiv.org/abs/2511.18698v1)
+
+**日期**: 2025-11-28 | **作者**: Aman Verma, Keshav Samdani, Mohd. Samiuddin Shafi
+
+**标签**: `Anomaly` `Deep Learning` `Transformer`
+
+论文提出集成视频与音频处理的多模态实时异常检测系统，包含轻量版（YOLOv8、ByteTrack、AST）和进阶版（多音频模型集成、混合目标检测、跨模态注意力等）；进阶版结合三类音频模型、双目标检测器及复杂融合机制，在通用监控与工业安全场景中实现实时高性能。
+
+---
+
+### [基于眼底图像的功能定位强化深度异常检测](https://arxiv.org/abs/2511.18627v1)
+
+**日期**: 2025-11-28 | **作者**: Jan Benedikt Ruhland, Thorsten Papenbrock, Jan-Peter Sowa et al.
+
+**标签**: `Anomaly` `Deep Learning` `Transformer`
+
+论文针对眼底图像视网膜疾病检测的质量变异、早期表现细微等挑战，系统评估Vision Transformer（ViT）在多数据集和增强策略下的性能，发现几何与颜色增强稳定提升效果，ViT在Papila数据集AUC优于卷积集成基线；同时开发基于GANomaly的异常检测器，提供重建可解释性并泛化到 unseen 数据，结合GUESS实现概率校准。
+
+---
+
+### [MEDIC：用于对撞机实验数据质量监控的网络](https://arxiv.org/abs/2511.18172v1)
+
+**日期**: 2025-11-28 | **作者**: Juvenal Bassa, Arghya Chattopadhyay, Sudhir Malik et al.
+
+**标签**: `Anomaly` `Deep Learning`
+
+论文针对粒子物理实验数据质量监控（DQM）的挑战，提出模拟驱动方法，利用修改后的Delphes探测器模拟工具，开发MEDIC神经网络框架，实现探测器行为学习、异常识别及故障组件定位，为综合DQM系统奠定初步基础。
+
+---
+
+### [经典与量子核的融合实现准确且鲁棒的两样本检验](https://arxiv.org/abs/2511.20941v1)
+
+**日期**: 2025-11-28 | **作者**: Yu Terada, Yugo Ogio, Ken Arai et al.
+
+**标签**: `Deep Learning` `Anomaly`
+
+该论文针对小数据集下核选择难题，基于最大均值差异（MMD）核检验框架提出MMD-FUSE方法，通过融合经典核与量子核的混合测试策略，结合经典核的领域归纳偏置和量子核的表达能力；实验验证表明，经超参数调优后，含量子核的MMD-FUSE测试能力显著优于经典核方法，适用于合成及真实临床数据集。
+
+---
+
+### [数据流中分类器投票线性独立性视角下的集成性能研究](https://arxiv.org/abs/2511.21465v1)
+
+**日期**: 2025-11-28 | **作者**: Enes Bektas, Fazli Can
+
+**标签**: `Algorithmic Trading` `Time Series` `Anomaly`
+
+本文从数据流中分类器投票的线性独立性视角，研究集成规模与性能的关系，推导了达到指定线性独立概率所需集成规模的理论估计；通过OzaBagging和GOOWE等集成方法在真实及合成数据集上验证，发现该估计可有效识别鲁棒集成的性能饱和点，且复杂加权方案的高理论多样性可能引发算法不稳定。
+
+---
+
+### [智能制造中的混合智能体AI与多智能体系统](https://arxiv.org/abs/2511.18258v1)
+
+**日期**: 2025-11-28 | **作者**: Mojtaba A. Farahani, Md Irfan Khan, Thorsten Wuest
+
+**标签**: `LLM` `Anomaly` `Transformer`
+
+本文提出面向智能制造预测性维护的混合智能体AI与多智能体框架，以LLM智能体实现战略编排与自适应推理，结合规则及SLM智能体完成边缘端高效领域任务，分层架构由LLM Planner协调工作流；该框架支持动态模型适应、成本高效维护调度及可解释决策，经工业数据集验证且模块化可扩展。
+
+---
+
+### [语义优势与取证效率：深度学习与心理语言学在商务邮件欺诈检测中的比较分析](https://arxiv.org/abs/2511.20944v1)
+
+**日期**: 2025-11-28 | **作者**: Yaw Osei Adjei
+
+**标签**: `NLP` `Deep Learning` `Transformer` `Anomaly`
+
+论文针对每年造成超29亿美元损失的商务邮件欺诈（BEC），比较两种检测范式——基于DistilBERT的语义流（高精度需GPU）和基于CatBoost的取证心理语言流（低延迟低成本），在对抗性数据集上验证性能，为不同部署场景提供选型参考。
 
 ---
 

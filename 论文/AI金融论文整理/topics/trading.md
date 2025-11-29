@@ -2,7 +2,7 @@
 
 交易策略、市场微观结构与高频交易
 
-> 共收录 **5** 篇论文 | [返回索引](../README.md)
+> 共收录 **8** 篇论文 | [返回索引](../README.md)
 
 ---
 
@@ -53,6 +53,36 @@
 **标签**: `Deep Learning` `Time Series` `Anomaly` `Algorithmic Trading`
 
 本文针对金融时间序列预测的对抗攻击研究不足问题，提出通用斜率攻击与最小二乘斜率攻击两种方法，可使N-HiTS模型的股票预测斜率翻倍；该攻击能绕过CNN判别器等标准安全机制，还可结合GAN生成逼真合成数据，同时设计样本恶意软件证明需保护模型推理全流程。
+
+---
+
+### [设计制造数据交易市场的声誉系统：结合Q学习和IRL估计效用的多智能体评估](https://arxiv.org/abs/2511.19930v1)
+
+**日期**: 2025-11-28 | **作者**: Kenta Yamamoto, Teruaki Hayashi
+
+**标签**: `Financial Agent` `Reinforcement Learning` `Market Microstructure` `Asset Pricing`
+
+论文针对制造数据交易市场的信息不对称问题，开发了集成强化学习（Q学习）与逆强化学习（IRL）的多智能体模拟器，评估五种声誉系统的市场效果并提出融合优势的混合机制，以提升数据价格与质量的对齐度。
+
+---
+
+### [论AI算法进步的起源](https://arxiv.org/abs/2511.21622v1)
+
+**日期**: 2025-11-28 | **作者**: Hans Gundlach, Alex Fogelson, Jayson Lynch et al.
+
+**标签**: `Transformer` `Deep Learning` `LLM` `Algorithmic Trading`
+
+论文通过小尺度消融实验、文献调查及缩放实验发现，2012-2023年AI训练FLOP效率提升的大部分（6930倍）来自算法的尺度依赖改进（如LSTM到Transformer的compute-optimal scaling law指数差异），而非小模型算法创新；指出此前对算法进步的估计高估了小模型贡献，算法效率度量强依赖参考尺度。
+
+---
+
+### [数据流中分类器投票线性独立性视角下的集成性能研究](https://arxiv.org/abs/2511.21465v1)
+
+**日期**: 2025-11-28 | **作者**: Enes Bektas, Fazli Can
+
+**标签**: `Algorithmic Trading` `Time Series` `Anomaly`
+
+本文从数据流中分类器投票的线性独立性视角，研究集成规模与性能的关系，推导了达到指定线性独立概率所需集成规模的理论估计；通过OzaBagging和GOOWE等集成方法在真实及合成数据集上验证，发现该估计可有效识别鲁棒集成的性能饱和点，且复杂加权方案的高理论多样性可能引发算法不稳定。
 
 ---
 
