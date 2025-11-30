@@ -214,12 +214,15 @@ def update_main_index():
 
 ## 每日更新
 
-| 日期 | 论文数 | 链接 |
-|:-----|:------:|:----:|
+| 日期 | 论文数 | 状态 |
+|:-----|:------:|:-----|
 """
     
     for date, count in stats:
-        md += f"| {date} | {count} | [查看](./daily/{date}.md) |\n"
+        if count > 0:
+            md += f"| {date} | {count} | [查看](./daily/{date}.md) |\n"
+        else:
+            md += f"| {date} | 0 | 周末休市 |\n"
     
     md += """
 ---
