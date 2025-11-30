@@ -111,22 +111,32 @@ def generate_daily_page(date: str = None):
     if date is None:
         date = datetime.now().strftime("%Y-%m-%d")
     
+    daily_dir = OUTPUT_DIR / "daily"
+    daily_dir.mkdir(parents=True, exist_ok=True)
+    
+    # 查找论文数据
     input_file = DATA_DIR / f"{date}.json"
     if not input_file.exists():
         input_file = RAW_DATA_DIR / f"{date}.json"
-        if not input_file.exists():
-            print(f"No papers found for {date}")
-            return None
     
-    with open(input_file, 'r', encoding='utf-8') as f:
-        papers = json.load(f)
+    papers = []
+    if input_file.exists():
+        with open(input_file, 'r', encoding='utf-8') as f:
+            papers = json.load(f)
     
+    # 即使没有论文也生成页面
     if not papers:
-        print(f"No papers to generate for {date}")
-        return None
-    
-    daily_dir = OUTPUT_DIR / "daily"
-    daily_dir.mkdir(parents=True, exist_ok=True)
+        md = f"""# {date} AI+金融论文日报
+
+> 今日无新论文（arXiv 周末及美国节假日不接收新论文）| [返回索引](../README.md)
+
+"""
+        output_file = daily_dir / f"{date}.md"
+        with open(output_file, 'w', encoding='utf-8') as f:
+            f.write(md)
+        print(f"Generated (empty): {output_file}")
+        update_main_index()
+        return output_file
     
     md = f"""# {date} AI+金融论文日报
 
@@ -185,9 +195,10 @@ def update_main_index():
                     papers = json.load(df)
                     stats.append((date, len(papers)))
             else:
-                stats.append((date, "?"))
+                # 没有数据文件但有 daily markdown，说明当天无新论文
+                stats.append((date, 0))
         except:
-            stats.append((date, "?"))
+            stats.append((date, 0))
     
     md = """# AI + 金融论文整理
 
@@ -196,6 +207,8 @@ def update_main_index():
 **数据来源**：arXiv q-fin（量化金融）、cs.LG/cs.AI + finance 关键词
 
 **处理流程**：自动爬取 → LLM 相关性过滤 → 中文摘要生成 → 主题标签分类
+
+> 注：arXiv 周末及美国节假日不接收新论文，届时显示为 0 篇
 
 ---
 
