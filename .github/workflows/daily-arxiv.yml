@@ -6,6 +6,9 @@ on:
     - cron: '0 8 * * *'
   workflow_dispatch: # 允许手动触发
 
+permissions:
+  contents: write
+
 jobs:
   update-papers:
     runs-on: ubuntu-latest
@@ -13,60 +16,39 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: main
+          token: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
       
+      - name: Install dependencies
+        run: pip install openai
+      
       - name: Crawl arXiv papers
         run: python scripts/arxiv_crawler.py
       
-      - name: Install dependencies
-        run: pip install openai
-
       - name: Process papers with LLM
         env:
           ARK_API_KEY: ${{ secrets.ARK_API_KEY }}
         run: python scripts/paper_processor.py
-        continue-on-error: true  # LLM 处理失败不阻塞流程
+        continue-on-error: true
       
       - name: Generate daily markdown
         run: python scripts/generate_daily.py
       
+      - name: Generate topic index
+        run: python scripts/generate_topic_index.py
+      
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: update arXiv papers for ${{ github.event.repository.updated_at }}"
+          commit_message: "chore: update arXiv papers for $(date +'%Y-%m-%d')"
+          branch: main
           file_pattern: |
             data/papers/*.json
             data/papers/processed/*.json
-            docs/arxiv/**/*.md
-
-  build-docs:
-    needs: update-papers
-    runs-on: ubuntu-latest
-    
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          ref: ${{ github.ref }}
-      
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
-      
-      - name: Install dependencies
-        run: npm install
-      
-      - name: Build VitePress
-        run: npm run docs:build
-      
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: docs/.vitepress/dist
+            论文/AI金融论文整理/**/*.md

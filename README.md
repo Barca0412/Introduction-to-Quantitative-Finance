@@ -7,8 +7,8 @@
 
 - [基于多因子股票量化投研框架的开源教程](#基于多因子股票量化投研框架的开源教程)
 - [我的资料](#section1)
+- [AI+金融论文整理](#section-arxiv) 🆕
 - [公开资料整理](#section2)
-- 即将周频更新**arXiv**和**SSRN** (Social Science Research Network)上**Asset Pricing、Behavioral Finance以及LLM in Quant**的论文！欢迎大家关注，如果想一起build欢迎私聊我~
 -----
 
 <!--
@@ -42,6 +42,18 @@
  <br> <br>
 </div>
 
+
+# [AI+金融 📄 论文整理及每日分析](./论文/AI金融论文整理/README.md) （点击查看）
+
+每日自动更新 arXiv 上 AI+金融相关论文，使用 LLM 生成中文概述与标签。
+
+- 📰 **每日更新**: 自动抓取arXiv上 q-fin、cs.LG+finance 相关论文
+- 🤔 **智能分析**: 使用大模型生成中文摘要和关键贡献
+- 🏷️ **主题分类**: Asset Pricing、LLM、Factor Mining、RL 等标签
+
+<a id="section2"></a>
+
+
 # 基于多因子股票量化投研框架的开源教程
 
 - 本部分计划开源自湖南大学金融科技协会Quant Group的研究内容，框架（英文版）如下图
@@ -74,19 +86,19 @@
 - 机器学习因子挖掘💻
 - ...
 
-<a id="section2"></a>
+<a id="section-arxiv"></a>
 
 # 公开资料整理
 
-## [数据源与另类数据](https://github.com/Barca0412/Introduction-to-Quantitative-Finance/blob/main/%E6%95%B0%E6%8D%AE%E6%BA%90%E4%B8%8E%E5%8F%A6%E7%B1%BB%E6%95%B0%E6%8D%AE.md)
+## [数据源与另类数据](./资料/数据源与另类数据.md)
 
 - 点击跳转
 
-## [回测框架相关](https://github.com/Barca0412/Introduction-to-Quantitative-Finance/blob/main/%E5%9B%9E%E6%B5%8B.md)
+## [回测框架相关](./资料/回测.md)
 
 - 点击跳转
 
-## [因子挖掘与评估](https://github.com/Barca0412/Introduction-to-Quantitative-Finance/blob/main/%E5%9B%A0%E5%AD%90%E6%8C%96%E6%8E%98.md)
+## [因子挖掘与评估](./资料/因子挖掘.md)
 
 - 点击跳转
 
@@ -94,7 +106,7 @@
 
 - 点击跳转
 
-## [投资组合优化与风控](https://github.com/Barca0412/Introduction-to-Quantitative-Finance/blob/main/%E6%8A%95%E8%B5%84%E7%BB%84%E5%90%88%E4%BC%98%E5%8C%96%E4%B8%8E%E9%A3%8E%E6%8E%A7.md)
+## [投资组合优化与风控](./资料/投资组合优化与风控.md)
 
 - 点击跳转
 
@@ -104,11 +116,52 @@
 
 ## Quant项目
 
+### 多因子量化框架
+- [microsoft/qlib](https://github.com/microsoft/qlib) - AI导向量化投资平台，支持自动因子挖掘
+- [etccapital/MultiFactor](https://github.com/etccapital/MultiFactor) - 基于华泰研报的多因子回测框架
+- [HUANG-NI-YUAN/Multi-Factor_Model](https://github.com/HUANG-NI-YUAN/Multi-Factor_Model) - 15因子量化投资框架
+
+### 回测框架
+- [kernc/backtesting.py](https://github.com/kernc/backtesting.py) - 简洁高效Python回测库
+- [polakowo/vectorbt](https://github.com/polakowo/vectorbt) - 极速向量化回测，支持大规模参数优化
+- [stefan-jansen/zipline-reloaded](https://github.com/stefan-jansen/zipline-reloaded) - Quantopian事件驱动框架维护版
+
+### 因子挖掘与机器学习
+- [RndmVariableQ/AlphaAgent](https://github.com/RndmVariableQ/AlphaAgent) - KDD 2025 LLM驱动因子挖掘
+- [nshen7/alpha-gfn](https://github.com/nshen7/alpha-gfn) - GFlowNet挖掘alpha因子
+- [microsoft/RD-Agent](https://github.com/microsoft/RD-Agent) - 多Agent自动化R&D
+
+### 投资组合优化
+- [dcajasn/Riskfolio-Lib](https://github.com/dcajasn/Riskfolio-Lib) - 专业组合优化，24种风险度量
+- [PyPortfolioOpt](https://pyportfolioopt.readthedocs.io) - 高效前沿、Black-Litterman
+
+### 强化学习交易
+- [AI4Finance-Foundation/FinRL](https://github.com/AI4Finance-Foundation/FinRL) - 开源金融强化学习框架
+- [AI4Finance-Foundation/FinRL-Trading](https://github.com/AI4Finance-Foundation/FinRL-Trading) - 实盘交易v2.0
+
+### 深度学习时序预测
+- [gonzalopezgil/xlstm-ts](https://github.com/gonzalopezgil/xlstm-ts) - 扩展LSTM时间序列预测
+- [sinanw/lstm-stock-price-prediction](https://github.com/sinanw/lstm-stock-price-prediction) - LSTM多变量股价预测
+
+### 情感分析
+- [FelixCharotte/NLP_Fnews](https://github.com/FelixCharotte/NLP_Fnews) - LLaMA 3财经新闻情感分析
+- [Kanishk1420/FinReport](https://github.com/Kanishk1420/FinReport-Explainable-Stock-Earnings-Forecasting-via-News-Factor) - FinBERT+LSTM收益预测
+
+### 加密货币
+- [freqtrade/freqtrade](https://github.com/freqtrade/freqtrade) - 开源加密货币交易机器人
+- [Open-Trader/opentrader](https://github.com/Open-Trader/opentrader) - 自托管交易机器人
+
+### 综合平台
+- [vnpy/vnpy](https://github.com/vnpy/vnpy) - VeighNa国产量化交易框架
+- [leoncuhk/awesome-quant-ai](https://github.com/leoncuhk/awesome-quant-ai) - AI/ML量化资源精选
 - https://github.com/chaosquant2022/ML-Quant
 - ...
 
 ## 高频交易
 
+- [nkaz001/hftbacktest](https://github.com/nkaz001/hftbacktest) - 高频交易和做市回测框架，支持L2/L3 Tick数据
+- [sohaibelkarmi/High-Frequency-Trading-Simulator](https://github.com/sohaibelkarmi/High-Frequency-Trading-Simulator) - 市场微观结构研究沙盒，C++17限价簿
+- [visualHFT/VisualHFT](https://github.com/visualHFT/VisualHFT) - 实时市场微观结构分析，VPIN等指标
 - [High-Frequency-Trading-Model-with-IB](https://github.com/jamesmawm/High-Frequency-Trading-Model-with-IB)
 - [hummingbot:high-frequency crypto trading bots](https://github.com/hummingbot/hummingbot)
 - [tribeca:A high frequency, market making cryptocurrency trading platform](https://github.com/michaelgrosner/tribeca)

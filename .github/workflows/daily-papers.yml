@@ -1,0 +1,48 @@
+name: Daily AI+Finance Papers
+
+on:
+  schedule:
+    # 每天 UTC 0:00 (北京时间 8:00)
+    - cron: '0 0 * * *'
+  workflow_dispatch:  # 支持手动触发
+
+jobs:
+  update-papers:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: pip install openai
+      
+      - name: Run crawler
+        env:
+          ARK_API_KEY: ${{ secrets.ARK_API_KEY }}
+        run: python scripts/arxiv_crawler.py
+      
+      - name: Process papers
+        env:
+          ARK_API_KEY: ${{ secrets.ARK_API_KEY }}
+        run: python scripts/paper_processor.py
+      
+      - name: Generate daily page
+        run: python scripts/generate_daily.py
+      
+      - name: Generate topic index
+        run: python scripts/generate_topic_index.py
+      
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --staged --quiet || git commit -m "docs: update AI+金融论文 $(date +'%Y-%m-%d')"
+          git push

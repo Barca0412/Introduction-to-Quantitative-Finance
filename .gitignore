@@ -1,19 +1,8 @@
 # Dependencies
 node_modules/
 
-# VitePress build output
-docs/.vitepress/dist/
-docs/.vitepress/cache/
-
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-.Python
-*.so
-.env
-.venv
-venv/
+# VitePress (在 guohao_vitepress 分支)
+docs/
 
 # OS
 .DS_Store
@@ -25,10 +14,12 @@ Thumbs.db
 *.swp
 *.swo
 
+# Python
+__pycache__/
+*.py[cod]
+.env
+.venv
+venv/
+
 # Logs
 *.log
-npm-debug.log*
-
-# Temporary files
-*.tmp
-*.temp

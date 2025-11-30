@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 生成每日论文 Markdown 页面
-将处理后的论文数据转换为 VitePress 可用的 Markdown 格式
+输出到 论文/AI金融论文整理/ 目录 (用于 GitHub README 展示)
 """
 
 import json
@@ -12,56 +12,71 @@ from collections import defaultdict
 # 配置
 PROJECT_ROOT = Path(__file__).parent.parent
 DATA_DIR = PROJECT_ROOT / "data" / "papers" / "processed"
-DOCS_DIR = PROJECT_ROOT / "docs" / "arxiv"
+RAW_DATA_DIR = PROJECT_ROOT / "data" / "papers"
+OUTPUT_DIR = PROJECT_ROOT / "论文" / "AI金融论文整理"
 
-# 标签到分类的映射
+# 扩展的标签到分类映射
 TAG_CATEGORIES = {
-    "LLM": "LLM in Quant",
-    "NLP": "LLM in Quant",
-    "Sentiment Analysis": "LLM in Quant",
+    # LLM & Agent
+    "LLM": "LLM & Agent",
+    "NLP": "LLM & Agent",
+    "Sentiment Analysis": "LLM & Agent",
+    "Financial Agent": "LLM & Agent",
+    # 资产定价
     "Asset Pricing": "Asset Pricing",
+    "Factor Model": "Asset Pricing",
+    "Anomaly": "Asset Pricing",
+    # 因子挖掘
     "Factor Mining": "Factor Mining",
+    # 行为金融
     "Behavioral Finance": "Behavioral Finance",
-    "Portfolio Optimization": "Portfolio & Risk",
-    "Risk Management": "Portfolio & Risk",
+    "Investor Sentiment": "Behavioral Finance",
+    # 机器学习
     "Deep Learning": "Machine Learning",
     "Reinforcement Learning": "Machine Learning",
     "Time Series": "Machine Learning",
-    "High Frequency": "Market Microstructure",
-    "Market Microstructure": "Market Microstructure",
-    "Volatility": "Derivatives & Volatility",
-    "Options": "Derivatives & Volatility",
+    "Graph Neural Network": "Machine Learning",
+    "Transformer": "Machine Learning",
+    # 投资组合与风控
+    "Portfolio Optimization": "Portfolio & Risk",
+    "Risk Management": "Portfolio & Risk",
+    # 交易与市场微观结构
+    "Algorithmic Trading": "Trading & Microstructure",
+    "High Frequency": "Trading & Microstructure",
+    "Market Microstructure": "Trading & Microstructure",
+    "Execution": "Trading & Microstructure",
+    "Market Making": "Trading & Microstructure",
+    # 衍生品
+    "Volatility": "Derivatives",
+    "Options": "Derivatives",
+    # 其他
+    "Benchmark": "Benchmark & Evaluation",
+    "Quantitative Finance": "Other",
 }
 
 
 def generate_paper_markdown(paper: dict) -> str:
     """生成单篇论文的 Markdown"""
     
-    # 标题和链接
     title = paper.get("chinese_title") or paper["title"]
     md = f"### [{title}]({paper['arxiv_url']})\n\n"
     
-    # 原文标题（如果有中文标题）
     if paper.get("chinese_title"):
         md += f"**原文**: {paper['title']}\n\n"
     
-    # 作者
     authors = ", ".join(paper["authors"][:5])
     if len(paper["authors"]) > 5:
         authors += " et al."
     md += f"**作者**: {authors}\n\n"
     
-    # 标签
     tags = paper.get("tags", paper.get("categories", []))[:5]
     if tags:
         tag_str = " ".join([f"`{tag}`" for tag in tags])
         md += f"**标签**: {tag_str}\n\n"
     
-    # 中文概述
     if paper.get("chinese_summary"):
         md += f"**中文概述**: {paper['chinese_summary']}\n\n"
     
-    # 核心贡献
     contributions = paper.get("key_contributions", [])
     if contributions:
         md += "**核心贡献**:\n"
@@ -80,7 +95,6 @@ def categorize_papers(papers: list) -> dict:
     for paper in papers:
         tags = paper.get("tags", [])
         
-        # 找到第一个匹配的分类
         category = "Other"
         for tag in tags:
             if tag in TAG_CATEGORIES:
@@ -97,55 +111,51 @@ def generate_daily_page(date: str = None):
     if date is None:
         date = datetime.now().strftime("%Y-%m-%d")
     
-    # 读取处理后的论文数据
+    daily_dir = OUTPUT_DIR / "daily"
+    daily_dir.mkdir(parents=True, exist_ok=True)
+    
+    # 查找论文数据
     input_file = DATA_DIR / f"{date}.json"
-    
     if not input_file.exists():
-        # 尝试读取未处理的数据
-        input_file = DATA_DIR.parent / f"{date}.json"
-        if not input_file.exists():
-            print(f"No papers found for {date}")
-            return None
+        input_file = RAW_DATA_DIR / f"{date}.json"
     
-    with open(input_file, 'r', encoding='utf-8') as f:
-        papers = json.load(f)
+    papers = []
+    if input_file.exists():
+        with open(input_file, 'r', encoding='utf-8') as f:
+            papers = json.load(f)
     
+    # 即使没有论文也生成页面
     if not papers:
-        print(f"No papers to generate for {date}")
-        return None
-    
-    # 解析日期
-    year, month, day = date.split("-")
-    
-    # 创建目录
-    output_dir = DOCS_DIR / year / month
-    output_dir.mkdir(parents=True, exist_ok=True)
-    
-    # 生成 Markdown
-    md = f"""---
-title: {date} AI+金融论文日报
-date: {date}
----
+        md = f"""# {date} AI+金融论文日报
 
-# {date} 论文更新
+> 今日无新论文（arXiv 周末及美国节假日不接收新论文）| [返回索引](../README.md)
 
-> 共收录 **{len(papers)}** 篇论文
+"""
+        output_file = daily_dir / f"{date}.md"
+        with open(output_file, 'w', encoding='utf-8') as f:
+            f.write(md)
+        print(f"Generated (empty): {output_file}")
+        update_main_index()
+        return output_file
+    
+    md = f"""# {date} AI+金融论文日报
+
+> 共收录 **{len(papers)}** 篇论文 | [返回索引](../README.md)
 
 """
     
-    # 按分类组织论文
     categorized = categorize_papers(papers)
     
-    # 定义分类顺序
     category_order = [
-        "LLM in Quant",
+        "LLM & Agent",
         "Asset Pricing",
         "Factor Mining",
         "Machine Learning",
         "Portfolio & Risk",
         "Behavioral Finance",
-        "Market Microstructure",
-        "Derivatives & Volatility",
+        "Trading & Microstructure",
+        "Derivatives",
+        "Benchmark & Evaluation",
         "Other",
     ]
     
@@ -155,95 +165,99 @@ date: {date}
             for paper in categorized[category]:
                 md += generate_paper_markdown(paper)
     
-    # 写入文件
-    output_file = output_dir / f"{date}.md"
+    output_file = daily_dir / f"{date}.md"
     with open(output_file, 'w', encoding='utf-8') as f:
         f.write(md)
     
     print(f"Generated: {output_file}")
     
-    # 更新索引
-    update_month_index(year, month)
+    update_main_index()
     
     return output_file
 
 
-def update_month_index(year: str, month: str):
-    """更新月份索引页面"""
-    month_dir = DOCS_DIR / year / month
+def update_main_index():
+    """更新主索引页面"""
+    daily_dir = OUTPUT_DIR / "daily"
     
-    # 收集该月所有日期页面
-    daily_files = sorted(month_dir.glob("*.md"), reverse=True)
-    daily_files = [f for f in daily_files if f.name != "index.md"]
+    daily_files = sorted(daily_dir.glob("*.md"), reverse=True)
     
-    # 生成索引
-    md = f"""---
-title: {year}年{month}月论文
+    stats = []
+    for f in daily_files[:30]:
+        date = f.stem
+        try:
+            data_file = DATA_DIR / f"{date}.json"
+            if not data_file.exists():
+                data_file = RAW_DATA_DIR / f"{date}.json"
+            
+            if data_file.exists():
+                with open(data_file, 'r', encoding='utf-8') as df:
+                    papers = json.load(df)
+                    stats.append((date, len(papers)))
+            else:
+                # 没有数据文件但有 daily markdown，说明当天无新论文
+                stats.append((date, 0))
+        except:
+            stats.append((date, 0))
+    
+    md = """# AI + 金融论文整理
+
+每日自动抓取 arXiv 上 AI+金融相关论文，使用大模型生成中文概述与标签分类。
+
+**数据来源**：arXiv q-fin（量化金融）、cs.LG/cs.AI + finance 关键词
+
+**处理流程**：自动爬取 → LLM 相关性过滤 → 中文摘要生成 → 主题标签分类
+
+> 注：arXiv 周末及美国节假日不接收新论文，届时显示为 0 篇
+
 ---
 
-# {year}年{month}月 论文归档
+## 每日更新
 
+| 日期 | 论文数 | 链接 |
+|:-----|:------:|:----:|
 """
     
-    for f in daily_files:
-        date = f.stem
-        md += f"- [{date}](./{date})\n"
+    for date, count in stats:
+        md += f"| {date} | {count} | [查看](./daily/{date}.md) |\n"
     
-    # 写入索引
-    index_file = month_dir / "index.md"
+    md += """
+---
+
+## 主题分类
+
+| 主题 | 说明 |
+|:-----|:-----|
+| [LLM & Agent](./topics/llm-agent.md) | 大语言模型、金融智能体、NLP |
+| [Asset Pricing](./topics/asset-pricing.md) | 资产定价、因子模型、异象研究 |
+| [Factor Mining](./topics/factor-mining.md) | 因子挖掘与特征工程 |
+| [Machine Learning](./topics/machine-learning.md) | 深度学习、强化学习、GNN、Transformer |
+| [Portfolio & Risk](./topics/portfolio-risk.md) | 投资组合优化、风险管理 |
+| [Trading](./topics/trading.md) | 算法交易、市场微观结构、高频交易 |
+| [Behavioral Finance](./topics/behavioral-finance.md) | 行为金融、投资者情绪 |
+| [Derivatives](./topics/derivatives.md) | 期权定价、波动率建模 |
+| [Benchmark](./topics/benchmark.md) | 金融基准测试与模型评估 |
+
+---
+
+<sub>自动更新于 """ + datetime.now().strftime("%Y-%m-%d %H:%M") + """</sub>
+"""
+    
+    index_file = OUTPUT_DIR / "README.md"
     with open(index_file, 'w', encoding='utf-8') as f:
         f.write(md)
     
     print(f"Updated index: {index_file}")
 
 
-def update_main_index():
-    """更新主索引页面"""
-    # 收集所有年份/月份
-    years = sorted([d for d in DOCS_DIR.iterdir() if d.is_dir() and d.name.isdigit()], reverse=True)
-    
-    md = """---
-title: arXiv AI+金融论文日报
----
-
-# arXiv AI+金融论文日报
-
-每日更新 arXiv 上 AI+金融相关论文，含中文概述与标签。
-
-## 论文归档
-
-"""
-    
-    for year_dir in years:
-        year = year_dir.name
-        months = sorted([d for d in year_dir.iterdir() if d.is_dir()], reverse=True)
-        
-        md += f"### {year}年\n\n"
-        for month_dir in months:
-            month = month_dir.name
-            daily_count = len(list(month_dir.glob("*.md"))) - 1  # 排除 index.md
-            if daily_count > 0:
-                md += f"- [{year}年{month}月](./{year}/{month}/) ({daily_count}天)\n"
-        md += "\n"
-    
-    # 写入主索引
-    index_file = DOCS_DIR / "index.md"
-    with open(index_file, 'w', encoding='utf-8') as f:
-        f.write(md)
-    
-    print(f"Updated main index: {index_file}")
-
-
 def main():
-    print("=" * 50)
+    print("=" * 60)
     print(f"Daily Page Generator - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    print("=" * 50)
+    print("=" * 60)
     
-    # 生成今日页面
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    
     generate_daily_page()
-    
-    # 更新主索引
-    update_main_index()
     
     print("\nDone!")
 
