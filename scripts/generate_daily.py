@@ -253,6 +253,30 @@ def update_main_index():
     print(f"Updated index: {index_file}")
 
 
+def update_main_readme_date():
+    """更新首页 README 中的更新日期"""
+    import re
+    
+    main_readme = PROJECT_ROOT / "README.md"
+    if not main_readme.exists():
+        return
+    
+    with open(main_readme, 'r', encoding='utf-8') as f:
+        content = f.read()
+    
+    today = datetime.now().strftime("%m-%d")
+    # 匹配 （XX-XX已更新，点击查看） 或 （点击查看）
+    pattern = r'（(?:\d{1,2}-\d{1,2}已更新，)?点击查看）'
+    replacement = f'（{today}已更新，点击查看）'
+    
+    new_content = re.sub(pattern, replacement, content)
+    
+    if new_content != content:
+        with open(main_readme, 'w', encoding='utf-8') as f:
+            f.write(new_content)
+        print(f"Updated main README date to {today}")
+
+
 def main():
     print("=" * 60)
     print(f"Daily Page Generator - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
@@ -261,6 +285,9 @@ def main():
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     
     generate_daily_page()
+    
+    # 更新首页日期
+    update_main_readme_date()
     
     print("\nDone!")
 
