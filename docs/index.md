@@ -49,6 +49,49 @@ features:
   </a>
 </div>
 
-<div style="display: flex; justify-content: center; margin: 20px 0;">
-  <script type='text/javascript' id='mapmyvisitors' src='https://mapmyvisitors.com/map.js?cl=080808&w=600&t=tt&d=HTlYZYSIaPIKyvbz2wgnl9IheHcvmkEUKlZxcJ9eUbk&co=ffffff&ct=808080&cmo=00a6ff&cmn=ff5c5c'></script>
+<div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin: 30px 0;">
+  <div style="text-align: center;">
+    <script type='text/javascript' id='mapmyvisitors' src='https://mapmyvisitors.com/map.js?cl=080808&w=400&t=tt&d=HTlYZYSIaPIKyvbz2wgnl9IheHcvmkEUKlZxcJ9eUbk&co=ffffff&ct=808080&cmo=00a6ff&cmn=ff5c5c'></script>
+  </div>
+  <div style="text-align: center;">
+    <img src="https://api.star-history.com/svg?repos=Barca0412/Introduction-to-Quantitative-Finance&type=Date" alt="Star History Chart" style="max-width: 400px;">
+  </div>
 </div>
+
+---
+
+## Quant 项目精选
+
+### 多因子量化框架
+- [microsoft/qlib](https://github.com/microsoft/qlib) - AI导向量化投资平台，支持自动因子挖掘
+- [etccapital/MultiFactor](https://github.com/etccapital/MultiFactor) - 基于华泰研报的多因子回测框架
+
+### 回测框架
+- [kernc/backtesting.py](https://github.com/kernc/backtesting.py) - 简洁高效Python回测库
+- [polakowo/vectorbt](https://github.com/polakowo/vectorbt) - 极速向量化回测
+
+### 因子挖掘与机器学习
+- [RndmVariableQ/AlphaAgent](https://github.com/RndmVariableQ/AlphaAgent) - KDD 2025 LLM驱动因子挖掘
+- [microsoft/RD-Agent](https://github.com/microsoft/RD-Agent) - 多Agent自动化R&D
+
+### 强化学习交易
+- [AI4Finance-Foundation/FinRL](https://github.com/AI4Finance-Foundation/FinRL) - 开源金融强化学习框架
+
+### 高频交易
+- [nkaz001/hftbacktest](https://github.com/nkaz001/hftbacktest) - 高频交易和做市回测框架
+
+---
+
+## 量化论坛
+
+**国内**: [聚宽](https://www.joinquant.com/) | [VeighNa](https://www.vnpy.com/forum/) | [掘金](https://bbs.myquant.cn/) | [BigQuant](https://bigquant.com/)
+
+**国外**: [Quantstart](https://www.quantstart.com/) | [Allocate Smartly](https://allocatesmartly.com/) | [Macrosynergy](https://research.macrosynergy.com/)
+
+---
+
+## 联系方式
+
+- Email: qgh124430@hnu.edu.cn
+- Wechat: qgh985695077
+- [湖南大学金融科技协会介绍](https://www.guohaoqi.cn/hft-association)

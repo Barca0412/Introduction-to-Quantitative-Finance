@@ -22,7 +22,17 @@ export default defineConfig({
   base: '/Introduction-to-Quantitative-Finance/',
   
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }]
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    // SEO meta
+    ['meta', { name: 'keywords', content: '量化投资,多因子模型,量化交易,机器学习,LLM金融,arXiv论文,因子挖掘,回测框架,投资组合优化' }],
+    ['meta', { name: 'author', content: '湖南大学金融科技协会' }],
+    // Open Graph
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:title', content: '量化研究入门 - 多因子投研框架教程' }],
+    ['meta', { property: 'og:description', content: '基于多因子股票量化投研框架的开源教程，每日更新AI+金融论文' }],
+    ['meta', { property: 'og:url', content: 'https://barca0412.github.io/Introduction-to-Quantitative-Finance/' }],
+    // Twitter Card
+    ['meta', { name: 'twitter:card', content: 'summary' }],
   ],
 
   themeConfig: {
