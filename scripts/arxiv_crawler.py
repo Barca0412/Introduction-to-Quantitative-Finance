@@ -177,9 +177,15 @@ def judge_relevance(paper: dict) -> bool:
     if any("q-fin" in c for c in categories):
         return True
     
-    prompt = f"""判断这篇论文是否与"AI+金融/量化投资"相关。
+    prompt = f"""判断这篇论文是否**直接研究或应用于**金融/量化投资领域。
+
+注意：
+- 纯LLM/AI技术论文（如模型架构优化、benchmark、训练方法）不算金融相关
+- 必须明确涉及：股票、债券、期权、交易、投资组合、风险管理、资产定价、金融预测、金融文本分析等
+
 标题: {paper['title']}
 摘要: {paper['abstract'][:600]}
+
 只回答 YES 或 NO"""
     
     response = call_llm_judge(prompt)

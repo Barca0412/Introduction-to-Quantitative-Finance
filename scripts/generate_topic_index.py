@@ -15,6 +15,18 @@ DATA_DIR = PROJECT_ROOT / "data" / "papers" / "processed"
 RAW_DATA_DIR = PROJECT_ROOT / "data" / "papers"
 OUTPUT_DIR = PROJECT_ROOT / "论文" / "AI金融论文整理" / "topics"
 
+# 金融相关标签（论文必须至少包含一个才能被收录）
+FINANCE_RELATED_TAGS = {
+    "Asset Pricing", "Factor Model", "Anomaly",
+    "Portfolio Optimization", "Risk Management",
+    "Algorithmic Trading", "High Frequency", "Market Microstructure", "Execution", "Market Making",
+    "Factor Mining",
+    "Behavioral Finance", "Investor Sentiment",
+    "Volatility", "Options",
+    "Sentiment Analysis",  # 金融情感分析
+    "Financial Agent",  # 金融智能体
+}
+
 # 扩展的主题配置
 TOPICS = {
     "llm-agent": {
@@ -127,12 +139,27 @@ def generate_paper_entry(paper: dict) -> str:
     return md
 
 
+def is_finance_related(paper: dict) -> bool:
+    """检查论文是否与金融相关（至少包含一个金融标签）"""
+    paper_tags = set(paper.get("tags", []))
+    # q-fin 类别的论文直接算金融相关
+    categories = paper.get("categories", [])
+    if any("q-fin" in c for c in categories):
+        return True
+    # 检查是否有金融相关标签
+    return bool(paper_tags & FINANCE_RELATED_TAGS)
+
+
 def generate_topic_page(topic_id: str, topic_config: dict, papers: list):
     """生成单个主题页面"""
     
     relevant_papers = []
     for paper in papers:
         paper_tags = paper.get("tags", [])
+        
+        # 必须是金融相关的论文
+        if not is_finance_related(paper):
+            continue
         
         for tag in topic_config["tags"]:
             if tag in paper_tags:
