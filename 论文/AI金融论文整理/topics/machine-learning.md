@@ -2,7 +2,227 @@
 
 机器学习在量化金融中的应用，包括深度学习、强化学习、图神经网络、Transformer等
 
-> 共收录 **56** 篇论文 | [返回索引](../README.md)
+> 共收录 **78** 篇论文 | [返回索引](../README.md)
+
+---
+
+### [天气指数保险的垄断定价](https://arxiv.org/abs/2512.01623v1)
+
+**日期**: 2025-12-02 | **作者**: Tim J. Boonen, Wenyuan Li, Zixiao Quan
+
+**标签**: `Risk Management` `Deep Learning`
+
+本文构建天气指数保险垄断定价的Bowley型序贯博弈模型（保险公司为领导者、农民为跟随者），采用三种保费定价参数化、神经网络（全连接与CNN）设计指数赔付，并用带惩罚的双层规划算法求解；发现CNN设计可降低基差风险，使保险公司利润更接近赔偿保险水平，且定价灵活性扩展对利润有系统影响。
+
+---
+
+### [稳定币市场政治风险的预警信号：2024年美国大选前后的人类与算法行为](https://arxiv.org/abs/2512.00893v1)
+
+**日期**: 2025-12-02 | **作者**: Kundan Mukhia, Buddha Nath Sharma, Salam Rabindrajit Luwang et al.
+
+**标签**: `Risk Management` `Behavioral Finance` `Algorithmic Trading` `Time Series`
+
+本文以2024年美国大选为政治风险事件，区分人类驱动的P2P稳定币交易与算法活动，通过结构突变分析、替代基检验等方法发现，人类驱动的ERC-20交易在大选前2天出现变化，早于交易所交易量（大选日）和算法智能合约活动（2025年1月）；结合能量谱分析与结构向量自回归验证，人类驱动的稳定币流动可作为政治压力的预警指标。
+
+---
+
+### [基于rLoRA微调的Qwen3-8B模型的金融文本分类](https://arxiv.org/abs/2512.00630v1)
+
+**日期**: 2025-12-02 | **作者**: Zhiming Lian
+
+**标签**: `LLM` `NLP` `Sentiment Analysis` `Transformer`
+
+本文针对金融文本分类（含情感分析与新闻分类）任务，采用Qwen3-8B大模型，结合带噪声嵌入的指令微调、秩稳定低秩适应（rLoRA）及FlashAttention优化方法，提升训练效率与鲁棒性；实验表明Qwen3-8B在准确率和训练epoch需求上均优于传统Transformer及其他大模型基线，验证其金融应用潜力。
+
+---
+
+### [带S形效用的随机占优约束优化：差表现区域算法与神经网络](https://arxiv.org/abs/2512.00299v1)
+
+**日期**: 2025-12-02 | **作者**: Zeyun Hu, Yang Liu
+
+**标签**: `Portfolio Optimization` `Risk Management` `Deep Learning` `Behavioral Finance`
+
+论文研究带一阶和二阶随机占优（SD）约束的S形非凹效用静态投资组合选择问题，明确求解一阶SD约束下一般S形效用的最优解；针对二阶SD约束问题（因Sion定理无效难以解析求解），提出差表现区域算法找次优解，并开发算法引导的分段神经网络框架学习该问题解。
+
+---
+
+### [DeFi TrustBoost：区块链与AI赋能可信去中心化金融决策](https://arxiv.org/abs/2512.00142v1)
+
+**日期**: 2025-12-02 | **作者**: Swati Sachan, Dale S. Fickett
+
+**标签**: `Risk Management` `Deep Learning`
+
+本文提出DeFi TrustBoost框架，结合区块链与可解释AI解决低财富家庭小微企业贷款审批的可信决策问题；该框架满足机密性、数据保护合规等4项关键要求，还提出AI决策防篡改审计技术及链上链下数据存储策略以支持金融机构协作。
+
+---
+
+### [油气行业勘探阶段信息资产投资策略优化：一种强化学习方法](https://arxiv.org/abs/2512.00243v1)
+
+**日期**: 2025-12-02 | **作者**: Paulo Roberto de Melo Barros Junior, Monica Alexandra Vilar Ribeiro De Meireles, Jose Luis Lima de Jesus Silva
+
+**标签**: `Reinforcement Learning` `Portfolio Optimization` `Market Microstructure` `Asset Pricing`
+
+本文采用多智能体深度强化学习（DRL）框架，对比油气勘探中传统阶梯式策略与优先早期高质量信息资产的策略，发现前端加载信息投资可降低冗余数据成本、提升储量估值精度；研究还揭示最优投资时机依赖市场竞争而非仅价格波动，竞争环境中能缓解赢家诅咒，开发阶段收益更显著。
+
+---
+
+### [面向稀疏历史数据的概率神经符号推理：融合贝叶斯推断、因果模型与博弈论分配的框架](https://arxiv.org/abs/2512.01723v1)
+
+**日期**: 2025-12-02 | **作者**: Saba Kublashvili
+
+**标签**: `Deep Learning` `Factor Model` `Anomaly`
+
+论文针对历史事件建模中数据稀疏（N<<100）、异质噪声、缺失反事实及需可解释性等挑战，提出HistoricalML框架，融合贝叶斯不确定性量化、结构因果模型、合作博弈论（沙普利值）与注意力神经架构；理论证明稀疏数据下结合领域强先验可一致估计，沙普利分配满足公理公平性，优于纯回归方法；并通过非洲瓜分、布匿战争案例验证。
+
+---
+
+### [基于LIME可解释性的电力价格预测机器学习算法比较研究](https://arxiv.org/abs/2512.01212v1)
+
+**日期**: 2025-12-02 | **作者**: Xuanyi Zhao, Jiawen Ding, Xueting Huang et al.
+
+**标签**: `Time Series` `Volatility` `Factor Mining`
+
+本研究针对电力市场价格波动加剧的问题，采用西班牙电力市场的消费、发电及气象多变量数据，对比8种机器学习模型（含线性回归、随机森林、XGBoost等）的电价预测性能，发现KNN表现最优；同时通过LIME可解释性分析，揭示气象因素和供需指标对电价波动的非线性影响机制，提升了预测决策的透明度。
+
+---
+
+### [智能制造环境下基于机器学习与SHAP分析的铣刀预测性维护研究](https://arxiv.org/abs/2512.01205v1)
+
+**日期**: 2025-12-02 | **作者**: Wen Zhao, Jiawen Ding, Xueting Huang et al.
+
+**标签**: `Anomaly` `Deep Learning` `Time Series`
+
+论文基于AI4I2020数据集，提出涵盖数据预处理、模型训练等六环节的铣刀预测性维护实验流程，对比8种机器学习模型发现XGBoost与随机森林性能突出，结合SHAP分析揭示加工温度、扭矩、转速为故障关键影响因素，为智能制造预测性维护提供方法参考。
+
+---
+
+### [ICAD-LLM：基于大语言模型上下文学习的一劳永逸异常检测](https://arxiv.org/abs/2512.01672v1)
+
+**日期**: 2025-12-02 | **作者**: Zhongyuan Wu, Jingyuan Wang, Zexuan Cheng et al.
+
+**标签**: `LLM` `Anomaly` `Time Series` `Deep Learning`
+
+论文针对现有异常检测方法多聚焦单模态、泛化能力不足的问题，提出ICAD范式（将异常定义为与正常参考集的差异性），并基于大语言模型的上下文学习能力构建ICAD-LLM统一框架，可处理异质数据且泛化到未见过的任务，性能与任务特定方法相当且降低部署成本。
+
+---
+
+### [脑成像中的深度无监督异常检测：大规模基准测试与偏差分析](https://arxiv.org/abs/2512.01534v1)
+
+**日期**: 2025-12-02 | **作者**: Alexander Frotscher, Christian F. Baumgartner, Thomas Wolfers
+
+**标签**: `Anomaly` `Deep Learning` `Benchmark`
+
+本文构建了脑磁共振成像深度无监督异常检测的大规模多中心基准，包含多扫描仪健康数据及多样临床测试集，系统评估算法性能与稳健性，发现重建类（扩散启发式）分割性能较强但存在扫描器、病灶大小等偏差，特征类抗分布偏移更优。
+
+---
+
+### [Rayan AI竞赛获奖方案：组合式检索、零样本异常检测与后门检测](https://arxiv.org/abs/2512.01498v1)
+
+**日期**: 2025-12-02 | **作者**: Ali Nafisi, Sina Asghari, Mohammad Saeed Arvenaghi et al.
+
+**标签**: `Anomaly` `Deep Learning`
+
+该论文提出Rayan AI竞赛的三个获奖方案，分别针对组合式图像检索（视觉+文本输入，95.38%准确率获第一）、零样本异常检测（无异常样本下识别定位图像异常，73.14%准确率获第一）和后门模型检测（检测神经网络隐藏后门触发，78%准确率获第二）；方法在检索、异常检测及模型安全领域有效，可应用于医疗、制造等行业，代码开源。
+
+---
+
+### [FC-ADL：基于功能连接的高效微服务异常检测与定位](https://arxiv.org/abs/2512.00844v1)
+
+**日期**: 2025-12-02 | **作者**: Giles Winchester, George Parisis, Luc Berthouze
+
+**标签**: `Anomaly` `Time Series` `Graph Neural Network`
+
+针对微服务架构中异常检测与定位的挑战（传统方法未考虑时变依赖或因果推理计算开销大），论文提出FC-ADL方法，基于神经科学的功能连接高效刻画微服务指标间的时变依赖变化，实现端到端可扩展的异常检测与定位，无需高开销的因果或多变量方法，在多种故障场景下性能优于现有方法且可应用于大规模部署。
+
+---
+
+### [引入AI驱动的物联网能源管理框架](https://arxiv.org/abs/2512.00321v1)
+
+**日期**: 2025-12-02 | **作者**: Shivani Mruthyunjaya, Anandi Dutta, Kazi Sifatul Islam
+
+**标签**: `Time Series` `Anomaly` `Deep Learning`
+
+论文提出一种AI驱动的物联网能源管理框架，集成长期/短期能耗预测、异常检测及定性数据考量，旨在降低能耗并提升电网稳定性；通过电力消费时间序列数据验证了该框架的可行性。
+
+---
+
+### [SD-CGAN：用于物联网网络DDoS异常检测的条件Sinkhorn散度生成对抗网络](https://arxiv.org/abs/2512.00251v1)
+
+**日期**: 2025-12-02 | **作者**: Henry Onyeka, Emmanuel Samson, Liang Hong et al.
+
+**标签**: `Anomaly` `Deep Learning`
+
+针对物联网边缘网络中动态不平衡流量下的DDoS及零日攻击检测难题，提出SD-CGAN框架（条件GAN增强Sinkhorn散度），结合CTGAN数据增强解决类别不平衡，用Sinkhorn散度提升训练稳定性与减少模式崩溃；在CICDDoS2019数据集上评估，性能优于基线方法且计算高效适配边缘部署。
+
+---
+
+### [TIE：用于视觉可解释和不确定性引导的分布外检测的训练-反转-排除框架](https://arxiv.org/abs/2512.00229v1)
+
+**日期**: 2025-12-02 | **作者**: Pirzada Suhail, Rehna Afroz, Amit Sethi
+
+**标签**: `Anomaly` `Deep Learning`
+
+本文针对深度神经网络难以识别分布外（OOD）样本的问题，提出TIE框架，将标准n类分类器扩展为含垃圾类的n+1类模型，通过训练-反转-排除的闭环过程迭代优化；推理时无需外部OOD数据集即可检测OOD，并提供视觉可解释性与不确定性估计。
+
+---
+
+### [带噪声量子强化学习策略的形式化验证](https://arxiv.org/abs/2512.01502v1)
+
+**日期**: 2025-12-02 | **作者**: Dennis Gross
+
+**标签**: `Reinforcement Learning` `Risk Management`
+
+量子强化学习（QRL）因量子测量与硬件噪声易引发不安全行为，现有方法缺乏系统验证手段；论文提出QVerifier形式化验证方法，通过概率模型检查建模策略-环境交互并纳入量子不确定性，结合Storm工具验证安全属性；实验表明QVerifier可精准度量不同噪声模型对安全的影响，解决了QRL部署前的安全验证关键需求。
+
+---
+
+### [随机对照试验的自动化偏倚风险评估：GEPA训练的程序化提示框架初探](https://arxiv.org/abs/2512.01452v1)
+
+**日期**: 2025-12-02 | **作者**: Lingbo Li, Anuradha Mathrani, Teo Susnjak
+
+**标签**: `LLM` `NLP` `Risk Management` `Deep Learning`
+
+该研究提出基于DSPy的GEPA模块构建可编程偏倚风险（RoB）评估 pipeline，替代手动提示设计，通过帕累托引导搜索优化大语言模型（LLM）推理并生成可检查轨迹；在7个RoB领域的100个随机对照试验（RCT）上验证，GEPA提示显著提升部分领域（如随机序列生成）评估准确性，整体性能优于手动设计提示。
+
+---
+
+### [轻量级大语言模型在异构金融文本数据情感分类中的微调研究](https://arxiv.org/abs/2512.00946v1)
+
+**日期**: 2025-12-02 | **作者**: Alvaro Paredes Amorin, Andre Python, Christoph Weisser
+
+**标签**: `LLM` `Sentiment Analysis` `NLP` `Transformer`
+
+该论文对比了轻量级开源LLMs（DeepSeek-LLM 7B、Llama3 8B Instruct、Qwen3 8B）与传统金融NLP模型FinBERT在五个异构金融文本数据集上的情感分类性能，发现Qwen3 8B和Llama3 8B即使仅用5%训练数据或零/少样本也能取得竞争力表现，证明轻量级开源LLMs是经济高效的金融情感分析选择。
+
+---
+
+### [语义优势与取证效率：深度学习与心理语言学在商务邮件泄露检测中的比较分析](https://arxiv.org/abs/2511.20944v2)
+
+**日期**: 2025-12-02 | **作者**: Yaw Osei Adjei, Frederick Ayivor
+
+**标签**: `NLP` `Deep Learning` `Transformer` `Risk Management`
+
+论文针对造成巨额经济损失的商务邮件泄露（BEC）威胁，对比了基于心理语言学的CatBoost（高可解释、低延迟）与基于深度学习的DistilBERT（高准确率）两种检测范式，在混合数据集上验证了两者性能差异及成本效益，为不同部署场景提供可行选择。
+
+---
+
+### [Deep FlexQP：基于深度展开的加速非线性规划方法](https://arxiv.org/abs/2512.01565v1)
+
+**日期**: 2025-12-02 | **作者**: Alex Oshin, Rahul Vodeb Ghosh, Augustinos D. Saravanos et al.
+
+**标签**: `Deep Learning` `Portfolio Optimization` `Benchmark`
+
+论文提出基于二次规划（QP）约束精确松弛的总是可行优化器FlexQP，可处理可行/不可行QP并稀疏最小化约束违反；通过深度展开将其加速为Deep FlexQP，学习维度无关反馈策略实现泛化；在投资组合优化等基准问题上优于现有方法，且提供PAC Bayes泛化保证以加速非线性最优控制等任务。
+
+---
+
+### [开发公平感知任务分解以提高脊柱融合术后并发症预测的公平性](https://arxiv.org/abs/2512.00598v1)
+
+**日期**: 2025-12-02 | **作者**: Yining Yuan, J. Ben Tamo, Wenqi Shi et al.
+
+**标签**: `Deep Learning` `Risk Management`
+
+论文提出FAIR-MTL公平感知多任务学习框架，通过数据驱动的隐式子群推断（无需显式敏感属性）、逆频率加权和正则化缓解子群不平衡，在脊柱融合术后并发症预测中既提升预测性能（AUC0.86、准确率75%），又显著降低性别、年龄相关的公平性偏差。
 
 ---
 

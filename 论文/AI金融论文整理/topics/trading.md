@@ -2,7 +2,57 @@
 
 交易策略、市场微观结构与高频交易
 
-> 共收录 **14** 篇论文 | [返回索引](../README.md)
+> 共收录 **19** 篇论文 | [返回索引](../README.md)
+
+---
+
+### [带非线性Wasserstein投影的贝叶斯分布鲁棒Merton问题](https://arxiv.org/abs/2512.01408v1)
+
+**日期**: 2025-12-02 | **作者**: Jose Blanchet, Jiayi Cheng, Hao Liu et al.
+
+**标签**: `Portfolio Optimization` `Risk Management` `Volatility` `High Frequency`
+
+论文从数据驱动的分布鲁棒视角重新研究Merton连续时间投资组合选择，针对漂移难估计但波动率可测的特点，在贝叶斯Merton模型漂移先验设置单一模糊集（避免时间矩形DRC的过度悲观），通过minimax交换转化为优化先验非线性泛函，结合Karatzas-Zhao闭式解求解；进一步用Wasserstein不确定性下渐近最优最坏情况先验和非线性投影校准模糊半径，实验显示其比DRC悲观性更低、频繁再平衡下优于近视DRO-Markowitz。
+
+---
+
+### [期权轮动策略决策的混合架构：用于透明交易的LLM生成贝叶斯网络](https://arxiv.org/abs/2512.01123v1)
+
+**日期**: 2025-12-02 | **作者**: Xiaoting Kuang, Boken Lin
+
+**标签**: `LLM` `Options` `Algorithmic Trading` `Risk Management`
+
+论文提出LLM与贝叶斯网络结合的混合架构，用LLM构建上下文特定的贝叶斯网络（而非黑盒决策），并选择相关历史数据填充条件概率表实现透明推理；该架构通过反馈循环迭代优化，实证在期权轮动策略上获15.3%年化收益及更优风险调整表现。
+
+---
+
+### [自动去杠杆（ADL）：不可能定理与优化](https://arxiv.org/abs/2512.01112v1)
+
+**日期**: 2025-12-02 | **作者**: Tarun Chitra
+
+**标签**: `Risk Management` `Market Microstructure` `Algorithmic Trading`
+
+该论文首次构建永续期货自动去杠杆（ADL）的严格模型，证明ADL机制存在交易所偿付能力、收入与交易者公平性的三难困境；构造三类最优ADL机制以平衡该困境，并通过Hyperliquid数据集实证发现现有生产机制过度使用ADL，给盈利交易者造成大量不必要损失。
+
+---
+
+### [稳定币市场政治风险的预警信号：2024年美国大选前后的人类与算法行为](https://arxiv.org/abs/2512.00893v1)
+
+**日期**: 2025-12-02 | **作者**: Kundan Mukhia, Buddha Nath Sharma, Salam Rabindrajit Luwang et al.
+
+**标签**: `Risk Management` `Behavioral Finance` `Algorithmic Trading` `Time Series`
+
+本文以2024年美国大选为政治风险事件，区分人类驱动的P2P稳定币交易与算法活动，通过结构突变分析、替代基检验等方法发现，人类驱动的ERC-20交易在大选前2天出现变化，早于交易所交易量（大选日）和算法智能合约活动（2025年1月）；结合能量谱分析与结构向量自回归验证，人类驱动的稳定币流动可作为政治压力的预警指标。
+
+---
+
+### [油气行业勘探阶段信息资产投资策略优化：一种强化学习方法](https://arxiv.org/abs/2512.00243v1)
+
+**日期**: 2025-12-02 | **作者**: Paulo Roberto de Melo Barros Junior, Monica Alexandra Vilar Ribeiro De Meireles, Jose Luis Lima de Jesus Silva
+
+**标签**: `Reinforcement Learning` `Portfolio Optimization` `Market Microstructure` `Asset Pricing`
+
+本文采用多智能体深度强化学习（DRL）框架，对比油气勘探中传统阶梯式策略与优先早期高质量信息资产的策略，发现前端加载信息投资可降低冗余数据成本、提升储量估值精度；研究还揭示最优投资时机依赖市场竞争而非仅价格波动，竞争环境中能缓解赢家诅咒，开发阶段收益更显著。
 
 ---
 

@@ -2,7 +2,107 @@
 
 大语言模型与金融智能体在量化金融中的应用
 
-> 共收录 **25** 篇论文 | [返回索引](../README.md)
+> 共收录 **35** 篇论文 | [返回索引](../README.md)
+
+---
+
+### [不完美的必要性：通过模拟认知有限性逆转模型崩塌](https://arxiv.org/abs/2512.01354v1)
+
+**日期**: 2025-12-02 | **作者**: Zhongjie Jiang
+
+**标签**: `LLM` `NLP` `Behavioral Finance` `Risk Management`
+
+本文指出合成数据因追求统计平滑去除人类文本的认知相关不规则性，加速模型崩塌；提出Prompt驱动认知计算框架（PMCSF），含认知状态解码器（CSD）和带认知扰动算子的认知文本编码器（CTE），模拟人类认知过程生成带典型不完美的文本；验证显示CTE文本与人类文本差异小，且A股压力测试中策略最大回撤降低47.4%。
+
+---
+
+### [期权轮动策略决策的混合架构：用于透明交易的LLM生成贝叶斯网络](https://arxiv.org/abs/2512.01123v1)
+
+**日期**: 2025-12-02 | **作者**: Xiaoting Kuang, Boken Lin
+
+**标签**: `LLM` `Options` `Algorithmic Trading` `Risk Management`
+
+论文提出LLM与贝叶斯网络结合的混合架构，用LLM构建上下文特定的贝叶斯网络（而非黑盒决策），并选择相关历史数据填充条件概率表实现透明推理；该架构通过反馈循环迭代优化，实证在期权轮动策略上获15.3%年化收益及更优风险调整表现。
+
+---
+
+### [基于rLoRA微调的Qwen3-8B模型的金融文本分类](https://arxiv.org/abs/2512.00630v1)
+
+**日期**: 2025-12-02 | **作者**: Zhiming Lian
+
+**标签**: `LLM` `NLP` `Sentiment Analysis` `Transformer`
+
+本文针对金融文本分类（含情感分析与新闻分类）任务，采用Qwen3-8B大模型，结合带噪声嵌入的指令微调、秩稳定低秩适应（rLoRA）及FlashAttention优化方法，提升训练效率与鲁棒性；实验表明Qwen3-8B在准确率和训练epoch需求上均优于传统Transformer及其他大模型基线，验证其金融应用潜力。
+
+---
+
+### [ICAD-LLM：基于大语言模型上下文学习的一劳永逸异常检测](https://arxiv.org/abs/2512.01672v1)
+
+**日期**: 2025-12-02 | **作者**: Zhongyuan Wu, Jingyuan Wang, Zexuan Cheng et al.
+
+**标签**: `LLM` `Anomaly` `Time Series` `Deep Learning`
+
+论文针对现有异常检测方法多聚焦单模态、泛化能力不足的问题，提出ICAD范式（将异常定义为与正常参考集的差异性），并基于大语言模型的上下文学习能力构建ICAD-LLM统一框架，可处理异质数据且泛化到未见过的任务，性能与任务特定方法相当且降低部署成本。
+
+---
+
+### [随机对照试验的自动化偏倚风险评估：GEPA训练的程序化提示框架初探](https://arxiv.org/abs/2512.01452v1)
+
+**日期**: 2025-12-02 | **作者**: Lingbo Li, Anuradha Mathrani, Teo Susnjak
+
+**标签**: `LLM` `NLP` `Risk Management` `Deep Learning`
+
+该研究提出基于DSPy的GEPA模块构建可编程偏倚风险（RoB）评估 pipeline，替代手动提示设计，通过帕累托引导搜索优化大语言模型（LLM）推理并生成可检查轨迹；在7个RoB领域的100个随机对照试验（RCT）上验证，GEPA提示显著提升部分领域（如随机序列生成）评估准确性，整体性能优于手动设计提示。
+
+---
+
+### [金融援助多语言对话AI：弥合印度金融科技的语言障碍](https://arxiv.org/abs/2512.01439v1)
+
+**日期**: 2025-12-02 | **作者**: Bharatdeep Hazarika, Arya Suneesh, Prasanna Devadiga et al.
+
+**标签**: `NLP` `Financial Agent` `LLM`
+
+本文针对印度语言多样性导致的金融科技语言障碍问题，提出支持印地英语等混合语言的多智能体架构对话AI系统，包含语言分类、功能管理及多语言响应生成模块；通过多语言模型对比与真实部署验证，该系统显著提升用户参与度且仅增加4-8%的低延迟开销，为新兴市场数字金融服务的语言鸿沟弥合提供有效方案。
+
+---
+
+### [断言条件合规：多轮工具调用Agent中的溯源感知漏洞](https://arxiv.org/abs/2512.00332v1)
+
+**日期**: 2025-12-02 | **作者**: Daud Waqas, Aaryamaan Golthi, Erika Hayashida et al.
+
+**标签**: `LLM` `NLP` `Financial Agent` `Benchmark`
+
+本文针对多轮工具调用大模型的鲁棒性不足问题，提出断言条件合规（A-CC）评估范式，从用户源断言（USA）和工具源断言（FSA）两个维度评估模型应对误导性断言的行为；实验表明模型对这两类误导性断言均高度脆弱，证实A-CC是部署Agent的关键潜在漏洞。
+
+---
+
+### [轻量级大语言模型在异构金融文本数据情感分类中的微调研究](https://arxiv.org/abs/2512.00946v1)
+
+**日期**: 2025-12-02 | **作者**: Alvaro Paredes Amorin, Andre Python, Christoph Weisser
+
+**标签**: `LLM` `Sentiment Analysis` `NLP` `Transformer`
+
+该论文对比了轻量级开源LLMs（DeepSeek-LLM 7B、Llama3 8B Instruct、Qwen3 8B）与传统金融NLP模型FinBERT在五个异构金融文本数据集上的情感分类性能，发现Qwen3 8B和Llama3 8B即使仅用5%训练数据或零/少样本也能取得竞争力表现，证明轻量级开源LLMs是经济高效的金融情感分析选择。
+
+---
+
+### [语义优势与取证效率：深度学习与心理语言学在商务邮件泄露检测中的比较分析](https://arxiv.org/abs/2511.20944v2)
+
+**日期**: 2025-12-02 | **作者**: Yaw Osei Adjei, Frederick Ayivor
+
+**标签**: `NLP` `Deep Learning` `Transformer` `Risk Management`
+
+论文针对造成巨额经济损失的商务邮件泄露（BEC）威胁，对比了基于心理语言学的CatBoost（高可解释、低延迟）与基于深度学习的DistilBERT（高准确率）两种检测范式，在混合数据集上验证了两者性能差异及成本效益，为不同部署场景提供可行选择。
+
+---
+
+### [CryptoBench：加密货币领域LLM智能体专家级评估的动态基准](https://arxiv.org/abs/2512.00417v1)
+
+**日期**: 2025-12-02 | **作者**: Jiacheng Guo, Suozhi Huang, Zixin Yao et al.
+
+**标签**: `LLM` `Financial Agent` `Benchmark`
+
+本文引入首个专家设计的动态基准CryptoBench，针对加密货币领域LLM智能体的真实能力评估，解决该领域时间敏感、信息对抗性强、多源数据合成等特有挑战；基准每月包含50道由加密专业人士设计的任务，按简单/复杂检索、简单/复杂预测四象限分类，可精准评估LLM的数据获取与高级分析预测能力；对10个LLM的评估揭示了其存在检索-预测失衡的失效模式。
 
 ---
 

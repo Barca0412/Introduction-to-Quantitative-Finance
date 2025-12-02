@@ -2,7 +2,57 @@
 
 衍生品定价与波动率建模
 
-> 共收录 **11** 篇论文 | [返回索引](../README.md)
+> 共收录 **16** 篇论文 | [返回索引](../README.md)
+
+---
+
+### [基于切比雪夫张量基和哈密顿雾后拟合的无套利期权价格曲面构建](https://arxiv.org/abs/2512.01967v1)
+
+**日期**: 2025-12-02 | **作者**: Robert Jenkinson Alvarez
+
+**标签**: `Options` `Asset Pricing` `Risk Management` `Volatility`
+
+论文提出从带噪声的买卖报价构建无套利期权价格曲面的方法：全局层面用切比雪夫张量基表示曲面，将静态无套利要求转化为线性不等式，通过凸二次规划高效求解；局部层面引入基于离散风险中性密度雾和哈密顿能量的后拟合层，在保留全局无套利的同时修正噪声报价，实现高买卖价差内覆盖度与低无套利违反率。
+
+---
+
+### [带非线性Wasserstein投影的贝叶斯分布鲁棒Merton问题](https://arxiv.org/abs/2512.01408v1)
+
+**日期**: 2025-12-02 | **作者**: Jose Blanchet, Jiayi Cheng, Hao Liu et al.
+
+**标签**: `Portfolio Optimization` `Risk Management` `Volatility` `High Frequency`
+
+论文从数据驱动的分布鲁棒视角重新研究Merton连续时间投资组合选择，针对漂移难估计但波动率可测的特点，在贝叶斯Merton模型漂移先验设置单一模糊集（避免时间矩形DRC的过度悲观），通过minimax交换转化为优化先验非线性泛函，结合Karatzas-Zhao闭式解求解；进一步用Wasserstein不确定性下渐近最优最坏情况先验和非线性投影校准模糊半径，实验显示其比DRC悲观性更低、频繁再平衡下优于近视DRO-Markowitz。
+
+---
+
+### [期权轮动策略决策的混合架构：用于透明交易的LLM生成贝叶斯网络](https://arxiv.org/abs/2512.01123v1)
+
+**日期**: 2025-12-02 | **作者**: Xiaoting Kuang, Boken Lin
+
+**标签**: `LLM` `Options` `Algorithmic Trading` `Risk Management`
+
+论文提出LLM与贝叶斯网络结合的混合架构，用LLM构建上下文特定的贝叶斯网络（而非黑盒决策），并选择相关历史数据填充条件概率表实现透明推理；该架构通过反馈循环迭代优化，实证在期权轮动策略上获15.3%年化收益及更优风险调整表现。
+
+---
+
+### [基于Wasserstein距离的粗糙Bergomi模型高效校准](https://arxiv.org/abs/2512.00448v1)
+
+**日期**: 2025-12-02 | **作者**: Changqing Teng, Guanglian Li
+
+**标签**: `Volatility` `Options` `Asset Pricing`
+
+针对粗糙Bergomi模型因非马尔可夫结构导致的定价与校准难题，论文提出改进的指数和（mSOE）蒙特卡洛方案，混合原点附近奇异核精确模拟与剩余部分多因子近似，实现O(n)成本下的高精度定价（尤其虚值期权）；并基于该定价引擎，以Wasserstein距离为优化目标设计分布匹配校准方案，利用Lipschitz收益的minimax公式提升鲁棒性，数值实验验证了方法有效性及对路径依赖期权的泛化能力。
+
+---
+
+### [基于LIME可解释性的电力价格预测机器学习算法比较研究](https://arxiv.org/abs/2512.01212v1)
+
+**日期**: 2025-12-02 | **作者**: Xuanyi Zhao, Jiawen Ding, Xueting Huang et al.
+
+**标签**: `Time Series` `Volatility` `Factor Mining`
+
+本研究针对电力市场价格波动加剧的问题，采用西班牙电力市场的消费、发电及气象多变量数据，对比8种机器学习模型（含线性回归、随机森林、XGBoost等）的电价预测性能，发现KNN表现最优；同时通过LIME可解释性分析，揭示气象因素和供需指标对电价波动的非线性影响机制，提升了预测决策的透明度。
 
 ---
 

@@ -284,7 +284,17 @@ def main():
     
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     
-    generate_daily_page()
+    # 遍历所有论文数据文件生成对应日期的页面
+    json_files = list(RAW_DATA_DIR.glob("*.json")) + list(DATA_DIR.glob("*.json"))
+    processed_dates = set()
+    
+    for json_file in sorted(json_files, reverse=True):
+        if json_file.name == "paper_index.json":
+            continue
+        date = json_file.stem
+        if date not in processed_dates:
+            generate_daily_page(date)
+            processed_dates.add(date)
     
     # 更新首页日期
     update_main_readme_date()

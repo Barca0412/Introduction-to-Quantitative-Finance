@@ -2,7 +2,177 @@
 
 资产定价、因子模型与市场异象研究
 
-> 共收录 **42** 篇论文 | [返回索引](../README.md)
+> 共收录 **59** 篇论文 | [返回索引](../README.md)
+
+---
+
+### [基于切比雪夫张量基和哈密顿雾后拟合的无套利期权价格曲面构建](https://arxiv.org/abs/2512.01967v1)
+
+**日期**: 2025-12-02 | **作者**: Robert Jenkinson Alvarez
+
+**标签**: `Options` `Asset Pricing` `Risk Management` `Volatility`
+
+论文提出从带噪声的买卖报价构建无套利期权价格曲面的方法：全局层面用切比雪夫张量基表示曲面，将静态无套利要求转化为线性不等式，通过凸二次规划高效求解；局部层面引入基于离散风险中性密度雾和哈密顿能量的后拟合层，在保留全局无套利的同时修正噪声报价，实现高买卖价差内覆盖度与低无套利违反率。
+
+---
+
+### [极端风险预测的不平衡鲁棒评估框架](https://arxiv.org/abs/2512.00916v1)
+
+**日期**: 2025-12-02 | **作者**: Sotirios D. Nikolopoulos
+
+**标签**: `Risk Management` `Anomaly`
+
+传统稀有事件预测指标因类别不平衡导致阈值退化，论文提出稀有事件稳定（RES）指标家族，其最优阈值在事件概率趋近零时仍保持内部；模拟及信用违约应用验证RES指标具有稳定阈值、一致模型排名及 prevalence不变性，为极端风险预测提供鲁棒评估框架。
+
+---
+
+### [基于Wasserstein距离的粗糙Bergomi模型高效校准](https://arxiv.org/abs/2512.00448v1)
+
+**日期**: 2025-12-02 | **作者**: Changqing Teng, Guanglian Li
+
+**标签**: `Volatility` `Options` `Asset Pricing`
+
+针对粗糙Bergomi模型因非马尔可夫结构导致的定价与校准难题，论文提出改进的指数和（mSOE）蒙特卡洛方案，混合原点附近奇异核精确模拟与剩余部分多因子近似，实现O(n)成本下的高精度定价（尤其虚值期权）；并基于该定价引擎，以Wasserstein距离为优化目标设计分布匹配校准方案，利用Lipschitz收益的minimax公式提升鲁棒性，数值实验验证了方法有效性及对路径依赖期权的泛化能力。
+
+---
+
+### [随机因子模型中投资组合选择的大道定理收敛速率](https://arxiv.org/abs/2512.00346v1)
+
+**日期**: 2025-12-02 | **作者**: Hiroki Yamamichi
+
+**标签**: `Factor Model` `Portfolio Optimization`
+
+本文研究随机因子模型中投资组合选择大道定理的收敛速率，将最优反馈函数分解为近视投资组合与超额对冲需求，分别在非线性随机因子模型和二次期限结构模型（利率为多元OU过程二次函数）中推导收敛速率，并应用于最优集体投资问题分析终端财富分享规则对收敛速率的影响。
+
+---
+
+### [零售投资者投资期限与盈余公告](https://arxiv.org/abs/2512.00280v1)
+
+**日期**: 2025-12-02 | **作者**: Domonkos F. Vamossy
+
+**标签**: `Behavioral Finance` `Investor Sentiment` `Asset Pricing` `Anomaly`
+
+本文利用2010-2021年StockTwits帖子将股票分为长/短期限，发现期限结构显著预测盈余公告相关回报模式（长期限股票即时反应更大、公告后漂移更明显）；相关多空策略月alpha达0.43%，且事前情绪对短期限股票后续表现影响更显著，证明零售期限结构是盈余回报变异的有用维度。
+
+---
+
+### [油气行业勘探阶段信息资产投资策略优化：一种强化学习方法](https://arxiv.org/abs/2512.00243v1)
+
+**日期**: 2025-12-02 | **作者**: Paulo Roberto de Melo Barros Junior, Monica Alexandra Vilar Ribeiro De Meireles, Jose Luis Lima de Jesus Silva
+
+**标签**: `Reinforcement Learning` `Portfolio Optimization` `Market Microstructure` `Asset Pricing`
+
+本文采用多智能体深度强化学习（DRL）框架，对比油气勘探中传统阶梯式策略与优先早期高质量信息资产的策略，发现前端加载信息投资可降低冗余数据成本、提升储量估值精度；研究还揭示最优投资时机依赖市场竞争而非仅价格波动，竞争环境中能缓解赢家诅咒，开发阶段收益更显著。
+
+---
+
+### [面向稀疏历史数据的概率神经符号推理：融合贝叶斯推断、因果模型与博弈论分配的框架](https://arxiv.org/abs/2512.01723v1)
+
+**日期**: 2025-12-02 | **作者**: Saba Kublashvili
+
+**标签**: `Deep Learning` `Factor Model` `Anomaly`
+
+论文针对历史事件建模中数据稀疏（N<<100）、异质噪声、缺失反事实及需可解释性等挑战，提出HistoricalML框架，融合贝叶斯不确定性量化、结构因果模型、合作博弈论（沙普利值）与注意力神经架构；理论证明稀疏数据下结合领域强先验可一致估计，沙普利分配满足公理公平性，优于纯回归方法；并通过非洲瓜分、布匿战争案例验证。
+
+---
+
+### [智能制造环境下基于机器学习与SHAP分析的铣刀预测性维护研究](https://arxiv.org/abs/2512.01205v1)
+
+**日期**: 2025-12-02 | **作者**: Wen Zhao, Jiawen Ding, Xueting Huang et al.
+
+**标签**: `Anomaly` `Deep Learning` `Time Series`
+
+论文基于AI4I2020数据集，提出涵盖数据预处理、模型训练等六环节的铣刀预测性维护实验流程，对比8种机器学习模型发现XGBoost与随机森林性能突出，结合SHAP分析揭示加工温度、扭矩、转速为故障关键影响因素，为智能制造预测性维护提供方法参考。
+
+---
+
+### [ICAD-LLM：基于大语言模型上下文学习的一劳永逸异常检测](https://arxiv.org/abs/2512.01672v1)
+
+**日期**: 2025-12-02 | **作者**: Zhongyuan Wu, Jingyuan Wang, Zexuan Cheng et al.
+
+**标签**: `LLM` `Anomaly` `Time Series` `Deep Learning`
+
+论文针对现有异常检测方法多聚焦单模态、泛化能力不足的问题，提出ICAD范式（将异常定义为与正常参考集的差异性），并基于大语言模型的上下文学习能力构建ICAD-LLM统一框架，可处理异质数据且泛化到未见过的任务，性能与任务特定方法相当且降低部署成本。
+
+---
+
+### [脑成像中的深度无监督异常检测：大规模基准测试与偏差分析](https://arxiv.org/abs/2512.01534v1)
+
+**日期**: 2025-12-02 | **作者**: Alexander Frotscher, Christian F. Baumgartner, Thomas Wolfers
+
+**标签**: `Anomaly` `Deep Learning` `Benchmark`
+
+本文构建了脑磁共振成像深度无监督异常检测的大规模多中心基准，包含多扫描仪健康数据及多样临床测试集，系统评估算法性能与稳健性，发现重建类（扩散启发式）分割性能较强但存在扫描器、病灶大小等偏差，特征类抗分布偏移更优。
+
+---
+
+### [Rayan AI竞赛获奖方案：组合式检索、零样本异常检测与后门检测](https://arxiv.org/abs/2512.01498v1)
+
+**日期**: 2025-12-02 | **作者**: Ali Nafisi, Sina Asghari, Mohammad Saeed Arvenaghi et al.
+
+**标签**: `Anomaly` `Deep Learning`
+
+该论文提出Rayan AI竞赛的三个获奖方案，分别针对组合式图像检索（视觉+文本输入，95.38%准确率获第一）、零样本异常检测（无异常样本下识别定位图像异常，73.14%准确率获第一）和后门模型检测（检测神经网络隐藏后门触发，78%准确率获第二）；方法在检索、异常检测及模型安全领域有效，可应用于医疗、制造等行业，代码开源。
+
+---
+
+### [小波变换量子支持向量机建模用于网络入侵检测](https://arxiv.org/abs/2512.01365v1)
+
+**日期**: 2025-12-02 | **作者**: Swati Kumari, Shiva Raj Pokhrel, Swathi Chandrasekhar et al.
+
+**标签**: `Anomaly`
+
+论文提出混合量子-经典框架，整合增强型量子支持向量机（QSVM）与量子哈尔小波包变换（QWPT），采用振幅编码量子态制备、多级QWPT特征提取及基于保真度量子核的QSVM结合SPSA优化器训练；在含噪中等规模量子条件下，BoT-IoT和IoT-23数据集异常检测准确率分别达96.67%和89.67%，优于量子自动编码器超7个百分点。
+
+---
+
+### [FC-ADL：基于功能连接的高效微服务异常检测与定位](https://arxiv.org/abs/2512.00844v1)
+
+**日期**: 2025-12-02 | **作者**: Giles Winchester, George Parisis, Luc Berthouze
+
+**标签**: `Anomaly` `Time Series` `Graph Neural Network`
+
+针对微服务架构中异常检测与定位的挑战（传统方法未考虑时变依赖或因果推理计算开销大），论文提出FC-ADL方法，基于神经科学的功能连接高效刻画微服务指标间的时变依赖变化，实现端到端可扩展的异常检测与定位，无需高开销的因果或多变量方法，在多种故障场景下性能优于现有方法且可应用于大规模部署。
+
+---
+
+### [引入AI驱动的物联网能源管理框架](https://arxiv.org/abs/2512.00321v1)
+
+**日期**: 2025-12-02 | **作者**: Shivani Mruthyunjaya, Anandi Dutta, Kazi Sifatul Islam
+
+**标签**: `Time Series` `Anomaly` `Deep Learning`
+
+论文提出一种AI驱动的物联网能源管理框架，集成长期/短期能耗预测、异常检测及定性数据考量，旨在降低能耗并提升电网稳定性；通过电力消费时间序列数据验证了该框架的可行性。
+
+---
+
+### [SD-CGAN：用于物联网网络DDoS异常检测的条件Sinkhorn散度生成对抗网络](https://arxiv.org/abs/2512.00251v1)
+
+**日期**: 2025-12-02 | **作者**: Henry Onyeka, Emmanuel Samson, Liang Hong et al.
+
+**标签**: `Anomaly` `Deep Learning`
+
+针对物联网边缘网络中动态不平衡流量下的DDoS及零日攻击检测难题，提出SD-CGAN框架（条件GAN增强Sinkhorn散度），结合CTGAN数据增强解决类别不平衡，用Sinkhorn散度提升训练稳定性与减少模式崩溃；在CICDDoS2019数据集上评估，性能优于基线方法且计算高效适配边缘部署。
+
+---
+
+### [TIE：用于视觉可解释和不确定性引导的分布外检测的训练-反转-排除框架](https://arxiv.org/abs/2512.00229v1)
+
+**日期**: 2025-12-02 | **作者**: Pirzada Suhail, Rehna Afroz, Amit Sethi
+
+**标签**: `Anomaly` `Deep Learning`
+
+本文针对深度神经网络难以识别分布外（OOD）样本的问题，提出TIE框架，将标准n类分类器扩展为含垃圾类的n+1类模型，通过训练-反转-排除的闭环过程迭代优化；推理时无需外部OOD数据集即可检测OOD，并提供视觉可解释性与不确定性估计。
+
+---
+
+### [因果AI与相关AI在预测性维护中的基准比较](https://arxiv.org/abs/2512.01149v1)
+
+**日期**: 2025-12-02 | **作者**: Krishna Taduri, Shaunak Dhande, Giacinto Paolo et al.
+
+**标签**: `Benchmark` `Anomaly`
+
+论文针对制造业预测性维护中漏检成本为误报50倍的成本不对称问题，评估了8种模型（含基线统计与形式因果推理方法）在1万台CNC机床数据上的表现；其中形式因果推理模型年成本节省116万美元（降70.2%），优于最佳相关模型约8万美元，且误报减少97%、可解释性更好。
 
 ---
 

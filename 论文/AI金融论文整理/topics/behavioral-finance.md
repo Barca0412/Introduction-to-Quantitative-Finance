@@ -2,7 +2,57 @@
 
 行为金融学与投资者情绪
 
-> 共收录 **5** 篇论文 | [返回索引](../README.md)
+> 共收录 **10** 篇论文 | [返回索引](../README.md)
+
+---
+
+### [不完美的必要性：通过模拟认知有限性逆转模型崩塌](https://arxiv.org/abs/2512.01354v1)
+
+**日期**: 2025-12-02 | **作者**: Zhongjie Jiang
+
+**标签**: `LLM` `NLP` `Behavioral Finance` `Risk Management`
+
+本文指出合成数据因追求统计平滑去除人类文本的认知相关不规则性，加速模型崩塌；提出Prompt驱动认知计算框架（PMCSF），含认知状态解码器（CSD）和带认知扰动算子的认知文本编码器（CTE），模拟人类认知过程生成带典型不完美的文本；验证显示CTE文本与人类文本差异小，且A股压力测试中策略最大回撤降低47.4%。
+
+---
+
+### [稳定币市场政治风险的预警信号：2024年美国大选前后的人类与算法行为](https://arxiv.org/abs/2512.00893v1)
+
+**日期**: 2025-12-02 | **作者**: Kundan Mukhia, Buddha Nath Sharma, Salam Rabindrajit Luwang et al.
+
+**标签**: `Risk Management` `Behavioral Finance` `Algorithmic Trading` `Time Series`
+
+本文以2024年美国大选为政治风险事件，区分人类驱动的P2P稳定币交易与算法活动，通过结构突变分析、替代基检验等方法发现，人类驱动的ERC-20交易在大选前2天出现变化，早于交易所交易量（大选日）和算法智能合约活动（2025年1月）；结合能量谱分析与结构向量自回归验证，人类驱动的稳定币流动可作为政治压力的预警指标。
+
+---
+
+### [随机风险厌恶下的均衡投资：（非）唯一性、最优性与比较静态分析](https://arxiv.org/abs/2512.00830v1)
+
+**日期**: 2025-12-02 | **作者**: Cheng Weilun, Liang Zongxia, Wang Sheng et al.
+
+**标签**: `Portfolio Optimization` `Risk Management` `Behavioral Finance`
+
+这篇论文研究随机风险厌恶参数一般分布下的无限维投资组合选择问题，刻画了确定性均衡投资策略的结构（有限期望风险厌恶时均衡唯一，无限期望时可能多均衡或平凡解）；引入三类最优性准则并明确其均衡的存在唯一性，还通过比较静态分析发现反向 hazard rate 占优的风险厌恶分布对应更不激进的均衡策略。
+
+---
+
+### [带S形效用的随机占优约束优化：差表现区域算法与神经网络](https://arxiv.org/abs/2512.00299v1)
+
+**日期**: 2025-12-02 | **作者**: Zeyun Hu, Yang Liu
+
+**标签**: `Portfolio Optimization` `Risk Management` `Deep Learning` `Behavioral Finance`
+
+论文研究带一阶和二阶随机占优（SD）约束的S形非凹效用静态投资组合选择问题，明确求解一阶SD约束下一般S形效用的最优解；针对二阶SD约束问题（因Sion定理无效难以解析求解），提出差表现区域算法找次优解，并开发算法引导的分段神经网络框架学习该问题解。
+
+---
+
+### [零售投资者投资期限与盈余公告](https://arxiv.org/abs/2512.00280v1)
+
+**日期**: 2025-12-02 | **作者**: Domonkos F. Vamossy
+
+**标签**: `Behavioral Finance` `Investor Sentiment` `Asset Pricing` `Anomaly`
+
+本文利用2010-2021年StockTwits帖子将股票分为长/短期限，发现期限结构显著预测盈余公告相关回报模式（长期限股票即时反应更大、公告后漂移更明显）；相关多空策略月alpha达0.43%，且事前情绪对短期限股票后续表现影响更显著，证明零售期限结构是盈余回报变异的有用维度。
 
 ---
 

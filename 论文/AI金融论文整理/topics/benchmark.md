@@ -2,7 +2,67 @@
 
 金融AI基准测试与模型评估
 
-> 共收录 **14** 篇论文 | [返回索引](../README.md)
+> 共收录 **20** 篇论文 | [返回索引](../README.md)
+
+---
+
+### [脑成像中的深度无监督异常检测：大规模基准测试与偏差分析](https://arxiv.org/abs/2512.01534v1)
+
+**日期**: 2025-12-02 | **作者**: Alexander Frotscher, Christian F. Baumgartner, Thomas Wolfers
+
+**标签**: `Anomaly` `Deep Learning` `Benchmark`
+
+本文构建了脑磁共振成像深度无监督异常检测的大规模多中心基准，包含多扫描仪健康数据及多样临床测试集，系统评估算法性能与稳健性，发现重建类（扩散启发式）分割性能较强但存在扫描器、病灶大小等偏差，特征类抗分布偏移更优。
+
+---
+
+### [不完全前瞻信息下多用途批处理过程的贝叶斯动态调度](https://arxiv.org/abs/2512.01093v1)
+
+**日期**: 2025-12-02 | **作者**: Taicheng Zheng, Dan Li, Jie Li
+
+**标签**: `Benchmark` `Risk Management`
+
+针对多用途批处理过程中现有调度方法假设完全前瞻信息不符合实际的问题，本文提出一种贝叶斯动态调度方法，通过贝叶斯网络学习扰动的概率分布，在线观测新扰动时更新后验分布以指导重调度；实验对比显示该方法在长期成本和系统扰动方面优于现有周期性重调度策略。
+
+---
+
+### [断言条件合规：多轮工具调用Agent中的溯源感知漏洞](https://arxiv.org/abs/2512.00332v1)
+
+**日期**: 2025-12-02 | **作者**: Daud Waqas, Aaryamaan Golthi, Erika Hayashida et al.
+
+**标签**: `LLM` `NLP` `Financial Agent` `Benchmark`
+
+本文针对多轮工具调用大模型的鲁棒性不足问题，提出断言条件合规（A-CC）评估范式，从用户源断言（USA）和工具源断言（FSA）两个维度评估模型应对误导性断言的行为；实验表明模型对这两类误导性断言均高度脆弱，证实A-CC是部署Agent的关键潜在漏洞。
+
+---
+
+### [因果AI与相关AI在预测性维护中的基准比较](https://arxiv.org/abs/2512.01149v1)
+
+**日期**: 2025-12-02 | **作者**: Krishna Taduri, Shaunak Dhande, Giacinto Paolo et al.
+
+**标签**: `Benchmark` `Anomaly`
+
+论文针对制造业预测性维护中漏检成本为误报50倍的成本不对称问题，评估了8种模型（含基线统计与形式因果推理方法）在1万台CNC机床数据上的表现；其中形式因果推理模型年成本节省116万美元（降70.2%），优于最佳相关模型约8万美元，且误报减少97%、可解释性更好。
+
+---
+
+### [CryptoBench：加密货币领域LLM智能体专家级评估的动态基准](https://arxiv.org/abs/2512.00417v1)
+
+**日期**: 2025-12-02 | **作者**: Jiacheng Guo, Suozhi Huang, Zixin Yao et al.
+
+**标签**: `LLM` `Financial Agent` `Benchmark`
+
+本文引入首个专家设计的动态基准CryptoBench，针对加密货币领域LLM智能体的真实能力评估，解决该领域时间敏感、信息对抗性强、多源数据合成等特有挑战；基准每月包含50道由加密专业人士设计的任务，按简单/复杂检索、简单/复杂预测四象限分类，可精准评估LLM的数据获取与高级分析预测能力；对10个LLM的评估揭示了其存在检索-预测失衡的失效模式。
+
+---
+
+### [Deep FlexQP：基于深度展开的加速非线性规划方法](https://arxiv.org/abs/2512.01565v1)
+
+**日期**: 2025-12-02 | **作者**: Alex Oshin, Rahul Vodeb Ghosh, Augustinos D. Saravanos et al.
+
+**标签**: `Deep Learning` `Portfolio Optimization` `Benchmark`
+
+论文提出基于二次规划（QP）约束精确松弛的总是可行优化器FlexQP，可处理可行/不可行QP并稀疏最小化约束违反；通过深度展开将其加速为Deep FlexQP，学习维度无关反馈策略实现泛化；在投资组合优化等基准问题上优于现有方法，且提供PAC Bayes泛化保证以加速非线性最优控制等任务。
 
 ---
 
