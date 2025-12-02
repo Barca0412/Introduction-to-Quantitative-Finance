@@ -2,7 +2,47 @@
 
 金融AI基准测试与模型评估
 
-> 共收录 **10** 篇论文 | [返回索引](../README.md)
+> 共收录 **14** 篇论文 | [返回索引](../README.md)
+
+---
+
+### [如果他们射门会怎样？用于反事实预期进球的分层贝叶斯框架](https://arxiv.org/abs/2511.23072v1)
+
+**日期**: 2025-12-01 | **作者**: Mikayil Mahmudlu, Oktay Karakuş, Hasan Arkadaş
+
+**标签**: `Benchmark` `Factor Mining`
+
+该研究开发了整合专家领域知识的分层贝叶斯框架，用于量化球员特定效应的预期进球（xG）估计，解决标准模型将所有球员视为相同终结者的局限；结合StatsBomb数据与Football Manager评级，通过贝叶斯逻辑回归加信息先验稳定低样本球员的估计，并支持反事实“what-if”分析，揭示可解释的球员专长及潜在能力。
+
+---
+
+### [AI欺骗：风险、动态与控制](https://arxiv.org/abs/2511.22619v1)
+
+**日期**: 2025-12-01 | **作者**: Boyuan Chen, Sitong Fang, Jiaming Ji et al.
+
+**标签**: `LLM` `Risk Management` `Benchmark`
+
+论文基于动物欺骗的信号理论提出AI欺骗的正式定义，构建包含欺骗出现（机制、激励、能力前提、触发条件）与处理（检测）的欺骗周期研究框架，梳理现有实证研究并分析AI欺骗作为社会技术安全挑战的风险。
+
+---
+
+### [桥接规划与执行：真实世界截止时间下的多智能体路径规划](https://arxiv.org/abs/2511.21886v1)
+
+**日期**: 2025-12-01 | **作者**: Jingtian Yan, Shuai Zhou, Stephen F. Smith et al.
+
+**标签**: `Execution` `Deep Learning` `Benchmark`
+
+现有多智能体路径规划（MAPF）多忽略执行时因素（如运动学约束、通信延迟），针对真实截止时间场景的差距，论文提出REMAP框架，通过ExecTimeNet准确估计路径执行时间，集成到MAPF-LNS、CBS等主流方法解决MAPF-RD问题，实验显示解质量提升最多20%。
+
+---
+
+### [DeXposure：去中心化金融网络中协议间信用敞口的数据集与基准研究](https://arxiv.org/abs/2511.22314v1)
+
+**日期**: 2025-12-01 | **作者**: Wenbin Wu, Kejiang Qian, Alexis Lui et al.
+
+**标签**: `Benchmark` `Risk Management` `Graph Neural Network` `Time Series`
+
+本文构建了首个大规模去中心化金融（DeFi）协议间信用敞口数据集DeXposure，结合DefiLlama元数据定义基于总锁仓价值（TVL）变化的价值关联敞口度量并推断协议间敞口；建立图聚类、向量自回归（VAR）及时序图神经网络三个机器学习基准，分析发现DeFi信用网络规模增长、集中度提升等演化特征及冲击跨 sector传播规律。
 
 ---
 

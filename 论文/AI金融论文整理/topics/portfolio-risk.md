@@ -2,7 +2,117 @@
 
 投资组合优化与风险管理
 
-> 共收录 **21** 篇论文 | [返回索引](../README.md)
+> 共收录 **32** 篇论文 | [返回索引](../README.md)
+
+---
+
+### [带摩擦的路径依赖期权定价与对冲的Signature方法](https://arxiv.org/abs/2511.23295v1)
+
+**日期**: 2025-12-01 | **作者**: Eduardo Abi Jaber, Donatien Hainaut, Edouard Motte
+
+**标签**: `Options` `Asset Pricing` `Risk Management` `Market Microstructure`
+
+本文引入带摩擦的路径依赖期权定价与对冲的Signature方法，基于均值二次变差准则将非线性非马尔可夫随机控制问题转化为可处理形式，得到线性反馈形式的对冲策略，系数由扩展张量代数上的非标准无限维Riccati方程刻画；数值实验表明该策略有效，市场冲击使最优交易策略平滑，低截断Signature近似在摩擦市场中准确鲁棒。
+
+---
+
+### [保险行业的极端值统计](https://arxiv.org/abs/2511.22272v1)
+
+**日期**: 2025-12-01 | **作者**: Hansjoerg Albrecher, Jan Beirlant
+
+**标签**: `Risk Management` `Anomaly`
+
+这篇论文调查了极端值建模技术在保险行业的应用及适配需求，涵盖截断、tempered分布、删失和回归等关键技术，并用具体数据集进行实例验证。
+
+---
+
+### [风险调整后的智能红利：整合ISO 42001与监管敞口的AI投资回报率量化框架](https://arxiv.org/abs/2511.21975v1)
+
+**日期**: 2025-12-01 | **作者**: Hernan Huwyler
+
+**标签**: `Risk Management` `Deep Learning`
+
+本文针对传统AI投资回报率（ROI）未覆盖AI双重性（降低操作风险但引入算法故障、对抗攻击等新风险）的问题，提出整合ISO 42001与监管敞口的量化框架；该框架采用年度损失期望计算、蒙特卡洛模拟等方法，量化AI项目净收益（含 productivity gains及实施前后风险敞口变化），并纳入控制有效性、故障储备等因素，为AI投资决策提供全面评估工具。
+
+---
+
+### [Fréchet问题的扩展卷积边界：稳健风险聚合与风险分担](https://arxiv.org/abs/2511.21929v1)
+
+**日期**: 2025-12-01 | **作者**: Peng Liu, Yang Liu, Houhan Teng
+
+**标签**: `Risk Management` `Portfolio Optimization`
+
+论文首先建立Range-Value-at-Risk（RVaR）的新不等式，推导RVaR、RVaR差及分位数差的稳健风险聚合边界（扩展卷积边界）并给出sharpness条件；接着用该不等式研究平均分位数的风险分担（对应特殊反S形扭曲风险测度），得到最小风险值及最优配置（大损失共单调、小损失/大收益反共单调）；最后指出无界风险下最优配置不存在。
+
+---
+
+### [AI安全、治理与合规的标准化威胁分类体系](https://arxiv.org/abs/2511.21901v1)
+
+**日期**: 2025-12-01 | **作者**: Hernan Huwyler
+
+**标签**: `Risk Management`
+
+针对AI部署中技术安全团队与合规团队的语言障碍，论文提出AI系统威胁向量分类体系（ASTVT），将AI风险分为9个关键领域并映射技术向量到业务损失类别，通过133个AI事件验证其100%分类覆盖度，助力量化财务影响与合规对接。
+
+---
+
+### [Black-Litterman与ESG投资组合优化](https://arxiv.org/abs/2511.21850v1)
+
+**日期**: 2025-12-01 | **作者**: Aviv Alpern, Svetlozar Rachev
+
+**标签**: `Portfolio Optimization` `Risk Management` `Asset Pricing`
+
+论文提出结合ESG数据与Black-Litterman框架的简单投资组合优化策略，以ESG分数作为Stein收缩估计均衡风险溢价的偏差，用多元仿射正态逆高斯变量建模资产并以CVaR为风险度量；该策略结合软 turnover约束后表现优异，4.7年内每日再平衡的最优策略年收益达40-45%。
+
+---
+
+### [资产量子网络：市场相关性与结构风险的非经典框架](https://arxiv.org/abs/2511.21515v2)
+
+**日期**: 2025-12-01 | **作者**: Hui Gong, Akash Sedai, Francesca Medda
+
+**标签**: `Risk Management` `Anomaly` `Volatility`
+
+论文提出资产量子网络（QNA）框架，基于量子信息密度矩阵突破经典相关矩阵的线性pairwise局限，捕捉资产间非线性、高阶及状态依赖的依赖关系；定义纠缠风险指数（ERI）和量子预警信号（QEWS），通过NASDAQ-100数据验证其能识别经典工具无法捕捉的结构风险与依赖几何。
+
+---
+
+### [AI欺骗：风险、动态与控制](https://arxiv.org/abs/2511.22619v1)
+
+**日期**: 2025-12-01 | **作者**: Boyuan Chen, Sitong Fang, Jiaming Ji et al.
+
+**标签**: `LLM` `Risk Management` `Benchmark`
+
+论文基于动物欺骗的信号理论提出AI欺骗的正式定义，构建包含欺骗出现（机制、激励、能力前提、触发条件）与处理（检测）的欺骗周期研究框架，梳理现有实证研究并分析AI欺骗作为社会技术安全挑战的风险。
+
+---
+
+### [基于每步概率分布直接建模的时间序列预测](https://arxiv.org/abs/2511.23260v1)
+
+**日期**: 2025-12-01 | **作者**: Linghao Kong, Xiaopeng Hong
+
+**标签**: `Deep Learning` `Time Series` `Risk Management` `Anomaly`
+
+现有深度时间序列模型直接输出标量难以处理预测不确定性，本文提出interPDN模型，每步直接构建离散概率分布并以其期望作为回归输出；采用双分支交织支持集架构（含粗时间尺度分支），结合自监督一致性约束缓解预测异常，实验验证其性能更优。
+
+---
+
+### [ARES：边缘流的异常识别模型](https://arxiv.org/abs/2511.22078v1)
+
+**日期**: 2025-12-01 | **作者**: Simone Mungari, Albert Bifet, Giuseppe Manco et al.
+
+**标签**: `Anomaly` `Graph Neural Network` `Deep Learning` `Risk Management`
+
+针对边缘流异常检测面临的概念漂移、大数据量及实时响应挑战，论文提出无监督框架ARES，结合图神经网络（GNN）提取节点与边的潜在特征以捕捉异常行为，半空间树（HST）高效隔离异常；并加入基于少量标记数据的监督阈值机制提升跨领域适应性，在真实网络攻击场景验证其优于现有方法。
+
+---
+
+### [DeXposure：去中心化金融网络中协议间信用敞口的数据集与基准研究](https://arxiv.org/abs/2511.22314v1)
+
+**日期**: 2025-12-01 | **作者**: Wenbin Wu, Kejiang Qian, Alexis Lui et al.
+
+**标签**: `Benchmark` `Risk Management` `Graph Neural Network` `Time Series`
+
+本文构建了首个大规模去中心化金融（DeFi）协议间信用敞口数据集DeXposure，结合DefiLlama元数据定义基于总锁仓价值（TVL）变化的价值关联敞口度量并推断协议间敞口；建立图聚类、向量自回归（VAR）及时序图神经网络三个机器学习基准，分析发现DeFi信用网络规模增长、集中度提升等演化特征及冲击跨 sector传播规律。
 
 ---
 

@@ -2,7 +2,47 @@
 
 衍生品定价与波动率建模
 
-> 共收录 **7** 篇论文 | [返回索引](../README.md)
+> 共收录 **11** 篇论文 | [返回索引](../README.md)
+
+---
+
+### [带摩擦的路径依赖期权定价与对冲的Signature方法](https://arxiv.org/abs/2511.23295v1)
+
+**日期**: 2025-12-01 | **作者**: Eduardo Abi Jaber, Donatien Hainaut, Edouard Motte
+
+**标签**: `Options` `Asset Pricing` `Risk Management` `Market Microstructure`
+
+本文引入带摩擦的路径依赖期权定价与对冲的Signature方法，基于均值二次变差准则将非线性非马尔可夫随机控制问题转化为可处理形式，得到线性反馈形式的对冲策略，系数由扩展张量代数上的非标准无限维Riccati方程刻画；数值实验表明该策略有效，市场冲击使最优交易策略平滑，低截断Signature近似在摩擦市场中准确鲁棒。
+
+---
+
+### [影响加密货币价格的因素：来自比特币、以太坊、达世币、莱特币和门罗币的证据](https://arxiv.org/abs/2511.22782v1)
+
+**日期**: 2025-12-01 | **作者**: Yhlas Sovbetov
+
+**标签**: `Asset Pricing` `Factor Model` `Time Series` `Volatility`
+
+本文采用ARDL技术，基于2010-2018年周度数据，分析五种主流加密货币价格的影响因素；发现加密市场相关因素对其长短周期均显著，吸引力仅长期显著，SP500存在长短周期异质性影响，且各货币存在长期均衡及特定收敛速度。
+
+---
+
+### [期权市场中依赖β的伽马反馈与内生波动率放大](https://arxiv.org/abs/2511.22766v1)
+
+**日期**: 2025-12-01 | **作者**: Haoying Dai
+
+**标签**: `Volatility` `Options` `Market Making` `Market Microstructure`
+
+论文构建理论框架，连接微观期权对冲、股票特定因子暴露与宏观市场动荡，解释伽马挤压事件中的内生波动率放大；通过显式建模做市商delta中性对冲并纳入β依赖的波动率归一化，推导伽马挤压发生的稳定性条件，捕捉做市商对冲与价格变动的非线性递归反馈及自我强化动态。
+
+---
+
+### [资产量子网络：市场相关性与结构风险的非经典框架](https://arxiv.org/abs/2511.21515v2)
+
+**日期**: 2025-12-01 | **作者**: Hui Gong, Akash Sedai, Francesca Medda
+
+**标签**: `Risk Management` `Anomaly` `Volatility`
+
+论文提出资产量子网络（QNA）框架，基于量子信息密度矩阵突破经典相关矩阵的线性pairwise局限，捕捉资产间非线性、高阶及状态依赖的依赖关系；定义纠缠风险指数（ERI）和量子预警信号（QEWS），通过NASDAQ-100数据验证其能识别经典工具无法捕捉的结构风险与依赖几何。
 
 ---
 

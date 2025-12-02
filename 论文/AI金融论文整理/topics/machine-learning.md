@@ -2,7 +2,147 @@
 
 机器学习在量化金融中的应用，包括深度学习、强化学习、图神经网络、Transformer等
 
-> 共收录 **42** 篇论文 | [返回索引](../README.md)
+> 共收录 **56** 篇论文 | [返回索引](../README.md)
+
+---
+
+### [影响加密货币价格的因素：来自比特币、以太坊、达世币、莱特币和门罗币的证据](https://arxiv.org/abs/2511.22782v1)
+
+**日期**: 2025-12-01 | **作者**: Yhlas Sovbetov
+
+**标签**: `Asset Pricing` `Factor Model` `Time Series` `Volatility`
+
+本文采用ARDL技术，基于2010-2018年周度数据，分析五种主流加密货币价格的影响因素；发现加密市场相关因素对其长短周期均显著，吸引力仅长期显著，SP500存在长短周期异质性影响，且各货币存在长期均衡及特定收敛速度。
+
+---
+
+### [基于自适应决斗双深度Q网络与Mamba的Uniswap V3复制与扩展](https://arxiv.org/abs/2511.22101v1)
+
+**日期**: 2025-12-01 | **作者**: Zhaofeng Zhang
+
+**标签**: `Reinforcement Learning` `Market Making` `Deep Learning` `Algorithmic Trading`
+
+论文首先完成了Uniswap V3自适应流动性提供深度强化学习论文的复制，涵盖Uniswap子图数据获取、实现细节及结果分析；随后提出结合Mamba与双深度Q网络（DDQN）并设计新奖励函数的改进模型，引入两个新基准对比，该模型理论支撑更强且部分测试表现更优。
+
+---
+
+### [风险调整后的智能红利：整合ISO 42001与监管敞口的AI投资回报率量化框架](https://arxiv.org/abs/2511.21975v1)
+
+**日期**: 2025-12-01 | **作者**: Hernan Huwyler
+
+**标签**: `Risk Management` `Deep Learning`
+
+本文针对传统AI投资回报率（ROI）未覆盖AI双重性（降低操作风险但引入算法故障、对抗攻击等新风险）的问题，提出整合ISO 42001与监管敞口的量化框架；该框架采用年度损失期望计算、蒙特卡洛模拟等方法，量化AI项目净收益（含 productivity gains及实施前后风险敞口变化），并纳入控制有效性、故障储备等因素，为AI投资决策提供全面评估工具。
+
+---
+
+### [A3T-GCN用于FTSE100成分股价格预测](https://arxiv.org/abs/2511.21873v1)
+
+**日期**: 2025-12-01 | **作者**: A. L. Paredes
+
+**标签**: `Graph Neural Network` `Time Series` `Deep Learning` `Asset Pricing`
+
+本文提出混合A3T-GCN架构预测FTSE100成分股收盘价，基于行业分类及收益/财务比率相关性构建图结构，节点特征含技术指标、归一化与对数收益等；研究发现使用年化对数收益和更短序列的模型可提升预测精度并降低计算量，较长历史序列对长期预测有适度增益。
+
+---
+
+### [基于张量分解的群与酉表示发现理论框架](https://arxiv.org/abs/2511.23152v1)
+
+**日期**: 2025-12-01 | **作者**: Dongsung Huh, Halyun Jeong
+
+**标签**: `Factor Model` `Deep Learning`
+
+该论文分析算子值张量分解架构HyperCube模型，将其目标分解为因子尺度调节项与方向对齐非负项，隔离共线流形并证明仅群同位素存在可行解且推动酉性；提出共线性主导猜想，条件下证明全局极小由群的酉正则表示达到，非群操作目标值严格更高，量化模型对群结合结构的归纳偏置。
+
+---
+
+### [基于每步概率分布直接建模的时间序列预测](https://arxiv.org/abs/2511.23260v1)
+
+**日期**: 2025-12-01 | **作者**: Linghao Kong, Xiaopeng Hong
+
+**标签**: `Deep Learning` `Time Series` `Risk Management` `Anomaly`
+
+现有深度时间序列模型直接输出标量难以处理预测不确定性，本文提出interPDN模型，每步直接构建离散概率分布并以其期望作为回归输出；采用双分支交织支持集架构（含粗时间尺度分支），结合自监督一致性约束缓解预测异常，实验验证其性能更优。
+
+---
+
+### [ARES：边缘流的异常识别模型](https://arxiv.org/abs/2511.22078v1)
+
+**日期**: 2025-12-01 | **作者**: Simone Mungari, Albert Bifet, Giuseppe Manco et al.
+
+**标签**: `Anomaly` `Graph Neural Network` `Deep Learning` `Risk Management`
+
+针对边缘流异常检测面临的概念漂移、大数据量及实时响应挑战，论文提出无监督框架ARES，结合图神经网络（GNN）提取节点与边的潜在特征以捕捉异常行为，半空间树（HST）高效隔离异常；并加入基于少量标记数据的监督阈值机制提升跨领域适应性，在真实网络攻击场景验证其优于现有方法。
+
+---
+
+### [用于物联网异常检测的量子自动编码器可训练核建模](https://arxiv.org/abs/2511.21932v1)
+
+**日期**: 2025-12-01 | **作者**: Swathi Chandrasekhar, Shiva Raj Pokhrel, Swati Kumari et al.
+
+**标签**: `Anomaly` `Deep Learning`
+
+本文针对物联网流量高维复杂与网络威胁加剧的问题，提出量子自动编码器（QAE）框架压缩流量为判别性潜在表示，结合量子支持向量分类（QSVC）实现入侵检测；在理想模拟器及IBM量子硬件上验证了方法的准确率提升，且中等退极化噪声可作为隐正则化稳定训练并增强泛化，证明量子机器学习是应对实际网络安全挑战的可行硬件就绪方案。
+
+---
+
+### [奶牛场中基于多智能体强化学习的点对点能源交易](https://arxiv.org/abs/2511.23148v1)
+
+**日期**: 2025-12-01 | **作者**: Mian Ibad Ali Shah, Marcos Eduardo Cruz Victorio, Maeve Duffy et al.
+
+**标签**: `Reinforcement Learning` `Financial Agent`
+
+论文针对农村奶牛场的分散能源管理问题，提出结合多智能体强化学习（含DQN和PPO）与P2P能源交易机制的方法，通过拍卖清结算、价格顾问代理及负荷/电池管理，显著降低爱尔兰和芬兰奶牛场的用电成本（DQN分别降14.2%和5.16%）、峰时需求（PPO在爱尔兰降55.5%）并提升售电收益，验证了MARL与P2P交易的互补优势。
+
+---
+
+### [GSpaRC：用于实时射频信道重建的高斯喷溅方法](https://arxiv.org/abs/2511.22793v1)
+
+**日期**: 2025-12-01 | **作者**: Bhavya Sai Nukapotula, Rishabh Tripathi, Seth Pregler et al.
+
+**标签**: `Deep Learning` `High Frequency`
+
+针对无线通信中信道状态信息（CSI）获取开销大且现有重建方法延迟较高的问题，提出GSpaRC算法，首次突破1ms延迟屏障并保持高精度；该算法采用带距离衰减等物理特征的轻量神经模型参数化3D高斯基元表示射频环境，通过等距投影模拟全向天线，自定义CUDA pipeline实现多维度并行处理以提升实时性。
+
+---
+
+### [基于单次概率前向传播和代码生成的贝叶斯神经网络加速执行](https://arxiv.org/abs/2511.23440v1)
+
+**日期**: 2025-12-01 | **作者**: Bernhard Klein, Falk Selker, Hendrik Borras et al.
+
+**标签**: `Deep Learning` `Execution`
+
+该论文针对贝叶斯神经网络（BNN）因多次采样导致计算成本高的问题，提出基于单次概率前向传播（PFP）的方法——假设权重和激活为高斯分布，用单次确定性前向传播替代随机变分推断（SVI）的多次采样；结合TVM深度学习编译器实现端到端训练、编译优化及嵌入式ARM CPU部署 pipeline，实验表明PFP-BNN在小批量下最高可实现4200x加速，且在Dirty-MNIST任务的准确率、不确定性估计和OOD检测上与SVI-BNN相当。
+
+---
+
+### [桥接规划与执行：真实世界截止时间下的多智能体路径规划](https://arxiv.org/abs/2511.21886v1)
+
+**日期**: 2025-12-01 | **作者**: Jingtian Yan, Shuai Zhou, Stephen F. Smith et al.
+
+**标签**: `Execution` `Deep Learning` `Benchmark`
+
+现有多智能体路径规划（MAPF）多忽略执行时因素（如运动学约束、通信延迟），针对真实截止时间场景的差距，论文提出REMAP框架，通过ExecTimeNet准确估计路径执行时间，集成到MAPF-LNS、CBS等主流方法解决MAPF-RD问题，实验显示解质量提升最多20%。
+
+---
+
+### [AgentShield：提升多智能体系统（MAS）的安全性与效率](https://arxiv.org/abs/2511.22924v1)
+
+**日期**: 2025-12-01 | **作者**: Kaixiang Wang, Zhaojiacheng Zhou, Bunyod Suvonov et al.
+
+**标签**: `LLM` `Transformer` `Anomaly` `Deep Learning`
+
+该论文针对基于大语言模型（LLM）的多智能体系统（MAS）易受对抗攻击且现有防御存在单点故障或效率损失的问题，提出分布式防御框架AgentShield，通过关键节点审计、轻量令牌审计、两轮共识审计三层设计优化鲁棒性-效率权衡；实验表明其恢复率达92.5%，审计开销降低超70%，在多样拓扑和攻击场景下维持高协作准确率。
+
+---
+
+### [DeXposure：去中心化金融网络中协议间信用敞口的数据集与基准研究](https://arxiv.org/abs/2511.22314v1)
+
+**日期**: 2025-12-01 | **作者**: Wenbin Wu, Kejiang Qian, Alexis Lui et al.
+
+**标签**: `Benchmark` `Risk Management` `Graph Neural Network` `Time Series`
+
+本文构建了首个大规模去中心化金融（DeFi）协议间信用敞口数据集DeXposure，结合DefiLlama元数据定义基于总锁仓价值（TVL）变化的价值关联敞口度量并推断协议间敞口；建立图聚类、向量自回归（VAR）及时序图神经网络三个机器学习基准，分析发现DeFi信用网络规模增长、集中度提升等演化特征及冲击跨 sector传播规律。
 
 ---
 

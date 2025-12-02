@@ -2,7 +2,57 @@
 
 大语言模型与金融智能体在量化金融中的应用
 
-> 共收录 **20** 篇论文 | [返回索引](../README.md)
+> 共收录 **25** 篇论文 | [返回索引](../README.md)
+
+---
+
+### [读心还是误读？大五人格测试中的大语言模型](https://arxiv.org/abs/2511.23101v1)
+
+**日期**: 2025-12-01 | **作者**: Francesco Di Cursi, Chiara Boldrini, Marco Conti et al.
+
+**标签**: `LLM` `NLP` `Behavioral Finance`
+
+该论文测试5个大语言模型（含GPT-4及开源轻量模型）在3个异构数据集和2种提示策略下的大五人格二分类预测，发现丰富提示减少无效输出但引入系统偏差，不同特质预测难度差异显著；现有开箱即用LLM暂不适合自动人格预测，需协调提示设计、特质框架与评估指标。
+
+---
+
+### [AI欺骗：风险、动态与控制](https://arxiv.org/abs/2511.22619v1)
+
+**日期**: 2025-12-01 | **作者**: Boyuan Chen, Sitong Fang, Jiaming Ji et al.
+
+**标签**: `LLM` `Risk Management` `Benchmark`
+
+论文基于动物欺骗的信号理论提出AI欺骗的正式定义，构建包含欺骗出现（机制、激励、能力前提、触发条件）与处理（检测）的欺骗周期研究框架，梳理现有实证研究并分析AI欺骗作为社会技术安全挑战的风险。
+
+---
+
+### [奶牛场中基于多智能体强化学习的点对点能源交易](https://arxiv.org/abs/2511.23148v1)
+
+**日期**: 2025-12-01 | **作者**: Mian Ibad Ali Shah, Marcos Eduardo Cruz Victorio, Maeve Duffy et al.
+
+**标签**: `Reinforcement Learning` `Financial Agent`
+
+论文针对农村奶牛场的分散能源管理问题，提出结合多智能体强化学习（含DQN和PPO）与P2P能源交易机制的方法，通过拍卖清结算、价格顾问代理及负荷/电池管理，显著降低爱尔兰和芬兰奶牛场的用电成本（DQN分别降14.2%和5.16%）、峰时需求（PPO在爱尔兰降55.5%）并提升售电收益，验证了MARL与P2P交易的互补优势。
+
+---
+
+### [解决AI智能体中的上下文窗口溢出问题](https://arxiv.org/abs/2511.22729v1)
+
+**日期**: 2025-12-01 | **作者**: Anton Bulle Labate, Valesca Moura de Sousa, Sandro Rama Fiorini et al.
+
+**标签**: `LLM` `Financial Agent` `NLP`
+
+本文针对大语言模型（LLM）处理工具输出时的上下文窗口溢出问题，提出将模型交互从原始数据转向内存指针的方法，可在无信息损失下处理任意长度工具响应，且减少token使用与执行时间；该方法在材料科学真实应用中验证有效，实验中token消耗约为传统方法的1/7。
+
+---
+
+### [AgentShield：提升多智能体系统（MAS）的安全性与效率](https://arxiv.org/abs/2511.22924v1)
+
+**日期**: 2025-12-01 | **作者**: Kaixiang Wang, Zhaojiacheng Zhou, Bunyod Suvonov et al.
+
+**标签**: `LLM` `Transformer` `Anomaly` `Deep Learning`
+
+该论文针对基于大语言模型（LLM）的多智能体系统（MAS）易受对抗攻击且现有防御存在单点故障或效率损失的问题，提出分布式防御框架AgentShield，通过关键节点审计、轻量令牌审计、两轮共识审计三层设计优化鲁棒性-效率权衡；实验表明其恢复率达92.5%，审计开销降低超70%，在多样拓扑和攻击场景下维持高协作准确率。
 
 ---
 

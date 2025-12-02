@@ -2,7 +2,127 @@
 
 资产定价、因子模型与市场异象研究
 
-> 共收录 **30** 篇论文 | [返回索引](../README.md)
+> 共收录 **42** 篇论文 | [返回索引](../README.md)
+
+---
+
+### [带摩擦的路径依赖期权定价与对冲的Signature方法](https://arxiv.org/abs/2511.23295v1)
+
+**日期**: 2025-12-01 | **作者**: Eduardo Abi Jaber, Donatien Hainaut, Edouard Motte
+
+**标签**: `Options` `Asset Pricing` `Risk Management` `Market Microstructure`
+
+本文引入带摩擦的路径依赖期权定价与对冲的Signature方法，基于均值二次变差准则将非线性非马尔可夫随机控制问题转化为可处理形式，得到线性反馈形式的对冲策略，系数由扩展张量代数上的非标准无限维Riccati方程刻画；数值实验表明该策略有效，市场冲击使最优交易策略平滑，低截断Signature近似在摩擦市场中准确鲁棒。
+
+---
+
+### [影响加密货币价格的因素：来自比特币、以太坊、达世币、莱特币和门罗币的证据](https://arxiv.org/abs/2511.22782v1)
+
+**日期**: 2025-12-01 | **作者**: Yhlas Sovbetov
+
+**标签**: `Asset Pricing` `Factor Model` `Time Series` `Volatility`
+
+本文采用ARDL技术，基于2010-2018年周度数据，分析五种主流加密货币价格的影响因素；发现加密市场相关因素对其长短周期均显著，吸引力仅长期显著，SP500存在长短周期异质性影响，且各货币存在长期均衡及特定收敛速度。
+
+---
+
+### [保险行业的极端值统计](https://arxiv.org/abs/2511.22272v1)
+
+**日期**: 2025-12-01 | **作者**: Hansjoerg Albrecher, Jan Beirlant
+
+**标签**: `Risk Management` `Anomaly`
+
+这篇论文调查了极端值建模技术在保险行业的应用及适配需求，涵盖截断、tempered分布、删失和回归等关键技术，并用具体数据集进行实例验证。
+
+---
+
+### [A3T-GCN用于FTSE100成分股价格预测](https://arxiv.org/abs/2511.21873v1)
+
+**日期**: 2025-12-01 | **作者**: A. L. Paredes
+
+**标签**: `Graph Neural Network` `Time Series` `Deep Learning` `Asset Pricing`
+
+本文提出混合A3T-GCN架构预测FTSE100成分股收盘价，基于行业分类及收益/财务比率相关性构建图结构，节点特征含技术指标、归一化与对数收益等；研究发现使用年化对数收益和更短序列的模型可提升预测精度并降低计算量，较长历史序列对长期预测有适度增益。
+
+---
+
+### [Black-Litterman与ESG投资组合优化](https://arxiv.org/abs/2511.21850v1)
+
+**日期**: 2025-12-01 | **作者**: Aviv Alpern, Svetlozar Rachev
+
+**标签**: `Portfolio Optimization` `Risk Management` `Asset Pricing`
+
+论文提出结合ESG数据与Black-Litterman框架的简单投资组合优化策略，以ESG分数作为Stein收缩估计均衡风险溢价的偏差，用多元仿射正态逆高斯变量建模资产并以CVaR为风险度量；该策略结合软 turnover约束后表现优异，4.7年内每日再平衡的最优策略年收益达40-45%。
+
+---
+
+### [资产量子网络：市场相关性与结构风险的非经典框架](https://arxiv.org/abs/2511.21515v2)
+
+**日期**: 2025-12-01 | **作者**: Hui Gong, Akash Sedai, Francesca Medda
+
+**标签**: `Risk Management` `Anomaly` `Volatility`
+
+论文提出资产量子网络（QNA）框架，基于量子信息密度矩阵突破经典相关矩阵的线性pairwise局限，捕捉资产间非线性、高阶及状态依赖的依赖关系；定义纠缠风险指数（ERI）和量子预警信号（QEWS），通过NASDAQ-100数据验证其能识别经典工具无法捕捉的结构风险与依赖几何。
+
+---
+
+### [基于张量分解的群与酉表示发现理论框架](https://arxiv.org/abs/2511.23152v1)
+
+**日期**: 2025-12-01 | **作者**: Dongsung Huh, Halyun Jeong
+
+**标签**: `Factor Model` `Deep Learning`
+
+该论文分析算子值张量分解架构HyperCube模型，将其目标分解为因子尺度调节项与方向对齐非负项，隔离共线流形并证明仅群同位素存在可行解且推动酉性；提出共线性主导猜想，条件下证明全局极小由群的酉正则表示达到，非群操作目标值严格更高，量化模型对群结合结构的归纳偏置。
+
+---
+
+### [基于每步概率分布直接建模的时间序列预测](https://arxiv.org/abs/2511.23260v1)
+
+**日期**: 2025-12-01 | **作者**: Linghao Kong, Xiaopeng Hong
+
+**标签**: `Deep Learning` `Time Series` `Risk Management` `Anomaly`
+
+现有深度时间序列模型直接输出标量难以处理预测不确定性，本文提出interPDN模型，每步直接构建离散概率分布并以其期望作为回归输出；采用双分支交织支持集架构（含粗时间尺度分支），结合自监督一致性约束缓解预测异常，实验验证其性能更优。
+
+---
+
+### [ARES：边缘流的异常识别模型](https://arxiv.org/abs/2511.22078v1)
+
+**日期**: 2025-12-01 | **作者**: Simone Mungari, Albert Bifet, Giuseppe Manco et al.
+
+**标签**: `Anomaly` `Graph Neural Network` `Deep Learning` `Risk Management`
+
+针对边缘流异常检测面临的概念漂移、大数据量及实时响应挑战，论文提出无监督框架ARES，结合图神经网络（GNN）提取节点与边的潜在特征以捕捉异常行为，半空间树（HST）高效隔离异常；并加入基于少量标记数据的监督阈值机制提升跨领域适应性，在真实网络攻击场景验证其优于现有方法。
+
+---
+
+### [用于物联网异常检测的量子自动编码器可训练核建模](https://arxiv.org/abs/2511.21932v1)
+
+**日期**: 2025-12-01 | **作者**: Swathi Chandrasekhar, Shiva Raj Pokhrel, Swati Kumari et al.
+
+**标签**: `Anomaly` `Deep Learning`
+
+本文针对物联网流量高维复杂与网络威胁加剧的问题，提出量子自动编码器（QAE）框架压缩流量为判别性潜在表示，结合量子支持向量分类（QSVC）实现入侵检测；在理想模拟器及IBM量子硬件上验证了方法的准确率提升，且中等退极化噪声可作为隐正则化稳定训练并增强泛化，证明量子机器学习是应对实际网络安全挑战的可行硬件就绪方案。
+
+---
+
+### [智能物联网设备的无监督异常检测：性能与资源对比](https://arxiv.org/abs/2511.21842v1)
+
+**日期**: 2025-12-01 | **作者**: Md. Sad Abdullah Sami, Mushfiquzzaman Abid
+
+**标签**: `Anomaly`
+
+论文针对传统签名-based异常检测无法识别新兴及零日威胁的问题，采用TON_IoT恒温器数据集，对比孤立森林（IF）与一类支持向量机（OC-SVM）两种无监督方法的检测性能及资源占用；结果显示IF在检测指标和计算资源上更优，适合资源受限的IoT边缘设备部署。
+
+---
+
+### [AgentShield：提升多智能体系统（MAS）的安全性与效率](https://arxiv.org/abs/2511.22924v1)
+
+**日期**: 2025-12-01 | **作者**: Kaixiang Wang, Zhaojiacheng Zhou, Bunyod Suvonov et al.
+
+**标签**: `LLM` `Transformer` `Anomaly` `Deep Learning`
+
+该论文针对基于大语言模型（LLM）的多智能体系统（MAS）易受对抗攻击且现有防御存在单点故障或效率损失的问题，提出分布式防御框架AgentShield，通过关键节点审计、轻量令牌审计、两轮共识审计三层设计优化鲁棒性-效率权衡；实验表明其恢复率达92.5%，审计开销降低超70%，在多样拓扑和攻击场景下维持高协作准确率。
 
 ---
 

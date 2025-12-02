@@ -2,7 +2,67 @@
 
 交易策略、市场微观结构与高频交易
 
-> 共收录 **8** 篇论文 | [返回索引](../README.md)
+> 共收录 **14** 篇论文 | [返回索引](../README.md)
+
+---
+
+### [带摩擦的路径依赖期权定价与对冲的Signature方法](https://arxiv.org/abs/2511.23295v1)
+
+**日期**: 2025-12-01 | **作者**: Eduardo Abi Jaber, Donatien Hainaut, Edouard Motte
+
+**标签**: `Options` `Asset Pricing` `Risk Management` `Market Microstructure`
+
+本文引入带摩擦的路径依赖期权定价与对冲的Signature方法，基于均值二次变差准则将非线性非马尔可夫随机控制问题转化为可处理形式，得到线性反馈形式的对冲策略，系数由扩展张量代数上的非标准无限维Riccati方程刻画；数值实验表明该策略有效，市场冲击使最优交易策略平滑，低截断Signature近似在摩擦市场中准确鲁棒。
+
+---
+
+### [期权市场中依赖β的伽马反馈与内生波动率放大](https://arxiv.org/abs/2511.22766v1)
+
+**日期**: 2025-12-01 | **作者**: Haoying Dai
+
+**标签**: `Volatility` `Options` `Market Making` `Market Microstructure`
+
+论文构建理论框架，连接微观期权对冲、股票特定因子暴露与宏观市场动荡，解释伽马挤压事件中的内生波动率放大；通过显式建模做市商delta中性对冲并纳入β依赖的波动率归一化，推导伽马挤压发生的稳定性条件，捕捉做市商对冲与价格变动的非线性递归反馈及自我强化动态。
+
+---
+
+### [基于自适应决斗双深度Q网络与Mamba的Uniswap V3复制与扩展](https://arxiv.org/abs/2511.22101v1)
+
+**日期**: 2025-12-01 | **作者**: Zhaofeng Zhang
+
+**标签**: `Reinforcement Learning` `Market Making` `Deep Learning` `Algorithmic Trading`
+
+论文首先完成了Uniswap V3自适应流动性提供深度强化学习论文的复制，涵盖Uniswap子图数据获取、实现细节及结果分析；随后提出结合Mamba与双深度Q网络（DDQN）并设计新奖励函数的改进模型，引入两个新基准对比，该模型理论支撑更强且部分测试表现更优。
+
+---
+
+### [GSpaRC：用于实时射频信道重建的高斯喷溅方法](https://arxiv.org/abs/2511.22793v1)
+
+**日期**: 2025-12-01 | **作者**: Bhavya Sai Nukapotula, Rishabh Tripathi, Seth Pregler et al.
+
+**标签**: `Deep Learning` `High Frequency`
+
+针对无线通信中信道状态信息（CSI）获取开销大且现有重建方法延迟较高的问题，提出GSpaRC算法，首次突破1ms延迟屏障并保持高精度；该算法采用带距离衰减等物理特征的轻量神经模型参数化3D高斯基元表示射频环境，通过等距投影模拟全向天线，自定义CUDA pipeline实现多维度并行处理以提升实时性。
+
+---
+
+### [基于单次概率前向传播和代码生成的贝叶斯神经网络加速执行](https://arxiv.org/abs/2511.23440v1)
+
+**日期**: 2025-12-01 | **作者**: Bernhard Klein, Falk Selker, Hendrik Borras et al.
+
+**标签**: `Deep Learning` `Execution`
+
+该论文针对贝叶斯神经网络（BNN）因多次采样导致计算成本高的问题，提出基于单次概率前向传播（PFP）的方法——假设权重和激活为高斯分布，用单次确定性前向传播替代随机变分推断（SVI）的多次采样；结合TVM深度学习编译器实现端到端训练、编译优化及嵌入式ARM CPU部署 pipeline，实验表明PFP-BNN在小批量下最高可实现4200x加速，且在Dirty-MNIST任务的准确率、不确定性估计和OOD检测上与SVI-BNN相当。
+
+---
+
+### [桥接规划与执行：真实世界截止时间下的多智能体路径规划](https://arxiv.org/abs/2511.21886v1)
+
+**日期**: 2025-12-01 | **作者**: Jingtian Yan, Shuai Zhou, Stephen F. Smith et al.
+
+**标签**: `Execution` `Deep Learning` `Benchmark`
+
+现有多智能体路径规划（MAPF）多忽略执行时因素（如运动学约束、通信延迟），针对真实截止时间场景的差距，论文提出REMAP框架，通过ExecTimeNet准确估计路径执行时间，集成到MAPF-LNS、CBS等主流方法解决MAPF-RD问题，实验显示解质量提升最多20%。
 
 ---
 
