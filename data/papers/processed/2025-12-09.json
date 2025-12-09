@@ -1,0 +1,1583 @@
+[
+  {
+    "id": "2512.07787v1",
+    "title": "VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables",
+    "abstract": "We investigate the extremal aggregation behavior of Value-at-Risk (VaR) -- that is, its additivity properties across all probability levels -- for sums of one-sided random variables. For risks supported on \\([0,\\infty)\\), we show that VaR sub-additivity is impossible except in the degenerate case of exact additivity, which holds only under co-monotonicity. To characterize when VaR is instead fully super-additive, we introduce two structural conditions: negative simplex dependence (NSD) for the joint distribution and simplex dominance (SD) for a margin-dependent functional. Together, these conditions provide a unified and easily verifiable framework that accommodates non-identical margins, heavy-tailed laws, and a wide spectrum of negative dependence structures. All results extend to random variables with arbitrary finite lower or upper endpoints, yielding sharp constraints on when strict sub- or super-additivity can occur.",
+    "authors": [
+      "Nawaf Mohammed"
+    ],
+    "published": "2025-12-08",
+    "categories": [
+      "q-fin.RM",
+      "math.PR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.07787v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.07787v1",
+    "fetched_at": "2025-12-09T08:34:42.258636",
+    "chinese_title": "极端情况下的风险价值（VaR）：单边随机变量的不可能性与条件",
+    "chinese_summary": "该论文研究单边随机变量的VaR极端聚合行为（可加性）：首先证明非负风险的VaR次可加性仅在共单调退化情形成立，否则不可能；进而提出负单纯形依赖（NSD）和单纯形优势（SD）两个易验证的结构条件，统一刻画VaR完全超可加的情形，适配非同质边际、厚尾分布及广泛负依赖结构；结果还扩展到任意有限上下界的随机变量，明确严格次/超可加的约束。",
+    "tags": [
+      "Risk Management"
+    ],
+    "key_contributions": [
+      "揭示非负随机变量的VaR次可加性仅在共单调退化情形成立，否则不可能",
+      "提出NSD和SD两个易验证条件，统一刻画VaR完全超可加的情形，适配多种分布与依赖结构"
+    ],
+    "processed_at": "2025-12-09T08:37:55.503788"
+  },
+  {
+    "id": "2512.07555v1",
+    "title": "On the structure of increasing profits in a 1D general diffusion market with interest rates",
+    "abstract": "In this paper, we investigate a financial market model consisting of a risky asset, modeled as a general diffusion parameterized by a scale function and a speed measure, and a bank account process with a constant interest rate. This flexible class of financial market models allows for features such as reflecting boundaries, skewness effects, sticky points, and slowdowns on fractal sets. For this market model, we study the structure of a strong form of arbitrage opportunity called increasing profits. Our main contributions are threefold. First, we characterize the existence of increasing profits in terms of an auxiliary deterministic signed measure $ν$ and a canonical trading strategy $θ$, both of which depend only on the deterministic parametric characteristics of our model, namely the scale function, the speed measure, and the interest rate. More precisely, we show that an increasing profit exists if and only if $ν$ is nontrivial, and that this is equivalent to $θ$ itself generating an increasing profit. Second, we provide a precise characterization of the entire set of increasing profits in terms of $ν$ and $θ$, and moreover characterize the value processes associated with increasing profits. Finally, we establish novel connections between no-arbitrage theory and the general theory of stochastic processes. Specifically, we relate the failure of the representation property for general diffusions to the existence of certain types of increasing profits whose value processes are dominated by the quadratic variation measure of a space-transformed version of the asset price process.",
+    "authors": [
+      "Alexis Anagnostakis",
+      "David Criens",
+      "Mikhail Urusov"
+    ],
+    "published": "2025-12-08",
+    "categories": [
+      "q-fin.MF",
+      "math.PR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.07555v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.07555v1",
+    "fetched_at": "2025-12-09T08:34:42.258677",
+    "chinese_title": "带利率的一维一般扩散市场中递增利润的结构研究",
+    "chinese_summary": "本文构建带常数利率的一维一般扩散市场模型（风险资产由尺度函数与速度测度参数化），研究强套利机会“递增利润”的结构；核心贡献包括用辅助确定性符号测度ν和典型交易策略θ刻画其存在性及全体集合，还建立无套利理论与随机过程理论的新联系。",
+    "tags": [
+      "Asset Pricing",
+      "Portfolio Optimization",
+      "Risk Management"
+    ],
+    "key_contributions": [
+      "用辅助确定性符号测度ν和典型交易策略θ刻画递增利润的存在性（等价于ν非平凡且θ自身生成递增利润）",
+      "刻画全体递增利润集合及对应价值过程，并建立无套利理论与随机过程一般理论的新联系"
+    ],
+    "processed_at": "2025-12-09T08:38:11.177815"
+  },
+  {
+    "id": "2512.07526v1",
+    "title": "The Suicide Region: Option Games and the Race to Artificial General Intelligence",
+    "abstract": "Standard real options theory predicts delay in exercising the option to invest or deploy when extreme asset volatility or technological uncertainty are present. However, in the current race to develop artificial general intelligence (AGI), sovereign actors are exhibiting behaviors contrary to theoretical predictions: the US and China are accelerating AI investment despite acknowledging the potential for catastrophic failure from AGI misalignment. We resolve this puzzle by formalizing the AGI race as a continuous-time preemption game with endogenous existential risk. In our model, the cost of failure is no longer bounded only by the sunk cost of investment (I), but rather a systemic ruin parameter (D) that is correlated with development velocity and shared globally. As the disutility of catastrophe is embedded in both players' payoffs, the risk term mathematically cancels out of the equilibrium indifference condition. This creates a \"suicide region\" in the investment space where competitive pressures force rational agents to deploy AGI systems early, despite a negative risk-adjusted net present value. Furthermore, we show that \"warning shots\" (sub-existential disasters) will fail to deter AGI acceleration, as the winner-takes-all nature of the race remains intact. The race can only be halted if the cost of ruin is internalized, making safety research a prerequisite for economic viability. We derive the critical private liability threshold required to restore the option value of waiting and propose mechanism design interventions that can better ensure safe AGI research and socially responsible deployment.",
+    "authors": [
+      "David Tan"
+    ],
+    "published": "2025-12-08",
+    "categories": [
+      "q-fin.RM",
+      "econ.GN",
+      "q-fin.GN"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.07526v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.07526v1",
+    "fetched_at": "2025-12-09T08:34:42.258699",
+    "chinese_title": "自杀区域：期权博弈与通用人工智能竞赛",
+    "chinese_summary": "论文将通用人工智能（AGI）竞赛建模为含内生存在风险的连续时间抢占博弈，解决了各国加速AGI投资（尽管承认潜在灾难）与标准实物期权理论预测延迟的矛盾；发现竞争压力会形成“自杀区域”（迫使理性主体提前部署负风险调整净现值的AGI），且“警告事件”无法阻止加速，仅当灾难成本内部化（安全研究为经济前提）才能终止竞赛。",
+    "tags": [
+      "Options",
+      "Risk Management",
+      "Asset Pricing"
+    ],
+    "key_contributions": [
+      "构建带内生存在风险的连续时间抢占博弈模型，解释AGI竞赛中各国加速投资与标准实物期权理论的矛盾",
+      "揭示AGI竞赛中的“自杀区域”及警告事件无法 deter 的规律，提出需内部化灾难成本（安全研究为经济前提）才能终止竞赛"
+    ],
+    "processed_at": "2025-12-09T08:38:25.231158"
+  },
+  {
+    "id": "2512.07162v1",
+    "title": "DeepSVM: Learning Stochastic Volatility Models with Physics-Informed Deep Operator Networks",
+    "abstract": "Real-time calibration of stochastic volatility models (SVMs) is computationally bottlenecked by the need to repeatedly solve coupled partial differential equations (PDEs). In this work, we propose DeepSVM, a physics-informed Deep Operator Network (PI-DeepONet) designed to learn the solution operator of the Heston model across its entire parameter space. Unlike standard data-driven deep learning (DL) approaches, DeepSVM requires no labelled training data. Rather, we employ a hard-constrained ansatz that enforces terminal payoffs and static no-arbitrage conditions by design. Furthermore, we use Residual-based Adaptive Refinement (RAR) to stabilize training in difficult regions subject to high gradients. Overall, DeepSVM achieves a final training loss of $10^{-5}$ and predicts highly accurate option prices across a range of typical market dynamics. While pricing accuracy is high, we find that the model's derivatives (Greeks) exhibit noise in the at-the-money (ATM) regime, highlighting the specific need for higher-order regularization in physics-informed operator learning.",
+    "authors": [
+      "Kieran A. Malandain",
+      "Selim Kalici",
+      "Hakob Chakhoyan"
+    ],
+    "published": "2025-12-08",
+    "categories": [
+      "q-fin.CP",
+      "cs.LG",
+      "stat.ML"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.07162v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.07162v1",
+    "fetched_at": "2025-12-09T08:34:42.258723",
+    "chinese_title": "DeepSVM：基于物理信息深度算子网络的随机波动率模型学习",
+    "chinese_summary": "针对随机波动率模型实时校准需反复解耦合偏微分方程的计算瓶颈，论文提出DeepSVM——一种物理信息深度算子网络，学习Heston模型全参数空间的解算子；DeepSVM无需标注训练数据，采用硬约束ansatz满足终端收益与静态无套利条件，结合残差自适应细化稳定高梯度区域训练，实现高定价精度但ATM区域希腊字母存在噪声。",
+    "tags": [
+      "Deep Learning",
+      "Volatility",
+      "Options",
+      "Asset Pricing"
+    ],
+    "key_contributions": [
+      "提出物理信息深度算子网络DeepSVM，无需标注数据即可学习Heston模型全参数空间的解算子，突破随机波动率模型实时校准的计算瓶颈",
+      "采用硬约束ansatz强制终端收益与无套利条件，结合残差自适应细化稳定训练，实现高期权定价精度并指出ATM区域希腊字母噪声需高阶正则化的问题"
+    ],
+    "processed_at": "2025-12-09T08:38:41.585939"
+  },
+  {
+    "id": "2512.07154v1",
+    "title": "Asian option valuation under price impact",
+    "abstract": "We study the valuation of Asian options in a binomial market with permanent price impact, extending the Cox-Ross-Rubinstein framework under a modified risk-neutral probability. We obtain an exact pathwise representation for geometric Asian options and derive two-sided bounds for arithmetic Asian options. Our analysis identifies the no-arbitrage region in terms of hedging volumes and shows that permanent price impact systematically raises Asian option prices. Numerical examples illustrate the effect of the impact parameter and hedging volumes on the resulting prices.",
+    "authors": [
+      "Priyanshu Tiwari",
+      "Sourav Majumdar"
+    ],
+    "published": "2025-12-08",
+    "categories": [
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.07154v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.07154v1",
+    "fetched_at": "2025-12-09T08:34:42.258742",
+    "chinese_title": "价格冲击下的亚式期权定价",
+    "chinese_summary": "本文在存在永久价格冲击的二项式市场中，扩展Cox-Ross-Rubinstein框架（采用修正风险中性概率）研究亚式期权定价，得到几何亚式期权的精确路径表示及算术亚式期权的双边边界；识别对冲量的无套利区域，发现永久价格冲击系统性提升亚式期权价格，并用数值例子验证冲击参数与对冲量的影响。",
+    "tags": [
+      "Asset Pricing",
+      "Options",
+      "Market Microstructure"
+    ],
+    "key_contributions": [
+      "在永久价格冲击的二项式市场中扩展Cox-Ross-Rubinstein框架（修正风险中性概率），得到几何亚式期权精确路径表示及算术亚式期权双边边界",
+      "识别对冲量无套利区域，发现永久价格冲击系统性提升亚式期权价格，并用数值例子验证冲击参数与对冲量的影响"
+    ],
+    "processed_at": "2025-12-09T08:38:56.584706"
+  },
+  {
+    "id": "2512.06639v1",
+    "title": "Learning to Hedge Swaptions",
+    "abstract": "This paper investigates the deep hedging framework, based on reinforcement learning (RL), for the dynamic hedging of swaptions, contrasting its performance with traditional sensitivity-based rho-hedging. We design agents under three distinct objective functions (mean squared error, downside risk, and Conditional Value-at-Risk) to capture alternative risk preferences and evaluate how these objectives shape hedging styles. Relying on a three-factor arbitrage-free dynamic Nelson-Siegel model for our simulation experiments, our findings show that near-optimal hedging effectiveness is achieved when using two swaps as hedging instruments. Deep hedging strategies dynamically adapt the hedging portfolio's exposure to risk factors across states of the market. In our experiments, their out-performance over rho-hedging strategies persists even in the presence some of model misspecification. These results highlight RL's potential to deliver more efficient and resilient swaption hedging strategies.",
+    "authors": [
+      "Zaniar Ahmadi",
+      "Frédéric Godin"
+    ],
+    "published": "2025-12-07",
+    "categories": [
+      "q-fin.RM",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.06639v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.06639v1",
+    "fetched_at": "2025-12-09T08:34:42.258761",
+    "chinese_title": "学习对冲掉期期权",
+    "chinese_summary": "本文研究基于强化学习的深度对冲框架用于掉期期权的动态对冲，对比传统基于敏感度的rho对冲策略；设计三类对应不同风险偏好（均方误差、下行风险、条件风险价值）的智能体，通过三因子无套利动态Nelson-Siegel模型模拟发现，深度对冲策略用两个互换即可实现近最优对冲效果，且在模型误设下仍优于传统策略。",
+    "tags": [
+      "Reinforcement Learning",
+      "Risk Management",
+      "Options",
+      "Factor Model"
+    ],
+    "key_contributions": [
+      "构建基于强化学习的掉期期权动态对冲框架，设计三类不同风险偏好的智能体并对比传统rho对冲策略",
+      "验证深度对冲策略用两个互换即可实现近最优效果，且在模型误设下仍优于传统策略，凸显强化学习在掉期期权对冲中的潜力"
+    ],
+    "processed_at": "2025-12-09T08:39:12.711074"
+  },
+  {
+    "id": "2512.06620v1",
+    "title": "Unveiling Hedge Funds: Topic Modeling and Sentiment Correlation with Fund Performance",
+    "abstract": "The hedge fund industry presents significant challenges for investors due to its opacity and limited disclosure requirements. This pioneering study introduces two major innovations in financial text analysis. First, we apply topic modeling to hedge fund documents-an unexplored domain for automated text analysis-using a unique dataset of over 35,000 documents from 1,125 hedge fund managers. We compared three state-of-the-art methods: Latent Dirichlet Allocation (LDA), Top2Vec, and BERTopic. Our findings reveal that LDA with 20 topics produces the most interpretable results for human users and demonstrates higher robustness in topic assignments when the number of topics varies, while Top2Vec shows superior classification performance. Second, we establish a novel quantitative framework linking document sentiment to fund performance, transforming qualitative information traditionally requiring expert interpretation into systematic investment signals. In sentiment analysis, contrary to expectations, the general-purpose DistilBERT outperforms the finance-specific FinBERT in generating sentiment scores, demonstrating superior adaptability to diverse linguistic patterns found in hedge fund documents that extend beyond specialized financial news text. Furthermore, sentiment scores derived using DistilBERT in combination with Top2Vec show stronger correlations with subsequent fund performance compared to other model combinations. These results demonstrate that automated topic modeling and sentiment analysis can effectively process hedge fund documents, providing investors with new data-driven decision support tools.",
+    "authors": [
+      "Chang Liu"
+    ],
+    "published": "2025-12-07",
+    "categories": [
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.06620v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.06620v1",
+    "fetched_at": "2025-12-09T08:34:42.258779",
+    "chinese_title": "揭开对冲基金的面纱：主题建模及情感与基金业绩的相关性",
+    "chinese_summary": "该研究针对对冲基金行业的不透明性，首先对比LDA、Top2Vec、BERTopic三种主题建模方法分析35000+对冲基金文档，发现20主题LDA最易解释且稳健，Top2Vec分类性能更优；其次建立情感与基金业绩的量化框架，证实通用DistilBERT比金融专用FinBERT表现更好，且其与Top2Vec结合的情感指标与后续基金业绩相关性更强。",
+    "tags": [
+      "NLP",
+      "Sentiment Analysis",
+      "Transformer",
+      "Investor Sentiment"
+    ],
+    "key_contributions": [
+      "首次系统应用主题建模方法分析对冲基金文档（未被自动化文本分析探索的领域），对比三种前沿方法得出LDA和Top2Vec的不同优势",
+      "构建情感与基金业绩的量化关联框架，发现通用DistilBERT优于金融专用FinBERT，且特定模型组合的情感指标与后续业绩相关性更强"
+    ],
+    "processed_at": "2025-12-09T08:39:27.402926"
+  },
+  {
+    "id": "2512.06550v1",
+    "title": "Market Reactions and Information Spillovers in Bank Mergers: A Multi-Method Analysis of the Japanese Banking Sector",
+    "abstract": "Major bank mergers and acquisitions (M&A) transform the financial market structure, but their valuation and spillover effects remain open to question. This study examines the market reaction to two M&A events: the 2005 creation of Mitsubishi UFJ Financial Group following the Financial Big Bang in Japan, and the 2018 merger involving Resona Holdings after the global financial crisis. The multi-method analysis in this research combines several distinct methods to explore these M&A events. An event study using the market model, the capital asset pricing model (CAPM), and the Fama-French three-factor model is implemented to estimate cumulative abnormal returns (CAR) for valuation purposes. Vector autoregression (VAR) models are used to test for Granger causality and map dynamic effects using impulse response functions (IRFs) to investigate spillovers. Propensity score matching (PSM) helps provide a causal estimate of the average treatment effect on the treated (ATT). The analysis detected a significant positive market reaction to the mergers. The findings also suggest the presence of prolonged positive spillovers to other banks, which may indicate a synergistic effect among Japanese banks. Combining these methods provides a unique perspective on M&A events in the Japanese banking sector, offering valuable insights for investors, managers, and regulators concerned with market efficiency and systemic stability",
+    "authors": [
+      "Haibo Wang",
+      "Takeshi Tsuyuguchi"
+    ],
+    "published": "2025-12-06",
+    "categories": [
+      "q-fin.CP",
+      "econ.EM",
+      "q-fin.PM",
+      "stat.AP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.06550v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.06550v1",
+    "fetched_at": "2025-12-09T08:34:42.258800",
+    "chinese_title": "银行并购中的市场反应与信息溢出：日本银行业的多方法分析",
+    "chinese_summary": "本研究聚焦日本银行业2005年三菱UFJ金融集团成立及2018年Resona控股并购事件，结合事件研究法（含市场模型、CAPM、Fama-French三因子模型）、VAR模型（格兰杰因果与脉冲响应）、倾向得分匹配（PSM）等多方法，发现并购引发显著正市场反应且对其他银行存在长期正溢出，为市场效率与系统稳定性相关主体提供参考。",
+    "tags": [
+      "Asset Pricing",
+      "Factor Model",
+      "Time Series",
+      "Risk Management"
+    ],
+    "key_contributions": [
+      "采用多方法（事件研究、VAR、PSM）系统分析日本银行业两次关键并购的市场反应与溢出效应",
+      "揭示并购引发显著正市场反应及对其他银行的长期正溢出，佐证日本银行业间协同效应"
+    ],
+    "processed_at": "2025-12-09T08:39:43.033534"
+  },
+  {
+    "id": "2512.06505v1",
+    "title": "Amortizing Perpetual Options",
+    "abstract": "In this work, we introduce amortizing perpetual options (AmPOs), a fungible variant of continuous-installment options suitable for exchange-based trading. Traditional installment options lapse when holders cease their payments, destroying fungibility across units of notional. AmPOs replace explicit installment payments and the need for lapsing logic with an implicit payment scheme via a deterministic decay in the claimable notional. This amortization ensures all units evolve identically, preserving fungibility. Under the Black-Scholes framework, AmPO valuation can be reduced to an equivalent vanilla perpetual American option on a dividend-paying asset. In this way, analytical expressions are possible for the exercise boundaries and risk-neutral valuations for calls and puts. These formulas and relations allow us to derive the Greeks and study comparative statics with respect to the amortization rate. Illustrative numerical case studies demonstrate how the amortization rate shapes option behavior and reveal the resulting tradeoffs in the effective volatility sensitivity.",
+    "authors": [
+      "Zachary Feinstein"
+    ],
+    "published": "2025-12-06",
+    "categories": [
+      "q-fin.PR",
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.06505v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.06505v1",
+    "fetched_at": "2025-12-09T08:34:42.258818",
+    "chinese_title": "摊销型永续期权",
+    "chinese_summary": "本文引入摊销型永续期权（AmPOs），通过隐含的名义金额衰减机制替代传统分期期权的显式支付与失效逻辑，保持期权单位的可互换性；在Black-Scholes框架下将其估值转化为带股息资产的普通永续美式期权，推导了解析解、希腊字母及摊销率的比较静态分析，案例展示摊销率对期权行为的影响。",
+    "tags": [
+      "Options",
+      "Asset Pricing",
+      "Volatility"
+    ],
+    "key_contributions": [
+      "提出摊销型永续期权（AmPOs），通过隐含名义金额衰减解决传统分期期权的不可互换性问题，适配交易所交易",
+      "在Black-Scholes框架下将AmPOs估值转化为带股息资产的普通永续美式期权，推导解析解、希腊字母及摊销率的比较静态分析"
+    ],
+    "processed_at": "2025-12-09T08:39:54.058875"
+  },
+  {
+    "id": "2512.06473v1",
+    "title": "Detrended cross-correlations and their random matrix limit: an example from the cryptocurrency market",
+    "abstract": "Correlations in complex systems are often obscured by nonstationarity, long-range memory, and heavy-tailed fluctuations, which limit the usefulness of traditional covariance-based analyses. To address these challenges, we construct scale and fluctuation-dependent correlation matrices using the multifractal detrended cross-correlation coefficient $ρ_r$ that selectively emphasizes fluctuations of different amplitudes. We examine the spectral properties of these detrended correlation matrices and compare them to the spectral properties of the matrices calculated in the same way from synthetic Gaussian and $q$Gaussian signals. Our results show that detrending, heavy tails, and the fluctuation-order parameter $r$ jointly produce spectra, which substantially depart from the random case even under absence of cross-correlations in time series. Applying this framework to one-minute returns of 140 major cryptocurrencies from 2021-2024 reveals robust collective modes, including a dominant market factor and several sectoral components whose strength depends on the analyzed scale and fluctuation order. After filtering out the market mode, the empirical eigenvalue bulk aligns closely with the limit of random detrended cross-correlations, enabling clear identification of structurally significant outliers. Overall, the study provides a refined spectral baseline for detrended cross-correlations and offers a promising tool for distinguishing genuine interdependencies from noise in complex, nonstationary, heavy-tailed systems.",
+    "authors": [
+      "Stanisław Drożdż",
+      "Paweł Jarosz",
+      "Jarosław Kwapień",
+      "Maria Skupień",
+      "Marcin Wątorek"
+    ],
+    "published": "2025-12-06",
+    "categories": [
+      "q-fin.ST",
+      "cs.CE",
+      "physics.data-an",
+      "stat.AP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.06473v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.06473v1",
+    "fetched_at": "2025-12-09T08:34:42.258845",
+    "chinese_title": "去趋势交叉相关性及其随机矩阵极限：来自加密货币市场的示例",
+    "chinese_summary": "论文用多重分形去趋势交叉相关系数ρ_r构建尺度和波动依赖的相关矩阵，对比其谱特性与随机矩阵（高斯、q高斯信号）；应用于140种加密货币2021-2024年1分钟回报，识别集体模式，过滤市场因子后实证谱与随机去趋势交叉相关极限对齐，可区分真实依赖与噪声。",
+    "tags": [
+      "Time Series",
+      "Factor Model",
+      "High Frequency",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "揭示去趋势、重尾及波动阶数r共同导致去趋势交叉相关矩阵谱偏离随机情况的机制",
+      "提出基于随机矩阵极限的基准，可有效识别加密货币高频数据中的真实集体依赖模式与噪声异常值"
+    ],
+    "processed_at": "2025-12-09T08:40:04.316659"
+  },
+  {
+    "id": "2512.06420v1",
+    "title": "Thermodynamic description of world GDP distribution over countries",
+    "abstract": "We apply the concept of Rayleigh-Jeans thermalization of classical fields for a description of the world Gross Domestic Product (GDP) distribution over countries. The thermalization appears due to a variety of interactions between countries with conservation of two integrals being total GDP and probability (norm). In such a case there is an emergence of Rayleigh-Jeans condensation at states with low GDP. This phenomenon has been studied theoretically and experimentally in multimode optical fibers and we argue that it is at the origin of emergence of poverty and oligarchic phases for GDP of countries. A similar phenomenon has been discussed recently in the framework of the Wealth Thermalization Hypothesis to explain the high inequality of wealth distribution in human society and companies at Stock Exchange markets. We show that the Rayleigh-Jeans thermalization well describes the GDP distribution during the last 50 years.",
+    "authors": [
+      "Klaus M. Frahm",
+      "Dima L. Shepelyansky"
+    ],
+    "published": "2025-12-06",
+    "categories": [
+      "cond-mat.stat-mech",
+      "physics.soc-ph",
+      "q-fin.ST"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.06420v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.06420v1",
+    "fetched_at": "2025-12-09T08:34:42.258864",
+    "chinese_title": "世界各国GDP分布的热力学描述",
+    "chinese_summary": "论文将经典场的瑞利-金斯热平衡概念应用于世界各国GDP分布的分析，指出国家间相互作用及总GDP、概率守恒导致的瑞利-金斯凝聚现象是贫困与寡头阶段出现的根源，且该模型能有效拟合过去50年的GDP分布。",
+    "tags": [
+      "Behavioral Finance",
+      "Factor Mining"
+    ],
+    "key_contributions": [
+      "将经典场的瑞利-金斯热平衡概念引入世界各国GDP分布的分析，建立热力学描述框架",
+      "揭示瑞利-金斯凝聚现象是贫困与寡头阶段出现的根源，且模型可拟合过去50年GDP分布"
+    ],
+    "processed_at": "2025-12-09T08:40:26.966982"
+  },
+  {
+    "id": "2512.06309v1",
+    "title": "Wealth or Stealth? The Camouflage Effect in Insider Trading",
+    "abstract": "We consider a Kyle-type model where insider trading takes place among a potentially large population of liquidity traders and is subject to legal penalties. Insiders exploit the liquidity provided by the trading masses to \"camouflage\" their actions and balance expected wealth with the necessary stealth to avoid detection. Under a diverse spectrum of prosecution schemes, we establish the existence of equilibria for arbitrary population sizes and a unique limiting equilibrium. A convergence analysis determines the scale of insider trading by a stealth index $γ$, revealing that the equilibrium can be closely approximated by a simple limit due to diminished price informativeness. Empirical aspects are derived from two calibration experiments using non-overlapping data sets spanning from 1980 to 2018, which underline the indispensable role of a large population in insider trading models with legal risk, along with important implications for the incidence of stealth trading and the deterrent effect of legal enforcement.",
+    "authors": [
+      "Jin Ma",
+      "Weixuan Xia",
+      "Jianfeng Zhang"
+    ],
+    "published": "2025-12-06",
+    "categories": [
+      "econ.GN",
+      "q-fin.TR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.06309v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.06309v1",
+    "fetched_at": "2025-12-09T08:34:42.258890",
+    "chinese_title": "财富还是隐蔽？内幕交易中的伪装效应",
+    "chinese_summary": "本文基于Kyle模型研究面临法律处罚的内幕交易，内幕者需平衡财富积累与隐蔽性以避免被发现；证明任意交易者规模下均衡存在及唯一极限均衡，并用隐蔽指数γ刻画交易规模；通过1980-2018年实证校准，强调大群体在模型中的必要性及法律执法的威慑影响。",
+    "tags": [
+      "Market Microstructure",
+      "Anomaly",
+      "Asset Pricing"
+    ],
+    "key_contributions": [
+      "基于Kyle模型，考虑法律处罚下的内幕交易，证明任意交易者规模均衡存在及唯一极限均衡，提出隐蔽指数γ刻画交易规模",
+      "通过1980-2018年实证校准，验证大群体对内幕交易模型的必要性，揭示执法威慑的影响"
+    ],
+    "processed_at": "2025-12-09T08:40:44.252231"
+  },
+  {
+    "id": "2512.06203v1",
+    "title": "Formal State-Machine Models for Uniswap v3 Concentrated-Liquidity AMMs: Priced Timed Automata, Finite-State Transducers, and Provable Rounding Bounds",
+    "abstract": "Concentrated-liquidity automated market makers (CLAMMs), as exemplified by Uniswap v3, are now a common primitive in decentralized finance frameworks. Their design combines continuous trading on constant-function curves with discrete tick boundaries at which liquidity positions change and rounding effects accumulate. While there is a body of economic and game-theoretic analysis of CLAMMs, there is negligible work that treats Uniswap v3 at the level of formal state machines amenable to model checking or theorem proving.   In this paper we propose a formal modeling approach for Uniswap v3-style CLAMMs using (i) networks of priced timed automata (PTA), and (ii) finite-state transducers (FST) over discrete ticks. Positions are treated as stateful objects that transition only when the pool price crosses the ticks that bound their active range. We show how to encode the piecewise constant-product invariant, fee-growth variables, and tick-crossing rules in a PTA suitable for tools such as UPPAAL, and how to derive a tick-level FST abstraction for specification in TLA+.   We define an explicit tick-wise invariant for a discretized, single-tick CLAMM model and prove that it is preserved up to a tight additive rounding bound under fee-free swaps. This provides a formal justification for the \"$ε$-slack\" used in invariance properties and shows how rounding enters as a controlled perturbation. We then instantiate these models in TLA+ and use TLC to exhaustively check the resulting invariants on structurally faithful instances, including a three-tick concentrated-liquidity configuration and a bounded no-rounding-only-arbitrage property in a bidirectional single-tick model. We discuss how these constructions lift to the tick-wise structure of Uniswap v3 via virtual reserves, and how the resulting properties can be phrased as PTA/TLA+ invariants about cross-tick behaviour and rounding safety.",
+    "authors": [
+      "Julius Tranquilli",
+      "Naman Gupta"
+    ],
+    "published": "2025-12-05",
+    "categories": [
+      "cs.LO",
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.06203v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.06203v1",
+    "fetched_at": "2025-12-09T08:34:42.258912",
+    "chinese_title": "Uniswap v3集中流动性自动做市商的形式化状态机模型：定价时间自动机、有限状态转换器及可证明舍入边界",
+    "chinese_summary": "本文针对Uniswap v3集中流动性自动做市商（CLAMM），提出用定价时间自动机（PTA）和有限状态转换器（FST）的形式化建模方法，使模型可用于模型检查或定理证明；定义离散单tick模型的tick-wise不变量，证明其在无费用交换下受紧加性舍入边界约束，并通过TLA+与TLC工具验证该不变性。",
+    "tags": [
+      "Market Making",
+      "Algorithmic Trading",
+      "Market Microstructure"
+    ],
+    "key_contributions": [
+      "提出基于定价时间自动机（PTA）和有限状态转换器（FST）的Uniswap v3 CLAMM形式化建模方法，支持模型检查与定理证明",
+      "定义离散单tick模型的tick-wise不变量，证明其在无费用交换下的紧加性舍入边界，并通过TLA+工具验证"
+    ],
+    "processed_at": "2025-12-09T08:40:56.559606"
+  },
+  {
+    "id": "2512.06144v1",
+    "title": "Market Reactions to Material Cybersecurity Incident Disclosures",
+    "abstract": "This study examines short-term market responses to material cybersecurity incidents disclosed under Item 1.05 of Form 8-K. Drawing on a sample of disclosures made between 2023 and 2025, daily stock price movements were evaluated over a standardized event window surrounding each filing. On average, companies experienced negative price reactions following the disclosure of a material cybersecurity incident. Comparisons across company characteristics indicate that smaller companies tended to incur more pronounced declines, while differences by sector and beta were not evident. These findings offer empirical insight into how public markets interpret cybersecurity risks when they are formally reported and suggest that firm size may influence the degree of sensitivity to such events.",
+    "authors": [
+      "Maxwell Block"
+    ],
+    "published": "2025-12-05",
+    "categories": [
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.06144v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.06144v1",
+    "fetched_at": "2025-12-09T08:34:42.258930",
+    "chinese_title": "重大网络安全事件披露的市场反应",
+    "chinese_summary": "本研究以2023-2025年8-K表格1.05项披露的重大网络安全事件为样本，通过评估披露前后日股价变动分析短期市场反应；发现披露后公司平均股价负向反应，小公司跌幅更显著，行业与beta差异不明显，为市场对正式报告的网络安全风险解读提供实证依据。",
+    "tags": [
+      "Asset Pricing",
+      "Risk Management",
+      "Market Microstructure"
+    ],
+    "key_contributions": [
+      "实证验证2023-2025年重大网络安全事件披露后公司短期股价平均负向反应",
+      "揭示公司规模影响市场反应程度（小公司跌幅更显著），并指出行业与beta无明显差异"
+    ],
+    "processed_at": "2025-12-09T08:41:11.257005"
+  },
+  {
+    "id": "2512.05868v1",
+    "title": "Predicting Price Movements in High-Frequency Financial Data with Spiking Neural Networks",
+    "abstract": "Modern high-frequency trading (HFT) environments are characterized by sudden price spikes that present both risk and opportunity, but conventional financial models often fail to capture the required fine temporal structure. Spiking Neural Networks (SNNs) offer a biologically inspired framework well-suited to these challenges due to their natural ability to process discrete events and preserve millisecond-scale timing. This work investigates the application of SNNs to high-frequency price-spike forecasting, enhancing performance via robust hyperparameter tuning with Bayesian Optimization (BO). This work converts high-frequency stock data into spike trains and evaluates three architectures: an established unsupervised STDP-trained SNN, a novel SNN with explicit inhibitory competition, and a supervised backpropagation network. BO was driven by a novel objective, Penalized Spike Accuracy (PSA), designed to ensure a network's predicted price spike rate aligns with the empirical rate of price events. Simulated trading demonstrated that models optimized with PSA consistently outperformed their Spike Accuracy (SA)-tuned counterparts and baselines. Specifically, the extended SNN model with PSA achieved the highest cumulative return (76.8%) in simple backtesting, significantly surpassing the supervised alternative (42.54% return). These results validate the potential of spiking networks, when robustly tuned with task-specific objectives, for effective price spike forecasting in HFT.",
+    "authors": [
+      "Brian Ezinwoke",
+      "Oliver Rhodes"
+    ],
+    "published": "2025-12-05",
+    "categories": [
+      "cs.LG",
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.05868v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.05868v1",
+    "fetched_at": "2025-12-09T08:34:42.258950",
+    "chinese_title": "基于脉冲神经网络的高频金融数据价格波动预测",
+    "chinese_summary": "针对高频交易中常规模型难捕捉精细时间结构的问题，该研究采用脉冲神经网络（SNN）处理离散事件并保留毫秒级时序，通过贝叶斯优化结合惩罚性脉冲准确率（PSA）调参，对比三种SNN架构；模拟交易显示PSA优化的带抑制竞争SNN模型回测收益（76.8%）显著高于其他模型，验证了SNN结合任务特定调参的有效性。",
+    "tags": [
+      "High Frequency",
+      "Algorithmic Trading",
+      "Deep Learning",
+      "Anomaly"
+    ],
+    "key_contributions": [
+      "提出将脉冲神经网络（SNN）应用于高频价格 spike 预测，利用其离散事件处理和时序保留能力弥补常规模型不足",
+      "设计惩罚性脉冲准确率（PSA）作为贝叶斯优化目标，确保预测与实际事件率一致，显著提升回测收益"
+    ],
+    "processed_at": "2025-12-09T08:41:26.159506"
+  },
+  {
+    "id": "2512.05833v1",
+    "title": "Vague Knowledge: Information without Transitivity and Partitions",
+    "abstract": "I relax the standard assumptions of transitivity and partition structure in economic models of information to formalize vague knowledge: non-transitive indistinguishability over states. I show that vague knowledge, while failing to partition the state space, remains informative by distinguishing some states from others. Moreover, it can only be faithfully expressed through vague communication with blurred boundaries. My results provide microfoundations for the prevalence of natural language communication and qualitative reasoning in the real world, where knowledge is often vague.",
+    "authors": [
+      "Kerry Xiao"
+    ],
+    "published": "2025-12-05",
+    "categories": [
+      "econ.TH",
+      "cs.CL",
+      "math.LO",
+      "q-fin.GN"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.05833v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.05833v1",
+    "fetched_at": "2025-12-09T08:34:42.258968",
+    "chinese_title": "模糊知识：无传递性与划分结构的信息",
+    "chinese_summary": "该论文放松经济信息模型中传递性与划分结构的标准假设，形式化了状态间非传递不可区分的模糊知识；证明模糊知识虽不划分状态空间但仍具信息量，且仅能通过边界模糊的模糊沟通忠实表达，为现实中自然语言沟通和定性推理的普遍存在提供微观基础。",
+    "tags": [
+      "Behavioral Finance",
+      "NLP"
+    ],
+    "key_contributions": [
+      "放松经济信息模型的传递性与划分结构假设，形式化模糊知识（状态间非传递不可区分的信息）",
+      "证明模糊知识具信息量且仅能通过模糊沟通表达，为自然语言沟通和定性推理提供微观基础"
+    ],
+    "processed_at": "2025-12-09T08:41:46.598629"
+  },
+  {
+    "id": "2512.05661v1",
+    "title": "Standard and stressed value at risk forecasting using dynamic Bayesian networks",
+    "abstract": "This study introduces a dynamic Bayesian network (DBN) framework for forecasting value at risk (VaR) and stressed VaR (SVaR) and compares its performance to several commonly applied models. Using daily S&P 500 index returns from 1991 to 2020, we produce 10-day 99% VaR and SVaR forecasts using a rolling period and historical returns for the traditional models, while three DBNs use both historical and forecasted returns. We evaluate the models' forecasting accuracy using standard backtests and forecasting error measures. Results show that autoregressive models deliver the most accurate VaR forecasts, while the DBNs achieve comparable performance to the historical simulation model, despite incorporating forward-looking return forecasts. For SVaR, all models produce highly conservative forecasts, with minimal breaches and limited differentiation in accuracy. While DBNs do not outperform traditional models, they demonstrate feasibility as a forward-looking approach to provide a foundation for future research on integrating causal inference into financial risk forecasting.",
+    "authors": [
+      "Eden Gross",
+      "Ryan Kruger",
+      "Francois Toerien"
+    ],
+    "published": "2025-12-05",
+    "categories": [
+      "q-fin.RM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.05661v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.05661v1",
+    "fetched_at": "2025-12-09T08:34:42.258989",
+    "chinese_title": "使用动态贝叶斯网络预测标准和压力风险价值",
+    "chinese_summary": "本研究引入动态贝叶斯网络（DBN）框架预测风险价值（VaR）和压力风险价值（SVaR），并与常用模型对比；基于1991-2020年标普500日收益，采用滚动窗口生成10天99%VaR/SVaR预测，DBN整合历史与预测收益；结果显示自回归模型VaR预测最准，DBN与历史模拟模型性能相当，SVaR各模型均偏保守，DBN虽未超越传统模型但展示了前向视角可行性，为因果推断融入风险预测奠基。",
+    "tags": [
+      "Risk Management",
+      "Time Series",
+      "Graph Neural Network"
+    ],
+    "key_contributions": [
+      "提出动态贝叶斯网络（DBN）框架，整合历史与预测收益信息用于标准VaR和压力VaR（SVaR）预测",
+      "验证DBN作为前向视角方法的可行性，为后续因果推断融入金融风险预测提供基础"
+    ],
+    "processed_at": "2025-12-09T08:42:02.306723"
+  },
+  {
+    "id": "2512.05559v1",
+    "title": "A Unified AI System For Data Quality Control and DataOps Management in Regulated Environments",
+    "abstract": "In regulated domains such as finance, the integrity and governance of data pipelines are critical - yet existing systems treat data quality control (QC) as an isolated preprocessing step rather than a first-class system component. We present a unified AI-driven Data QC and DataOps Management framework that embeds rule-based, statistical, and AI-based QC methods into a continuous, governed layer spanning ingestion, model pipelines, and downstream applications. Our architecture integrates open-source tools with custom modules for profiling, audit logging, breach handling, configuration-driven policies, and dynamic remediation. We demonstrate deployment in a production-grade financial setup: handling streaming and tabular data across multiple asset classes and transaction streams, with configurable thresholds, cloud-native storage interfaces, and automated alerts. We show empirical gains in anomaly detection recall, reduction of manual remediation effort, and improved auditability and traceability in high-throughput data workflows. By treating QC as a system concern rather than an afterthought, our framework provides a foundation for trustworthy, scalable, and compliant AI pipelines in regulated environments.",
+    "authors": [
+      "Devender Saini",
+      "Bhavika Jain",
+      "Nitish Ujjwal",
+      "Philip Sommer",
+      "Dan Romuald Mbanga",
+      "Dhagash Mehta"
+    ],
+    "published": "2025-12-05",
+    "categories": [
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.05559v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.05559v1",
+    "fetched_at": "2025-12-09T08:34:42.259015",
+    "chinese_title": "面向监管环境的数据质量控制与DataOps管理统一AI系统",
+    "chinese_summary": "针对金融等监管领域现有数据质量控制（QC）多为孤立预处理步骤的问题，论文提出统一AI驱动的QC与DataOps管理框架，将规则、统计及AI-based QC方法嵌入数据全流程治理层；该框架在生产级金融场景验证，提升异常检测召回率、减少手动修复工作量，增强审计可追溯性，为可信合规AI pipeline提供基础。",
+    "tags": [
+      "Anomaly",
+      "Risk Management",
+      "Time Series"
+    ],
+    "key_contributions": [
+      "提出统一AI驱动的数据质量控制与DataOps管理框架，将QC嵌入数据全流程（数据 ingestion、模型 pipeline及下游应用）而非孤立预处理，整合规则、统计及AI-based多类QC方法",
+      "在生产级金融场景验证，实现异常检测召回率提升、手动修复工作量减少，增强审计可追溯性，为监管环境下可信合规AI pipeline奠定基础"
+    ],
+    "processed_at": "2025-12-09T08:42:24.445453"
+  },
+  {
+    "id": "2512.05326v1",
+    "title": "Convolution-FFT for option pricing in the Heston model",
+    "abstract": "We propose a convolution-FFT method for pricing European options under the Heston model that leverages a continuously differentiable representation of the joint characteristic function. Unlike existing Fourier-based methods that rely on branch-cut adjustments or empirically tuned damping parameters, our approach yields a stable integrand even under large frequency oscillations. Crucially, we derive fully analytical error bounds that quantify both truncation error and discretization error in terms of model parameters and grid settings. To the best of our knowledge, this is the first work to provide such explicit, closed-form error estimates for an FFT-based convolution method specialized to the Heston model. Numerical experiments confirm the theoretical rates and illustrate robust, high-accuracy option pricing at modest computational cost.",
+    "authors": [
+      "Xiang Gao",
+      "Cody Hyndman"
+    ],
+    "published": "2025-12-05",
+    "categories": [
+      "q-fin.CP",
+      "math.NA",
+      "math.PR",
+      "q-fin.PR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.05326v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.05326v1",
+    "fetched_at": "2025-12-09T08:34:42.259055",
+    "chinese_title": "用于Heston模型下期权定价的卷积-FFT方法",
+    "chinese_summary": "论文提出基于连续可微联合特征函数的卷积-FFT方法，用于Heston模型下欧式期权定价，无需分支切割调整或经验阻尼参数即可保证积分稳定性；首次针对该模型的FFT卷积方法推导显式闭式截断与离散误差界，数值实验验证理论速率及高效高精度定价特性。",
+    "tags": [
+      "Asset Pricing",
+      "Options",
+      "Volatility",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "首次推导Heston模型FFT卷积方法的显式闭式截断与离散误差界"
+    ],
+    "processed_at": "2025-12-09T08:42:33.574102"
+  },
+  {
+    "id": "2512.05301v1",
+    "title": "Differential ML with a Difference",
+    "abstract": "Differential ML (Huge and Savine 2020) is a technique for training neural networks to provide fast approximations to complex simulation-based models for derivatives pricing and risk management. It uses price sensitivities calculated through pathwise adjoint differentiation to reduce pricing and hedging errors. However, for options with discontinuous payoffs, such as digital or barrier options, the pathwise sensitivities are biased, and incorporating them into the loss function can magnify errors. We consider alternative methods for estimating sensitivities and find that they can substantially reduce test errors in prices and in their sensitivities. Using differential labels calculated through the likelihood ratio method expands the scope of Differential ML to discontinuous payoffs. A hybrid method incorporates gamma estimates as well as delta estimates, providing further regularization.",
+    "authors": [
+      "Paul Glasserman",
+      "Siddharth Hemant Karmarkar"
+    ],
+    "published": "2025-12-04",
+    "categories": [
+      "q-fin.PR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.05301v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.05301v1",
+    "fetched_at": "2025-12-09T08:34:42.259076",
+    "chinese_title": "带差异的微分机器学习",
+    "chinese_summary": "微分机器学习（Huge和Savine 2020）用于近似衍生品定价模拟模型，但对不连续payoff期权（如数字、障碍期权）的路径敏感度有偏，会放大误差；论文提出似然比法等替代敏感度估计方法，大幅降低定价及敏感度测试误差，混合方法结合gamma/delta估计进一步正则化，扩展了该方法的适用范围。",
+    "tags": [
+      "Options",
+      "Risk Management",
+      "Deep Learning",
+      "Asset Pricing"
+    ],
+    "key_contributions": [
+      "提出似然比法等替代敏感度估计方法，解决微分ML在不连续payoff期权中路径敏感度有偏的问题，大幅降低定价及敏感度误差",
+      "提出混合方法结合gamma和delta估计进一步正则化，扩展微分ML到不连续payoff期权的适用范围"
+    ],
+    "processed_at": "2025-12-09T08:42:47.662798"
+  },
+  {
+    "id": "2512.05156v2",
+    "title": "Semantic Faithfulness and Entropy Production Measures to Tame Your LLM Demons and Manage Hallucinations",
+    "abstract": "Evaluating faithfulness of Large Language Models (LLMs) to a given task is a complex challenge. We propose two new unsupervised metrics for faithfulness evaluation using insights from information theory and thermodynamics. Our approach treats an LLM as a bipartite information engine where hidden layers act as a Maxwell demon controlling transformations of context $C $ into answer $A$ via prompt $Q$. We model Question-Context-Answer (QCA) triplets as probability distributions over shared topics. Topic transformations from $C$ to $Q$ and $A$ are modeled as transition matrices ${\\bf Q}$ and ${\\bf A}$ encoding the query goal and actual result, respectively. Our semantic faithfulness (SF) metric quantifies faithfulness for any given QCA triplet by the Kullback-Leibler (KL) divergence between these matrices. Both matrices are inferred simultaneously via convex optimization of this KL divergence, and the final SF metric is obtained by mapping the minimal divergence onto the unit interval [0,1], where higher scores indicate greater faithfulness. Furthermore, we propose a thermodynamics-based semantic entropy production (SEP) metric in answer generation, and show that high faithfulness generally implies low entropy production. The SF and SEP metrics can be used jointly or separately for LLM evaluation and hallucination control. We demonstrate our framework on LLM summarization of corporate SEC 10-K filings.",
+    "authors": [
+      "Igor Halperin"
+    ],
+    "published": "2025-12-04",
+    "categories": [
+      "cs.AI",
+      "cs.CL",
+      "cs.IT",
+      "cs.LG",
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.05156v2",
+    "arxiv_url": "https://arxiv.org/abs/2512.05156v2",
+    "fetched_at": "2025-12-09T08:34:42.259180",
+    "chinese_title": "语义忠实度与熵产生度量：驯服大语言模型幻觉的方法",
+    "chinese_summary": "论文提出基于信息论和热力学的两个无监督度量（语义忠实度SF与语义熵产生SEP），将LLM视为二分信息引擎，通过建模QCA三元组的话题转换（KL散度等）量化忠实度；SF为0-1区间分数，SEP关联熵产生与忠实度，可用于LLM评估及幻觉控制，在SEC 10-K文件摘要任务中验证有效。",
+    "tags": [
+      "LLM",
+      "NLP",
+      "Deep Learning",
+      "Transformer"
+    ],
+    "key_contributions": [
+      "提出语义忠实度（SF）与语义熵产生（SEP）两个无监督度量，从信息论和热力学视角评估LLM的任务忠实度",
+      "构建QCA三元组的话题转换模型，通过KL散度和凸优化计算SF（映射至0-1区间），验证高忠实度对应低熵产生，可用于LLM幻觉控制"
+    ],
+    "processed_at": "2025-12-09T08:43:05.022163"
+  },
+  {
+    "id": "2512.07827v1",
+    "title": "An Adaptive Multi-Layered Honeynet Architecture for Threat Behavior Analysis via Deep Learning",
+    "abstract": "The escalating sophistication and variety of cyber threats have rendered static honeypots inadequate, necessitating adaptive, intelligence-driven deception. In this work, ADLAH is introduced: an Adaptive Deep Learning Anomaly Detection Honeynet designed to maximize high-fidelity threat intelligence while minimizing cost through autonomous orchestration of infrastructure. The principal contribution is offered as an end-to-end architectural blueprint and vision for an AI-driven deception platform. Feasibility is evidenced by a functional prototype of the central decision mechanism, in which a reinforcement learning (RL) agent determines, in real time, when sessions should be escalated from low-interaction sensor nodes to dynamically provisioned, high-interaction honeypots. Because sufficient live data were unavailable, field-scale validation is not claimed; instead, design trade-offs and limitations are detailed, and a rigorous roadmap toward empirical evaluation at scale is provided. Beyond selective escalation and anomaly detection, the architecture pursues automated extraction, clustering, and versioning of bot attack chains, a core capability motivated by the empirical observation that exposed services are dominated by automated traffic. Together, these elements delineate a practical path toward cost-efficient capture of high-value adversary behavior, systematic bot versioning, and the production of actionable threat intelligence.",
+    "authors": [
+      "Lukas Johannes Möller"
+    ],
+    "published": "2025-12-08",
+    "categories": [
+      "cs.CR",
+      "cs.DC",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.07827v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.07827v1",
+    "fetched_at": "2025-12-09T08:34:55.254261",
+    "chinese_title": "基于深度学习的自适应多层蜜网架构用于威胁行为分析",
+    "chinese_summary": "论文提出自适应深度学习异常检测蜜网（ADLAH），通过强化学习代理实时决定会话是否从低交互传感器节点升级到动态配置的高交互蜜罐，以最大化高保真威胁情报并最小化成本；同时实现bot攻击链的自动提取、聚类和版本控制，为高效捕获高价值对手行为及生成可操作威胁情报提供实用路径。",
+    "tags": [
+      "Deep Learning",
+      "Reinforcement Learning",
+      "Anomaly"
+    ],
+    "key_contributions": [
+      "提出端到端AI驱动欺骗平台架构ADLAH，通过强化学习实时动态编排基础设施实现成本高效的威胁情报捕获",
+      "实现bot攻击链的自动提取、聚类与版本控制，针对自动化流量主导的暴露服务提供核心能力"
+    ],
+    "processed_at": "2025-12-09T08:43:13.964525"
+  },
+  {
+    "id": "2512.07569v1",
+    "title": "Weighted Contrastive Learning for Anomaly-Aware Time-Series Forecasting",
+    "abstract": "Reliable forecasting of multivariate time series under anomalous conditions is crucial in applications such as ATM cash logistics, where sudden demand shifts can disrupt operations. Modern deep forecasters achieve high accuracy on normal data but often fail when distribution shifts occur. We propose Weighted Contrastive Adaptation (WECA), a Weighted contrastive objective that aligns normal and anomaly-augmented representations, preserving anomaly-relevant information while maintaining consistency under benign variations. Evaluations on a nationwide ATM transaction dataset with domain-informed anomaly injection show that WECA improves SMAPE on anomaly-affected data by 6.1 percentage points compared to a normally trained baseline, with negligible degradation on normal data. These results demonstrate that WECA enhances forecasting reliability under anomalies without sacrificing performance during regular operations.",
+    "authors": [
+      "Joel Ekstrand",
+      "Tor Mattsson",
+      "Zahra Taghiyarrenani",
+      "Slawomir Nowaczyk",
+      "Jens Lundström",
+      "Mikael Lindén"
+    ],
+    "published": "2025-12-08",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.07569v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.07569v1",
+    "fetched_at": "2025-12-09T08:34:55.254299",
+    "chinese_title": "用于异常感知时间序列预测的加权对比学习",
+    "chinese_summary": "针对多元时间序列在异常条件下预测不可靠的问题（如ATM现金物流需求突变），论文提出加权对比适应方法（WECA），通过对齐正常与异常增强表示，既保留异常相关信息又维持良性变化下的一致性；在全国ATM交易数据集（含领域知情异常注入）上验证，相比正常训练基线，异常影响数据的SMAPE提升6.1个百分点，正常数据性能几乎无下降，增强了异常下预测可靠性且不牺牲常规性能。",
+    "tags": [
+      "Anomaly",
+      "Deep Learning",
+      "Time Series",
+      "Risk Management"
+    ],
+    "key_contributions": [
+      "提出加权对比适应方法（WECA），平衡异常信息保留与良性变化一致性，实现异常感知的时间序列预测",
+      "在ATM交易数据集验证，显著提升异常影响数据预测精度（SMAPE降6.1pct）且正常数据性能无明显下降，增强预测可靠性"
+    ],
+    "processed_at": "2025-12-09T08:43:24.043660"
+  },
+  {
+    "id": "2512.07515v1",
+    "title": "SPAD: Seven-Source Token Probability Attribution with Syntactic Aggregation for Detecting Hallucinations in RAG",
+    "abstract": "Detecting hallucinations in Retrieval-Augmented Generation (RAG) remains a challenge. Prior approaches attribute hallucinations to a binary conflict between internal knowledge (stored in FFNs) and retrieved context. However, this perspective is incomplete, failing to account for the impact of other components in the generative process, such as the user query, previously generated tokens, the current token itself, and the final LayerNorm adjustment. To address this, we introduce SPAD. First, we mathematically attribute each token's probability into seven distinct sources: Query, RAG, Past, Current Token, FFN, Final LayerNorm, and Initial Embedding. This attribution quantifies how each source contributes to the generation of the current token. Then, we aggregate these scores by POS tags to quantify how different components drive specific linguistic categories. By identifying anomalies, such as Nouns relying on Final LayerNorm, SPAD effectively detects hallucinations. Extensive experiments demonstrate that SPAD achieves state-of-the-art performance",
+    "authors": [
+      "Pengqian Lu",
+      "Jie Lu",
+      "Anjin Liu",
+      "Guangquan Zhang"
+    ],
+    "published": "2025-12-08",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.07515v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.07515v1",
+    "fetched_at": "2025-12-09T08:34:55.254323",
+    "chinese_title": "SPAD：基于七源词概率归因与句法聚合的RAG幻觉检测方法",
+    "chinese_summary": "针对RAG幻觉检测中现有方法仅关注内部知识与检索上下文二元冲突的不足，本文提出SPAD：先将每个词的生成概率归因到查询、RAG等七个来源，量化各组件贡献；再按词性标签聚合分数，通过识别异常模式（如名词依赖最终LayerNorm）检测幻觉，实验达SOTA性能。",
+    "tags": [
+      "LLM",
+      "NLP",
+      "Anomaly",
+      "Transformer"
+    ],
+    "key_contributions": [
+      "首次将词生成概率归因到七个来源（查询、RAG等），弥补现有方法对生成过程多组件影响的忽略",
+      "通过词性聚合多源贡献分数，识别异常模式实现SOTA的RAG幻觉检测"
+    ],
+    "processed_at": "2025-12-09T08:43:37.942957"
+  },
+  {
+    "id": "2512.07122v1",
+    "title": "RisConFix: LLM-based Automated Repair of Risk-Prone Drone Configurations",
+    "abstract": "Flight control software is typically designed with numerous configurable parameters governing multiple functionalities, enabling flexible adaptation to mission diversity and environmental uncertainty. Although developers and manufacturers usually provide recommendations for these parameters to ensure safe and stable operations, certain combinations of parameters with recommended values may still lead to unstable flight behaviors, thereby degrading the drone's robustness. To this end, we propose a Large Language Model (LLM) based approach for real-time repair of risk-prone configurations (named RisConFix) that degrade drone robustness. RisConFix continuously monitors the drone's operational state and automatically triggers a repair mechanism once abnormal flight behaviors are detected. The repair mechanism leverages an LLM to analyze relationships between configuration parameters and flight states, and then generates corrective parameter updates to restore flight stability. To ensure the validity of the updated configuration, RisConFix operates as an iterative process; it continuously monitors the drone's flight state and, if an anomaly persists after applying an update, automatically triggers the next repair cycle. We evaluated RisConFix through a case study of ArduPilot (with 1,421 groups of misconfigurations). Experimental results show that RisConFix achieved a best repair success rate of 97% and an optimal average number of repairs of 1.17, demonstrating its capability to effectively and efficiently repair risk-prone configurations in real time.",
+    "authors": [
+      "Liping Han",
+      "Tingting Nie",
+      "Le Yu",
+      "Mingzhe Hu",
+      "Tao Yue"
+    ],
+    "published": "2025-12-08",
+    "categories": [
+      "cs.SE",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.07122v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.07122v1",
+    "fetched_at": "2025-12-09T08:34:55.254348",
+    "chinese_title": "RisConFix：基于大语言模型的易风险无人机配置自动修复",
+    "chinese_summary": "本文提出基于大语言模型（LLM）的易风险无人机配置自动修复方法RisConFix，通过持续监测飞行状态、检测异常后触发LLM分析参数与飞行状态关系并生成修正，迭代优化确保有效性；在ArduPilot的1421组错误配置案例中，该方法修复成功率达97%，平均修复次数仅1.17，验证了其高效性。",
+    "tags": [
+      "LLM",
+      "Anomaly",
+      "Risk Management"
+    ],
+    "key_contributions": [
+      "提出基于LLM的无人机易风险配置实时自动修复方法RisConFix，构建异常检测-参数修正-迭代验证的闭环机制",
+      "在ArduPilot大规模错误配置案例中验证，修复成功率达97%，平均修复次数低至1.17，展现高效修复能力"
+    ],
+    "processed_at": "2025-12-09T08:43:48.920703"
+  },
+  {
+    "id": "2512.06906v1",
+    "title": "MINES: Explainable Anomaly Detection through Web API Invariant Inference",
+    "abstract": "Detecting the anomalies of web applications, important infrastructures for running modern companies and governments, is crucial for providing reliable web services. Many modern web applications operate on web APIs (e.g., RESTful, SOAP, and WebSockets), their exposure invites intended attacks or unintended illegal visits, causing abnormal system behaviors. However, such anomalies can share very similar logs with normal logs, missing crucial information (which could be in database) for log discrimination. Further, log instances can be also noisy, which can further mislead the state-of-the-art log learning solutions to learn spurious correlation, resulting superficial models and rules for anomaly detection. In this work, we propose MINES which infers explainable API invariants for anomaly detection from the schema level instead of detailed raw log instances, which can (1) significantly discriminate noise in logs to identify precise normalities and (2) detect abnormal behaviors beyond the instrumented logs. Technically, MINES (1) converts API signatures into table schema to enhance the original database shema; and (2) infers the potential database constraints on the enhanced database schema to capture the potential relationships between APIs and database tables. MINES uses LLM for extracting potential relationship based on two given table structures; and use normal log instances to reject and accept LLM-generated invariants. Finally, MINES translates the inferred constraints into invariants to generate Python code for verifying the runtime logs. We extensively evaluate MINES on web-tamper attacks on the benchmarks of TrainTicket, NiceFish, Gitea, Mastodon, and NextCloud against baselines such as LogRobust, LogFormer, and WebNorm. The results show that MINES achieves high recall for the anomalies while introducing almost zero false positives, indicating a new state-of-the-art.",
+    "authors": [
+      "Wenjie Zhang",
+      "Yun Lin",
+      "Chun Fung Amos Kwok",
+      "Xiwen Teoh",
+      "Xiaofei Xie",
+      "Frank Liauw",
+      "Hongyu Zhang",
+      "Jin Song Dong"
+    ],
+    "published": "2025-12-07",
+    "categories": [
+      "cs.SE",
+      "cs.CR",
+      "cs.DB",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.06906v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.06906v1",
+    "fetched_at": "2025-12-09T08:34:55.254379",
+    "chinese_title": "MINES：通过Web API不变量推理实现可解释异常检测",
+    "chinese_summary": "针对Web API异常检测中日志噪声干扰、缺乏数据库关联信息的问题，论文提出MINES方法，通过结合API签名增强数据库schema，利用LLM推理潜在约束并结合正常日志验证，最终转化为可解释的异常检测规则，能有效区分噪声并识别未被日志记录的异常；",
+    "tags": [
+      "Anomaly",
+      "LLM",
+      "NLP"
+    ],
+    "key_contributions": [
+      "提出MINES方法，结合API签名增强数据库schema，利用LLM推理潜在约束并验证，解决Web API异常检测中日志噪声和数据库关联缺失问题",
+      "实现可解释的异常检测，能区分日志噪声、识别未被日志记录的异常行为"
+    ],
+    "processed_at": "2025-12-09T08:44:02.930599"
+  },
+  {
+    "id": "2512.06848v1",
+    "title": "AquaFusionNet: Lightweight VisionSensor Fusion Framework for Real-Time Pathogen Detection and Water Quality Anomaly Prediction on Edge Devices",
+    "abstract": "Evidence from many low and middle income regions shows that microbial contamination in small scale drinking water systems often fluctuates rapidly, yet existing monitoring tools capture only fragments of this behaviour. Microscopic imaging provides organism level visibility, whereas physicochemical sensors reveal shortterm changes in water chemistry; in practice, operators must interpret these streams separately, making realtime decision-making unreliable. This study introduces AquaFusionNet, a lightweight cross-modal framework that unifies both information sources inside a single edge deployable model. Unlike prior work that treats microscopic detection and water quality prediction as independent tasks, AquaFusionNet learns the statistical dependencies between microbial appearance and concurrent sensor dynamics through a gated crossattention mechanism designed specifically for lowpower hardware. The framework is trained on AquaMicro12K, a new dataset comprising 12,846 annotated 1000 micrographs curated for drinking water contexts, an area where publicly accessible microscopic datasets are scarce. Deployed for six months across seven facilities in East Java, Indonesia, the system processed 1.84 million frames and consistently detected contamination events with 94.8% mAP@0.5 and 96.3% anomaly prediction accuracy, while operating at 4.8 W on a Jetson Nano. Comparative experiments against representative lightweight detectors show that AquaFusionNet provides higher accuracy at comparable or lower power, and field results indicate that cross-modal coupling reduces common failure modes of unimodal detectors, particularly under fouling, turbidity spikes, and inconsistent illumination. All models, data, and hardware designs are released openly to facilitate replication and adaptation in decentralized water safety infrastructures.",
+    "authors": [
+      "Sepyan Purnama Kristanto",
+      "Lutfi Hakim",
+      " Hermansyah"
+    ],
+    "published": "2025-12-07",
+    "categories": [
+      "cs.CL",
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.06848v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.06848v1",
+    "fetched_at": "2025-12-09T08:34:55.254401",
+    "chinese_title": "AquaFusionNet：面向边缘设备的实时病原体检测与水质异常预测轻量级视觉传感器融合框架",
+    "chinese_summary": "论文针对中小收入地区小型饮用水系统微生物污染波动快、现有监测工具不足的问题，提出AquaFusionNet轻量级跨模态框架，通过门控交叉注意力机制学习微生物图像与理化传感器动态的统计依赖，统一融合两种信息源；构建AquaMicro12K新数据集（12846张饮用水场景显微图像），在印尼东爪哇7个设施部署6个月，实现高检测精度（94.8% mAP@0.5、96.3%异常预测准确率）且边缘设备（Jetson Nano）功耗仅4.8W。",
+    "tags": [
+      "Anomaly",
+      "Deep Learning",
+      "Time Series"
+    ],
+    "key_contributions": [
+      "提出AquaFusionNet轻量级跨模态框架，通过门控交叉注意力机制融合微生物显微图像与理化传感器数据，支持边缘设备实时病原体检测与水质异常预测",
+      "构建AquaMicro12K新数据集（饮用水场景12846张标注显微图像），并在实际部署中验证了高准确率与低功耗性能"
+    ],
+    "processed_at": "2025-12-09T08:44:17.713275"
+  },
+  {
+    "id": "2512.06809v1",
+    "title": "A Physics-Aware Attention LSTM Autoencoder for Early Fault Diagnosis of Battery Systems",
+    "abstract": "Battery safety is paramount for electric vehicles. Early fault diagnosis remains a challenge due to the subtle nature of anomalies and the interference of dynamic operating noise. Existing data-driven methods often suffer from \"physical blindness\" leading to missed detections or false alarms. To address this, we propose a Physics-Aware Attention LSTM Autoencoder (PA-ALSTM-AE). This novel framework explicitly integrates battery aging laws (mileage) into the deep learning pipeline through a multi-stage fusion mechanism. Specifically, an adaptive physical feature construction module selects mileage-sensitive features, and a physics-guided latent fusion module dynamically calibrates the memory cells of the LSTM based on the aging state. Extensive experiments on the large-scale Vloong real-world dataset demonstrate that the proposed method significantly outperforms state-of-the-art baselines. Notably, it improves the recall rate of early faults by over 3 times while maintaining high precision, offering a robust solution for industrial battery management systems.",
+    "authors": [
+      "Jiong Yang"
+    ],
+    "published": "2025-12-07",
+    "categories": [
+      "eess.SY",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.06809v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.06809v1",
+    "fetched_at": "2025-12-09T08:34:55.254456",
+    "chinese_title": "一种用于电池系统早期故障诊断的物理感知注意力LSTM自动编码器",
+    "chinese_summary": "针对电池系统早期故障诊断中异常微弱、动态噪声干扰及现有数据驱动方法“物理盲”的问题，论文提出物理感知注意力LSTM自动编码器（PA-ALSTM-AE），通过多阶段融合机制将电池老化规律（里程）融入深度学习 pipeline，含自适应物理特征构建和物理引导的潜在融合模块；在Vloong真实数据集实验表明，该方法显著优于基线，早期故障召回率提升超3倍且保持高精度。",
+    "tags": [
+      "Deep Learning",
+      "Time Series",
+      "Anomaly"
+    ],
+    "key_contributions": [
+      "提出物理感知注意力LSTM自动编码器，首次明确将电池老化规律融入深度学习框架，解决“物理盲”问题",
+      "在真实数据集上验证，早期故障召回率提升超3倍且保持高精度，为工业电池管理系统提供鲁棒方案"
+    ],
+    "processed_at": "2025-12-09T08:44:29.657111"
+  },
+  {
+    "id": "2512.06504v1",
+    "title": "Method of UAV Inspection of Photovoltaic Modules Using Thermal and RGB Data Fusion",
+    "abstract": "The subject of this research is the development of an intelligent, integrated framework for the automated inspection of photovoltaic (PV) infrastructure that addresses the critical shortcomings of conventional methods, including thermal palette bias, data redundancy, and high communication bandwidth requirements. The goal of this study is to design, develop, and validate a comprehensive, multi-modal system that fully automates the monitoring workflow, from data acquisition to the generation of actionable, geo-located maintenance alerts, thereby enhancing plant safety and operational efficiency. The methods employed involve a synergistic architecture that begins with a palette-invariant thermal embedding, learned by enforcing representational consistency, which is fused with a contrast-normalized RGB stream via a gated mechanism. This is supplemented by a closed-loop, adaptive re-acquisition controller that uses Rodrigues-based updates for targeted confirmation of ambiguous anomalies and a geospatial deduplication module that clusters redundant alerts using DBSCAN over the haversine distance. In conclusion, this study establishes a powerful new paradigm for proactive PV inspection, with the proposed system achieving a mean Average Precision (mAP@0.5) of 0.903 on the public PVF-10 benchmark, a significant 12-15% improvement over single-modality baselines. Field validation confirmed the system's readiness, achieving 96% recall, while the de-duplication process reduced duplicate-induced false positives by 15-20%, and relevance-only telemetry cut airborne data transmission by 60-70%.",
+    "authors": [
+      "Andrii Lysyi",
+      "Anatoliy Sachenko",
+      "Pavlo Radiuk",
+      "Mykola Lysyi",
+      "Oleksandr Melnychenko",
+      "Diana Zahorodnia"
+    ],
+    "published": "2025-12-06",
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.RO"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.06504v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.06504v1",
+    "fetched_at": "2025-12-09T08:34:55.254483",
+    "chinese_title": "基于热成像与RGB数据融合的光伏组件无人机检测方法",
+    "chinese_summary": "针对传统光伏检测方法的热调色板偏差、数据冗余及高带宽需求问题，论文提出多模态智能检测框架：通过表征一致性学习无调色板偏差的热嵌入，结合门控机制融合对比归一化RGB流，集成自适应重采集控制器与地理空间去重模块；该系统在PVF-10基准上mAP@0.5达0.903，比单模态基线提升12-15%，现场验证召回率96%，实现全自动化运维告警。",
+    "tags": [
+      "Anomaly",
+      "Deep Learning",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出无调色板偏差的热嵌入与RGB流融合的多模态框架，解决传统检测的热偏差、冗余等问题",
+      "集成自适应重采集与地理空间去重模块，实现从采集到告警的全自动化流程，性能显著优于单模态基线"
+    ],
+    "processed_at": "2025-12-09T08:44:42.566888"
+  },
+  {
+    "id": "2512.06390v1",
+    "title": "Web Technologies Security in the AI Era: A Survey of CDN-Enhanced Defenses",
+    "abstract": "The modern web stack, which is dominated by browser-based applications and API-first backends, now operates under an adversarial equilibrium where automated, AI-assisted attacks evolve continuously. Content Delivery Networks (CDNs) and edge computing place programmable defenses closest to users and bots, making them natural enforcement points for machine-learning (ML) driven inspection, throttling, and isolation. This survey synthesizes the landscape of AI-enhanced defenses deployed at the edge: (i) anomaly- and behavior-based Web Application Firewalls (WAFs) within broader Web Application and API Protection (WAAP), (ii) adaptive DDoS detection and mitigation, (iii) bot management that resists human-mimicry, and (iv) API discovery, positive security modeling, and encrypted-traffic anomaly analysis. We add a systematic survey method, a threat taxonomy mapped to edge-observable signals, evaluation metrics, deployment playbooks, and governance guidance. We conclude with a research agenda spanning XAI, adversarial robustness, and autonomous multi-agent defense. Our findings indicate that edge-centric AI measurably improves time-to-detect and time-to-mitigate while reducing data movement and enhancing compliance, yet introduces new risks around model abuse, poisoning, and governance.",
+    "authors": [
+      "Mehrab Hosain",
+      "Sabbir Alom Shuvo",
+      "Matthew Ogbe",
+      "Md Shah Jalal Mazumder",
+      "Yead Rahman",
+      "Md Azizul Hakim",
+      "Anukul Pandey"
+    ],
+    "published": "2025-12-06",
+    "categories": [
+      "cs.CR",
+      "cs.AI",
+      "cs.LG",
+      "cs.NI",
+      "cs.PF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.06390v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.06390v1",
+    "fetched_at": "2025-12-09T08:34:55.254512",
+    "chinese_title": "AI时代的Web技术安全：CDN增强防御的综述",
+    "chinese_summary": "论文针对AI时代Web应用面临的持续演化攻击，综述了CDN边缘部署的AI增强防御（含WAAP、自适应DDoS、机器人管理等），提出系统调研方法、威胁分类、评估指标及治理指南，指出边缘AI防御的优势与模型滥用等新风险并给出研究议程。",
+    "tags": [
+      "Anomaly",
+      "Risk Management",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "系统综述CDN边缘的AI增强Web安全防御（含四大类应用场景）",
+      "提出调研框架、威胁分类、评估指标及治理指南，分析边缘AI防御的优势与新风险并给出研究议程"
+    ],
+    "processed_at": "2025-12-09T08:44:56.370768"
+  },
+  {
+    "id": "2512.05540v1",
+    "title": "SCoNE: Spherical Consistent Neighborhoods Ensemble for Effective and Efficient Multi-View Anomaly Detection",
+    "abstract": "The core problem in multi-view anomaly detection is to represent local neighborhoods of normal instances consistently across all views. Recent approaches consider a representation of local neighborhood in each view independently, and then capture the consistent neighbors across all views via a learning process. They suffer from two key issues. First, there is no guarantee that they can capture consistent neighbors well, especially when the same neighbors are in regions of varied densities in different views, resulting in inferior detection accuracy. Second, the learning process has a high computational cost of $\\mathcal{O}(N^2)$, rendering them inapplicable for large datasets. To address these issues, we propose a novel method termed \\textbf{S}pherical \\textbf{C}onsistent \\textbf{N}eighborhoods \\textbf{E}nsemble (SCoNE). It has two unique features: (a) the consistent neighborhoods are represented with multi-view instances directly, requiring no intermediate representations as used in existing approaches; and (b) the neighborhoods have data-dependent properties, which lead to large neighborhoods in sparse regions and small neighborhoods in dense regions. The data-dependent properties enable local neighborhoods in different views to be represented well as consistent neighborhoods, without learning. This leads to $\\mathcal{O}(N)$ time complexity. Empirical evaluations show that SCoNE has superior detection accuracy and runs orders-of-magnitude faster in large datasets than existing approaches.",
+    "authors": [
+      "Yang Xu",
+      "Hang Zhang",
+      "Yixiao Ma",
+      "Ye Zhu",
+      "Kai Ming Ting"
+    ],
+    "published": "2025-12-05",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.05540v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.05540v1",
+    "fetched_at": "2025-12-09T08:34:55.254536",
+    "chinese_title": "SCoNE：高效多视图异常检测的球面一致邻域集成方法",
+    "chinese_summary": "现有多视图异常检测方法存在无法有效捕捉一致邻域（不同视图密度差异时表现差）及计算复杂度高（O(N²)）的问题；本文提出SCoNE方法，直接用多视图实例表示一致邻域且邻域具有数据依赖属性（稀疏区大、密集区小），无需学习，时间复杂度降为O(N)；实证表明SCoNE检测精度更优且大数据下运行速度快一个数量级以上。",
+    "tags": [
+      "Anomaly",
+      "Risk Management"
+    ],
+    "key_contributions": [
+      "提出SCoNE方法，直接用多视图实例表示一致邻域且邻域具有数据依赖属性，无需学习即可有效捕捉不同视图下的一致邻域",
+      "将计算复杂度从现有方法的O(N²)降至O(N)，大幅提升大数据场景下的运行效率，同时保持更优的检测精度"
+    ],
+    "processed_at": "2025-12-09T08:45:26.190587"
+  },
+  {
+    "id": "2512.05531v1",
+    "title": "IDK-S: Incremental Distributional Kernel for Streaming Anomaly Detection",
+    "abstract": "Anomaly detection on data streams presents significant challenges, requiring methods to maintain high detection accuracy among evolving distributions while ensuring real-time efficiency. Here we introduce $\\mathcal{IDK}$-$\\mathcal{S}$, a novel $\\mathbf{I}$ncremental $\\mathbf{D}$istributional $\\mathbf{K}$ernel for $\\mathbf{S}$treaming anomaly detection that effectively addresses these challenges by creating a new dynamic representation in the kernel mean embedding framework. The superiority of $\\mathcal{IDK}$-$\\mathcal{S}$ is attributed to two key innovations. First, it inherits the strengths of the Isolation Distributional Kernel, an offline detector that has demonstrated significant performance advantages over foundational methods like Isolation Forest and Local Outlier Factor due to the use of a data-dependent kernel. Second, it adopts a lightweight incremental update mechanism that significantly reduces computational overhead compared to the naive baseline strategy of performing a full model retraining. This is achieved without compromising detection accuracy, a claim supported by its statistical equivalence to the full retrained model. Our extensive experiments on thirteen benchmarks demonstrate that $\\mathcal{IDK}$-$\\mathcal{S}$ achieves superior detection accuracy while operating substantially faster, in many cases by an order of magnitude, than existing state-of-the-art methods.",
+    "authors": [
+      "Yang Xu",
+      "Yixiao Ma",
+      "Kaifeng Zhang",
+      "Zuliang Yang",
+      "Kai Ming Ting"
+    ],
+    "published": "2025-12-05",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.05531v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.05531v1",
+    "fetched_at": "2025-12-09T08:34:55.254561",
+    "chinese_title": "IDK-S：用于流式异常检测的增量分布核",
+    "chinese_summary": "本文提出IDK-S方法，基于核均值嵌入框架融合隔离分布核的离线检测优势与轻量级增量更新机制，既保证检测精度（与全量重训练统计等价）又大幅降低计算开销；在13个基准数据集上验证其精度优于现有方法且运行速度显著更快（多快一个数量级）。",
+    "tags": [
+      "Anomaly",
+      "Time Series",
+      "Benchmark",
+      "Risk Management"
+    ],
+    "key_contributions": [
+      "提出基于核均值嵌入的IDK-S，融合隔离分布核的性能优势与轻量级增量更新机制",
+      "增量更新与全量重训练统计等价，实验证明IDK-S精度更优且速度显著更快"
+    ],
+    "processed_at": "2025-12-09T08:45:47.758791"
+  },
+  {
+    "id": "2512.05442v1",
+    "title": "IdealTSF: Can Non-Ideal Data Contribute to Enhancing the Performance of Time Series Forecasting Models?",
+    "abstract": "Deep learning has shown strong performance in time series forecasting tasks. However, issues such as missing values and anomalies in sequential data hinder its further development in prediction tasks. Previous research has primarily focused on extracting feature information from sequence data or addressing these suboptimal data as positive samples for knowledge transfer. A more effective approach would be to leverage these non-ideal negative samples to enhance event prediction. In response, this study highlights the advantages of non-ideal negative samples and proposes the IdealTSF framework, which integrates both ideal positive and negative samples for time series forecasting. IdealTSF consists of three progressive steps: pretraining, training, and optimization. It first pretrains the model by extracting knowledge from negative sample data, then transforms the sequence data into ideal positive samples during training. Additionally, a negative optimization mechanism with adversarial disturbances is applied. Extensive experiments demonstrate that negative sample data unlocks significant potential within the basic attention architecture for time series forecasting. Therefore, IdealTSF is particularly well-suited for applications with noisy samples or low-quality data.",
+    "authors": [
+      "Hua Wang",
+      "Jinghao Lu",
+      "Fan Zhang"
+    ],
+    "published": "2025-12-05",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.05442v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.05442v1",
+    "fetched_at": "2025-12-09T08:34:55.254582",
+    "chinese_title": "IdealTSF：非理想数据能否提升时间序列预测模型的性能？",
+    "chinese_summary": "针对时间序列中缺失值、异常等非理想数据问题，论文提出IdealTSF框架，整合理想正负样本，通过预训练（从负样本提取知识）、训练（转化为理想正样本）及带对抗扰动的负优化机制提升预测性能；实验证明该框架能挖掘基础注意力架构潜力，适用于含噪声或低质量数据场景。",
+    "tags": [
+      "Deep Learning",
+      "Time Series",
+      "Anomaly",
+      "Transformer"
+    ],
+    "key_contributions": [
+      "提出整合理想正负样本的IdealTSF框架，解决非理想数据对时间序列预测的阻碍",
+      "设计预训练、训练及负优化机制，利用非理想负样本提升模型性能，适配噪声/低质量数据场景"
+    ],
+    "processed_at": "2025-12-09T08:45:57.508854"
+  },
+  {
+    "id": "2512.04590v2",
+    "title": "Exploiting ftrace's function_graph Tracer Features for Machine Learning: A Case Study on Encryption Detection",
+    "abstract": "This paper proposes using the Linux kernel ftrace framework, particularly the function graph tracer, to generate informative system level data for machine learning (ML) applications. Experiments on a real world encryption detection task demonstrate the efficacy of the proposed features across several learning algorithms. The learner faces the problem of detecting encryption activities across a large dataset of files, using function call traces and graph based features. Empirical results highlight an outstanding accuracy of 99.28 on the task at hand, underscoring the efficacy of features derived from the function graph tracer. The results were further validated in an additional experiment targeting a multilabel classification problem, in which running programs were identified from trace data. This work provides comprehensive methodologies for preprocessing raw trace data and extracting graph based features, offering significant advancements in applying ML to system behavior analysis, program identification, and anomaly detection. By bridging the gap between system tracing and ML, this paper paves the way for innovative solutions in performance monitoring and security analytics.",
+    "authors": [
+      "Kenan Begovic",
+      "Abdulaziz Al-Ali",
+      "Qutaibah Malluhi"
+    ],
+    "published": "2025-12-04",
+    "categories": [
+      "cs.LG",
+      "cs.CR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.04590v2",
+    "arxiv_url": "https://arxiv.org/abs/2512.04590v2",
+    "fetched_at": "2025-12-09T08:34:55.254659",
+    "chinese_title": "利用Linux内核ftrace的函数图追踪器特征进行机器学习：加密检测案例研究",
+    "chinese_summary": "本文提出利用Linux内核ftrace框架的函数图追踪器生成系统级数据用于机器学习，通过函数调用轨迹和图特征在加密检测任务中实现99.28%的高准确率；还验证了多标签程序识别任务的有效性，提供了轨迹数据预处理与图特征提取方法，为系统行为分析和安全应用提供支撑。",
+    "tags": [
+      "Anomaly",
+      "Graph Neural Network",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出基于Linux内核ftrace函数图追踪器的系统级特征生成方法，适配机器学习任务",
+      "提供轨迹数据预处理与图特征提取流程，在加密检测和程序识别任务中验证高准确率，推动系统行为分析与安全应用"
+    ],
+    "processed_at": "2025-12-09T08:46:12.351482"
+  },
+  {
+    "id": "2512.05734v1",
+    "title": "KANFormer for Predicting Fill Probabilities via Survival Analysis in Limit Order Books",
+    "abstract": "This paper introduces KANFormer, a novel deep-learning-based model for predicting the time-to-fill of limit orders by leveraging both market- and agent-level information. KANFormer combines a Dilated Causal Convolutional network with a Transformer encoder, enhanced by Kolmogorov-Arnold Networks (KANs), which improve nonlinear approximation. Unlike existing models that rely solely on a series of snapshots of the limit order book, KANFormer integrates the actions of agents related to LOB dynamics and the position of the order in the queue to more effectively capture patterns related to execution likelihood. We evaluate the model using CAC 40 index futures data with labeled orders. The results show that KANFormer outperforms existing works in both calibration (Right-Censored Log-Likelihood, Integrated Brier Score) and discrimination (C-index, time-dependent AUC). We further analyze feature importance over time using SHAP (SHapley Additive exPlanations). Our results highlight the benefits of combining rich market signals with expressive neural architectures to achieve accurate and interpretabl predictions of fill probabilities.",
+    "authors": [
+      "Jinfeng Zhong",
+      "Emmanuel Bacry",
+      "Agathe Guilloux",
+      "Jean-François Muzy"
+    ],
+    "published": "2025-12-05",
+    "categories": [
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.05734v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.05734v1",
+    "fetched_at": "2025-12-09T08:35:21.475318",
+    "chinese_title": "KANFormer：基于限价订单簿生存分析的成交概率预测模型",
+    "chinese_summary": "本文提出KANFormer模型，融合扩张因果卷积、Transformer编码器与Kolmogorov-Arnold网络（KAN），整合市场及agent层面信息（如订单队列位置）预测限价订单成交时间；在CAC40指数期货数据上验证，模型在校准（右删失对数似然、集成Brier分数）和区分（C指数、时间依赖AUC）指标上优于现有方法，且通过SHAP分析特征重要性提升可解释性。",
+    "tags": [
+      "Deep Learning",
+      "Transformer",
+      "Algorithmic Trading",
+      "Market Microstructure"
+    ],
+    "key_contributions": [
+      "提出KANFormer模型，结合扩张因果卷积、Transformer与KAN，整合市场及agent层面信息以更有效捕捉限价订单成交模式",
+      "实证表明模型在成交时间预测的校准与区分指标上优于现有方法，且通过SHAP实现特征重要性的时间动态分析"
+    ],
+    "processed_at": "2025-12-09T08:46:25.798723"
+  },
+  {
+    "id": "2512.07697v1",
+    "title": "Delay-Aware Diffusion Policy: Bridging the Observation-Execution Gap in Dynamic Tasks",
+    "abstract": "As a robot senses and selects actions, the world keeps changing. This inference delay creates a gap of tens to hundreds of milliseconds between the observed state and the state at execution. In this work, we take the natural generalization from zero delay to measured delay during training and inference. We introduce Delay-Aware Diffusion Policy (DA-DP), a framework for explicitly incorporating inference delays into policy learning. DA-DP corrects zero-delay trajectories to their delay-compensated counterparts, and augments the policy with delay conditioning. We empirically validate DA-DP on a variety of tasks, robots, and delays and find its success rate more robust to delay than delay-unaware methods. DA-DP is architecture agnostic and transfers beyond diffusion policies, offering a general pattern for delay-aware imitation learning. More broadly, DA-DP encourages evaluation protocols that report performance as a function of measured latency, not just task difficulty.",
+    "authors": [
+      "Aileen Liao",
+      "Dong-Ki Kim",
+      "Max Olan Smith",
+      "Ali-akbar Agha-mohammadi",
+      "Shayegan Omidshafiei"
+    ],
+    "published": "2025-12-08",
+    "categories": [
+      "cs.RO",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.07697v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.07697v1",
+    "fetched_at": "2025-12-09T08:35:24.714609",
+    "chinese_title": "延迟感知扩散策略：弥合动态任务中的观测-执行差距",
+    "chinese_summary": "本文针对动态任务中观测与执行间的推理延迟问题，提出延迟感知扩散策略（DA-DP）框架，通过修正零延迟轨迹为延迟补偿版本、以延迟条件增强策略，明确将延迟纳入策略学习；实证表明其成功率对延迟更鲁棒，且架构无关可迁移，还倡导评估协议需报告性能与测量延迟的关系而非仅任务难度。",
+    "tags": [
+      "Deep Learning",
+      "Reinforcement Learning",
+      "Execution"
+    ],
+    "key_contributions": [
+      "提出延迟感知扩散策略（DA-DP）框架，通过延迟补偿轨迹修正和延迟条件增强，明确将推理延迟纳入策略学习",
+      "验证其对延迟的鲁棒性优于无延迟感知方法，且架构无关可迁移，倡导评估协议需考虑性能与延迟的关系"
+    ],
+    "processed_at": "2025-12-09T08:46:40.572125"
+  },
+  {
+    "id": "2512.07666v1",
+    "title": "Bridging Code Graphs and Large Language Models for Better Code Understanding",
+    "abstract": "Large Language Models (LLMs) have demonstrated remarkable performance in code intelligence tasks such as code generation, summarization, and translation. However, their reliance on linearized token sequences limits their ability to understand the structural semantics of programs. While prior studies have explored graphaugmented prompting and structure-aware pretraining, they either suffer from prompt length constraints or require task-specific architectural changes that are incompatible with large-scale instructionfollowing LLMs. To address these limitations, this paper proposes CGBridge, a novel plug-and-play method that enhances LLMs with Code Graph information through an external, trainable Bridge module. CGBridge first pre-trains a code graph encoder via selfsupervised learning on a large-scale dataset of 270K code graphs to learn structural code semantics. It then trains an external module to bridge the modality gap among code, graph, and text by aligning their semantics through cross-modal attention mechanisms. Finally, the bridge module generates structure-informed prompts, which are injected into a frozen LLM, and is fine-tuned for downstream code intelligence tasks. Experiments show that CGBridge achieves notable improvements over both the original model and the graphaugmented prompting method. Specifically, it yields a 16.19% and 9.12% relative gain in LLM-as-a-Judge on code summarization, and a 9.84% and 38.87% relative gain in Execution Accuracy on code translation. Moreover, CGBridge achieves over 4x faster inference than LoRA-tuned models, demonstrating both effectiveness and efficiency in structure-aware code understanding.",
+    "authors": [
+      "Zeqi Chen",
+      "Zhaoyang Chu",
+      "Yi Gui",
+      "Feng Guo",
+      "Yao Wan",
+      "Chuan Shi"
+    ],
+    "published": "2025-12-08",
+    "categories": [
+      "cs.CL",
+      "cs.SE"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.07666v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.07666v1",
+    "fetched_at": "2025-12-09T08:35:24.714646",
+    "chinese_title": "桥接代码图与大语言模型以提升代码理解能力",
+    "chinese_summary": "论文指出大语言模型依赖线性token序列限制了对程序结构语义的理解，提出CGBridge方法：先预训练代码图编码器学习结构语义，再训练外部桥接模块对齐代码、图与文本语义，最后生成结构感知提示注入冻结LLM，实验在代码摘要和翻译任务上显著提升性能。",
+    "tags": [
+      "LLM",
+      "Graph Neural Network",
+      "Transformer",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出插即用的CGBridge方法，通过外部可训练桥接模块增强LLM的代码结构语义理解能力",
+      "实验验证在代码摘要和翻译任务上显著优于原模型及图增强提示方法"
+    ],
+    "processed_at": "2025-12-09T08:46:48.343277"
+  },
+  {
+    "id": "2512.07497v1",
+    "title": "How Do LLMs Fail In Agentic Scenarios? A Qualitative Analysis of Success and Failure Scenarios of Various LLMs in Agentic Simulations",
+    "abstract": "We investigate how large language models (LLMs) fail when operating as autonomous agents with tool-use capabilities. Using the Kamiwaza Agentic Merit Index (KAMI) v0.1 benchmark, we analyze 900 execution traces from three representative models - Granite 4 Small, Llama 4 Maverick, and DeepSeek V3.1 - across filesystem, text extraction, CSV analysis, and SQL scenarios. Rather than focusing on aggregate scores, we perform fine-grained, per-trial behavioral analysis to surface the strategies that enable successful multi-step tool execution and the recurrent failure modes that undermine reliability. Our findings show that model scale alone does not predict agentic robustness: Llama 4 Maverick (400B) performs only marginally better than Granite 4 Small (32B) in some uncertainty-driven tasks, while DeepSeek V3.1's superior reliability derives primarily from post-training reinforcement learning rather than architecture or size. Across models, we identify four recurring failure archetypes: premature action without grounding, over-helpfulness that substitutes missing entities, vulnerability to distractor-induced context pollution, and fragile execution under load. These patterns highlight the need for agentic evaluation methods that emphasize interactive grounding, recovery behavior, and environment-aware adaptation, suggesting that reliable enterprise deployment requires not just stronger models but deliberate training and design choices that reinforce verification, constraint discovery, and adherence to source-of-truth data.",
+    "authors": [
+      "JV Roig"
+    ],
+    "published": "2025-12-08",
+    "categories": [
+      "cs.AI",
+      "cs.SE"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.07497v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.07497v1",
+    "fetched_at": "2025-12-09T08:35:24.714666",
+    "chinese_title": "大语言模型在智能体场景中如何失败？不同大语言模型在智能体模拟中成功与失败场景的定性分析",
+    "chinese_summary": "论文使用KAMI v0.1基准，分析3个代表性LLM在4类工具使用场景的900条执行轨迹，通过细粒度行为分析揭示成功策略与4类重复失败模式；发现模型规模不直接预测智能体鲁棒性，DeepSeek V3.1的可靠性源于强化学习而非架构/规模，指出需强调交互接地等的智能体评估方法。",
+    "tags": [
+      "LLM",
+      "Reinforcement Learning",
+      "Benchmark",
+      "Financial Agent"
+    ],
+    "key_contributions": [
+      "基于细粒度行为分析，揭示LLM作为智能体时的4类重复失败模式及成功工具执行策略",
+      "发现模型规模不决定智能体鲁棒性，强化学习对DeepSeek V3.1的可靠性起关键作用，提出智能体评估与设计的改进方向"
+    ],
+    "processed_at": "2025-12-09T08:47:04.968315"
+  },
+  {
+    "id": "2512.07461v1",
+    "title": "Native Parallel Reasoner: Reasoning in Parallelism via Self-Distilled Reinforcement Learning",
+    "abstract": "We introduce Native Parallel Reasoner (NPR), a teacher-free framework that enables Large Language Models (LLMs) to self-evolve genuine parallel reasoning capabilities. NPR transforms the model from sequential emulation to native parallel cognition through three key innovations: 1) a self-distilled progressive training paradigm that transitions from ``cold-start'' format discovery to strict topological constraints without external supervision; 2) a novel Parallel-Aware Policy Optimization (PAPO) algorithm that optimizes branching policies directly within the execution graph, allowing the model to learn adaptive decomposition via trial and error; and 3) a robust NPR Engine that refactors memory management and flow control of SGLang to enable stable, large-scale parallel RL training. Across eight reasoning benchmarks, NPR trained on Qwen3-4B achieves performance gains of up to 24.5% and inference speedups up to 4.6x. Unlike prior baselines that often fall back to autoregressive decoding, NPR demonstrates 100% genuine parallel execution, establishing a new standard for self-evolving, efficient, and scalable agentic reasoning.",
+    "authors": [
+      "Tong Wu",
+      "Yang Liu",
+      "Jun Bai",
+      "Zixia Jia",
+      "Shuyi Zhang",
+      "Ziyong Lin",
+      "Yanting Wang",
+      "Song-Chun Zhu",
+      "Zilong Zheng"
+    ],
+    "published": "2025-12-08",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.07461v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.07461v1",
+    "fetched_at": "2025-12-09T08:35:24.714698",
+    "chinese_title": "原生并行推理器：通过自蒸馏强化学习实现并行推理",
+    "chinese_summary": "本文提出原生并行推理器（NPR），一种无教师框架使大语言模型（LLM）自进化出真正并行推理能力；通过自蒸馏渐进训练范式、并行感知策略优化（PAPO）算法及NPR引擎三大创新，实现从序列模拟到原生并行认知的转变；在8个推理基准上，基于Qwen3-4B训练的NPR性能提升最高24.5%、推理速度提升最高4.6倍，且100%真正并行执行。",
+    "tags": [
+      "LLM",
+      "Reinforcement Learning",
+      "Transformer",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出无教师的NPR框架，通过三大创新使LLM具备真正并行推理能力",
+      "在多推理基准上显著提升性能与速度，实现100%真正并行执行"
+    ],
+    "processed_at": "2025-12-09T08:47:18.179351"
+  },
+  {
+    "id": "2512.07407v1",
+    "title": "Training Language Models to Use Prolog as a Tool",
+    "abstract": "Ensuring reliable tool use is critical for safe agentic AI systems. Language models frequently produce unreliable reasoning with plausible but incorrect solutions that are difficult to verify. To address this, we investigate fine-tuning models to use Prolog as an external tool for verifiable computation. Using Group Relative Policy Optimization (GRPO), we fine-tune Qwen2.5-3B-Instruct on a cleaned GSM8K-Prolog-Prover dataset while varying (i) prompt structure, (ii) reward composition (execution, syntax, semantics, structure), and (iii) inference protocol: single-shot, best-of-N, and two agentic modes where Prolog is invoked internally or independently. Our reinforcement learning approach outperforms supervised fine-tuning, with our 3B model achieving zero-shot MMLU performance comparable to 7B few-shot results. Our findings reveal that: 1) joint tuning of prompt, reward, and inference shapes program syntax and logic; 2) best-of-N with external Prolog verification maximizes accuracy on GSM8K; 3) agentic inference with internal repair yields superior zero-shot generalization on MMLU-Stem and MMLU-Pro. These results demonstrate that grounding model reasoning in formal verification systems substantially improves reliability and auditability for safety-critical applications. The source code for reproducing our experiments is available under https://github.com/niklasmellgren/grpo-prolog-inference",
+    "authors": [
+      "Niklas Mellgren",
+      "Peter Schneider-Kamp",
+      "Lukas Galke Poech"
+    ],
+    "published": "2025-12-08",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.07407v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.07407v1",
+    "fetched_at": "2025-12-09T08:35:24.714723",
+    "chinese_title": "训练语言模型使用Prolog作为工具",
+    "chinese_summary": "本文采用Group Relative Policy Optimization（GRPO）微调Qwen2.5-3B-Instruct模型，使其能调用Prolog作为可验证计算工具，实验基于清洗后的GSM8K-Prolog-Prover数据集并调整提示结构、奖励组成及推理协议；结果表明强化学习方法优于监督微调，3B模型零样本MMLU表现堪比7B少样本，且形式验证显著提升LLM推理可靠性与可审计性。",
+    "tags": [
+      "LLM",
+      "Reinforcement Learning",
+      "Transformer"
+    ],
+    "key_contributions": [
+      "提出基于GRPO的强化学习方法微调LLM使用Prolog工具，在GSM8K等任务上表现优于监督微调",
+      "揭示提示、奖励与推理协议的联合调优影响，形式验证提升LLM推理可靠性与可审计性"
+    ],
+    "processed_at": "2025-12-09T08:47:30.086641"
+  },
+  {
+    "id": "2512.07404v1",
+    "title": "Do LLMs Trust the Code They Write?",
+    "abstract": "Despite the effectiveness of large language models (LLMs) for code generation, they often output incorrect code. One reason is that model output probabilities are often not well-correlated with correctness, and reflect only the final output of the generation process. Inspired by findings that LLMs internally encode concepts like truthfulness, this paper explores if LLMs similarly represent code correctness. Specifically, we identify a correctness representation inside LLMs by contrasting the hidden states between pairs of correct and incorrect code for the same programming tasks. By experimenting on four LLMs, we show that exploiting this extracted correctness representation outperforms standard log-likelihood ranking, as well as verbalized model confidence. Furthermore, we explore how this internal correctness signal can be used to select higher-quality code samples, without requiring test execution. Ultimately, this work demonstrates how leveraging internal representations can enhance code generation systems and make LLMs more reliable, thus improving confidence in automatically generated code.",
+    "authors": [
+      "Francisco Ribeiro",
+      "Claudio Spiess",
+      "Prem Devanbu",
+      "Sarah Nadi"
+    ],
+    "published": "2025-12-08",
+    "categories": [
+      "cs.SE",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.07404v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.07404v1",
+    "fetched_at": "2025-12-09T08:35:24.714746",
+    "chinese_title": "大语言模型是否信任自己编写的代码？",
+    "chinese_summary": "论文指出LLM生成代码常出错，因输出概率与正确性相关性弱；受LLM内部编码真实性启发，通过对比同一任务正确/错误代码的隐藏状态提取内部正确性表征，实验表明该表征优于标准对数似然排序和口头化置信度，且无需测试执行即可选高质量代码，提升代码生成可靠性。",
+    "tags": [
+      "LLM",
+      "Transformer",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "发现并提取了LLM内部的代码正确性表征（基于正确/错误代码隐藏状态对比）",
+      "证明该内部表征在代码质量排序上优于传统方法，且无需执行测试即可筛选高质量代码"
+    ],
+    "processed_at": "2025-12-09T08:47:39.018080"
+  },
+  {
+    "id": "2512.07371v1",
+    "title": "ESPADA: Execution Speedup via Semantics Aware Demonstration Data Downsampling for Imitation Learning",
+    "abstract": "Behavior-cloning based visuomotor policies enable precise manipulation but often inherit the slow, cautious tempo of human demonstrations, limiting practical deployment. However, prior studies on acceleration methods mainly rely on statistical or heuristic cues that ignore task semantics and can fail across diverse manipulation settings. We present ESPADA, a semantic and spatially aware framework that segments demonstrations using a VLM-LLM pipeline with 3D gripper-object relations, enabling aggressive downsampling only in non-critical segments while preserving precision-critical phases, without requiring extra data or architectural modifications, or any form of retraining. To scale from a single annotated episode to the full dataset, ESPADA propagates segment labels via Dynamic Time Warping (DTW) on dynamics-only features. Across both simulation and real-world experiments with ACT and DP baselines, ESPADA achieves approximately a 2x speed-up while maintaining success rates, narrowing the gap between human demonstrations and efficient robot control.",
+    "authors": [
+      "Byungju Kim",
+      "Jinu Pahk",
+      "Chungwoo Lee",
+      "Jaejoon Kim",
+      "Jangha Lee",
+      "Theo Taeyeong Kim",
+      "Kyuhwan Shim",
+      "Jun Ki Lee",
+      "Byoung-Tak Zhang"
+    ],
+    "published": "2025-12-08",
+    "categories": [
+      "cs.RO",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.07371v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.07371v1",
+    "fetched_at": "2025-12-09T08:35:24.714777",
+    "chinese_title": "ESPADA：基于语义感知演示数据下采样的模仿学习执行加速",
+    "chinese_summary": "论文提出ESPADA框架，通过VLM-LLM pipeline结合3D gripper-object关系对机器人演示进行语义分割，仅在非关键阶段下采样以保留精度关键阶段，无需额外数据、架构修改或重训练；并通过动态时间规整（DTW）传播段标签扩展至全数据集。实验显示该框架在ACT和DP基线下实现约2倍加速且保持任务成功率，缩小人类演示与高效控制的差距。",
+    "tags": [
+      "LLM",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出语义与空间感知的ESPADA框架，基于VLM-LLM+3D gripper-object关系分割演示，实现非关键段下采样保留精度且无需额外数据/修改架构/重训练",
+      "利用DTW在动力学特征上传播段标签，支持从单标注episode到全数据集的高效扩展"
+    ],
+    "processed_at": "2025-12-09T08:47:54.452491"
+  },
+  {
+    "id": "2512.07287v1",
+    "title": "SIT-Graph: State Integrated Tool Graph for Multi-Turn Agents",
+    "abstract": "Despite impressive advances in agent systems, multi-turn tool-use scenarios remain challenging. It is mainly because intent is clarified progressively and the environment evolves with each tool call. While reusing past experience is natural, current LLM agents either treat entire trajectories or pre-defined subtasks as indivisible units, or solely exploit tool-to-tool dependencies, hindering adaptation as states and information evolve across turns. In this paper, we propose a State Integrated Tool Graph (SIT-Graph), which enhances multi-turn tool use by exploiting partially overlapping experience. Inspired by human decision-making that integrates episodic and procedural memory, SIT-Graph captures both compact state representations (episodic-like fragments) and tool-to-tool dependencies (procedural-like routines) from historical trajectories. Specifically, we first build a tool graph from accumulated tool-use sequences, and then augment each edge with a compact state summary of the dialog and tool history that may shape the next action. At inference time, SIT-Graph enables a human-like balance between episodic recall and procedural execution: when the next decision requires recalling prior context, the agent retrieves the state summaries stored on relevant edges and uses them to guide its next action; when the step is routine, it follows high-confidence tool dependencies without explicit recall. Experiments across multiple stateful multi-turn tool-use benchmarks show that SIT-Graph consistently outperforms strong memory- and graph-based baselines, delivering more robust tool selection and more effective experience transfer.",
+    "authors": [
+      "Sijia Li",
+      "Yuchen Huang",
+      "Zifan Liu",
+      "Zijian Li",
+      "Jingjing fu",
+      "Lei Song",
+      "Jiang Bian",
+      "Jun Zhang",
+      "Rui Wang"
+    ],
+    "published": "2025-12-08",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.07287v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.07287v1",
+    "fetched_at": "2025-12-09T08:35:24.714809",
+    "chinese_title": "SIT-Graph：面向多轮智能体的状态集成工具图",
+    "chinese_summary": "针对多轮工具使用场景中现有LLM智能体难以适应状态与信息动态演化的问题，论文提出SIT-Graph，受人类情景记忆与程序记忆启发，构建融合对话及工具历史状态摘要的工具图；推理时平衡情景回忆与程序执行，在多状态多轮工具基准上提升了工具使用性能。",
+    "tags": [
+      "LLM",
+      "Graph Neural Network",
+      "NLP",
+      "Financial Agent"
+    ],
+    "key_contributions": [
+      "提出SIT-Graph模型，融合情景记忆（紧凑状态摘要）与程序记忆（工具依赖），适配多轮工具使用中状态和信息的动态演化",
+      "实现推理时情景回忆与程序执行的平衡，在多状态多轮工具基准上验证了方法有效性"
+    ],
+    "processed_at": "2025-12-09T08:48:12.302115"
+  },
+  {
+    "id": "2512.07201v1",
+    "title": "Understanding Diffusion Models via Code Execution",
+    "abstract": "Diffusion models have achieved remarkable performance in generative modeling, yet their theoretical foundations are often intricate, and the gap between mathematical formulations in papers and practical open-source implementations can be difficult to bridge. Existing tutorials primarily focus on deriving equations, offering limited guidance on how diffusion models actually operate in code. To address this, we present a concise implementation of approximately 300 lines that explains diffusion models from a code-execution perspective. Our minimal example preserves the essential components -- including forward diffusion, reverse sampling, the noise-prediction network, and the training loop -- while removing unnecessary engineering details. This technical report aims to provide researchers with a clear, implementation-first understanding of how diffusion models work in practice and how code and theory correspond. Our code and pre-trained models are available at: https://github.com/disanda/GM/tree/main/DDPM-DDIM-ClassifierFree.",
+    "authors": [
+      "Cheng Yu"
+    ],
+    "published": "2025-12-08",
+    "categories": [
+      "cs.CV",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.07201v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.07201v1",
+    "fetched_at": "2025-12-09T08:35:24.714826",
+    "chinese_title": "通过代码执行理解扩散模型",
+    "chinese_summary": "针对扩散模型理论与实际代码实现存在的gap及现有教程侧重方程推导缺乏实操指导的问题，论文提出约300行的简洁实现，保留前向扩散、反向采样等核心组件并去除冗余工程细节，帮助研究者从代码执行视角清晰理解扩散模型的实际运行及理论与代码的对应关系。",
+    "tags": [
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出约300行的简洁扩散模型实现，保留核心组件并去除冗余工程细节",
+      "从代码执行视角弥合扩散模型理论与实际实现的gap，助力研究者理解模型运行及理论代码对应关系"
+    ],
+    "processed_at": "2025-12-09T08:48:28.153967"
+  },
+  {
+    "id": "2512.07186v1",
+    "title": "START: Spatial and Textual Learning for Chart Understanding",
+    "abstract": "Chart understanding is crucial for deploying multimodal large language models (MLLMs) in real-world scenarios such as analyzing scientific papers and technical reports. Unlike natural images, charts pair a structured visual layout (spatial property) with an underlying data representation (textual property) -- grasping both is essential for precise, fine-grained chart reasoning. Motivated by this observation, we propose START, the Spatial and Textual learning for chART understanding. Specifically, we introduce (i) chart-element grounding and (ii) chart-to-code generation to strengthen an MLLM's understanding of both chart visual layout and data details. To facilitate spatial and textual learning, we propose the START-Dataset generated with a novel data-generation pipeline that first leverages an MLLM to translate real chart images into executable chart code, recovering the underlying data representation while preserving the visual distribution of real-world charts. We then evolve the code with a Large Language Model (LLM) to ascertain the positions of chart elements that capture the chart's visual structure, addressing challenges that existing methods cannot handle. To evaluate a model's ability to understand chart spatial structures, we propose the Chart Spatial understanding Benchmark (CS-Bench), filling a critical gap in comprehensive chart understanding evaluation. Leveraging spatial and textual learning, START delivers consistent gains across model sizes and benchmarks over the base models and surpasses prior state-of-the-art by a clear margin. Code, data and models will be publicly available.",
+    "authors": [
+      "Zhuoming Liu",
+      "Xiaofeng Gao",
+      "Feiyang Niu",
+      "Qiaozi Gao",
+      "Liu Liu",
+      "Robinson Piramuthu"
+    ],
+    "published": "2025-12-08",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.07186v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.07186v1",
+    "fetched_at": "2025-12-09T08:35:24.714853",
+    "chinese_title": "START：用于图表理解的空间与文本学习",
+    "chinese_summary": "该文提出START模型，通过图表元素定位与图表转代码生成强化多模态大模型对图表空间布局及数据细节的理解；构建START-Dataset（含真实图表转可执行代码+LLM进化确定元素位置）并提出CS-Bench填补图表空间理解评估空白，模型在多基准上表现提升。",
+    "tags": [
+      "LLM",
+      "Deep Learning",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出START模型，通过图表元素定位和图表转代码生成强化多模态大模型对图表空间与文本属性的理解",
+      "构建START-Dataset并提出CS-Bench，填补图表空间理解的数据与评估空白"
+    ],
+    "processed_at": "2025-12-09T08:48:40.549118"
+  },
+  {
+    "id": "2512.07094v1",
+    "title": "VIGIL: A Reflective Runtime for Self-Healing Agents",
+    "abstract": "Agentic LLM frameworks promise autonomous behavior via task decomposition, tool use, and iterative planning, but most deployed systems remain brittle. They lack runtime introspection, cannot diagnose their own failure modes, and do not improve over time without human intervention. In practice, many agent stacks degrade into decorated chains of LLM calls with no structural mechanisms for reliability. We present VIGIL (Verifiable Inspection and Guarded Iterative Learning), a reflective runtime that supervises a sibling agent and performs autonomous maintenance rather than task execution. VIGIL ingests behavioral logs, appraises each event into a structured emotional representation, maintains a persistent EmoBank with decay and contextual policies, and derives an RBT diagnosis that sorts recent behavior into strengths, opportunities, and failures. From this analysis, VIGIL generates both guarded prompt updates that preserve core identity semantics and read only code proposals produced by a strategy engine that operates on log evidence and code hotspots. VIGIL functions as a state gated pipeline. Illegal transitions produce explicit errors rather than allowing the LLM to improvise. In a reminder latency case study, VIGIL identified elevated lag, proposed prompt and code repairs, and when its own diagnostic tool failed due to a schema conflict, it surfaced the internal error, produced a fallback diagnosis, and emitted a repair plan. This demonstrates meta level self repair in a deployed agent runtime.",
+    "authors": [
+      "Christopher Cruz"
+    ],
+    "published": "2025-12-08",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.07094v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.07094v1",
+    "fetched_at": "2025-12-09T08:35:24.714870",
+    "chinese_title": "VIGIL：一种用于自修复智能体的反射式运行时",
+    "chinese_summary": "现有基于大语言模型（LLM）的智能体框架多缺乏运行时自省、故障诊断及自主改进能力，易因缺乏结构可靠性机制而变脆弱；本文提出VIGIL反射式运行时，通过监督同级智能体、分析行为日志、构建情感表示与诊断模型，生成带语义保护的提示更新及代码提案，实现元级自修复，案例验证了其故障诊断与修复能力。",
+    "tags": [
+      "LLM",
+      "Financial Agent",
+      "Sentiment Analysis",
+      "Anomaly"
+    ],
+    "key_contributions": [
+      "提出VIGIL反射式运行时架构，针对LLM智能体的脆弱性问题，实现元级自省、故障诊断与自主维护，无需人工干预即可提升系统可靠性",
+      "设计包含日志分析、结构化情感表示、EmoBank维护及RBT诊断的 pipeline，能生成保留核心语义的提示更新与基于证据的代码提案，支持自身故障的 fallback 修复"
+    ],
+    "processed_at": "2025-12-09T08:48:56.558171"
+  },
+  {
+    "id": "2512.07030v1",
+    "title": "A Comprehensive Study of Supervised Machine Learning Models for Zero-Day Attack Detection: Analyzing Performance on Imbalanced Data",
+    "abstract": "Among the various types of cyberattacks, identifying zero-day attacks is problematic because they are unknown to security systems as their pattern and characteristics do not match known blacklisted attacks. There are many Machine Learning (ML) models designed to analyze and detect network attacks, especially using supervised models. However, these models are designed to classify samples (normal and attacks) based on the patterns they learn during the training phase, so they perform inefficiently on unseen attacks. This research addresses this issue by evaluating five different supervised models to assess their performance and execution time in predicting zero-day attacks and find out which model performs accurately and quickly. The goal is to improve the performance of these supervised models by not only proposing a framework that applies grid search, dimensionality reduction and oversampling methods to overcome the imbalance problem, but also comparing the effectiveness of oversampling on ml model metrics, in particular the accuracy. To emulate attack detection in real life, this research applies a highly imbalanced data set and only exposes the classifiers to zero-day attacks during the testing phase, so the models are not trained to flag the zero-day attacks. Our results show that Random Forest (RF) performs best under both oversampling and non-oversampling conditions, this increased effectiveness comes at the cost of longer processing times. Therefore, we selected XG Boost (XGB) as the top model due to its fast and highly accurate performance in detecting zero-day attacks.",
+    "authors": [
+      "Zahra Lotfi",
+      "Mostafa Lotfi"
+    ],
+    "published": "2025-12-07",
+    "categories": [
+      "cs.CR",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.07030v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.07030v1",
+    "fetched_at": "2025-12-09T08:35:24.714890",
+    "chinese_title": "监督机器学习模型在零日攻击检测中的综合研究：不平衡数据上的性能分析",
+    "chinese_summary": "该研究针对零日攻击（未知网络攻击）检测中监督模型因数据不平衡及未见过攻击导致性能低效的问题，提出结合网格搜索、降维与过采样的框架，在仅测试阶段暴露零日攻击的高不平衡数据集上评估五种监督模型；实验发现随机森林在有无过采样下性能最优但耗时更长，XGBoost表现亦较优。",
+    "tags": [
+      "Anomaly",
+      "Execution"
+    ],
+    "key_contributions": [
+      "构建了融合网格搜索、降维及过采样的框架，缓解监督模型在零日攻击检测中数据不平衡的性能瓶颈",
+      "系统对比五种监督模型在仅测试阶段暴露零日攻击场景下的准确率与执行时间，明确随机森林为最优模型，XGBoost为高效备选"
+    ],
+    "processed_at": "2025-12-09T08:49:12.300029"
+  },
+  {
+    "id": "2512.07010v1",
+    "title": "Always Keep Your Promises: DynamicLRP, A Model-Agnostic Solution To Layer-Wise Relevance Propagation",
+    "abstract": "Layer-wise Relevance Propagation (LRP) provides principled attribution for neural networks through conservation properties and foundations in Deep Taylor Decomposition. However, existing implementations operate at the module level, requiring architecture-specific propagation rules and modifications. These limit the generality of target model and sustainability of implementations as architectures evolve. We introduce DynamicLRP, a model-agnostic LRP framework operating at the tensor operation level. By decomposing attribution to individual operations within computation graphs and introducing a novel mechanism for deferred activation resolution, named the Promise System, our approach achieves true architecture agnosticity while maintaining LRP's theoretical guarantees. This design operates independently of backpropagation machinery, enabling operation on arbitrary computation graphs without model modification and side-by-side execution with gradient backpropagation. Being based on computation graphs, this method is theoretically extensible to other deep learning libraries that support auto-differentiation. We demonstrate faithfulness matching or exceeding specialized implementations (1.77 vs 1.69 ABPC on VGG, equivalent performance on ViT, 93.70\\% and 95.06\\% top-1 attribution accuracy for explaining RoBERTa-large and Flan-T5-large answers on SQuADv2, respectively) while maintaining practical efficiency on models with hundreds of millions of parameters. We achieved 99.92\\% node coverage across 31,465 computation graph nodes from 15 diverse architectures, including state-space models (Mamba), audio transformers (Whisper), and multimodal systems (DePlot) without any model-specific code with rules for 47 fundamental operations implemented. Our operation-level decomposition and Promise System establish a sustainable, extensible foundation for LRP across evolving architectures.",
+    "authors": [
+      "Kevin Lee",
+      "Pablo Millan Arias"
+    ],
+    "published": "2025-12-07",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.07010v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.07010v1",
+    "fetched_at": "2025-12-09T08:35:24.714908",
+    "chinese_title": "信守承诺：DynamicLRP——分层相关性传播的模型无关解决方案",
+    "chinese_summary": "现有分层相关性传播（LRP）依赖架构特定规则，通用性受限；本文提出DynamicLRP，基于张量操作级分解与Promise System（延迟激活解析）实现模型无关性，保持LRP理论保证，可在任意计算图上运行，实验验证其效果优于或匹配专用实现。",
+    "tags": [
+      "Deep Learning",
+      "Transformer",
+      "LLM"
+    ],
+    "key_contributions": [
+      "提出DynamicLRP模型无关LRP框架，通过张量操作级分解和Promise System实现架构无关且保持理论保证",
+      "实验证明其效果优于或匹配专用LRP实现，支持亿级参数大模型高效运行"
+    ],
+    "processed_at": "2025-12-09T08:49:35.052711"
+  },
+  {
+    "id": "2512.06933v1",
+    "title": "MATEX: A Multi-Agent Framework for Explaining Ethereum Transactions",
+    "abstract": "Understanding a complicated Ethereum transaction remains challenging: multi-hop token flows, nested contract calls, and opaque execution paths routinely lead users to blind signing. Based on interviews with everyday users, developers, and auditors, we identify the need for faithful, step-wise explanations grounded in both on-chain evidence and real-world protocol semantics. To meet this need, we introduce (matex, a cognitive multi-agent framework that models transaction understanding as a collaborative investigation-combining rapid hypothesis generation, dynamic off-chain knowledge retrieval, evidence-aware synthesis, and adversarial validation to produce faithful explanations.",
+    "authors": [
+      "Zifan Peng"
+    ],
+    "published": "2025-12-07",
+    "categories": [
+      "cs.CE",
+      "cs.CL",
+      "cs.HC"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.06933v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.06933v1",
+    "fetched_at": "2025-12-09T08:35:24.714925",
+    "chinese_title": "MATEX：一种用于解释以太坊交易的多智能体框架",
+    "chinese_summary": "论文指出理解复杂以太坊交易（多跳代币流动、嵌套合约调用等）存在挑战，基于用户访谈明确了对忠实分步解释的需求；提出MATEX认知多智能体框架，将交易理解建模为协作调查，结合快速假设生成、动态链下知识检索、证据感知合成与对抗验证，生成可靠解释。",
+    "tags": [
+      "Financial Agent",
+      "Execution"
+    ],
+    "key_contributions": [
+      "基于用户访谈识别复杂以太坊交易理解的核心挑战及对忠实分步解释的需求",
+      "提出MATEX认知多智能体框架，通过协作式调查流程生成基于证据的交易忠实解释"
+    ],
+    "processed_at": "2025-12-09T08:49:53.581115"
+  },
+  {
+    "id": "2512.06859v1",
+    "title": "JT-DA: Enhancing Data Analysis with Tool-Integrated Table Reasoning Large Language Models",
+    "abstract": "In this work, we present JT-DA-8B (JiuTian Data Analyst 8B), a specialized large language model designed for complex table reasoning tasks across diverse real-world scenarios. To address the lack of high-quality supervision in tabular reasoning scenarios, we construct a comprehensive and diverse training corpus with 34 well-defined table reasoning tasks, by aggregating 29 public table QA datasets and 3 million tables. An automatic pipeline is proposed to generate realistic multi-step analytical tasks involving reasoning patterns. The model is trained upon open-source JT-Coder-8B model, an 8B-parameter decoder-only foundation model trained from scratch. In the training stage, we leverage LLM-based scoring and workflow-aligned filtering to distill high-quality, table-centric data. Both supervised fine-tuning (SFT) and Reinforcement learning (RL) are adopted to optimize our model. Afterwards, a four-stage table reasoning workflow is proposed, including table preprocessing, table sensing, tool-integrated reasoning, and prompt engineering, to improve model interpretability and execution accuracy. Experimental results show that JT-DA-8B achieves strong performance in various table reasoning tasks, demonstrating the effectiveness of data-centric generation and workflow-driven optimization.",
+    "authors": [
+      "Ce Chi",
+      "Xing Wang",
+      "Zhendong Wang",
+      "Xiaofan Liu",
+      "Ce Li",
+      "Zhiyan Song",
+      "Chen Zhao",
+      "Kexin Yang",
+      "Boshen Shi",
+      "Jingjing Yang",
+      "Chao Deng",
+      "Junlan Feng"
+    ],
+    "published": "2025-12-07",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.06859v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.06859v1",
+    "fetched_at": "2025-12-09T08:35:24.714961",
+    "chinese_title": "JT-DA：通过工具集成的表格推理大语言模型增强数据分析",
+    "chinese_summary": "本文提出专门用于复杂表格推理的JT-DA-8B模型，构建包含34类任务、29个公开数据集和300万表格的训练语料，通过自动 pipeline 生成多步分析任务；基于JT-Coder-8B结合SFT、RL及四阶段推理工作流优化模型，实验验证其在表格推理任务中的有效性。",
+    "tags": [
+      "LLM",
+      "NLP",
+      "Deep Learning",
+      "Reinforcement Learning"
+    ],
+    "key_contributions": [
+      "构建包含多样表格推理任务的高质量训练语料并提出自动生成多步分析任务的 pipeline",
+      "基于JT-Coder-8B结合SFT、RL及四阶段工作流优化得到表格推理模型JT-DA-8B并验证其有效性"
+    ],
+    "processed_at": "2025-12-09T08:50:01.715196"
+  },
+  {
+    "id": "2512.06630v1",
+    "title": "Quantum Temporal Convolutional Neural Networks for Cross-Sectional Equity Return Prediction: A Comparative Benchmark Study",
+    "abstract": "Quantum machine learning offers a promising pathway for enhancing stock market prediction, particularly under complex, noisy, and highly dynamic financial environments. However, many classical forecasting models struggle with noisy input, regime shifts, and limited generalization capacity. To address these challenges, we propose a Quantum Temporal Convolutional Neural Network (QTCNN) that combines a classical temporal encoder with parameter-efficient quantum convolution circuits for cross-sectional equity return prediction. The temporal encoder extracts multi-scale patterns from sequential technical indicators, while the quantum processing leverages superposition and entanglement to enhance feature representation and suppress overfitting. We conduct a comprehensive benchmarking study on the JPX Tokyo Stock Exchange dataset and evaluate predictions through long-short portfolio construction using out-of-sample Sharpe ratio as the primary performance metric. QTCNN achieves a Sharpe ratio of 0.538, outperforming the best classical baseline by approximately 72\\%. These results highlight the practical potential of quantum-enhanced forecasting model, QTCNN, for robust decision-making in quantitative finance.",
+    "authors": [
+      "Chi-Sheng Chen",
+      "Xinyu Zhang",
+      "Rong Fu",
+      "Qiuzhe Xie",
+      "Fan Zhang"
+    ],
+    "published": "2025-12-07",
+    "categories": [
+      "cs.LG",
+      "quant-ph"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.06630v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.06630v1",
+    "fetched_at": "2025-12-09T08:37:22.736066",
+    "chinese_title": "量子时序卷积神经网络用于横截面股票收益预测：一项比较基准研究",
+    "chinese_summary": "论文提出量子时序卷积神经网络（QTCNN），结合经典时序编码器提取多尺度模式，通过参数高效量子卷积电路利用叠加与纠缠增强特征表示、抑制过拟合；在JPX东京证交所数据集上，QTCNN构建的长短期组合夏普比率达0.538，较最优经典基线提升约72%，凸显量子增强模型在量化金融中的实用潜力。",
+    "tags": [
+      "Deep Learning",
+      "Time Series",
+      "Portfolio Optimization",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出融合经典时序编码器与量子卷积电路的QTCNN模型，利用量子特性增强特征表示并抑制过拟合",
+      "通过JPX东京证交所数据集验证，QTCNN的长短期组合夏普比率显著优于最优经典基线，证明量子增强模型在股票收益预测中的实用价值"
+    ],
+    "processed_at": "2025-12-09T08:50:10.763851"
+  }
+]
