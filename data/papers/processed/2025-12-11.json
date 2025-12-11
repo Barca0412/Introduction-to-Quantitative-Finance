@@ -1,0 +1,399 @@
+[
+  {
+    "id": "2512.09590v1",
+    "title": "On Inhomogeneous Affine Volterra Processes: Stationarity and Applications to the Volterra Heston Model",
+    "abstract": "True Volterra equations are inherently non stationary and therefore do not admit $\\textit{genuine stationary regimes}$ over finite horizons. This motivates the study of the finite-time behavior of the solutions to scaled inhomogeneous affine Stochastic Volterra equations through the lens of a weaker notion of stationarity referred to as $\\textit{fake stationary regime}$ in the sense that all marginal distributions share the same expectation and variance. As a first application, we introduce the $\\textit{Fake stationary Volterra Heston model}$ and derive a closed-form expression for its characteristic function. Having established this finite-time proxy for stationarity, we then investigate the asymptotic (long-time) behavior to assess whether genuine stationary regimes emerge in the limit. Using an extension of the exponential-affine transformation formula for those processes, we establish in the long run the existence of limiting distributions, which (unlike in the case of classical affine diffusion processes) may depend on the initial state of the process, unless the Volterra kernel coincides with the $α-$ fractional integration kernel, for which the dependence on the initial state vanishes. We then proceed to the construction of stationary processes associated with these limiting distributions. However, the dynamics in this long-term regime are analytically intractable, and the process itself is not guaranteed to be stationary in the classical sense over finite horizons. This highlights the relevance of finite-time analysis through the lens of the aforementioned $\\textit{fake stationarity}$, which offers a tractable approximation to stationary behavior in genuinely non-stationary Volterra systems.",
+    "authors": [
+      "Emmanuel Gnabeyeu",
+      "Gilles Pagès",
+      "Mathieu Rosenbaum"
+    ],
+    "published": "2025-12-10",
+    "categories": [
+      "math.PR",
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.09590v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.09590v1",
+    "fetched_at": "2025-12-11T08:34:43.559483",
+    "chinese_title": "非齐次仿射Volterra过程：平稳性及其在Volterra Heston模型中的应用",
+    "chinese_summary": "该论文指出真Volterra方程本质非平稳，引入“伪平稳 regime”（边际分布期望方差相同）研究其有限时间行为；提出伪平稳Volterra Heston模型并推导特征函数闭式；分析渐近行为发现极限分布可能依赖初始状态（α-分数积分核除外），并构造关联极限分布的平稳过程。",
+    "tags": [
+      "Volatility",
+      "Options",
+      "Time Series",
+      "Asset Pricing"
+    ],
+    "key_contributions": [
+      "引入“伪平稳 regime”研究非齐次仿射Volterra过程的有限时间行为，提出伪平稳Volterra Heston模型并推导其特征函数闭式",
+      "揭示Volterra过程极限分布对初始状态的依赖性规律（α-分数积分核除外），并构造关联极限分布的平稳过程"
+    ],
+    "processed_at": "2025-12-11T08:38:07.766138"
+  },
+  {
+    "id": "2512.09224v1",
+    "title": "Exploratory Mean-Variance with Jumps: An Equilibrium Approach",
+    "abstract": "Revisiting the continuous-time Mean-Variance (MV) Portfolio Optimization problem, we model the market dynamics with a jump-diffusion process and apply Reinforcement Learning (RL) techniques to facilitate informed exploration within the control space. We recognize the time-inconsistency of the MV problem and adopt the time-inconsistent control (TIC) approach to analytically solve for an exploratory equilibrium investment policy, which is a Gaussian distribution centered on the equilibrium control of the classical MV problem. Our approach accounts for time-inconsistent preferences and actions, and our equilibrium policy is the best option an investor can take at any given time during the investment period. Moreover, we leverage the martingale properties of the equilibrium policy, design a RL model, and propose an Actor-Critic RL algorithm. All of our RL model parameters converge to the corresponding true values in a simulation study. Our numerical study on 24 years of real market data shows that the proposed RL model is profitable in 13 out of 14 tests, demonstrating its practical applicability in real world investment.",
+    "authors": [
+      "Yuling Max Chen",
+      "Bin Li",
+      "David Saunders"
+    ],
+    "published": "2025-12-10",
+    "categories": [
+      "q-fin.PM",
+      "stat.ML"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.09224v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.09224v1",
+    "fetched_at": "2025-12-11T08:34:43.559520",
+    "chinese_title": "带跳跃的探索性均值-方差：一种均衡方法",
+    "chinese_summary": "该论文针对连续时间均值-方差（MV）投资组合优化问题，用跳跃-扩散过程建模市场动态，结合强化学习（RL）处理控制空间探索；考虑MV问题的时间不一致性，采用时间不一致控制（TIC）方法解析得到探索性均衡策略（以经典MV均衡控制为中心的高斯分布）；设计Actor-Critic RL算法，仿真验证参数收敛且实盘数据验证盈利性，具有实用价值。",
+    "tags": [
+      "Reinforcement Learning",
+      "Portfolio Optimization",
+      "Risk Management"
+    ],
+    "key_contributions": [
+      "解析求解带跳跃-扩散市场的探索性均值-方差均衡策略，考虑时间不一致性，策略为经典MV均衡控制为中心的高斯分布",
+      "设计Actor-Critic RL算法，利用均衡策略的鞅性质，仿真参数收敛且实盘验证盈利性"
+    ],
+    "processed_at": "2025-12-11T08:39:38.008802"
+  },
+  {
+    "id": "2512.07787v2",
+    "title": "VaR at Its Extremes: Impossibilities and Conditions for One-Sided Random Variables",
+    "abstract": "We investigate the extremal aggregation behavior of Value-at-Risk (VaR) -- that is, its additivity properties across all probability levels -- for sums of one-sided random variables. For risks supported on \\([0,\\infty)\\), we show that VaR sub-additivity is impossible except in the degenerate case of exact additivity, which holds only under co-monotonicity. To characterize when VaR is instead fully super-additive, we introduce two structural conditions: negative simplex dependence (NSD) for the joint distribution and simplex dominance (SD) for a margin-dependent functional. Together, these conditions provide a unified and easily verifiable framework that accommodates non-identical margins, heavy-tailed laws, and a wide spectrum of negative dependence structures. All results extend to random variables with arbitrary finite lower or upper endpoints, yielding sharp constraints on when strict sub- or super-additivity can occur.",
+    "authors": [
+      "Nawaf Mohammed"
+    ],
+    "published": "2025-12-08",
+    "categories": [
+      "q-fin.RM",
+      "math.PR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.07787v2",
+    "arxiv_url": "https://arxiv.org/abs/2512.07787v2",
+    "fetched_at": "2025-12-11T08:34:43.559658",
+    "chinese_title": "极端情况下的风险价值（VaR）：单边随机变量的不可能性与条件",
+    "chinese_summary": "本文研究单边随机变量之和的风险价值（VaR）在所有概率水平下的可加性；证明非负支撑的风险仅在共单调下存在精确可加性，否则VaR次可加性不成立；引入负单纯形依赖（NSD）和单纯形占优（SD）条件刻画完全超可加性，框架可容纳非同质边际、重尾分布等，结果扩展到有限上下端点的随机变量。",
+    "tags": [
+      "Risk Management"
+    ],
+    "key_contributions": [
+      "证明非负支撑的单边随机变量之和仅在共单调下存在VaR精确可加性，否则次可加性不可能",
+      "引入负单纯形依赖（NSD）和单纯形占优（SD）条件，统一刻画VaR完全超可加性，框架容纳非同质边际、重尾分布等，结果扩展到有限上下端点的随机变量"
+    ],
+    "processed_at": "2025-12-11T08:49:52.338166"
+  },
+  {
+    "id": "2512.09103v1",
+    "title": "Natural Geometry of Robust Data Attribution: From Convex Models to Deep Networks",
+    "abstract": "Data attribution methods identify which training examples are responsible for a model's predictions, but their sensitivity to distributional perturbations undermines practical reliability. We present a unified framework for certified robust attribution that extends from convex models to deep networks. For convex settings, we derive Wasserstein-Robust Influence Functions (W-RIF) with provable coverage guarantees. For deep networks, we demonstrate that Euclidean certification is rendered vacuous by spectral amplification -- a mechanism where the inherent ill-conditioning of deep representations inflates Lipschitz bounds by over $10{,}000\\times$. This explains why standard TRAK scores, while accurate point estimates, are geometrically fragile: naive Euclidean robustness analysis yields 0\\% certification. Our key contribution is the Natural Wasserstein metric, which measures perturbations in the geometry induced by the model's own feature covariance. This eliminates spectral amplification, reducing worst-case sensitivity by $76\\times$ and stabilizing attribution estimates. On CIFAR-10 with ResNet-18, Natural W-TRAK certifies 68.7\\% of ranking pairs compared to 0\\% for Euclidean baselines -- to our knowledge, the first non-vacuous certified bounds for neural network attribution. Furthermore, we prove that the Self-Influence term arising from our analysis equals the Lipschitz constant governing attribution stability, providing theoretical grounding for leverage-based anomaly detection. Empirically, Self-Influence achieves 0.970 AUROC for label noise detection, identifying 94.1\\% of corrupted labels by examining just the top 20\\% of training data.",
+    "authors": [
+      "Shihao Li",
+      "Jiachen Li",
+      "Dongmei Chen"
+    ],
+    "published": "2025-12-09",
+    "categories": [
+      "cs.LG",
+      "math.OC"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.09103v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.09103v1",
+    "fetched_at": "2025-12-11T08:34:56.589109",
+    "chinese_title": "鲁棒数据归因的自然几何：从凸模型到深度网络",
+    "chinese_summary": "论文针对数据归因方法对分布扰动敏感的问题，提出统一的认证鲁棒归因框架（覆盖凸模型到深度网络）；凸模型中推导带可证明覆盖保证的Wasserstein鲁棒影响函数（W-RIF），深度网络中发现欧氏认证因谱放大失效，提出自然Wasserstein度量消除该效应，降低最坏情况敏感度并实现非空认证，还证明自影响项等于归因稳定性的Lipschitz常数。",
+    "tags": [
+      "Deep Learning",
+      "Anomaly"
+    ],
+    "key_contributions": [
+      "提出统一的认证鲁棒数据归因框架，涵盖凸模型与深度网络，解决传统归因方法对分布扰动敏感的可靠性问题",
+      "针对深度网络，提出自然Wasserstein度量消除谱放大效应，首次实现非空的神经网络归因认证，并证明自影响项与归因稳定性的Lipschitz常数等价"
+    ],
+    "processed_at": "2025-12-11T08:50:26.191066"
+  },
+  {
+    "id": "2512.09800v1",
+    "title": "Ariel-ML: Computing Parallelization with Embedded Rust for Neural Networks on Heterogeneous Multi-core Microcontrollers",
+    "abstract": "Low-power microcontroller (MCU) hardware is currently evolving from single-core architectures to predominantly multi-core architectures. In parallel, new embedded software building blocks are more and more written in Rust, while C/C++ dominance fades in this domain. On the other hand, small artificial neural networks (ANN) of various kinds are increasingly deployed in edge AI use cases, thus deployed and executed directly on low-power MCUs. In this context, both incremental improvements and novel innovative services will have to be continuously retrofitted using ANNs execution in software embedded on sensing/actuating systems already deployed in the field. However, there was so far no Rust embedded software platform automating parallelization for inference computation on multi-core MCUs executing arbitrary TinyML models. This paper thus fills this gap by introducing Ariel-ML, a novel toolkit we designed combining a generic TinyML pipeline and an embedded Rust software platform which can take full advantage of multi-core capabilities of various 32bit microcontroller families (Arm Cortex-M, RISC-V, ESP-32). We published the full open source code of its implementation, which we used to benchmark its capabilities using a zoo of various TinyML models. We show that Ariel-ML outperforms prior art in terms of inference latency as expected, and we show that, compared to pre-existing toolkits using embedded C/C++, Ariel-ML achieves comparable memory footprints. Ariel-ML thus provides a useful basis for TinyML practitioners and resource-constrained embedded Rust developers.",
+    "authors": [
+      "Zhaolan Huang",
+      "Kaspar Schleiser",
+      "Gyungmin Myung",
+      "Emmanuel Baccelli"
+    ],
+    "published": "2025-12-10",
+    "categories": [
+      "cs.LG",
+      "cs.DC",
+      "cs.PF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.09800v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.09800v1",
+    "fetched_at": "2025-12-11T08:35:26.724097",
+    "chinese_title": "Ariel-ML：基于嵌入式Rust的异构多核微控制器神经网络并行计算",
+    "chinese_summary": "针对低功耗多核微控制器（MCU）上神经网络推理缺乏自动化并行化Rust工具的问题，本文提出Ariel-ML工具包，结合通用TinyML流水线与嵌入式Rust平台，支持Arm Cortex-M、RISC-V等多种32位MCU的多核并行推理；该工具开源，benchmark验证其推理延迟优于现有方法，内存占用与C/C++工具包相当。",
+    "tags": [
+      "Deep Learning",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出Ariel-ML开源工具包，填补嵌入式Rust平台多核MCU神经网络推理并行化的空白",
+      "支持多种32位MCU，推理延迟优于现有方法且内存占用与C/C++工具包相当"
+    ],
+    "processed_at": "2025-12-11T08:50:52.612304"
+  },
+  {
+    "id": "2512.09736v1",
+    "title": "Analyzing Planner Design Trade-offs for MAPF under Realistic Simulation",
+    "abstract": "Multi-Agent Path Finding (MAPF) algorithms are increasingly deployed in industrial warehouses and automated manufacturing facilities, where robots must operate reliably under real-world physical constraints. However, existing MAPF evaluation frameworks typically rely on simplified robot models, leaving a substantial gap between algorithmic benchmarks and practical performance. Recent frameworks such as SMART, incorporate kinodynamic modeling and offer the MAPF community a platform for large-scale, realistic evaluation. Building on this capability, this work investigates how key planner design choices influence performance under realistic execution settings. We systematically study three fundamental factors: (1) the relationship between solution optimality and execution performance, (2) the sensitivity of system performance to inaccuracies in kinodynamic modeling, and (3) the interaction between model accuracy and plan optimality. Empirically, we examine these factors to understand how these design choices affect performance in realistic scenarios. We highlight open challenges and research directions to steer the community toward practical, real-world deployment.",
+    "authors": [
+      "Jingtian Yan",
+      "Zhifei Li",
+      "William Kang",
+      "Stephen F. Smith",
+      "Jiaoyang Li"
+    ],
+    "published": "2025-12-10",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.09736v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.09736v1",
+    "fetched_at": "2025-12-11T08:35:26.724132",
+    "chinese_title": "基于真实仿真的多智能体路径规划（MAPF）规划器设计权衡分析",
+    "chinese_summary": "现有多智能体路径规划（MAPF）算法评估多依赖简化机器人模型，与实际性能存在显著差距；本文基于含运动动力学建模的SMART框架，系统研究规划器设计中解最优性与执行性能关系、建模不准确的敏感性及模型精度与计划最优性的交互等关键因素，通过实证分析明确其对真实场景性能的影响，为实际部署提供方向。",
+    "tags": [
+      "Execution",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "基于含运动动力学建模的SMART框架，系统研究MAPF规划器设计中三个核心因素对真实场景性能的影响",
+      "揭示现有评估框架与实际性能的差距，提出面向真实部署的开放挑战与研究方向"
+    ],
+    "processed_at": "2025-12-11T08:51:16.599975"
+  },
+  {
+    "id": "2512.09485v1",
+    "title": "Advancing LLM-Based Security Automation with Customized Group Relative Policy Optimization for Zero-Touch Networks",
+    "abstract": "Zero-Touch Networks (ZTNs) represent a transformative paradigm toward fully automated and intelligent network management, providing the scalability and adaptability required for the complexity of sixth-generation (6G) networks. However, the distributed architecture, high openness, and deep heterogeneity of 6G networks expand the attack surface and pose unprecedented security challenges. To address this, security automation aims to enable intelligent security management across dynamic and complex environments, serving as a key capability for securing 6G ZTNs. Despite its promise, implementing security automation in 6G ZTNs presents two primary challenges: 1) automating the lifecycle from security strategy generation to validation and update under real-world, parallel, and adversarial conditions, and 2) adapting security strategies to evolving threats and dynamic environments. This motivates us to propose SecLoop and SA-GRPO. SecLoop constitutes the first fully automated framework that integrates large language models (LLMs) across the entire lifecycle of security strategy generation, orchestration, response, and feedback, enabling intelligent and adaptive defenses in dynamic network environments, thus tackling the first challenge. Furthermore, we propose SA-GRPO, a novel security-aware group relative policy optimization algorithm that iteratively refines security strategies by contrasting group feedback collected from parallel SecLoop executions, thereby addressing the second challenge. Extensive real-world experiments on five benchmarks, including 11 MITRE ATT&CK processes and over 20 types of attacks, demonstrate the superiority of the proposed SecLoop and SA-GRPO. We will release our platform to the community, facilitating the advancement of security automation towards next generation communications.",
+    "authors": [
+      "Xinye Cao",
+      "Yihan Lin",
+      "Guoshun Nan",
+      "Qinchuan Zhou",
+      "Yuhang Luo",
+      "Yurui Gao",
+      "Zeliang Zhang",
+      "Haolang Lu",
+      "Qimei Cui",
+      "Yanzhao Hou",
+      "Xiaofeng Tao",
+      "Tony Q. S. Quek"
+    ],
+    "published": "2025-12-10",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.09485v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.09485v1",
+    "fetched_at": "2025-12-11T08:35:26.724172",
+    "chinese_title": "利用定制化群体相对策略优化推进基于LLM的零接触网络安全自动化",
+    "chinese_summary": "针对6G零接触网络安全自动化面临的全生命周期策略自动化及动态威胁适应挑战，论文提出SecLoop框架（首个整合LLM贯穿安全策略生成、编排、响应与反馈全流程的全自动化框架），并设计SA-GRPO算法（安全感知的群体相对策略优化算法，通过并行执行的群体反馈迭代优化策略），实现动态环境下的智能自适应防御。",
+    "tags": [
+      "LLM",
+      "Reinforcement Learning"
+    ],
+    "key_contributions": [
+      "提出SecLoop全自动化框架，整合LLM覆盖安全策略全生命周期，解决6G零接触网络安全自动化的全流程实现挑战",
+      "提出SA-GRPO算法，通过并行执行的群体反馈迭代优化安全策略，解决策略对动态威胁和环境的适应问题"
+    ],
+    "processed_at": "2025-12-11T08:51:36.468615"
+  },
+  {
+    "id": "2512.09396v1",
+    "title": "GAIR: GUI Automation via Information-Joint Reasoning and Group Reflection",
+    "abstract": "Building AI systems for GUI automation task has attracted remarkable research efforts, where MLLMs are leveraged for processing user requirements and give operations. However, GUI automation includes a wide range of tasks, from document processing to online shopping, from CAD to video editing. Diversity between particular tasks requires MLLMs for GUI automation to have heterogeneous capabilities and master multidimensional expertise, raising problems on constructing such a model. To address such challenge, we propose GAIR: GUI Automation via Information-Joint Reasoning and Group Reflection, a novel MLLM-based GUI automation agent framework designed for integrating knowledge and combining capabilities from heterogeneous models to build GUI automation agent systems with higher performance. Since different GUI-specific MLLMs are trained on different dataset and thus have different strengths, GAIR introduced a general-purpose MLLM for jointly processing the information from multiple GUI-specific models, further enhancing performance of the agent framework. The general-purpose MLLM also serves as decision maker, trying to execute a reasonable operation based on previously gathered information. When the general-purpose model thinks that there isn't sufficient information for a reasonable decision, GAIR would transit into group reflection status, where the general-purpose model would provide GUI-specific models with different instructions and hints based on their strengths and weaknesses, driving them to gather information with more significance and accuracy that can support deeper reasoning and decision. We evaluated the effectiveness and reliability of GAIR through extensive experiments on GUI benchmarks.",
+    "authors": [
+      "Zishu Wei",
+      "Qixiang Ma",
+      "Xavier Hu",
+      "Yuhang Liu",
+      "Hui Zang",
+      "Yudong Zhao",
+      "Tao Wang",
+      "Shengyu Zhang",
+      "Fei Wu"
+    ],
+    "published": "2025-12-10",
+    "categories": [
+      "cs.MA",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.09396v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.09396v1",
+    "fetched_at": "2025-12-11T08:35:26.724204",
+    "chinese_title": "GAIR：基于信息联合推理与群体反思的GUI自动化框架",
+    "chinese_summary": "针对GUI自动化任务多样性对MLLM异构能力的需求，提出GAIR框架：整合异构GUI专用MLLM的知识与能力，以通用MLLM联合处理多模型信息并决策；当信息不足时进入群体反思状态，通用MLLM依专用模型强弱给出针对性指令提示，提升自动化性能。",
+    "tags": [
+      "LLM",
+      "Transformer",
+      "NLP"
+    ],
+    "key_contributions": [
+      "提出GAIR框架，整合异构GUI专用MLLM的知识与能力，通过通用MLLM联合处理多模型信息提升自动化性能",
+      "设计群体反思机制，当决策信息不足时通用MLLM依专用模型强弱提供针对性指令提示，增强决策合理性"
+    ],
+    "processed_at": "2025-12-11T08:51:57.156725"
+  },
+  {
+    "id": "2512.09368v1",
+    "title": "CFLight: Enhancing Safety with Traffic Signal Control through Counterfactual Learning",
+    "abstract": "Traffic accidents result in millions of injuries and fatalities globally, with a significant number occurring at intersections each year. Traffic Signal Control (TSC) is an effective strategy for enhancing safety at these urban junctures. Despite the growing popularity of Reinforcement Learning (RL) methods in optimizing TSC, these methods often prioritize driving efficiency over safety, thus failing to address the critical balance between these two aspects. Additionally, these methods usually need more interpretability. CounterFactual (CF) learning is a promising approach for various causal analysis fields. In this study, we introduce a novel framework to improve RL for safety aspects in TSC. This framework introduces a novel method based on CF learning to address the question: ``What if, when an unsafe event occurs, we backtrack to perform alternative actions, and will this unsafe event still occur in the subsequent period?'' To answer this question, we propose a new structure causal model to predict the result after executing different actions, and we propose a new CF module that integrates with additional ``X'' modules to promote safe RL practices. Our new algorithm, CFLight, which is derived from this framework, effectively tackles challenging safety events and significantly improves safety at intersections through a near-zero collision control strategy. Through extensive numerical experiments on both real-world and synthetic datasets, we demonstrate that CFLight reduces collisions and improves overall traffic performance compared to conventional RL methods and the recent safe RL model. Moreover, our method represents a generalized and safe framework for RL methods, opening possibilities for applications in other domains. The data and code are available in the github https://github.com/MJLee00/CFLight-Enhancing-Safety-with-Traffic-Signal-Control-through-Counterfactual-Learning.",
+    "authors": [
+      "Mingyuan Li",
+      "Chunyu Liu",
+      "Zhuojun Li",
+      "Xiao Liu",
+      "Guangsheng Yu",
+      "Bo Du",
+      "Jun Shen",
+      "Qiang Wu"
+    ],
+    "published": "2025-12-10",
+    "categories": [
+      "cs.LG",
+      "stat.ME"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.09368v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.09368v1",
+    "fetched_at": "2025-12-11T08:35:26.724233",
+    "chinese_title": "CFLight：通过反事实学习增强交通信号控制的安全性",
+    "chinese_summary": "针对交通信号控制（TSC）中强化学习（RL）方法重效率轻安全的问题，论文提出基于反事实学习的CFLight框架，通过结构因果模型预测替代动作结果并集成CF模块，实现近零碰撞的安全控制，实验验证其有效提升路口安全性。",
+    "tags": [
+      "Reinforcement Learning",
+      "Deep Learning",
+      "Risk Management"
+    ],
+    "key_contributions": [
+      "提出基于反事实学习的CFLight框架，平衡交通信号控制中效率与安全的核心矛盾",
+      "构建结构因果模型与CF模块，实现近零碰撞的安全强化学习控制，实验验证其有效性"
+    ],
+    "processed_at": "2025-12-11T08:52:20.127872"
+  },
+  {
+    "id": "2512.09366v1",
+    "title": "Meta-learning three-factor plasticity rules for structured credit assignment with sparse feedback",
+    "abstract": "Biological neural networks learn complex behaviors from sparse, delayed feedback using local synaptic plasticity, yet the mechanisms enabling structured credit assignment remain elusive. In contrast, artificial recurrent networks solving similar tasks typically rely on biologically implausible global learning rules or hand-crafted local updates. The space of local plasticity rules capable of supporting learning from delayed reinforcement remains largely unexplored. Here, we present a meta-learning framework that discovers local learning rules for structured credit assignment in recurrent networks trained with sparse feedback. Our approach interleaves local neo-Hebbian-like updates during task execution with an outer loop that optimizes plasticity parameters via \\textbf{tangent-propagation through learning}. The resulting three-factor learning rules enable long-timescale credit assignment using only local information and delayed rewards, offering new insights into biologically grounded mechanisms for learning in recurrent circuits.",
+    "authors": [
+      "Dimitra Maoutsa"
+    ],
+    "published": "2025-12-10",
+    "categories": [
+      "q-bio.NC",
+      "cond-mat.dis-nn",
+      "cs.LG",
+      "physics.bio-ph"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.09366v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.09366v1",
+    "fetched_at": "2025-12-11T08:35:26.724251",
+    "chinese_title": "用于稀疏反馈下结构化信用分配的元学习三因子可塑性规则",
+    "chinese_summary": "该论文针对生物神经网络结构化信用分配机制不明、人工循环网络依赖非生物合理学习规则的问题，提出元学习框架：任务执行时采用局部neo-Hebbian类更新，外层通过学习中的切线传播优化可塑性参数；所得三因子学习规则可仅用局部信息和延迟奖励实现长时信用分配，为生物基循环电路学习提供新见解。",
+    "tags": [
+      "Reinforcement Learning",
+      "Deep Learning",
+      "Factor Mining"
+    ],
+    "key_contributions": [
+      "提出结合局部更新与外层切线传播的元学习框架，发现支持稀疏反馈下结构化信用分配的局部学习规则",
+      "得到仅用局部信息和延迟奖励即可实现长时信用分配的三因子学习规则，为生物基循环电路学习提供新机制"
+    ],
+    "processed_at": "2025-12-11T08:52:41.941961"
+  },
+  {
+    "id": "2512.09108v1",
+    "title": "Evolving Excellence: Automated Optimization of LLM-based Agents",
+    "abstract": "Agentic AI systems built on large language models (LLMs) offer significant potential for automating complex workflows, from software development to customer support. However, LLM agents often underperform due to suboptimal configurations; poorly tuned prompts, tool descriptions, and parameters that typically require weeks of manual refinement. Existing optimization methods either are too complex for general use or treat components in isolation, missing critical interdependencies.   We present ARTEMIS, a no-code evolutionary optimization platform that jointly optimizes agent configurations through semantically-aware genetic operators. Given only a benchmark script and natural language goals, ARTEMIS automatically discovers configurable components, extracts performance signals from execution logs, and evolves configurations without requiring architectural modifications.   We evaluate ARTEMIS on four representative agent systems: the \\emph{ALE Agent} for competitive programming on AtCoder Heuristic Contest, achieving a \\textbf{$13.6\\%$ improvement} in acceptance rate; the \\emph{Mini-SWE Agent} for code optimization on SWE-Perf, with a statistically significant \\textbf{10.1\\% performance gain}; and the \\emph{CrewAI Agent} for cost and mathematical reasoning on Math Odyssey, achieving a statistically significant \\textbf{$36.9\\%$ reduction} in the number of tokens required for evaluation. We also evaluate the \\emph{MathTales-Teacher Agent} powered by a smaller open-source model (Qwen2.5-7B) on GSM8K primary-level mathematics problems, achieving a \\textbf{22\\% accuracy improvement} and demonstrating that ARTEMIS can optimize agents based on both commercial and local models.",
+    "authors": [
+      "Paul Brookes",
+      "Vardan Voskanyan",
+      "Rafail Giavrimis",
+      "Matthew Truscott",
+      "Mina Ilieva",
+      "Chrystalla Pavlou",
+      "Alexandru Staicu",
+      "Manal Adham",
+      "Will Evers- Hood",
+      "Jingzhi Gong",
+      "Kejia Zhang",
+      "Matvey Fedoseev",
+      "Vishal Sharma",
+      "Roman Bauer",
+      "Zheng Wang",
+      "Hema Nair",
+      "Wei Jie",
+      "Tianhua Xu",
+      "Aurora Constantin",
+      "Leslie Kanthan",
+      "Michail Basios"
+    ],
+    "published": "2025-12-09",
+    "categories": [
+      "cs.SE",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.09108v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.09108v1",
+    "fetched_at": "2025-12-11T08:35:26.724303",
+    "chinese_title": "演进卓越：基于大语言模型的智能体自动化优化",
+    "chinese_summary": "论文提出无代码进化优化平台ARTEMIS，通过语义感知遗传算子联合优化LLM智能体的提示、工具描述及参数等配置，无需修改智能体架构；在编程、代码优化、数学推理等四个典型智能体系统上验证，显著提升性能（如接受率提升13.6%、token使用量减少36.9%等）。",
+    "tags": [
+      "LLM",
+      "Transformer",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出无代码进化优化平台ARTEMIS，联合优化LLM智能体配置（含提示、工具描述、参数等），无需架构修改",
+      "在四个典型智能体系统上验证，显著提升性能（如接受率、性能增益、token减少等）"
+    ],
+    "processed_at": "2025-12-11T08:53:01.040473"
+  },
+  {
+    "id": "2512.09101v1",
+    "title": "Masked Generative Policy for Robotic Control",
+    "abstract": "We present Masked Generative Policy (MGP), a novel framework for visuomotor imitation learning. We represent actions as discrete tokens, and train a conditional masked transformer that generates tokens in parallel and then rapidly refines only low-confidence tokens. We further propose two new sampling paradigms: MGP-Short, which performs parallel masked generation with score-based refinement for Markovian tasks, and MGP-Long, which predicts full trajectories in a single pass and dynamically refines low-confidence action tokens based on new observations. With globally coherent prediction and robust adaptive execution capabilities, MGP-Long enables reliable control on complex and non-Markovian tasks that prior methods struggle with. Extensive evaluations on 150 robotic manipulation tasks spanning the Meta-World and LIBERO benchmarks show that MGP achieves both rapid inference and superior success rates compared to state-of-the-art diffusion and autoregressive policies. Specifically, MGP increases the average success rate by 9% across 150 tasks while cutting per-sequence inference time by up to 35x. It further improves the average success rate by 60% in dynamic and missing-observation environments, and solves two non-Markovian scenarios where other state-of-the-art methods fail.",
+    "authors": [
+      "Lipeng Zhuang",
+      "Shiyu Fan",
+      "Florent P. Audonnet",
+      "Yingdong Ru",
+      "Gerardo Aragon Camarasa",
+      "Paul Henderson"
+    ],
+    "published": "2025-12-09",
+    "categories": [
+      "cs.RO",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.09101v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.09101v1",
+    "fetched_at": "2025-12-11T08:35:26.724344",
+    "chinese_title": "用于机器人控制的掩码生成策略",
+    "chinese_summary": "本文提出掩码生成策略（MGP），将动作表示为离散token，训练条件掩码Transformer实现并行生成并快速细化低置信度token；进一步提出适配马尔可夫任务的MGP-Short与非马尔可夫任务的MGP-Long两种采样范式，在150个机器人操作任务上比现有方法提升9%成功率且推理时间最多减少35倍，在动态/观测缺失环境及非马尔可夫场景表现更优。",
+    "tags": [
+      "Transformer",
+      "Reinforcement Learning",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出掩码生成策略（MGP）框架，通过离散动作token+条件掩码Transformer实现并行生成与低置信度token细化，平衡推理速度与性能；",
+      "提出MGP-Short和MGP-Long两种采样范式，适配不同任务特性，在多基准任务及复杂场景下显著超越现有扩散和自回归策略。"
+    ],
+    "processed_at": "2025-12-11T08:53:15.169774"
+  }
+]
