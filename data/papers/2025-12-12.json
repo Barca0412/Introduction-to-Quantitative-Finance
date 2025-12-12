@@ -1,0 +1,300 @@
+[
+  {
+    "id": "2512.10913v1",
+    "title": "Reinforcement Learning in Financial Decision Making: A Systematic Review of Performance, Challenges, and Implementation Strategies",
+    "abstract": "Reinforcement learning (RL) is an innovative approach to financial decision making, offering specialized solutions to complex investment problems where traditional methods fail. This review analyzes 167 articles from 2017--2025, focusing on market making, portfolio optimization, and algorithmic trading. It identifies key performance issues and challenges in RL for finance. Generally, RL offers advantages over traditional methods, particularly in market making. This study proposes a unified framework to address common concerns such as explainability, robustness, and deployment feasibility. Empirical evidence with synthetic data suggests that implementation quality and domain knowledge often outweigh algorithmic complexity. The study highlights the need for interpretable RL architectures for regulatory compliance, enhanced robustness in nonstationary environments, and standardized benchmarking protocols. Organizations should focus less on algorithm sophistication and more on market microstructure, regulatory constraints, and risk management in decision-making.",
+    "authors": [
+      "Mohammad Rezoanul Hoque",
+      "Md Meftahul Ferdaus",
+      "M. Kabir Hassan"
+    ],
+    "published": "2025-12-11",
+    "categories": [
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.10913v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.10913v1",
+    "fetched_at": "2025-12-12T08:34:39.488884"
+  },
+  {
+    "id": "2512.10823v1",
+    "title": "Option-Implied Zero-Coupon Yields: Unifying Bond and Equity Markets",
+    "abstract": "This paper addresses a critical inconsistency in models of the term structure of interest rates (TSIR), where zero-coupon bonds are priced under risk-neutral measures distinct from those used in equity markets. We propose a unified TSIR framework that treats zero-coupon bonds as European options with deterministic payoffs ensuring that they are priced under the same risk-neutral measure that governs equity derivatives. Using put-call parity, we extract zero-coupon bond implied yield curves from S&P 500 index options and compare them with the US daily treasury par yield curves. As the implied yield curves contain maturity time T and strike price K as independent variables, we investigate the K-dependence of the implied yield curve. Our findings, that at-the-money, option-implied yield curves provide the closest match to treasury par yield curves, support the view that the equity options market contains information that is highly relevant for the TSIR. By insisting that the risk-neutral measure used for bond valuation is the same as that revealed by equity derivatives, we offer a new organizing principle for future TSIR research.",
+    "authors": [
+      "Ting-Jung Lee",
+      "W. Brent Lindquist",
+      "Svetlozar T. Rachev",
+      "Abootaleb Shirvani"
+    ],
+    "published": "2025-12-11",
+    "categories": [
+      "q-fin.PR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.10823v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.10823v1",
+    "fetched_at": "2025-12-12T08:34:39.488926"
+  },
+  {
+    "id": "2512.10606v1",
+    "title": "Local and Global Balance in Financial Correlation Networks: an Application to Investment Decisions",
+    "abstract": "The global balance is a well-known indicator of the behavior of a signed network. Recent literature has introduced the concept of local balance as a measure of the contribution of a single node to the overall balance of the network. In the present research, we investigate the potential of using deviations of local balance from global balance as a criterion for selecting outperforming assets. The underlying idea is that, during financial crises, most assets in the investment universe behave similarly: losses are severe and widespread, and the global balance of the correlation-based signed network reaches its maximum value. Under such circumstances, standard diversification (mainly related to portfolio size) is unable to reduce risk or limit losses. Therefore, it may be useful to concentrate portfolio exposures on the few assets - if such assets exist-that behave differently from the rest of the market. We argue that these assets are those for which the local balance strongly departs from the global balance of the underlying signed network. The paper supports this hypothesis through an application using real financial data. The results, in both descriptive and predictive contexts, confirm the proposed intuition.",
+    "authors": [
+      "Paolo Bartesaghi",
+      "Rosanna Grassi",
+      "Pierpaolo Uberti"
+    ],
+    "published": "2025-12-11",
+    "categories": [
+      "q-fin.PM",
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.10606v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.10606v1",
+    "fetched_at": "2025-12-12T08:34:39.488954"
+  },
+  {
+    "id": "2512.10584v1",
+    "title": "Volatility time series modeling by single-qubit quantum circuit learning",
+    "abstract": "We employ single-qubit quantum circuit learning (QCL) to model the dynamics of volatility time series. To assess its effectiveness, we generate synthetic data using the Rational GARCH model, which is specifically designed to capture volatility asymmetry. Our results show that QCL-based volatility predictions preserve the negative return-volatility correlation, a hallmark of asymmetric volatility dynamics. Moreover, analysis of the Hurst exponent and multifractal characteristics indicates that the predicted series, like the original synthetic data, exhibits anti-persistent behavior and retains its multifractal structure.",
+    "authors": [
+      "Tetsuya Takaishi"
+    ],
+    "published": "2025-12-11",
+    "categories": [
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.10584v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.10584v1",
+    "fetched_at": "2025-12-12T08:34:39.488974"
+  },
+  {
+    "id": "2512.10121v1",
+    "title": "Workflow is All You Need: Escaping the \"Statistical Smoothing Trap\" via High-Entropy Information Foraging and Adversarial Pacing",
+    "abstract": "Central to long-form text generation in vertical domains is the \"impossible trinity\" confronting current large language models (LLMs): the simultaneous achievement of low hallucination, deep logical coherence, and personalized expression. This study establishes that this bottleneck arises from existing generative paradigms succumbing to the Statistical Smoothing Trap, a phenomenon that overlooks the high-entropy information acquisition and structured cognitive processes integral to expert-level writing. To address this limitation, we propose the DeepNews Framework, an agentic workflow that explicitly models the implicit cognitive processes of seasoned financial journalists. The framework integrates three core modules: first, a dual-granularity retrieval mechanism grounded in information foraging theory, which enforces a 10:1 saturated information input ratio to mitigate hallucinatory outputs; second, schema-guided strategic planning, a process leveraging domain expert knowledge bases (narrative schemas) and Atomic Blocks to forge a robust logical skeleton; third, adversarial constraint prompting, a technique deploying tactics including Rhythm Break and Logic Fog to disrupt the probabilistic smoothness inherent in model-generated text. Experiments delineate a salient Knowledge Cliff in deep financial reporting: content truthfulness collapses when retrieved context falls below 15,000 characters, while a high-redundancy input exceeding 30,000 characters stabilizes the Hallucination-Free Rate (HFR) above 85%. In an ecological validity blind test conducted with a top-tier Chinese technology media outlet, the DeepNews system--built on a previous-generation model (DeepSeek-V3-0324)-achieved a 25% submission acceptance rate, significantly outperforming the 0% acceptance rate of zero-shot generation by a state-of-the-art (SOTA) model (GPT-5).",
+    "authors": [
+      "Zhongjie Jiang"
+    ],
+    "published": "2025-12-10",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.CY",
+      "q-fin.GN"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.10121v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.10121v1",
+    "fetched_at": "2025-12-12T08:34:39.488993"
+  },
+  {
+    "id": "2512.10435v1",
+    "title": "Semantic Reconstruction of Adversarial Plagiarism: A Context-Aware Framework for Detecting and Restoring \"Tortured Phrases\" in Scientific Literature",
+    "abstract": "The integrity and reliability of scientific literature is facing a serious threat by adversarial text generation techniques, specifically from the use of automated paraphrasing tools to mask plagiarism. These tools generate \"tortured phrases\", statistically improbable synonyms (e.g. \"counterfeit consciousness\" for \"artificial intelligence\"), that preserve the local grammar while obscuring the original source. Most existing detection methods depend heavily on static blocklists or general-domain language models, which suffer from high false-negative rates for novel obfuscations and cannot determine the source of the plagiarized content. In this paper, we propose Semantic Reconstruction of Adversarial Plagiarism (SRAP), a framework designed not only to detect these anomalies but to mathematically recover the original terminology. We use a two-stage architecture: (1) statistical anomaly detection with a domain-specific masked language model (SciBERT) using token-level pseudo-perplexity, and (2) source-based semantic reconstruction using dense vector retrieval (FAISS) and sentence-level alignment (SBERT). Experiments on a parallel corpus of adversarial scientific text show that while zero-shot baselines fail completely (0.00 percent restoration accuracy), our retrieval-augmented approach achieves 23.67 percent restoration accuracy, significantly outperforming baseline methods. We also show that static decision boundaries are necessary for robust detection in jargon-heavy scientific text, since dynamic thresholding fails under high variance. SRAP enables forensic analysis by linking obfuscated expressions back to their most probable source documents.",
+    "authors": [
+      "Agniva Maiti",
+      "Prajwal Panth",
+      "Suresh Chandra Satapathy"
+    ],
+    "published": "2025-12-11",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.10435v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.10435v1",
+    "fetched_at": "2025-12-12T08:34:52.668518"
+  },
+  {
+    "id": "2512.10787v1",
+    "title": "Replace, Don't Expand: Mitigating Context Dilution in Multi-Hop RAG via Fixed-Budget Evidence Assembly",
+    "abstract": "Retrieval-Augmented Generation (RAG) systems often fail on multi-hop queries when the initial retrieval misses a bridge fact. Prior corrective approaches, such as Self-RAG, CRAG, and Adaptive-$k$, typically address this by \\textit{adding} more context or pruning existing lists. However, simply expanding the context window often leads to \\textbf{context dilution}, where distractors crowd out relevant information. We propose \\textbf{SEAL-RAG}, a training-free controller that adopts a \\textbf{``replace, don't expand''} strategy to fight context dilution under a fixed retrieval depth $k$. SEAL executes a (\\textbf{S}earch $\\rightarrow$ \\textbf{E}xtract $\\rightarrow$ \\textbf{A}ssess $\\rightarrow$ \\textbf{L}oop) cycle: it performs on-the-fly, entity-anchored extraction to build a live \\textit{gap specification} (missing entities/relations), triggers targeted micro-queries, and uses \\textit{entity-first ranking} to actively swap out distractors for gap-closing evidence. We evaluate SEAL-RAG against faithful re-implementations of Basic RAG, CRAG, Self-RAG, and Adaptive-$k$ in a shared environment on \\textbf{HotpotQA} and \\textbf{2WikiMultiHopQA}. On HotpotQA ($k=3$), SEAL improves answer correctness by \\textbf{+3--13 pp} and evidence precision by \\textbf{+12--18 pp} over Self-RAG. On 2WikiMultiHopQA ($k=5$), it outperforms Adaptive-$k$ by \\textbf{+8.0 pp} in accuracy and maintains \\textbf{96\\%} evidence precision compared to 22\\% for CRAG. These gains are statistically significant ($p<0.001$). By enforcing fixed-$k$ replacement, SEAL yields a predictable cost profile while ensuring the top-$k$ slots are optimized for precision rather than mere breadth. We release our code and data at https://github.com/mosherino/SEAL-RAG.",
+    "authors": [
+      "Moshe Lahmy",
+      "Roi Yozevitch"
+    ],
+    "published": "2025-12-11",
+    "categories": [
+      "cs.AI",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.10787v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.10787v1",
+    "fetched_at": "2025-12-12T08:35:22.424778"
+  },
+  {
+    "id": "2512.10713v1",
+    "title": "PACIFIC: a framework for generating benchmarks to check Precise Automatically Checked Instruction Following In Code",
+    "abstract": "Large Language Model (LLM)-based code assistants have emerged as a powerful application of generative AI, demonstrating impressive capabilities in code generation and comprehension. A key requirement for these systems is their ability to accurately follow user instructions. We present Precise Automatically Checked Instruction Following In Code (PACIFIC), a novel framework designed to automatically generate benchmarks that rigorously assess sequential instruction-following and code dry-running capabilities in LLMs, while allowing control over benchmark difficulty. PACIFIC produces benchmark variants with clearly defined expected outputs, enabling straightforward and reliable evaluation through simple output comparisons. In contrast to existing approaches that often rely on tool usage or agentic behavior, our work isolates and evaluates the LLM's intrinsic ability to reason through code behavior step-by-step without execution (dry running) and to follow instructions. Furthermore, our framework mitigates training data contamination by facilitating effortless generation of novel benchmark variations. We validate our framework by generating a suite of benchmarks spanning a range of difficulty levels and evaluating multiple state-of-the-art LLMs. Our results demonstrate that PACIFIC can produce increasingly challenging benchmarks that effectively differentiate instruction-following and dry running capabilities, even among advanced models. Overall, our framework offers a scalable, contamination-resilient methodology for assessing core competencies of LLMs in code-related tasks.",
+    "authors": [
+      "Itay Dreyfuss",
+      "Antonio Abu Nassar",
+      "Samuel Ackerman",
+      "Axel Ben David",
+      "Rami Katan",
+      "Orna Raz",
+      "Marcel Zalmanovici"
+    ],
+    "published": "2025-12-11",
+    "categories": [
+      "cs.SE",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.10713v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.10713v1",
+    "fetched_at": "2025-12-12T08:35:22.424826"
+  },
+  {
+    "id": "2512.10563v1",
+    "title": "NormCode: A Semi-Formal Language for Context-Isolated AI Planning",
+    "abstract": "Multistep workflows that chain large language model (LLM) calls suffer from context pollution: as information accumulates across steps, models hallucinate, confuse intermediate outputs, and lose track of task constraints. We present NormCode, a semiformal language for constructing plans of inferences, structured decompositions where each step operates in data isolation and receives only explicitly passed inputs, which eliminates crossstep contamination by design. NormCode enforces a strict separation between semantic operations (LLMdriven reasoning, nondeterministic) and syntactic operations (deterministic data restructuring), enabling precise cost and reliability tracing. The language exists in three isomorphic formats: .ncds for human authoring, .ncd for machine execution, and .ncn for human verification, supporting progressive formalization from sketch to production. We validate NormCode through two demonstrations: (1) a base X addition algorithm achieving 100 percent accuracy on arbitrary length inputs, and (2) self hosted execution of NormCode's own five phase compiler pipeline. The working orchestrator provides dependency driven scheduling, SQLite backed checkpointing, and loop management, making AI workflows auditable by design and addressing a critical need for transparency in high stakes domains such as legal reasoning, medical decision making, and financial analysis.",
+    "authors": [
+      "Xin Guan"
+    ],
+    "published": "2025-12-11",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.10563v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.10563v1",
+    "fetched_at": "2025-12-12T08:35:22.424846"
+  },
+  {
+    "id": "2512.10394v1",
+    "title": "RoboNeuron: A Modular Framework Linking Foundation Models and ROS for Embodied AI",
+    "abstract": "Current embodied AI systems face severe engineering impediments, primarily characterized by poor cross-scenario adaptability, rigid inter-module coupling, and fragmented inference acceleration. To overcome these limitations, we propose RoboNeuron, a universal deployment framework for embodied intelligence. RoboNeuron is the first framework to deeply integrate the cognitive capabilities of Large Language Models (LLMs) and Vision-Language-Action (VLA) models with the real-time execution backbone of the Robot Operating System (ROS). We utilize the Model Context Protocol (MCP) as a semantic bridge, enabling the LLM to dynamically orchestrate underlying robotic tools. The framework establishes a highly modular architecture that strictly decouples sensing, reasoning, and control by leveraging ROS's unified communication interfaces. Crucially, we introduce an automated tool to translate ROS messages into callable MCP functions, significantly streamlining development. RoboNeuron significantly enhances cross-scenario adaptability and component flexibility, while establishing a systematic platform for horizontal performance benchmarking, laying a robust foundation for scalable real-world embodied applications.",
+    "authors": [
+      "Weifan Guan",
+      "Huasen Xi",
+      "Chenxiao Zhang",
+      "Aosheng Li",
+      "Qinghao Hu",
+      "Jian Cheng"
+    ],
+    "published": "2025-12-11",
+    "categories": [
+      "cs.RO",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.10394v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.10394v1",
+    "fetched_at": "2025-12-12T08:35:22.424884"
+  },
+  {
+    "id": "2512.10372v1",
+    "title": "D2M: A Decentralized, Privacy-Preserving, Incentive-Compatible Data Marketplace for Collaborative Learning",
+    "abstract": "The rising demand for collaborative machine learning and data analytics calls for secure and decentralized data sharing frameworks that balance privacy, trust, and incentives. Existing approaches, including federated learning (FL) and blockchain-based data markets, fall short: FL often depends on trusted aggregators and lacks Byzantine robustness, while blockchain frameworks struggle with computation-intensive training and incentive integration.   We present \\prot, a decentralized data marketplace that unifies federated learning, blockchain arbitration, and economic incentives into a single framework for privacy-preserving data sharing. \\prot\\ enables data buyers to submit bid-based requests via blockchain smart contracts, which manage auctions, escrow, and dispute resolution. Computationally intensive training is delegated to \\cone\\ (\\uline{Co}mpute \\uline{N}etwork for \\uline{E}xecution), an off-chain distributed execution layer. To safeguard against adversarial behavior, \\prot\\ integrates a modified YODA protocol with exponentially growing execution sets for resilient consensus, and introduces Corrected OSMD to mitigate malicious or low-quality contributions from sellers. All protocols are incentive-compatible, and our game-theoretic analysis establishes honesty as the dominant strategy.   We implement \\prot\\ on Ethereum and evaluate it over benchmark datasets -- MNIST, Fashion-MNIST, and CIFAR-10 -- under varying adversarial settings. \\prot\\ achieves up to 99\\% accuracy on MNIST and 90\\% on Fashion-MNIST, with less than 3\\% degradation up to 30\\% Byzantine nodes, and 56\\% accuracy on CIFAR-10 despite its complexity. Our results show that \\prot\\ ensures privacy, maintains robustness under adversarial conditions, and scales efficiently with the number of participants, making it a practical foundation for real-world decentralized data sharing.",
+    "authors": [
+      "Yash Srivastava",
+      "Shalin Jain",
+      "Sneha Awathare",
+      "Nitin Awathare"
+    ],
+    "published": "2025-12-11",
+    "categories": [
+      "cs.CR",
+      "cs.AI",
+      "cs.DC",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.10372v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.10372v1",
+    "fetched_at": "2025-12-12T08:35:22.424911"
+  },
+  {
+    "id": "2512.10304v1",
+    "title": "Trustworthy Orchestration Artificial Intelligence by the Ten Criteria with Control-Plane Governance",
+    "abstract": "As Artificial Intelligence (AI) systems increasingly assume consequential decision-making roles, a widening gap has emerged between technical capabilities and institutional accountability. Ethical guidance alone is insufficient to counter this challenge; it demands architectures that embed governance into the execution fabric of the ecosystem. This paper presents the Ten Criteria for Trustworthy Orchestration AI, a comprehensive assurance framework that integrates human input, semantic coherence, audit and provenance integrity into a unified Control-Panel architecture. Unlike conventional agentic AI initiatives that primarily focus on AI-to-AI coordination, the proposed framework provides an umbrella of governance to the entire AI components, their consumers and human participants. By taking aspiration from international standards and Australia's National Framework for AI Assurance initiative, this work demonstrates that trustworthiness can be systematically incorporated (by engineering) into AI systems, ensuring the execution fabric remains verifiable, transparent, reproducible and under meaningful human control.",
+    "authors": [
+      "Byeong Ho Kang",
+      "Wenli Yang",
+      "Muhammad Bilal Amin"
+    ],
+    "published": "2025-12-11",
+    "categories": [
+      "cs.AI",
+      "cs.ET"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.10304v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.10304v1",
+    "fetched_at": "2025-12-12T08:35:22.424934"
+  },
+  {
+    "id": "2512.10236v1",
+    "title": "Design Space Exploration of DMA based Finer-Grain Compute Communication Overlap",
+    "abstract": "As both ML training and inference are increasingly distributed, parallelization techniques that shard (divide) ML model across GPUs of a distributed system, are often deployed. With such techniques, there is a high prevalence of data-dependent communication and computation operations where communication is exposed, leaving as high as 1.7x ideal performance on the table. Prior works harness the fact that ML model state and inputs are already sharded, and employ careful overlap of individual computation/communication shards. While such coarse-grain overlap is promising, in this work, we instead make a case for finer-grain compute-communication overlap which we term FiCCO, where we argue for finer-granularity, one-level deeper overlap than at shard-level, to unlock compute/communication overlap for a wider set of network topologies, finer-grain dataflow and more. We show that FiCCO opens up a wider design space of execution schedules than possible at shard-level alone. At the same time, decomposition of ML operations into smaller operations (done in both shard-based and finer-grain techniques) causes operation-level inefficiency losses. To balance the two, we first present a detailed characterization of these inefficiency losses, then present a design space of FiCCO schedules, and finally overlay the schedules with concomitant inefficiency signatures. Doing so helps us design heuristics that frameworks and runtimes can harness to select bespoke FiCCO schedules based on the nature of underlying ML operations. Finally, to further minimize contention inefficiencies inherent with operation overlap, we offload communication to GPU DMA engines. We evaluate several scenarios from realistic ML deployments and demonstrate that our proposed bespoke schedules deliver up to 1.6x speedup and our heuristics provide accurate guidance in 81% of unseen scenarios.",
+    "authors": [
+      "Shagnik Pal",
+      "Shaizeen Aga",
+      "Suchita Pati",
+      "Mahzabeen Islam",
+      "Lizy K. John"
+    ],
+    "published": "2025-12-11",
+    "categories": [
+      "cs.DC",
+      "cs.AR",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.10236v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.10236v1",
+    "fetched_at": "2025-12-12T08:35:22.424961"
+  },
+  {
+    "id": "2512.10206v1",
+    "title": "CP-Env: Evaluating Large Language Models on Clinical Pathways in a Controllable Hospital Environment",
+    "abstract": "Medical care follows complex clinical pathways that extend beyond isolated physician-patient encounters, emphasizing decision-making and transitions between different stages. Current benchmarks focusing on static exams or isolated dialogues inadequately evaluate large language models (LLMs) in dynamic clinical scenarios. We introduce CP-Env, a controllable agentic hospital environment designed to evaluate LLMs across end-to-end clinical pathways. CP-Env simulates a hospital ecosystem with patient and physician agents, constructing scenarios ranging from triage and specialist consultation to diagnostic testing and multidisciplinary team meetings for agent interaction. Following real hospital adaptive flow of healthcare, it enables branching, long-horizon task execution. We propose a three-tiered evaluation framework encompassing Clinical Efficacy, Process Competency, and Professional Ethics. Results reveal that most models struggle with pathway complexity, exhibiting hallucinations and losing critical diagnostic details. Interestingly, excessive reasoning steps can sometimes prove counterproductive, while top models tend to exhibit reduced tool dependency through internalized knowledge. CP-Env advances medical AI agents development through comprehensive end-to-end clinical evaluation. We provide the benchmark and evaluation tools for further research and development at https://github.com/SPIRAL-MED/CP-Env.",
+    "authors": [
+      "Yakun Zhu",
+      "Zhongzhen Huang",
+      "Qianhan Feng",
+      "Linjie Mu",
+      "Yannian Gu",
+      "Shaoting Zhang",
+      "Qi Dou",
+      "Xiaofan Zhang"
+    ],
+    "published": "2025-12-11",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.10206v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.10206v1",
+    "fetched_at": "2025-12-12T08:35:22.424992"
+  },
+  {
+    "id": "2512.10034v1",
+    "title": "DynaMate: An Autonomous Agent for Protein-Ligand Molecular Dynamics Simulations",
+    "abstract": "Force field-based molecular dynamics (MD) simulations are indispensable for probing the structure, dynamics, and functions of biomolecular systems, including proteins and protein-ligand complexes. Despite their broad utility in drug discovery and protein engineering, the technical complexity of MD setup, encompassing parameterization, input preparation, and software configuration, remains a major barrier for widespread and efficient usage. Agentic LLMs have demonstrated their capacity to autonomously execute multi-step scientific processes, and to date, they have not successfully been used to automate protein-ligand MD workflows. Here, we present DynaMate, a modular multi-agent framework that autonomously designs and executes complete MD workflows for both protein and protein-ligand systems, and offers free energy binding affinity calculations with the MM/PB(GB)SA method. The framework integrates dynamic tool use, web search, PaperQA, and a self-correcting behavior. DynaMate comprises three specialized modules, interacting to plan the experiment, perform the simulation, and analyze the results. We evaluated its performance across twelve benchmark systems of varying complexity, assessing success rate, efficiency, and adaptability. DynaMate reliably performed full MD simulations, corrected runtime errors through iterative reasoning, and produced meaningful analyses of protein-ligand interactions. This automated framework paves the way toward standardized, scalable, and time-efficient molecular modeling pipelines for future biomolecular and drug design applications.",
+    "authors": [
+      "Salomé Guilbert",
+      "Cassandra Masschelein",
+      "Jeremy Goumaz",
+      "Bohdan Naida",
+      "Philippe Schwaller"
+    ],
+    "published": "2025-12-10",
+    "categories": [
+      "cs.AI",
+      "cs.CE"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.10034v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.10034v1",
+    "fetched_at": "2025-12-12T08:35:22.425018"
+  },
+  {
+    "id": "2512.09366v2",
+    "title": "Meta-learning three-factor plasticity rules for structured credit assignment with sparse feedback",
+    "abstract": "Biological neural networks learn complex behaviors from sparse, delayed feedback using local synaptic plasticity, yet the mechanisms enabling structured credit assignment remain elusive. In contrast, artificial recurrent networks solving similar tasks typically rely on biologically implausible global learning rules or hand-crafted local updates. The space of local plasticity rules capable of supporting learning from delayed reinforcement remains largely unexplored. Here, we present a meta-learning framework that discovers local learning rules for structured credit assignment in recurrent networks trained with sparse feedback. Our approach interleaves local neo-Hebbian-like updates during task execution with an outer loop that optimizes plasticity parameters via \\textbf{tangent-propagation through learning}. The resulting three-factor learning rules enable long-timescale credit assignment using only local information and delayed rewards, offering new insights into biologically grounded mechanisms for learning in recurrent circuits.",
+    "authors": [
+      "Dimitra Maoutsa"
+    ],
+    "published": "2025-12-10",
+    "categories": [
+      "q-bio.NC",
+      "cond-mat.dis-nn",
+      "cs.LG",
+      "physics.bio-ph"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.09366v2",
+    "arxiv_url": "https://arxiv.org/abs/2512.09366v2",
+    "fetched_at": "2025-12-12T08:35:22.425203"
+  }
+]
