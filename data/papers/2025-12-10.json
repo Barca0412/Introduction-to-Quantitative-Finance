@@ -1,0 +1,490 @@
+[
+  {
+    "id": "2512.08890v1",
+    "title": "Modelling and valuation of catastrophe bonds across multiple regions",
+    "abstract": "The insurance-linked securities (ILS) market, as a form of alternative risk transfer, has been at the forefront of innovative risk-transfer solutions. The catastrophe bond (CAT bond) market now represents almost half of the entire ILS market and is growing steadily. Since CAT bonds are often tied to risks in different regions, we follow this idea by constructing different pricing models that incorporate various scenarios of dependence between catastrophe losses in different areas. Namely, we consider independent, proportional, and arbitrary two-dimensional distribution cases. We also derive a normal approximation of the prices. Finally, to include the market price of risk, we apply Wang's transform. We illustrate the differences between the scenarios and the performance of the approximation on the Property Claim Services data.",
+    "authors": [
+      "Krzysztof Burnecki",
+      "Marek Teuerle",
+      "Martyna Zdeb"
+    ],
+    "published": "2025-12-09",
+    "categories": [
+      "q-fin.PR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.08890v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.08890v1",
+    "fetched_at": "2025-12-10T08:33:48.918164"
+  },
+  {
+    "id": "2512.08851v1",
+    "title": "A New Application of Hoeffding's Inequality Can Give Traders Early Warning of Financial Regime Change",
+    "abstract": "Hoeffding's Inequality provides the maximum probability that a series of n draws from a bounded random variable differ from the variable's true expectation u by more than given tolerance t. The random variable is typically the error rate of a classifier in machine learning applications. Here, a trading strategy is premised on the assumption of an underlying distribution of causal factors, in other words, a market regime, and the random variable is the performance of that trading strategy. A larger deviation of observed performance from the trader's expectation u can be characterized as a lower probability that the financial regime supporting that strategy remains in force, and a higher probability of financial regime change. The changing Hoeffding probabilities can be used as an early warning indicator of this change.",
+    "authors": [
+      "Daniel Egger",
+      "Jacob Vestal"
+    ],
+    "published": "2025-12-09",
+    "categories": [
+      "q-fin.RM",
+      "math.PR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.08851v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.08851v1",
+    "fetched_at": "2025-12-10T08:33:48.918204"
+  },
+  {
+    "id": "2512.08348v1",
+    "title": "On the existence of personal equilibria",
+    "abstract": "We consider an investor who, while maximizing his/her expected utility, also compares the outcome to a reference entity. We recall the notion of personal equilibrium and show that, in a multistep, generically incomplete financial market model such an equilibrium indeed exists, under appropriate technical assumptions.",
+    "authors": [
+      "Laurence Carassus",
+      "Miklós Rásonyi"
+    ],
+    "published": "2025-12-09",
+    "categories": [
+      "q-fin.PM",
+      "math.PR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.08348v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.08348v1",
+    "fetched_at": "2025-12-10T08:33:48.918230"
+  },
+  {
+    "id": "2512.08270v1",
+    "title": "Reasoning Models Ace the CFA Exams",
+    "abstract": "Previous research has reported that large language models (LLMs) demonstrate poor performance on the Chartered Financial Analyst (CFA) exams. However, recent reasoning models have achieved strong results on graduate-level academic and professional examinations across various disciplines. In this paper, we evaluate state-of-the-art reasoning models on a set of mock CFA exams consisting of 980 questions across three Level I exams, two Level II exams, and three Level III exams. Using the same pass/fail criteria from prior studies, we find that most models clear all three levels. The models that pass, ordered by overall performance, are Gemini 3.0 Pro, Gemini 2.5 Pro, GPT-5, Grok 4, Claude Opus 4.1, and DeepSeek-V3.1. Specifically, Gemini 3.0 Pro achieves a record score of 97.6% on Level I. Performance is also strong on Level II, led by GPT-5 at 94.3%. On Level III, Gemini 2.5 Pro attains the highest score with 86.4% on multiple-choice questions while Gemini 3.0 Pro achieves 92.0% on constructed-response questions.",
+    "authors": [
+      "Jaisal Patel",
+      "Yunzhe Chen",
+      "Kaiwen He",
+      "Keyi Wang",
+      "David Li",
+      "Kairong Xiao",
+      "Xiao-Yang Liu"
+    ],
+    "published": "2025-12-09",
+    "categories": [
+      "cs.AI",
+      "cs.CL",
+      "q-fin.GN"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.08270v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.08270v1",
+    "fetched_at": "2025-12-10T08:33:48.918261"
+  },
+  {
+    "id": "2512.08000v1",
+    "title": "Analysis of Contagion in China's Stock Market: A Hawkes Process Perspective",
+    "abstract": "This study explores contagion in the Chinese stock market using Hawkes processes to analyze autocorrelation and cross-correlation in multivariate time series data. We examine whether market indices exhibit trending behavior and whether sector indices influence one another. By fitting self-exciting and inhibitory Hawkes processes to daily returns of indices like the Shanghai Composite, Shenzhen Component, and ChiNext, as well as sector indices (CSI Consumer, Healthcare, and Financial), we identify long-term dependencies and trending patterns, including upward, downward, and oversold rebound trends. Results show that during high trading activity, sector indices tend to sustain their trends, while low activity periods exhibit strong sector rotation. This research models stock price movements using spatiotemporal Hawkes processes, leveraging conditional intensity functions to explain sector rotation, advancing the understanding of financial contagion.",
+    "authors": [
+      "Junwei Yang"
+    ],
+    "published": "2025-12-08",
+    "categories": [
+      "q-fin.ST",
+      "q-fin.RM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.08000v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.08000v1",
+    "fetched_at": "2025-12-10T08:33:48.918279"
+  },
+  {
+    "id": "2512.08885v1",
+    "title": "Explainable Anomaly Detection for Industrial IoT Data Streams",
+    "abstract": "Industrial maintenance is being transformed by the Internet of Things and edge computing, generating continuous data streams that demand real-time, adaptive decision-making under limited computational resources. While data stream mining (DSM) addresses this challenge, most methods assume fully supervised settings, yet in practice, ground-truth labels are often delayed or unavailable. This paper presents a collaborative DSM framework that integrates unsupervised anomaly detection with interactive, human-in-the-loop learning to support maintenance decisions. We employ an online Isolation Forest and enhance interpretability using incremental Partial Dependence Plots and a feature importance score, derived from deviations of Individual Conditional Expectation curves from a fading average, enabling users to dynamically reassess feature relevance and adjust anomaly thresholds. We describe the real-time implementation and provide initial results for fault detection in a Jacquard loom unit. Ongoing work targets continuous monitoring to predict and explain imminent bearing failures.",
+    "authors": [
+      "Ana Rita Paupério",
+      "Diogo Risca",
+      "Afonso Lourenço",
+      "Goreti Marreiros",
+      "Ricardo Martins"
+    ],
+    "published": "2025-12-09",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.08885v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.08885v1",
+    "fetched_at": "2025-12-10T08:34:02.004331"
+  },
+  {
+    "id": "2512.08657v1",
+    "title": "Reusability in MLOps: Leveraging Ports and Adapters to Build a Microservices Architecture for the Maritime Domain",
+    "abstract": "ML-Enabled Systems (MLES) are inherently complex since they require multiple components to achieve their business goal. This experience report showcases the software architecture reusability techniques applied while building Ocean Guard, an MLES for anomaly detection in the maritime domain. In particular, it highlights the challenges and lessons learned to reuse the Ports and Adapters pattern to support building multiple microservices from a single codebase. This experience report hopes to inspire software engineers, machine learning engineers, and data scientists to apply the Hexagonal Architecture pattern to build their MLES.",
+    "authors": [
+      "Renato Cordeiro Ferreira",
+      "Aditya Dhinavahi",
+      "Rowanne Trapmann",
+      "Willem-Jan van den Heuvel"
+    ],
+    "published": "2025-12-09",
+    "categories": [
+      "cs.SE",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.08657v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.08657v1",
+    "fetched_at": "2025-12-10T08:34:02.004365"
+  },
+  {
+    "id": "2512.08277v1",
+    "title": "FedLAD: A Modular and Adaptive Testbed for Federated Log Anomaly Detection",
+    "abstract": "Log-based anomaly detection (LAD) is critical for ensuring the reliability of large-scale distributed systems. However, most existing LAD approaches assume centralized training, which is often impractical due to privacy constraints and the decentralized nature of system logs. While federated learning (FL) offers a promising alternative, there is a lack of dedicated testbeds tailored to the needs of LAD in federated settings. To address this, we present FedLAD, a unified platform for training and evaluating LAD models under FL constraints. FedLAD supports plug-and-play integration of diverse LAD models, benchmark datasets, and aggregation strategies, while offering runtime support for validation logging (self-monitoring), parameter tuning (self-configuration), and adaptive strategy control (self-adaptation). By enabling reproducible and scalable experimentation, FedLAD bridges the gap between FL frameworks and LAD requirements, providing a solid foundation for future research. Project code is publicly available at: https://github.com/AA-cityu/FedLAD.",
+    "authors": [
+      "Yihan Liao",
+      "Jacky Keung",
+      "Zhenyu Mao",
+      "Jingyu Zhang",
+      "Jialong Li"
+    ],
+    "published": "2025-12-09",
+    "categories": [
+      "cs.SE",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.08277v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.08277v1",
+    "fetched_at": "2025-12-10T08:34:02.004391"
+  },
+  {
+    "id": "2512.08169v1",
+    "title": "Information-Dense Reasoning for Efficient and Auditable Security Alert Triage",
+    "abstract": "Security Operations Centers face massive, heterogeneous alert streams under minute-level service windows, creating the Alert Triage Latency Paradox: verbose reasoning chains ensure accuracy and compliance but incur prohibitive latency and token costs, while minimal chains sacrifice transparency and auditability. Existing solutions fail: signature systems are brittle, anomaly methods lack actionability, and fully cloud-hosted LLMs raise latency, cost, and privacy concerns. We propose AIDR, a hybrid cloud-edge framework that addresses this trade-off through constrained information-density optimization. The core innovation is gradient-based compression of reasoning chains to retain only decision-critical steps--minimal evidence sufficient to justify predictions while respecting token and latency budgets. We demonstrate that this approach preserves decision-relevant information while minimizing complexity. We construct compact datasets by distilling alerts into 3-5 high-information bullets (68% token reduction), train domain-specialized experts via LoRA, and deploy a cloud-edge architecture: a cloud LLM routes alerts to on-premises experts generating SOAR-ready JSON. Experiments demonstrate AIDR achieves higher accuracy and 40.6% latency reduction versus Chain-of-Thought, with robustness to data corruption and out-of-distribution generalization, enabling auditable and efficient SOC triage with full data residency compliance.",
+    "authors": [
+      "Guangze Zhao",
+      "Yongzheng Zhang",
+      "Changbo Tian",
+      "Dan Xie",
+      "Hongri Liu",
+      "Bailing Wang"
+    ],
+    "published": "2025-12-09",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.08169v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.08169v1",
+    "fetched_at": "2025-12-10T08:34:02.004417"
+  },
+  {
+    "id": "2512.08920v1",
+    "title": "OSMO: Open-Source Tactile Glove for Human-to-Robot Skill Transfer",
+    "abstract": "Human video demonstrations provide abundant training data for learning robot policies, but video alone cannot capture the rich contact signals critical for mastering manipulation. We introduce OSMO, an open-source wearable tactile glove designed for human-to-robot skill transfer. The glove features 12 three-axis tactile sensors across the fingertips and palm and is designed to be compatible with state-of-the-art hand-tracking methods for in-the-wild data collection. We demonstrate that a robot policy trained exclusively on human demonstrations collected with OSMO, without any real robot data, is capable of executing a challenging contact-rich manipulation task. By equipping both the human and the robot with the same glove, OSMO minimizes the visual and tactile embodiment gap, enabling the transfer of continuous shear and normal force feedback while avoiding the need for image inpainting or other vision-based force inference. On a real-world wiping task requiring sustained contact pressure, our tactile-aware policy achieves a 72% success rate, outperforming vision-only baselines by eliminating contact-related failure modes. We release complete hardware designs, firmware, and assembly instructions to support community adoption.",
+    "authors": [
+      "Jessica Yin",
+      "Haozhi Qi",
+      "Youngsun Wi",
+      "Sayantan Kundu",
+      "Mike Lambeta",
+      "William Yang",
+      "Changhao Wang",
+      "Tingfan Wu",
+      "Jitendra Malik",
+      "Tess Hellebrekers"
+    ],
+    "published": "2025-12-09",
+    "categories": [
+      "cs.RO",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.08920v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.08920v1",
+    "fetched_at": "2025-12-10T08:34:31.612639"
+  },
+  {
+    "id": "2512.08769v1",
+    "title": "A Practical Guide for Designing, Developing, and Deploying Production-Grade Agentic AI Workflows",
+    "abstract": "Agentic AI marks a major shift in how autonomous systems reason, plan, and execute multi-step tasks. Unlike traditional single model prompting, agentic workflows integrate multiple specialized agents with different Large Language Models(LLMs), tool-augmented capabilities, orchestration logic, and external system interactions to form dynamic pipelines capable of autonomous decision-making and action. As adoption accelerates across industry and research, organizations face a central challenge: how to design, engineer, and operate production-grade agentic AI workflows that are reliable, observable, maintainable, and aligned with safety and governance requirements. This paper provides a practical, end-to-end guide for designing, developing, and deploying production-quality agentic AI systems. We introduce a structured engineering lifecycle encompassing workflow decomposition, multi-agent design patterns, Model Context Protocol(MCP), and tool integration, deterministic orchestration, Responsible-AI considerations, and environment-aware deployment strategies. We then present nine core best practices for engineering production-grade agentic AI workflows, including tool-first design over MCP, pure-function invocation, single-tool and single-responsibility agents, externalized prompt management, Responsible-AI-aligned model-consortium design, clean separation between workflow logic and MCP servers, containerized deployment for scalable operations, and adherence to the Keep it Simple, Stupid (KISS) principle to maintain simplicity and robustness. To demonstrate these principles in practice, we present a comprehensive case study: a multimodal news-analysis and media-generation workflow. By combining architectural guidance, operational patterns, and practical implementation insights, this paper offers a foundational reference to build robust, extensible, and production-ready agentic AI workflows.",
+    "authors": [
+      "Eranga Bandara",
+      "Ross Gore",
+      "Peter Foytik",
+      "Sachin Shetty",
+      "Ravi Mukkamala",
+      "Abdul Rahman",
+      "Xueping Liang",
+      "Safdar H. Bouk",
+      "Amin Hass",
+      "Sachini Rajapakse",
+      "Ng Wee Keong",
+      "Kasun De Zoysa",
+      "Aruna Withanage",
+      "Nilaan Loganathan"
+    ],
+    "published": "2025-12-09",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.08769v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.08769v1",
+    "fetched_at": "2025-12-10T08:34:31.612700"
+  },
+  {
+    "id": "2512.08629v1",
+    "title": "See-Control: A Multimodal Agent Framework for Smartphone Interaction with a Robotic Arm",
+    "abstract": "Recent advances in Multimodal Large Language Models (MLLMs) have enabled their use as intelligent agents for smartphone operation. However, existing methods depend on the Android Debug Bridge (ADB) for data transmission and action execution, limiting their applicability to Android devices. In this work, we introduce the novel Embodied Smartphone Operation (ESO) task and present See-Control, a framework that enables smartphone operation via direct physical interaction with a low-DoF robotic arm, offering a platform-agnostic solution. See-Control comprises three key components: (1) an ESO benchmark with 155 tasks and corresponding evaluation metrics; (2) an MLLM-based embodied agent that generates robotic control commands without requiring ADB or system back-end access; and (3) a richly annotated dataset of operation episodes, offering valuable resources for future research. By bridging the gap between digital agents and the physical world, See-Control provides a concrete step toward enabling home robots to perform smartphone-dependent tasks in realistic environments.",
+    "authors": [
+      "Haoyu Zhao",
+      "Weizhong Ding",
+      "Yuhao Yang",
+      "Zheng Tian",
+      "Linyi Yang",
+      "Kun Shao",
+      "Jun Wang"
+    ],
+    "published": "2025-12-09",
+    "categories": [
+      "cs.AI",
+      "cs.CV",
+      "cs.HC"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.08629v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.08629v1",
+    "fetched_at": "2025-12-10T08:34:31.612738"
+  },
+  {
+    "id": "2512.08463v1",
+    "title": "Using reinforcement learning to probe the role of feedback in skill acquisition",
+    "abstract": "Many high-performance human activities are executed with little or no external feedback: think of a figure skater landing a triple jump, a pitcher throwing a curveball for a strike, or a barista pouring latte art. To study the process of skill acquisition under fully controlled conditions, we bypass human subjects. Instead, we directly interface a generalist reinforcement learning agent with a spinning cylinder in a tabletop circulating water channel to maximize or minimize drag. This setup has several desirable properties. First, it is a physical system, with the rich interactions and complex dynamics that only the physical world has: the flow is highly chaotic and extremely difficult, if not impossible, to model or simulate accurately. Second, the objective -- drag minimization or maximization -- is easy to state and can be captured directly in the reward, yet good strategies are not obvious beforehand. Third, decades-old experimental studies provide recipes for simple, high-performance open-loop policies. Finally, the setup is inexpensive and far easier to reproduce than human studies. In our experiments we find that high-dimensional flow feedback lets the agent discover high-performance drag-control strategies with only minutes of real-world interaction. When we later replay the same action sequences without any feedback, we obtain almost identical performance. This shows that feedback, and in particular flow feedback, is not needed to execute the learned policy. Surprisingly, without flow feedback during training the agent fails to discover any well-performing policy in drag maximization, but still succeeds in drag minimization, albeit more slowly and less reliably. Our studies show that learning a high-performance skill can require richer information than executing it, and learning conditions can be kind or wicked depending solely on the goal, not on dynamics or policy complexity.",
+    "authors": [
+      "Antonio Terpin",
+      "Raffaello D'Andrea"
+    ],
+    "published": "2025-12-09",
+    "categories": [
+      "cs.AI",
+      "cs.LG",
+      "cs.RO",
+      "eess.SY"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.08463v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.08463v1",
+    "fetched_at": "2025-12-10T08:34:31.612759"
+  },
+  {
+    "id": "2512.08341v1",
+    "title": "Multi-Agent Deep Reinforcement Learning for Collaborative UAV Relay Networks under Jamming Atatcks",
+    "abstract": "The deployment of Unmanned Aerial Vehicle (UAV) swarms as dynamic communication relays is critical for next-generation tactical networks. However, operating in contested environments requires solving a complex trade-off, including maximizing system throughput while ensuring collision avoidance and resilience against adversarial jamming. Existing heuristic-based approaches often struggle to find effective solutions due to the dynamic and multi-objective nature of this problem. This paper formulates this challenge as a cooperative Multi-Agent Reinforcement Learning (MARL) problem, solved using the Centralized Training with Decentralized Execution (CTDE) framework. Our approach employs a centralized critic that uses global state information to guide decentralized actors which operate using only local observations. Simulation results show that our proposed framework significantly outperforms heuristic baselines, increasing the total system throughput by approximately 50% while simultaneously achieving a near-zero collision rate. A key finding is that the agents develop an emergent anti-jamming strategy without explicit programming. They learn to intelligently position themselves to balance the trade-off between mitigating interference from jammers and maintaining effective communication links with ground users.",
+    "authors": [
+      "Thai Duong Nguyen",
+      "Ngoc-Tan Nguyen",
+      "Thanh-Dao Nguyen",
+      "Nguyen Van Huynh",
+      "Dinh-Hieu Tran",
+      "Symeon Chatzinotas"
+    ],
+    "published": "2025-12-09",
+    "categories": [
+      "cs.NI",
+      "cs.LG",
+      "cs.MA"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.08341v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.08341v1",
+    "fetched_at": "2025-12-10T08:34:31.612787"
+  },
+  {
+    "id": "2512.08290v1",
+    "title": "Systematization of Knowledge: Security and Safety in the Model Context Protocol Ecosystem",
+    "abstract": "The Model Context Protocol (MCP) has emerged as the de facto standard for connecting Large Language Models (LLMs) to external data and tools, effectively functioning as the \"USB-C for Agentic AI.\" While this decoupling of context and execution solves critical interoperability challenges, it introduces a profound new threat landscape where the boundary between epistemic errors (hallucinations) and security breaches (unauthorized actions) dissolves. This Systematization of Knowledge (SoK) aims to provide a comprehensive taxonomy of risks in the MCP ecosystem, distinguishing between adversarial security threats (e.g., indirect prompt injection, tool poisoning) and epistemic safety hazards (e.g., alignment failures in distributed tool delegation). We analyze the structural vulnerabilities of MCP primitives, specifically Resources, Prompts, and Tools, and demonstrate how \"context\" can be weaponized to trigger unauthorized operations in multi-agent environments. Furthermore, we survey state-of-the-art defenses, ranging from cryptographic provenance (ETDI) to runtime intent verification, and conclude with a roadmap for securing the transition from conversational chatbots to autonomous agentic operating systems.",
+    "authors": [
+      "Shiva Gaire",
+      "Srijan Gyawali",
+      "Saroj Mishra",
+      "Suman Niroula",
+      "Dilip Thakur",
+      "Umesh Yadav"
+    ],
+    "published": "2025-12-09",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.08290v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.08290v1",
+    "fetched_at": "2025-12-10T08:34:31.612813"
+  },
+  {
+    "id": "2512.08188v1",
+    "title": "Embodied Tree of Thoughts: Deliberate Manipulation Planning with Embodied World Model",
+    "abstract": "World models have emerged as a pivotal component in robot manipulation planning, enabling agents to predict future environmental states and reason about the consequences of actions before execution. While video-generation models are increasingly adopted, they often lack rigorous physical grounding, leading to hallucinations and a failure to maintain consistency in long-horizon physical constraints. To address these limitations, we propose Embodied Tree of Thoughts (EToT), a novel Real2Sim2Real planning framework that leverages a physics-based interactive digital twin as an embodied world model. EToT formulates manipulation planning as a tree search expanded through two synergistic mechanisms: (1) Priori Branching, which generates diverse candidate execution paths based on semantic and spatial analysis; and (2) Reflective Branching, which utilizes VLMs to diagnose execution failures within the simulator and iteratively refine the planning tree with corrective actions. By grounding high-level reasoning in a physics simulator, our framework ensures that generated plans adhere to rigid-body dynamics and collision constraints. We validate EToT on a suite of short- and long-horizon manipulation tasks, where it consistently outperforms baselines by effectively predicting physical dynamics and adapting to potential failures. Website at https://embodied-tree-of-thoughts.github.io .",
+    "authors": [
+      "Wenjiang Xu",
+      "Cindy Wang",
+      "Rui Fang",
+      "Mingkang Zhang",
+      "Lusong Li",
+      "Jing Xu",
+      "Jiayuan Gu",
+      "Zecui Zeng",
+      "Rui Chen"
+    ],
+    "published": "2025-12-09",
+    "categories": [
+      "cs.RO",
+      "cs.AI",
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.08188v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.08188v1",
+    "fetched_at": "2025-12-10T08:34:31.612847"
+  },
+  {
+    "id": "2512.08145v1",
+    "title": "Chat with UAV -- Human-UAV Interaction Based on Large Language Models",
+    "abstract": "The future of UAV interaction systems is evolving from engineer-driven to user-driven, aiming to replace traditional predefined Human-UAV Interaction designs. This shift focuses on enabling more personalized task planning and design, thereby achieving a higher quality of interaction experience and greater flexibility, which can be used in many fileds, such as agriculture, aerial photography, logistics, and environmental monitoring. However, due to the lack of a common language between users and the UAVs, such interactions are often difficult to be achieved. The developments of Large Language Models possess the ability to understand nature languages and Robots' (UAVs') behaviors, marking the possibility of personalized Human-UAV Interaction. Recently, some HUI frameworks based on LLMs have been proposed, but they commonly suffer from difficulties in mixed task planning and execution, leading to low adaptability in complex scenarios. In this paper, we propose a novel dual-agent HUI framework. This framework constructs two independent LLM agents (a task planning agent, and an execution agent) and applies different Prompt Engineering to separately handle the understanding, planning, and execution of tasks. To verify the effectiveness and performance of the framework, we have built a task database covering four typical application scenarios of UAVs and quantified the performance of the HUI framework using three independent metrics. Meanwhile different LLM models are selected to control the UAVs with compared performance. Our user study experimental results demonstrate that the framework improves the smoothness of HUI and the flexibility of task execution in the tasks scenario we set up, effectively meeting users' personalized needs.",
+    "authors": [
+      "Haoran Wang",
+      "Zhuohang Chen",
+      "Guang Li",
+      "Bo Ma",
+      "Chuanghuang Li"
+    ],
+    "published": "2025-12-09",
+    "categories": [
+      "cs.RO",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.08145v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.08145v1",
+    "fetched_at": "2025-12-10T08:34:31.612872"
+  },
+  {
+    "id": "2512.08052v1",
+    "title": "An Introduction to Deep Reinforcement and Imitation Learning",
+    "abstract": "Embodied agents, such as robots and virtual characters, must continuously select actions to execute tasks effectively, solving complex sequential decision-making problems. Given the difficulty of designing such controllers manually, learning-based approaches have emerged as promising alternatives, most notably Deep Reinforcement Learning (DRL) and Deep Imitation Learning (DIL). DRL leverages reward signals to optimize behavior, while DIL uses expert demonstrations to guide learning. This document introduces DRL and DIL in the context of embodied agents, adopting a concise, depth-first approach to the literature. It is self-contained, presenting all necessary mathematical and machine learning concepts as they are needed. It is not intended as a survey of the field; rather, it focuses on a small set of foundational algorithms and techniques, prioritizing in-depth understanding over broad coverage. The material ranges from Markov Decision Processes to REINFORCE and Proximal Policy Optimization (PPO) for DRL, and from Behavioral Cloning to Dataset Aggregation (DAgger) and Generative Adversarial Imitation Learning (GAIL) for DIL.",
+    "authors": [
+      "Pedro Santana"
+    ],
+    "published": "2025-12-08",
+    "categories": [
+      "cs.RO",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.08052v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.08052v1",
+    "fetched_at": "2025-12-10T08:34:31.612890"
+  },
+  {
+    "id": "2512.08006v1",
+    "title": "Beyond Unified Models: A Service-Oriented Approach to Low Latency, Context Aware Phonemization for Real Time TTS",
+    "abstract": "Lightweight, real-time text-to-speech systems are crucial for accessibility. However, the most efficient TTS models often rely on lightweight phonemizers that struggle with context-dependent challenges. In contrast, more advanced phonemizers with a deeper linguistic understanding typically incur high computational costs, which prevents real-time performance.   This paper examines the trade-off between phonemization quality and inference speed in G2P-aided TTS systems, introducing a practical framework to bridge this gap. We propose lightweight strategies for context-aware phonemization and a service-oriented TTS architecture that executes these modules as independent services. This design decouples heavy context-aware components from the core TTS engine, effectively breaking the latency barrier and enabling real-time use of high-quality phonemization models. Experimental results confirm that the proposed system improves pronunciation soundness and linguistic accuracy while maintaining real-time responsiveness, making it well-suited for offline and end-device TTS applications.",
+    "authors": [
+      "Mahta Fetrat",
+      "Donya Navabi",
+      "Zahra Dehghanian",
+      "Morteza Abolghasemi",
+      "Hamid R. Rabiee"
+    ],
+    "published": "2025-12-08",
+    "categories": [
+      "cs.SD",
+      "cs.CL",
+      "eess.AS"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.08006v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.08006v1",
+    "fetched_at": "2025-12-10T08:34:31.612917"
+  },
+  {
+    "id": "2512.07785v1",
+    "title": "Automating High Energy Physics Data Analysis with LLM-Powered Agents",
+    "abstract": "We present a proof-of-principle study demonstrating the use of large language model (LLM) agents to automate a representative high energy physics (HEP) analysis. Using the Higgs boson diphoton cross-section measurement as a case study with ATLAS Open Data, we design a hybrid system that combines an LLM-based supervisor-coder agent with the Snakemake workflow manager. In this architecture, the workflow manager enforces reproducibility and determinism, while the agent autonomously generates, executes, and iteratively corrects analysis code in response to user instructions. We define quantitative evaluation metrics including success rate, error distribution, costs per specific task, and average number of API calls, to assess agent performance across multi-stage workflows. To characterize variability across architectures, we benchmark a representative selection of state-of-the-art LLMs spanning the Gemini and GPT-5 series, the Claude family, and leading open-weight models. While the workflow manager ensures deterministic execution of all analysis steps, the final outputs still show stochastic variation. Although we set the temperature to zero, other sampling parameters (e.g., top-p, top-k) remained at their defaults, and some reasoning-oriented models internally adjust these settings. Consequently, the models do not produce fully deterministic results. This study establishes the first LLM-agent-driven automated data-analysis framework in HEP, enabling systematic benchmarking of model capabilities, stability, and limitations in real-world scientific computing environments. The baseline code used in this work is available at https://huggingface.co/HWresearch/LLM4HEP. This work was accepted as a poster at the Machine Learning and the Physical Sciences (ML4PS) workshop at NeurIPS 2025. The initial submission was made on August 30, 2025.",
+    "authors": [
+      "Eli Gendreau-Distler",
+      "Joshua Ho",
+      "Dongwon Kim",
+      "Luc Tomas Le Pottier",
+      "Haichen Wang",
+      "Chengxi Yang"
+    ],
+    "published": "2025-12-08",
+    "categories": [
+      "physics.data-an",
+      "cs.AI",
+      "cs.LG",
+      "hep-ex"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.07785v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.07785v1",
+    "fetched_at": "2025-12-10T08:34:31.612945"
+  },
+  {
+    "id": "2512.07497v2",
+    "title": "How Do LLMs Fail In Agentic Scenarios? A Qualitative Analysis of Success and Failure Scenarios of Various LLMs in Agentic Simulations",
+    "abstract": "We investigate how large language models (LLMs) fail when operating as autonomous agents with tool-use capabilities. Using the Kamiwaza Agentic Merit Index (KAMI) v0.1 benchmark, we analyze 900 execution traces from three representative models - Granite 4 Small, Llama 4 Maverick, and DeepSeek V3.1 - across filesystem, text extraction, CSV analysis, and SQL scenarios. Rather than focusing on aggregate scores, we perform fine-grained, per-trial behavioral analysis to surface the strategies that enable successful multi-step tool execution and the recurrent failure modes that undermine reliability. Our findings show that model scale alone does not predict agentic robustness: Llama 4 Maverick (400B) performs only marginally better than Granite 4 Small (32B) in some uncertainty-driven tasks, while DeepSeek V3.1's superior reliability derives primarily from post-training reinforcement learning rather than architecture or size. Across models, we identify four recurring failure archetypes: premature action without grounding, over-helpfulness that substitutes missing entities, vulnerability to distractor-induced context pollution, and fragile execution under load. These patterns highlight the need for agentic evaluation methods that emphasize interactive grounding, recovery behavior, and environment-aware adaptation, suggesting that reliable enterprise deployment requires not just stronger models but deliberate training and design choices that reinforce verification, constraint discovery, and adherence to source-of-truth data.",
+    "authors": [
+      "JV Roig"
+    ],
+    "published": "2025-12-08",
+    "categories": [
+      "cs.AI",
+      "cs.SE"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.07497v2",
+    "arxiv_url": "https://arxiv.org/abs/2512.07497v2",
+    "fetched_at": "2025-12-10T08:34:31.613013"
+  },
+  {
+    "id": "2512.07917v1",
+    "title": "CFD-copilot: leveraging domain-adapted large language model and model context protocol to enhance simulation automation",
+    "abstract": "Configuring computational fluid dynamics (CFD) simulations requires significant expertise in physics modeling and numerical methods, posing a barrier to non-specialists. Although automating scientific tasks with large language models (LLMs) has attracted attention, applying them to the complete, end-to-end CFD workflow remains a challenge due to its stringent domain-specific requirements. We introduce CFD-copilot, a domain-specialized LLM framework designed to facilitate natural language-driven CFD simulation from setup to post-processing. The framework employs a fine-tuned LLM to directly translate user descriptions into executable CFD setups. A multi-agent system integrates the LLM with simulation execution, automatic error correction, and result analysis. For post-processing, the framework utilizes the model context protocol (MCP), an open standard that decouples LLM reasoning from external tool execution. This modular design allows the LLM to interact with numerous specialized post-processing functions through a unified and scalable interface, improving the automation of data extraction and analysis. The framework was evaluated on benchmarks including the NACA~0012 airfoil and the three-element 30P-30N airfoil. The results indicate that domain-specific adaptation and the incorporation of the MCP jointly enhance the reliability and efficiency of LLM-driven engineering workflows.",
+    "authors": [
+      "Zhehao Dong",
+      "Shanghai Du",
+      "Zhen Lu",
+      "Yue Yang"
+    ],
+    "published": "2025-12-08",
+    "categories": [
+      "cs.SE",
+      "cs.AI",
+      "physics.flu-dyn"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.07917v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.07917v1",
+    "fetched_at": "2025-12-10T08:34:31.613036"
+  },
+  {
+    "id": "2512.08088v1",
+    "title": "Adaptation of Embedding Models to Financial Filings via LLM Distillation",
+    "abstract": "Despite advances in generative large language models (LLMs), practical application of specialized conversational AI agents remains constrained by computation costs, latency requirements, and the need for precise domain-specific relevance measures. While existing embedding models address the first two constraints, they underperform on information retrieval in specialized domains like finance. This paper introduces a scalable pipeline that trains specialized models from an unlabeled corpus using a general purpose retrieval embedding model as foundation. Our method yields an average of 27.7% improvement in MRR$\\texttt{@}$5, 44.6% improvement in mean DCG$\\texttt{@}$5 across 14 financial filing types measured over 21,800 query-document pairs, and improved NDCG on 3 of 4 document classes in FinanceBench. We adapt retrieval embeddings (bi-encoder) for RAG, not LLM generators, using LLM-judged relevance to distill domain knowledge into a compact retriever. There are prior works which pair synthetically generated queries with real passages to directly fine-tune the retrieval model. Our pipeline differs from these by introducing interaction between student and teacher models that interleaves retrieval-based mining of hard positive/negative examples from the unlabeled corpus with iterative retraining of the student model's weights using these examples. Each retrieval iteration uses the refined student model to mine the corpus for progressively harder training examples for the subsequent training iteration. The methodology provides a cost-effective solution to bridging the gap between general-purpose models and specialized domains without requiring labor-intensive human annotation.",
+    "authors": [
+      "Eliot Brenner",
+      "Dominic Seyler",
+      "Manjunath Hegde",
+      "Andrei Simion",
+      "Koustuv Dasgupta",
+      "Bing Xiang"
+    ],
+    "published": "2025-12-08",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.08088v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.08088v1",
+    "fetched_at": "2025-12-10T08:35:59.949765"
+  },
+  {
+    "id": "2512.08567v1",
+    "title": "A Hybrid Model for Stock Market Forecasting: Integrating News Sentiment and Time Series Data with Graph Neural Networks",
+    "abstract": "Stock market prediction is a long-standing challenge in finance, as accurate forecasts support informed investment decisions. Traditional models rely mainly on historical prices, but recent work shows that financial news can provide useful external signals. This paper investigates a multimodal approach that integrates companies' news articles with their historical stock data to improve prediction performance. We compare a Graph Neural Network (GNN) model with a baseline LSTM model. Historical data for each company is encoded using an LSTM, while news titles are embedded with a language model. These embeddings form nodes in a heterogeneous graph, and GraphSAGE is used to capture interactions between articles, companies, and industries. We evaluate two targets: a binary direction-of-change label and a significance-based label. Experiments on the US equities and Bloomberg datasets show that the GNN outperforms the LSTM baseline, achieving 53% accuracy on the first target and a 4% precision gain on the second. Results also indicate that companies with more associated news yield higher prediction accuracy. Moreover, headlines contain stronger predictive signals than full articles, suggesting that concise news summaries play an important role in short-term market reactions.",
+    "authors": [
+      "Nader Sadek",
+      "Mirette Moawad",
+      "Christina Naguib",
+      "Mariam Elzahaby"
+    ],
+    "published": "2025-12-09",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.08567v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.08567v1",
+    "fetched_at": "2025-12-10T08:36:35.893286"
+  }
+]
