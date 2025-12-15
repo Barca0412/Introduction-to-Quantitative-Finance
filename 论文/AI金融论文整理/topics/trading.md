@@ -2,7 +2,15 @@
 
 交易策略、市场微观结构与高频交易
 
-> 共收录 **19** 篇论文 | [返回索引](../README.md)
+> 共收录 **20** 篇论文 | [返回索引](../README.md)
+
+---
+
+### [High-Frequency Analysis of a Trading Game with Transient Price Impact](https://arxiv.org/abs/2512.11765v1)
+
+**日期**: 2025-12-15 | **作者**: Marcel Nutz, Alessandro Prosperi
+
+**标签**: `Market Microstructure`
 
 ---
 

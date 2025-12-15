@@ -2,7 +2,55 @@
 
 大语言模型与金融智能体在量化金融中的应用
 
-> 共收录 **35** 篇论文 | [返回索引](../README.md)
+> 共收录 **41** 篇论文 | [返回索引](../README.md)
+
+---
+
+### [Workflow is All You Need: Escaping the "Statistical Smoothing Trap" via High-Entropy Information Foraging and Adversarial Pacing](https://arxiv.org/abs/2512.10121v1)
+
+**日期**: 2025-12-15 | **作者**: Zhongjie Jiang
+
+**标签**: `NLP`
+
+---
+
+### [Reasoning Models Ace the CFA Exams](https://arxiv.org/abs/2512.08270v1)
+
+**日期**: 2025-12-15 | **作者**: Jaisal Patel, Yunzhe Chen, Kaiwen He et al.
+
+**标签**: `NLP`
+
+---
+
+### [MedAI: Evaluating TxAgent's Therapeutic Agentic Reasoning in the NeurIPS CURE-Bench Competition](https://arxiv.org/abs/2512.11682v1)
+
+**日期**: 2025-12-15 | **作者**: Tim Cofala, Christian Kalfar, Jingge Xiao et al.
+
+**标签**: `Deep Learning` `Financial Agent`
+
+---
+
+### [TriFlow: A Progressive Multi-Agent Framework for Intelligent Trip Planning](https://arxiv.org/abs/2512.11271v1)
+
+**日期**: 2025-12-15 | **作者**: Yuxing Chen, Basem Suleiman, Qifan Chen
+
+**标签**: `Financial Agent`
+
+---
+
+### [A-LAMP: Agentic LLM-Based Framework for Automated MDP Modeling and Policy Generation](https://arxiv.org/abs/2512.11270v1)
+
+**日期**: 2025-12-15 | **作者**: Hong Je-Gal, Chan-Bin Yi, Hyun-Suk Lee
+
+**标签**: `LLM` `Financial Agent`
+
+---
+
+### [A Hybrid Model for Stock Market Forecasting: Integrating News Sentiment and Time Series Data with Graph Neural Networks](https://arxiv.org/abs/2512.08567v1)
+
+**日期**: 2025-12-15 | **作者**: Nader Sadek, Mirette Moawad, Christina Naguib et al.
+
+**标签**: `Deep Learning` `Sentiment Analysis` `Graph Neural Network`
 
 ---
 

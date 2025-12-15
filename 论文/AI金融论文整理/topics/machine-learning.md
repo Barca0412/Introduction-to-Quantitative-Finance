@@ -2,7 +2,71 @@
 
 机器学习在量化金融中的应用，包括深度学习、强化学习、图神经网络、Transformer等
 
-> 共收录 **78** 篇论文 | [返回索引](../README.md)
+> 共收录 **86** 篇论文 | [返回索引](../README.md)
+
+---
+
+### [Transfer Learning (Il)liquidity](https://arxiv.org/abs/2512.11731v1)
+
+**日期**: 2025-12-15 | **作者**: Andrea Conti, Giacomo Morelli
+
+**标签**: `Deep Learning`
+
+---
+
+### [Reinforcement Learning in Financial Decision Making: A Systematic Review of Performance, Challenges, and Implementation Strategies](https://arxiv.org/abs/2512.10913v1)
+
+**日期**: 2025-12-15 | **作者**: Mohammad Rezoanul Hoque, Md Meftahul Ferdaus, M. Kabir Hassan
+
+**标签**: `Reinforcement Learning`
+
+---
+
+### [Volatility time series modeling by single-qubit quantum circuit learning](https://arxiv.org/abs/2512.10584v1)
+
+**日期**: 2025-12-15 | **作者**: Tetsuya Takaishi
+
+**标签**: `Deep Learning`
+
+---
+
+### [On Inhomogeneous Affine Volterra Processes: Stationarity and Applications to the Volterra Heston Model](https://arxiv.org/abs/2512.09590v1)
+
+**日期**: 2025-12-15 | **作者**: Emmanuel Gnabeyeu, Gilles Pagès, Mathieu Rosenbaum
+
+**标签**: `Deep Learning`
+
+---
+
+### [Exploratory Mean-Variance with Jumps: An Equilibrium Approach](https://arxiv.org/abs/2512.09224v1)
+
+**日期**: 2025-12-15 | **作者**: Yuling Max Chen, Bin Li, David Saunders
+
+**标签**: `Portfolio Optimization` `Deep Learning`
+
+---
+
+### [A New Application of Hoeffding's Inequality Can Give Traders Early Warning of Financial Regime Change](https://arxiv.org/abs/2512.08851v1)
+
+**日期**: 2025-12-15 | **作者**: Daniel Egger, Jacob Vestal
+
+**标签**: `Risk Management` `Reinforcement Learning`
+
+---
+
+### [MedAI: Evaluating TxAgent's Therapeutic Agentic Reasoning in the NeurIPS CURE-Bench Competition](https://arxiv.org/abs/2512.11682v1)
+
+**日期**: 2025-12-15 | **作者**: Tim Cofala, Christian Kalfar, Jingge Xiao et al.
+
+**标签**: `Deep Learning` `Financial Agent`
+
+---
+
+### [A Hybrid Model for Stock Market Forecasting: Integrating News Sentiment and Time Series Data with Graph Neural Networks](https://arxiv.org/abs/2512.08567v1)
+
+**日期**: 2025-12-15 | **作者**: Nader Sadek, Mirette Moawad, Christina Naguib et al.
+
+**标签**: `Deep Learning` `Sentiment Analysis` `Graph Neural Network`
 
 ---
 

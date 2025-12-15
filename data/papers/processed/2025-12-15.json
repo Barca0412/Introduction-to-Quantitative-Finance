@@ -1,0 +1,1107 @@
+[
+  {
+    "id": "2512.11765v1",
+    "title": "High-Frequency Analysis of a Trading Game with Transient Price Impact",
+    "abstract": "We study the high-frequency limit of an $n$-trader optimal execution game in discrete time. Traders face transient price impact of Obizhaeva--Wang type in addition to quadratic instantaneous trading costs $θ(ΔX_t)^2$ on each transaction $ΔX_t$. There is a unique Nash equilibrium in which traders choose liquidation strategies minimizing expected execution costs. In the high-frequency limit where the grid of trading dates converges to the continuous interval $[0,T]$, the discrete equilibrium inventories converge at rate $1/N$ to the continuous-time equilibrium of an Obizhaeva--Wang model with additional quadratic costs $\\vartheta_0(ΔX_0)^2$ and $\\vartheta_T(ΔX_T)^2$ on initial and terminal block trades, where $\\vartheta_0=(n-1)/2$ and $\\vartheta_T=1/2$. The latter model was introduced by Campbell and Nutz as the limit of continuous-time equilibria with vanishing instantaneous costs. Our results extend and refine previous results of Schied, Strehle, and Zhang for the particular case $n=2$ where $\\vartheta_0=\\vartheta_T=1/2$. In particular, we show how the coefficients $\\vartheta_0=(n-1)/2$ and $\\vartheta_T=1/2$ arise endogenously in the high-frequency limit: the initial and terminal block costs of the continuous-time model are identified as the limits of the cumulative discrete instantaneous costs incurred over small neighborhoods of $0$ and $T$, respectively, and these limits are independent of $θ>0$. By contrast, when $θ=0$ the discrete-time equilibrium strategies and costs exhibit persistent oscillations and admit no high-frequency limit, mirroring the non-existence of continuous-time equilibria without boundary block costs. Our results show that two different types of trading frictions -- a fine time discretization and small instantaneous costs in continuous time -- have similar regularizing effects and select a canonical model in the limit.",
+    "authors": [
+      "Marcel Nutz",
+      "Alessandro Prosperi"
+    ],
+    "published": "2025-12-12",
+    "categories": [
+      "q-fin.TR",
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.11765v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.11765v1",
+    "fetched_at": "2025-12-15T11:00:43.791729",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "Market Microstructure"
+    ],
+    "key_contributions": [],
+    "processed_at": "2025-12-15T11:05:44.571229"
+  },
+  {
+    "id": "2512.11731v1",
+    "title": "Transfer Learning (Il)liquidity",
+    "abstract": "The estimation of the Risk Neutral Density (RND) implicit in option prices is challenging, especially in illiquid markets. We introduce the Deep Log-Sum-Exp Neural Network, an architecture that leverages Deep and Transfer learning to address RND estimation in the presence of irregular and illiquid strikes. We prove key statistical properties of the model and the consistency of the estimator. We illustrate the benefits of transfer learning to improve the estimation of the RND in severe illiquidity conditions through Monte Carlo simulations, and we test it empirically on SPX data, comparing it with popular estimation methods. Overall, our framework shows recovery of the RND in conditions of extreme illiquidity with as few as three option quotes.",
+    "authors": [
+      "Andrea Conti",
+      "Giacomo Morelli"
+    ],
+    "published": "2025-12-12",
+    "categories": [
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.11731v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.11731v1",
+    "fetched_at": "2025-12-15T11:00:43.791758",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "Deep Learning"
+    ],
+    "key_contributions": [],
+    "processed_at": "2025-12-15T11:05:44.571240"
+  },
+  {
+    "id": "2512.11666v1",
+    "title": "Risk Limited Asset Allocation with a Budget Threshold Utility Function and Leptokurtotic Distributions of Returns",
+    "abstract": "An analytical solution to single-horizon asset allocation for an investor with a piecewise-linear utility function, called herein the \"budget threshold utility,\" and exogenous position limits is presented. The resulting functional form has a surprisingly simple structure and can be readily interpreted as representing the addition of a simple \"risk cost\" to otherwise frictionless trading.",
+    "authors": [
+      "Graham L Giller"
+    ],
+    "published": "2025-12-12",
+    "categories": [
+      "q-fin.PM",
+      "q-fin.RM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.11666v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.11666v1",
+    "fetched_at": "2025-12-15T11:00:43.791776",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "Portfolio Optimization",
+      "Risk Management"
+    ],
+    "key_contributions": [],
+    "processed_at": "2025-12-15T11:05:44.571247"
+  },
+  {
+    "id": "2512.11649v1",
+    "title": "Unified Approach to Portfolio Optimization using the `Gain Probability Density Function' and Applications",
+    "abstract": "This article proposes a unified framework for portfolio optimization (PO), recognizing an object called the `gain probability density function (PDF)' as the fundamental object of the problem from which any objective function could be derived. The gain PDF has the advantage of being 1-dimensional for any given portfolio and thus is easy to visualize and interpret. The framework allows us to naturally incorporate all existing approaches (Markowitz, CVaR-deviation, higher moments...) and represents an interesting basis to develop new approaches. It leads us to propose a method to directly match a target PDF defined by the portfolio manager, giving them maximal control on the PO problem and moving beyond approaches that focus only on expected return and risk. As an example, we develop an application involving a new objective function to control high profits, to be applied after a conventional PO (including expected return and risk criteria) and thus leading to sub-optimality w.r.t. the conventional objective function. We then propose a methodology to quantify a cost associated with this optimality deviation in a common budget unit, providing a meaningful information to portfolio managers. Numerical experiments considering portfolios with energy-producing assets illustrate our approach. The framework is flexible and can be applied to other sectors (financial assets, etc).",
+    "authors": [
+      "Jean-Patrick Mascomère",
+      "Jérémie Messud",
+      "Yagnik Chatterjee",
+      "Isabel Barros Garcia"
+    ],
+    "published": "2025-12-12",
+    "categories": [
+      "q-fin.PM",
+      "stat.AP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.11649v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.11649v1",
+    "fetched_at": "2025-12-15T11:00:43.791794",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "Portfolio Optimization"
+    ],
+    "key_contributions": [],
+    "processed_at": "2025-12-15T11:05:44.571253"
+  },
+  {
+    "id": "2512.11430v1",
+    "title": "Pareto-optimal reinsurance under dependence uncertainty",
+    "abstract": "This paper studies Pareto-optimal reinsurance design in a monopolistic market with multiple primary insurers and a single reinsurer, all with heterogeneous risk preferences. The risk preferences are characterized by a family of risk measures, called Range Value-at-Risk (RVaR), which includes both Value-at-Risk (VaR) and Expected Shortfall (ES) as special cases. Recognizing the practical difficulty of accurately estimating the dependence structure among the insurers' losses, we adopt a robust optimization approach that assumes the marginal distributions are known while leaving the dependence structure unspecified. We provide a complete characterization of optimal indemnity schedules under the worst-case scenario, showing that the infinite-dimensional optimization problem can be reduced to a tractable finite-dimensional problem involving only two or three parameters for each indemnity function. Additionally, for independent and identically distributed risks, we exploit the argument of asymptotic normality to derive optimal two-parameter layer contracts. Finally, numerical applications are considered in a two-insurer setting to illustrate the influence of the dependence structures and heterogeneous risk tolerances on optimal strategies and the corresponding risk evaluation.",
+    "authors": [
+      "Tim J. Boonen",
+      "Xia Han",
+      "Peng Liu",
+      "Jiacong Wang"
+    ],
+    "published": "2025-12-12",
+    "categories": [
+      "q-fin.RM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.11430v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.11430v1",
+    "fetched_at": "2025-12-15T11:00:43.791811",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "Risk Management"
+    ],
+    "key_contributions": [],
+    "processed_at": "2025-12-15T11:05:44.571258"
+  },
+  {
+    "id": "2512.10913v1",
+    "title": "Reinforcement Learning in Financial Decision Making: A Systematic Review of Performance, Challenges, and Implementation Strategies",
+    "abstract": "Reinforcement learning (RL) is an innovative approach to financial decision making, offering specialized solutions to complex investment problems where traditional methods fail. This review analyzes 167 articles from 2017--2025, focusing on market making, portfolio optimization, and algorithmic trading. It identifies key performance issues and challenges in RL for finance. Generally, RL offers advantages over traditional methods, particularly in market making. This study proposes a unified framework to address common concerns such as explainability, robustness, and deployment feasibility. Empirical evidence with synthetic data suggests that implementation quality and domain knowledge often outweigh algorithmic complexity. The study highlights the need for interpretable RL architectures for regulatory compliance, enhanced robustness in nonstationary environments, and standardized benchmarking protocols. Organizations should focus less on algorithm sophistication and more on market microstructure, regulatory constraints, and risk management in decision-making.",
+    "authors": [
+      "Mohammad Rezoanul Hoque",
+      "Md Meftahul Ferdaus",
+      "M. Kabir Hassan"
+    ],
+    "published": "2025-12-11",
+    "categories": [
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.10913v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.10913v1",
+    "fetched_at": "2025-12-15T11:00:43.791827",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "Reinforcement Learning"
+    ],
+    "key_contributions": [],
+    "processed_at": "2025-12-15T11:05:44.571262"
+  },
+  {
+    "id": "2512.10823v1",
+    "title": "Option-Implied Zero-Coupon Yields: Unifying Bond and Equity Markets",
+    "abstract": "This paper addresses a critical inconsistency in models of the term structure of interest rates (TSIR), where zero-coupon bonds are priced under risk-neutral measures distinct from those used in equity markets. We propose a unified TSIR framework that treats zero-coupon bonds as European options with deterministic payoffs ensuring that they are priced under the same risk-neutral measure that governs equity derivatives. Using put-call parity, we extract zero-coupon bond implied yield curves from S&P 500 index options and compare them with the US daily treasury par yield curves. As the implied yield curves contain maturity time T and strike price K as independent variables, we investigate the K-dependence of the implied yield curve. Our findings, that at-the-money, option-implied yield curves provide the closest match to treasury par yield curves, support the view that the equity options market contains information that is highly relevant for the TSIR. By insisting that the risk-neutral measure used for bond valuation is the same as that revealed by equity derivatives, we offer a new organizing principle for future TSIR research.",
+    "authors": [
+      "Ting-Jung Lee",
+      "W. Brent Lindquist",
+      "Svetlozar T. Rachev",
+      "Abootaleb Shirvani"
+    ],
+    "published": "2025-12-11",
+    "categories": [
+      "q-fin.PR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.10823v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.10823v1",
+    "fetched_at": "2025-12-15T11:00:43.791845",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "Options"
+    ],
+    "key_contributions": [],
+    "processed_at": "2025-12-15T11:05:44.571267"
+  },
+  {
+    "id": "2512.10606v1",
+    "title": "Local and Global Balance in Financial Correlation Networks: an Application to Investment Decisions",
+    "abstract": "The global balance is a well-known indicator of the behavior of a signed network. Recent literature has introduced the concept of local balance as a measure of the contribution of a single node to the overall balance of the network. In the present research, we investigate the potential of using deviations of local balance from global balance as a criterion for selecting outperforming assets. The underlying idea is that, during financial crises, most assets in the investment universe behave similarly: losses are severe and widespread, and the global balance of the correlation-based signed network reaches its maximum value. Under such circumstances, standard diversification (mainly related to portfolio size) is unable to reduce risk or limit losses. Therefore, it may be useful to concentrate portfolio exposures on the few assets - if such assets exist-that behave differently from the rest of the market. We argue that these assets are those for which the local balance strongly departs from the global balance of the underlying signed network. The paper supports this hypothesis through an application using real financial data. The results, in both descriptive and predictive contexts, confirm the proposed intuition.",
+    "authors": [
+      "Paolo Bartesaghi",
+      "Rosanna Grassi",
+      "Pierpaolo Uberti"
+    ],
+    "published": "2025-12-11",
+    "categories": [
+      "q-fin.PM",
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.10606v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.10606v1",
+    "fetched_at": "2025-12-15T11:00:43.791861",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "Portfolio Optimization"
+    ],
+    "key_contributions": [],
+    "processed_at": "2025-12-15T11:05:44.571271"
+  },
+  {
+    "id": "2512.10584v1",
+    "title": "Volatility time series modeling by single-qubit quantum circuit learning",
+    "abstract": "We employ single-qubit quantum circuit learning (QCL) to model the dynamics of volatility time series. To assess its effectiveness, we generate synthetic data using the Rational GARCH model, which is specifically designed to capture volatility asymmetry. Our results show that QCL-based volatility predictions preserve the negative return-volatility correlation, a hallmark of asymmetric volatility dynamics. Moreover, analysis of the Hurst exponent and multifractal characteristics indicates that the predicted series, like the original synthetic data, exhibits anti-persistent behavior and retains its multifractal structure.",
+    "authors": [
+      "Tetsuya Takaishi"
+    ],
+    "published": "2025-12-11",
+    "categories": [
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.10584v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.10584v1",
+    "fetched_at": "2025-12-15T11:00:43.791878",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "Deep Learning"
+    ],
+    "key_contributions": [],
+    "processed_at": "2025-12-15T11:05:44.571275"
+  },
+  {
+    "id": "2512.10121v1",
+    "title": "Workflow is All You Need: Escaping the \"Statistical Smoothing Trap\" via High-Entropy Information Foraging and Adversarial Pacing",
+    "abstract": "Central to long-form text generation in vertical domains is the \"impossible trinity\" confronting current large language models (LLMs): the simultaneous achievement of low hallucination, deep logical coherence, and personalized expression. This study establishes that this bottleneck arises from existing generative paradigms succumbing to the Statistical Smoothing Trap, a phenomenon that overlooks the high-entropy information acquisition and structured cognitive processes integral to expert-level writing. To address this limitation, we propose the DeepNews Framework, an agentic workflow that explicitly models the implicit cognitive processes of seasoned financial journalists. The framework integrates three core modules: first, a dual-granularity retrieval mechanism grounded in information foraging theory, which enforces a 10:1 saturated information input ratio to mitigate hallucinatory outputs; second, schema-guided strategic planning, a process leveraging domain expert knowledge bases (narrative schemas) and Atomic Blocks to forge a robust logical skeleton; third, adversarial constraint prompting, a technique deploying tactics including Rhythm Break and Logic Fog to disrupt the probabilistic smoothness inherent in model-generated text. Experiments delineate a salient Knowledge Cliff in deep financial reporting: content truthfulness collapses when retrieved context falls below 15,000 characters, while a high-redundancy input exceeding 30,000 characters stabilizes the Hallucination-Free Rate (HFR) above 85%. In an ecological validity blind test conducted with a top-tier Chinese technology media outlet, the DeepNews system--built on a previous-generation model (DeepSeek-V3-0324)-achieved a 25% submission acceptance rate, significantly outperforming the 0% acceptance rate of zero-shot generation by a state-of-the-art (SOTA) model (GPT-5).",
+    "authors": [
+      "Zhongjie Jiang"
+    ],
+    "published": "2025-12-10",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.CY",
+      "q-fin.GN"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.10121v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.10121v1",
+    "fetched_at": "2025-12-15T11:00:43.791892",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "NLP"
+    ],
+    "key_contributions": [],
+    "processed_at": "2025-12-15T11:05:44.571281"
+  },
+  {
+    "id": "2512.09590v1",
+    "title": "On Inhomogeneous Affine Volterra Processes: Stationarity and Applications to the Volterra Heston Model",
+    "abstract": "True Volterra equations are inherently non stationary and therefore do not admit $\\textit{genuine stationary regimes}$ over finite horizons. This motivates the study of the finite-time behavior of the solutions to scaled inhomogeneous affine Stochastic Volterra equations through the lens of a weaker notion of stationarity referred to as $\\textit{fake stationary regime}$ in the sense that all marginal distributions share the same expectation and variance. As a first application, we introduce the $\\textit{Fake stationary Volterra Heston model}$ and derive a closed-form expression for its characteristic function. Having established this finite-time proxy for stationarity, we then investigate the asymptotic (long-time) behavior to assess whether genuine stationary regimes emerge in the limit. Using an extension of the exponential-affine transformation formula for those processes, we establish in the long run the existence of limiting distributions, which (unlike in the case of classical affine diffusion processes) may depend on the initial state of the process, unless the Volterra kernel coincides with the $α-$ fractional integration kernel, for which the dependence on the initial state vanishes. We then proceed to the construction of stationary processes associated with these limiting distributions. However, the dynamics in this long-term regime are analytically intractable, and the process itself is not guaranteed to be stationary in the classical sense over finite horizons. This highlights the relevance of finite-time analysis through the lens of the aforementioned $\\textit{fake stationarity}$, which offers a tractable approximation to stationary behavior in genuinely non-stationary Volterra systems.",
+    "authors": [
+      "Emmanuel Gnabeyeu",
+      "Gilles Pagès",
+      "Mathieu Rosenbaum"
+    ],
+    "published": "2025-12-10",
+    "categories": [
+      "math.PR",
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.09590v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.09590v1",
+    "fetched_at": "2025-12-15T11:00:43.791910",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "Deep Learning"
+    ],
+    "key_contributions": [],
+    "processed_at": "2025-12-15T11:05:44.571289"
+  },
+  {
+    "id": "2512.09224v1",
+    "title": "Exploratory Mean-Variance with Jumps: An Equilibrium Approach",
+    "abstract": "Revisiting the continuous-time Mean-Variance (MV) Portfolio Optimization problem, we model the market dynamics with a jump-diffusion process and apply Reinforcement Learning (RL) techniques to facilitate informed exploration within the control space. We recognize the time-inconsistency of the MV problem and adopt the time-inconsistent control (TIC) approach to analytically solve for an exploratory equilibrium investment policy, which is a Gaussian distribution centered on the equilibrium control of the classical MV problem. Our approach accounts for time-inconsistent preferences and actions, and our equilibrium policy is the best option an investor can take at any given time during the investment period. Moreover, we leverage the martingale properties of the equilibrium policy, design a RL model, and propose an Actor-Critic RL algorithm. All of our RL model parameters converge to the corresponding true values in a simulation study. Our numerical study on 24 years of real market data shows that the proposed RL model is profitable in 13 out of 14 tests, demonstrating its practical applicability in real world investment.",
+    "authors": [
+      "Yuling Max Chen",
+      "Bin Li",
+      "David Saunders"
+    ],
+    "published": "2025-12-10",
+    "categories": [
+      "q-fin.PM",
+      "stat.ML"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.09224v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.09224v1",
+    "fetched_at": "2025-12-15T11:00:43.791926",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "Portfolio Optimization",
+      "Deep Learning"
+    ],
+    "key_contributions": [],
+    "processed_at": "2025-12-15T11:05:44.571293"
+  },
+  {
+    "id": "2512.08890v1",
+    "title": "Modelling and valuation of catastrophe bonds across multiple regions",
+    "abstract": "The insurance-linked securities (ILS) market, as a form of alternative risk transfer, has been at the forefront of innovative risk-transfer solutions. The catastrophe bond (CAT bond) market now represents almost half of the entire ILS market and is growing steadily. Since CAT bonds are often tied to risks in different regions, we follow this idea by constructing different pricing models that incorporate various scenarios of dependence between catastrophe losses in different areas. Namely, we consider independent, proportional, and arbitrary two-dimensional distribution cases. We also derive a normal approximation of the prices. Finally, to include the market price of risk, we apply Wang's transform. We illustrate the differences between the scenarios and the performance of the approximation on the Property Claim Services data.",
+    "authors": [
+      "Krzysztof Burnecki",
+      "Marek Teuerle",
+      "Martyna Zdeb"
+    ],
+    "published": "2025-12-09",
+    "categories": [
+      "q-fin.PR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.08890v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.08890v1",
+    "fetched_at": "2025-12-15T11:00:43.791941",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "Options"
+    ],
+    "key_contributions": [],
+    "processed_at": "2025-12-15T11:05:44.571297"
+  },
+  {
+    "id": "2512.08851v1",
+    "title": "A New Application of Hoeffding's Inequality Can Give Traders Early Warning of Financial Regime Change",
+    "abstract": "Hoeffding's Inequality provides the maximum probability that a series of n draws from a bounded random variable differ from the variable's true expectation u by more than given tolerance t. The random variable is typically the error rate of a classifier in machine learning applications. Here, a trading strategy is premised on the assumption of an underlying distribution of causal factors, in other words, a market regime, and the random variable is the performance of that trading strategy. A larger deviation of observed performance from the trader's expectation u can be characterized as a lower probability that the financial regime supporting that strategy remains in force, and a higher probability of financial regime change. The changing Hoeffding probabilities can be used as an early warning indicator of this change.",
+    "authors": [
+      "Daniel Egger",
+      "Jacob Vestal"
+    ],
+    "published": "2025-12-09",
+    "categories": [
+      "q-fin.RM",
+      "math.PR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.08851v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.08851v1",
+    "fetched_at": "2025-12-15T11:00:43.791955",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "Risk Management",
+      "Reinforcement Learning"
+    ],
+    "key_contributions": [],
+    "processed_at": "2025-12-15T11:05:44.571302"
+  },
+  {
+    "id": "2512.08348v1",
+    "title": "On the existence of personal equilibria",
+    "abstract": "We consider an investor who, while maximizing his/her expected utility, also compares the outcome to a reference entity. We recall the notion of personal equilibrium and show that, in a multistep, generically incomplete financial market model such an equilibrium indeed exists, under appropriate technical assumptions.",
+    "authors": [
+      "Laurence Carassus",
+      "Miklós Rásonyi"
+    ],
+    "published": "2025-12-09",
+    "categories": [
+      "q-fin.PM",
+      "math.PR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.08348v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.08348v1",
+    "fetched_at": "2025-12-15T11:00:43.791969",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "Portfolio Optimization"
+    ],
+    "key_contributions": [],
+    "processed_at": "2025-12-15T11:05:44.571305"
+  },
+  {
+    "id": "2512.08270v1",
+    "title": "Reasoning Models Ace the CFA Exams",
+    "abstract": "Previous research has reported that large language models (LLMs) demonstrate poor performance on the Chartered Financial Analyst (CFA) exams. However, recent reasoning models have achieved strong results on graduate-level academic and professional examinations across various disciplines. In this paper, we evaluate state-of-the-art reasoning models on a set of mock CFA exams consisting of 980 questions across three Level I exams, two Level II exams, and three Level III exams. Using the same pass/fail criteria from prior studies, we find that most models clear all three levels. The models that pass, ordered by overall performance, are Gemini 3.0 Pro, Gemini 2.5 Pro, GPT-5, Grok 4, Claude Opus 4.1, and DeepSeek-V3.1. Specifically, Gemini 3.0 Pro achieves a record score of 97.6% on Level I. Performance is also strong on Level II, led by GPT-5 at 94.3%. On Level III, Gemini 2.5 Pro attains the highest score with 86.4% on multiple-choice questions while Gemini 3.0 Pro achieves 92.0% on constructed-response questions.",
+    "authors": [
+      "Jaisal Patel",
+      "Yunzhe Chen",
+      "Kaiwen He",
+      "Keyi Wang",
+      "David Li",
+      "Kairong Xiao",
+      "Xiao-Yang Liu"
+    ],
+    "published": "2025-12-09",
+    "categories": [
+      "cs.AI",
+      "cs.CL",
+      "q-fin.GN"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.08270v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.08270v1",
+    "fetched_at": "2025-12-15T11:00:43.791989",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "NLP"
+    ],
+    "key_contributions": [],
+    "processed_at": "2025-12-15T11:05:44.571309"
+  },
+  {
+    "id": "2512.11219v1",
+    "title": "Latent Variable Causal Discovery under Selection Bias",
+    "abstract": "Addressing selection bias in latent variable causal discovery is important yet underexplored, largely due to a lack of suitable statistical tools: While various tools beyond basic conditional independencies have been developed to handle latent variables, none have been adapted for selection bias. We make an attempt by studying rank constraints, which, as a generalization to conditional independence constraints, exploits the ranks of covariance submatrices in linear Gaussian models. We show that although selection can significantly complicate the joint distribution, interestingly, the ranks in the biased covariance matrices still preserve meaningful information about both causal structures and selection mechanisms. We provide a graph-theoretic characterization of such rank constraints. Using this tool, we demonstrate that the one-factor model, a classical latent variable model, can be identified under selection bias. Simulations and real-world experiments confirm the effectiveness of using our rank constraints.",
+    "authors": [
+      "Haoyue Dai",
+      "Yiwen Qiu",
+      "Ignavier Ng",
+      "Xinshuai Dong",
+      "Peter Spirtes",
+      "Kun Zhang"
+    ],
+    "published": "2025-12-12",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.11219v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.11219v1",
+    "fetched_at": "2025-12-15T11:00:52.506614",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "Deep Learning"
+    ],
+    "key_contributions": [],
+    "processed_at": "2025-12-15T11:05:44.571313"
+  },
+  {
+    "id": "2512.11541v1",
+    "title": "A Multi-Criteria Automated MLOps Pipeline for Cost-Effective Cloud-Based Classifier Retraining in Response to Data Distribution Shifts",
+    "abstract": "The performance of machine learning (ML) models often deteriorates when the underlying data distribution changes over time, a phenomenon known as data distribution drift. When this happens, ML models need to be retrained and redeployed. ML Operations (MLOps) is often manual, i.e., humans trigger the process of model retraining and redeployment. In this work, we present an automated MLOps pipeline designed to address neural network classifier retraining in response to significant data distribution changes. Our MLOps pipeline employs multi-criteria statistical techniques to detect distribution shifts and triggers model updates only when necessary, ensuring computational efficiency and resource optimization. We demonstrate the effectiveness of our framework through experiments on several benchmark anomaly detection data sets, showing significant improvements in model accuracy and robustness compared to traditional retraining strategies. Our work provides a foundation for deploying more reliable and adaptive ML systems in dynamic real-world settings, where data distribution changes are common.",
+    "authors": [
+      "Emmanuel K. Katalay",
+      "David O. Dimandja",
+      "Jordan F. Masakuna"
+    ],
+    "published": "2025-12-12",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.11541v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.11541v1",
+    "fetched_at": "2025-12-15T11:01:01.237673",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "Deep Learning"
+    ],
+    "key_contributions": [],
+    "processed_at": "2025-12-15T11:05:44.571318"
+  },
+  {
+    "id": "2512.11526v1",
+    "title": "Contrastive Time Series Forecasting with Anomalies",
+    "abstract": "Time series forecasting predicts future values from past data. In real-world settings, some anomalous events have lasting effects and influence the forecast, while others are short-lived and should be ignored. Standard forecasting models fail to make this distinction, often either overreacting to noise or missing persistent shifts. We propose Co-TSFA (Contrastive Time Series Forecasting with Anomalies), a regularization framework that learns when to ignore anomalies and when to respond. Co-TSFA generates input-only and input-output augmentations to model forecast-irrelevant and forecast-relevant anomalies, and introduces a latent-output alignment loss that ties representation changes to forecast changes. This encourages invariance to irrelevant perturbations while preserving sensitivity to meaningful distributional shifts. Experiments on the Traffic and Electricity benchmarks, as well as on a real-world cash-demand dataset, demonstrate that Co-TSFA improves performance under anomalous conditions while maintaining accuracy on normal data. An anonymized GitHub repository with the implementation of Co-TSFA is provided and will be made public upon acceptance.",
+    "authors": [
+      "Joel Ekstrand",
+      "Zahra Taghiyarrenani",
+      "Slawomir Nowaczyk"
+    ],
+    "published": "2025-12-12",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "stat.ML"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.11526v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.11526v1",
+    "fetched_at": "2025-12-15T11:01:01.237708",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "Deep Learning"
+    ],
+    "key_contributions": [],
+    "processed_at": "2025-12-15T11:05:44.571322"
+  },
+  {
+    "id": "2512.11052v1",
+    "title": "An Efficient Variant of One-Class SVM with Lifelong Online Learning Guarantees",
+    "abstract": "We study outlier (a.k.a., anomaly) detection for single-pass non-stationary streaming data. In the well-studied offline or batch outlier detection problem, traditional methods such as kernel One-Class SVM (OCSVM) are both computationally heavy and prone to large false-negative (Type II) errors under non-stationarity. To remedy this, we introduce SONAR, an efficient SGD-based OCSVM solver with strongly convex regularization. We show novel theoretical guarantees on the Type I/II errors of SONAR, superior to those known for OCSVM, and further prove that SONAR ensures favorable lifelong learning guarantees under benign distribution shifts. In the more challenging problem of adversarial non-stationary data, we show that SONAR can be used within an ensemble method and equipped with changepoint detection to achieve adaptive guarantees, ensuring small Type I/II errors on each phase of data. We validate our theoretical findings on synthetic and real-world datasets.",
+    "authors": [
+      "Joe Suk",
+      "Samory Kpotufe"
+    ],
+    "published": "2025-12-11",
+    "categories": [
+      "stat.ML",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.11052v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.11052v1",
+    "fetched_at": "2025-12-15T11:01:01.237741",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "Deep Learning"
+    ],
+    "key_contributions": [],
+    "processed_at": "2025-12-15T11:05:44.571326"
+  },
+  {
+    "id": "2512.10435v1",
+    "title": "Semantic Reconstruction of Adversarial Plagiarism: A Context-Aware Framework for Detecting and Restoring \"Tortured Phrases\" in Scientific Literature",
+    "abstract": "The integrity and reliability of scientific literature is facing a serious threat by adversarial text generation techniques, specifically from the use of automated paraphrasing tools to mask plagiarism. These tools generate \"tortured phrases\", statistically improbable synonyms (e.g. \"counterfeit consciousness\" for \"artificial intelligence\"), that preserve the local grammar while obscuring the original source. Most existing detection methods depend heavily on static blocklists or general-domain language models, which suffer from high false-negative rates for novel obfuscations and cannot determine the source of the plagiarized content. In this paper, we propose Semantic Reconstruction of Adversarial Plagiarism (SRAP), a framework designed not only to detect these anomalies but to mathematically recover the original terminology. We use a two-stage architecture: (1) statistical anomaly detection with a domain-specific masked language model (SciBERT) using token-level pseudo-perplexity, and (2) source-based semantic reconstruction using dense vector retrieval (FAISS) and sentence-level alignment (SBERT). Experiments on a parallel corpus of adversarial scientific text show that while zero-shot baselines fail completely (0.00 percent restoration accuracy), our retrieval-augmented approach achieves 23.67 percent restoration accuracy, significantly outperforming baseline methods. We also show that static decision boundaries are necessary for robust detection in jargon-heavy scientific text, since dynamic thresholding fails under high variance. SRAP enables forensic analysis by linking obfuscated expressions back to their most probable source documents.",
+    "authors": [
+      "Agniva Maiti",
+      "Prajwal Panth",
+      "Suresh Chandra Satapathy"
+    ],
+    "published": "2025-12-11",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.10435v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.10435v1",
+    "fetched_at": "2025-12-15T11:01:01.237759",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "NLP"
+    ],
+    "key_contributions": [],
+    "processed_at": "2025-12-15T11:05:44.571332"
+  },
+  {
+    "id": "2512.09103v1",
+    "title": "Natural Geometry of Robust Data Attribution: From Convex Models to Deep Networks",
+    "abstract": "Data attribution methods identify which training examples are responsible for a model's predictions, but their sensitivity to distributional perturbations undermines practical reliability. We present a unified framework for certified robust attribution that extends from convex models to deep networks. For convex settings, we derive Wasserstein-Robust Influence Functions (W-RIF) with provable coverage guarantees. For deep networks, we demonstrate that Euclidean certification is rendered vacuous by spectral amplification -- a mechanism where the inherent ill-conditioning of deep representations inflates Lipschitz bounds by over $10{,}000\\times$. This explains why standard TRAK scores, while accurate point estimates, are geometrically fragile: naive Euclidean robustness analysis yields 0\\% certification. Our key contribution is the Natural Wasserstein metric, which measures perturbations in the geometry induced by the model's own feature covariance. This eliminates spectral amplification, reducing worst-case sensitivity by $76\\times$ and stabilizing attribution estimates. On CIFAR-10 with ResNet-18, Natural W-TRAK certifies 68.7\\% of ranking pairs compared to 0\\% for Euclidean baselines -- to our knowledge, the first non-vacuous certified bounds for neural network attribution. Furthermore, we prove that the Self-Influence term arising from our analysis equals the Lipschitz constant governing attribution stability, providing theoretical grounding for leverage-based anomaly detection. Empirically, Self-Influence achieves 0.970 AUROC for label noise detection, identifying 94.1\\% of corrupted labels by examining just the top 20\\% of training data.",
+    "authors": [
+      "Shihao Li",
+      "Jiachen Li",
+      "Dongmei Chen"
+    ],
+    "published": "2025-12-09",
+    "categories": [
+      "cs.LG",
+      "math.OC"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.09103v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.09103v1",
+    "fetched_at": "2025-12-15T11:01:01.237776",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "Deep Learning"
+    ],
+    "key_contributions": [],
+    "processed_at": "2025-12-15T11:05:44.571337"
+  },
+  {
+    "id": "2512.08885v1",
+    "title": "Explainable Anomaly Detection for Industrial IoT Data Streams",
+    "abstract": "Industrial maintenance is being transformed by the Internet of Things and edge computing, generating continuous data streams that demand real-time, adaptive decision-making under limited computational resources. While data stream mining (DSM) addresses this challenge, most methods assume fully supervised settings, yet in practice, ground-truth labels are often delayed or unavailable. This paper presents a collaborative DSM framework that integrates unsupervised anomaly detection with interactive, human-in-the-loop learning to support maintenance decisions. We employ an online Isolation Forest and enhance interpretability using incremental Partial Dependence Plots and a feature importance score, derived from deviations of Individual Conditional Expectation curves from a fading average, enabling users to dynamically reassess feature relevance and adjust anomaly thresholds. We describe the real-time implementation and provide initial results for fault detection in a Jacquard loom unit. Ongoing work targets continuous monitoring to predict and explain imminent bearing failures.",
+    "authors": [
+      "Ana Rita Paupério",
+      "Diogo Risca",
+      "Afonso Lourenço",
+      "Goreti Marreiros",
+      "Ricardo Martins"
+    ],
+    "published": "2025-12-09",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.08885v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.08885v1",
+    "fetched_at": "2025-12-15T11:01:01.237797",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "Deep Learning"
+    ],
+    "key_contributions": [],
+    "processed_at": "2025-12-15T11:05:44.571341"
+  },
+  {
+    "id": "2512.08657v1",
+    "title": "Reusability in MLOps: Leveraging Ports and Adapters to Build a Microservices Architecture for the Maritime Domain",
+    "abstract": "ML-Enabled Systems (MLES) are inherently complex since they require multiple components to achieve their business goal. This experience report showcases the software architecture reusability techniques applied while building Ocean Guard, an MLES for anomaly detection in the maritime domain. In particular, it highlights the challenges and lessons learned to reuse the Ports and Adapters pattern to support building multiple microservices from a single codebase. This experience report hopes to inspire software engineers, machine learning engineers, and data scientists to apply the Hexagonal Architecture pattern to build their MLES.",
+    "authors": [
+      "Renato Cordeiro Ferreira",
+      "Aditya Dhinavahi",
+      "Rowanne Trapmann",
+      "Willem-Jan van den Heuvel"
+    ],
+    "published": "2025-12-09",
+    "categories": [
+      "cs.SE",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.08657v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.08657v1",
+    "fetched_at": "2025-12-15T11:01:01.237816",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "Deep Learning"
+    ],
+    "key_contributions": [],
+    "processed_at": "2025-12-15T11:05:44.571345"
+  },
+  {
+    "id": "2512.08277v1",
+    "title": "FedLAD: A Modular and Adaptive Testbed for Federated Log Anomaly Detection",
+    "abstract": "Log-based anomaly detection (LAD) is critical for ensuring the reliability of large-scale distributed systems. However, most existing LAD approaches assume centralized training, which is often impractical due to privacy constraints and the decentralized nature of system logs. While federated learning (FL) offers a promising alternative, there is a lack of dedicated testbeds tailored to the needs of LAD in federated settings. To address this, we present FedLAD, a unified platform for training and evaluating LAD models under FL constraints. FedLAD supports plug-and-play integration of diverse LAD models, benchmark datasets, and aggregation strategies, while offering runtime support for validation logging (self-monitoring), parameter tuning (self-configuration), and adaptive strategy control (self-adaptation). By enabling reproducible and scalable experimentation, FedLAD bridges the gap between FL frameworks and LAD requirements, providing a solid foundation for future research. Project code is publicly available at: https://github.com/AA-cityu/FedLAD.",
+    "authors": [
+      "Yihan Liao",
+      "Jacky Keung",
+      "Zhenyu Mao",
+      "Jingyu Zhang",
+      "Jialong Li"
+    ],
+    "published": "2025-12-09",
+    "categories": [
+      "cs.SE",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.08277v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.08277v1",
+    "fetched_at": "2025-12-15T11:01:01.237836",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "Deep Learning"
+    ],
+    "key_contributions": [],
+    "processed_at": "2025-12-15T11:05:44.571349"
+  },
+  {
+    "id": "2512.08169v1",
+    "title": "Information-Dense Reasoning for Efficient and Auditable Security Alert Triage",
+    "abstract": "Security Operations Centers face massive, heterogeneous alert streams under minute-level service windows, creating the Alert Triage Latency Paradox: verbose reasoning chains ensure accuracy and compliance but incur prohibitive latency and token costs, while minimal chains sacrifice transparency and auditability. Existing solutions fail: signature systems are brittle, anomaly methods lack actionability, and fully cloud-hosted LLMs raise latency, cost, and privacy concerns. We propose AIDR, a hybrid cloud-edge framework that addresses this trade-off through constrained information-density optimization. The core innovation is gradient-based compression of reasoning chains to retain only decision-critical steps--minimal evidence sufficient to justify predictions while respecting token and latency budgets. We demonstrate that this approach preserves decision-relevant information while minimizing complexity. We construct compact datasets by distilling alerts into 3-5 high-information bullets (68% token reduction), train domain-specialized experts via LoRA, and deploy a cloud-edge architecture: a cloud LLM routes alerts to on-premises experts generating SOAR-ready JSON. Experiments demonstrate AIDR achieves higher accuracy and 40.6% latency reduction versus Chain-of-Thought, with robustness to data corruption and out-of-distribution generalization, enabling auditable and efficient SOC triage with full data residency compliance.",
+    "authors": [
+      "Guangze Zhao",
+      "Yongzheng Zhang",
+      "Changbo Tian",
+      "Dan Xie",
+      "Hongri Liu",
+      "Bailing Wang"
+    ],
+    "published": "2025-12-09",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.08169v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.08169v1",
+    "fetched_at": "2025-12-15T11:01:01.237858",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "Deep Learning"
+    ],
+    "key_contributions": [],
+    "processed_at": "2025-12-15T11:05:44.571354"
+  },
+  {
+    "id": "2512.11783v1",
+    "title": "Super Suffixes: Bypassing Text Generation Alignment and Guard Models Simultaneously",
+    "abstract": "The rapid deployment of Large Language Models (LLMs) has created an urgent need for enhanced security and privacy measures in Machine Learning (ML). LLMs are increasingly being used to process untrusted text inputs and even generate executable code, often while having access to sensitive system controls. To address these security concerns, several companies have introduced guard models, which are smaller, specialized models designed to protect text generation models from adversarial or malicious inputs. In this work, we advance the study of adversarial inputs by introducing Super Suffixes, suffixes capable of overriding multiple alignment objectives across various models with different tokenization schemes. We demonstrate their effectiveness, along with our joint optimization technique, by successfully bypassing the protection mechanisms of Llama Prompt Guard 2 on five different text generation models for malicious text and code generation. To the best of our knowledge, this is the first work to reveal that Llama Prompt Guard 2 can be compromised through joint optimization.   Additionally, by analyzing the changing similarity of a model's internal state to specific concept directions during token sequence processing, we propose an effective and lightweight method to detect Super Suffix attacks. We show that the cosine similarity between the residual stream and certain concept directions serves as a distinctive fingerprint of model intent. Our proposed countermeasure, DeltaGuard, significantly improves the detection of malicious prompts generated through Super Suffixes. It increases the non-benign classification rate to nearly 100%, making DeltaGuard a valuable addition to the guard model stack and enhancing robustness against adversarial prompt attacks.",
+    "authors": [
+      "Andrew Adiletta",
+      "Kathryn Adiletta",
+      "Kemal Derya",
+      "Berk Sunar"
+    ],
+    "published": "2025-12-12",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.11783v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.11783v1",
+    "fetched_at": "2025-12-15T11:01:40.611487",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "Deep Learning"
+    ],
+    "key_contributions": [],
+    "processed_at": "2025-12-15T11:05:44.571359"
+  },
+  {
+    "id": "2512.11682v1",
+    "title": "MedAI: Evaluating TxAgent's Therapeutic Agentic Reasoning in the NeurIPS CURE-Bench Competition",
+    "abstract": "Therapeutic decision-making in clinical medicine constitutes a high-stakes domain in which AI guidance interacts with complex interactions among patient characteristics, disease processes, and pharmacological agents. Tasks such as drug recommendation, treatment planning, and adverse-effect prediction demand robust, multi-step reasoning grounded in reliable biomedical knowledge. Agentic AI methods, exemplified by TxAgent, address these challenges through iterative retrieval-augmented generation (RAG). TxAgent employs a fine-tuned Llama-3.1-8B model that dynamically generates and executes function calls to a unified biomedical tool suite (ToolUniverse), integrating FDA Drug API, OpenTargets, and Monarch resources to ensure access to current therapeutic information. In contrast to general-purpose RAG systems, medical applications impose stringent safety constraints, rendering the accuracy of both the reasoning trace and the sequence of tool invocations critical. These considerations motivate evaluation protocols treating token-level reasoning and tool-usage behaviors as explicit supervision signals. This work presents insights derived from our participation in the CURE-Bench NeurIPS 2025 Challenge, which benchmarks therapeutic-reasoning systems using metrics that assess correctness, tool utilization, and reasoning quality. We analyze how retrieval quality for function (tool) calls influences overall model performance and demonstrate performance gains achieved through improved tool-retrieval strategies. Our work was awarded the Excellence Award in Open Science. Complete information can be found at https://curebench.ai/.",
+    "authors": [
+      "Tim Cofala",
+      "Christian Kalfar",
+      "Jingge Xiao",
+      "Johanna Schrader",
+      "Michelle Tang",
+      "Wolfgang Nejdl"
+    ],
+    "published": "2025-12-12",
+    "categories": [
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.11682v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.11682v1",
+    "fetched_at": "2025-12-15T11:01:40.611532",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "Deep Learning",
+      "Financial Agent"
+    ],
+    "key_contributions": [],
+    "processed_at": "2025-12-15T11:05:44.571363"
+  },
+  {
+    "id": "2512.11532v1",
+    "title": "Parallax: Runtime Parallelization for Operator Fallbacks in Heterogeneous Edge Systems",
+    "abstract": "The growing demand for real-time DNN applications on edge devices necessitates faster inference of increasingly complex models. Although many devices include specialized accelerators (e.g., mobile GPUs), dynamic control-flow operators and unsupported kernels often fall back to CPU execution. Existing frameworks handle these fallbacks poorly, leaving CPU cores idle and causing high latency and memory spikes. We introduce Parallax, a framework that accelerates mobile DNN inference without model refactoring or custom operator implementations. Parallax first partitions the computation DAG to expose parallelism, then employs branch-aware memory management with dedicated arenas and buffer reuse to reduce runtime footprint. An adaptive scheduler executes branches according to device memory constraints, meanwhile, fine-grained subgraph control enables heterogeneous inference of dynamic models. By evaluating on five representative DNNs across three different mobile devices, Parallax achieves up to 46% latency reduction, maintains controlled memory overhead (26.5% on average), and delivers up to 30% energy savings compared with state-of-the-art frameworks, offering improvements aligned with the responsiveness demands of real-time mobile inference.",
+    "authors": [
+      "Chong Tang",
+      "Hao Dai",
+      "Jagmohan Chauhan"
+    ],
+    "published": "2025-12-12",
+    "categories": [
+      "cs.DC",
+      "cs.AI",
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.11532v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.11532v1",
+    "fetched_at": "2025-12-15T11:01:40.611561",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "Deep Learning"
+    ],
+    "key_contributions": [],
+    "processed_at": "2025-12-15T11:05:44.571368"
+  },
+  {
+    "id": "2512.11303v1",
+    "title": "Unifying Dynamic Tool Creation and Cross-Task Experience Sharing through Cognitive Memory Architecture",
+    "abstract": "Large Language Model agents face fundamental challenges in adapting to novel tasks due to limitations in tool availability and experience reuse. Existing approaches either rely on predefined tools with limited coverage or build tools from scratch without leveraging past experiences, leading to inefficient exploration and suboptimal performance. We introduce SMITH (Shared Memory Integrated Tool Hub), a unified cognitive architecture that seamlessly integrates dynamic tool creation with cross-task experience sharing through hierarchical memory organization. SMITH organizes agent memory into procedural, semantic, and episodic components, enabling systematic capability expansion while preserving successful execution patterns. Our approach formalizes tool creation as iterative code generation within controlled sandbox environments and experience sharing through episodic memory retrieval with semantic similarity matching. We further propose a curriculum learning strategy based on agent-ensemble difficulty re-estimation. Extensive experiments on the GAIA benchmark demonstrate SMITH's effectiveness, achieving 81.8% Pass@1 accuracy and outperforming state-of-the-art baselines including Alita (75.2%) and Memento (70.9%). Our work establishes a foundation for building truly adaptive agents that continuously evolve their capabilities through principled integration of tool creation and experience accumulation.",
+    "authors": [
+      "Jiarun Liu",
+      "Shiyue Xu",
+      "Yang Li",
+      "Shangkun Liu",
+      "Yongli Yu",
+      "Peng Cao"
+    ],
+    "published": "2025-12-12",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.11303v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.11303v1",
+    "fetched_at": "2025-12-15T11:01:40.611593",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "NLP"
+    ],
+    "key_contributions": [],
+    "processed_at": "2025-12-15T11:05:44.571373"
+  },
+  {
+    "id": "2512.11271v1",
+    "title": "TriFlow: A Progressive Multi-Agent Framework for Intelligent Trip Planning",
+    "abstract": "Real-world trip planning requires transforming open-ended user requests into executable itineraries under strict spatial, temporal, and budgetary constraints while aligning with user preferences. Existing LLM-based agents struggle with constraint satisfaction, tool coordination, and efficiency, often producing infeasible or costly plans. To address these limitations, we present TriFlow, a progressive multi-agent framework that unifies structured reasoning and language-based flexibility through a three-stage pipeline of retrieval, planning, and governance. By this design, TriFlow progressively narrows the search space, assembles constraint-consistent itineraries via rule-LLM collaboration, and performs bounded iterative refinement to ensure global feasibility and personalisation. Evaluations on TravelPlanner and TripTailor benchmarks demonstrated state-of-the-art results, achieving 91.1% and 97% final pass rates, respectively, with over 10x runtime efficiency improvement compared to current SOTA.",
+    "authors": [
+      "Yuxing Chen",
+      "Basem Suleiman",
+      "Qifan Chen"
+    ],
+    "published": "2025-12-12",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.11271v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.11271v1",
+    "fetched_at": "2025-12-15T11:01:40.611619",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "Financial Agent"
+    ],
+    "key_contributions": [],
+    "processed_at": "2025-12-15T11:05:44.571377"
+  },
+  {
+    "id": "2512.11270v1",
+    "title": "A-LAMP: Agentic LLM-Based Framework for Automated MDP Modeling and Policy Generation",
+    "abstract": "Applying reinforcement learning (RL) to real-world tasks requires converting informal descriptions into a formal Markov decision process (MDP), implementing an executable environment, and training a policy agent. Automating this process is challenging due to modeling errors, fragile code, and misaligned objectives, which often impede policy training. We introduce an agentic large language model (LLM)-based framework for automated MDP modeling and policy generation (A-LAMP), that automatically translates free-form natural language task descriptions into an MDP formulation and trained policy. The framework decomposes modeling, coding, and training into verifiable stages, ensuring semantic alignment throughout the pipeline. Across both classic control and custom RL domains, A-LAMP consistently achieves higher policy generation capability than a single state-of-the-art LLM model. Notably, even its lightweight variant, which is built on smaller language models, approaches the performance of much larger models. Failure analysis reveals why these improvements occur. In addition, a case study also demonstrates that A-LAMP generates environments and policies that preserve the task's optimality, confirming its correctness and reliability.",
+    "authors": [
+      "Hong Je-Gal",
+      "Chan-Bin Yi",
+      "Hyun-Suk Lee"
+    ],
+    "published": "2025-12-12",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.11270v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.11270v1",
+    "fetched_at": "2025-12-15T11:01:40.611646",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "LLM",
+      "Financial Agent"
+    ],
+    "key_contributions": [],
+    "processed_at": "2025-12-15T11:05:44.571381"
+  },
+  {
+    "id": "2512.11269v1",
+    "title": "A Scalable Multi-GPU Framework for Encrypted Large-Model Inference",
+    "abstract": "Encrypted AI using fully homomorphic encryption (FHE) provides strong privacy guarantees; but its slow performance has limited practical deployment. Recent works proposed ASICs to accelerate FHE, but require expensive advanced manufacturing processes that constrain their accessibility. GPUs are a far more accessible platform, but achieving ASIC-level performance using GPUs has remained elusive. Furthermore, state-of-the-art approaches primarily focus on small models that fit comfortably within a single device. Supporting large models such as LLMs in FHE introduces a dramatic increase in computational complexity that requires optimized GPU kernels, along with managing terabyte-scale memory footprints that far exceed the capacity of a single GPU. This paper presents Cerium, a multi-GPU framework for FHE inference on large models. Cerium integrates a domain-specific language, an optimizing compiler, and a runtime system to automatically generate high-performance GPU kernels, manage terabyte-scale memory footprints, and parallelize computation across multiple GPUs. It introduces new IR constructs, compiler passes, sparse polynomial representations, memory-efficient data layouts, and communication-aware parallelization techniques that together enable encrypted inference for models ranging from small CNNs to Llama3-8B. We build Cerium on NVIDIA GPUs and demonstrate significant performance gains. For small models, Cerium outperforms expert-written hand-optimized GPU libraries by up to 2.25 times. Cerium achieves performance competitive with state-of-the-art FHE ASICs, outright matching prior FHE ASIC CraterLake. It is the first GPU system to execute bootstrapping in under 10 milliseconds, achieving 7.5 milliseconds, and is the first to demonstrate encrypted inference for BERT-Base and Llama3-8B in 8 seconds and 134 seconds, respectively.",
+    "authors": [
+      "Siddharth Jayashankar",
+      "Joshua Kim",
+      "Michael B. Sullivan",
+      "Wenting Zheng",
+      "Dimitrios Skarlatos"
+    ],
+    "published": "2025-12-12",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.11269v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.11269v1",
+    "fetched_at": "2025-12-15T11:01:40.611677",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "Deep Learning"
+    ],
+    "key_contributions": [],
+    "processed_at": "2025-12-15T11:05:44.571386"
+  },
+  {
+    "id": "2512.11200v1",
+    "title": "Theoretical Foundations of GPU-Native Compilation for Rapid Code Iteration",
+    "abstract": "Current AI code generation systems suffer from significant latency bottlenecks due to CPU-GPU data transfers during compilation, execution, and testing phases. We establish theoretical foundations for three complementary approaches to GPU-native compilation that eliminate these transfers: (1) parallel traditional compilation adapted for GPU execution, (2) neural compilation using learned sequence-to-sequence translation with probabilistic verification, and (3) hybrid architectures combining both strategies. We derive latency and energy bounds demonstrating potential speedups of 10-100x for code iteration cycles. Our analysis shows that traditional GPU compilation provides 2-5x improvements through transfer elimination, neural compilation achieves 10-100x speedups via massive parallelism, and hybrid approaches offer practical deployment paths with guaranteed correctness. We formalize the probabilistic verification framework that enables trading compilation accuracy for parallel exploration, and discuss implications for self-improving AI systems and future analog computing substrates.",
+    "authors": [
+      "Adilet Metinov",
+      "Gulida M. Kudakeeva",
+      "Gulnara D. Kabaeva"
+    ],
+    "published": "2025-12-12",
+    "categories": [
+      "cs.DC",
+      "cs.LG",
+      "cs.PL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.11200v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.11200v1",
+    "fetched_at": "2025-12-15T11:01:40.611705",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "Deep Learning"
+    ],
+    "key_contributions": [],
+    "processed_at": "2025-12-15T11:05:44.571390"
+  },
+  {
+    "id": "2512.11067v1",
+    "title": "KathDB: Explainable Multimodal Database Management System with Human-AI Collaboration",
+    "abstract": "Traditional DBMSs execute user- or application-provided SQL queries over relational data with strong semantic guarantees and advanced query optimization, but writing complex SQL is hard and focuses only on structured tables. Contemporary multimodal systems (which operate over relations but also text, images, and even videos) either expose low-level controls that force users to use (and possibly create) machine learning UDFs manually within SQL or offload execution entirely to black-box LLMs, sacrificing usability or explainability. We propose KathDB, a new system that combines relational semantics with the reasoning power of foundation models over multimodal data. Furthermore, KathDB includes human-AI interaction channels during query parsing, execution, and result explanation, such that users can iteratively obtain explainable answers across data modalities.",
+    "authors": [
+      "Guorui Xiao",
+      "Enhao Zhang",
+      "Nicole Sullivan",
+      "Will Hansen",
+      "Magdalena Balazinska"
+    ],
+    "published": "2025-12-11",
+    "categories": [
+      "cs.DB",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.11067v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.11067v1",
+    "fetched_at": "2025-12-15T11:01:40.611736",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "Deep Learning"
+    ],
+    "key_contributions": [],
+    "processed_at": "2025-12-15T11:05:44.571394"
+  },
+  {
+    "id": "2512.11047v1",
+    "title": "WholeBodyVLA: Towards Unified Latent VLA for Whole-Body Loco-Manipulation Control",
+    "abstract": "Humanoid robots require precise locomotion and dexterous manipulation to perform challenging loco-manipulation tasks. Yet existing approaches, modular or end-to-end, are deficient in manipulation-aware locomotion. This confines the robot to a limited workspace, preventing it from performing large-space loco-manipulation. We attribute this to: (1) the challenge of acquiring loco-manipulation knowledge due to the scarcity of humanoid teleoperation data, and (2) the difficulty of faithfully and reliably executing locomotion commands, stemming from the limited precision and stability of existing RL controllers. To acquire richer loco-manipulation knowledge, we propose a unified latent learning framework that enables Vision-Language-Action (VLA) system to learn from low-cost action-free egocentric videos. Moreover, an efficient human data collection pipeline is devised to augment the dataset and scale the benefits. To more precisely execute the desired locomotion commands, we present a loco-manipulation-oriented (LMO) RL policy specifically tailored for accurate and stable core loco-manipulation movements, such as advancing, turning, and squatting. Building on these components, we introduce WholeBodyVLA, a unified framework for humanoid loco-manipulation. To the best of our knowledge, WholeBodyVLA is one of its kind enabling large-space humanoid loco-manipulation. It is verified via comprehensive experiments on the AgiBot X2 humanoid, outperforming prior baseline by 21.3%. It also demonstrates strong generalization and high extensibility across a broad range of tasks.",
+    "authors": [
+      "Haoran Jiang",
+      "Jin Chen",
+      "Qingwen Bu",
+      "Li Chen",
+      "Modi Shi",
+      "Yanjie Zhang",
+      "Delong Li",
+      "Chuanzhe Suo",
+      "Chuang Wang",
+      "Zhihui Peng",
+      "Hongyang Li"
+    ],
+    "published": "2025-12-11",
+    "categories": [
+      "cs.RO",
+      "cs.AI",
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.11047v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.11047v1",
+    "fetched_at": "2025-12-15T11:01:40.611779",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "Deep Learning"
+    ],
+    "key_contributions": [],
+    "processed_at": "2025-12-15T11:05:44.571399"
+  },
+  {
+    "id": "2512.11013v1",
+    "title": "PIAST: Rapid Prompting with In-context Augmentation for Scarce Training data",
+    "abstract": "LLMs are highly sensitive to prompt design, but handcrafting effective prompts is difficult and often requires intricate crafting of few-shot examples. We propose a fast automatic prompt construction algorithm that augments human instructions by generating a small set of few shot examples. Our method iteratively replaces/drops/keeps few-shot examples using Monte Carlo Shapley estimation of example utility. For faster execution, we use aggressive subsampling and a replay buffer for faster evaluations. Our method can be run using different compute time budgets. On a limited budget, we outperform existing automatic prompting methods on text simplification and GSM8K and obtain second best results on classification and summarization. With an extended, but still modest compute budget we set a new state of the art among automatic prompting methods on classification, simplification and GSM8K. Our results show that carefully constructed examples, rather than exhaustive instruction search, are the dominant lever for fast and data efficient prompt engineering. Our code is available at https://github.com/Batorskq/PIAST.",
+    "authors": [
+      "Pawel Batorski",
+      "Paul Swoboda"
+    ],
+    "published": "2025-12-11",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.11013v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.11013v1",
+    "fetched_at": "2025-12-15T11:01:40.611804",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "NLP"
+    ],
+    "key_contributions": [],
+    "processed_at": "2025-12-15T11:05:44.571403"
+  },
+  {
+    "id": "2512.10787v1",
+    "title": "Replace, Don't Expand: Mitigating Context Dilution in Multi-Hop RAG via Fixed-Budget Evidence Assembly",
+    "abstract": "Retrieval-Augmented Generation (RAG) systems often fail on multi-hop queries when the initial retrieval misses a bridge fact. Prior corrective approaches, such as Self-RAG, CRAG, and Adaptive-$k$, typically address this by \\textit{adding} more context or pruning existing lists. However, simply expanding the context window often leads to \\textbf{context dilution}, where distractors crowd out relevant information. We propose \\textbf{SEAL-RAG}, a training-free controller that adopts a \\textbf{``replace, don't expand''} strategy to fight context dilution under a fixed retrieval depth $k$. SEAL executes a (\\textbf{S}earch $\\rightarrow$ \\textbf{E}xtract $\\rightarrow$ \\textbf{A}ssess $\\rightarrow$ \\textbf{L}oop) cycle: it performs on-the-fly, entity-anchored extraction to build a live \\textit{gap specification} (missing entities/relations), triggers targeted micro-queries, and uses \\textit{entity-first ranking} to actively swap out distractors for gap-closing evidence. We evaluate SEAL-RAG against faithful re-implementations of Basic RAG, CRAG, Self-RAG, and Adaptive-$k$ in a shared environment on \\textbf{HotpotQA} and \\textbf{2WikiMultiHopQA}. On HotpotQA ($k=3$), SEAL improves answer correctness by \\textbf{+3--13 pp} and evidence precision by \\textbf{+12--18 pp} over Self-RAG. On 2WikiMultiHopQA ($k=5$), it outperforms Adaptive-$k$ by \\textbf{+8.0 pp} in accuracy and maintains \\textbf{96\\%} evidence precision compared to 22\\% for CRAG. These gains are statistically significant ($p<0.001$). By enforcing fixed-$k$ replacement, SEAL yields a predictable cost profile while ensuring the top-$k$ slots are optimized for precision rather than mere breadth. We release our code and data at https://github.com/mosherino/SEAL-RAG.",
+    "authors": [
+      "Moshe Lahmy",
+      "Roi Yozevitch"
+    ],
+    "published": "2025-12-11",
+    "categories": [
+      "cs.AI",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.10787v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.10787v1",
+    "fetched_at": "2025-12-15T11:01:40.611830",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "NLP"
+    ],
+    "key_contributions": [],
+    "processed_at": "2025-12-15T11:05:44.571407"
+  },
+  {
+    "id": "2512.10713v1",
+    "title": "PACIFIC: a framework for generating benchmarks to check Precise Automatically Checked Instruction Following In Code",
+    "abstract": "Large Language Model (LLM)-based code assistants have emerged as a powerful application of generative AI, demonstrating impressive capabilities in code generation and comprehension. A key requirement for these systems is their ability to accurately follow user instructions. We present Precise Automatically Checked Instruction Following In Code (PACIFIC), a novel framework designed to automatically generate benchmarks that rigorously assess sequential instruction-following and code dry-running capabilities in LLMs, while allowing control over benchmark difficulty. PACIFIC produces benchmark variants with clearly defined expected outputs, enabling straightforward and reliable evaluation through simple output comparisons. In contrast to existing approaches that often rely on tool usage or agentic behavior, our work isolates and evaluates the LLM's intrinsic ability to reason through code behavior step-by-step without execution (dry running) and to follow instructions. Furthermore, our framework mitigates training data contamination by facilitating effortless generation of novel benchmark variations. We validate our framework by generating a suite of benchmarks spanning a range of difficulty levels and evaluating multiple state-of-the-art LLMs. Our results demonstrate that PACIFIC can produce increasingly challenging benchmarks that effectively differentiate instruction-following and dry running capabilities, even among advanced models. Overall, our framework offers a scalable, contamination-resilient methodology for assessing core competencies of LLMs in code-related tasks.",
+    "authors": [
+      "Itay Dreyfuss",
+      "Antonio Abu Nassar",
+      "Samuel Ackerman",
+      "Axel Ben David",
+      "Rami Katan",
+      "Orna Raz",
+      "Marcel Zalmanovici"
+    ],
+    "published": "2025-12-11",
+    "categories": [
+      "cs.SE",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.10713v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.10713v1",
+    "fetched_at": "2025-12-15T11:01:40.611864",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "Benchmark"
+    ],
+    "key_contributions": [],
+    "processed_at": "2025-12-15T11:05:44.571412"
+  },
+  {
+    "id": "2512.10563v1",
+    "title": "NormCode: A Semi-Formal Language for Context-Isolated AI Planning",
+    "abstract": "Multistep workflows that chain large language model (LLM) calls suffer from context pollution: as information accumulates across steps, models hallucinate, confuse intermediate outputs, and lose track of task constraints. We present NormCode, a semiformal language for constructing plans of inferences, structured decompositions where each step operates in data isolation and receives only explicitly passed inputs, which eliminates crossstep contamination by design. NormCode enforces a strict separation between semantic operations (LLMdriven reasoning, nondeterministic) and syntactic operations (deterministic data restructuring), enabling precise cost and reliability tracing. The language exists in three isomorphic formats: .ncds for human authoring, .ncd for machine execution, and .ncn for human verification, supporting progressive formalization from sketch to production. We validate NormCode through two demonstrations: (1) a base X addition algorithm achieving 100 percent accuracy on arbitrary length inputs, and (2) self hosted execution of NormCode's own five phase compiler pipeline. The working orchestrator provides dependency driven scheduling, SQLite backed checkpointing, and loop management, making AI workflows auditable by design and addressing a critical need for transparency in high stakes domains such as legal reasoning, medical decision making, and financial analysis.",
+    "authors": [
+      "Xin Guan"
+    ],
+    "published": "2025-12-11",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.10563v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.10563v1",
+    "fetched_at": "2025-12-15T11:01:40.611886",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "Deep Learning"
+    ],
+    "key_contributions": [],
+    "processed_at": "2025-12-15T11:05:44.571417"
+  },
+  {
+    "id": "2512.10394v1",
+    "title": "RoboNeuron: A Modular Framework Linking Foundation Models and ROS for Embodied AI",
+    "abstract": "Current embodied AI systems face severe engineering impediments, primarily characterized by poor cross-scenario adaptability, rigid inter-module coupling, and fragmented inference acceleration. To overcome these limitations, we propose RoboNeuron, a universal deployment framework for embodied intelligence. RoboNeuron is the first framework to deeply integrate the cognitive capabilities of Large Language Models (LLMs) and Vision-Language-Action (VLA) models with the real-time execution backbone of the Robot Operating System (ROS). We utilize the Model Context Protocol (MCP) as a semantic bridge, enabling the LLM to dynamically orchestrate underlying robotic tools. The framework establishes a highly modular architecture that strictly decouples sensing, reasoning, and control by leveraging ROS's unified communication interfaces. Crucially, we introduce an automated tool to translate ROS messages into callable MCP functions, significantly streamlining development. RoboNeuron significantly enhances cross-scenario adaptability and component flexibility, while establishing a systematic platform for horizontal performance benchmarking, laying a robust foundation for scalable real-world embodied applications.",
+    "authors": [
+      "Weifan Guan",
+      "Huasen Xi",
+      "Chenxiao Zhang",
+      "Aosheng Li",
+      "Qinghao Hu",
+      "Jian Cheng"
+    ],
+    "published": "2025-12-11",
+    "categories": [
+      "cs.RO",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.10394v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.10394v1",
+    "fetched_at": "2025-12-15T11:01:40.611918",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "Deep Learning"
+    ],
+    "key_contributions": [],
+    "processed_at": "2025-12-15T11:05:44.571421"
+  },
+  {
+    "id": "2512.11273v1",
+    "title": "Integrated Prediction and Multi-period Portfolio Optimization",
+    "abstract": "Multi-period portfolio optimization is important for real portfolio management, as it accounts for transaction costs, path-dependent risks, and the intertemporal structure of trading decisions that single-period models cannot capture. Classical methods usually follow a two-stage framework: machine learning algorithms are employed to produce forecasts that closely fit the realized returns, and the predicted values are then used in a downstream portfolio optimization problem to determine the asset weights. This separation leads to a fundamental misalignment between predictions and decision outcomes, while also ignoring the impact of transaction costs. To bridge this gap, recent studies have proposed the idea of end-to-end learning, integrating the two stages into a single pipeline. This paper introduces IPMO (Integrated Prediction and Multi-period Portfolio Optimization), a model for multi-period mean-variance portfolio optimization with turnover penalties. The predictor generates multi-period return forecasts that parameterize a differentiable convex optimization layer, which in turn drives learning via portfolio performance. For scalability, we introduce a mirror-descent fixed-point (MDFP) differentiation scheme that avoids factorizing the Karush-Kuhn-Tucker (KKT) systems, which thus yields stable implicit gradients and nearly scale-insensitive runtime as the decision horizon grows. In experiments with real market data and two representative time-series prediction models, the IPMO method consistently outperforms the two-stage benchmarks in risk-adjusted performance net of transaction costs and achieves more coherent allocation paths. Our results show that integrating machine learning prediction with optimization in the multi-period setting improves financial outcomes and remains computationally tractable.",
+    "authors": [
+      "Qi Deng",
+      "Yuxuan Linghu",
+      "Zhiyuan Liu"
+    ],
+    "published": "2025-12-12",
+    "categories": [
+      "cs.CE",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.11273v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.11273v1",
+    "fetched_at": "2025-12-15T11:01:44.956354",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "Deep Learning"
+    ],
+    "key_contributions": [],
+    "processed_at": "2025-12-15T11:05:44.571426"
+  },
+  {
+    "id": "2512.08567v1",
+    "title": "A Hybrid Model for Stock Market Forecasting: Integrating News Sentiment and Time Series Data with Graph Neural Networks",
+    "abstract": "Stock market prediction is a long-standing challenge in finance, as accurate forecasts support informed investment decisions. Traditional models rely mainly on historical prices, but recent work shows that financial news can provide useful external signals. This paper investigates a multimodal approach that integrates companies' news articles with their historical stock data to improve prediction performance. We compare a Graph Neural Network (GNN) model with a baseline LSTM model. Historical data for each company is encoded using an LSTM, while news titles are embedded with a language model. These embeddings form nodes in a heterogeneous graph, and GraphSAGE is used to capture interactions between articles, companies, and industries. We evaluate two targets: a binary direction-of-change label and a significance-based label. Experiments on the US equities and Bloomberg datasets show that the GNN outperforms the LSTM baseline, achieving 53% accuracy on the first target and a 4% precision gain on the second. Results also indicate that companies with more associated news yield higher prediction accuracy. Moreover, headlines contain stronger predictive signals than full articles, suggesting that concise news summaries play an important role in short-term market reactions.",
+    "authors": [
+      "Nader Sadek",
+      "Mirette Moawad",
+      "Christina Naguib",
+      "Mariam Elzahaby"
+    ],
+    "published": "2025-12-09",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.08567v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.08567v1",
+    "fetched_at": "2025-12-15T11:04:21.843919",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "Deep Learning",
+      "Sentiment Analysis",
+      "Graph Neural Network"
+    ],
+    "key_contributions": [],
+    "processed_at": "2025-12-15T11:05:44.571430"
+  }
+]

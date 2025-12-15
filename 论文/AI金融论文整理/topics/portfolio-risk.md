@@ -2,7 +2,63 @@
 
 投资组合优化与风险管理
 
-> 共收录 **51** 篇论文 | [返回索引](../README.md)
+> 共收录 **58** 篇论文 | [返回索引](../README.md)
+
+---
+
+### [Risk Limited Asset Allocation with a Budget Threshold Utility Function and Leptokurtotic Distributions of Returns](https://arxiv.org/abs/2512.11666v1)
+
+**日期**: 2025-12-15 | **作者**: Graham L Giller
+
+**标签**: `Portfolio Optimization` `Risk Management`
+
+---
+
+### [Unified Approach to Portfolio Optimization using the `Gain Probability Density Function' and Applications](https://arxiv.org/abs/2512.11649v1)
+
+**日期**: 2025-12-15 | **作者**: Jean-Patrick Mascomère, Jérémie Messud, Yagnik Chatterjee et al.
+
+**标签**: `Portfolio Optimization`
+
+---
+
+### [Pareto-optimal reinsurance under dependence uncertainty](https://arxiv.org/abs/2512.11430v1)
+
+**日期**: 2025-12-15 | **作者**: Tim J. Boonen, Xia Han, Peng Liu et al.
+
+**标签**: `Risk Management`
+
+---
+
+### [Local and Global Balance in Financial Correlation Networks: an Application to Investment Decisions](https://arxiv.org/abs/2512.10606v1)
+
+**日期**: 2025-12-15 | **作者**: Paolo Bartesaghi, Rosanna Grassi, Pierpaolo Uberti
+
+**标签**: `Portfolio Optimization`
+
+---
+
+### [Exploratory Mean-Variance with Jumps: An Equilibrium Approach](https://arxiv.org/abs/2512.09224v1)
+
+**日期**: 2025-12-15 | **作者**: Yuling Max Chen, Bin Li, David Saunders
+
+**标签**: `Portfolio Optimization` `Deep Learning`
+
+---
+
+### [A New Application of Hoeffding's Inequality Can Give Traders Early Warning of Financial Regime Change](https://arxiv.org/abs/2512.08851v1)
+
+**日期**: 2025-12-15 | **作者**: Daniel Egger, Jacob Vestal
+
+**标签**: `Risk Management` `Reinforcement Learning`
+
+---
+
+### [On the existence of personal equilibria](https://arxiv.org/abs/2512.08348v1)
+
+**日期**: 2025-12-15 | **作者**: Laurence Carassus, Miklós Rásonyi
+
+**标签**: `Portfolio Optimization`
 
 ---
 

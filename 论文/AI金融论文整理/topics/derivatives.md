@@ -2,7 +2,23 @@
 
 衍生品定价与波动率建模
 
-> 共收录 **16** 篇论文 | [返回索引](../README.md)
+> 共收录 **18** 篇论文 | [返回索引](../README.md)
+
+---
+
+### [Option-Implied Zero-Coupon Yields: Unifying Bond and Equity Markets](https://arxiv.org/abs/2512.10823v1)
+
+**日期**: 2025-12-15 | **作者**: Ting-Jung Lee, W. Brent Lindquist, Svetlozar T. Rachev et al.
+
+**标签**: `Options`
+
+---
+
+### [Modelling and valuation of catastrophe bonds across multiple regions](https://arxiv.org/abs/2512.08890v1)
+
+**日期**: 2025-12-15 | **作者**: Krzysztof Burnecki, Marek Teuerle, Martyna Zdeb
+
+**标签**: `Options`
 
 ---
 
