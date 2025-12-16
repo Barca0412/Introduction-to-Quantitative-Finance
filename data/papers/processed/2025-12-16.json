@@ -1,0 +1,226 @@
+[
+  {
+    "id": "2512.11273v2",
+    "title": "Integrated Prediction and Multi-period Portfolio Optimization",
+    "abstract": "Multi-period portfolio optimization is important for real portfolio management, as it accounts for transaction costs, path-dependent risks, and the intertemporal structure of trading decisions that single-period models cannot capture. Classical methods usually follow a two-stage framework: machine learning algorithms are employed to produce forecasts that closely fit the realized returns, and the predicted values are then used in a downstream portfolio optimization problem to determine the asset weights. This separation leads to a fundamental misalignment between predictions and decision outcomes, while also ignoring the impact of transaction costs. To bridge this gap, recent studies have proposed the idea of end-to-end learning, integrating the two stages into a single pipeline. This paper introduces IPMO (Integrated Prediction and Multi-period Portfolio Optimization), a model for multi-period mean-variance portfolio optimization with turnover penalties. The predictor generates multi-period return forecasts that parameterize a differentiable convex optimization layer, which in turn drives learning via portfolio performance. For scalability, we introduce a mirror-descent fixed-point (MDFP) differentiation scheme that avoids factorizing the Karush-Kuhn-Tucker (KKT) systems, which thus yields stable implicit gradients and nearly scale-insensitive runtime as the decision horizon grows. In experiments with real market data and two representative time-series prediction models, the IPMO method consistently outperforms the two-stage benchmarks in risk-adjusted performance net of transaction costs and achieves more coherent allocation paths. Our results show that integrating machine learning prediction with optimization in the multi-period setting improves financial outcomes and remains computationally tractable.",
+    "authors": [
+      "Yuxuan Linghu",
+      "Zhiyuan Liu",
+      "Qi Deng"
+    ],
+    "published": "2025-12-12",
+    "categories": [
+      "cs.CE",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.11273v2",
+    "arxiv_url": "https://arxiv.org/abs/2512.11273v2",
+    "fetched_at": "2025-12-16T08:49:24.110294",
+    "chinese_title": "集成预测与多期投资组合优化",
+    "chinese_summary": "针对传统两阶段多期投资组合优化中预测与决策目标不匹配、忽略交易成本的问题，论文提出IPMO模型，端到端集成多期收益预测与含 turnover惩罚的均值方差优化，通过可微凸优化层连接，并引入MDFP差分方案避免KKT分解，实现稳定隐式梯度和对决策 horizon增长近尺度不敏感的可扩展性。",
+    "tags": [
+      "Portfolio Optimization",
+      "Time Series",
+      "Deep Learning",
+      "Risk Management"
+    ],
+    "key_contributions": [
+      "提出IPMO模型，端到端集成多期收益预测与含 turnover惩罚的均值方差投资组合优化，解决传统两阶段的预测-决策不匹配问题",
+      "引入MDFP差分方案，避免KKT系统分解，实现稳定隐式梯度和对决策 horizon增长近尺度不敏感的可扩展性"
+    ],
+    "processed_at": "2025-12-16T08:50:02.792252"
+  },
+  {
+    "id": "2512.12924v1",
+    "title": "Interpretable Hypothesis-Driven Trading:A Rigorous Walk-Forward Validation Framework for Market Microstructure Signals",
+    "abstract": "We develop a rigorous walk-forward validation framework for algorithmic trading designed to mitigate overfitting and lookahead bias. Our methodology combines interpretable hypothesis-driven signal generation with reinforcement learning and strict out-of-sample testing. The framework enforces strict information set discipline, employs rolling window validation across 34 independent test periods, maintains complete interpretability through natural language hypothesis explanations, and incorporates realistic transaction costs and position constraints. Validating five market microstructure patterns across 100 US equities from 2015 to 2024, the system yields modest annualized returns (0.55%, Sharpe ratio 0.33) with exceptional downside protection (maximum drawdown -2.76%) and market-neutral characteristics (beta = 0.058). Performance exhibits strong regime dependence, generating positive returns during high-volatility periods (0.60% quarterly, 2020-2024) while underperforming in stable markets (-0.16%, 2015-2019). We report statistically insignificant aggregate results (p-value 0.34) to demonstrate a reproducible, honest validation protocol that prioritizes interpretability and extends naturally to advanced hypothesis generators, including large language models. The key empirical finding reveals that daily OHLCV-based microstructure signals require elevated information arrival and trading activity to function effectively. The framework provides complete mathematical specifications and open-source implementation, establishing a template for rigorous trading system evaluation that addresses the reproducibility crisis in quantitative finance research. For researchers, practitioners, and regulators, this work demonstrates that interpretable algorithmic trading strategies can be rigorously validated without sacrificing transparency or regulatory compliance.",
+    "authors": [
+      "Gagan Deep",
+      "Akash Deep",
+      "William Lamptey"
+    ],
+    "published": "2025-12-15",
+    "categories": [
+      "q-fin.TR",
+      "q-fin.CP",
+      "stat.ML"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.12924v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.12924v1",
+    "fetched_at": "2025-12-16T08:49:27.424075",
+    "chinese_title": "可解释假设驱动交易：市场微观结构信号的严格滚动前向验证框架",
+    "chinese_summary": "论文提出了一个严格的滚动前向验证框架，结合可解释假设驱动信号生成、强化学习与严格样本外测试以缓解过拟合和前瞻偏差；实证验证5个市场微观结构模式，发现其依赖高波动时期的信息到达与交易活动，且框架具备可解释性与现实交易约束。",
+    "tags": [
+      "Reinforcement Learning",
+      "Algorithmic Trading",
+      "Market Microstructure",
+      "Risk Management"
+    ],
+    "key_contributions": [
+      "通过实证揭示市场微观结构信号依赖高信息到达与交易活动的时期，且框架提供完整数学规范与可解释性，支持扩展至大语言模型等高级假设生成器"
+    ],
+    "processed_at": "2025-12-16T08:50:16.236902"
+  },
+  {
+    "id": "2512.12783v1",
+    "title": "Credit Risk Estimation with Non-Financial Features: Evidence from a Synthetic Istanbul Dataset",
+    "abstract": "Financial exclusion constrains entrepreneurship, increases income volatility, and widens wealth gaps. Underbanked consumers in Istanbul often have no bureau file because their earnings and payments flow through informal channels. To study how such borrowers can be evaluated we create a synthetic dataset of one hundred thousand Istanbul residents that reproduces first quarter 2025 TÜİK census marginals and telecom usage patterns. Retrieval augmented generation feeds these public statistics into the OpenAI o3 model, which synthesises realistic yet private records. Each profile contains seven socio demographic variables and nine alternative attributes that describe phone specifications, online shopping rhythm, subscription spend, car ownership, monthly rent, and a credit card flag. To test the impact of the alternative financial data CatBoost, LightGBM, and XGBoost are each trained in two versions. Demo models use only the socio demographic variables; Full models include both socio demographic and alternative attributes. Across five fold stratified validation the alternative block raises area under the curve by about one point three percentage and lifts balanced \\(F_{1}\\) from roughly 0.84 to 0.95, a fourteen percent gain. We contribute an open Istanbul 2025 Q1 synthetic dataset, a fully reproducible modeling pipeline, and empirical evidence that a concise set of behavioural attributes can approach bureau level discrimination power while serving borrowers who lack formal credit records. These findings give lenders and regulators a transparent blueprint for extending fair and safe credit access to the underbanked.",
+    "authors": [
+      "Atalay Denknalbant",
+      "Emre Sezdi",
+      "Zeki Furkan Kutlu",
+      "Polat Goktas"
+    ],
+    "published": "2025-12-14",
+    "categories": [
+      "cs.LG",
+      "q-fin.ST",
+      "stat.AP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.12783v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.12783v1",
+    "fetched_at": "2025-12-16T08:49:27.424109",
+    "chinese_title": "基于非金融特征的信用风险评估：来自伊斯坦布尔合成数据集的证据",
+    "chinese_summary": "该论文针对伊斯坦布尔未充分银行化消费者缺乏正式信用数据的问题，通过检索增强生成方法构建包含社会人口统计与行为特征的合成数据集，对比CatBoost等模型发现加入非金融特征显著提升信用风险评估的AUC与F1；其核心贡献包括开放伊斯坦布尔2025Q1合成数据集、提供可复现建模流程，及验证行为特征可接近信用局级判别能力。",
+    "tags": [
+      "LLM",
+      "Behavioral Finance",
+      "Risk Management"
+    ],
+    "key_contributions": [
+      "构建并开放符合伊斯坦布尔2025Q1统计特征的合成数据集，包含社会人口统计与非金融行为特征",
+      "实证验证加入非金融行为特征可显著提升信用风险评估性能，且接近信用局级判别能力，同时提供可复现建模流程"
+    ],
+    "processed_at": "2025-12-16T08:50:40.073958"
+  },
+  {
+    "id": "2512.12526v1",
+    "title": "Empirical Mode Decomposition and Graph Transformation of the MSCI World Index: A Multiscale Topological Analysis for Graph Neural Network Modeling",
+    "abstract": "This study applies Empirical Mode Decomposition (EMD) to the MSCI World index and converts the resulting intrinsic mode functions (IMFs) into graph representations to enable modeling with graph neural networks (GNNs). Using CEEMDAN, we extract nine IMFs spanning high-frequency fluctuations to long-term trends. Each IMF is transformed into a graph using four time-series-to-graph methods: natural visibility, horizontal visibility, recurrence, and transition graphs. Topological analysis shows clear scale-dependent structure: high-frequency IMFs yield dense, highly connected small-world graphs, whereas low-frequency IMFs produce sparser networks with longer characteristic path lengths. Visibility-based methods are more sensitive to amplitude variability and typically generate higher clustering, while recurrence graphs better preserve temporal dependencies. These results provide guidance for designing GNN architectures tailored to the structural properties of decomposed components, supporting more effective predictive modeling of financial time series.",
+    "authors": [
+      "Agustín M. de los Riscos",
+      "Julio E. Sandubete",
+      "Diego Carmona-Fernández",
+      "León Beleña"
+    ],
+    "published": "2025-12-14",
+    "categories": [
+      "cs.LG",
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.12526v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.12526v1",
+    "fetched_at": "2025-12-16T08:49:27.424134",
+    "chinese_title": "MSCI全球指数的经验模态分解与图变换：面向图神经网络建模的多尺度拓扑分析",
+    "chinese_summary": "本研究用CEEMDAN对MSCI全球指数分解出9个覆盖高频波动到长期趋势的本征模态函数（IMF），通过四种时间序列转图方法将各IMF转化为图；分析发现不同频率IMF的图拓扑存在尺度依赖特征，且不同转图方法特性各异，为GNN架构设计提供指导以提升金融时间序列预测效果。",
+    "tags": [
+      "Time Series",
+      "Graph Neural Network",
+      "Deep Learning",
+      "High Frequency"
+    ],
+    "key_contributions": [
+      "构建CEEMDAN分解+多时间序列转图的框架，实现MSCI全球指数多尺度IMF的图表示",
+      "揭示IMF图拓扑的尺度依赖特征及转图方法特性，为GNN架构设计提供依据助力金融预测"
+    ],
+    "processed_at": "2025-12-16T08:51:03.499061"
+  },
+  {
+    "id": "2512.12334v1",
+    "title": "Extending the application of dynamic Bayesian networks in calculating market risk: Standard and stressed expected shortfall",
+    "abstract": "In the last five years, expected shortfall (ES) and stressed ES (SES) have become key required regulatory measures of market risk in the banking sector, especially following events such as the global financial crisis. Thus, finding ways to optimize their estimation is of great importance. We extend the application of dynamic Bayesian networks (DBNs) to the estimation of 10-day 97.5% ES and stressed ES, building on prior work applying DBNs to value at risk. Using the S&P 500 index as a proxy for the equities trading desk of a US bank, we compare the performance of three DBN structure-learning algorithms with several traditional market risk models, using either the normal or the skewed Student's t return distributions. Backtesting shows that all models fail to produce statistically accurate ES and SES forecasts at the 2.5% level, reflecting the difficulty of modeling extreme tail behavior. For ES, the EGARCH(1,1) model (normal) produces the most accurate forecasts, while, for SES, the GARCH(1,1) model (normal) performs best. All distribution-dependent models deteriorate substantially when using the skewed Student's t distribution. The DBNs perform comparably to the historical simulation model, but their contribution to tail prediction is limited by the small weight assigned to their one-day-ahead forecasts within the return distribution. Future research should examine weighting schemes that enhance the influence of forward-looking DBN forecasts on tail risk estimation.",
+    "authors": [
+      "Eden Gross",
+      "Ryan Kruger",
+      "Francois Toerien"
+    ],
+    "published": "2025-12-13",
+    "categories": [
+      "q-fin.RM",
+      "cs.LG",
+      "q-fin.CP",
+      "q-fin.ST"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.12334v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.12334v1",
+    "fetched_at": "2025-12-16T08:49:27.424203",
+    "chinese_title": "动态贝叶斯网络在市场风险计算中的应用扩展：标准与压力预期短缺",
+    "chinese_summary": "本文扩展动态贝叶斯网络（DBN）用于估计10天97.5%的标准预期短缺（ES）和压力ES（SES），对比三种DBN结构学习算法与传统市场风险模型（采用正态或偏t分布）；回测显示所有模型对2.5%水平的ES/SES预测准确性不足，传统GARCH类模型（正态分布）表现更优，DBN与历史模拟相当但尾部预测权重受限；提出未来需优化权重方案提升DBN对尾部风险估计的影响。",
+    "tags": [
+      "Risk Management",
+      "Time Series",
+      "Volatility"
+    ],
+    "key_contributions": [
+      "扩展动态贝叶斯网络（DBN）应用于标准及压力预期短缺的估计，填补其在尾部风险度量中的应用空白",
+      "系统对比DBN与传统模型的ES/SES预测性能，揭示模型表现规律及DBN尾部预测的权重限制"
+    ],
+    "processed_at": "2025-12-16T08:51:31.416890"
+  },
+  {
+    "id": "2512.12250v1",
+    "title": "Stochastic Volatility Modelling with LSTM Networks: A Hybrid Approach for S&P 500 Index Volatility Forecasting",
+    "abstract": "Accurate volatility forecasting is essential in banking, investment, and risk management, because expectations about future market movements directly influence current decisions. This study proposes a hybrid modelling framework that integrates a Stochastic Volatility model with a Long Short Term Memory neural network. The SV model improves statistical precision and captures latent volatility dynamics, especially in response to unforeseen events, while the LSTM network enhances the model's ability to detect complex nonlinear patterns in financial time series. The forecasting is conducted using daily data from the S and P 500 index, covering the period from January 1 1998 to December 31 2024. A rolling window approach is employed to train the model and generate one step ahead volatility forecasts. The performance of the hybrid SV-LSTM model is evaluated through both statistical testing and investment simulations. The results show that the hybrid approach outperforms both the standalone SV and LSTM models and contributes to the development of volatility modelling techniques, providing a foundation for improving risk assessment and strategic investment planning in the context of the S and P 500.",
+    "authors": [
+      "Anna Perekhodko",
+      "Robert Ślepaczuk"
+    ],
+    "published": "2025-12-13",
+    "categories": [
+      "q-fin.TR",
+      "cs.AI",
+      "cs.LG",
+      "cs.NE",
+      "q-fin.PM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.12250v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.12250v1",
+    "fetched_at": "2025-12-16T08:49:27.424224",
+    "chinese_title": "基于LSTM网络的随机波动率建模：S&P 500指数波动率预测的混合方法",
+    "chinese_summary": "该研究提出SV-LSTM混合模型，结合随机波动率（SV）模型的统计精度与LSTM捕捉金融时间序列复杂非线性模式的能力，以S&P 500 1998-2024日度数据通过滚动窗口预测波动率，实证显示其优于单独SV和LSTM模型，助力风险评估与投资规划。",
+    "tags": [
+      "Deep Learning",
+      "Time Series",
+      "Volatility",
+      "Risk Management"
+    ],
+    "key_contributions": [
+      "实证验证混合模型在S&P 500波动率预测上优于单独SV和LSTM模型，为风险评估与投资规划提供支撑"
+    ],
+    "processed_at": "2025-12-16T08:51:43.476090"
+  },
+  {
+    "id": "2512.11933v1",
+    "title": "The Agentic Regulator: Risks for AI in Finance and a Proposed Agent-based Framework for Governance",
+    "abstract": "Generative and agentic artificial intelligence is entering financial markets faster than existing governance can adapt. Current model-risk frameworks assume static, well-specified algorithms and one-time validations; large language models and multi-agent trading systems violate those assumptions by learning continuously, exchanging latent signals, and exhibiting emergent behavior. Drawing on complex adaptive systems theory, we model these technologies as decentralized ensembles whose risks propagate along multiple time-scales. We then propose a modular governance architecture. The framework decomposes oversight into four layers of \"regulatory blocks\": (i) self-regulation modules embedded beside each model, (ii) firm-level governance blocks that aggregate local telemetry and enforce policy, (iii) regulator-hosted agents that monitor sector-wide indicators for collusive or destabilizing patterns, and (iv) independent audit blocks that supply third-party assurance. Eight design strategies enable the blocks to evolve as fast as the models they police. A case study on emergent spoofing in multi-agent trading shows how the layered controls quarantine harmful behavior in real time while preserving innovation. The architecture remains compatible with today's model-risk rules yet closes critical observability and control gaps, providing a practical path toward resilient, adaptive AI governance in financial systems.",
+    "authors": [
+      "Eren Kurshan",
+      "Tucker Balch",
+      "David Byrd"
+    ],
+    "published": "2025-12-12",
+    "categories": [
+      "cs.CY",
+      "cs.AI",
+      "cs.CE",
+      "cs.MA",
+      "q-fin.GN"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.11933v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.11933v1",
+    "fetched_at": "2025-12-16T08:49:27.424246",
+    "chinese_title": "智能体监管者：金融AI的风险及基于智能体的治理框架提案",
+    "chinese_summary": "论文指出生成式与智能体AI进入金融市场的速度远超现有治理体系的适应能力，现有模型风险框架假设静态算法等前提，而大语言模型（LLM）与多智能体交易系统因持续学习、信号交互及涌现行为违背这些假设；基于复杂适应系统理论，提出四层模块化治理架构（含自我监管、公司级治理、监管者智能体、独立审计块），可实时隔离有害行为并兼容现有规则，填补观测与控制缺口。",
+    "tags": [
+      "LLM",
+      "Financial Agent",
+      "Risk Management",
+      "Algorithmic Trading"
+    ],
+    "key_contributions": [
+      "揭示现有模型风险框架无法适配生成式/智能体AI（如LLM、多智能体交易系统）的动态特性（持续学习、涌现行为等）",
+      "提出基于复杂适应系统理论的四层模块化智能体治理架构，可实时管控风险并兼容现有规则，填补观测与控制缺口"
+    ],
+    "processed_at": "2025-12-16T08:52:02.194373"
+  }
+]
