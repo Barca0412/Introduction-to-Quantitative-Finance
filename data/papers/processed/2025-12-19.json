@@ -1,0 +1,826 @@
+[
+  {
+    "id": "2512.16411v1",
+    "title": "Asymptotic and finite-sample distributions of one- and two-sample empirical relative entropy, with application to change-point detection",
+    "abstract": "Relative entropy, as a divergence metric between two distributions, can be used for offline change-point detection and extends classical methods that mainly rely on moment-based discrepancies. To build a statistical test suitable for this context, we study the distribution of empirical relative entropy and derive several types of approximations: concentration inequalities for finite samples, asymptotic distributions, and Berry-Esseen bounds in a pre-asymptotic regime. For the latter, we introduce a new approach to obtain Berry-Esseen inequalities for nonlinear functions of sum statistics under some convexity assumptions. Our theoretical contributions cover both one- and two-sample empirical relative entropies. We then detail a change-point detection procedure built on relative entropy and compare it, through extensive simulations, with classical methods based on moments or on information criteria. Finally, we illustrate its practical relevance on two real datasets involving temperature series and volatility of stock indices.",
+    "authors": [
+      "Matthieu Garcin",
+      "Louis Perot"
+    ],
+    "published": "2025-12-18",
+    "categories": [
+      "stat.ME",
+      "math.ST",
+      "q-fin.ST",
+      "q-fin.TR",
+      "stat.AP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.16411v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.16411v1",
+    "fetched_at": "2025-12-19T08:34:17.858751",
+    "chinese_title": "单样本与双样本经验相对熵的渐近及有限样本分布：及其在变点检测中的应用",
+    "chinese_summary": "本文研究单样本与双样本经验相对熵的分布，推导有限样本集中不等式、渐近分布及预渐近区的Berry-Esseen界（提出非线性函数和凸性假设下的新方法）；构建基于相对熵的变点检测方法，通过仿真对比经典方法，并用温度序列和股指波动率数据集验证其有效性。",
+    "tags": [
+      "Time Series",
+      "Anomaly",
+      "Volatility",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "推导单样本与双样本经验相对熵的有限样本集中不等式、渐近分布及预渐近区Berry-Esseen界，提出非线性函数和凸性假设下的Berry-Esseen不等式新方法",
+      "构建基于相对熵的变点检测方法，仿真对比经典方法并通过实数据集验证其实际价值"
+    ],
+    "processed_at": "2025-12-19T08:37:29.787664"
+  },
+  {
+    "id": "2512.16396v1",
+    "title": "Global universal approximation with Brownian signatures",
+    "abstract": "We establish $L^p$-type universal approximation theorems for general and non-anticipative functionals on suitable rough path spaces, showing that linear functionals acting on signatures of time-extended rough paths are dense with respect to an $L^p$-distance. To that end, we derive global universal approximation theorems for weighted rough path spaces. We demonstrate that these $L^p$-type universal approximation theorems apply in particular to Brownian motion. As a consequence, linear functionals on the signature of the time-extended Brownian motion can approximate any $p$-integrable stochastic process adapted to the Brownian filtration, including solutions to stochastic differential equations.",
+    "authors": [
+      "Mihriban Ceylan",
+      "David J. Prömel"
+    ],
+    "published": "2025-12-18",
+    "categories": [
+      "math.PR",
+      "cs.LG",
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.16396v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.16396v1",
+    "fetched_at": "2025-12-19T08:34:17.858787",
+    "chinese_title": "基于布朗签名的全局通用逼近",
+    "chinese_summary": "论文建立了粗糙路径空间上一般非预见性泛函的L^p型通用逼近定理，证明时间扩展粗糙路径签名上的线性泛函在L^p距离下稠密；推导加权粗糙路径空间的全局通用逼近定理，应用于布朗运动时，表明其时间扩展签名的线性泛函可逼近布朗滤波下任意p可积随机过程（含随机微分方程解）。",
+    "tags": [
+      "Time Series",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "建立粗糙路径空间上一般非预见性泛函的L^p型通用逼近定理，证明时间扩展粗糙路径签名线性泛函在L^p距离下稠密",
+      "推导加权粗糙路径空间全局通用逼近定理，应用于布朗运动时可逼近其滤波下任意p可积随机过程（含SDE解）"
+    ],
+    "processed_at": "2025-12-19T08:37:45.626680"
+  },
+  {
+    "id": "2512.16251v1",
+    "title": "Interpretable Deep Learning for Stock Returns: A Consensus-Bottleneck Asset Pricing Model",
+    "abstract": "We introduce the \\textit{Consensus-Bottleneck Asset Pricing Model} (CB-APM), a partially interpretable neural network that replicates the reasoning processes of sell-side analysts by capturing how dispersed investor beliefs are compressed into asset prices through a consensus formation process. By modeling this ``bottleneck'' to summarize firm- and macro-level information, CB-APM not only predicts future risk premiums of U.S. equities but also links belief aggregation to expected returns in a structurally interpretable manner. The model improves long-horizon return forecasts and outperforms standard deep learning approaches in both predictive accuracy and explanatory power. Comprehensive portfolio analyses show that CB-APM's out-of-sample predictions translate into economically meaningful payoffs, with monotonic return differentials and stable long-short performance across regularization settings. Empirically, CB-APM leverages consensus as a regularizer to amplify long-horizon predictability and yields interpretable consensus-based components that clarify how information is priced in returns. Moreover, regression and GRS-based pricing diagnostics reveal that the learned consensus representations capture priced variation only partially spanned by traditional factor models, demonstrating that CB-APM uncovers belief-driven structure in expected returns beyond the canonical factor space. Overall, CB-APM provides an interpretable and empirically grounded framework for understanding belief-driven return dynamics.",
+    "authors": [
+      "Bong-Gyu Jang",
+      "Younwoo Jeong",
+      "Changeun Kim"
+    ],
+    "published": "2025-12-18",
+    "categories": [
+      "q-fin.PR",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.16251v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.16251v1",
+    "fetched_at": "2025-12-19T08:34:17.858813",
+    "chinese_title": "股票收益的可解释深度学习：共识瓶颈资产定价模型",
+    "chinese_summary": "本文提出共识瓶颈资产定价模型（CB-APM），这是一种部分可解释神经网络，通过模拟卖方分析师推理、压缩分散投资者信念的共识形成过程，既预测美国股票未来风险溢价，又结构化解释信念聚合与预期收益的关联；该模型提升长期收益预测精度，优于传统深度学习方法，且样本外预测带来经济意义显著的回报，还捕捉传统因子模型未覆盖的定价变异。",
+    "tags": [
+      "Asset Pricing",
+      "Deep Learning",
+      "Behavioral Finance",
+      "Factor Model"
+    ],
+    "key_contributions": [
+      "提出共识瓶颈资产定价模型（CB-APM），结合深度学习与可解释性，模拟共识形成过程压缩投资者信念，解释信念聚合与预期收益的关联",
+      "提升长期收益预测精度，样本外预测带来经济意义显著回报，且捕捉传统因子模型未覆盖的定价变异"
+    ],
+    "processed_at": "2025-12-19T08:38:01.200601"
+  },
+  {
+    "id": "2512.16115v1",
+    "title": "An Efficient Machine Learning Framework for Option Pricing via Fourier Transform",
+    "abstract": "The increasing need for rapid recalibration of option pricing models in dynamic markets places stringent computational demands on data generation and valuation algorithms. In this work, we propose a hybrid algorithmic framework that integrates the smooth offset algorithm (SOA) with supervised machine learning models for the fast pricing of multiple path-independent options under exponential Lévy dynamics. Building upon the SOA-generated dataset, we train neural networks, random forests, and gradient boosted decision trees to construct surrogate pricing operators. Extensive numerical experiments demonstrate that, once trained, these surrogates achieve order-of-magnitude acceleration over direct SOA evaluation. Importantly, the proposed framework overcomes key numerical limitations inherent to fast Fourier transform-based methods, including the consistency of input data and the instability in deep out-of-the-money option pricing.",
+    "authors": [
+      "Liying Zhang",
+      "Ying Gao"
+    ],
+    "published": "2025-12-18",
+    "categories": [
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.16115v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.16115v1",
+    "fetched_at": "2025-12-19T08:34:17.858834",
+    "chinese_title": "基于傅里叶变换的期权定价高效机器学习框架",
+    "chinese_summary": "针对动态市场中期权定价模型快速重校准的需求，论文提出结合光滑偏移算法（SOA）与监督机器学习（神经网络、随机森林、梯度提升树）的混合框架，用于指数Lévy动态下多路径无关期权的快速定价；数值实验表明，训练后的代理模型比直接SOA评估快一个数量级，且克服了基于快速傅里叶变换方法的输入数据一致性和深度虚值期权定价不稳定等关键数值限制。",
+    "tags": [
+      "Options",
+      "Deep Learning",
+      "Asset Pricing"
+    ],
+    "key_contributions": [
+      "提出结合SOA与监督机器学习的混合框架，实现指数Lévy动态下多路径无关期权的快速定价",
+      "训练后的机器学习代理模型大幅提升定价速度，且解决了传统傅里叶变换方法的关键数值缺陷"
+    ],
+    "processed_at": "2025-12-19T08:38:18.002470"
+  },
+  {
+    "id": "2512.16080v1",
+    "title": "Design of a Decentralized Fixed-Income Lending Automated Market Maker Protocol Supporting Arbitrary Maturities",
+    "abstract": "In decentralized finance (DeFi), designing fixed-income lending automated market makers (AMMs) is extremely challenging due to time-related complexities. Moreover, existing protocols only support single-maturity lending. Building upon the BondMM protocol, this paper argues that its mathematical invariants are sufficiently elegant to be generalized to arbitrary maturities. This paper thus propose an improved design, BondMM-A, which supports lending activities of any maturity. By integrating fixed-income instruments of varying maturities into a single smart contract, BondMM-A offers users and liquidity providers (LPs) greater operational freedom and capital efficiency. Experimental results show that BondMM-A performs excellently in terms of interest rate stability and financial robustness.",
+    "authors": [
+      "Tianyi Ma"
+    ],
+    "published": "2025-12-18",
+    "categories": [
+      "cs.CR",
+      "q-fin.TR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.16080v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.16080v1",
+    "fetched_at": "2025-12-19T08:34:17.858852",
+    "chinese_title": "支持任意期限的去中心化固定收益借贷自动做市商协议设计",
+    "chinese_summary": "针对DeFi中固定收益借贷AMM设计复杂且现有仅支持单期限的问题，论文基于BondMM协议提出BondMM-A，支持任意期限借贷，整合多期限工具到单个智能合约提升操作自由与资本效率，实验验证其利率稳定且财务稳健。",
+    "tags": [
+      "Market Making",
+      "Asset Pricing",
+      "Risk Management"
+    ],
+    "key_contributions": [
+      "设计BondMM-A协议，支持任意期限的固定收益借贷AMM，突破现有单期限局限",
+      "整合多期限工具到单个智能合约，提升用户与流动性提供者的操作自由及资本效率"
+    ],
+    "processed_at": "2025-12-19T08:38:37.830936"
+  },
+  {
+    "id": "2512.16277v1",
+    "title": "Sharpness-aware Second-order Latent Factor Model for High-dimensional and Incomplete Data",
+    "abstract": "Second-order Latent Factor (SLF) model, a class of low-rank representation learning methods, has proven effective at extracting node-to-node interaction patterns from High-dimensional and Incomplete (HDI) data. However, its optimization is notoriously difficult due to its bilinear and non-convex nature. Sharpness-aware Minimization (SAM) has recently proposed to find flat local minima when minimizing non-convex objectives, thereby improving the generalization of representation-learning models. To address this challenge, we propose a Sharpness-aware SLF (SSLF) model. SSLF embodies two key ideas: (1) acquiring second-order information via Hessian-vector products; and (2) injecting a sharpness term into the curvature (Hessian) through the designed Hessian-vector products. Experiments on multiple industrial datasets demonstrate that the proposed model consistently outperforms state-of-the-art baselines.",
+    "authors": [
+      "Jialiang Wang",
+      "Xueyan Bao",
+      "Hao Wu"
+    ],
+    "published": "2025-12-18",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.16277v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.16277v1",
+    "fetched_at": "2025-12-19T08:34:24.378979",
+    "chinese_title": "面向高维不完全数据的锐度感知二阶潜在因子模型",
+    "chinese_summary": "二阶潜在因子（SLF）模型可从高维不完全数据中提取节点交互模式，但因双线性非凸特性优化困难；本文提出锐度感知SLF（SSLF）模型，通过Hessian-vector乘积获取二阶信息并注入锐度项到曲率中，实验验证其优于多工业数据集上的SOTA基线。",
+    "tags": [
+      "Factor Model",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出锐度感知二阶潜在因子（SSLF）模型，解决传统SLF模型的非凸优化难题",
+      "设计基于Hessian-vector乘积的二阶信息获取与锐度项注入方法，提升模型泛化能力"
+    ],
+    "processed_at": "2025-12-19T08:39:04.503097"
+  },
+  {
+    "id": "2512.16453v1",
+    "title": "TimeSeries2Report prompting enables adaptive large language model management of lithium-ion batteries",
+    "abstract": "Large language models (LLMs) offer promising capabilities for interpreting multivariate time-series data, yet their application to real-world battery energy storage system (BESS) operation and maintenance remains largely unexplored. Here, we present TimeSeries2Report (TS2R), a prompting framework that converts raw lithium-ion battery operational time-series into structured, semantically enriched reports, enabling LLMs to reason, predict, and make decisions in BESS management scenarios. TS2R encodes short-term temporal dynamics into natural language through a combination of segmentation, semantic abstraction, and rule-based interpretation, effectively bridging low-level sensor signals with high-level contextual insights. We benchmark TS2R across both lab-scale and real-world datasets, evaluating report quality and downstream task performance in anomaly detection, state-of-charge prediction, and charging/discharging management. Compared with vision-, embedding-, and text-based prompting baselines, report-based prompting via TS2R consistently improves LLM performance in terms of across accuracy, robustness, and explainability metrics. Notably, TS2R-integrated LLMs achieve expert-level decision quality and predictive consistency without retraining or architecture modification, establishing a practical path for adaptive, LLM-driven battery intelligence.",
+    "authors": [
+      "Jiayang Yang",
+      "Chunhui Zhao",
+      "Martin Guay",
+      "Zhixing Cao"
+    ],
+    "published": "2025-12-18",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.16453v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.16453v1",
+    "fetched_at": "2025-12-19T08:34:31.125207",
+    "chinese_title": "TimeSeries2Report提示框架实现锂离子电池的自适应大语言模型管理",
+    "chinese_summary": "论文提出TimeSeries2Report（TS2R）提示框架，将锂离子电池运行时间序列转换为结构化语义报告，桥接低层次传感器信号与高层次上下文洞察；在实验室及真实数据集上验证，TS2R集成的大语言模型无需重新训练或修改架构，即可在异常检测、荷电状态预测等电池管理任务中实现专家级决策质量与性能提升。",
+    "tags": [
+      "LLM",
+      "Time Series",
+      "Anomaly"
+    ],
+    "key_contributions": [
+      "提出TS2R提示框架，通过时间序列到语义报告的转换，有效桥接电池传感器信号与LLM所需的高层上下文信息",
+      "验证TS2R集成的LLM在电池管理下游任务中性能更优，无需模型重训练/架构修改即可实现专家级决策质量"
+    ],
+    "processed_at": "2025-12-19T08:39:17.025811"
+  },
+  {
+    "id": "2512.16037v1",
+    "title": "Explainable AI in Big Data Fraud Detection",
+    "abstract": "Big Data has become central to modern applications in finance, insurance, and cybersecurity, enabling machine learning systems to perform large-scale risk assessments and fraud detection. However, the increasing dependence on automated analytics introduces important concerns about transparency, regulatory compliance, and trust. This paper examines how explainable artificial intelligence (XAI) can be integrated into Big Data analytics pipelines for fraud detection and risk management. We review key Big Data characteristics and survey major analytical tools, including distributed storage systems, streaming platforms, and advanced fraud detection models such as anomaly detectors, graph-based approaches, and ensemble classifiers. We also present a structured review of widely used XAI methods, including LIME, SHAP, counterfactual explanations, and attention mechanisms, and analyze their strengths and limitations when deployed at scale. Based on these findings, we identify key research gaps related to scalability, real-time processing, and explainability for graph and temporal models. To address these challenges, we outline a conceptual framework that integrates scalable Big Data infrastructure with context-aware explanation mechanisms and human feedback. The paper concludes with open research directions in scalable XAI, privacy-aware explanations, and standardized evaluation methods for explainable fraud detection systems.",
+    "authors": [
+      "Ayush Jain",
+      "Rahul Kulkarni",
+      "Siyi Lin"
+    ],
+    "published": "2025-12-17",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.16037v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.16037v1",
+    "fetched_at": "2025-12-19T08:34:31.125237",
+    "chinese_title": "大数据欺诈检测中的可解释人工智能（XAI）",
+    "chinese_summary": "本文探讨可解释人工智能（XAI）在大数据欺诈检测与风险管理中的集成应用，综述大数据分析工具、主流XAI方法及其规模化部署的优劣势，识别可扩展性、实时处理等研究缺口并提出整合可扩展基础设施与上下文感知解释的概念框架，最后指出开放研究方向。",
+    "tags": [
+      "Anomaly",
+      "Risk Management",
+      "Graph Neural Network"
+    ],
+    "key_contributions": [
+      "系统综述大数据欺诈检测的分析工具及主流XAI方法的规模化部署优劣势",
+      "提出整合可扩展大数据基础设施与上下文感知解释机制及人类反馈的概念框架，识别关键研究缺口并给出开放方向"
+    ],
+    "processed_at": "2025-12-19T08:39:37.323629"
+  },
+  {
+    "id": "2512.16813v1",
+    "title": "Coordinated Anti-Jamming Resilience in Swarm Networks via Multi-Agent Reinforcement Learning",
+    "abstract": "Reactive jammers pose a severe security threat to robotic-swarm networks by selectively disrupting inter-agent communications and undermining formation integrity and mission success. Conventional countermeasures such as fixed power control or static channel hopping are largely ineffective against such adaptive adversaries. This paper presents a multi-agent reinforcement learning (MARL) framework based on the QMIX algorithm to improve the resilience of swarm communications under reactive jamming. We consider a network of multiple transmitter-receiver pairs sharing channels while a reactive jammer with Markovian threshold dynamics senses aggregate power and reacts accordingly. Each agent jointly selects transmit frequency (channel) and power, and QMIX learns a centralized but factorizable action-value function that enables coordinated yet decentralized execution. We benchmark QMIX against a genie-aided optimal policy in a no-channel-reuse setting, and against local Upper Confidence Bound (UCB) and a stateless reactive policy in a more general fading regime with channel reuse enabled. Simulation results show that QMIX rapidly converges to cooperative policies that nearly match the genie-aided bound, while achieving higher throughput and lower jamming incidence than the baselines, thereby demonstrating MARL's effectiveness for securing autonomous swarms in contested environments.",
+    "authors": [
+      "Bahman Abolhassani",
+      "Tugba Erpek",
+      "Kemal Davaslioglu",
+      "Yalin E. Sagduyu",
+      "Sastry Kompella"
+    ],
+    "published": "2025-12-18",
+    "categories": [
+      "cs.NI",
+      "cs.AI",
+      "cs.DC",
+      "cs.LG",
+      "eess.SP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.16813v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.16813v1",
+    "fetched_at": "2025-12-19T08:35:00.596885",
+    "chinese_title": "基于多智能体强化学习的群体网络协同抗干扰韧性研究",
+    "chinese_summary": "针对反应式干扰对机器人群体网络通信的威胁，传统固定功率控制等方法对自适应干扰效果不佳；本文提出基于QMIX算法的多智能体强化学习框架，使各智能体协同选择传输频率与功率，实现集中式学习、分布式执行；仿真表明该框架收敛快，吞吐量更高、干扰发生率更低，接近先知辅助最优策略。",
+    "tags": [
+      "Reinforcement Learning",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出基于QMIX的多智能体强化学习框架，实现群体网络智能体协同抗干扰决策（联合选频与功率），兼顾集中式学习与分布式执行",
+      "仿真验证该框架性能优于传统基线，接近先知最优策略，证明MARL在群体网络抗干扰中的有效性"
+    ],
+    "processed_at": "2025-12-19T08:40:00.243514"
+  },
+  {
+    "id": "2512.16733v1",
+    "title": "Discovering and Learning Probabilistic Models of Black-Box AI Capabilities",
+    "abstract": "Black-box AI (BBAI) systems such as foundational models are increasingly being used for sequential decision making. To ensure that such systems are safe to operate and deploy, it is imperative to develop efficient methods that can provide a sound and interpretable representation of the BBAI's capabilities. This paper shows that PDDL-style representations can be used to efficiently learn and model an input BBAI's planning capabilities. It uses the Monte-Carlo tree search paradigm to systematically create test tasks, acquire data, and prune the hypothesis space of possible symbolic models. Learned models describe a BBAI's capabilities, the conditions under which they can be executed, and the possible outcomes of executing them along with their associated probabilities. Theoretical results show soundness, completeness and convergence of the learned models. Empirical results with multiple BBAI systems illustrate the scope, efficiency, and accuracy of the presented methods.",
+    "authors": [
+      "Daniel Bramblett",
+      "Rushang Karia",
+      "Adrian Ciotinga",
+      "Ruthvick Suresh",
+      "Pulkit Verma",
+      "YooJung Choi",
+      "Siddharth Srivastava"
+    ],
+    "published": "2025-12-18",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.16733v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.16733v1",
+    "fetched_at": "2025-12-19T08:35:00.596921",
+    "chinese_title": "黑箱AI能力的概率模型发现与学习",
+    "chinese_summary": "本文针对黑箱AI系统（如基础模型）的能力建模需求，采用PDDL风格表示结合蒙特卡洛树搜索方法，系统创建测试任务、收集数据并剪枝符号模型假设空间，学习到描述黑箱AI能力、执行条件及概率化结果的模型；理论证明该模型具有可靠、完整与收敛性，实证验证了方法的范围、效率和准确性。",
+    "tags": [
+      "LLM",
+      "Reinforcement Learning",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出基于PDDL风格表示与蒙特卡洛树搜索的方法，高效学习黑箱AI的规划能力及概率化模型",
+      "理论证明所提模型的可靠、完整与收敛性，实证验证方法的范围、效率和准确性"
+    ],
+    "processed_at": "2025-12-19T08:40:21.961092"
+  },
+  {
+    "id": "2512.16676v1",
+    "title": "DataFlow: An LLM-Driven Framework for Unified Data Preparation and Workflow Automation in the Era of Data-Centric AI",
+    "abstract": "The rapidly growing demand for high-quality data in Large Language Models (LLMs) has intensified the need for scalable, reliable, and semantically rich data preparation pipelines. However, current practices remain dominated by ad-hoc scripts and loosely specified workflows, which lack principled abstractions, hinder reproducibility, and offer limited support for model-in-the-loop data generation. To address these challenges, we present DataFlow, a unified and extensible LLM-driven data preparation framework. DataFlow is designed with system-level abstractions that enable modular, reusable, and composable data transformations, and provides a PyTorch-style pipeline construction API for building debuggable and optimizable dataflows. The framework consists of nearly 200 reusable operators and six domain-general pipelines spanning text, mathematical reasoning, code, Text-to-SQL, agentic RAG, and large-scale knowledge extraction. To further improve usability, we introduce DataFlow-Agent, which automatically translates natural-language specifications into executable pipelines via operator synthesis, pipeline planning, and iterative verification. Across six representative use cases, DataFlow consistently improves downstream LLM performance. Our math, code, and text pipelines outperform curated human datasets and specialized synthetic baselines, achieving up to +3\\% execution accuracy in Text-to-SQL over SynSQL, +7\\% average improvements on code benchmarks, and 1--3 point gains on MATH, GSM8K, and AIME. Moreover, a unified 10K-sample dataset produced by DataFlow enables base models to surpass counterparts trained on 1M Infinity-Instruct data. These results demonstrate that DataFlow provides a practical and high-performance substrate for reliable, reproducible, and scalable LLM data preparation, and establishes a system-level foundation for future data-centric AI development.",
+    "authors": [
+      "Hao Liang",
+      "Xiaochen Ma",
+      "Zhou Liu",
+      "Zhen Hao Wong",
+      "Zhengyang Zhao",
+      "Zimo Meng",
+      "Runming He",
+      "Chengyu Shen",
+      "Qifeng Cai",
+      "Zhaoyang Han",
+      "Meiyi Qiang",
+      "Yalin Feng",
+      "Tianyi Bai",
+      "Zewei Pan",
+      "Ziyi Guo",
+      "Yizhen Jiang",
+      "Jingwen Deng",
+      "Qijie You",
+      "Peichao Lai",
+      "Tianyu Guo",
+      "Chi Hsu Tsai",
+      "Hengyi Feng",
+      "Rui Hu",
+      "Wenkai Yu",
+      "Junbo Niu",
+      "Bohan Zeng",
+      "Ruichuan An",
+      "Lu Ma",
+      "Jihao Huang",
+      "Yaowei Zheng",
+      "Conghui He",
+      "Linpeng Tang",
+      "Bin Cui",
+      "Weinan E",
+      "Wentao Zhang"
+    ],
+    "published": "2025-12-18",
+    "categories": [
+      "cs.LG",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.16676v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.16676v1",
+    "fetched_at": "2025-12-19T08:35:00.597002",
+    "chinese_title": "DataFlow：数据中心AI时代下由大语言模型驱动的统一数据准备与工作流自动化框架",
+    "chinese_summary": "针对当前数据准备流程缺乏原则性抽象、可复现性差等问题，论文提出DataFlow框架，通过系统级抽象、PyTorch风格API及200+可复用算子实现模块化数据转换；引入DataFlow-Agent自动将自然语言需求转化为可执行pipeline，实验显示该框架显著提升数学、代码等任务下游LLM性能。",
+    "tags": [
+      "LLM",
+      "NLP",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出统一可扩展的LLM驱动数据准备框架DataFlow，包含系统级抽象、PyTorch风格API及200+可复用算子，支持模块化、可复现的数据转换与工作流构建",
+      "引入DataFlow-Agent，通过算子合成、pipeline规划与迭代验证自动将自然语言需求转化为可执行pipeline，提升数据准备流程的易用性"
+    ],
+    "processed_at": "2025-12-19T08:40:44.404735"
+  },
+  {
+    "id": "2512.16650v1",
+    "title": "Prefix Probing: Lightweight Harmful Content Detection for Large Language Models",
+    "abstract": "Large language models often face a three-way trade-off among detection accuracy, inference latency, and deployment cost when used in real-world safety-sensitive applications. This paper introduces Prefix Probing, a black-box harmful content detection method that compares the conditional log-probabilities of \"agreement/execution\" versus \"refusal/safety\" opening prefixes and leverages prefix caching to reduce detection overhead to near first-token latency. During inference, the method requires only a single log-probability computation over the probe prefixes to produce a harmfulness score and apply a threshold, without invoking any additional models or multi-stage inference. To further enhance the discriminative power of the prefixes, we design an efficient prefix construction algorithm that automatically discovers highly informative prefixes, substantially improving detection performance. Extensive experiments demonstrate that Prefix Probing achieves detection effectiveness comparable to mainstream external safety models while incurring only minimal computational cost and requiring no extra model deployment, highlighting its strong practicality and efficiency.",
+    "authors": [
+      "Jirui Yang",
+      "Hengqi Guo",
+      "Zhihui Lu",
+      "Yi Zhao",
+      "Yuansen Zhang",
+      "Shijing Hu",
+      "Qiang Duan",
+      "Yinggui Wang",
+      "Tao Wei"
+    ],
+    "published": "2025-12-18",
+    "categories": [
+      "cs.AI",
+      "cs.CR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.16650v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.16650v1",
+    "fetched_at": "2025-12-19T08:35:00.597034",
+    "chinese_title": "前缀探测：面向大语言模型的轻量级有害内容检测",
+    "chinese_summary": "本文提出面向大语言模型的轻量级有害内容检测方法Prefix Probing，通过对比“同意/执行”与“拒绝/安全”前缀的条件对数概率生成有害性分数，结合前缀缓存降低推理开销；同时设计高效前缀构造算法自动发现高信息前缀提升检测性能，实验表明其效果媲美主流外部安全模型且无需额外模型部署。",
+    "tags": [
+      "LLM",
+      "NLP",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出轻量级黑盒检测方法Prefix Probing，仅需单次前缀对数概率计算即可生成有害性分数，通过前缀缓存将检测开销降至近首词延迟，无需额外模型部署",
+      "设计高效前缀构造算法自动发现高信息前缀，显著提升有害内容检测性能"
+    ],
+    "processed_at": "2025-12-19T08:41:01.691933"
+  },
+  {
+    "id": "2512.16491v1",
+    "title": "Best Practices For Empirical Meta-Algorithmic Research Guidelines from the COSEAL Research Network",
+    "abstract": "Empirical research on meta-algorithmics, such as algorithm selection, configuration, and scheduling, often relies on extensive and thus computationally expensive experiments. With the large degree of freedom we have over our experimental setup and design comes a plethora of possible error sources that threaten the scalability and validity of our scientific insights. Best practices for meta-algorithmic research exist, but they are scattered between different publications and fields, and continue to evolve separately from each other. In this report, we collect good practices for empirical meta-algorithmic research across the subfields of the COSEAL community, encompassing the entire experimental cycle: from formulating research questions and selecting an experimental design, to executing ex- periments, and ultimately, analyzing and presenting results impartially. It establishes the current state-of-the-art practices within meta-algorithmic research and serves as a guideline to both new researchers and practitioners in meta-algorithmic fields.",
+    "authors": [
+      "Theresa Eimer",
+      "Lennart Schäpermeier",
+      "André Biedenkapp",
+      "Alexander Tornede",
+      "Lars Kotthoff",
+      "Pieter Leyman",
+      "Matthias Feurer",
+      "Katharina Eggensperger",
+      "Kaitlin Maile",
+      "Tanja Tornede",
+      "Anna Kozak",
+      "Ke Xue",
+      "Marcel Wever",
+      "Mitra Baratchi",
+      "Damir Pulatov",
+      "Heike Trautmann",
+      "Haniye Kashgarani",
+      "Marius Lindauer"
+    ],
+    "published": "2025-12-18",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.16491v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.16491v1",
+    "fetched_at": "2025-12-19T08:35:00.597081",
+    "chinese_title": "经验元算法研究的最佳实践：COSEAL研究网络指南",
+    "chinese_summary": "本文针对元算法（如算法选择、配置、调度）实证研究中实验自由度高、误差源多的问题，收集COSEAL社区跨子领域的全实验周期（从问题提出到结果分析呈现）良好实践，确立当前前沿实践并为研究者与从业者提供系统指南。",
+    "tags": [
+      "Benchmark",
+      "Algorithmic Trading"
+    ],
+    "key_contributions": [
+      "系统整合COSEAL社区跨子领域元算法实证研究的全实验周期良好实践",
+      "确立当前元算法研究前沿实践，为研究者与从业者提供明确指南"
+    ],
+    "processed_at": "2025-12-19T08:41:23.567412"
+  },
+  {
+    "id": "2512.16301v1",
+    "title": "Adaptation of Agentic AI",
+    "abstract": "Cutting-edge agentic AI systems are built on foundation models that can be adapted to plan, reason, and interact with external tools to perform increasingly complex and specialized tasks. As these systems grow in capability and scope, adaptation becomes a central mechanism for improving performance, reliability, and generalization. In this paper, we unify the rapidly expanding research landscape into a systematic framework that spans both agent adaptations and tool adaptations. We further decompose these into tool-execution-signaled and agent-output-signaled forms of agent adaptation, as well as agent-agnostic and agent-supervised forms of tool adaptation. We demonstrate that this framework helps clarify the design space of adaptation strategies in agentic AI, makes their trade-offs explicit, and provides practical guidance for selecting or switching among strategies during system design. We then review the representative approaches in each category, analyze their strengths and limitations, and highlight key open challenges and future opportunities. Overall, this paper aims to offer a conceptual foundation and practical roadmap for researchers and practitioners seeking to build more capable, efficient, and reliable agentic AI systems.",
+    "authors": [
+      "Pengcheng Jiang",
+      "Jiacheng Lin",
+      "Zhiyi Shi",
+      "Zifeng Wang",
+      "Luxi He",
+      "Yichen Wu",
+      "Ming Zhong",
+      "Peiyang Song",
+      "Qizheng Zhang",
+      "Heng Wang",
+      "Xueqiang Xu",
+      "Hanwen Xu",
+      "Pengrui Han",
+      "Dylan Zhang",
+      "Jiashuo Sun",
+      "Chaoqi Yang",
+      "Kun Qian",
+      "Tian Wang",
+      "Changran Hu",
+      "Manling Li",
+      "Quanzheng Li",
+      "Hao Peng",
+      "Sheng Wang",
+      "Jingbo Shang",
+      "Chao Zhang",
+      "Jiaxuan You",
+      "Liyuan Liu",
+      "Pan Lu",
+      "Yu Zhang",
+      "Heng Ji",
+      "Yejin Choi",
+      "Dawn Song",
+      "Jimeng Sun",
+      "Jiawei Han"
+    ],
+    "published": "2025-12-18",
+    "categories": [
+      "cs.AI",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.16301v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.16301v1",
+    "fetched_at": "2025-12-19T08:35:00.597154",
+    "chinese_title": "智能体AI的适应机制研究",
+    "chinese_summary": "本文聚焦智能体AI（Agentic AI）的适应机制，构建了涵盖智能体适应与工具适应的系统框架（细分为工具执行信号型、智能体输出信号型等子类型），明确适应策略的设计空间与权衡；同时回顾各分类代表方法，分析其优劣并指出关键挑战与未来方向，为构建高效可靠的智能体AI系统提供概念基础与实用路线图。",
+    "tags": [
+      "Financial Agent",
+      "LLM",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "构建了涵盖智能体适应与工具适应的系统框架，明确适应策略的设计空间与权衡关系",
+      "回顾各分类下的代表方法，分析其优劣并指出关键挑战与未来研究方向，提供实用指导"
+    ],
+    "processed_at": "2025-12-19T08:41:52.386582"
+  },
+  {
+    "id": "2512.16300v1",
+    "title": "Code-in-the-Loop Forensics: Agentic Tool Use for Image Forgery Detection",
+    "abstract": "Existing image forgery detection (IFD) methods either exploit low-level, semantics-agnostic artifacts or rely on multimodal large language models (MLLMs) with high-level semantic knowledge. Although naturally complementary, these two information streams are highly heterogeneous in both paradigm and reasoning, making it difficult for existing methods to unify them or effectively model their cross-level interactions. To address this gap, we propose ForenAgent, a multi-round interactive IFD framework that enables MLLMs to autonomously generate, execute, and iteratively refine Python-based low-level tools around the detection objective, thereby achieving more flexible and interpretable forgery analysis. ForenAgent follows a two-stage training pipeline combining Cold Start and Reinforcement Fine-Tuning to enhance its tool interaction capability and reasoning adaptability progressively. Inspired by human reasoning, we design a dynamic reasoning loop comprising global perception, local focusing, iterative probing, and holistic adjudication, and instantiate it as both a data-sampling strategy and a task-aligned process reward. For systematic training and evaluation, we construct FABench, a heterogeneous, high-quality agent-forensics dataset comprising 100k images and approximately 200k agent-interaction question-answer pairs. Experiments show that ForenAgent exhibits emergent tool-use competence and reflective reasoning on challenging IFD tasks when assisted by low-level tools, charting a promising route toward general-purpose IFD. The code will be released after the review process is completed.",
+    "authors": [
+      "Fanrui Zhang",
+      "Qiang Zhang",
+      "Sizhuo Zhou",
+      "Jianwen Sun",
+      "Chuanhao Li",
+      "Jiaxin Ai",
+      "Yukang Feng",
+      "Yujie Zhang",
+      "Wenjie Li",
+      "Zizhen Li",
+      "Yifan Chang",
+      "Jiawei Liu",
+      "Kaipeng Zhang"
+    ],
+    "published": "2025-12-18",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.16300v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.16300v1",
+    "fetched_at": "2025-12-19T08:35:00.597191",
+    "chinese_title": "循环代码取证：用于图像伪造检测的智能体工具使用",
+    "chinese_summary": "现有图像伪造检测方法因低级 artifacts 与高级语义知识异质性强难统一，论文提出ForenAgent多轮交互式框架，使多模态大语言模型自主生成、执行并迭代优化Python低级工具，实现灵活可解释的伪造分析；还设计两阶段训练、动态推理循环，构建FABench数据集，实验验证其在难任务上的工具使用与反思推理能力。",
+    "tags": [
+      "LLM",
+      "Reinforcement Learning",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出ForenAgent框架，实现MLLMs与低级工具的自主交互，统一异质性检测信息流",
+      "设计两阶段训练 pipeline 与动态推理循环，构建FABench agent-取证数据集"
+    ],
+    "processed_at": "2025-12-19T08:42:06.368979"
+  },
+  {
+    "id": "2512.16295v1",
+    "title": "OS-Oracle: A Comprehensive Framework for Cross-Platform GUI Critic Models",
+    "abstract": "With VLM-powered computer-using agents (CUAs) becoming increasingly capable at graphical user interface (GUI) navigation and manipulation, reliable step-level decision-making has emerged as a key bottleneck for real-world deployment. In long-horizon workflows, errors accumulate quickly and irreversible actions can cause unintended consequences, motivating critic models that assess each action before execution. While critic models offer a promising solution, their effectiveness is hindered by the lack of diverse, high-quality GUI feedback data and public critic benchmarks for step-level evaluation in computer use. To bridge these gaps, we introduce OS-Oracle that makes three core contributions: (1) a scalable data pipeline for synthesizing cross-platform GUI critic data; (2) a two-stage training paradigm combining supervised fine-tuning (SFT) and consistency-preserving group relative policy optimization (CP-GRPO); (3) OS-Critic Bench, a holistic benchmark for evaluating critic model performance across Mobile, Web, and Desktop platforms. Leveraging this framework, we curate a high-quality dataset containing 310k critic samples. The resulting critic model, OS-Oracle-7B, achieves state-of-the-art performance among open-source VLMs on OS-Critic Bench, and surpasses proprietary models on the mobile domain. Furthermore, when serving as a pre-critic, OS-Oracle-7B improves the performance of native GUI agents such as UI-TARS-1.5-7B in OSWorld and AndroidWorld environments. The code is open-sourced at https://github.com/numbmelon/OS-Oracle.",
+    "authors": [
+      "Zhenyu Wu",
+      "Jingjing Xie",
+      "Zehao Li",
+      "Bowen Yang",
+      "Qiushi Sun",
+      "Zhaoyang Liu",
+      "Zhoumianze Liu",
+      "Yu Qiao",
+      "Xiangyu Yue",
+      "Zun Wang",
+      "Zichen Ding"
+    ],
+    "published": "2025-12-18",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.16295v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.16295v1",
+    "fetched_at": "2025-12-19T08:35:00.597225",
+    "chinese_title": "OS-Oracle：跨平台GUI批评模型的综合框架",
+    "chinese_summary": "该论文提出OS-Oracle综合框架，包含可扩展的跨平台GUI批评数据合成pipeline、结合SFT与CP-GRPO的两阶段训练范式及OS-Critic Bench跨平台评估基准；其训练的OS-Oracle-7B模型性能优异，可提升原生GUI代理表现。",
+    "tags": [
+      "LLM",
+      "Reinforcement Learning",
+      "Benchmark",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "构建可扩展的跨平台GUI批评数据合成数据 pipeline",
+      "提出结合SFT与CP-GRPO的两阶段批评模型训练范式",
+      "建立OS-Critic Bench跨平台GUI批评模型评估基准"
+    ],
+    "processed_at": "2025-12-19T08:42:21.271886"
+  },
+  {
+    "id": "2512.16280v1",
+    "title": "Love, Lies, and Language Models: Investigating AI's Role in Romance-Baiting Scams",
+    "abstract": "Romance-baiting scams have become a major source of financial and emotional harm worldwide. These operations are run by organized crime syndicates that traffic thousands of people into forced labor, requiring them to build emotional intimacy with victims over weeks of text conversations before pressuring them into fraudulent cryptocurrency investments. Because the scams are inherently text-based, they raise urgent questions about the role of Large Language Models (LLMs) in both current and future automation.   We investigate this intersection by interviewing 145 insiders and 5 scam victims, performing a blinded long-term conversation study comparing LLM scam agents to human operators, and executing an evaluation of commercial safety filters. Our findings show that LLMs are already widely deployed within scam organizations, with 87% of scam labor consisting of systematized conversational tasks readily susceptible to automation. In a week-long study, an LLM agent not only elicited greater trust from study participants (p=0.007) but also achieved higher compliance with requests than human operators (46% vs. 18% for humans). Meanwhile, popular safety filters detected 0.0% of romance baiting dialogues. Together, these results suggest that romance-baiting scams may be amenable to full-scale LLM automation, while existing defenses remain inadequate to prevent their expansion.",
+    "authors": [
+      "Gilad Gressel",
+      "Rahul Pankajakshan",
+      "Shir Rozenfeld",
+      "Ling Li",
+      "Ivan Franceschini",
+      "Krishnahsree Achuthan",
+      "Yisroel Mirsky"
+    ],
+    "published": "2025-12-18",
+    "categories": [
+      "cs.CR",
+      "cs.AI",
+      "cs.CY"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.16280v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.16280v1",
+    "fetched_at": "2025-12-19T08:35:00.597255",
+    "chinese_title": "爱、谎言与语言模型：探究AI在爱情诱饵诈骗中的作用",
+    "chinese_summary": "论文通过访谈145名诈骗内部人员与5名受害者、开展LLM诈骗代理与人类操作者的盲法长期对话研究、评估商业安全过滤器，发现87%的诈骗对话任务可自动化，LLM代理比人类操作者更易获得信任（p=0.007）且合规率更高（46% vs 18%），而主流安全过滤器对诈骗对话检测率为0%，提示诈骗可能全自动化且现有防御不足。",
+    "tags": [
+      "LLM",
+      "NLP",
+      "Behavioral Finance"
+    ],
+    "key_contributions": [
+      "发现主流商业安全过滤器对爱情诱饵诈骗对话检测失效，现有防御无法有效遏制其扩张"
+    ],
+    "processed_at": "2025-12-19T08:42:37.426735"
+  },
+  {
+    "id": "2512.16262v1",
+    "title": "Learning to Wait: Synchronizing Agents with the Physical World",
+    "abstract": "Real-world agentic tasks, unlike synchronous Markov Decision Processes (MDPs), often involve non-blocking actions with variable latencies, creating a fundamental \\textit{Temporal Gap} between action initiation and completion. Existing environment-side solutions, such as blocking wrappers or frequent polling, either limit scalability or dilute the agent's context window with redundant observations. In this work, we propose an \\textbf{Agent-side Approach} that empowers Large Language Models (LLMs) to actively align their \\textit{Cognitive Timeline} with the physical world. By extending the Code-as-Action paradigm to the temporal domain, agents utilize semantic priors and In-Context Learning (ICL) to predict precise waiting durations (\\texttt{time.sleep(t)}), effectively synchronizing with asynchronous environment without exhaustive checking. Experiments in a simulated Kubernetes cluster demonstrate that agents can precisely calibrate their internal clocks to minimize both query overhead and execution latency, validating that temporal awareness is a learnable capability essential for autonomous evolution in open-ended environments.",
+    "authors": [
+      "Yifei She",
+      "Ping Zhang",
+      "He Liu",
+      "Yanmin Jia",
+      "Yang Jing",
+      "Zijun Liu",
+      "Peng Sun",
+      "Xiangbin Li",
+      "Xiaohe Hu"
+    ],
+    "published": "2025-12-18",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.16262v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.16262v1",
+    "fetched_at": "2025-12-19T08:35:00.597300",
+    "chinese_title": "学会等待：让智能体与物理世界同步",
+    "chinese_summary": "针对现实任务中智能体与物理世界因非阻塞动作、可变延迟产生的时间差问题，现有环境端方法（如阻塞包装器、频繁轮询）存在可扩展性限制或稀释上下文的缺陷；该文提出智能体端方法：通过将Code-as-Action范式扩展到时间域，让LLM利用语义先验和上下文学习（ICL）预测精确等待时长，实现与异步环境同步；模拟Kubernetes集群实验验证该方法可最小化查询开销与执行延迟，证明时间感知是开放环境下智能体自主进化的关键可学习能力。",
+    "tags": [
+      "LLM",
+      "Financial Agent",
+      "Execution"
+    ],
+    "key_contributions": [
+      "提出智能体端主动时间同步方案，规避环境端方法的可扩展性限制与上下文稀释问题",
+      "扩展Code-as-Action到时间域，使LLM通过语义先验和ICL学习精确等待时长，实验验证其可最小化查询开销与执行延迟"
+    ],
+    "processed_at": "2025-12-19T08:43:01.368248"
+  },
+  {
+    "id": "2512.16237v1",
+    "title": "Scaling Spatial Reasoning in MLLMs through Programmatic Data Synthesis",
+    "abstract": "Embodied intelligence, a grand challenge in artificial intelligence, is fundamentally constrained by the limited spatial understanding and reasoning capabilities of current models. Prevailing efforts to address this through enhancing Vision-Language Models (VLMs) are trapped in a dilemma: template-based datasets are scalable but structurally rigid, while manual annotation is linguistically diverse but unscalable and, critically, computationally imprecise. We introduce SPRITE, a novel framework that overcomes this dilemma by leveraging simulators and large models to programmatically synthesize scalable, diverse, and high-quality spatial reasoning data. The core innovation of SPRITE is to reframe ground-truth generation as a code-generation task. We utilize LLMs to compile complex spatial questions into executable programs, which are then verified against high-precision scene meta-information extracted from simulators. This ensures our ground truth is both computationally precise and verifiable, while the generative power of LLMs provides vast linguistic diversity. Leveraging this pipeline, we have curated a dataset encompassing 3 simulators, 11k+ scenes, and 300k+ image/video instruction-tuning pairs. We demonstrate that a VLM trained on our data achieves significant performance gains on multiple spatial benchmarks and outperforms other open-source datasets of equivalent size. Furthermore, a scalability analysis confirms our hypothesis that overcoming the low-diversity nature of traditional template methods is essential for building robust, generalizable spatial intelligence. We will make the SPRITE framework code and the full 300k+ dataset publicly available to facilitate future research in spatial intelligence.",
+    "authors": [
+      "Zhi Helu",
+      "Huang Jingjing",
+      "Xu Wang",
+      "Xu Yangbin",
+      "Zhang Wanyue",
+      "Jiang Baoyang",
+      "Deng Shirui",
+      "Zhu Liang",
+      "Li Fangfang",
+      "Zhao Tiejun",
+      "Lin Yankai",
+      "Yao Yuan"
+    ],
+    "published": "2025-12-18",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.16237v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.16237v1",
+    "fetched_at": "2025-12-19T08:35:00.597336",
+    "chinese_title": "通过程序化数据合成扩展多模态大模型中的空间推理能力",
+    "chinese_summary": "论文提出SPRITE框架，通过模拟器与大模型结合的程序化数据合成方法，解决空间推理数据的可扩展性、多样性与精准性矛盾；核心是将真实标签生成转化为代码生成任务，利用LLM编译空间问题为可执行程序并结合模拟器元信息验证，确保标签精准多样；构建的数据集训练的VLM在多空间基准上表现显著提升，优于同规模开源数据集。",
+    "tags": [
+      "LLM",
+      "Transformer",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出SPRITE框架，通过程序化数据合成解决空间推理数据的可扩展性、多样性与精准性矛盾，创新将真实标签生成转化为代码生成任务以确保标签精准可验证",
+      "构建包含3个模拟器、11k+场景、300k+指令微调对的高质量空间推理数据集，训练的VLM在多空间基准上表现显著提升且优于同规模开源数据集"
+    ],
+    "processed_at": "2025-12-19T08:43:25.167918"
+  },
+  {
+    "id": "2512.16134v1",
+    "title": "Staggered Batch Scheduling: Co-optimizing Time-to-First-Token and Throughput for High-Efficiency LLM Inference",
+    "abstract": "The evolution of Large Language Model (LLM) serving towards complex, distributed architectures--specifically the P/D-separated, large-scale DP+EP paradigm--introduces distinct scheduling challenges. Unlike traditional deployments where schedulers can treat instances as black boxes, DP+EP architectures exhibit high internal synchronization costs. We identify that immediate request dispatching in such systems leads to severe in-engine queuing and parallelization bubbles, degrading Time-to-First-Token (TTFT). To address this, we propose Staggered Batch Scheduling (SBS), a mechanism that deliberately buffers requests to form optimal execution batches. This temporal decoupling eliminates internal queuing bubbles without compromising throughput. Furthermore, leveraging the scheduling window created by buffering, we introduce a Load-Aware Global Allocation strategy that balances computational load across DP units for both Prefill and Decode phases. Deployed on a production H800 cluster serving Deepseek-V3, our system reduces TTFT by 30%-40% and improves throughput by 15%-20% compared to state-of-the-art immediate scheduling baselines.",
+    "authors": [
+      "Jian Tian",
+      "Shuailong Li",
+      "Yang Cao",
+      "Wenbo Cui",
+      "Minghan Zhu",
+      "Wenkang Wu",
+      "Jianming Zhang",
+      "Yanpeng Wang",
+      "Zhiwen Xiao",
+      "Zhenyu Hou",
+      "Dou Shen"
+    ],
+    "published": "2025-12-18",
+    "categories": [
+      "cs.DC",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.16134v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.16134v1",
+    "fetched_at": "2025-12-19T08:35:00.597370",
+    "chinese_title": "交错批量调度：协同优化高效LLM推理的首词延迟与吞吐量",
+    "chinese_summary": "针对LLM服务DP+EP架构中即时请求调度导致的引擎内排队与并行气泡问题，论文提出交错批量调度（SBS），通过缓冲请求形成最优执行批次以消除内部气泡且不损失吞吐量；同时引入负载感知全局分配策略平衡DP单元在预填充和解码阶段的计算负载，在生产H800集群上使首词延迟（TTFT）降低30%-40%、吞吐量提升15%-20%。",
+    "tags": [
+      "LLM",
+      "Transformer",
+      "Deep Learning",
+      "Execution"
+    ],
+    "key_contributions": [
+      "提出交错批量调度（SBS），通过缓冲请求形成最优批次消除DP+EP架构中即时调度的内部排队气泡，协同优化首词延迟与吞吐量",
+      "引入负载感知全局分配策略，平衡DP单元在预填充和解码阶段的计算负载，提升LLM推理服务性能"
+    ],
+    "processed_at": "2025-12-19T08:43:49.349231"
+  },
+  {
+    "id": "2512.15980v1",
+    "title": "Embedding Software Intent: Lightweight Java Module Recovery",
+    "abstract": "As an increasing number of software systems reach unprecedented scale, relying solely on code-level abstractions is becoming impractical. While architectural abstractions offer a means to manage these systems, maintaining their consistency with the actual code has been problematic. The Java Platform Module System (JPMS), introduced in Java 9, addresses this limitation by enabling explicit module specification at the language level. JPMS enhances architectural implementation through improved encapsulation and direct specification of ground-truth architectures within Java projects. Although many projects are written in Java, modularizing existing monolithic projects to JPMS modules is an open challenge due to ineffective module recovery by existing architecture recovery techniques. To address this challenge, this paper presents ClassLAR (Class-and Language model-based Architectural Recovery), a novel, lightweight, and efficient approach that recovers Java modules from monolithic Java systems using fully-qualified class names. ClassLAR leverages language models to extract semantic information from package and class names, capturing both structural and functional intent. In evaluations across 20 popular Java projects, ClassLAR outperformed all state-of-the-art techniques in architectural-level similarity metrics while achieving execution times that were 3.99 to 10.50 times faster.",
+    "authors": [
+      "Yirui He",
+      "Yuqi Huai",
+      "Xingyu Chen",
+      "Joshua Garcia"
+    ],
+    "published": "2025-12-17",
+    "categories": [
+      "cs.SE",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.15980v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.15980v1",
+    "fetched_at": "2025-12-19T08:35:00.597392",
+    "chinese_title": "嵌入软件意图：轻量级Java模块恢复",
+    "chinese_summary": "针对Java单体项目难以通过现有架构恢复技术模块化到JPMS模块的问题，本文提出基于类和语言模型的架构恢复方法ClassLAR，利用全限定类名提取包和类名的语义信息以捕捉结构与功能意图；在20个流行Java项目的评估中，ClassLAR在架构相似度指标上优于所有现有方法，且执行速度快3.99至10.50倍。",
+    "tags": [
+      "LLM",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出轻量级高效的ClassLAR方法，基于全限定类名和语言模型恢复Java模块",
+      "在20个Java项目中，ClassLAR在架构相似度上优于现有方法，且速度提升3.99-10.50倍"
+    ],
+    "processed_at": "2025-12-19T08:44:12.348020"
+  },
+  {
+    "id": "2512.15946v1",
+    "title": "AIE4ML: An End-to-End Framework for Compiling Neural Networks for the Next Generation of AMD AI Engines",
+    "abstract": "Efficient AI inference on AMD's Versal AI Engine (AIE) is challenging due to tightly coupled VLIW execution, explicit datapaths, and local memory management. Prior work focused on first-generation AIE kernel optimizations, without tackling full neural network execution across the 2D array. In this work, we present AIE4ML, the first comprehensive framework for converting AI models automatically into optimized firmware targeting the AIE-ML generation devices, also with forward compatibility for the newer AIE-MLv2 architecture. At the single-kernel level, we attain performance close to the architectural peak. At the graph and system levels, we provide a structured parallelization method that can scale across the 2D AIE-ML fabric and exploit its dedicated memory tiles to stay entirely on-chip throughout the model execution. As a demonstration, we designed a generalized and highly efficient linear-layer implementation with intrinsic support for fused bias addition and ReLU activation. Also, as our framework necessitates the generation of multi-layer implementations, our approach systematically derives deterministic, compact, and topology-optimized placements tailored to the physical 2D grid of the device through a novel graph placement and search algorithm. Finally, the framework seamlessly accepts quantized models imported from high-level tools such as hls4ml or PyTorch while preserving bit-exactness. In layer scaling benchmarks, we achieve up to 98.6% efficiency relative to the single-kernel baseline, utilizing 296 of 304 AIE tiles (97.4%) of the device with entirely on-chip data movement. With evaluations across real-world model topologies, we demonstrate that AIE4ML delivers GPU-class throughput under microsecond latency constraints, making it a practical companion for ultra-low-latency environments such as trigger systems in particle physics experiments.",
+    "authors": [
+      "Dimitrios Danopoulos",
+      "Enrico Lupi",
+      "Chang Sun",
+      "Sebastian Dittmeier",
+      "Michael Kagan",
+      "Vladimir Loncar",
+      "Maurizio Pierini"
+    ],
+    "published": "2025-12-17",
+    "categories": [
+      "cs.LG",
+      "cs.AR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.15946v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.15946v1",
+    "fetched_at": "2025-12-19T08:35:00.597419",
+    "chinese_title": "AIE4ML：面向下一代AMD AI引擎的神经网络编译端到端框架",
+    "chinese_summary": "针对AMD Versal AI引擎（AIE-ML及v2）AI推理的效率挑战，提出AIE4ML端到端框架，自动将AI模型转换为优化固件；单内核性能接近架构峰值，图与系统层面采用结构化并行化跨2D阵列，全程片上执行，支持量化模型导入并保持比特精确。",
+    "tags": [
+      "Deep Learning",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出首个针对AIE-ML及v2架构的端到端神经网络编译框架，自动转换模型为优化固件，单内核接近架构峰值性能",
+      "实现跨2D AIE阵列的结构化并行化与片上执行，支持量化模型导入且保持比特精确，适配物理2D网格的拓扑优化放置"
+    ],
+    "processed_at": "2025-12-19T08:44:35.374346"
+  },
+  {
+    "id": "2512.15943v1",
+    "title": "Small Language Models for Efficient Agentic Tool Calling: Outperforming Large Models with Targeted Fine-tuning",
+    "abstract": "As organizations scale adoption of generative AI, model cost optimization and operational efficiency have emerged as critical factors determining sustainability and accessibility. While Large Language Models (LLMs) demonstrate impressive capabilities across diverse tasks, their extensive computational requirements make them cost-prohibitive for routine enterprise use. This limitation motivates the exploration of Small Language Models (SLMs), which can deliver comparable performance in targeted applications while drastically reducing infrastructure overhead (Irugalbandara et al., 2023). In this work, we investigate the feasibility of replacing LLM-driven workflows with optimized SLMs. We trained a domain-adapted SLM to execute representative tasks traditionally handled by LLMs, such as document summarization, query answering, and structured data interpretation. As part of the experiment, we investigated the fine-tuning of facebook/opt-350m model (single epoch only) using the Hugging Face TRL (Transformer Reinforcement Learning), specifically the Supervised Fine-Tuning (SFT) trainer. The OPT-350M model was released by Meta AI in 2022 as part of the OPT (Open Pretrained Transformer) family of models. Similar studies demonstrate that even models at the 350M parameter scale can meaningfully contribute to instruction-tuning pipelines (Mekala et al., 2024). Experimental results demonstrated that our fine-tuned SLM achieves exceptional performance with a 77.55\\% pass rate on ToolBench evaluation, significantly outperforming all baseline models including ChatGPT-CoT (26.00\\%), ToolLLaMA-DFS (30.18\\%), and ToolLLaMA-CoT (16.27\\%). These findings emphasize that thoughtful design and targeted training of SLMs can significantly lower barriers to adoption, enabling cost-effective, large-scale integration of generative AI into production systems.",
+    "authors": [
+      "Polaris Jhandi",
+      "Owais Kazi",
+      "Shreyas Subramanian",
+      "Neel Sendas"
+    ],
+    "published": "2025-12-17",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.15943v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.15943v1",
+    "fetched_at": "2025-12-19T08:35:00.597441",
+    "chinese_title": "用于高效智能体工具调用的小语言模型：通过定向微调超越大模型",
+    "chinese_summary": "针对大语言模型（LLM）计算成本高、难以满足企业常规使用的问题，该研究探索用小语言模型（SLM）替代；采用Hugging Face TRL的监督微调（SFT）对Meta的OPT-350M（仅单轮训练）进行领域适配，针对文档摘要、问答等任务；实验表明微调后的SLM在ToolBench上通过率达77.55%，性能优异且显著降低基础设施开销。",
+    "tags": [
+      "LLM",
+      "Transformer",
+      "Reinforcement Learning",
+      "NLP"
+    ],
+    "key_contributions": [
+      "验证了350M参数的小语言模型经定向微调后，在工具调用等任务上可超越大模型，且大幅降低基础设施开销",
+      "提出用Hugging Face TRL的监督微调（SFT）对OPT-350M进行单轮领域适配，证明轻量微调即可实现优异性能"
+    ],
+    "processed_at": "2025-12-19T08:45:03.392993"
+  }
+]
