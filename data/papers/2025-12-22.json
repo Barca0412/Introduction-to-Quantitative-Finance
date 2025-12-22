@@ -1,0 +1,379 @@
+[
+  {
+    "id": "2512.17895v1",
+    "title": "Visualization of The Content of Surah al Fiil using Marker-Based Augmented Reality",
+    "abstract": "This study presents the development of a marker-based augmented reality (AR) application designed to visualize the content of Surah al-Fil as an interactive and context-rich medium for Islamic education. Using a research and development approach, the system was developed through structured stages including data collection, user requirement analysis, interface design, 3D asset creation using Blender, and integration of Unity 3D with the Vuforia SDK. The application features key visual elements such as the elephant army, the Kaaba, and the Ababil birds, which were modeled in detail and linked to high-contrast image markers to ensure accurate and stable AR tracking. Functional testing demonstrated strong technical performance, achieving a 95 percent marker detection accuracy at an optimal distance of 30-40 cm with consistent real-time rendering across multiple Android devices. User evaluations involving students and Islamic education teachers indicated high acceptance, with an overall satisfaction score of 4.7 out of 5 in terms of usability, visual appeal, interactivity, and learning effectiveness. These findings indicate that AR-based learning media can enhance learner engagement, deepen understanding of Quranic narratives, and provide immersive insights into historical and spiritual contexts. Overall, this study demonstrates that marker-based AR technology has significant potential to support innovation in digital Islamic education by enriching traditional learning with interactive and visually intuitive experiences.",
+    "authors": [
+      "Ahmad Badru Al Husaeni",
+      "Dzakwanfaiq Nauval",
+      "Farid Muhtar Fathir",
+      "Mahesa Adlan Falah",
+      "Muhammad Miftahur Rizki Awalin"
+    ],
+    "published": "2025-12-19",
+    "categories": [
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.17895v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.17895v1",
+    "fetched_at": "2025-12-22T08:35:20.276371"
+  },
+  {
+    "id": "2512.17791v1",
+    "title": "Near-Maturity Asymptotics of Critical Prices of American Put Options under Exponential Lévy Models",
+    "abstract": "In the present paper, we study the near-maturity ($t\\rightarrow T^{-}$) convergence rate of the optimal early-exercise price $b(t)$ of an American put under an exponential Lévy model with a {\\it nonzero} Brownian component. Two important settings, not previous covered in the literature, are considered. In the case that the optimal exercise price converges to the strike price ($b(T^{-})=K$), we contemplate models with negative jumps of unbounded variation (i.e., processes that exhibit high activity of negative jumps or sudden falls in asset prices). In the second case, when the optimal exercise price tend to a value lower than $K$, we consider infinite activity jumps (though still of bounded variations), extending existing results for models with finite jump activity (finitely many jumps in any finite interval). In both cases, we show that $b(T^{-})-b(t)$ is of order $\\sqrt{T-t}$ with explicit constants proportionality. Furthermore, we also derive the second-order near-maturity expansion of the American put price around the critical price along a certain parabolic branch.",
+    "authors": [
+      "José E. Figueroa-López",
+      "Ruoting Gong"
+    ],
+    "published": "2025-12-19",
+    "categories": [
+      "q-fin.MF",
+      "math.PR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.17791v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.17791v1",
+    "fetched_at": "2025-12-22T08:35:20.276407"
+  },
+  {
+    "id": "2512.17702v1",
+    "title": "Relative arbitrage problem under eigenvalue lower bounds",
+    "abstract": "We give a new formulation of the relative arbitrage problem from stochastic portfolio theory that asks for a time horizon beyond which arbitrage relative to the market exists in all ``sufficiently volatile'' markets. In our formulation, ``sufficiently volatile'' is interpreted as a lower bound on an ordered eigenvalue of the instantaneous covariation matrix, a quantity that has been studied extensively in the empirical finance literature. Upon framing the problem in the language of stochastic optimal control, we characterize the time horizon in question through the unique upper semicontinuous viscosity solution of a fully nonlinear elliptic partial differential equation (PDE). In a special case, this PDE amounts to the arrival time formulation of the Ambrosio-Soner co-dimension mean curvature flow. Beyond the setting of stochastic portfolio theory, the stochastic optimal control problem is analyzed for arbitrary compact, possibly non-convex, domains, thanks to a boundedness assumption on the instantaneous covariation matrix.",
+    "authors": [
+      "Jou-Hua Lai",
+      "Mykhaylo Shkolnikov",
+      "H. Mete Soner"
+    ],
+    "published": "2025-12-19",
+    "categories": [
+      "q-fin.MF",
+      "math.AP",
+      "math.DG",
+      "math.OC",
+      "math.PR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.17702v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.17702v1",
+    "fetched_at": "2025-12-22T08:35:20.276434"
+  },
+  {
+    "id": "2512.17354v1",
+    "title": "Implementation of Augmented Reality as an Educational Tool for Practice in Early Childhood",
+    "abstract": "Learning Wudhu for young children requires engaging and interactive media to foster a deep understanding of the worship procedures. This study aims to develop a Wudhu learning application based on Augmented Reality (AR) as an interactive and fun educational medium. The development method used includes the stages of needs analysis, system design, implementation, and testing using Black Box Testing. The system utilizes marker-based tracking to display 3D animations of Wudhu movements in real-time when the camera detects a marker on the printed media. The test results indicate that all main functions run well, and a limited trial on children aged 5-7 years showed an increase in learning interest and a better understanding of the Wudhu sequence. Thus, the application of AR technology is proven effective in improving the quality of basic worship instruction for young children.",
+    "authors": [
+      "Wisnu Uriawan",
+      "Muhammad Aditya Hafizh Zahran",
+      "Inayah Ayu Deswita",
+      "Muhammad Ahsani Taqwim",
+      "Ismail Muhammad Ahmadi",
+      "Marvi Yoga Pratama"
+    ],
+    "published": "2025-12-19",
+    "categories": [
+      "cs.HC",
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.17354v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.17354v1",
+    "fetched_at": "2025-12-22T08:35:20.276463"
+  },
+  {
+    "id": "2512.17225v1",
+    "title": "Modelling financial time series with $φ^{4}$ quantum field theory",
+    "abstract": "We use a $φ^{4}$ quantum field theory with inhomogeneous couplings and explicit symmetry-breaking to model an ensemble of financial time series from the S$\\&$P 500 index. The continuum nature of the $φ^4$ theory avoids the inaccuracies that occur in Ising-based models which require a discretization of the time series. We demonstrate this using the example of the 2008 global financial crisis. The $φ^{4}$ quantum field theory is expressive enough to reproduce the higher-order statistics such as the market kurtosis, which can serve as an indicator of possible market shocks. Accurate reproduction of high kurtosis is absent in binarized models. Therefore Ising models, despite being widely employed in econophysics, are incapable of fully representing empirical financial data, a limitation not present in the generalization of the $φ^{4}$ scalar field theory. We then investigate the scaling properties of the $φ^{4}$ machine learning algorithm and extract exponents which govern the behavior of the learned couplings (or weights and biases in ML language) in relation to the number of stocks in the model. Finally, we use our model to forecast the price changes of the AAPL, MSFT, and NVDA stocks. We conclude by discussing how the $φ^{4}$ scalar field theory could be used to build investment strategies and the possible intuitions that the QFT operations of dimensional compactification and renormalization can provide for financial modelling.",
+    "authors": [
+      "Dimitrios Bachtis",
+      "David S. Berman",
+      "Arabella Schelpe"
+    ],
+    "published": "2025-12-19",
+    "categories": [
+      "q-fin.ST",
+      "cond-mat.dis-nn",
+      "cs.CE",
+      "hep-th"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.17225v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.17225v1",
+    "fetched_at": "2025-12-22T08:35:20.276487"
+  },
+  {
+    "id": "2512.17185v1",
+    "title": "Systemic Risk Radar: A Multi-Layer Graph Framework for Early Market Crash Warning",
+    "abstract": "Financial crises emerge when structural vulnerabilities accumulate across sectors, markets, and investor behavior. Predicting these systemic transitions is challenging because they arise from evolving interactions between market participants, not isolated price movements alone. We present Systemic Risk Radar (SRR), a framework that models financial markets as multi-layer graphs to detect early signs of systemic fragility and crash-regime transitions.   We evaluate SRR across three major crises: the Dot-com crash, the Global Financial Crisis, and the COVID-19 shock. Our experiments compare snapshot GNNs, a simplified temporal GNN prototype, and standard baselines (logistic regression and Random Forest). Results show that structural network information provides useful early-warning signals compared to feature-based models alone.   This correlation-based instantiation of SRR demonstrates that graph-derived features capture meaningful changes in market structure during stress events. The findings motivate extending SRR with additional graph layers (sector/factor exposure, sentiment) and more expressive temporal architectures (LSTM/GRU or Transformer encoders) to better handle diverse crisis types.",
+    "authors": [
+      "Sandeep Neela"
+    ],
+    "published": "2025-12-19",
+    "categories": [
+      "q-fin.RM",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.17185v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.17185v1",
+    "fetched_at": "2025-12-22T08:35:20.276508"
+  },
+  {
+    "id": "2512.17594v1",
+    "title": "MAD-OOD: A Deep Learning Cluster-Driven Framework for an Out-of-Distribution Malware Detection and Classification",
+    "abstract": "Out of distribution (OOD) detection remains a critical challenge in malware classification due to the substantial intra family variability introduced by polymorphic and metamorphic malware variants. Most existing deep learning based malware detectors rely on closed world assumptions and fail to adequately model this intra class variation, resulting in degraded performance when confronted with previously unseen malware families. This paper presents MADOOD, a novel two stage, cluster driven deep learning framework for robust OOD malware detection and classification. In the first stage, malware family embeddings are modeled using class conditional spherical decision boundaries derived from Gaussian Discriminant Analysis (GDA), enabling statistically grounded separation of indistribution and OOD samples without requiring OOD data during training. Z score based distance analysis across multiple class centroids is employed to reliably identify anomalous samples in the latent space. In the second stage, a deep neural network integrates cluster based predictions, refined embeddings, and supervised classifier outputs to enhance final classification accuracy. Extensive evaluations on benchmark malware datasets comprising 25 known families and multiple novel OOD variants demonstrate that MADOOD significantly outperforms state of the art OOD detection methods, achieving an AUC of up to 0.911 on unseen malware families. The proposed framework provides a scalable, interpretable, and statistically principled solution for real world malware detection and anomaly identification in evolving cybersecurity environments.",
+    "authors": [
+      "Tosin Ige",
+      "Christopher Kiekintveld",
+      "Aritran Piplai",
+      "Asif Rahman",
+      "Olukunle Kolade",
+      "Sasidhar Kunapuli"
+    ],
+    "published": "2025-12-19",
+    "categories": [
+      "cs.CR",
+      "cs.AI",
+      "cs.CV",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.17594v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.17594v1",
+    "fetched_at": "2025-12-22T08:35:33.570341"
+  },
+  {
+    "id": "2512.17048v1",
+    "title": "Another Fit Bites the Dust: Conformal Prediction as a Calibration Standard for Machine Learning in High-Energy Physics",
+    "abstract": "Machine-learning techniques are essential in modern collider research, yet their probabilistic outputs often lack calibrated uncertainty estimates and finite-sample guarantees, limiting their direct use in statistical inference and decision-making. Conformal prediction (CP) provides a simple, distribution-free framework for calibrating arbitrary predictive models without retraining, yielding rigorous uncertainty quantification with finite-sample coverage guarantees under minimal exchangeability assumptions, without reliance on asymptotics, limit theorems, or Gaussian approximations. In this work, we investigate CP as a unifying calibration layer for machine-learning applications in high-energy physics. Using publicly available collider datasets and a diverse set of models, we show that a single conformal formalism can be applied across regression, binary and multi-class classification, anomaly detection, and generative modelling, converting raw model outputs into statistically valid prediction sets, typicality regions, and p-values with controlled false-positive rates. While conformal prediction does not improve raw model performance, it enforces honest uncertainty quantification and transparent error control. We argue that conformal calibration should be adopted as a standard component of machine-learning pipelines in collider physics, enabling reliable interpretation, robust comparisons, and principled statistical decisions in experimental and phenomenological analyses.",
+    "authors": [
+      "Jack Y. Araz",
+      "Michael Spannowsky"
+    ],
+    "published": "2025-12-18",
+    "categories": [
+      "hep-ph",
+      "cs.AI",
+      "hep-ex"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.17048v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.17048v1",
+    "fetched_at": "2025-12-22T08:35:33.570372"
+  },
+  {
+    "id": "2512.17671v1",
+    "title": "Polyharmonic Cascade",
+    "abstract": "This paper presents a deep machine learning architecture, the \"polyharmonic cascade\" -- a sequence of packages of polyharmonic splines, where each layer is rigorously derived from the theory of random functions and the principles of indifference. This makes it possible to approximate nonlinear functions of arbitrary complexity while preserving global smoothness and a probabilistic interpretation. For the polyharmonic cascade, a training method alternative to gradient descent is proposed: instead of directly optimizing the coefficients, one solves a single global linear system on each batch with respect to the function values at fixed \"constellations\" of nodes. This yields synchronized updates of all layers, preserves the probabilistic interpretation of individual layers and theoretical consistency with the original model, and scales well: all computations reduce to 2D matrix operations efficiently executed on a GPU. Fast learning without overfitting on MNIST is demonstrated.",
+    "authors": [
+      "Yuriy N. Bakhvalov"
+    ],
+    "published": "2025-12-19",
+    "categories": [
+      "cs.LG",
+      "math.NA"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.17671v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.17671v1",
+    "fetched_at": "2025-12-22T08:36:03.611701"
+  },
+  {
+    "id": "2512.17574v1",
+    "title": "Enabling Disaggregated Multi-Stage MLLM Inference via GPU-Internal Scheduling and Resource Sharing",
+    "abstract": "Multimodal large language models (MLLMs) extend LLMs with visual understanding through a three-stage pipeline: multimodal preprocessing, vision encoding, and LLM inference. While these stages enhance capability, they introduce significant system bottlenecks. First, multimodal preprocessing-especially video decoding-often dominates Time-to-First-Token (TTFT). Most systems rely on CPU-based decoding, which severely limits throughput, while existing GPU-based approaches prioritize throughput-oriented parallelism and fail to meet the latency-sensitive requirements of MLLM inference. Second, the vision encoder is a standalone, compute-intensive stage that produces visual embeddings and cannot be co-batched with LLM prefill or decoding. This heterogeneity forces inter-stage blocking and increases token-generation latency. Even when deployed on separate GPUs, these stages underutilize available compute and memory resources, reducing overall utilization and constraining system throughput.   To address these challenges, we present FlashCodec and UnifiedServe, two complementary designs that jointly optimize the end-to-end MLLM pipeline. FlashCodec accelerates the multimodal preprocessing stage through collaborative multi-GPU video decoding, reducing decoding latency while preserving high throughput. UnifiedServe optimizes the vision-to-text and inference stages using a logically decoupled their execution to eliminate inter-stage blocking, yet physically sharing GPU resources to maximize GPU system utilization. By carefully orchestrating execution across stages and minimizing interference, UnifiedServe Together, our proposed framework forms an end-to-end optimized stack that can serve up to 3.0$\\times$ more requests or enforce 1.5$\\times$ tighter SLOs, while achieving up to 4.4$\\times$ higher throughput compared to state-of-the-art systems.",
+    "authors": [
+      "Lingxiao Zhao",
+      "Haoran Zhou",
+      "Yuezhi Che",
+      "Dazhao Cheng"
+    ],
+    "published": "2025-12-19",
+    "categories": [
+      "cs.DC",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.17574v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.17574v1",
+    "fetched_at": "2025-12-22T08:36:03.611740"
+  },
+  {
+    "id": "2512.17570v1",
+    "title": "GreedySnake: Accelerating SSD-Offloaded LLM Training with Efficient Scheduling and Optimizer Step Overlapping",
+    "abstract": "SSD-offloaded training offers a practical and promising approach to making LLM training cost-effective. Building on gradient accumulation with micro-batches, this paper introduces GreedySnake, a new SSD-offloaded training system that employs vertical scheduling, which executes all microbatches of a layer before proceeding to the next. Compared to existing systems that use horizontal scheduling (i.e., executing micro-batches sequentially), GreedySnake achieves higher training throughput with smaller batch sizes, bringing the system much closer to the ideal scenario predicted by the roofline model. To further mitigate the I/O bottleneck, GreedySnake overlaps part of the optimization step with the forward pass of the next iteration. Experimental results on A100 GPUs show that GreedySnake achieves saturated training throughput improvements over ZeRO-Infinity: 1.96x on 1 GPU and 1.93x on 4 GPUs for GPT-65B, and 2.53x on 1 GPU for GPT-175B. The code is open-sourced at https://github.com/npz7yyk/GreedySnake",
+    "authors": [
+      "Yikang Yue",
+      "Yishu Yin",
+      "Xuehai Qian"
+    ],
+    "published": "2025-12-19",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.PF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.17570v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.17570v1",
+    "fetched_at": "2025-12-22T08:36:03.611763"
+  },
+  {
+    "id": "2512.17419v1",
+    "title": "SWE-Bench++: A Framework for the Scalable Generation of Software Engineering Benchmarks from Open-Source Repositories",
+    "abstract": "Benchmarks like SWE-bench have standardized the evaluation of Large Language Models (LLMs) on repository-level software engineering tasks. However, these efforts remain limited by manual curation, static datasets, and a focus on Python-based bug fixes. We introduce SWE-Bench++, an automated framework that generates repository-level coding tasks from open-source GitHub projects. Unlike synthetic approaches, our pipeline harvests live pull requests to cover both bug fixes and feature requests across 11 languages. SWE-Bench++ turns GitHub pull requests (PRs) into reproducible, execution-based tasks via four stages: programmatic sourcing, environment synthesis, test oracle extraction, and quality assurance. A final hint-guided trajectory synthesis step converts instances that strong models fail on into training trajectories. Our initial benchmark consists of 11,133 instances from 3,971 repositories across 11 languages. On a subset of 1,782 instances of this benchmark, today's strongest models perform as follows: claude-sonnet-4.5 achieves 36.20% pass@10, gpt-5-2025-08-07 34.57%, gemini/gemini-2.5-pro 24.92%, and gpt-4o 16.89%. We further demonstrate the utility of our dataset by showing that fine-tuning on SWE-Bench++ instances yields measurable improvements on the SWE-bench Multilingual benchmark. SWE-Bench++ provides a scalable, multilingual benchmark for evaluating and improving repository-level code generation.",
+    "authors": [
+      "Lilin Wang",
+      "Lucas Ramalho",
+      "Alan Celestino",
+      "Phuc Anthony Pham",
+      "Yu Liu",
+      "Umang Kumar Sinha",
+      "Andres Portillo",
+      "Onassis Osunwa",
+      "Gabriel Maduekwe"
+    ],
+    "published": "2025-12-19",
+    "categories": [
+      "cs.SE",
+      "cs.AI",
+      "cs.CL",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.17419v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.17419v1",
+    "fetched_at": "2025-12-22T08:36:03.611809"
+  },
+  {
+    "id": "2512.17387v1",
+    "title": "CIFE: Code Instruction-Following Evaluation",
+    "abstract": "Large Language Models (LLMs) are increasingly applied to real-world code generation, where functional correctness alone is insufficient for reliable deployment, developers also expect adherence to explicit requirements for robustness, formatting, and security. Existing benchmarks primarily assess correctness through test-case execution, offering limited insight into how reliably models follow such constraints. We introduce a benchmark of 1,000 Python tasks, each paired with an average of 7 developer-specified constraints spanning 13 categories. Constraints are curated through a four-stage human-LLM pipeline to ensure they are atomic, relevant, and objective. We evaluate 14 open- and closed-source models using complementary adherence metrics and propose the C2A Score, a composite measure that jointly captures correctness and constraint compliance. Results reveal a substantial gap between partial and strict satisfaction, while strong models achieve over 90% partial adherence, strict adherence remains between 39-66%. These findings highlight that trustworthy code generation requires not only correctness but also consistent adherence to developer intent.",
+    "authors": [
+      "Sravani Gunnu",
+      "Shanmukha Guttula",
+      "Hima Patel"
+    ],
+    "published": "2025-12-19",
+    "categories": [
+      "cs.SE",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.17387v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.17387v1",
+    "fetched_at": "2025-12-22T08:36:03.611850"
+  },
+  {
+    "id": "2512.17370v1",
+    "title": "TakeAD: Preference-based Post-optimization for End-to-end Autonomous Driving with Expert Takeover Data",
+    "abstract": "Existing end-to-end autonomous driving methods typically rely on imitation learning (IL) but face a key challenge: the misalignment between open-loop training and closed-loop deployment. This misalignment often triggers driver-initiated takeovers and system disengagements during closed-loop execution. How to leverage those expert takeover data from disengagement scenarios and effectively expand the IL policy's capability presents a valuable yet unexplored challenge. In this paper, we propose TakeAD, a novel preference-based post-optimization framework that fine-tunes the pre-trained IL policy with this disengagement data to enhance the closed-loop driving performance. First, we design an efficient expert takeover data collection pipeline inspired by human takeover mechanisms in real-world autonomous driving systems. Then, this post optimization framework integrates iterative Dataset Aggregation (DAgger) for imitation learning with Direct Preference Optimization (DPO) for preference alignment. The DAgger stage equips the policy with fundamental capabilities to handle disengagement states through direct imitation of expert interventions. Subsequently, the DPO stage refines the policy's behavior to better align with expert preferences in disengagement scenarios. Through multiple iterations, the policy progressively learns recovery strategies for disengagement states, thereby mitigating the open-loop gap. Experiments on the closed-loop Bench2Drive benchmark demonstrate our method's effectiveness compared with pure IL methods, with comprehensive ablations confirming the contribution of each component.",
+    "authors": [
+      "Deqing Liu",
+      "Yinfeng Gao",
+      "Deheng Qian",
+      "Qichao Zhang",
+      "Xiaoqing Ye",
+      "Junyu Han",
+      "Yupeng Zheng",
+      "Xueyi Liu",
+      "Zhongpu Xia",
+      "Dawei Ding",
+      "Yifeng Pan",
+      "Dongbin Zhao"
+    ],
+    "published": "2025-12-19",
+    "categories": [
+      "cs.RO",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.17370v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.17370v1",
+    "fetched_at": "2025-12-22T08:36:03.611890"
+  },
+  {
+    "id": "2512.17259v1",
+    "title": "Verifiability-First Agents: Provable Observability and Lightweight Audit Agents for Controlling Autonomous LLM Systems",
+    "abstract": "As LLM-based agents grow more autonomous and multi-modal, ensuring they remain controllable, auditable, and faithful to deployer intent becomes critical. Prior benchmarks measured the propensity for misaligned behavior and showed that agent personalities and tool access significantly influence misalignment. Building on these insights, we propose a Verifiability-First architecture that (1) integrates run-time attestations of agent actions using cryptographic and symbolic methods, (2) embeds lightweight Audit Agents that continuously verify intent versus behavior using constrained reasoning, and (3) enforces challenge-response attestation protocols for high-risk operations. We introduce OPERA (Observability, Provable Execution, Red-team, Attestation), a benchmark suite and evaluation protocol designed to measure (i) detectability of misalignment, (ii) time to detection under stealthy strategies, and (iii) resilience of verifiability mechanisms to adversarial prompt and persona injection. Our approach shifts the evaluation focus from how likely misalignment is to how quickly and reliably misalignment can be detected and remediated.",
+    "authors": [
+      "Abhivansh Gupta"
+    ],
+    "published": "2025-12-19",
+    "categories": [
+      "cs.MA",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.17259v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.17259v1",
+    "fetched_at": "2025-12-22T08:36:03.611913"
+  },
+  {
+    "id": "2512.17250v1",
+    "title": "Accelerating Multi-modal LLM Gaming Performance via Input Prediction and Mishit Correction",
+    "abstract": "Real-time sequential control agents are often bottlenecked by inference latency. Even modest per-step planning delays can destabilize control and degrade overall performance. We propose a speculation-and-correction framework that adapts the predict-then-verify philosophy of speculative execution to model-based control with TD-MPC2. At each step, a pretrained world model and latent-space MPC planner generate a short-horizon action queue together with predicted latent rollouts, allowing the agent to execute multiple planned actions without immediate replanning. When a new observation arrives, the system measures the mismatch between the encoded real latent state and the queued predicted latent. For small to moderate mismatch, a lightweight learned corrector applies a residual update to the speculative action, distilled offline from a replanning teacher. For large mismatch, the agent safely falls back to full replanning and clears stale action queues. We study both a gated two-tower MLP corrector and a temporal Transformer corrector to address local errors and systematic drift. Experiments on the DMC Humanoid-Walk task show that our method reduces the number of planning inferences from 500 to 282, improves end-to-end step latency by 25 percent, and maintains strong control performance with only a 7.1 percent return reduction. Ablation results demonstrate that speculative execution without correction is unreliable over longer horizons, highlighting the necessity of mismatch-aware correction for robust latency reduction.",
+    "authors": [
+      "Ziyang Lin",
+      "Zixuan Sun",
+      "Sanhorn Chen",
+      "Xiaoyang Chen",
+      "Roy Zhao"
+    ],
+    "published": "2025-12-19",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.17250v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.17250v1",
+    "fetched_at": "2025-12-22T08:36:03.611938"
+  },
+  {
+    "id": "2512.17108v1",
+    "title": "Atom: Efficient On-Device Video-Language Pipelines Through Modular Reuse",
+    "abstract": "Recent advances in video-language models have enabled powerful applications like video retrieval, captioning, and assembly. However, executing such multi-stage pipelines efficiently on mobile devices remains challenging due to redundant model loads and fragmented execution. We introduce Atom, an on-device system that restructures video-language pipelines for fast and efficient execution. Atom decomposes a billion-parameter model into reusable modules, such as the visual encoder and language decoder, and reuses them across subtasks like captioning, reasoning, and indexing. This reuse-centric design eliminates repeated model loading and enables parallel execution, reducing end-to-end latency without sacrificing performance. On commodity smartphones, Atom achieves 27--33% faster execution compared to non-reuse baselines, with only marginal performance drop ($\\leq$ 2.3 Recall@1 in retrieval, $\\leq$ 1.5 CIDEr in captioning). These results position Atom as a practical, scalable approach for efficient video-language understanding on edge devices.",
+    "authors": [
+      "Kunjal Panchal",
+      "Saayan Mitra",
+      "Somdeb Sarkhel",
+      "Haoliang Wang",
+      "Ishita Dasgupta",
+      "Gang Wu",
+      "Hui Guan"
+    ],
+    "published": "2025-12-18",
+    "categories": [
+      "cs.LG",
+      "cs.MM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.17108v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.17108v1",
+    "fetched_at": "2025-12-22T08:36:03.611967"
+  },
+  {
+    "id": "2512.17053v1",
+    "title": "Knowledge Distillation with Structured Chain-of-Thought for Text-to-SQL",
+    "abstract": "Deploying accurate Text-to-SQL systems at the enterprise level faces a difficult trilemma involving cost, security and performance. Current solutions force enterprises to choose between expensive, proprietary Large Language Models (LLMs) and low-performing Small Language Models (SLMs). Efforts to improve SLMs often rely on distilling reasoning from large LLMs using unstructured Chain-of-Thought (CoT) traces, a process that remains inherently ambiguous. Instead, we hypothesize that a formal, structured reasoning representation provides a clearer, more reliable teaching signal, as the Text-to-SQL task requires explicit and precise logical steps. To evaluate this hypothesis, we propose Struct-SQL, a novel Knowledge Distillation (KD) framework that trains an SLM to emulate a powerful large LLM. Consequently, we adopt a query execution plan as a formal blueprint to derive this structured reasoning. Our SLM, distilled with structured CoT, achieves an absolute improvement of 8.1% over an unstructured CoT distillation baseline. A detailed error analysis reveals that a key factor in this gain is a marked reduction in syntactic errors. This demonstrates that teaching a model to reason using a structured logical blueprint is beneficial for reliable SQL generation in SLMs.",
+    "authors": [
+      "Khushboo Thaker",
+      "Yony Bresler"
+    ],
+    "published": "2025-12-18",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.DB"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.17053v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.17053v1",
+    "fetched_at": "2025-12-22T08:36:03.611986"
+  },
+  {
+    "id": "2512.17052v1",
+    "title": "Dynamic Tool Dependency Retrieval for Efficient Function Calling",
+    "abstract": "Function calling agents powered by Large Language Models (LLMs) select external tools to automate complex tasks. On-device agents typically use a retrieval module to select relevant tools, improving performance and reducing context length. However, existing retrieval methods rely on static and limited inputs, failing to capture multi-step tool dependencies and evolving task context. This limitation often introduces irrelevant tools that mislead the agent, degrading efficiency and accuracy. We propose Dynamic Tool Dependency Retrieval (DTDR), a lightweight retrieval method that conditions on both the initial query and the evolving execution context. DTDR models tool dependencies from function calling demonstrations, enabling adaptive retrieval as plans unfold. We benchmark DTDR against state-of-the-art retrieval methods across multiple datasets and LLM backbones, evaluating retrieval precision, downstream task accuracy, and computational efficiency. Additionally, we explore strategies to integrate retrieved tools into prompts. Our results show that dynamic tool retrieval improves function calling success rates between $23\\%$ and $104\\%$ compared to state-of-the-art static retrievers.",
+    "authors": [
+      "Bhrij Patel",
+      "Davide Belli",
+      "Amir Jalalirad",
+      "Maximilian Arnold",
+      "Aleksandr Ermovol",
+      "Bence Major"
+    ],
+    "published": "2025-12-18",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.17052v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.17052v1",
+    "fetched_at": "2025-12-22T08:36:03.612013"
+  }
+]
