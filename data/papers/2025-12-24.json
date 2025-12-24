@@ -1,0 +1,928 @@
+[
+  {
+    "id": "2512.20515v1",
+    "title": "Modeling Bank Systemic Risk of Emerging Markets under Geopolitical Shocks: Empirical Evidence from BRICS Countries",
+    "abstract": "The growing economic influence of the BRICS nations requires risk models that capture complex, long-term dynamics. This paper introduces the Bank Risk Interlinkage with Dynamic Graph and Event Simulations (BRIDGES) framework, which analyzes systemic risk based on the level of information complexity (zero-order, first-order, and second-order). BRIDGES utilizes the Dynamic Time Warping (DTW) distance to construct a dynamic network for 551 BRICS banks based on their strategic similarity, using zero-order information such as annual balance sheet data from 2008 to 2024. It then employs first-order information, including trends in risk ratios, to detect shifts in banks' behavior. A Temporal Graph Neural Network (TGNN), as the core of BRIDGES, is deployed to learn network evolutions and detect second-order information, such as anomalous changes in the structural relationships of the bank network. To measure the impact of anomalous changes on network stability, BRIDGES performs Agent-Based Model (ABM) simulations to assess the banking system's resilience to internal financial failure and external geopolitical shocks at the individual country level and across BRICS nations. Simulation results show that the failure of the largest institutions causes more systemic damage than the failure of the financially vulnerable or dynamically anomalous ones, driven by powerful panic effects. Compared to this \"too big to fail\" scenario, a geopolitical shock with correlated country-wide propagation causes more destructive systemic damage, leading to a near-total systemic collapse. It suggests that the primary threats to BRICS financial stability are second-order panic and large-scale geopolitical shocks, which traditional risk analysis models might not detect.",
+    "authors": [
+      "Haibo Wang"
+    ],
+    "published": "2025-12-23",
+    "categories": [
+      "q-fin.CP",
+      "econ.EM",
+      "q-fin.RM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.20515v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.20515v1",
+    "fetched_at": "2025-12-24T08:34:25.218918"
+  },
+  {
+    "id": "2512.20477v1",
+    "title": "Switching between states and the COVID-19 turbulence",
+    "abstract": "In Aarab (2020), I examine U.S. stock return predictability across economic regimes and document evidence of time-varying expected returns across market states in the long run. The analysis introduces a state-switching specification in which the market state is proxied by the slope of the yield curve, and proposes an Aligned Economic Index built from the popular predictors of Welch and Goyal (2008) (augmented with bond and equity premium measures). The Aligned Economic Index under the state-switching model exhibits statistically and economically meaningful in-sample ($R^2 = 5.9\\%$) and out-of-sample ($R^2_{\\text{oos}} = 4.12\\%$) predictive power across both recessions and expansions, while outperforming a range of widely used predictors. In this work, I examine the added value for professional practitioners by computing the economic gains for a mean-variance investor and find substantial added benefit of using the new index under the state switching model across all market states. The Aligned Economic Index can thus be implemented on a consistent real-time basis. These findings are crucial for both academics and practitioners as expansions are much longer-lived than recessions. Finally, I extend the empirical exercises by incorporating data through September 2020 and document sizable gains from using the Aligned Economic Index, relative to more traditional approaches, during the COVID-19 market turbulence.",
+    "authors": [
+      "Ilias Aarab"
+    ],
+    "published": "2025-12-23",
+    "categories": [
+      "q-fin.ST",
+      "q-fin.PM",
+      "q-fin.RM",
+      "stat.AP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.20477v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.20477v1",
+    "fetched_at": "2025-12-24T08:34:25.218954"
+  },
+  {
+    "id": "2512.20460v1",
+    "title": "The Aligned Economic Index & The State Switching Model",
+    "abstract": "A growing empirical literature suggests that equity-premium predictability is state dependent, with much of the forecasting power concentrated around recessionary periods \\parencite{Henkel2011,DanglHalling2012,Devpura2018}. I study U.S. stock return predictability across economic regimes and document strong evidence of time-varying expected returns across both expansionary and contractionary states. I contribute in two ways. First, I introduce a state-switching predictive regression in which the market state is defined in real time using the slope of the yield curve. Relative to the standard one-state predictive regression, the state-switching specification increases both in-sample and out-of-sample performance for the set of popular predictors considered by \\textcite{WelchGoyal2008}, improving the out-of-sample performance of most predictors in economically meaningful ways. Second, I propose a new aggregate predictor, the Aligned Economic Index, constructed via partial least squares (PLS). Under the state-switching model, the Aligned Economic Index exhibits statistically and economically significant predictive power in sample and out of sample, and it outperforms widely used benchmark predictors and alternative predictor-combination methods.",
+    "authors": [
+      "Ilias Aarab"
+    ],
+    "published": "2025-12-23",
+    "categories": [
+      "q-fin.ST",
+      "cs.LG",
+      "econ.EM",
+      "q-fin.PM",
+      "stat.AP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.20460v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.20460v1",
+    "fetched_at": "2025-12-24T08:34:25.218979"
+  },
+  {
+    "id": "2512.20216v1",
+    "title": "Quantitative Financial Modeling for Sri Lankan Markets: Approach Combining NLP, Clustering and Time-Series Forecasting",
+    "abstract": "This research introduces a novel quantitative methodology tailored for quantitative finance applications, enabling banks, stockbrokers, and investors to predict economic regimes and market signals in emerging markets, specifically Sri Lankan stock indices (S&P SL20 and ASPI) by integrating Environmental, Social, and Governance (ESG) sentiment analysis with macroeconomic indicators and advanced time-series forecasting. Designed to leverage quantitative techniques for enhanced risk assessment, portfolio optimization, and trading strategies in volatile environments, the architecture employs FinBERT, a transformer-based NLP model, to extract sentiment from ESG texts, followed by unsupervised clustering (UMAP/HDBSCAN) to identify 5 latent ESG regimes, validated via PCA. These regimes are mapped to economic conditions using a dense neural network and gradient boosting classifier, achieving 84.04% training and 82.0% validation accuracy. Concurrently, time-series models (SRNN, MLP, LSTM, GRU) forecast daily closing prices, with GRU attaining an R-squared of 0.801 and LSTM delivering 52.78% directional accuracy on intraday data. A strong correlation between S&P SL20 and S&P 500, observed through moving average and volatility trend plots, further bolsters forecasting precision. A rule-based fusion logic merges ESG and time-series outputs for final market signals. By addressing literature gaps that overlook emerging markets and holistic integration, this quant-driven framework combines global correlations and local sentiment analysis to offer scalable, accurate tools for quantitative finance professionals navigating complex markets like Sri Lanka.",
+    "authors": [
+      "Linuk Perera"
+    ],
+    "published": "2025-12-23",
+    "categories": [
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.20216v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.20216v1",
+    "fetched_at": "2025-12-24T08:34:25.219000"
+  },
+  {
+    "id": "2512.20190v1",
+    "title": "Pricing of wrapped Bitcoin and Ethereum on-chain options",
+    "abstract": "This paper measures price differences between Hegic option quotes on Arbitrum and a model-based benchmark built on Black--Scholes model with regime-sensitive volatility estimated via a two-regime MS-AR-(GJR)-GARCH model. Using option-level feasible GLS, we find benchmark prices exceed Hegic quotes on average, especially for call options. The price spread rises with order size, strike, maturity, and estimated volatility, and falls with trading volume. By underlying, wrapped Bitcoin options show larger and more persistent spreads, while Ethereum options are closer to the benchmark. The framework offers a data-driven analysis for monitoring and calibrating on-chain option pricing logic.",
+    "authors": [
+      "Anastasiia Zbandut"
+    ],
+    "published": "2025-12-23",
+    "categories": [
+      "q-fin.PR",
+      "q-fin.RM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.20190v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.20190v1",
+    "fetched_at": "2025-12-24T08:34:25.219019"
+  },
+  {
+    "id": "2512.20027v1",
+    "title": "GIFfluence: A Visual Approach to Investor Sentiment and the Stock Market",
+    "abstract": "We study dynamic visual representations as a proxy for investor sentiment about the stock market. Our sentiment index, GIFsentiment, is constructed from millions of posts in the Graphics Interchange Format (GIF) on a leading investment social media platform. GIFsentiment correlates with seasonal mood variations and the severity of COVID lockdowns. It is positively associated with contemporaneous market returns and negatively predicts returns for up to four weeks, even after controlling for other sentiment and attention measures. These effects are stronger among portfolios that are more susceptible to mispricing. GIFsentiment positively predicts trading volume, market volatility, and flows toward equity funds and away from debt funds. Our evidence suggests that GIFsentiment is a proxy for misperceptions that are later corrected.",
+    "authors": [
+      "Ming Gu",
+      "David Hirshleifer",
+      "Siew Hong Teoh",
+      "Shijia Wu"
+    ],
+    "published": "2025-12-23",
+    "categories": [
+      "q-fin.PR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.20027v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.20027v1",
+    "fetched_at": "2025-12-24T08:34:25.219043"
+  },
+  {
+    "id": "2512.19986v1",
+    "title": "Covariance-Aware Simplex Projection for Cardinality-Constrained Portfolio Optimization",
+    "abstract": "Metaheuristic algorithms for cardinality-constrained portfolio optimization require repair operators to map infeasible candidates onto the feasible region. Standard Euclidean projection treats assets as independent and can ignore the covariance structure that governs portfolio risk, potentially producing less diversified portfolios. This paper introduces Covariance-Aware Simplex Projection (CASP), a two-stage repair operator that (i) selects a target number of assets using volatility-normalized scores and (ii) projects the candidate weights using a covariance-aware geometry aligned with tracking-error risk. This provides a portfolio-theoretic foundation for using a covariance-induced distance in repair operators. On S&P 500 data (2020-2024), CASP-Basic delivers materially lower portfolio variance than standard Euclidean repair without relying on return estimates, with improvements that are robust across assets and statistically significant. Ablation results indicate that volatility-normalized selection drives most of the variance reduction, while the covariance-aware projection provides an additional, consistent improvement. We further show that optional return-aware extensions can improve Sharpe ratios, and out-of-sample tests confirm that gains transfer to realized performance. CASP integrates as a drop-in replacement for Euclidean projection in metaheuristic portfolio optimizers.",
+    "authors": [
+      "Nikolaos Iliopoulos"
+    ],
+    "published": "2025-12-23",
+    "categories": [
+      "q-fin.PM",
+      "cs.LG",
+      "cs.NE",
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.19986v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.19986v1",
+    "fetched_at": "2025-12-24T08:34:25.219062"
+  },
+  {
+    "id": "2512.19838v1",
+    "title": "Equilibrium Liquidity and Risk Offsetting in Decentralised Markets",
+    "abstract": "We develop an economic model of decentralised exchanges (DEXs) in which risk-averse liquidity providers (LPs) manage risk in a centralised exchange (CEX) based on preferences, information, and trading costs. Rational, risk-averse LPs anticipate the frictions associated with replication and manage risk primarily by reducing the reserves supplied to the DEX. Greater aversion reduces the equilibrium viability of liquidity provision, resulting in thinner markets and lower trading volumes. Greater uninformed demand supports deeper liquidity, whereas higher fundamental price volatility erodes it. Finally, while moderate anticipated price changes can improve LP performance, larger changes require more intensive trading in the CEX, generate higher replication costs, and induce LPs to reduce liquidity supply.",
+    "authors": [
+      "Fayçal Drissi",
+      "Xuchen Wu",
+      "Sebastian Jaimungal"
+    ],
+    "published": "2025-12-22",
+    "categories": [
+      "q-fin.TR",
+      "q-fin.GN",
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.19838v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.19838v1",
+    "fetched_at": "2025-12-24T08:34:25.219084"
+  },
+  {
+    "id": "2512.19821v1",
+    "title": "How to choose my stochastic volatility parameters? A review",
+    "abstract": "Based on the existing literature, this article presents the different ways of choosing the parameters of stochastic volatility models in general, in the context of pricing financial derivative contracts. This includes the use of stochastic volatility inside stochastic local volatility models.",
+    "authors": [
+      "Fabien Le Floc'h"
+    ],
+    "published": "2025-12-22",
+    "categories": [
+      "q-fin.PR",
+      "q-fin.CP",
+      "q-fin.RM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.19821v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.19821v1",
+    "fetched_at": "2025-12-24T08:34:25.219102"
+  },
+  {
+    "id": "2512.19625v1",
+    "title": "Counterexamples for FX Options Interpolations -- Part II",
+    "abstract": "This follow-up article analyzes the impact of foreign exchange option interpolation on the vanilla option implied volatilities. In particular different exact interpolations of broker quotes may lead to different implied volatilities at the 10$Δ$ and 25$Δ$ Puts and Calls.",
+    "authors": [
+      "Jherek Healy"
+    ],
+    "published": "2025-12-22",
+    "categories": [
+      "q-fin.PR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.19625v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.19625v1",
+    "fetched_at": "2025-12-24T08:34:25.219120"
+  },
+  {
+    "id": "2512.19621v1",
+    "title": "Counterexamples for FX Options Interpolations -- Part I",
+    "abstract": "This article provides a list of counterexamples, where some of the popular fx option interpolations break down. Interpolation of FX option prices (or equivalently volatilities), is key to risk-manage not only vanilla FX option books, but also more exotic derivatives which are typically valued with local volatility or local stochastic volatilility models.",
+    "authors": [
+      "Jherek Healy"
+    ],
+    "published": "2025-12-22",
+    "categories": [
+      "q-fin.PR",
+      "q-fin.CP",
+      "q-fin.RM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.19621v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.19621v1",
+    "fetched_at": "2025-12-24T08:34:25.219142"
+  },
+  {
+    "id": "2512.19611v1",
+    "title": "Heston vol-of-vol and the VVIX",
+    "abstract": "The Heston stochastic volatility model is arguably, the most popular stochastic volatility model used to price and risk manage exotic derivatives. In spite of this, it is not necessarily easy to calibrate to the market and obtain stable exotic option prices with this model. This paper focuses on the vol-of-vol parameter and its relation with the volatility of volatility index (VVIX) level. Four different approaches to estimate the VVIX in the Heston model are presented: two based on the known transition density of the variance, one analytical approximation, and one based on the Heston PDE which computes the value directly out of the underlying SPX500. Finally we explore their use to improve calibration stability.",
+    "authors": [
+      "Jherek Healy"
+    ],
+    "published": "2025-12-22",
+    "categories": [
+      "q-fin.PR",
+      "q-fin.CP",
+      "q-fin.MF",
+      "q-fin.RM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.19611v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.19611v1",
+    "fetched_at": "2025-12-24T08:34:25.219160"
+  },
+  {
+    "id": "2512.19251v1",
+    "title": "Institutional Backing and Crypto Volatility: A Hybrid Framework for DeFi Stabilization",
+    "abstract": "Decentralized finance (DeFi) lacks centralized oversight, often resulting in heightened volatility. In contrast, centralized finance (CeFi) offers a more stable environment with institutional safeguards. Institutional backing can play a stabilizing role in a hybrid structure (HyFi), enhancing transparency, governance, and market discipline. This study investigates whether HyFi-like cryptocurrencies, those backed by institutions, exhibit lower price risk than fully decentralized counterparts. Using daily data for 18 major cryptocurrencies from January 2020 to November 2024, we estimate panel EGLS models with fixed, random, and dynamic specifications. Results show that HyFi-like assets consistently experience lower price risk, with this effect intensifying during periods of elevated market volatility. The negative interaction between HyFi status and market-wide volatility confirms their stabilizing role. Conversely, greater decentralization is strongly associated with increased volatility, particularly during periods of market stress. Robustness checks using quantile regressions and pre-/post-Terra Luna subsamples reinforce these findings, with stronger effects observed in high-volatility quantiles and post-crisis conditions. These results highlight the importance of institutional architecture in enhancing the resilience of digital asset markets.",
+    "authors": [
+      "Ihlas Sovbetov"
+    ],
+    "published": "2025-12-22",
+    "categories": [
+      "q-fin.CP",
+      "q-fin.RM",
+      "q-fin.TR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.19251v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.19251v1",
+    "fetched_at": "2025-12-24T08:34:25.219178"
+  },
+  {
+    "id": "2512.18918v1",
+    "title": "Needles in a haystack: using forensic network science to uncover insider trading",
+    "abstract": "Although the automation and digitisation of anti-financial crime investigation has made significant progress in recent years, detecting insider trading remains a unique challenge, partly due to the limited availability of labelled data. To address this challenge, we propose using a data-driven networks approach that flags groups of corporate insiders who report coordinated transactions that are indicative of insider trading. Specifically, we leverage data on 2.9 million trades reported to the U.S. Securities and Exchange Commission (SEC) by company insiders (C-suite executives, board members and major shareholders) between 2014 and 2024. Our proposed algorithm constructs weighted edges between insiders based on the temporal similarity of their trades over the 10-year timeframe. Within this network we then uncover trends that indicate insider trading by focusing on central nodes and anomalous subgraphs. To highlight the validity of our approach we evaluate our findings with reference to two null models, generated by running our algorithm on synthetic empirically calibrated and shuffled datasets. The results indicate that our approach can be used to detect pairs or clusters of insiders whose behaviour suggests insider trading and/or market manipulation.",
+    "authors": [
+      "Gian Jaeger",
+      "Wang Ngai Yeung",
+      "Renaud Lambiotte"
+    ],
+    "published": "2025-12-21",
+    "categories": [
+      "cs.SI",
+      "physics.data-an",
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.18918v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.18918v1",
+    "fetched_at": "2025-12-24T08:34:25.219199"
+  },
+  {
+    "id": "2512.18790v1",
+    "title": "Optimal Catastrophe Risk Pooling",
+    "abstract": "Catastrophe risk has long been recognized to pose a serious threat to the insurance sector. Although natural disasters such as flooding, hurricane or severe drought are rare events, they generally lead to devastating damages that traditional insurance schemes may not be able to efficiently cover. Catastrophe risk pooling is an effective way to diversify the losses from such risks. In this paper, we improve the catastrophe risk pool by Pareto-optimally allocating the diversification benefits among participants. Finding the practical Pareto-optimal pool entails solving a high-dimensional optimization problem, for which analytical solutions are typically unavailable and numerical methods can be computationally intensive and potentially unreliable. We propose evaluating the diversification benefits at the limit case and using it to approximate the optimal pool by deriving an asymptotic optimal pool. Simulation studies are undertaken to explore the implications of the results and an empirical analysis from the U.S. National Flood Insurance Program is also carried out to illustrate how this framework can be applied in practice.",
+    "authors": [
+      "Minh Chau Nguyen",
+      "Tony S. Wirjanto",
+      "Fan Yang"
+    ],
+    "published": "2025-12-21",
+    "categories": [
+      "q-fin.RM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.18790v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.18790v1",
+    "fetched_at": "2025-12-24T08:34:25.219220"
+  },
+  {
+    "id": "2512.18648v1",
+    "title": "Optimal Signal Extraction from Order Flow: A Matched Filter Perspective on Normalization and Market Microstructure",
+    "abstract": "We demonstrate that the choice of normalization for order flow intensity is fundamental to signal extraction in finance, not merely a technical detail. Through theoretical modeling, Monte Carlo simulation, and empirical validation using Korean market data, we prove that market capitalization normalization acts as a ``matched filter'' for informed trading signals, achieving 1.32--1.97$\\times$ higher correlation with future returns compared to traditional trading value normalization. The key insight is that informed traders scale positions by firm value (market capitalization), while noise traders respond to daily liquidity (trading volume), creating heteroskedastic corruption when normalizing by trading volume. By reframing the normalization problem using signal processing theory, we show that dividing order flow by market capitalization preserves the information signal while traditional volume normalization multiplies the signal by inverse turnover -- a highly volatile quantity. Our theoretical predictions are robust across parameter specifications and validated by empirical evidence showing 482\\% improvement in explanatory power. These findings have immediate implications for high-frequency trading algorithms, risk factor construction, and information-based trading strategies.",
+    "authors": [
+      "Sungwoo Kang"
+    ],
+    "published": "2025-12-21",
+    "categories": [
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.18648v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.18648v1",
+    "fetched_at": "2025-12-24T08:34:25.219236"
+  },
+  {
+    "id": "2512.17895v2",
+    "title": "Visualization of The Content of Surah al Fiil using Marker-Based Augmented Reality",
+    "abstract": "This study presents the development of a marker-based augmented reality (AR) application designed to visualize the content of Surah al-Fil as an interactive and context-rich medium for Islamic education. Using a research and development approach, the system was developed through structured stages including data collection, user requirement analysis, interface design, 3D asset creation using Blender, and integration of Unity 3D with the Vuforia SDK. The application features key visual elements such as the elephant army, the Kaaba, and the Ababil birds, which were modeled in detail and linked to high-contrast image markers to ensure accurate and stable AR tracking. Functional testing demonstrated strong technical performance, achieving a 95 percent marker detection accuracy at an optimal distance of 30-40 cm with consistent real-time rendering across multiple Android devices. User evaluations involving students and Islamic education teachers indicated high acceptance, with an overall satisfaction score of 4.7 out of 5 in terms of usability, visual appeal, interactivity, and learning effectiveness. These findings indicate that AR-based learning media can enhance learner engagement, deepen understanding of Quranic narratives, and provide immersive insights into historical and spiritual contexts. Overall, this study demonstrates that marker-based AR technology has significant potential to support innovation in digital Islamic education by enriching traditional learning with interactive and visually intuitive experiences.",
+    "authors": [
+      "Wisnu Uriawan",
+      "Ahmad Badru Al Husaeni",
+      "Dzakwanfaiq Nauval",
+      "Farid Muhtar Fathir",
+      "Mahesa Adlan Falah",
+      "Muhammad Miftahur Rizki Awalin"
+    ],
+    "published": "2025-12-19",
+    "categories": [
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.17895v2",
+    "arxiv_url": "https://arxiv.org/abs/2512.17895v2",
+    "fetched_at": "2025-12-24T08:34:25.219262"
+  },
+  {
+    "id": "2512.16251v2",
+    "title": "Interpretable Deep Learning for Stock Returns: A Consensus-Bottleneck Asset Pricing Model",
+    "abstract": "We introduce the Consensus-Bottleneck Asset Pricing Model (CB-APM), a partially interpretable neural network that replicates the reasoning processes of sell-side analysts by capturing how dispersed investor beliefs are compressed into asset prices through a consensus formation process. By modeling this \"bottleneck\" to summarize firm- and macro-level information, CB-APM not only predicts future risk premiums of U.S. equities but also links belief aggregation to expected returns in a structurally interpretable manner. The model improves long-horizon return forecasts and outperforms standard deep learning approaches in both predictive accuracy and explanatory power. Comprehensive portfolio analyses show that CB-APM's out-of-sample predictions translate into economically meaningful payoffs, with monotonic return differentials and stable long-short performance across regularization settings. Empirically, CB-APM leverages consensus as a regularizer to amplify long-horizon predictability and yields interpretable consensus-based components that clarify how information is priced in returns. Moreover, regression and Gibbons-Ross-Shanken (GRS)-based pricing diagnostics reveal that the learned consensus representations capture priced variation only partially spanned by traditional factor models, demonstrating that CB-APM uncovers belief-driven structure in expected returns beyond the canonical factor space. Overall, CB-APM provides an interpretable and empirically grounded framework for understanding belief-driven return dynamics.",
+    "authors": [
+      "Bong-Gyu Jang",
+      "Younwoo Jeong",
+      "Changeun Kim"
+    ],
+    "published": "2025-12-18",
+    "categories": [
+      "q-fin.PR",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.16251v2",
+    "arxiv_url": "https://arxiv.org/abs/2512.16251v2",
+    "fetched_at": "2025-12-24T08:34:25.219461"
+  },
+  {
+    "id": "2512.20432v1",
+    "title": "High Dimensional Data Decomposition for Anomaly Detection of Textured Images",
+    "abstract": "In the realm of diverse high-dimensional data, images play a significant role across various processes of manufacturing systems where efficient image anomaly detection has emerged as a core technology of utmost importance. However, when applied to textured defect images, conventional anomaly detection methods have limitations including non-negligible misidentification, low robustness, and excessive reliance on large-scale and structured datasets. This paper proposes a texture basis integrated smooth decomposition (TBSD) approach, which is targeted at efficient anomaly detection in textured images with smooth backgrounds and sparse anomalies. Mathematical formulation of quasi-periodicity and its theoretical properties are investigated for image texture estimation. TBSD method consists of two principal processes: the first process learns the texture basis functions to effectively extract quasi-periodic texture patterns; the subsequent anomaly detection process utilizes that texture basis as prior knowledge to prevent texture misidentification and capture potential anomalies with high accuracy.The proposed method surpasses benchmarks with less misidentification, smaller training dataset requirement, and superior anomaly detection performance on both simulation and real-world datasets.",
+    "authors": [
+      "Ji Song",
+      "Xing Wang",
+      "Jianguo Wu",
+      "Xiaowei Yue"
+    ],
+    "published": "2025-12-23",
+    "categories": [
+      "cs.CV",
+      "stat.ML"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.20432v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.20432v1",
+    "fetched_at": "2025-12-24T08:34:38.418993"
+  },
+  {
+    "id": "2512.20177v1",
+    "title": "NeuralCrop: Combining physics and machine learning for improved crop yield predictions",
+    "abstract": "Global gridded crop models (GGCMs) simulate daily crop growth by explicitly representing key biophysical processes and project end-of-season yield time series. They are a primary tool to quantify the impacts of climate change on agricultural productivity and assess associated risks for food security. Despite decades of development, state-of-the-art GGCMs still have substantial uncertainties in simulating complex biophysical processes due to limited process understanding. Recently, machine learning approaches trained on observational data have shown great potential in crop yield predictions. However, these models have not demonstrated improved performance over classical GGCMs and are not suitable for simulating crop yields under changing climate conditions due to problems in generalizing outside their training distributions. Here we introduce NeuralCrop, a hybrid GGCM that combines the strengths of an advanced process-based GGCM, resolving important processes explicitly, with data-driven machine learning components. The model is first trained to emulate a competitive GGCM before it is fine-tuned on observational data. We show that NeuralCrop outperforms state-of-the-art GGCMs across site-level and large-scale cropping regions. Across moisture conditions, NeuralCrop reproduces the interannual yield anomalies in European wheat regions and the US Corn Belt more accurately during the period from 2000 to 2019 with particularly strong improvements under drought extremes. When generalizing to conditions unseen during training, NeuralCrop continues to make robust projections, while pure machine learning models exhibit substantial performance degradation. Our results show that our hybrid crop modelling approach offers overall improved crop modeling and more reliable yield projections under climate change and intensifying extreme weather conditions.",
+    "authors": [
+      "Yunan Lin",
+      "Sebastian Bathiany",
+      "Maha Badri",
+      "Maximilian Gelbrecht",
+      "Philipp Hess",
+      "Brian Groenke",
+      "Jens Heinke",
+      "Christoph Müller",
+      "Niklas Boers"
+    ],
+    "published": "2025-12-23",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.20177v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.20177v1",
+    "fetched_at": "2025-12-24T08:34:38.419035"
+  },
+  {
+    "id": "2512.20086v1",
+    "title": "Spatio-Temporal Graphs Beyond Grids: Benchmark for Maritime Anomaly Detection",
+    "abstract": "Spatio-temporal graph neural networks (ST-GNNs) have achieved notable success in structured domains such as road traffic and public transportation, where spatial entities can be naturally represented as fixed nodes. In contrast, many real-world systems including maritime traffic lack such fixed anchors, making the construction of spatio-temporal graphs a fundamental challenge. Anomaly detection in these non-grid environments is particularly difficult due to the absence of canonical reference points, the sparsity and irregularity of trajectories, and the fact that anomalies may manifest at multiple granularities. In this work, we introduce a novel benchmark dataset for anomaly detection in the maritime domain, extending the Open Maritime Traffic Analysis Dataset (OMTAD) into a benchmark tailored for graph-based anomaly detection. Our dataset enables systematic evaluation across three different granularities: node-level, edge-level, and graph-level anomalies. We plan to employ two specialized LLM-based agents: \\emph{Trajectory Synthesizer} and \\emph{Anomaly Injector} to construct richer interaction contexts and generate semantically meaningful anomalies. We expect this benchmark to promote reproducibility and to foster methodological advances in anomaly detection for non-grid spatio-temporal systems.",
+    "authors": [
+      "Jeehong Kim",
+      "Youngseok Hwang",
+      "Minchan Kim",
+      "Sungho Bae",
+      "Hyunwoo Park"
+    ],
+    "published": "2025-12-23",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.20086v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.20086v1",
+    "fetched_at": "2025-12-24T08:34:38.419061"
+  },
+  {
+    "id": "2512.19383v1",
+    "title": "Real-Time Machine Learning for Embedded Anomaly Detection",
+    "abstract": "The spread of a resource-constrained Internet of Things (IoT) environment and embedded devices has put pressure on the real-time detection of anomalies occurring at the edge. This survey presents an overview of machine-learning methods aimed specifically at on-device anomaly detection with extremely strict constraints for latency, memory, and power consumption. Lightweight algorithms such as Isolation Forest, One-Class SVM, recurrent architectures, and statistical techniques are compared here according to the realities of embedded implementation. Our survey brings out significant trade-offs of accuracy and computational efficiency of detection, as well as how hardware constraints end up fundamentally redefining algorithm choice. The survey is completed with a set of practical recommendations on the choice of the algorithm depending on the equipment profiles and new trends in TinyML, which can help close the gap between detection capabilities and embedded reality. The paper serves as a strategic roadmap for engineers deploying anomaly detection in edge environments that are constrained by bandwidth and may be safety-critical.",
+    "authors": [
+      "Abdelmadjid Benmachiche",
+      "Khadija Rais",
+      "Hamda Slimi"
+    ],
+    "published": "2025-12-22",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.19383v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.19383v1",
+    "fetched_at": "2025-12-24T08:34:38.419082"
+  },
+  {
+    "id": "2512.19228v1",
+    "title": "Generation of Programmatic Rules for Document Forgery Detection Using Large Language Models",
+    "abstract": "Document forgery poses a growing threat to legal, economic, and governmental processes, requiring increasingly sophisticated verification mechanisms. One approach involves the use of plausibility checks, rule-based procedures that assess the correctness and internal consistency of data, to detect anomalies or signs of manipulation. Although these verification procedures are essential for ensuring data integrity, existing plausibility checks are manually implemented by software engineers, which is time-consuming. Recent advances in code generation with large language models (LLMs) offer new potential for automating and scaling the generation of these checks. However, adapting LLMs to the specific requirements of an unknown domain remains a significant challenge. This work investigates the extent to which LLMs, adapted on domain-specific code and data through different fine-tuning strategies, can generate rule-based plausibility checks for forgery detection on constrained hardware resources. We fine-tune open-source LLMs, Llama 3.1 8B and OpenCoder 8B, on structured datasets derived from real-world application scenarios and evaluate the generated plausibility checks on previously unseen forgery patterns. The results demonstrate that the models are capable of generating executable and effective verification procedures. This also highlights the potential of LLMs as scalable tools to support human decision-making in security-sensitive contexts where comprehensibility is required.",
+    "authors": [
+      "Valentin Schmidberger",
+      "Manuel Eberhardinger",
+      "Setareh Maghsudi",
+      "Johannes Maucher"
+    ],
+    "published": "2025-12-22",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.19228v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.19228v1",
+    "fetched_at": "2025-12-24T08:34:38.419104"
+  },
+  {
+    "id": "2512.18826v1",
+    "title": "Hyperbolic Graph Embeddings: a Survey and an Evaluation on Anomaly Detection",
+    "abstract": "This survey reviews hyperbolic graph embedding models, and evaluate them on anomaly detection, highlighting their advantages over Euclidean methods in capturing complex structures. Evaluating models like \\textit{HGCAE}, \\textit{\\(\\mathcal{P}\\)-VAE}, and \\textit{HGCN} demonstrates high performance, with \\textit{\\(\\mathcal{P}\\)-VAE} achieving an F1-score of 94\\% on the \\textit{Elliptic} dataset and \\textit{HGCAE} scoring 80\\% on \\textit{Cora}. In contrast, Euclidean methods like \\textit{DOMINANT} and \\textit{GraphSage} struggle with complex data. The study emphasizes the potential of hyperbolic spaces for improving anomaly detection, and provides an open-source library to foster further research in this field.",
+    "authors": [
+      "Souhail Abdelmouaiz Sadat",
+      "Mohamed Yacine Touahria Miliani",
+      "Khadidja Hab El Hames",
+      "Hamida Seba",
+      "Mohammed Haddad"
+    ],
+    "published": "2025-12-21",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.18826v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.18826v1",
+    "fetched_at": "2025-12-24T08:34:38.419129"
+  },
+  {
+    "id": "2512.18733v1",
+    "title": "Explainable and Fine-Grained Safeguarding of LLM Multi-Agent Systems via Bi-Level Graph Anomaly Detection",
+    "abstract": "Large language model (LLM)-based multi-agent systems (MAS) have shown strong capabilities in solving complex tasks. As MAS become increasingly autonomous in various safety-critical tasks, detecting malicious agents has become a critical security concern. Although existing graph anomaly detection (GAD)-based defenses can identify anomalous agents, they mainly rely on coarse sentence-level information and overlook fine-grained lexical cues, leading to suboptimal performance. Moreover, the lack of interpretability in these methods limits their reliability and real-world applicability. To address these limitations, we propose XG-Guard, an explainable and fine-grained safeguarding framework for detecting malicious agents in MAS. To incorporate both coarse and fine-grained textual information for anomalous agent identification, we utilize a bi-level agent encoder to jointly model the sentence- and token-level representations of each agent. A theme-based anomaly detector further captures the evolving discussion focus in MAS dialogues, while a bi-level score fusion mechanism quantifies token-level contributions for explanation. Extensive experiments across diverse MAS topologies and attack scenarios demonstrate robust detection performance and strong interpretability of XG-Guard.",
+    "authors": [
+      "Junjun Pan",
+      "Yixin Liu",
+      "Rui Miao",
+      "Kaize Ding",
+      "Yu Zheng",
+      "Quoc Viet Hung Nguyen",
+      "Alan Wee-Chung Liew",
+      "Shirui Pan"
+    ],
+    "published": "2025-12-21",
+    "categories": [
+      "cs.CR",
+      "cs.AI",
+      "cs.MA"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.18733v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.18733v1",
+    "fetched_at": "2025-12-24T08:34:38.419158"
+  },
+  {
+    "id": "2512.18673v1",
+    "title": "Improving Pattern Recognition of Scheduling Anomalies through Structure-Aware and Semantically-Enhanced Graphs",
+    "abstract": "This paper proposes a structure-aware driven scheduling graph modeling method to improve the accuracy and representation capability of anomaly identification in scheduling behaviors of complex systems. The method first designs a structure-guided scheduling graph construction mechanism that integrates task execution stages, resource node states, and scheduling path information to build dynamically evolving scheduling behavior graphs, enhancing the model's ability to capture global scheduling relationships. On this basis, a multi-scale graph semantic aggregation module is introduced to achieve semantic consistency modeling of scheduling features through local adjacency semantic integration and global topology alignment, thereby strengthening the model's capability to capture abnormal features in complex scenarios such as multi-task concurrency, resource competition, and stage transitions. Experiments are conducted on a real scheduling dataset with multiple scheduling disturbance paths set to simulate different types of anomalies, including structural shifts, resource changes, and task delays. The proposed model demonstrates significant performance advantages across multiple metrics, showing a sensitive response to structural disturbances and semantic shifts. Further visualization analysis reveals that, under the combined effect of structure guidance and semantic aggregation, the scheduling behavior graph exhibits stronger anomaly separability and pattern representation, validating the effectiveness and adaptability of the method in scheduling anomaly detection tasks.",
+    "authors": [
+      "Ning Lyu",
+      "Junjie Jiang",
+      "Lu Chang",
+      "Chihui Shao",
+      "Feng Chen",
+      "Chong Zhang"
+    ],
+    "published": "2025-12-21",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.18673v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.18673v1",
+    "fetched_at": "2025-12-24T08:34:38.419183"
+  },
+  {
+    "id": "2512.18244v1",
+    "title": "Breaking Minds, Breaking Systems: Jailbreaking Large Language Models via Human-like Psychological Manipulation",
+    "abstract": "Large Language Models (LLMs) have gained considerable popularity and protected by increasingly sophisticated safety mechanisms. However, jailbreak attacks continue to pose a critical security threat by inducing models to generate policy-violating behaviors. Current paradigms focus on input-level anomalies, overlooking that the model's internal psychometric state can be systematically manipulated. To address this, we introduce Psychological Jailbreak, a new jailbreak attack paradigm that exposes a stateful psychological attack surface in LLMs, where attackers exploit the manipulation of a model's psychological state across interactions. Building on this insight, we propose Human-like Psychological Manipulation (HPM), a black-box jailbreak method that dynamically profiles a target model's latent psychological vulnerabilities and synthesizes tailored multi-turn attack strategies. By leveraging the model's optimization for anthropomorphic consistency, HPM creates a psychological pressure where social compliance overrides safety constraints. To systematically measure psychological safety, we construct an evaluation framework incorporating psychometric datasets and the Policy Corruption Score (PCS). Benchmarking against various models (e.g., GPT-4o, DeepSeek-V3, Gemini-2-Flash), HPM achieves a mean Attack Success Rate (ASR) of 88.1%, outperforming state-of-the-art attack baselines. Our experiments demonstrate robust penetration against advanced defenses, including adversarial prompt optimization (e.g., RPO) and cognitive interventions (e.g., Self-Reminder). Ultimately, PCS analysis confirms HPM induces safety breakdown to satisfy manipulated contexts. Our work advocates for a fundamental paradigm shift from static content filtering to psychological safety, prioritizing the development of psychological defense mechanisms against deep cognitive manipulation.",
+    "authors": [
+      "Zehao Liu",
+      "Xi Lin"
+    ],
+    "published": "2025-12-20",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.18244v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.18244v1",
+    "fetched_at": "2025-12-24T08:34:38.419202"
+  },
+  {
+    "id": "2512.17979v1",
+    "title": "Adaptive Agents in Spatial Double-Auction Markets: Modeling the Emergence of Industrial Symbiosis",
+    "abstract": "Industrial symbiosis fosters circularity by enabling firms to repurpose residual resources, yet its emergence is constrained by socio-spatial frictions that shape costs, matching opportunities, and market efficiency. Existing models often overlook the interaction between spatial structure, market design, and adaptive firm behavior, limiting our understanding of where and how symbiosis arises. We develop an agent-based model where heterogeneous firms trade byproducts through a spatially embedded double-auction market, with prices and quantities emerging endogenously from local interactions. Leveraging reinforcement learning, firms adapt their bidding strategies to maximize profit while accounting for transport costs, disposal penalties, and resource scarcity. Simulation experiments reveal the economic and spatial conditions under which decentralized exchanges converge toward stable and efficient outcomes. Counterfactual regret analysis shows that sellers' strategies approach a near Nash equilibrium, while sensitivity analysis highlights how spatial structures and market parameters jointly govern circularity. Our model provides a basis for exploring policy interventions that seek to align firm incentives with sustainability goals, and more broadly demonstrates how decentralized coordination can emerge from adaptive agents in spatially constrained markets.",
+    "authors": [
+      "Matthieu Mastio",
+      "Paul Saves",
+      "Benoit Gaudou",
+      "Nicolas Verstaevel"
+    ],
+    "published": "2025-12-19",
+    "categories": [
+      "cs.GT",
+      "cs.AI",
+      "cs.MA",
+      "econ.GN",
+      "stat.AP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.17979v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.17979v1",
+    "fetched_at": "2025-12-24T08:34:48.326457"
+  },
+  {
+    "id": "2512.18034v1",
+    "title": "Conflict-Driven Clause Learning with VSIDS Heuristics for Discrete Facility Layout",
+    "abstract": "This paper studies the use of Conflict-Driven Clause Learning (CDCL) with VSIDS heuristics as a computational engine for discrete facility layout problems. The facility layout problem is modeled as a combinatorial assignment problem with dense logical structure arising from adjacency, separation, and slot-availability constraints. We develop a CNF-based formulation for layout feasibility and compare CDCL-based SAT solving against CP-SAT and MILP formulations under a unified benchmarking framework. Empirical results show that CDCL exhibits near-constant runtime behavior for feasibility detection across increasing problem sizes and constraint densities, while CP-SAT and MILP display polynomial and exponential scaling respectively. To address the limitation of CDCL in objective optimization, we introduce two hybrid architectures that combine CDCL-based feasibility search with CP-SAT optimization. The first architecture rapidly enumerates feasible layouts to trade optimality for speed, while the second uses CDCL to generate warm-start solutions that accelerate exact optimization. The results demonstrate that hybrid approaches can significantly reduce time-to-solution while preserving correctness guarantees, clarifying the algorithmic trade-offs between clause-learning search and exact optimization methods in large-scale discrete layout problems.",
+    "authors": [
+      "Joshua Gibson",
+      "Kapil Dhakal"
+    ],
+    "published": "2025-12-19",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.18034v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.18034v1",
+    "fetched_at": "2025-12-24T08:34:58.147090"
+  },
+  {
+    "id": "2512.20605v1",
+    "title": "Emergent temporal abstractions in autoregressive models enable hierarchical reinforcement learning",
+    "abstract": "Large-scale autoregressive models pretrained on next-token prediction and finetuned with reinforcement learning (RL) have achieved unprecedented success on many problem domains. During RL, these models explore by generating new outputs, one token at a time. However, sampling actions token-by-token can result in highly inefficient learning, particularly when rewards are sparse. Here, we show that it is possible to overcome this problem by acting and exploring within the internal representations of an autoregressive model. Specifically, to discover temporally-abstract actions, we introduce a higher-order, non-causal sequence model whose outputs control the residual stream activations of a base autoregressive model. On grid world and MuJoCo-based tasks with hierarchical structure, we find that the higher-order model learns to compress long activation sequence chunks onto internal controllers. Critically, each controller executes a sequence of behaviorally meaningful actions that unfold over long timescales and are accompanied with a learned termination condition, such that composing multiple controllers over time leads to efficient exploration on novel tasks. We show that direct internal controller reinforcement, a process we term \"internal RL\", enables learning from sparse rewards in cases where standard RL finetuning fails. Our results demonstrate the benefits of latent action generation and reinforcement in autoregressive models, suggesting internal RL as a promising avenue for realizing hierarchical RL within foundation models.",
+    "authors": [
+      "Seijin Kobayashi",
+      "Yanick Schimpf",
+      "Maximilian Schlegel",
+      "Angelika Steger",
+      "Maciej Wolczyk",
+      "Johannes von Oswald",
+      "Nino Scherre",
+      "Kaitlin Maile",
+      "Guillaume Lajoie",
+      "Blake A. Richards",
+      "Rif A. Saurous",
+      "James Manyika",
+      "Blaise Agüera y Arcas",
+      "Alexander Meulemans",
+      "João Sacramento"
+    ],
+    "published": "2025-12-23",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.20605v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.20605v1",
+    "fetched_at": "2025-12-24T08:35:08.154388"
+  },
+  {
+    "id": "2512.20595v1",
+    "title": "Cube Bench: A Benchmark for Spatial Visual Reasoning in MLLMs",
+    "abstract": "We introduce Cube Bench, a Rubik's-cube benchmark for evaluating spatial and sequential reasoning in multimodal large language models (MLLMs). The benchmark decomposes performance into five skills: (i) reconstructing cube faces from images and text, (ii) choosing the optimal next move, (iii) predicting the outcome of a candidate move without applying it, (iv) executing multi-step plans while recovering from mistakes, and (v) detecting and revising one's own errors. Using a shared set of scrambled cube states, identical prompts and parsers, and a single distance-to-solved metric, we compare recent MLLMs side by side as a function of scramble depth. Across seven MLLMs, accuracy drops sharply with depth; once a trajectory stalls or diverges, models rarely recover, and high face-reconstruction accuracy does not guarantee competent action selection or multi-step execution. A pronounced closed- vs open-source gap emerges: the strongest closed model leads on both single-step perception tasks and multi-step control tasks, while open-weight models cluster near chance on the hardest settings; yet even the best MLLM degrades at higher cube complexity. A simple self-correction via reflective thinking yields modest gains but can also introduce overthinking. Cube Bench offers a compact, reproducible probe of sequential spatial reasoning in MLLMs.",
+    "authors": [
+      "Dhruv Anand",
+      "Ehsan Shareghi"
+    ],
+    "published": "2025-12-23",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.20595v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.20595v1",
+    "fetched_at": "2025-12-24T08:35:08.154419"
+  },
+  {
+    "id": "2512.20469v1",
+    "title": "Bohrium + SciMaster: Building the Infrastructure and Ecosystem for Agentic Science at Scale",
+    "abstract": "AI agents are emerging as a practical way to run multi-step scientific workflows that interleave reasoning with tool use and verification, pointing to a shift from isolated AI-assisted steps toward \\emph{agentic science at scale}. This shift is increasingly feasible, as scientific tools and models can be invoked through stable interfaces and verified with recorded execution traces, and increasingly necessary, as AI accelerates scientific output and stresses the peer-review and publication pipeline, raising the bar for traceability and credible evaluation.   However, scaling agentic science remains difficult: workflows are hard to observe and reproduce; many tools and laboratory systems are not agent-ready; execution is hard to trace and govern; and prototype AI Scientist systems are often bespoke, limiting reuse and systematic improvement from real workflow signals.   We argue that scaling agentic science requires an infrastructure-and-ecosystem approach, instantiated in Bohrium+SciMaster. Bohrium acts as a managed, traceable hub for AI4S assets -- akin to a HuggingFace of AI for Science -- that turns diverse scientific data, software, compute, and laboratory systems into agent-ready capabilities. SciMaster orchestrates these capabilities into long-horizon scientific workflows, on which scientific agents can be composed and executed. Between infrastructure and orchestration, a \\emph{scientific intelligence substrate} organizes reusable models, knowledge, and components into executable building blocks for workflow reasoning and action, enabling composition, auditability, and improvement through use.   We demonstrate this stack with eleven representative master agents in real workflows, achieving orders-of-magnitude reductions in end-to-end scientific cycle time and generating execution-grounded signals from real workloads at multi-million scale.",
+    "authors": [
+      "Linfeng Zhang",
+      "Siheng Chen",
+      "Yuzhu Cai",
+      "Jingyi Chai",
+      "Junhan Chang",
+      "Kun Chen",
+      "Zhi X. Chen",
+      "Zhaohan Ding",
+      "Yuwen Du",
+      "Yuanpeng Gao",
+      "Yuan Gao",
+      "Jing Gao",
+      "Zhifeng Gao",
+      "Qiangqiang Gu",
+      "Yanhui Hong",
+      "Yuan Huang",
+      "Xi Fang",
+      "Xiaohong Ji",
+      "Guolin Ke",
+      "Zixing Lei",
+      "Xinyu Li",
+      "Yongge Li",
+      "Ruoxue Liao",
+      "Hang Lin",
+      "Xiaolu Lin",
+      "Yuxiang Liu",
+      "Xinzijian Liu",
+      "Zexi Liu",
+      "Jintan Lu",
+      "Tingjia Miao",
+      "Haohui Que",
+      "Weijie Sun",
+      "Yanfeng Wang",
+      "Bingyang Wu",
+      "Tianju Xue",
+      "Rui Ye",
+      "Jinzhe Zeng",
+      "Duo Zhang",
+      "Jiahui Zhang",
+      "Linfeng Zhang",
+      "Tianhan Zhang",
+      "Wenchang Zhang",
+      "Yuzhi Zhang",
+      "Zezhong Zhang",
+      "Hang Zheng",
+      "Hui Zhou",
+      "Tong Zhu",
+      "Xinyu Zhu",
+      "Qingguo Zhou",
+      "Weinan E"
+    ],
+    "published": "2025-12-23",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.20469v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.20469v1",
+    "fetched_at": "2025-12-24T08:35:08.154525"
+  },
+  {
+    "id": "2512.20387v1",
+    "title": "Generative Digital Twins: Vision-Language Simulation Models for Executable Industrial Systems",
+    "abstract": "We propose a Vision-Language Simulation Model (VLSM) that unifies visual and textual understanding to synthesize executable FlexScript from layout sketches and natural-language prompts, enabling cross-modal reasoning for industrial simulation systems. To support this new paradigm, the study constructs the first large-scale dataset for generative digital twins, comprising over 120,000 prompt-sketch-code triplets that enable multimodal learning between textual descriptions, spatial structures, and simulation logic. In parallel, three novel evaluation metrics, Structural Validity Rate (SVR), Parameter Match Rate (PMR), and Execution Success Rate (ESR), are proposed specifically for this task to comprehensively evaluate structural integrity, parameter fidelity, and simulator executability. Through systematic ablation across vision encoders, connectors, and code-pretrained language backbones, the proposed models achieve near-perfect structural accuracy and high execution robustness. This work establishes a foundation for generative digital twins that integrate visual reasoning and language understanding into executable industrial simulation systems.",
+    "authors": [
+      "YuChe Hsu",
+      "AnJui Wang",
+      "TsaiChing Ni",
+      "YuanFu Yang"
+    ],
+    "published": "2025-12-23",
+    "categories": [
+      "cs.AI",
+      "cs.CL",
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.20387v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.20387v1",
+    "fetched_at": "2025-12-24T08:35:08.154549"
+  },
+  {
+    "id": "2512.20333v1",
+    "title": "SynCraft: Guiding Large Language Models to Predict Edit Sequences for Molecular Synthesizability Optimization",
+    "abstract": "Generative artificial intelligence has revolutionized the exploration of chemical space, yet a critical bottleneck remains that a substantial fraction of generated molecules is synthetically inaccessible. Current solutions, such as post-hoc filtering or projection-based methods, often compromise structural novelty or disrupt key pharmacophores by forcing molecules into pre-defined synthetic templates. Herein, we introduce SynCraft, a reasoning-based framework that reframes synthesizability optimization not as a sequence translation task, but as a precise structural editing problem. Leveraging the emergent reasoning capabilities of Large Language Models, SynCraft navigates the \"synthesis cliff\" where minimal structural modifications yield significant gains in synthetic feasibility. By predicting executable sequences of atom-level edits rather than generating SMILES strings directly, SynCraft circumvents the syntactic fragility of LLMs while harnessing their chemical intuition. Extensive benchmarks demonstrate that SynCraft outperforms state-of-the-art baselines in generating synthesizable analogs with high structural fidelity. Furthermore, through interaction-aware prompting, SynCraft successfully replicates expert medicinal chemistry intuition in editing PLK1 inhibitors and rescuing high-scoring but previously discarded RIPK1 candidates in previous molecular generation literatures.",
+    "authors": [
+      "Junren Li",
+      "Luhua Lai"
+    ],
+    "published": "2025-12-23",
+    "categories": [
+      "cs.AI",
+      "q-bio.QM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.20333v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.20333v1",
+    "fetched_at": "2025-12-24T08:35:08.154568"
+  },
+  {
+    "id": "2512.20312v1",
+    "title": "TableGPT-R1: Advancing Tabular Reasoning Through Reinforcement Learning",
+    "abstract": "Tabular data serves as the backbone of modern data analysis and scientific research. While Large Language Models (LLMs) fine-tuned via Supervised Fine-Tuning (SFT) have significantly improved natural language interaction with such structured data, they often fall short in handling the complex, multi-step reasoning and robust code execution required for real-world table tasks. Reinforcement Learning (RL) offers a promising avenue to enhance these capabilities, yet its application in the tabular domain faces three critical hurdles: the scarcity of high-quality agentic trajectories with closed-loop code execution and environment feedback on diverse table structures, the extreme heterogeneity of feedback signals ranging from rigid SQL execution to open-ended data interpretation, and the risk of catastrophic forgetting of general knowledge during vertical specialization. To overcome these challenges and unlock advanced reasoning on complex tables, we introduce \\textbf{TableGPT-R1}, a specialized tabular model built on a systematic RL framework. Our approach integrates a comprehensive data engineering pipeline that synthesizes difficulty-stratified agentic trajectories for both supervised alignment and RL rollouts, a task-adaptive reward system that combines rule-based verification with a criteria-injected reward model and incorporates process-level step reward shaping with behavioral regularization, and a multi-stage training framework that progressively stabilizes reasoning before specializing in table-specific tasks. Extensive evaluations demonstrate that TableGPT-R1 achieves state-of-the-art performance on authoritative benchmarks, significantly outperforming baseline models while retaining robust general capabilities. Our model is available at https://huggingface.co/tablegpt/TableGPT-R1.",
+    "authors": [
+      "Saisai Yang",
+      "Qingyi Huang",
+      "Jing Yuan",
+      "Liangyu Zha",
+      "Kai Tang",
+      "Yuhang Yang",
+      "Ning Wang",
+      "Yucheng Wei",
+      "Liyao Li",
+      "Wentao Ye",
+      "Hao Chen",
+      "Tao Zhang",
+      "Junlin Zhou",
+      "Haobo Wang",
+      "Gang Chen",
+      "Junbo Zhao"
+    ],
+    "published": "2025-12-23",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.20312v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.20312v1",
+    "fetched_at": "2025-12-24T08:35:08.154611"
+  },
+  {
+    "id": "2512.20278v1",
+    "title": "Synthesizing Procedural Memory: Challenges and Architectures in Automated Workflow Generation",
+    "abstract": "While CodeMem establishes executable code as the optimal representation for agentic procedural memory, the mechanism for autonomously synthesizing this memory from a blank slate remains underexplored. This paper operationalizes the transition of Large Language Models from passive tool-users to active workflow architects. Through a high-fidelity case study of a cross-service orchestration task involving Outlook and OneDrive, we identify and address four structural bottlenecks in automated skill generation: the Discovery Gap involving navigation of large tool registries, the Verification Gap regarding grounding tool response structures, the Decomposition Gap which replaces inefficient search with Linear State Anchoring, and the Scaling Gap focused on concurrency and persistence. We demonstrate that by enforcing a scientific methodology of hypothesize, probe, and code, agents can autonomously write robust, production-grade code skills.",
+    "authors": [
+      "Nishant Gaurav",
+      "Adit Akarsh",
+      "Ankit Ranjan",
+      "Manoj Bajaj"
+    ],
+    "published": "2025-12-23",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.20278v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.20278v1",
+    "fetched_at": "2025-12-24T08:35:08.154643"
+  },
+  {
+    "id": "2512.20276v1",
+    "title": "ActionFlow: A Pipelined Action Acceleration for Vision Language Models on Edge",
+    "abstract": "Vision-Language-Action (VLA) models have emerged as a unified paradigm for robotic perception and control, enabling emergent generalization and long-horizon task execution. However, their deployment in dynamic, real-world environments is severely hin dered by high inference latency. While smooth robotic interaction requires control frequencies of 20 to 30 Hz, current VLA models typi cally operate at only 3-5 Hz on edge devices due to the memory bound nature of autoregressive decoding. Existing optimizations often require extensive retraining or compromise model accuracy. To bridge this gap, we introduce ActionFlow, a system-level inference framework tailored for resource-constrained edge plat forms. At the core of ActionFlow is a Cross-Request Pipelin ing strategy, a novel scheduler that redefines VLA inference as a macro-pipeline of micro-requests. The strategy intelligently batches memory-bound Decode phases with compute-bound Prefill phases across continuous time steps to maximize hardware utilization. Furthermore, to support this scheduling, we propose a Cross Request State Packed Forward operator and a Unified KV Ring Buffer, which fuse fragmented memory operations into efficient dense computations. Experimental results demonstrate that ActionFlow achieves a 2.55x improvement in FPS on the OpenVLA-7B model without retraining, enabling real-time dy namic manipulation on edge hardware. Our work is available at https://anonymous.4open.science/r/ActionFlow-1D47.",
+    "authors": [
+      "Yuntao Dai",
+      "Hang Gu",
+      "Teng Wang",
+      "Qianyu Cheng",
+      "Yifei Zheng",
+      "Zhiyong Qiu",
+      "Lei Gong",
+      "Wenqi Lou",
+      "Xuehai Zhou"
+    ],
+    "published": "2025-12-23",
+    "categories": [
+      "cs.AI",
+      "cs.RO"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.20276v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.20276v1",
+    "fetched_at": "2025-12-24T08:35:08.154674"
+  },
+  {
+    "id": "2512.20188v1",
+    "title": "Asynchronous Fast-Slow Vision-Language-Action Policies for Whole-Body Robotic Manipulation",
+    "abstract": "Most Vision-Language-Action (VLA) systems integrate a Vision-Language Model (VLM) for semantic reasoning with an action expert generating continuous action signals, yet both typically run at a single unified frequency. As a result, policy performance is constrained by the low inference speed of large VLMs. This mandatory synchronous execution severely limits control stability and real-time performance in whole-body robotic manipulation, which involves more joints, larger motion spaces, and dynamically changing views. We introduce a truly asynchronous Fast-Slow VLA framework (DuoCore-FS), organizing the system into a fast pathway for high-frequency action generation and a slow pathway for rich VLM reasoning. The system is characterized by two key features. First, a latent representation buffer bridges the slow and fast systems. It stores instruction semantics and action-reasoning representation aligned with the scene-instruction context, providing high-level guidance to the fast pathway. Second, a whole-body action tokenizer provides a compact, unified representation of whole-body actions. Importantly, the VLM and action expert are still jointly trained end-to-end, preserving unified policy learning while enabling asynchronous execution. DuoCore-FS supports a 3B-parameter VLM while achieving 30 Hz whole-body action-chunk generation, approximately three times as fast as prior VLA models with comparable model sizes. Real-world whole-body manipulation experiments demonstrate improved task success rates and significantly enhanced responsiveness compared to synchronous Fast-Slow VLA baselines. The implementation of DuoCore-FS, including training, inference, and deployment, is provided to commercial users by Astribot as part of the Astribot robotic platform.",
+    "authors": [
+      "Teqiang Zou",
+      "Hongliang Zeng",
+      "Yuxuan Nong",
+      "Yifan Li",
+      "Kehui Liu",
+      "Haotian Yang",
+      "Xinyang Ling",
+      "Xin Li",
+      "Lianyang Ma"
+    ],
+    "published": "2025-12-23",
+    "categories": [
+      "cs.RO",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.20188v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.20188v1",
+    "fetched_at": "2025-12-24T08:35:08.154705"
+  },
+  {
+    "id": "2512.19980v1",
+    "title": "Neuron-Guided Interpretation of Code LLMs: Where, Why, and How?",
+    "abstract": "Code language models excel on code intelligence tasks, yet their internal interpretability is underexplored. Existing neuron interpretability techniques from NLP are suboptimal for source code due to programming languages formal, hierarchical, and executable nature. We empirically investigate code LLMs at the neuron level, localizing language-specific neurons (selectively responsive to one language) and concept layers (feed-forward layers encoding language-agnostic code representations). We analyze Llama-3.1-8B and Qwen2.5-Coder-32B on multilingual inputs in C++, Java, Python, Go, and JavaScript, measuring neuron selectivity and layerwise contributions during generation. We find (1) neurons specialized for individual languages alongside a universal subset supporting general-purpose generation; and (2) lower layers mainly encode language-specific syntax, while middle layers capture semantic abstractions shared across languages, emerging as concept layers. We demonstrate utility on three tasks: neuron-guided fine-tuning for code generation, clone detection via concept-layer embeddings, and concept-layer-guided transfer for code summarization, each yielding consistent gains in multilingual settings.",
+    "authors": [
+      "Zhe Yin",
+      "Xiaodong Gu",
+      "Beijun Shen"
+    ],
+    "published": "2025-12-23",
+    "categories": [
+      "cs.SE",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.19980v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.19980v1",
+    "fetched_at": "2025-12-24T08:35:08.154725"
+  },
+  {
+    "id": "2512.19941v1",
+    "title": "Block-Recurrent Dynamics in Vision Transformers",
+    "abstract": "As Vision Transformers (ViTs) become standard vision backbones, a mechanistic account of their computational phenomenology is essential. Despite architectural cues that hint at dynamical structure, there is no settled framework that interprets Transformer depth as a well-characterized flow. In this work, we introduce the Block-Recurrent Hypothesis (BRH), arguing that trained ViTs admit a block-recurrent depth structure such that the computation of the original $L$ blocks can be accurately rewritten using only $k \\ll L$ distinct blocks applied recurrently. Across diverse ViTs, between-layer representational similarity matrices suggest few contiguous phases. To determine whether these phases reflect genuinely reusable computation, we train block-recurrent surrogates of pretrained ViTs: Recurrent Approximations to Phase-structured TransfORmers (Raptor). In small-scale, we demonstrate that stochastic depth and training promote recurrent structure and subsequently correlate with our ability to accurately fit Raptor. We then provide an empirical existence proof for BRH by training a Raptor model to recover $96\\%$ of DINOv2 ImageNet-1k linear probe accuracy in only 2 blocks at equivalent computational cost. Finally, we leverage our hypothesis to develop a program of Dynamical Interpretability. We find i) directional convergence into class-dependent angular basins with self-correcting trajectories under small perturbations, ii) token-specific dynamics, where cls executes sharp late reorientations while patch tokens exhibit strong late-stage coherence toward their mean direction, and iii) a collapse to low rank updates in late depth, consistent with convergence to low-dimensional attractors. Altogether, we find a compact recurrent program emerges along ViT depth, pointing to a low-complexity normative solution that enables these models to be studied through principled dynamical systems analysis.",
+    "authors": [
+      "Mozes Jacobs",
+      "Thomas Fel",
+      "Richard Hakim",
+      "Alessandra Brondetta",
+      "Demba Ba",
+      "T. Andy Keller"
+    ],
+    "published": "2025-12-23",
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.19941v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.19941v1",
+    "fetched_at": "2025-12-24T08:35:08.154754"
+  },
+  {
+    "id": "2512.19799v1",
+    "title": "PhysMaster: Building an Autonomous AI Physicist for Theoretical and Computational Physics Research",
+    "abstract": "Advances in LLMs have produced agents with knowledge and operational capabilities comparable to human scientists, suggesting potential to assist, accelerate, and automate research. However, existing studies mainly evaluate such systems on well-defined benchmarks or general tasks like literature retrieval, limiting their end-to-end problem-solving ability in open scientific scenarios. This is particularly true in physics, which is abstract, mathematically intensive, and requires integrating analytical reasoning with code-based computation. To address this, we propose PhysMaster, an LLM-based agent functioning as an autonomous theoretical and computational physicist. PhysMaster couples absract reasoning with numerical computation and leverages LANDAU, the Layered Academic Data Universe, which preserves retrieved literature, curated prior knowledge, and validated methodological traces, enhancing decision reliability and stability. It also employs an adaptive exploration strategy balancing efficiency and open-ended exploration, enabling robust performance in ultra-long-horizon tasks. We evaluate PhysMaster on problems from high-energy theory, condensed matter theory to astrophysics, including: (i) acceleration, compressing labor-intensive research from months to hours; (ii) automation, autonomously executing hypothesis-driven loops ; and (iii) autonomous discovery, independently exploring open problems.",
+    "authors": [
+      "Tingjia Miao",
+      "Jiawen Dai",
+      "Jingkun Liu",
+      "Jinxin Tan",
+      "Muhua Zhang",
+      "Wenkai Jin",
+      "Yuwen Du",
+      "Tian Jin",
+      "Xianghe Pang",
+      "Zexi Liu",
+      "Tu Guo",
+      "Zhengliang Zhang",
+      "Yunjie Huang",
+      "Shuo Chen",
+      "Rui Ye",
+      "Yuzhi Zhang",
+      "Linfeng Zhang",
+      "Kun Chen",
+      "Wei Wang",
+      "Weinan E",
+      "Siheng Chen"
+    ],
+    "published": "2025-12-22",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.19799v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.19799v1",
+    "fetched_at": "2025-12-24T08:35:08.154805"
+  },
+  {
+    "id": "2512.19562v1",
+    "title": "REALM: A Real-to-Sim Validated Benchmark for Generalization in Robotic Manipulation",
+    "abstract": "Vision-Language-Action (VLA) models empower robots to understand and execute tasks described by natural language instructions. However, a key challenge lies in their ability to generalize beyond the specific environments and conditions they were trained on, which is presently difficult and expensive to evaluate in the real-world. To address this gap, we present REALM, a new simulation environment and benchmark designed to evaluate the generalization capabilities of VLA models, with a specific emphasis on establishing a strong correlation between simulated and real-world performance through high-fidelity visuals and aligned robot control. Our environment offers a suite of 15 perturbation factors, 7 manipulation skills, and more than 3,500 objects. Finally, we establish two task sets that form our benchmark and evaluate the π_{0}, π_{0}-FAST, and GR00T N1.5 VLA models, showing that generalization and robustness remain an open challenge. More broadly, we also show that simulation gives us a valuable proxy for the real-world and allows us to systematically probe for and quantify the weaknesses and failure modes of VLAs. Project page: https://martin-sedlacek.com/realm",
+    "authors": [
+      "Martin Sedlacek",
+      "Pavlo Yefanov",
+      "Georgy Ponimatkin",
+      "Jai Bardhan",
+      "Simon Pilc",
+      "Mederic Fourmy",
+      "Evangelos Kazakos",
+      "Cees G. M. Snoek",
+      "Josef Sivic",
+      "Vladimir Petrik"
+    ],
+    "published": "2025-12-22",
+    "categories": [
+      "cs.RO",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.19562v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.19562v1",
+    "fetched_at": "2025-12-24T08:35:08.154838"
+  },
+  {
+    "id": "2512.19524v1",
+    "title": "Initialization of a Polyharmonic Cascade, Launch and Testing",
+    "abstract": "This paper concludes a series of studies on the polyharmonic cascade, a deep machine learning architecture theoretically derived from indifference principles and the theory of random functions. A universal initialization procedure is proposed, based on symmetric constellations in the form of hyperoctahedra with a central point. This initialization not only ensures stable training of cascades with tens and hundreds of layers (up to 500 layers without skip connections), but also radically simplifies the computations. Scalability and robustness are demonstrated on MNIST (98.3% without convolutions or augmentations), HIGGS (AUC approximately 0.885 on 11M examples), and Epsilon (AUC approximately 0.963 with 2000 features). All linear algebra is reduced to 2D operations and is efficiently executed on GPUs. A public repository and an archived snapshot are provided for full reproducibility.",
+    "authors": [
+      "Yuriy N. Bakhvalov"
+    ],
+    "published": "2025-12-22",
+    "categories": [
+      "cs.LG",
+      "math.NA"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.19524v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.19524v1",
+    "fetched_at": "2025-12-24T08:35:08.154855"
+  },
+  {
+    "id": "2512.19475v1",
+    "title": "A Large-Language-Model Framework for Automated Humanitarian Situation Reporting",
+    "abstract": "Timely and accurate situational reports are essential for humanitarian decision-making, yet current workflows remain largely manual, resource intensive, and inconsistent. We present a fully automated framework that uses large language models (LLMs) to transform heterogeneous humanitarian documents into structured and evidence-grounded reports. The system integrates semantic text clustering, automatic question generation, retrieval augmented answer extraction with citations, multi-level summarization, and executive summary generation, supported by internal evaluation metrics that emulate expert reasoning. We evaluated the framework across 13 humanitarian events, including natural disasters and conflicts, using more than 1,100 documents from verified sources such as ReliefWeb. The generated questions achieved 84.7 percent relevance, 84.0 percent importance, and 76.4 percent urgency. The extracted answers reached 86.3 percent relevance, with citation precision and recall both exceeding 76 percent. Agreement between human and LLM based evaluations surpassed an F1 score of 0.80. Comparative analysis shows that the proposed framework produces reports that are more structured, interpretable, and actionable than existing baselines. By combining LLM reasoning with transparent citation linking and multi-level evaluation, this study demonstrates that generative AI can autonomously produce accurate, verifiable, and operationally useful humanitarian situation reports.",
+    "authors": [
+      "Ivan Decostanzi",
+      "Yelena Mejova",
+      "Kyriaki Kalimeri"
+    ],
+    "published": "2025-12-22",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.19475v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.19475v1",
+    "fetched_at": "2025-12-24T08:35:08.154875"
+  },
+  {
+    "id": "2512.20403v1",
+    "title": "BRIDGE: Budget-aware Reasoning via Intermediate Distillation with Guided Examples",
+    "abstract": "Distilling knowledge from large proprietary models (e.g., GPT-4) to tiny deployable models (less than 1B parameters) faces a critical capacity-budget trap: the 1000x capacity gap between teachers and students prevents effective direct transfer, while API costs prohibit extensive data collection. We introduce BRIDGE (Budget-Aware Reasoning via Intermediate Distillation), a two-phase framework that resolves these constraints through strategic intermediation and budget asymmetry. In Phase 1, a mid-sized Teacher Assistant (TA; e.g., about 7B) learns from the black-box teacher on a strictly limited subset of data (e.g., 3-5%), selected via a zero-API-cost pipeline that balances entropic difficulty and semantic diversity using only local TA inference. In Phase 2, we exploit this asymmetry-teacher queries are expensive, whereas TA inference is free to amplify supervision: the refined TA generates synthetic rationales for the full dataset to train the tiny student. Crucially, we apply an instruction-tuning curriculum to establish behavioral alignment in the tiny student before transferring reasoning. Our theoretical analysis shows that BRIDGE yields tighter generalization bounds than direct distillation when data is abundant. Experiments across medical, legal, and financial benchmarks demonstrate consistent improvements: BRIDGE delivers student performance gains of 28-41%, closing the capability gap with proprietary teachers by 12-16% while using 10x fewer teacher queries. Notably, BRIDGE defies the conventional cost-performance frontier, surpassing direct distillation baselines that use 100% of the budget while consuming only 5% of the resources.",
+    "authors": [
+      "Xuan-An Le",
+      "Minh-Nam Tran",
+      "Son Nguyen"
+    ],
+    "published": "2025-12-23",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.20403v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.20403v1",
+    "fetched_at": "2025-12-24T08:36:00.566726"
+  }
+]
