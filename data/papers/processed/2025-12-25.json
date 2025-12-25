@@ -1,0 +1,485 @@
+[
+  {
+    "id": "2512.21149v1",
+    "title": "Equilibrium investment under dynamic preference uncertainty",
+    "abstract": "We study a continuous-time portfolio choice problem for an investor whose state-dependent preferences are determined by an exogenous factor that evolves as an Itô diffusion process. Since risk attitudes at the end of the investment horizon are uncertain, terminal wealth is evaluated under a set of utility functions corresponding to all possible future preference states. These utilities are first converted into certainty equivalents at their respective levels of terminal risk aversion and then (nonlinearly) aggregated over the conditional distribution of future states, yielding an inherently time-inconsistent optimization criterion. We approach this problem by developing a general equilibrium framework for such state-dependent preferences and characterizing subgame-perfect equilibrium investment policies through an extended Hamilton-Jacobi-Bellman system. This system gives rise to a coupled nonlinear partial integro-differential equation for the value functions associated with each state. We then specialize the model to a tractable constant relative risk aversion specification in which the preference factor follows an arithmetic Brownian motion. In this setting, the equilibrium policy admits a semi-explicit representation that decomposes into a standard myopic demand and a novel preference-hedging component that captures incentives to hedge against anticipated changes in risk aversion. Numerical experiments illustrate how features of the preference dynamics -- most notably the drift of the preference process and the correlation between preference shocks and asset returns -- jointly determine the sign and magnitude of the hedging demand and the evolution of the equilibrium risky investment over time.",
+    "authors": [
+      "Luca De Gennaro Aquino",
+      "Sascha Desmettre",
+      "Yevhen Havrylenko",
+      "Mogens Steffensen"
+    ],
+    "published": "2025-12-24",
+    "categories": [
+      "q-fin.MF",
+      "math.OC"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.21149v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.21149v1",
+    "fetched_at": "2025-12-25T08:33:18.869198",
+    "chinese_title": "动态偏好不确定性下的均衡投资",
+    "chinese_summary": "本文研究动态偏好不确定性下的连续时间投资组合选择问题，投资者终端财富基于未来所有可能偏好状态的效用函数集评估，采用一般均衡框架结合扩展HJB系统刻画子博弈完美均衡策略；在CRRA与偏好因子为算术布朗运动的设定下，均衡策略分解为标准近视需求与新的偏好对冲成分，数值实验揭示偏好动态特征的影响。",
+    "tags": [
+      "Portfolio Optimization",
+      "Behavioral Finance",
+      "Asset Pricing"
+    ],
+    "key_contributions": [
+      "构建动态偏好不确定性下的一般均衡框架，通过扩展HJB系统刻画子博弈完美均衡投资策略，推导耦合非线性偏积分微分方程",
+      "在CRRA与偏好因子为算术布朗运动的设定下，得到均衡策略半显式表示，分解出近视需求与新的偏好对冲成分"
+    ],
+    "processed_at": "2025-12-25T08:36:27.729436"
+  },
+  {
+    "id": "2512.21115v1",
+    "title": "Discrete-time asset price bubbles with short sales prohibitions under model uncertainty",
+    "abstract": "In this study, we investigate asset price bubbles in a discrete-time, discrete-state market under model uncertainty and short sales prohibitions. Building on a new fundamental theorem of asset pricing and a superhedging duality in this setting, we introduce a notion of bubble based on a novel definition of the fundamental price, and analyze their types and characterization. We show that two distinct types of bubbles arise, depending on the maturity structure of the asset. For assets with bounded maturity and no dividend payments, the $G$-supermartingale property of prices provides a necessary and sufficient condition for the existence of bubbles. In contrast, when maturity is unbounded, the infi-supermartingale property yields a necessary condition, while the $G$-supermartingale property remains sufficient. Moreover, there is no bubble under a strengthened no dominance condition. As applications, we examine price bubbles for several standard contingent claims. We show that put-call parity generally fails for fundamental prices, whereas it holds for market prices under no dominance assumption. Furthermore, we establish bounds for the fundamental and market prices of American call options in terms of the corresponding European call prices, adjusted by the associated bubble components.",
+    "authors": [
+      "Wenqing Zhang"
+    ],
+    "published": "2025-12-24",
+    "categories": [
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.21115v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.21115v1",
+    "fetched_at": "2025-12-25T08:33:18.869234",
+    "chinese_title": "模型不确定性下禁止卖空的离散时间资产价格泡沫",
+    "chinese_summary": "本研究在模型不确定性、禁止卖空的离散时间离散状态市场中，基于新的资产定价基本定理和超对冲对偶，定义新型基础价格并分析资产价格泡沫的类型与特征；区分有限/无限到期资产的泡沫存在条件，且证明强化无占优下无泡沫；应用于衍生品，揭示基础价格下看跌-看涨平价失效、市场价格在无占优下成立，建立美式期权价格与欧式期权的 bounds（含泡沫成分）。",
+    "tags": [
+      "Asset Pricing",
+      "Options",
+      "Risk Management"
+    ],
+    "key_contributions": [
+      "1. 在模型不确定性+禁止卖空的离散市场框架下，结合新定价定理与超对冲对偶，定义基础价格并明确有限/无限到期资产的泡沫存在条件；",
+      "2. 应用于衍生品，揭示基础价格下看跌-看涨平价失效、市场价格无占优下成立，建立美式期权价格与欧式期权的 bounds（含泡沫成分）。"
+    ],
+    "processed_at": "2025-12-25T08:36:42.178023"
+  },
+  {
+    "id": "2512.21092v1",
+    "title": "Portfolio Optimization for Index Tracking with Constraints on Downside Risk and Carbon Footprint",
+    "abstract": "Historically, financial risk management has mostly addressed risk factors that arise from the financial environment. Climate risks present a novel and significant challenge for companies and financial markets. Investors aiming for avoidance of firms with high carbon footprints require suitable risk measures and portfolio management strategies. This paper presents the construction of decarbonized indices for tracking the S \\& P-500 index of the U.S. stock market, as well as the Indian index NIFTY-50, employing two distinct methodologies and study their performances. These decarbonized indices optimize the portfolio weights by minimizing the mean-VaR and mean-ES and seek to reduce the risk of significant financial losses while still pursuing decarbonization goals. Investors can thereby find a balance between financial performance and environmental responsibilities. Ensuring transparency in the development of these indices will encourage the excluded and under-weighted asset companies to lower their carbon footprints through appropriate action plans. For long-term passive investors, these indices may present a more favourable option than green stocks.",
+    "authors": [
+      "Suparna Biswas",
+      "Rituparna Sen"
+    ],
+    "published": "2025-12-24",
+    "categories": [
+      "q-fin.RM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.21092v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.21092v1",
+    "fetched_at": "2025-12-25T08:33:18.869258",
+    "chinese_title": "带下行风险约束和碳足迹约束的指数跟踪投资组合优化",
+    "chinese_summary": "本文针对美国标普500和印度NIFTY-50指数，采用两种方法构建低碳指数，通过最小化均值VaR和均值ES优化投资组合权重，在控制下行风险的同时实现脱碳目标，帮助投资者平衡财务表现与环境责任，且指数构建的透明度可激励企业减排。",
+    "tags": [
+      "Portfolio Optimization",
+      "Risk Management",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "针对标普500和NIFTY-50指数提出两种低碳指数构建方法，通过均值VaR/ES优化权重平衡财务与环境目标",
+      "指数构建透明度可激励企业减排，为长期被动投资者提供优于绿色股票的选择"
+    ],
+    "processed_at": "2025-12-25T08:36:59.305291"
+  },
+  {
+    "id": "2512.20850v1",
+    "title": "Implicit Numerical Scheme for the Hamilton-Jacobi-Bellman Quasi-Variational Inequality in the Optimal Market-Making Problem with Alpha Signal",
+    "abstract": "We address the problem of combined stochastic and impulse control for a market maker operating in a limit order book. The problem is formulated as a Hamilton-Jacobi-Bellman quasi-variational inequality (HJBQVI). We propose an implicit time-discretization scheme coupled with a policy iteration algorithm. This approach removes time-step restrictions typical of explicit methods and ensures unconditional stability. Convergence to the unique viscosity solution is established by verifying monotonicity, stability, and consistency conditions and applying the comparison principle.",
+    "authors": [
+      "Alexey Meteykin"
+    ],
+    "published": "2025-12-24",
+    "categories": [
+      "q-fin.MF",
+      "math.NA"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.20850v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.20850v1",
+    "fetched_at": "2025-12-25T08:33:18.869277",
+    "chinese_title": "带Alpha信号的最优做市问题中Hamilton-Jacobi-Bellman拟变分不等式的隐式数值格式",
+    "chinese_summary": "论文针对带Alpha信号的最优做市问题，将其建模为Hamilton-Jacobi-Bellman拟变分不等式（HJBQVI），提出隐式时间离散格式结合策略迭代算法，消除显式方法的时间步限制并保证无条件稳定，且通过验证相关条件证明方法收敛到唯一粘性解。",
+    "tags": [
+      "Market Making",
+      "Market Microstructure",
+      "Algorithmic Trading"
+    ],
+    "key_contributions": [
+      "通过验证单调性、稳定性、一致性条件及应用比较原理，证明所提方法收敛到HJBQVI的唯一粘性解"
+    ],
+    "processed_at": "2025-12-25T08:37:08.896009"
+  },
+  {
+    "id": "2512.19838v2",
+    "title": "Equilibrium Liquidity and Risk Offsetting in Decentralised Markets",
+    "abstract": "We develop an economic model of decentralised exchanges (DEXs) in which risk-averse liquidity providers (LPs) manage risk in a centralised exchange (CEX) based on preferences, information, and trading costs. Rational, risk-averse LPs anticipate the frictions associated with replication and manage risk primarily by reducing the reserves supplied to the DEX. Greater aversion reduces the equilibrium viability of liquidity provision, resulting in thinner markets and lower trading volumes. Greater uninformed demand supports deeper liquidity, whereas higher fundamental price volatility erodes it. Finally, while moderate anticipated price changes can improve LP performance, larger changes require more intensive trading in the CEX, generate higher replication costs, and induce LPs to reduce liquidity supply.",
+    "authors": [
+      "Fayçal Drissi",
+      "Xuchen Wu",
+      "Sebastian Jaimungal"
+    ],
+    "published": "2025-12-22",
+    "categories": [
+      "q-fin.TR",
+      "q-fin.GN",
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.19838v2",
+    "arxiv_url": "https://arxiv.org/abs/2512.19838v2",
+    "fetched_at": "2025-12-25T08:33:18.869434",
+    "chinese_title": "去中心化市场中的均衡流动性与风险对冲",
+    "chinese_summary": "论文构建了去中心化交易所（DEX）的经济模型，刻画风险厌恶的流动性提供者（LP）基于偏好、信息和交易成本在中心化交易所（CEX）管理风险的行为；分析发现风险厌恶程度、非知情需求、基础价格波动等因素对DEX均衡流动性及LP决策的影响，以及预期价格变化对LP表现和流动性供给的作用机制。",
+    "tags": [
+      "Market Microstructure",
+      "Risk Management",
+      "Volatility",
+      "Market Making"
+    ],
+    "key_contributions": [
+      "构建了结合CEX风险对冲的DEX均衡流动性模型，纳入风险厌恶LP的决策约束",
+      "揭示了风险厌恶、非知情需求、价格波动等因素对DEX流动性和LP行为的影响机制"
+    ],
+    "processed_at": "2025-12-25T08:37:23.355998"
+  },
+  {
+    "id": "2512.21243v1",
+    "title": "LookPlanGraph: Embodied Instruction Following Method with VLM Graph Augmentation",
+    "abstract": "Methods that use Large Language Models (LLM) as planners for embodied instruction following tasks have become widespread. To successfully complete tasks, the LLM must be grounded in the environment in which the robot operates. One solution is to use a scene graph that contains all the necessary information. Modern methods rely on prebuilt scene graphs and assume that all task-relevant information is available at the start of planning. However, these approaches do not account for changes in the environment that may occur between the graph construction and the task execution. We propose LookPlanGraph - a method that leverages a scene graph composed of static assets and object priors. During plan execution, LookPlanGraph continuously updates the graph with relevant objects, either by verifying existing priors or discovering new entities. This is achieved by processing the agents egocentric camera view using a Vision Language Model. We conducted experiments with changed object positions VirtualHome and OmniGibson simulated environments, demonstrating that LookPlanGraph outperforms methods based on predefined static scene graphs. To demonstrate the practical applicability of our approach, we also conducted experiments in a real-world setting. Additionally, we introduce the GraSIF (Graph Scenes for Instruction Following) dataset with automated validation framework, comprising 514 tasks drawn from SayPlan Office, BEHAVIOR-1K, and VirtualHome RobotHow. Project page available at https://lookplangraph.github.io .",
+    "authors": [
+      "Anatoly O. Onishchenko",
+      "Alexey K. Kovalev",
+      "Aleksandr I. Panov"
+    ],
+    "published": "2025-12-24",
+    "categories": [
+      "cs.RO",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.21243v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.21243v1",
+    "fetched_at": "2025-12-25T08:34:01.304478",
+    "chinese_title": "LookPlanGraph：基于视觉语言模型图增强的具身指令遵循方法",
+    "chinese_summary": "现有基于大语言模型（LLM）的具身指令遵循方法依赖预构建场景图，忽略执行中环境变化；论文提出LookPlanGraph，利用静态资产与对象先验构建场景图，执行时通过视觉语言模型（VLM）处理第一人称视角持续更新场景图（验证先验或发现新实体）；实验在模拟环境（VirtualHome等）和真实场景验证其优于静态场景图方法，且引入GraSIF数据集及自动验证框架。",
+    "tags": [
+      "LLM",
+      "Deep Learning",
+      "Graph Neural Network"
+    ],
+    "key_contributions": [
+      "提出LookPlanGraph方法，通过VLM实时更新场景图以适应环境动态变化，解决传统静态场景图的局限性；",
+      "引入GraSIF数据集及自动验证框架，包含多来源的514个具身指令任务，支持方法验证。"
+    ],
+    "processed_at": "2025-12-25T08:37:40.389597"
+  },
+  {
+    "id": "2512.21220v1",
+    "title": "RoboSafe: Safeguarding Embodied Agents via Executable Safety Logic",
+    "abstract": "Embodied agents powered by vision-language models (VLMs) are increasingly capable of executing complex real-world tasks, yet they remain vulnerable to hazardous instructions that may trigger unsafe behaviors. Runtime safety guardrails, which intercept hazardous actions during task execution, offer a promising solution due to their flexibility. However, existing defenses often rely on static rule filters or prompt-level control, which struggle to address implicit risks arising in dynamic, temporally dependent, and context-rich environments. To address this, we propose RoboSafe, a hybrid reasoning runtime safeguard for embodied agents through executable predicate-based safety logic. RoboSafe integrates two complementary reasoning processes on a Hybrid Long-Short Safety Memory. We first propose a Backward Reflective Reasoning module that continuously revisits recent trajectories in short-term memory to infer temporal safety predicates and proactively triggers replanning when violations are detected. We then propose a Forward Predictive Reasoning module that anticipates upcoming risks by generating context-aware safety predicates from the long-term safety memory and the agent's multimodal observations. Together, these components form an adaptive, verifiable safety logic that is both interpretable and executable as code. Extensive experiments across multiple agents demonstrate that RoboSafe substantially reduces hazardous actions (-36.8% risk occurrence) compared with leading baselines, while maintaining near-original task performance. Real-world evaluations on physical robotic arms further confirm its practicality. Code will be released upon acceptance.",
+    "authors": [
+      "Le Wang",
+      "Zonghao Ying",
+      "Xiao Yang",
+      "Quanchen Zou",
+      "Zhenfei Yin",
+      "Tianlin Li",
+      "Jian Yang",
+      "Yaodong Yang",
+      "Aishan Liu",
+      "Xianglong Liu"
+    ],
+    "published": "2025-12-24",
+    "categories": [
+      "cs.AI",
+      "cs.CV",
+      "cs.RO"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.21220v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.21220v1",
+    "fetched_at": "2025-12-25T08:34:01.304524",
+    "chinese_title": "RoboSafe：通过可执行安全逻辑保护具身智能体",
+    "chinese_summary": "针对具身智能体易受危险指令触发不安全行为的问题，提出RoboSafe混合推理运行时安全防护框架；该框架基于混合长短时安全记忆，整合反向反思推理（回顾近期轨迹检测安全违规并触发重规划）与正向预测推理（从长期记忆和多模态观测预判未来风险），构建可解释可执行的自适应验证安全逻辑，实验显示其显著降低危险行为发生率（-36.8%）。",
+    "tags": [
+      "LLM",
+      "Reinforcement Learning",
+      "Risk Management",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出基于混合长短时安全记忆的RoboSafe框架，整合反向反思推理与正向预测推理，实现具身智能体运行时安全防护",
+      "构建可解释可执行的自适应验证安全逻辑，显著降低具身智能体危险行为发生率（-36.8%）"
+    ],
+    "processed_at": "2025-12-25T08:38:03.122541"
+  },
+  {
+    "id": "2512.21048v1",
+    "title": "zkFL-Health: Blockchain-Enabled Zero-Knowledge Federated Learning for Medical AI Privacy",
+    "abstract": "Healthcare AI needs large, diverse datasets, yet strict privacy and governance constraints prevent raw data sharing across institutions. Federated learning (FL) mitigates this by training where data reside and exchanging only model updates, but practical deployments still face two core risks: (1) privacy leakage via gradients or updates (membership inference, gradient inversion) and (2) trust in the aggregator, a single point of failure that can drop, alter, or inject contributions undetected. We present zkFL-Health, an architecture that combines FL with zero-knowledge proofs (ZKPs) and Trusted Execution Environments (TEEs) to deliver privacy-preserving, verifiably correct collaborative training for medical AI. Clients locally train and commit their updates; the aggregator operates within a TEE to compute the global update and produces a succinct ZK proof (via Halo2/Nova) that it used exactly the committed inputs and the correct aggregation rule, without revealing any client update to the host. Verifier nodes validate the proof and record cryptographic commitments on-chain, providing an immutable audit trail and removing the need to trust any single party. We outline system and threat models tailored to healthcare, the zkFL-Health protocol, security/privacy guarantees, and a performance evaluation plan spanning accuracy, privacy risk, latency, and cost. This framework enables multi-institutional medical AI with strong confidentiality, integrity, and auditability, key properties for clinical adoption and regulatory compliance.",
+    "authors": [
+      "Savvy Sharma",
+      "George Petrovic",
+      "Sarthak Kaushik"
+    ],
+    "published": "2025-12-24",
+    "categories": [
+      "cs.CR",
+      "cs.DC",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.21048v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.21048v1",
+    "fetched_at": "2025-12-25T08:34:01.304547",
+    "chinese_title": "zkFL-Health：基于区块链的零知识联邦学习医疗AI隐私保护",
+    "chinese_summary": "针对医疗AI多机构协作中数据共享受限、联邦学习存在梯度泄露和聚合器单点信任风险的问题，论文提出zkFL-Health架构，结合联邦学习、零知识证明（ZKPs）与可信执行环境（TEEs），实现隐私保护且可验证的协作训练，通过链上审计消除单点信任。",
+    "tags": [
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出zkFL-Health架构，融合联邦学习、零知识证明与可信执行环境，解决医疗AI多机构协作的隐私泄露及聚合器单点信任问题",
+      "实现聚合过程可验证性，通过链上记录提供不可篡改审计 trail，保障训练的机密性、完整性与可审计性"
+    ],
+    "processed_at": "2025-12-25T08:38:19.120049"
+  },
+  {
+    "id": "2512.20996v1",
+    "title": "TrafficSimAgent: A Hierarchical Agent Framework for Autonomous Traffic Simulation with MCP Control",
+    "abstract": "Traffic simulation is important for transportation optimization and policy making. While existing simulators such as SUMO and MATSim offer fully-featured platforms and utilities, users without too much knowledge about these platforms often face significant challenges when conducting experiments from scratch and applying them to their daily work. To solve this challenge, we propose TrafficSimAgent, an LLM-based agent framework that serves as an expert in experiment design and decision optimization for general-purpose traffic simulation tasks. The framework facilitates execution through cross-level collaboration among expert agents: high-level expert agents comprehend natural language instructions with high flexibility, plan the overall experiment workflow, and invoke corresponding MCP-compatible tools on demand; meanwhile, low-level expert agents select optimal action plans for fundamental elements based on real-time traffic conditions. Extensive experiments across multiple scenarios show that TrafficSimAgent effectively executes simulations under various conditions and consistently produces reasonable outcomes even when user instructions are ambiguous. Besides, the carefully designed expert-level autonomous decision-driven optimization in TrafficSimAgent yields superior performance when compared with other systems and SOTA LLM based methods.",
+    "authors": [
+      "Yuwei Du",
+      "Jun Zhang",
+      "Jie Feng",
+      "Zhicheng Liu",
+      "Jian Yuan",
+      "Yong Li"
+    ],
+    "published": "2025-12-24",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.20996v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.20996v1",
+    "fetched_at": "2025-12-25T08:34:01.304574",
+    "chinese_title": "TrafficSimAgent：基于MCP控制的自主交通仿真分层Agent框架",
+    "chinese_summary": "针对现有交通仿真平台对非专业用户友好性不足的问题，论文提出基于LLM的分层Agent框架TrafficSimAgent，高层Agent理解自然语言指令并规划实验流程，低层Agent根据实时交通状况选最优行动；实验表明该框架能处理模糊指令，且优化性能优于其他系统和SOTA LLM方法。",
+    "tags": [
+      "LLM",
+      "Reinforcement Learning"
+    ],
+    "key_contributions": [
+      "提出TrafficSimAgent分层Agent框架，通过LLM驱动的跨层协作，支持非专业用户快速开展交通仿真实验，无需深入了解现有平台",
+      "设计专家级自主决策优化机制，在多场景下性能优于其他系统和SOTA LLM方法，且能应对模糊用户指令"
+    ],
+    "processed_at": "2025-12-25T08:38:37.990700"
+  },
+  {
+    "id": "2512.20985v1",
+    "title": "A Blockchain-Monitored Agentic AI Architecture for Trusted Perception-Reasoning-Action Pipelines",
+    "abstract": "The application of agentic AI systems in autonomous decision-making is growing in the areas of healthcare, smart cities, digital forensics, and supply chain management. Even though these systems are flexible and offer real-time reasoning, they also raise concerns of trust and oversight, and integrity of the information and activities upon which they are founded. The paper suggests a single architecture model comprising of LangChain-based multi-agent system with a permissioned blockchain to guarantee constant monitoring, policy enforcement, and immutable auditability of agentic action. The framework relates the perception conceptualization-action cycle to a blockchain layer of governance that verifies the inputs, evaluates recommended actions, and documents the outcomes of the execution. A Hyperledger Fabric-based system, action executors MCP-integrated, and LangChain agent are introduced and experiments of smart inventory management, traffic-signal control, and healthcare monitoring are done. The results suggest that blockchain-security verification is efficient in preventing unauthorized practices, offers traceability throughout the whole decision-making process, and maintains operational latency within reasonable ranges. The suggested framework provides a universal system of implementing high-impact agentic AI applications that are autonomous yet responsible.",
+    "authors": [
+      "Salman Jan",
+      "Hassan Ali Razzaqi",
+      "Ali Akarma",
+      "Mohammad Riyaz Belgaum"
+    ],
+    "published": "2025-12-24",
+    "categories": [
+      "cs.AI",
+      "cs.MA"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.20985v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.20985v1",
+    "fetched_at": "2025-12-25T08:34:01.304597",
+    "chinese_title": "面向可信感知-推理-行动流程的区块链监控智能体AI架构",
+    "chinese_summary": "论文针对智能体AI系统的信任与监管不足问题，提出基于LangChain多智能体系统与许可区块链的架构，通过区块链治理层验证输入、评估行动并记录结果，实现感知-推理-行动流程的可信监控；实验验证该架构可防止未授权操作、保障全流程可追溯且延迟合理，为自主且负责任的智能体AI应用提供通用框架。",
+    "tags": [
+      "LLM",
+      "Financial Agent",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出融合LangChain多智能体与许可区块链的架构，将感知-概念化-行动循环与区块链治理层关联，实现智能体行动的持续监控、策略执行与不可篡改审计",
+      "实验验证该架构可有效防止未授权操作、保障决策全流程可追溯，且延迟处于合理范围，为高影响智能体AI应用提供自主且负责任的通用框架"
+    ],
+    "processed_at": "2025-12-25T08:39:01.017523"
+  },
+  {
+    "id": "2512.20957v1",
+    "title": "One Tool Is Enough: Reinforcement Learning for Repository-Level LLM Agents",
+    "abstract": "Locating the files and functions requiring modification in large open-source software (OSS) repositories is challenging due to their scale and structural complexity. Existing large language model (LLM)-based methods typically treat this as a repository-level retrieval task and rely on multiple auxiliary tools, which overlook code execution logic and complicate model control. We propose RepoNavigator, an LLM agent equipped with a single execution-aware tool-jumping to the definition of an invoked symbol. This unified design reflects the actual flow of code execution while simplifying tool manipulation. RepoNavigator is trained end-to-end via Reinforcement Learning (RL) directly from a pretrained model, without any closed-source distillation. Experiments demonstrate that RL-trained RepoNavigator achieves state-of-the-art performance, with the 7B model outperforming 14B baselines, the 14B model surpassing 32B competitors, and even the 32B model exceeding closed-source models such as Claude-3.7. These results confirm that integrating a single, structurally grounded tool with RL training provides an efficient and scalable solution for repository-level issue localization.",
+    "authors": [
+      "Zhaoxi Zhang",
+      "Yitong Duan",
+      "Yanzhi Zhang",
+      "Yiming Xu",
+      "Jiyan He",
+      "Yunfang Wu"
+    ],
+    "published": "2025-12-24",
+    "categories": [
+      "cs.SE",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.20957v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.20957v1",
+    "fetched_at": "2025-12-25T08:34:01.304629",
+    "chinese_title": "一工具足矣：面向仓库级LLM智能体的强化学习方法",
+    "chinese_summary": "现有基于LLM的代码仓库问题定位方法依赖多辅助工具且忽略执行逻辑，本文提出RepoNavigator，用强化学习训练仅配备单一执行感知工具（跳转符号定义）的LLM智能体，实验显示7B模型超14B基线、32B模型超闭源模型，证明单工具+RL的高效可扩展方案。",
+    "tags": [
+      "LLM",
+      "Reinforcement Learning",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出RepoNavigator，仅用单一执行感知工具（符号定义跳转）的LLM智能体，简化工具操作并反映代码执行流",
+      "端到端强化学习训练无闭源蒸馏，小模型超更大基线、32B模型超闭源模型，验证方案高效可扩展"
+    ],
+    "processed_at": "2025-12-25T08:39:09.853809"
+  },
+  {
+    "id": "2512.20831v1",
+    "title": "Context-Sensitive Abstractions for Reinforcement Learning with Parameterized Actions",
+    "abstract": "Real-world sequential decision-making often involves parameterized action spaces that require both, decisions regarding discrete actions and decisions about continuous action parameters governing how an action is executed. Existing approaches exhibit severe limitations in this setting -- planning methods demand hand-crafted action models, and standard reinforcement learning (RL) algorithms are designed for either discrete or continuous actions but not both, and the few RL methods that handle parameterized actions typically rely on domain-specific engineering and fail to exploit the latent structure of these spaces. This paper extends the scope of RL algorithms to long-horizon, sparse-reward settings with parameterized actions by enabling agents to autonomously learn both state and action abstractions online. We introduce algorithms that progressively refine these abstractions during learning, increasing fine-grained detail in the critical regions of the state-action space where greater resolution improves performance. Across several continuous-state, parameterized-action domains, our abstraction-driven approach enables TD($λ$) to achieve markedly higher sample efficiency than state-of-the-art baselines.",
+    "authors": [
+      "Rashmeet Kaur Nayyar",
+      "Naman Shah",
+      "Siddharth Srivastava"
+    ],
+    "published": "2025-12-23",
+    "categories": [
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.20831v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.20831v1",
+    "fetched_at": "2025-12-25T08:34:01.304651",
+    "chinese_title": "面向参数化动作的强化学习的上下文敏感抽象方法",
+    "chinese_summary": "现有强化学习（RL）在同时包含离散动作选择与连续参数决策的参数化动作空间中存在适配性差、依赖领域工程等局限；本文提出智能体可在线自主学习状态与动作抽象并逐步细化关键区域细节的方法，扩展了RL在长horizon稀疏奖励场景的适用范围；实验表明该抽象驱动方法使TD(λ)的样本效率显著高于SOTA基线。",
+    "tags": [
+      "Reinforcement Learning",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出智能体在线自主学习状态与动作抽象的方法，解决参数化动作空间（离散动作+连续参数）的RL适配问题",
+      "算法可逐步细化关键状态-动作区域的抽象细节，在长horizon稀疏奖励场景下大幅提升TD(λ)的样本效率"
+    ],
+    "processed_at": "2025-12-25T08:39:35.440569"
+  },
+  {
+    "id": "2512.20755v1",
+    "title": "Bridging Efficiency and Safety: Formal Verification of Neural Networks with Early Exits",
+    "abstract": "Ensuring the safety and efficiency of AI systems is a central goal of modern research. Formal verification provides guarantees of neural network robustness, while early exits improve inference efficiency by enabling intermediate predictions. Yet verifying networks with early exits introduces new challenges due to their conditional execution paths. In this work, we define a robustness property tailored to early exit architectures and show how off-the-shelf solvers can be used to assess it. We present a baseline algorithm, enhanced with an early stopping strategy and heuristic optimizations that maintain soundness and completeness. Experiments on multiple benchmarks validate our framework's effectiveness and demonstrate the performance gains of the improved algorithm. Alongside the natural inference acceleration provided by early exits, we show that they also enhance verifiability, enabling more queries to be solved in less time compared to standard networks. Together with a robustness analysis, we show how these metrics can help users navigate the inherent trade-off between accuracy and efficiency.",
+    "authors": [
+      "Yizhak Yisrael Elboher",
+      "Avraham Raviv",
+      "Amihay Elboher",
+      "Zhouxing Shi",
+      "Omri Azencot",
+      "Hillel Kugler",
+      "Guy Katz"
+    ],
+    "published": "2025-12-23",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.20755v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.20755v1",
+    "fetched_at": "2025-12-25T08:34:01.304679",
+    "chinese_title": "兼顾效率与安全：带早期退出的神经网络形式化验证",
+    "chinese_summary": "该论文针对带早期退出神经网络的形式化验证挑战，定义适配其架构的鲁棒性属性，提出结合早停策略与启发式优化的基线算法（保持正确性与完整性），利用现成求解器实现验证；实验表明框架有效，且早期退出可加速推理并提升可验证性，助力用户权衡准确率与效率。",
+    "tags": [
+      "Deep Learning",
+      "Benchmark",
+      "Risk Management"
+    ],
+    "key_contributions": [
+      "定义适配带早期退出架构的鲁棒性属性，提出结合早停与启发式优化的基线验证算法（保持正确性与完整性），支持现成求解器评估",
+      "实验验证框架有效性，发现早期退出可同时加速推理与提升可验证性，助力准确率与效率的权衡"
+    ],
+    "processed_at": "2025-12-25T08:39:54.062454"
+  },
+  {
+    "id": "2512.20745v1",
+    "title": "AgentMath: Empowering Mathematical Reasoning for Large Language Models via Tool-Augmented Agent",
+    "abstract": "Large Reasoning Models (LRMs) like o3 and DeepSeek-R1 have achieved remarkable progress in natural language reasoning with long chain-of-thought. However, they remain computationally inefficient and struggle with accuracy when solving problems requiring complex mathematical operations. In this work, we present AgentMath, an agent framework that seamlessly integrates language models' reasoning capabilities with code interpreters' computational precision to efficiently tackle complex mathematical problems. Our approach introduces three key innovations: (1) An automated method that converts natural language chain-of-thought into structured tool-augmented trajectories, generating high-quality supervised fine-tuning (SFT) data to alleviate data scarcity; (2) A novel agentic reinforcement learning (RL) paradigm that dynamically interleaves natural language generation with real-time code execution. This enables models to autonomously learn optimal tool-use strategies through multi-round interactive feedback, while fostering emergent capabilities in code refinement and error correction; (3) An efficient training system incorporating innovative techniques, including request-level asynchronous rollout scheduling, agentic partial rollout, and prefix-aware weighted load balancing, achieving 4-5x speedup and making efficient RL training feasible on ultra-long sequences with scenarios with massive tool calls.Extensive evaluations show that AgentMath achieves state-of-the-art performance on challenging mathematical competition benchmarks including AIME24, AIME25, and HMMT25. Specifically, AgentMath-30B-A3B attains 90.6%, 86.4%, and 73.8% accuracy respectively, achieving advanced capabilities.These results validate the effectiveness of our approach and pave the way for building more sophisticated and scalable mathematical reasoning agents.",
+    "authors": [
+      "Haipeng Luo",
+      "Huawen Feng",
+      "Qingfeng Sun",
+      "Can Xu",
+      "Kai Zheng",
+      "Yufei Wang",
+      "Tao Yang",
+      "Han Hu",
+      "Yansong Tang",
+      "Di Wang"
+    ],
+    "published": "2025-12-23",
+    "categories": [
+      "cs.AI",
+      "cs.CL",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.20745v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.20745v1",
+    "fetched_at": "2025-12-25T08:34:01.304713",
+    "chinese_title": "AgentMath：通过工具增强型智能体提升大语言模型的数学推理能力",
+    "chinese_summary": "本文提出AgentMath框架，整合大语言模型推理能力与代码解释器计算精度以高效解决复杂数学问题；核心创新包括自动生成工具增强轨迹的高质量监督微调数据、动态交织语言生成与代码执行的智能体强化学习范式，及实现4-5倍加速的高效训练系统，评估中取得当前最优性能。",
+    "tags": [
+      "LLM",
+      "Reinforcement Learning",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出自动将自然语言思维链转化为结构化工具增强轨迹的方法，生成高质量监督微调（SFT）数据缓解工具增强训练的数据稀缺问题",
+      "提出智能体强化学习范式，动态交织自然语言生成与实时代码执行，使模型自主学习最优工具使用策略并具备代码优化与错误修正能力"
+    ],
+    "processed_at": "2025-12-25T08:40:14.525061"
+  },
+  {
+    "id": "2512.20605v2",
+    "title": "Emergent temporal abstractions in autoregressive models enable hierarchical reinforcement learning",
+    "abstract": "Large-scale autoregressive models pretrained on next-token prediction and finetuned with reinforcement learning (RL) have achieved unprecedented success on many problem domains. During RL, these models explore by generating new outputs, one token at a time. However, sampling actions token-by-token can result in highly inefficient learning, particularly when rewards are sparse. Here, we show that it is possible to overcome this problem by acting and exploring within the internal representations of an autoregressive model. Specifically, to discover temporally-abstract actions, we introduce a higher-order, non-causal sequence model whose outputs control the residual stream activations of a base autoregressive model. On grid world and MuJoCo-based tasks with hierarchical structure, we find that the higher-order model learns to compress long activation sequence chunks onto internal controllers. Critically, each controller executes a sequence of behaviorally meaningful actions that unfold over long timescales and are accompanied with a learned termination condition, such that composing multiple controllers over time leads to efficient exploration on novel tasks. We show that direct internal controller reinforcement, a process we term \"internal RL\", enables learning from sparse rewards in cases where standard RL finetuning fails. Our results demonstrate the benefits of latent action generation and reinforcement in autoregressive models, suggesting internal RL as a promising avenue for realizing hierarchical RL within foundation models.",
+    "authors": [
+      "Seijin Kobayashi",
+      "Yanick Schimpf",
+      "Maximilian Schlegel",
+      "Angelika Steger",
+      "Maciej Wolczyk",
+      "Johannes von Oswald",
+      "Nino Scherrer",
+      "Kaitlin Maile",
+      "Guillaume Lajoie",
+      "Blake A. Richards",
+      "Rif A. Saurous",
+      "James Manyika",
+      "Blaise Agüera y Arcas",
+      "Alexander Meulemans",
+      "João Sacramento"
+    ],
+    "published": "2025-12-23",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.20605v2",
+    "arxiv_url": "https://arxiv.org/abs/2512.20605v2",
+    "fetched_at": "2025-12-25T08:34:01.304754",
+    "chinese_title": "自回归模型中的涌现时间抽象使分层强化学习成为可能",
+    "chinese_summary": "该论文针对自回归模型强化学习（RL）微调时token-by-token采样效率低、稀疏奖励下学习困难的问题，提出高阶非因果序列模型控制基础自回归模型的残差流激活，以学习时间抽象动作（将长激活序列压缩到带终止条件的内部控制器）；并引入“内部RL”（直接强化内部控制器），在标准RL失败的稀疏奖励场景下实现有效学习，提升分层任务的探索效率。",
+    "tags": [
+      "Reinforcement Learning",
+      "Deep Learning",
+      "LLM",
+      "Transformer"
+    ],
+    "key_contributions": [
+      "提出高阶非因果序列模型控制基础自回归模型残差流激活，学习带终止条件的时间抽象动作（压缩长序列到内部控制器）",
+      "引入内部强化学习，解决token-by-token采样效率低和稀疏奖励问题，在标准RL失败场景下有效学习"
+    ],
+    "processed_at": "2025-12-25T08:40:30.935887"
+  }
+]
