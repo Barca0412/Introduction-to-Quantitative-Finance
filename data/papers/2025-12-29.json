@@ -1,0 +1,585 @@
+[
+  {
+    "id": "2512.22109v1",
+    "title": "Index-Tracking Portfolio Construction and Rebalancing under Bayesian Sparse Modelling and Uncertainty Quantification",
+    "abstract": "We study the construction and rebalancing of sparse index-tracking portfolios from an operational research perspective, with explicit emphasis on uncertainty quantification and implementability. The decision variables are portfolio weights constrained to sum to one; the aims are to track a reference index closely while controlling the number of names and the turnover induced by rebalancing. We cast index tracking as a high-dimensional linear regression of index returns on constituent returns, and employ a sparsity-inducing Laplace prior on the weights. A single global shrinkage parameter controls the trade-off between tracking error and sparsity, and is calibrated by an empirical-Bayes stochastic approximation scheme. Conditional on this calibration, we approximate the posterior distribution of the portfolio weights using proximal Langevin-type Markov chain Monte Carlo algorithms tailored to the budget constraint. This yields posterior uncertainty on tracking error, portfolio composition and prospective rebalancing moves. Building on these posterior samples, we propose rules for rebalancing that gate trades through magnitude-based thresholds and posterior activation probabilities, thereby trading off expected tracking error against turnover and portfolio size. A case study on tracking the S&P~500 index is carried out to showcase how our tools shape the decision process from portfolio construction to rebalancing.",
+    "authors": [
+      "Dimitrios Roxanas"
+    ],
+    "published": "2025-12-26",
+    "categories": [
+      "q-fin.CP",
+      "math.OC",
+      "q-fin.PM",
+      "stat.AP",
+      "stat.CO"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.22109v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.22109v1",
+    "fetched_at": "2025-12-29T08:36:34.606108"
+  },
+  {
+    "id": "2512.22001v1",
+    "title": "Variational Quantum Eigensolver for Real-World Finance: Scalable Solutions for Dynamic Portfolio Optimization Problems",
+    "abstract": "We present a scalable, hardware-aware methodology for extending the Variational Quantum Eigensolver (VQE) to large, realistic Dynamic Portfolio Optimization (DPO) problems. Building on the scaling strategy from our previous work, where we tailored a VQE workflow to both the DPO formulation and the target QPU, we now put forward two significant advances. The first is the implementation of the Ising Sample-based Quantum Configuration Recovery (ISQR) routine, which improves solution quality in Quadratic Unconstrained Binary Optimization problems. The second is the use of the VQE Constrained method to decompose the optimization task, enabling us to handle DPO instances with more variables than the available qubits on current hardware. These advances, which are broadly applicable to other optimization problems, allow us to address a portfolio with a size relevant to the financial industry, consisting of up to 38 assets and covering the full Spanish stock index (IBEX 35). Our results, obtained on a real Quantum Processing Unit (IBM Fez), show that this tailored workflow achieves financial performance on par with classical methods while delivering a broader set of high-quality investment strategies, demonstrating a viable path towards obtaining practical advantage from quantum optimization in real financial applications.",
+    "authors": [
+      "Irene De León",
+      "Danel Arias",
+      "Manuel Martín-Cordero",
+      "María Esperanza Molina",
+      "Pablo Serrano",
+      "Senaida Hernández-Santana",
+      "Miguel Ángel Jiménez Herrera",
+      "Joana Fraxanet",
+      "Ginés Carrascal",
+      "Escolástico Sánchez",
+      "Inmaculada Posadillo",
+      "Álvaro Nodar"
+    ],
+    "published": "2025-12-26",
+    "categories": [
+      "quant-ph",
+      "q-fin.CP",
+      "q-fin.PM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.22001v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.22001v1",
+    "fetched_at": "2025-12-29T08:36:34.606219"
+  },
+  {
+    "id": "2512.21973v1",
+    "title": "When Indemnity Insurance Fails: Parametric Coverage under Binding Budget and Risk Constraints",
+    "abstract": "In high-risk environments, traditional indemnity insurance is often unaffordable or ineffective, despite its well-known optimality under expected utility. This paper compares excess-of-loss indemnity insurance with parametric insurance within a common mean-variance framework, allowing for fixed costs, heterogeneous premium loadings, and binding budget constraints. We show that, once these realistic frictions are introduced, parametric insurance can yield higher welfare for risk-averse individuals, even under the same utility objective. The welfare advantage arises precisely when indemnity insurance becomes impractical, and disappears once both contracts are unconstrained. Our results help reconcile classical insurance theory with the growing use of parametric risk transfer in high-risk settings.",
+    "authors": [
+      "Benjamin Avanzi",
+      "Debbie Kusch Falden",
+      "Mogens Steffensen"
+    ],
+    "published": "2025-12-26",
+    "categories": [
+      "econ.GN",
+      "math.OC",
+      "q-fin.RM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.21973v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.21973v1",
+    "fetched_at": "2025-12-29T08:36:34.606266"
+  },
+  {
+    "id": "2512.21823v1",
+    "title": "Investigating Conditional Restricted Boltzmann Machines in Regime Detection",
+    "abstract": "This study investigates the efficacy of Conditional Restricted Boltzmann Machines (CRBMs) for modeling high-dimensional financial time series and detecting systemic risk regimes. We extend the classical application of static Restricted Boltzmann Machines (RBMs) by incorporating autoregressive conditioning and utilizing Persistent Contrastive Divergence (PCD) to incorporate complex temporal dependency structures. Comparing a discrete Bernoulli-Bernoulli architecture against a continuous Gaussian-Bernoulli variant across a multi-asset dataset spanning 2013-2025, we observe a dichotomy between generative fidelity and regime detection. While the Gaussian CRBM successfully preserves static asset correlations, it exhibits limitations in generating long-range volatility clustering. Thus, we analyze the free energy as a relative negative log-likelihood (surprisal) under a fixed, trained model. We demonstrate that the model's free energy serves as a robust, regime stability metric. By decomposing the free energy into quadratic (magnitude) and structural (correlation) components, we show that the model can distinguish between pure magnitude shocks and market regimes. Our findings suggest that the CRBM offers a valuable, interpretable diagnostic tool for monitoring systemic risk, providing a supplemental metric to implied volatility metrics like the VIX.",
+    "authors": [
+      "Siddhartha Srinivas Rentala"
+    ],
+    "published": "2025-12-26",
+    "categories": [
+      "q-fin.ST"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.21823v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.21823v1",
+    "fetched_at": "2025-12-29T08:36:34.606286"
+  },
+  {
+    "id": "2512.21798v1",
+    "title": "Applications of synthetic financial data in portfolio and risk modeling",
+    "abstract": "Synthetic financial data offers a practical way to address the privacy and accessibility challenges that limit research in quantitative finance. This paper examines the use of generative models, in particular TimeGAN and Variational Autoencoders (VAEs), for creating synthetic return series that support portfolio construction, trading analysis, and risk modeling. Using historical daily returns from the S and P 500 as a benchmark, we generate synthetic datasets under comparable market conditions and evaluate them using statistical similarity metrics, temporal structure tests, and downstream financial tasks. The study shows that TimeGAN produces synthetic data with distributional shapes, volatility patterns, and autocorrelation behaviour that are close to those observed in real returns. When applied to mean-variance portfolio optimization, the resulting synthetic datasets lead to portfolio weights, Sharpe ratios, and risk levels that remain close to those obtained from real data. The VAE provides more stable training but tends to smooth extreme market movements, which affects risk estimation. Finally, the analysis supports the use of synthetic datasets as substitutes for real financial data in portfolio analysis and risk simulation, particularly when models are able to capture temporal dynamics. Synthetic data therefore provides a privacy-preserving, cost-effective, and reproducible tool for financial experimentation and model development.",
+    "authors": [
+      "Christophe D. Hounwanou",
+      "Yae Ulrich Gaba"
+    ],
+    "published": "2025-12-25",
+    "categories": [
+      "q-fin.ST",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.21798v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.21798v1",
+    "fetched_at": "2025-12-29T08:36:34.606306"
+  },
+  {
+    "id": "2512.21791v1",
+    "title": "Synthetic Financial Data Generation for Enhanced Financial Modelling",
+    "abstract": "Data scarcity and confidentiality in finance often impede model development and robust testing. This paper presents a unified multi-criteria evaluation framework for synthetic financial data and applies it to three representative generative paradigms: the statistical ARIMA-GARCH baseline, Variational Autoencoders (VAEs), and Time-series Generative Adversarial Networks (TimeGAN). Using historical S and P 500 daily data, we evaluate fidelity (Maximum Mean Discrepancy, MMD), temporal structure (autocorrelation and volatility clustering), and practical utility in downstream tasks, specifically mean-variance portfolio optimization and volatility forecasting. Empirical results indicate that ARIMA-GARCH captures linear trends and conditional volatility but fails to reproduce nonlinear dynamics; VAEs produce smooth trajectories that underestimate extreme events; and TimeGAN achieves the best trade-off between realism and temporal coherence (e.g., TimeGAN attained the lowest MMD: 1.84e-3, average over 5 seeds). Finally, we articulate practical guidelines for selecting generative models according to application needs and computational constraints. Our unified evaluation protocol and reproducible codebase aim to standardize benchmarking in synthetic financial data research.",
+    "authors": [
+      "Christophe D. Hounwanou",
+      "Yae Ulrich Gaba",
+      "Pierre Ntakirutimana"
+    ],
+    "published": "2025-12-25",
+    "categories": [
+      "cs.LG",
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.21791v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.21791v1",
+    "fetched_at": "2025-12-29T08:36:34.606329"
+  },
+  {
+    "id": "2512.21621v1",
+    "title": "Mean-Field Price Formation on Trees with a Network of Relative Performance Concerns",
+    "abstract": "Financial firms and institutional investors are routinely evaluated based on their performance relative to their peers. These relative performance concerns significantly influence risk-taking behavior and market dynamics. While the literature studying Nash equilibrium under such relative performance competitions is extensive, its effect on asset price formation remains largely unexplored. This paper investigates mean-field equilibrium price formation of a single risky stock in a discrete-time market where agents exhibit exponential utility and relative performance concerns. Unlike existing literature that typically treats asset prices as exogenous, we impose a market-clearing condition to determine the price dynamics endogenously within a relative performance equilibrium. Using a binomial tree framework, we establish the existence and uniqueness of the market-clearing mean-field equilibrium in both single- and multi-population settings. Finally, we provide illustrative numerical examples demonstrating the equilibrium price distributions and agents' optimal position sizes.",
+    "authors": [
+      "Masaaki Fujii"
+    ],
+    "published": "2025-12-25",
+    "categories": [
+      "q-fin.MF",
+      "econ.GN",
+      "q-fin.GN",
+      "q-fin.PM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.21621v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.21621v1",
+    "fetched_at": "2025-12-29T08:36:34.606348"
+  },
+  {
+    "id": "2512.21539v1",
+    "title": "Chaos, Ito-Stratonovich dilemma, and topological supersymmetry",
+    "abstract": "It was recently established that the formalism of the generalized transfer operator (GTO) of dynamical systems (DS) theory, applied to stochastic differential equations (SDEs) of arbitrary form, belongs to the family of cohomological topological field theories (TFT) -- a class of models at the intersection of algebraic topology and high-energy physics. This interdisciplinary approach, which can be called the supersymmetric theory of stochastic dynamics (STS), can be seen as an algebraic dual to the traditional set-theoretic framework of the DS theory, with its algebraic structure enabling the extension of some DS theory concepts to stochastic dynamics. Moreover, it reveals the presence of a topological supersymmetry (TS) in the GTOs of all SDEs. It also shows that among the various definitions of chaos, positive \"pressure\", defined as the logarithm of the GTO spectral radius, stands out as particularly meaningful from a physical perspective, as it corresponds to the spontaneous breakdown of TS on the TFT side. Via the Goldstone theorem, this definition has a potential to provide the long-sought explanation for the experimental signature of chaotic dynamics known as 1/f noise. Additionally, STS clarifies that among the various existing interpretations of SDEs, only the Stratonovich interpretation yields evolution operators that match the corresponding GTOs and, consequently, have a clear-cut mathematical meaning. Here, we discuss these and other aspects of STS from both the DS theory and TFT perspectives, focusing on links between these two fields and providing mathematical concepts with physical interpretations that may be useful in some contexts.",
+    "authors": [
+      "Igor V. Ovchinnikov"
+    ],
+    "published": "2025-12-25",
+    "categories": [
+      "math-ph",
+      "hep-th",
+      "nlin.CD",
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.21539v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.21539v1",
+    "fetched_at": "2025-12-29T08:36:34.606371"
+  },
+  {
+    "id": "2512.21924v1",
+    "title": "Unsupervised Anomaly Detection in Brain MRI via Disentangled Anatomy Learning",
+    "abstract": "Detection of various lesions in brain MRI is clinically critical, but challenging due to the diversity of lesions and variability in imaging conditions. Current unsupervised learning methods detect anomalies mainly through reconstructing abnormal images into pseudo-healthy images (PHIs) by normal samples learning and then analyzing differences between images. However, these unsupervised models face two significant limitations: restricted generalizability to multi-modality and multi-center MRIs due to their reliance on the specific imaging information in normal training data, and constrained performance due to abnormal residuals propagated from input images to reconstructed PHIs. To address these limitations, two novel modules are proposed, forming a new PHI reconstruction framework. Firstly, the disentangled representation module is proposed to improve generalizability by decoupling brain MRI into imaging information and essential imaging-invariant anatomical images, ensuring that the reconstruction focuses on the anatomy. Specifically, brain anatomical priors and a differentiable one-hot encoding operator are introduced to constrain the disentanglement results and enhance the disentanglement stability. Secondly, the edge-to-image restoration module is designed to reconstruct high-quality PHIs by restoring the anatomical representation from the high-frequency edge information of anatomical images, and then recoupling the disentangled imaging information. This module not only suppresses abnormal residuals in PHI by reducing abnormal pixels input through edge-only input, but also effectively reconstructs normal regions using the preserved structural details in the edges. Evaluated on nine public datasets (4,443 patients' MRIs from multiple centers), our method outperforms 17 SOTA methods, achieving absolute improvements of +18.32% in AP and +13.64% in DSC.",
+    "authors": [
+      "Tao Yang",
+      "Xiuying Wang",
+      "Hao Liu",
+      "Guanzhong Gong",
+      "Lian-Ming Wu",
+      "Yu-Ping Wang",
+      "Lisheng Wang"
+    ],
+    "published": "2025-12-26",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.21924v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.21924v1",
+    "fetched_at": "2025-12-29T08:36:47.978996"
+  },
+  {
+    "id": "2512.21650v1",
+    "title": "Causal-HM: Restoring Physical Generative Logic in Multimodal Anomaly Detection via Hierarchical Modulation",
+    "abstract": "Multimodal Unsupervised Anomaly Detection (UAD) is critical for quality assurance in smart manufacturing, particularly in complex processes like robotic welding. However, existing methods often suffer from causal blindness, treating process modalities (e.g., real-time video, audio, and sensors) and result modalities (e.g., post-weld images) as equal feature sources, thereby ignoring the inherent physical generative logic. Furthermore, the heterogeneity gap between high-dimensional visual data and low-dimensional sensor signals frequently leads to critical process context being drowned out. In this paper, we propose Causal-HM, a unified multimodal UAD framework that explicitly models the physical Process to Result dependency. Specifically, our framework incorporates two key innovations: a Sensor-Guided CHM Modulation mechanism that utilizes low-dimensional sensor signals as context to guide high-dimensional audio-visual feature extraction , and a Causal-Hierarchical Architecture that enforces a unidirectional generative mapping to identify anomalies that violate physical consistency. Extensive experiments on our newly constructed Weld-4M benchmark across four modalities demonstrate that Causal-HM achieves a state-of-the-art (SOTA) I-AUROC of 90.7%. Code will be released after the paper is accepted.",
+    "authors": [
+      "Xiao Liu",
+      "Junchen Jin",
+      "Yanjie Zhao",
+      "Zhixuan Xing"
+    ],
+    "published": "2025-12-25",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.21650v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.21650v1",
+    "fetched_at": "2025-12-29T08:36:47.979030"
+  },
+  {
+    "id": "2512.21459v1",
+    "title": "CCAD: Compressed Global Feature Conditioned Anomaly Detection",
+    "abstract": "Anomaly detection holds considerable industrial significance, especially in scenarios with limited anomalous data. Currently, reconstruction-based and unsupervised representation-based approaches are the primary focus. However, unsupervised representation-based methods struggle to extract robust features under domain shift, whereas reconstruction-based methods often suffer from low training efficiency and performance degradation due to insufficient constraints. To address these challenges, we propose a novel method named Compressed Global Feature Conditioned Anomaly Detection (CCAD). CCAD synergizes the strengths of both paradigms by adapting global features as a new modality condition for the reconstruction model. Furthermore, we design an adaptive compression mechanism to enhance both generalization and training efficiency. Extensive experiments demonstrate that CCAD consistently outperforms state-of-the-art methods in terms of AUC while achieving faster convergence. In addition, we contribute a reorganized and re-annotated version of the DAGM 2007 dataset with new annotations to further validate our method's effectiveness. The code for reproducing main results is available at https://github.com/chloeqxq/CCAD.",
+    "authors": [
+      "Xiao Jin",
+      "Liang Diao",
+      "Qixin Xiao",
+      "Yifan Hu",
+      "Ziqi Zhang",
+      "Yuchen Liu",
+      "Haisong Gu"
+    ],
+    "published": "2025-12-25",
+    "categories": [
+      "cs.CV",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.21459v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.21459v1",
+    "fetched_at": "2025-12-29T08:36:47.979059"
+  },
+  {
+    "id": "2512.21804v1",
+    "title": "S&P 500 Stock's Movement Prediction using CNN",
+    "abstract": "This paper is about predicting the movement of stock consist of S&P 500 index. Historically there are many approaches have been tried using various methods to predict the stock movement and being used in the market currently for algorithm trading and alpha generating systems using traditional mathematical approaches [1, 2].   The success of artificial neural network recently created a lot of interest and paved the way to enable prediction using cutting-edge research in the machine learning and deep learning. Some of these papers have done a great job in implementing and explaining benefits of these new technologies. Although most these papers do not go into the complexity of the financial data and mostly utilize single dimension data, still most of these papers were successful in creating the ground for future research in this comparatively new phenomenon. In this paper, I am trying to use multivariate raw data including stock split/dividend events (as-is) present in real-world market data instead of engineered financial data. Convolution Neural Network (CNN), the best-known tool so far for image classification, is used on the multi-dimensional stock numbers taken from the market mimicking them as a vector of historical data matrices (read images) and the model achieves promising results. The predictions can be made stock by stock, i.e., a single stock, sector-wise or for the portfolio of stocks.",
+    "authors": [
+      "Rahul Gupta"
+    ],
+    "published": "2025-12-25",
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.CE"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.21804v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.21804v1",
+    "fetched_at": "2025-12-29T08:37:08.228495"
+  },
+  {
+    "id": "2512.22101v1",
+    "title": "A2P-Vis: an Analyzer-to-Presenter Agentic Pipeline for Visual Insights Generation and Reporting",
+    "abstract": "Automating end-to-end data science pipeline with AI agents still stalls on two gaps: generating insightful, diverse visual evidence and assembling it into a coherent, professional report. We present A2P-Vis, a two-part, multi-agent pipeline that turns raw datasets into a high-quality data-visualization report. The Data Analyzer orchestrates profiling, proposes diverse visualization directions, generates and executes plotting code, filters low-quality figures with a legibility checker, and elicits candidate insights that are automatically scored for depth, correctness, specificity, depth and actionability. The Presenter then orders topics, composes chart-grounded narratives from the top-ranked insights, writes justified transitions, and revises the document for clarity and consistency, yielding a coherent, publication-ready report. Together, these agents convert raw data into curated materials (charts + vetted insights) and into a readable narrative without manual glue work. We claim that by coupling a quality-assured Analyzer with a narrative Presenter, A2P-Vis operationalizes co-analysis end-to-end, improving the real-world usefulness of automated data analysis for practitioners. For the complete dataset report, please see: https://www.visagent.org/api/output/f2a3486d-2c3b-4825-98d4-5af25a819f56.",
+    "authors": [
+      "Shuyu Gan",
+      "Renxiang Wang",
+      "James Mooney",
+      "Dongyeop Kang"
+    ],
+    "published": "2025-12-26",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.22101v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.22101v1",
+    "fetched_at": "2025-12-29T08:37:18.103148"
+  },
+  {
+    "id": "2512.22066v1",
+    "title": "Prefill vs. Decode Bottlenecks: SRAM-Frequency Tradeoffs and the Memory-Bandwidth Ceiling",
+    "abstract": "Energy consumption dictates the cost and environmental impact of deploying Large Language Models. This paper investigates the impact of on-chip SRAM size and operating frequency on the energy efficiency and performance of LLM inference, focusing on the distinct behaviors of the compute-bound prefill and memory-bound decode phases. Our simulation methodology combines OpenRAM for energy modeling, LLMCompass for latency simulation, and ScaleSIM for systolic array operational intensity. Our findings show that total energy use is predominantly determined by SRAM size in both phases, with larger buffers significantly increasing static energy due to leakage, which is not offset by corresponding latency benefits. We quantitatively explore the memory-bandwidth bottleneck, demonstrating that while high operating frequencies reduce prefill latency, their positive impact on memory-bound decode latency is capped by the external memory bandwidth. Counter-intuitively, high compute frequency can reduce total energy by reducing execution time and consequently decreasing static energy consumption more than the resulting dynamic power increase. We identify an optimal hardware configuration for the simulated workload: high operating frequencies (1200MHz-1400MHz) and a small local buffer size of 32KB to 64KB. This combination achieves the best energy-delay product, balancing low latency with high energy efficiency. Furthermore, we demonstrate how memory bandwidth acts as a performance ceiling, and that increasing compute frequency only yields performance gains up to the point where the workload becomes memory-bound. This analysis provides concrete architectural insights for designing energy-efficient LLM accelerators, especially for datacenters aiming to minimize their energy overhead.",
+    "authors": [
+      "Hannah Atmer",
+      "Yuan Yao",
+      "Thiemo Voigt",
+      "Stefanos Kaxiras"
+    ],
+    "published": "2025-12-26",
+    "categories": [
+      "cs.AR",
+      "cs.LG",
+      "cs.PF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.22066v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.22066v1",
+    "fetched_at": "2025-12-29T08:37:18.103184"
+  },
+  {
+    "id": "2512.22029v1",
+    "title": "LibContinual: A Comprehensive Library towards Realistic Continual Learning",
+    "abstract": "A fundamental challenge in Continual Learning (CL) is catastrophic forgetting, where adapting to new tasks degrades the performance on previous ones. While the field has evolved with diverse methods, this rapid surge in diverse methodologies has culminated in a fragmented research landscape. The lack of a unified framework, including inconsistent implementations, conflicting dependencies, and varying evaluation protocols, makes fair comparison and reproducible research increasingly difficult. To address this challenge, we propose LibContinual, a comprehensive and reproducible library designed to serve as a foundational platform for realistic CL. Built upon a high-cohesion, low-coupling modular architecture, LibContinual integrates 19 representative algorithms across five major methodological categories, providing a standardized execution environment. Meanwhile, leveraging this unified framework, we systematically identify and investigate three implicit assumptions prevalent in mainstream evaluation: (1) offline data accessibility, (2) unregulated memory resources, and (3) intra-task semantic homogeneity. We argue that these assumptions often overestimate the real-world applicability of CL methods. Through our comprehensive analysis using strict online CL settings, a novel unified memory budget protocol, and a proposed category-randomized setting, we reveal significant performance drops in many representative CL methods when subjected to these real-world constraints. Our study underscores the necessity of resource-aware and semantically robust CL strategies, and offers LibContinual as a foundational toolkit for future research in realistic continual learning. The source code is available from \\href{https://github.com/RL-VIG/LibContinual}{https://github.com/RL-VIG/LibContinual}.",
+    "authors": [
+      "Wenbin Li",
+      "Shangge Liu",
+      "Borui Kang",
+      "Yiyang Chen",
+      "KaXuan Lew",
+      "Yang Chen",
+      "Yinghuan Shi",
+      "Lei Wang",
+      "Yang Gao",
+      "Jiebo Luo"
+    ],
+    "published": "2025-12-26",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.22029v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.22029v1",
+    "fetched_at": "2025-12-29T08:37:18.103235"
+  },
+  {
+    "id": "2512.22022v1",
+    "title": "Meta-Learning-Based Handover Management in NextG O-RAN",
+    "abstract": "While traditional handovers (THOs) have served as a backbone for mobile connectivity, they increasingly suffer from failures and delays, especially in dense deployments and high-frequency bands. To address these limitations, 3GPP introduced Conditional Handovers (CHOs) that enable proactive cell reservations and user-driven execution. However, both handover (HO) types present intricate trade-offs in signaling, resource usage, and reliability. This paper presents unique, countrywide mobility management datasets from a top-tier mobile network operator (MNO) that offer fresh insights into these issues and call for adaptive and robust HO control in next-generation networks. Motivated by these findings, we propose CONTRA, a framework that, for the first time, jointly optimizes THOs and CHOs within the O-RAN architecture. We study two variants of CONTRA: one where users are a priori assigned to one of the HO types, reflecting distinct service or user-specific requirements, as well as a more dynamic formulation where the controller decides on-the-fly the HO type, based on system conditions and needs. To this end, it relies on a practical meta-learning algorithm that adapts to runtime observations and guarantees performance comparable to an oracle with perfect future information (universal no-regret). CONTRA is specifically designed for near-real-time deployment as an O-RAN xApp and aligns with the 6G goals of flexible and intelligent control. Extensive evaluations leveraging crowdsourced datasets show that CONTRA improves user throughput and reduces both THO and CHO switching costs, outperforming 3GPP-compliant and Reinforcement Learning (RL) baselines in dynamic and real-world scenarios.",
+    "authors": [
+      "Michail Kalntis",
+      "George Iosifidis",
+      "José Suárez-Varela",
+      "Andra Lutu",
+      "Fernando A. Kuipers"
+    ],
+    "published": "2025-12-26",
+    "categories": [
+      "cs.NI",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.22022v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.22022v1",
+    "fetched_at": "2025-12-29T08:37:18.103270"
+  },
+  {
+    "id": "2512.21919v1",
+    "title": "SWE-RM: Execution-free Feedback For Software Engineering Agents",
+    "abstract": "Execution-based feedback like unit testing is widely used in the development of coding agents through test-time scaling (TTS) and reinforcement learning (RL). This paradigm requires scalable and reliable collection of unit test cases to provide accurate feedback, and the resulting feedback is often sparse and cannot effectively distinguish between trajectories that are both successful or both unsuccessful. In contrast, execution-free feedback from reward models can provide more fine-grained signals without depending on unit test cases. Despite this potential, execution-free feedback for realistic software engineering (SWE) agents remains underexplored. Aiming to develop versatile reward models that are effective across TTS and RL, however, we observe that two verifiers with nearly identical TTS performance can nevertheless yield very different results in RL. Intuitively, TTS primarily reflects the model's ability to select the best trajectory, but this ability does not necessarily generalize to RL. To address this limitation, we identify two additional aspects that are crucial for RL training: classification accuracy and calibration. We then conduct comprehensive controlled experiments to investigate how to train a robust reward model that performs well across these metrics. In particular, we analyze the impact of various factors such as training data scale, policy mixtures, and data source composition. Guided by these investigations, we introduce SWE-RM, an accurate and robust reward model adopting a mixture-of-experts architecture with 30B total parameters and 3B activated during inference. SWE-RM substantially improves SWE agents on both TTS and RL performance. For example, it increases the accuracy of Qwen3-Coder-Flash from 51.6% to 62.0%, and Qwen3-Coder-Max from 67.0% to 74.6% on SWE-Bench Verified using TTS, achieving new state-of-the-art performance among open-source models.",
+    "authors": [
+      "KaShun Shum",
+      "Binyuan Hui",
+      "Jiawei Chen",
+      "Lei Zhang",
+      "X. W.",
+      "Jiaxi Yang",
+      "Yuzhen Huang",
+      "Junyang Lin",
+      "Junxian He"
+    ],
+    "published": "2025-12-26",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.21919v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.21919v1",
+    "fetched_at": "2025-12-29T08:37:18.103301"
+  },
+  {
+    "id": "2512.21907v1",
+    "title": "SpatialBench: Can Agents Analyze Real-World Spatial Biology Data?",
+    "abstract": "Spatial transcriptomics assays are rapidly increasing in scale and complexity, making computational analysis a major bottleneck in biological discovery. Although frontier AI agents have improved dramatically at software engineering and general data analysis, it remains unclear whether they can extract biological insight from messy, real-world spatial datasets. We introduce SpatialBench, a benchmark of 146 verifiable problems derived from practical spatial analysis workflows spanning five spatial technologies and seven task categories. Each problem provides a snapshot of experimental data immediately prior to an analysis step and a deterministic grader that evaluates recovery of a key biological result. Benchmark data on frontier models shows that base model accuracy remains low (20-38% across model families), with strong model-task and model-platform interactions. Harness design has a large empirical effect on performance, indicating that tools, prompts, control flow, and execution environment should be evaluated and improved as first-class objects. SpatialBench serves both as a measurement tool and a diagnostic lens for developing agents that can interact with real spatial datasets faithfully, transparently, and reproducibly.",
+    "authors": [
+      "Kenny Workman",
+      "Zhen Yang",
+      "Harihara Muralidharan",
+      "Hannah Le"
+    ],
+    "published": "2025-12-26",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.21907v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.21907v1",
+    "fetched_at": "2025-12-29T08:37:18.103325"
+  },
+  {
+    "id": "2512.21859v1",
+    "title": "TimeBill: Time-Budgeted Inference for Large Language Models",
+    "abstract": "Large Language Models (LLMs) are increasingly deployed in time-critical systems, such as robotics, autonomous driving, embodied intelligence, and industrial automation, where generating accurate responses within a given time budget is crucial for decision-making, control, or safety-critical tasks. However, the auto-regressive generation process of LLMs makes it challenging to model and estimate the end-to-end execution time. Furthermore, existing efficient inference methods based on a fixed key-value (KV) cache eviction ratio struggle to adapt to varying tasks with diverse time budgets, where an improper eviction ratio may lead to incomplete inference or a drop in response performance. In this paper, we propose TimeBill, a novel time-budgeted inference framework for LLMs that balances the inference efficiency and response performance. To be more specific, we propose a fine-grained response length predictor (RLP) and an execution time estimator (ETE) to accurately predict the end-to-end execution time of LLMs. Following this, we develop a time-budgeted efficient inference approach that adaptively adjusts the KV cache eviction ratio based on execution time prediction and the given time budget. Finally, through extensive experiments, we demonstrate the advantages of TimeBill in improving task completion rate and maintaining response performance under various overrun strategies.",
+    "authors": [
+      "Qi Fan",
+      "An Zou",
+      "Yehan Ma"
+    ],
+    "published": "2025-12-26",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.21859v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.21859v1",
+    "fetched_at": "2025-12-29T08:37:18.103346"
+  },
+  {
+    "id": "2512.21853v1",
+    "title": "MoonBot: Modular and On-Demand Reconfigurable Robot Toward Moon Base Construction",
+    "abstract": "The allure of lunar surface exploration and development has recently captured widespread global attention. Robots have proved to be indispensable for exploring uncharted terrains, uncovering and leveraging local resources, and facilitating the construction of future human habitats. In this article, we introduce the modular and on-demand reconfigurable robot (MoonBot), a modular and reconfigurable robotic system engineered to maximize functionality while operating within the stringent mass constraints of lunar payloads and adapting to varying environmental conditions and task requirements. This article details the design and development of MoonBot and presents a preliminary field demonstration that validates the proof of concept through the execution of milestone tasks simulating the establishment of lunar infrastructure. These tasks include essential civil engineering operations, infrastructural component transportation and deployment, and assistive operations with inflatable modules. Furthermore, we systematically summarize the lessons learned during testing, focusing on the connector design and providing valuable insights for the advancement of modular robotic systems in future lunar missions.",
+    "authors": [
+      "Kentaro Uno",
+      "Elian Neppel",
+      "Gustavo H. Diaz",
+      "Ashutosh Mishra",
+      "Shamistan Karimov",
+      "A. Sejal Jain",
+      "Ayesha Habib",
+      "Pascal Pama",
+      "Hazal Gozbasi",
+      "Shreya Santra",
+      "Kazuya Yoshida"
+    ],
+    "published": "2025-12-26",
+    "categories": [
+      "cs.RO",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.21853v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.21853v1",
+    "fetched_at": "2025-12-29T08:37:18.103381"
+  },
+  {
+    "id": "2512.21817v1",
+    "title": "Method Decoration (DeMe): A Framework for LLM-Driven Adaptive Method Generation in Dynamic IoT Environments",
+    "abstract": "Intelligent IoT systems increasingly rely on large language models (LLMs) to generate task-execution methods for dynamic environments. However, existing approaches lack the ability to systematically produce new methods when facing previously unseen situations, and they often depend on fixed, device-specific logic that cannot adapt to changing environmental conditions.In this paper, we propose Method Decoration (DeMe), a general framework that modifies the method-generation path of an LLM using explicit decorations derived from hidden goals, accumulated learned methods, and environmental feedback. Unlike traditional rule augmentation, decorations in DeMe are not hardcoded; instead, they are extracted from universal behavioral principles, experience, and observed environmental differences. DeMe enables the agent to reshuffle the structure of its method path-through pre-decoration, post-decoration, intermediate-step modification, and step insertion-thereby producing context-aware, safety-aligned, and environment-adaptive methods. Experimental results show that method decoration allows IoT devices to derive ore appropriate methods when confronting unknown or faulty operating conditions.",
+    "authors": [
+      "Hong Su"
+    ],
+    "published": "2025-12-26",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.21817v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.21817v1",
+    "fetched_at": "2025-12-29T08:37:18.103398"
+  },
+  {
+    "id": "2512.21708v1",
+    "title": "MoRAgent: Parameter Efficient Agent Tuning with Mixture-of-Roles",
+    "abstract": "Despite recent advancements of fine-tuning large language models (LLMs) to facilitate agent tasks, parameter-efficient fine-tuning (PEFT) methodologies for agent remain largely unexplored. In this paper, we introduce three key strategies for PEFT in agent tasks: 1) Inspired by the increasingly dominant Reason+Action paradigm, we first decompose the capabilities necessary for the agent tasks into three distinct roles: reasoner, executor, and summarizer. The reasoner is responsible for comprehending the user's query and determining the next role based on the execution trajectory. The executor is tasked with identifying the appropriate functions and parameters to invoke. The summarizer conveys the distilled information from conversations back to the user. 2) We then propose the Mixture-of-Roles (MoR) framework, which comprises three specialized Low-Rank Adaptation (LoRA) groups, each designated to fulfill a distinct role. By focusing on their respective specialized capabilities and engaging in collaborative interactions, these LoRAs collectively accomplish the agent task. 3) To effectively fine-tune the framework, we develop a multi-role data generation pipeline based on publicly available datasets, incorporating role-specific content completion and reliability verification. We conduct extensive experiments and thorough ablation studies on various LLMs and agent benchmarks, demonstrating the effectiveness of the proposed method. This project is publicly available at https://mor-agent.github.io.",
+    "authors": [
+      "Jing Han",
+      "Binwei Yan",
+      "Tianyu Guo",
+      "Zheyuan Bai",
+      "Mengyu Zheng",
+      "Hanting Chen",
+      "Ying Nie"
+    ],
+    "published": "2025-12-25",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.21708v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.21708v1",
+    "fetched_at": "2025-12-29T08:37:18.103426"
+  },
+  {
+    "id": "2512.21699v1",
+    "title": "Towards Responsible and Explainable AI Agents with Consensus-Driven Reasoning",
+    "abstract": "Agentic AI represents a major shift in how autonomous systems reason, plan, and execute multi-step tasks through the coordination of Large Language Models (LLMs), Vision Language Models (VLMs), tools, and external services. While these systems enable powerful new capabilities, increasing autonomy introduces critical challenges related to explainability, accountability, robustness, and governance, especially when agent outputs influence downstream actions or decisions. Existing agentic AI implementations often emphasize functionality and scalability, yet provide limited mechanisms for understanding decision rationale or enforcing responsibility across agent interactions. This paper presents a Responsible(RAI) and Explainable(XAI) AI Agent Architecture for production-grade agentic workflows based on multi-model consensus and reasoning-layer governance. In the proposed design, a consortium of heterogeneous LLM and VLM agents independently generates candidate outputs from a shared input context, explicitly exposing uncertainty, disagreement, and alternative interpretations. A dedicated reasoning agent then performs structured consolidation across these outputs, enforcing safety and policy constraints, mitigating hallucinations and bias, and producing auditable, evidence-backed decisions. Explainability is achieved through explicit cross-model comparison and preserved intermediate outputs, while responsibility is enforced through centralized reasoning-layer control and agent-level constraints. We evaluate the architecture across multiple real-world agentic AI workflows, demonstrating that consensus-driven reasoning improves robustness, transparency, and operational trust across diverse application domains. This work provides practical guidance for designing agentic AI systems that are autonomous and scalable, yet responsible and explainable by construction.",
+    "authors": [
+      "Eranga Bandara",
+      "Tharaka Hewa",
+      "Ross Gore",
+      "Sachin Shetty",
+      "Ravi Mukkamala",
+      "Peter Foytik",
+      "Abdul Rahman",
+      "Safdar H. Bouk",
+      "Xueping Liang",
+      "Amin Hass",
+      "Sachini Rajapakse",
+      "Ng Wee Keong",
+      "Kasun De Zoysa",
+      "Aruna Withanage",
+      "Nilaan Loganathan"
+    ],
+    "published": "2025-12-25",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.21699v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.21699v1",
+    "fetched_at": "2025-12-29T08:37:18.103467"
+  },
+  {
+    "id": "2512.21623v1",
+    "title": "Democratizing Drug Discovery with an Orchestrated, Knowledge-Driven Multi-Agent Team for User-Guided Therapeutic Design",
+    "abstract": "Therapeutic discovery remains a formidable challenge, impeded by the fragmentation of specialized domains and the execution gap between computational design and physiological validation. Although generative AI offers promise, current models often function as passive assistants rather than as autonomous executors. Here, we introduce OrchestRA, a human-in-the-loop multi-agent platform that unifies biology, chemistry, and pharmacology into an autonomous discovery engine. Unlike static code generators, our agents actively execute simulations and reason the results to drive iterative optimization. Governed by an Orchestrator, a Biologist Agent leverages deep reasoning over a massive knowledge graph (>10 million associations) to pinpoint high-confidence targets; a Chemist Agent autonomously detects structural pockets for de novo design or drug repositioning; and a Pharmacologist Agent evaluates candidates via rigorous physiologically based pharmacokinetic (PBPK) simulations. This architecture establishes a dynamic feedback loop where pharmacokinetic and toxicity profiles directly trigger structural reoptimization. By seamlessly integrating autonomous execution with human guidance, OrchestRA democratizes therapeutic design, transforming drug discovery from a stochastic search to a programmable evidence-based engineering discipline.",
+    "authors": [
+      "Takahide Suzuki",
+      "Kazuki Nakanishi",
+      "Takashi Fujiwara",
+      "Hideyuki Shimizu"
+    ],
+    "published": "2025-12-25",
+    "categories": [
+      "cs.AI",
+      "cs.MA",
+      "q-bio.QM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.21623v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.21623v1",
+    "fetched_at": "2025-12-29T08:37:18.103492"
+  },
+  {
+    "id": "2512.21596v1",
+    "title": "Quantitative Verification of Omega-regular Properties in Probabilistic Programming",
+    "abstract": "Probabilistic programming provides a high-level framework for specifying statistical models as executable programs with built-in randomness and conditioning. Existing inference techniques, however, typically compute posterior distributions over program states at fixed time points, most often at termination, thereby failing to capture the temporal evolution of probabilistic behaviors. We introduce temporal posterior inference (TPI), a new framework that unifies probabilistic programming with temporal logic by computing posterior distributions over execution traces that satisfy omega-regular specifications, conditioned on possibly temporal observations. To obtain rigorous quantitative guarantees, we develop a new method for computing upper and lower bounds on the satisfaction probabilities of omega-regular properties. Our approach decomposes Rabin acceptance conditions into persistence and recurrence components and constructs stochastic barrier certificates that soundly bound each component. We implement our approach in a prototype tool, TPInfer, and evaluate it on a suite of benchmarks, demonstrating effective and efficient inference over rich temporal properties in probabilistic models.",
+    "authors": [
+      "Peixin Wang",
+      "Jianhao Bai",
+      "Min Zhang",
+      "C. -H. Luke Ong"
+    ],
+    "published": "2025-12-25",
+    "categories": [
+      "cs.PL",
+      "cs.FL",
+      "cs.LG",
+      "cs.LO",
+      "cs.SC"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.21596v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.21596v1",
+    "fetched_at": "2025-12-29T08:37:18.103516"
+  },
+  {
+    "id": "2512.21450v1",
+    "title": "RLLaVA: An RL-central Framework for Language and Vision Assistants",
+    "abstract": "We present an RL-central framework for Language and Vision Assistants (RLLaVA) with its formulation of Markov decision process (MDP). RLLaVA decouples RL algorithmic logic from model architecture and distributed execution, supporting researchers in implementing new RL algorithms with minimal code, and to plug in a broad family of RL methods and vision-language models (VLMs) while remaining agnostic to specific training and inference engines. RLLaVA makes resource-efficient training of 1B--7B models feasible on common GPUs; notably, 4B-scale models can be trained end-to-end with full-parameter updates on a single 24GB GPU. Experiments on multi-modal and agentic tasks demonstrate that RLLaVA has task extensibility, and the models trained with it consistently improve performance over base models, competitive with other specially engineered RL frameworks. The code is available at https://github.com/TinyLoopX/RLLaVA.",
+    "authors": [
+      "Lei Zhao",
+      "Zihao Ma",
+      "Boyu Lin",
+      "Yuhe Liu",
+      "Wenjun Wu",
+      "Lei Huang"
+    ],
+    "published": "2025-12-25",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.21450v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.21450v1",
+    "fetched_at": "2025-12-29T08:37:18.103542"
+  },
+  {
+    "id": "2512.21440v1",
+    "title": "Fuzzwise: Intelligent Initial Corpus Generation for Fuzzing",
+    "abstract": "In mutation-based greybox fuzzing, generating high-quality input seeds for the initial corpus is essential for effective fuzzing. Rather than conducting separate phases for generating a large corpus and subsequently minimizing it, we propose FuzzWise which integrates them into one process to generate the optimal initial corpus of seeds (ICS). FuzzWise leverages a multi-agent framework based on Large Language Models (LLMs). The first LLM agent generates test cases for the target program. The second LLM agent, which functions as a predictive code coverage module, assesses whether each generated test case will enhance the overall coverage of the current corpus. The streamlined process allows each newly generated test seed to be immediately evaluated for its contribution to the overall coverage. FuzzWise employs a predictive approach using an LLM and eliminates the need for actual execution, saving computational resources and time, particularly in scenarios where the execution is not desirable or even impossible. Our empirical evaluation demonstrates that FuzzWise generates significantly fewer test cases than baseline methods. Despite the lower number of test cases, FuzzWise achieves high code coverage and triggers more runtime errors compared to the baselines. Moreover, it is more time-efficient and coverage-efficient in producing an initial corpus catching more errors.",
+    "authors": [
+      "Hridya Dhulipala",
+      "Xiaokai Rong",
+      "Aashish Yadavally",
+      "Tien N. Nguyen"
+    ],
+    "published": "2025-12-24",
+    "categories": [
+      "cs.SE",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.21440v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.21440v1",
+    "fetched_at": "2025-12-29T08:37:18.103564"
+  },
+  {
+    "id": "2512.21572v1",
+    "title": "RefineBridge: Generative Bridge Models Improve Financial Forecasting by Foundation Models",
+    "abstract": "Financial time series forecasting is particularly challenging for transformer-based time series foundation models (TSFMs) due to non-stationarity, heavy-tailed distributions, and high-frequency noise present in data. Low-rank adaptation (LoRA) has become a popular parameter-efficient method for adapting pre-trained TSFMs to downstream data domains. However, it still underperforms in financial data, as it preserves the network architecture and training objective of TSFMs rather than complementing the foundation model. To further enhance TSFMs, we propose a novel refinement module, RefineBridge, built upon a tractable Schrödinger Bridge (SB) generative framework. Given the forecasts of TSFM as generative prior and the observed ground truths as targets, RefineBridge learns context-conditioned stochastic transport maps to improve TSFM predictions, iteratively approaching the ground-truth target from even a low-quality prior. Simulations on multiple financial benchmarks demonstrate that RefineBridge consistently improves the performance of state-of-the-art TSFMs across different prediction horizons.",
+    "authors": [
+      "Anthony Bolton",
+      "Wuyang Zhou",
+      "Zehua Chen",
+      "Giorgos Iacovides",
+      "Danilo Mandic"
+    ],
+    "published": "2025-12-25",
+    "categories": [
+      "cs.LG",
+      "eess.SP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.21572v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.21572v1",
+    "fetched_at": "2025-12-29T08:38:10.530273"
+  },
+  {
+    "id": "2512.21878v1",
+    "title": "MASFIN: A Multi-Agent System for Decomposed Financial Reasoning and Forecasting",
+    "abstract": "Recent advances in large language models (LLMs) are transforming data-intensive domains, with finance representing a high-stakes environment where transparent and reproducible analysis of heterogeneous signals is essential. Traditional quantitative methods remain vulnerable to survivorship bias, while many AI-driven approaches struggle with signal integration, reproducibility, and computational efficiency. We introduce MASFIN, a modular multi-agent framework that integrates LLMs with structured financial metrics and unstructured news, while embedding explicit bias-mitigation protocols. The system leverages GPT-4.1-nano for reproducability and cost-efficient inference and generates weekly portfolios of 15-30 equities with allocation weights optimized for short-term performance. In an eight-week evaluation, MASFIN delivered a 7.33% cumulative return, outperforming the S&P 500, NASDAQ-100, and Dow Jones benchmarks in six of eight weeks, albeit with higher volatility. These findings demonstrate the promise of bias-aware, generative AI frameworks for financial forecasting and highlight opportunities for modular multi-agent design to advance practical, transparent, and reproducible approaches in quantitative finance.",
+    "authors": [
+      "Marc S. Montalvo",
+      "Hamed Yaghoobian"
+    ],
+    "published": "2025-12-26",
+    "categories": [
+      "cs.MA",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.21878v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.21878v1",
+    "fetched_at": "2025-12-29T08:39:11.047782"
+  }
+]
