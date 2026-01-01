@@ -1,0 +1,732 @@
+[
+  {
+    "id": "2512.25017v1",
+    "title": "Convergence of the generalization error for deep gradient flow methods for PDEs",
+    "abstract": "The aim of this article is to provide a firm mathematical foundation for the application of deep gradient flow methods (DGFMs) for the solution of (high-dimensional) partial differential equations (PDEs). We decompose the generalization error of DGFMs into an approximation and a training error. We first show that the solution of PDEs that satisfy reasonable and verifiable assumptions can be approximated by neural networks, thus the approximation error tends to zero as the number of neurons tends to infinity. Then, we derive the gradient flow that the training process follows in the ``wide network limit'' and analyze the limit of this flow as the training time tends to infinity. These results combined show that the generalization error of DGFMs tends to zero as the number of neurons and the training time tend to infinity.",
+    "authors": [
+      "Chenguang Liu",
+      "Antonis Papapantoleon",
+      "Jasper Rou"
+    ],
+    "published": "2025-12-31",
+    "categories": [
+      "math.NA",
+      "cs.LG",
+      "q-fin.CP",
+      "stat.ML"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.25017v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.25017v1",
+    "fetched_at": "2026-01-01T08:33:55.233850"
+  },
+  {
+    "id": "2512.24906v1",
+    "title": "Stochastic factors can matter: improving robust growth under ergodicity",
+    "abstract": "Drifts of asset returns are notoriously difficult to model accurately and, yet, trading strategies obtained from portfolio optimization are very sensitive to them. To mitigate this well-known phenomenon we study robust growth-optimization in a high-dimensional incomplete market under drift uncertainty of the asset price process $X$, under an additional ergodicity assumption, which constrains but does not fully specify the drift in general. The class of admissible models allows $X$ to depend on a multivariate stochastic factor $Y$ and fixes (a) their joint volatility structure, (b) their long-term joint ergodic density and (c) the dynamics of the stochastic factor process $Y$. A principal motivation of this framework comes from pairs trading, where $X$ is the spread process and models with the above characteristics are commonplace. Our main results determine the robust optimal growth rate, construct a worst-case admissible model and characterize the robust growth-optimal strategy via a solution to a certain partial differential equation (PDE). We demonstrate that utilizing the stochastic factor leads to improvement in robust growth complementing the conclusions of the previous study by Itkin et. al. (arXiv:2211.15628 [q-fin.MF], forthcoming in $\\textit{Finance and Stochastics}$), which additionally robustified the dynamics of the stochastic factor leading to $Y$-independent optimal strategies. Our analysis leads to new financial insights, quantifying the improvement in growth the investor can achieve by optimally incorporating stochastic factors into their trading decisions. We illustrate our theoretical results on several numerical examples including an application to pairs trading.",
+    "authors": [
+      "Balint Binkert",
+      "David Itkin",
+      "Paul Mangers Bastian",
+      "Josef Teichmann"
+    ],
+    "published": "2025-12-31",
+    "categories": [
+      "q-fin.MF",
+      "math.PR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.24906v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.24906v1",
+    "fetched_at": "2026-01-01T08:33:55.233890"
+  },
+  {
+    "id": "2512.24747v1",
+    "title": "Fairness-Aware Insurance Pricing: A Multi-Objective Optimization Approach",
+    "abstract": "Machine learning improves predictive accuracy in insurance pricing but exacerbates trade-offs between competing fairness criteria across different discrimination measures, challenging regulators and insurers to reconcile profitability with equitable outcomes. While existing fairness-aware models offer partial solutions under GLM and XGBoost estimation methods, they remain constrained by single-objective optimization, failing to holistically navigate a conflicting landscape of accuracy, group fairness, individual fairness, and counterfactual fairness. To address this, we propose a novel multi-objective optimization framework that jointly optimizes all four criteria via the Non-dominated Sorting Genetic Algorithm II (NSGA-II), generating a diverse Pareto front of trade-off solutions. We use a specific selection mechanism to extract a premium on this front. Our results show that XGBoost outperforms GLM in accuracy but amplifies fairness disparities; the Orthogonal model excels in group fairness, while Synthetic Control leads in individual and counterfactual fairness. Our method consistently achieves a balanced compromise, outperforming single-model approaches.",
+    "authors": [
+      "Tim J. Boonen",
+      "Xinyue Fan",
+      "Zixiao Quan"
+    ],
+    "published": "2025-12-31",
+    "categories": [
+      "q-fin.RM",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.24747v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.24747v1",
+    "fetched_at": "2026-01-01T08:33:55.233917"
+  },
+  {
+    "id": "2512.24714v1",
+    "title": "Boundary error control for numerical solution of BSDEs by the convolution-FFT method",
+    "abstract": "We first review the convolution fast-Fourier-transform (CFFT) approach for the numerical solution of backward stochastic differential equations (BSDEs) introduced in (Hyndman and Oyono Ngou, 2017). We then propose a method for improving the boundary errors obtained when valuing options using this approach. We modify the damping and shifting schemes used in the original formulation, which transforms the target function into a bounded periodic function so that Fourier transforms can be applied successfully. Time-dependent shifting reduces boundary error significantly. We present numerical results for our implementation and provide a detailed error analysis showing the improved accuracy and convergence of the modified convolution method.",
+    "authors": [
+      "Xiang Gao",
+      "Cody Hyndman"
+    ],
+    "published": "2025-12-31",
+    "categories": [
+      "math.NA",
+      "math.PR",
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.24714v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.24714v1",
+    "fetched_at": "2026-01-01T08:33:55.233938"
+  },
+  {
+    "id": "2512.24621v1",
+    "title": "Forward-Oriented Causal Observables for Non-Stationary Financial Markets",
+    "abstract": "We study short-horizon forecasting in financial time series under strict causal constraints, treating the market as a non-stationary stochastic system in which any predictive observable must be computable online from information available up to the decision time. Rather than proposing a machine-learning predictor or a direct price-forecast model, we focus on \\emph{constructing} an interpretable causal signal from heterogeneous micro-features that encode complementary aspects of the dynamics (momentum, volume pressure, trend acceleration, and volatility-normalized price location). The construction combines (i) causal centering, (ii) linear aggregation into a composite observable, (iii) causal stabilization via a one-dimensional Kalman filter, and (iv) an adaptive ``forward-like'' operator that mixes the composite signal with a smoothed causal derivative term. The resulting observable is mapped into a transparent decision functional and evaluated through realized cumulative returns and turnover. An application to high-frequency EURUSDT (1-minute) illustrates that causally constructed observables can exhibit substantial economic relevance in specific regimes, while degrading under subsequent regime shifts, highlighting both the potential and the limitations of causal signal design in non-stationary markets.",
+    "authors": [
+      "Lucas A. Souza"
+    ],
+    "published": "2025-12-31",
+    "categories": [
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.24621v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.24621v1",
+    "fetched_at": "2026-01-01T08:33:55.233957"
+  },
+  {
+    "id": "2512.24580v1",
+    "title": "Robust Bayesian Dynamic Programming for On-policy Risk-sensitive Reinforcement Learning",
+    "abstract": "We propose a novel framework for risk-sensitive reinforcement learning (RSRL) that incorporates robustness against transition uncertainty. We define two distinct yet coupled risk measures: an inner risk measure addressing state and cost randomness and an outer risk measure capturing transition dynamics uncertainty. Our framework unifies and generalizes most existing RL frameworks by permitting general coherent risk measures for both inner and outer risk measures. Within this framework, we construct a risk-sensitive robust Markov decision process (RSRMDP), derive its Bellman equation, and provide error analysis under a given posterior distribution. We further develop a Bayesian Dynamic Programming (Bayesian DP) algorithm that alternates between posterior updates and value iteration. The approach employs an estimator for the risk-based Bellman operator that combines Monte Carlo sampling with convex optimization, for which we prove strong consistency guarantees. Furthermore, we demonstrate that the algorithm converges to a near-optimal policy in the training environment and analyze both the sample complexity and the computational complexity under the Dirichlet posterior and CVaR. Finally, we validate our approach through two numerical experiments. The results exhibit excellent convergence properties while providing intuitive demonstrations of its advantages in both risk-sensitivity and robustness. Empirically, we further demonstrate the advantages of the proposed algorithm through an application on option hedging.",
+    "authors": [
+      "Shanyu Han",
+      "Yangbo He",
+      "Yang Liu"
+    ],
+    "published": "2025-12-31",
+    "categories": [
+      "q-fin.RM",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.24580v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.24580v1",
+    "fetched_at": "2026-01-01T08:33:55.233979"
+  },
+  {
+    "id": "2512.24526v1",
+    "title": "Generative AI-enhanced Sector-based Investment Portfolio Construction",
+    "abstract": "This paper investigates how Large Language Models (LLMs) from leading providers (OpenAI, Google, Anthropic, DeepSeek, and xAI) can be applied to quantitative sector-based portfolio construction. We use LLMs to identify investable universes of stocks within S&P 500 sector indices and evaluate how their selections perform when combined with classical portfolio optimization methods. Each model was prompted to select and weight 20 stocks per sector, and the resulting portfolios were compared with their respective sector indices across two distinct out-of-sample periods: a stable market phase (January-March 2025) and a volatile phase (April-June 2025).   Our results reveal a strong temporal dependence in LLM portfolio performance. During stable market conditions, LLM-weighted portfolios frequently outperformed sector indices on both cumulative return and risk-adjusted (Sharpe ratio) measures. However, during the volatile period, many LLM portfolios underperformed, suggesting that current models may struggle to adapt to regime shifts or high-volatility environments underrepresented in their training data. Importantly, when LLM-based stock selection is combined with traditional optimization techniques, portfolio outcomes improve in both performance and consistency.   This study contributes one of the first multi-model, cross-provider evaluations of generative AI algorithms in investment management. It highlights that while LLMs can effectively complement quantitative finance by enhancing stock selection and interpretability, their reliability remains market-dependent. The findings underscore the potential of hybrid AI-quantitative frameworks, integrating LLM reasoning with established optimization techniques, to produce more robust and adaptive investment strategies.",
+    "authors": [
+      "Alina Voronina",
+      "Oleksandr Romanko",
+      "Ruiwen Cao",
+      "Roy H. Kwon",
+      "Rafael Mendoza-Arriaga"
+    ],
+    "published": "2025-12-31",
+    "categories": [
+      "q-fin.PM",
+      "cs.AI",
+      "cs.CE",
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.24526v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.24526v1",
+    "fetched_at": "2026-01-01T08:33:55.234008"
+  },
+  {
+    "id": "2512.24491v1",
+    "title": "Minimal Solutions to the Skorokhod Reflection Problem Driven by Jump Processes and an Application to Reinsurance",
+    "abstract": "We consider a reflected process in the positive orthant driven by an exogenous jump process. For a given input process, we show that there exists a unique minimal strong solution to the given particle system up until a certain maximal stopping time, which is stated explicitly in terms of the dual formulation of a linear programming problem associated with the state of the system. We apply this model to study the ruin time of interconnected insurance firms, where the stopping time can be interpreted as the failure time of a reinsurance agreement between the firms. Our work extends the analysis of the particle system in Baker, Hambly, and Jettkant (2025) to the case of jump driving processes, and the existence result of Reiman (1984) beyond the case of sub-stochastic reflection matrices.",
+    "authors": [
+      "Graeme Baker",
+      "Ankita Chatterjee"
+    ],
+    "published": "2025-12-30",
+    "categories": [
+      "math.PR",
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.24491v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.24491v1",
+    "fetched_at": "2026-01-01T08:33:55.234034"
+  },
+  {
+    "id": "2512.24371v1",
+    "title": "Utility Maximisation with Model-independent Constraints",
+    "abstract": "We consider an agent who has access to a financial market, including derivative contracts, who looks to maximise her utility. Whilst the agent looks to maximise utility over one probability measure, or class of probability measures, she must also ensure that the mark-to-market value of her portfolio remains above a given threshold. When the mark-to-market value is based on a more pessimistic valuation method, such as model-independent bounds, we recover a novel optimisation problem for the agent where the agents investment problem must satisfy a pathwise constraint.   For complete markets, the expression of the optimal terminal wealth is given, using the max-plus decomposition for supermartingales. Moreover, for the Black-Scholes-Merton model the explicit form of the process involved in such decomposition is obtained, and we are able to investigate numerically optimal portfolios in the presence of options which are mispriced according to the agent's beliefs.",
+    "authors": [
+      "Alexander M. G. Cox",
+      "Daniel Hernandez-Hernandez"
+    ],
+    "published": "2025-12-30",
+    "categories": [
+      "q-fin.MF",
+      "q-fin.PM",
+      "q-fin.RM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.24371v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.24371v1",
+    "fetched_at": "2026-01-01T08:33:55.234058"
+  },
+  {
+    "id": "2512.23847v1",
+    "title": "A Test of Lookahead Bias in LLM Forecasts",
+    "abstract": "We develop a statistical test to detect lookahead bias in economic forecasts generated by large language models (LLMs). Using state-of-the-art pre-training data detection techniques, we estimate the likelihood that a given prompt appeared in an LLM's training corpus, a statistic we term Lookahead Propensity (LAP). We formally show that a positive correlation between LAP and forecast accuracy indicates the presence and magnitude of lookahead bias, and apply the test to two forecasting tasks: news headlines predicting stock returns and earnings call transcripts predicting capital expenditures. Our test provides a cost-efficient, diagnostic tool for assessing the validity and reliability of LLM-generated forecasts.",
+    "authors": [
+      "Zhenyu Gao",
+      "Wenxi Jiang",
+      "Yutong Yan"
+    ],
+    "published": "2025-12-29",
+    "categories": [
+      "q-fin.GN",
+      "cs.LG",
+      "q-fin.TR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.23847v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.23847v1",
+    "fetched_at": "2026-01-01T08:33:55.234080"
+  },
+  {
+    "id": "2512.23139v2",
+    "title": "Lambda Expected Shortfall",
+    "abstract": "The Lambda Value-at-Risk (Lambda$-VaR) is a generalization of the Value-at-Risk (VaR), which has been actively studied in quantitative finance. Over the past two decades, the Expected Shortfall (ES) has become one of the most important risk measures alongside VaR because of its various desirable properties in the practice of optimization, risk management, and financial regulation. Analogously to the intimate relation between ES and VaR, we introduce the Lambda Expected Shortfall (Lambda-ES), as a generalization of ES and a counterpart to Lambda-VaR. Our definition of Lambda-ES has an explicit formula and many convenient properties, and we show that it is the smallest quasi-convex and law-invariant risk measure dominating Lambda-VaR under mild assumptions. We examine further properties of Lambda-ES, its dual representation, and related optimization problems.",
+    "authors": [
+      "Fabio Bellini",
+      "Muqiao Huang",
+      "Qiuqi Wang",
+      "Ruodu Wang"
+    ],
+    "published": "2025-12-29",
+    "categories": [
+      "q-fin.MF",
+      "math.PR",
+      "q-fin.RM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.23139v2",
+    "arxiv_url": "https://arxiv.org/abs/2512.23139v2",
+    "fetched_at": "2026-01-01T08:33:55.234247"
+  },
+  {
+    "id": "2512.21823v2",
+    "title": "Investigating Conditional Restricted Boltzmann Machines in Regime Detection",
+    "abstract": "This study investigates the efficacy of Conditional Restricted Boltzmann Machines (CRBMs) for modeling high-dimensional financial time series and detecting systemic risk regimes. We extend the classical application of static Restricted Boltzmann Machines (RBMs) by incorporating autoregressive conditioning and utilizing Persistent Contrastive Divergence (PCD) to incorporate complex temporal dependency structures. Comparing a discrete Bernoulli-Bernoulli architecture against a continuous Gaussian-Bernoulli variant across a multi-asset dataset spanning 2013-2025, we observe a dichotomy between generative fidelity and regime detection. While the Gaussian CRBM successfully preserves static asset correlations, it exhibits limitations in generating long-range volatility clustering. Thus, we analyze the free energy as a relative negative log-likelihood (surprisal) under a fixed, trained model. We demonstrate that the model's free energy serves as a robust, regime stability metric. By decomposing the free energy into quadratic (magnitude) and structural (correlation) components, we show that the model can distinguish between pure magnitude shocks and market regimes. Our findings suggest that the CRBM offers a valuable, interpretable diagnostic tool for monitoring systemic risk, providing a supplemental metric to implied volatility metrics like the VIX.",
+    "authors": [
+      "Siddhartha Srinivas Rentala"
+    ],
+    "published": "2025-12-26",
+    "categories": [
+      "q-fin.ST"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.21823v2",
+    "arxiv_url": "https://arxiv.org/abs/2512.21823v2",
+    "fetched_at": "2026-01-01T08:33:55.234454"
+  },
+  {
+    "id": "2512.24492v1",
+    "title": "Automated Classification of First-Trimester Fetal Heart Views Using Ultrasound-Specific Self-Supervised Learning",
+    "abstract": "Congenital heart disease remains the most common congenital anomaly and a leading cause of neonatal morbidity and mortality. Although first-trimester fetal echocardiography offers an opportunity for earlier detection, automated analysis at this stage is challenging due to small cardiac structures, low signal-to-noise ratio, and substantial inter-operator variability. In this work, we evaluate a self-supervised ultrasound foundation model, USF-MAE, for first-trimester fetal heart view classification. USF-MAE is pretrained using masked autoencoding modelling on more than 370,000 unlabelled ultrasound images spanning over 40 anatomical regions and is subsequently fine-tuned for downstream classification. As a proof of concept, the pretrained Vision Transformer encoder was fine-tuned on an open-source dataset of 6,720 first-trimester fetal echocardiography images to classify five categories: aorta, atrioventricular flows, V sign, X sign, and Other. Model performance was benchmarked against supervised convolutional neural network baselines (ResNet-18 and ResNet-50) and a Vision Transformer (ViT-B/16) model pretrained on natural images (ImageNet-1k). All models were trained and evaluated using identical preprocessing, data splits, and optimization protocols. On an independent test set, USF-MAE achieved the highest performance across all evaluation metrics, with 90.57% accuracy, 91.15% precision, 90.57% recall, and 90.71% F1-score. This represents an improvement of +2.03% in accuracy and +1.98% in F1-score compared with the strongest baseline, ResNet-18. The proposed approach demonstrated robust performance without reliance on aggressive image preprocessing or region-of-interest cropping and showed improved discrimination of non-diagnostic frames.",
+    "authors": [
+      "Youssef Megahed",
+      "Aylin Erman",
+      "Robin Ducharme",
+      "Mark C. Walker",
+      "Steven Hawken",
+      "Adrian D. C. Chan"
+    ],
+    "published": "2025-12-30",
+    "categories": [
+      "eess.IV",
+      "cs.AI",
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.24492v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.24492v1",
+    "fetched_at": "2026-01-01T08:34:08.566262"
+  },
+  {
+    "id": "2512.24470v1",
+    "title": "Foundation models on the bridge: Semantic hazard detection and safety maneuvers for maritime autonomy with vision-language models",
+    "abstract": "The draft IMO MASS Code requires autonomous and remotely supervised maritime vessels to detect departures from their operational design domain, enter a predefined fallback that notifies the operator, permit immediate human override, and avoid changing the voyage plan without approval. Meeting these obligations in the alert-to-takeover gap calls for a short-horizon, human-overridable fallback maneuver. Classical maritime autonomy stacks struggle when the correct action depends on meaning (e.g., diver-down flag means people in the water, fire close by means hazard). We argue (i) that vision-language models (VLMs) provide semantic awareness for such out-of-distribution situations, and (ii) that a fast-slow anomaly pipeline with a short-horizon, human-overridable fallback maneuver makes this practical in the handover window. We introduce Semantic Lookout, a camera-only, candidate-constrained vision-language model (VLM) fallback maneuver selector that selects one cautious action (or station-keeping) from water-valid, world-anchored trajectories under continuous human authority. On 40 harbor scenes we measure per-call scene understanding and latency, alignment with human consensus (model majority-of-three voting), short-horizon risk-relief on fire hazard scenes, and an on-water alert->fallback maneuver->operator handover. Sub-10 s models retain most of the awareness of slower state-of-the-art models. The fallback maneuver selector outperforms geometry-only baselines and increases standoff distance on fire scenes. A field run verifies end-to-end operation. These results support VLMs as semantic fallback maneuver selectors compatible with the draft IMO MASS Code, within practical latency budgets, and motivate future work on domain-adapted, hybrid autonomy that pairs foundation-model semantics with multi-sensor bird's-eye-view perception and short-horizon replanning.",
+    "authors": [
+      "Kim Alexander Christensen",
+      "Andreas Gudahl Tufte",
+      "Alexey Gusev",
+      "Rohan Sinha",
+      "Milan Ganai",
+      "Ole Andreas Alsos",
+      "Marco Pavoned",
+      "Martin Steinert"
+    ],
+    "published": "2025-12-30",
+    "categories": [
+      "cs.RO",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.24470v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.24470v1",
+    "fetched_at": "2026-01-01T08:34:08.566305"
+  },
+  {
+    "id": "2512.24290v1",
+    "title": "Fast reconstruction-based ROI triggering via anomaly detection in the CYGNO optical TPC",
+    "abstract": "Optical-readout Time Projection Chambers (TPCs) produce megapixel-scale images whose fine-grained topological information is essential for rare-event searches, but whose size challenges real-time data selection. We present an unsupervised, reconstruction-based anomaly-detection strategy for fast Region-of-Interest (ROI) extraction that operates directly on minimally processed camera frames. A convolutional autoencoder trained exclusively on pedestal images learns the detector noise morphology without labels, simulation, or fine-grained calibration. Applied to standard data-taking frames, localized reconstruction residuals identify particle-induced structures, from which compact ROIs are extracted via thresholding and spatial clustering. Using real data from the CYGNO optical TPC prototype, we compare two pedestal-trained autoencoder configurations that differ only in their training objective, enabling a controlled study of its impact. The best configuration retains (93.0 +/- 0.2)% of reconstructed signal intensity while discarding (97.8 +/- 0.1)% of the image area, with an inference time of approximately 25 ms per frame on a consumer GPU. The results demonstrate that careful design of the training objective is critical for effective reconstruction-based anomaly detection and that pedestal-trained autoencoders provide a transparent and detector-agnostic baseline for online data reduction in optical TPCs.",
+    "authors": [
+      "F. D. Amaro",
+      "R. Antonietti",
+      "E. Baracchini",
+      "L. Benussi",
+      "C. Capoccia",
+      "M. Caponero",
+      "L. G. M. de Carvalho",
+      "G. Cavoto",
+      "I. A. Costa",
+      "A. Croce",
+      "M. D'Astolfo",
+      "G. D'Imperio",
+      "G. Dho",
+      "E. Di Marco",
+      "J. M. F. dos Santos",
+      "D. Fiorina",
+      "F. Iacoangeli",
+      "Z. Islam",
+      "E. Kemp",
+      "H. P. Lima",
+      "G. Maccarrone",
+      "R. D. P. Mano",
+      "D. J. G. Marques",
+      "G. Mazzitelli",
+      "P. Meloni",
+      "A. Messina",
+      "V. Monno",
+      "C. M. B. Monteiro",
+      "R. A. Nobrega",
+      "G. M. Oppedisano",
+      "I. F. Pains",
+      "E. Paoletti",
+      "F. Petrucci",
+      "S. Piacentini",
+      "D. Pierluigi",
+      "D. Pinci",
+      "F. Renga",
+      "A. Russo",
+      "G. Saviano",
+      "P. A. O. C. Silva",
+      "N. J. Spooner",
+      "R. Tesauro",
+      "S. Tomassini",
+      "D. Tozzi"
+    ],
+    "published": "2025-12-30",
+    "categories": [
+      "physics.ins-det",
+      "cs.LG",
+      "physics.data-an"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.24290v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.24290v1",
+    "fetched_at": "2026-01-01T08:34:08.566397"
+  },
+  {
+    "id": "2512.23777v1",
+    "title": "A Survey on Graph Neural Networks for Fraud Detection in Ride Hailing Platforms",
+    "abstract": "This study investigates fraud detection in ride hailing platforms through Graph Neural Networks (GNNs),focusing on the effectiveness of various models. By analyzing prevalent fraudulent activities, the research highlights and compares the existing work related to fraud detection which can be useful when addressing fraudulent incidents within the online ride hailing platforms. Also, the paper highlights addressing class imbalance and fraudulent camouflage. It also outlines a structured overview of GNN architectures and methodologies applied to anomaly detection, identifying significant methodological progress and gaps. The paper calls for further exploration into real-world applicability and technical improvements to enhance fraud detection strategies in the rapidly evolving ride-hailing industry.",
+    "authors": [
+      "Kanishka Hewageegana",
+      "Janani Harischandra",
+      "Nipuna Senanayake",
+      "Gihan Danansuriya",
+      "Kavindu Hapuarachchi",
+      "Pooja Illangarathne"
+    ],
+    "published": "2025-12-29",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.23777v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.23777v1",
+    "fetched_at": "2026-01-01T08:34:08.566443"
+  },
+  {
+    "id": "2512.25065v1",
+    "title": "Vulcan: Instance-Optimal Systems Heuristics Through LLM-Driven Search",
+    "abstract": "Resource-management tasks in modern operating and distributed systems continue to rely primarily on hand-designed heuristics for tasks such as scheduling, caching, or active queue management. Designing performant heuristics is an expensive, time-consuming process that we are forced to continuously go through due to the constant flux of hardware, workloads and environments.   We propose a new alternative: synthesizing instance-optimal heuristics -- specialized for the exact workloads and hardware where they will be deployed -- using code-generating large language models (LLMs). To make this synthesis tractable, Vulcan separates policy and mechanism through LLM-friendly, task-agnostic interfaces. With these interfaces, users specify the inputs and objectives of their desired policy, while Vulcan searches for performant policies via evolutionary search over LLM-generated code. This interface is expressive enough to capture a wide range of system policies, yet sufficiently constrained to allow even small, inexpensive LLMs to generate correct and executable code.   We use Vulcan to synthesize performant heuristics for cache eviction and memory tiering, and find that these heuristics outperform all human-designed state-of-the-art algorithms by upto 69% and 7.9% in performance for each of these tasks respectively.",
+    "authors": [
+      "Rohit Dwivedula",
+      "Divyanshu Saxena",
+      "Sujay Yadalam",
+      "Daehyeok Kim",
+      "Aditya Akella"
+    ],
+    "published": "2025-12-31",
+    "categories": [
+      "cs.OS",
+      "cs.AI",
+      "cs.DC"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.25065v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.25065v1",
+    "fetched_at": "2026-01-01T08:34:38.300311"
+  },
+  {
+    "id": "2512.24997v1",
+    "title": "Classifying long legal documents using short random chunks",
+    "abstract": "Classifying legal documents is a challenge, besides their specialized vocabulary, sometimes they can be very long. This means that feeding full documents to a Transformers-based models for classification might be impossible, expensive or slow. Thus, we present a legal document classifier based on DeBERTa V3 and a LSTM, that uses as input a collection of 48 randomly-selected short chunks (max 128 tokens). Besides, we present its deployment pipeline using Temporal, a durable execution solution, which allow us to have a reliable and robust processing workflow. The best model had a weighted F-score of 0.898, while the pipeline running on CPU had a processing median time of 498 seconds per 100 files.",
+    "authors": [
+      "Luis Adrián Cabrera-Diego"
+    ],
+    "published": "2025-12-31",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.24997v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.24997v1",
+    "fetched_at": "2026-01-01T08:34:38.300340"
+  },
+  {
+    "id": "2512.24914v1",
+    "title": "AI-Driven Cloud Resource Optimization for Multi-Cluster Environments",
+    "abstract": "Modern cloud-native systems increasingly rely on multi-cluster deployments to support scalability, resilience, and geographic distribution. However, existing resource management approaches remain largely reactive and cluster-centric, limiting their ability to optimize system-wide behavior under dynamic workloads. These limitations result in inefficient resource utilization, delayed adaptation, and increased operational overhead across distributed environments. This paper presents an AI-driven framework for adaptive resource optimization in multi-cluster cloud systems. The proposed approach integrates predictive learning, policy-aware decision-making, and continuous feedback to enable proactive and coordinated resource management across clusters. By analyzing cross-cluster telemetry and historical execution patterns, the framework dynamically adjusts resource allocation to balance performance, cost, and reliability objectives. A prototype implementation demonstrates improved resource efficiency, faster stabilization during workload fluctuations, and reduced performance variability compared to conventional reactive approaches. The results highlight the effectiveness of intelligent, self-adaptive infrastructure management as a key enabler for scalable and resilient cloud platforms.",
+    "authors": [
+      "Vinoth Punniyamoorthy",
+      "Akash Kumar Agarwal",
+      "Bikesh Kumar",
+      "Abhirup Mazumder",
+      "Kabilan Kannan",
+      "Sumit Saha"
+    ],
+    "published": "2025-12-31",
+    "categories": [
+      "cs.DC",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.24914v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.24914v1",
+    "fetched_at": "2026-01-01T08:34:38.300378"
+  },
+  {
+    "id": "2512.24885v1",
+    "title": "BEDA: Belief Estimation as Probabilistic Constraints for Performing Strategic Dialogue Acts",
+    "abstract": "Strategic dialogue requires agents to execute distinct dialogue acts, for which belief estimation is essential. While prior work often estimates beliefs accurately, it lacks a principled mechanism to use those beliefs during generation. We bridge this gap by first formalizing two core acts Adversarial and Alignment, and by operationalizing them via probabilistic constraints on what an agent may generate. We instantiate this idea in BEDA, a framework that consists of the world set, the belief estimator for belief estimation, and the conditional generator that selects acts and realizes utterances consistent with the inferred beliefs. Across three settings, Conditional Keeper Burglar (CKBG, adversarial), Mutual Friends (MF, cooperative), and CaSiNo (negotiation), BEDA consistently outperforms strong baselines: on CKBG it improves success rate by at least 5.0 points across backbones and by 20.6 points with GPT-4.1-nano; on Mutual Friends it achieves an average improvement of 9.3 points; and on CaSiNo it achieves the optimal deal relative to all baselines. These results indicate that casting belief estimation as constraints provides a simple, general mechanism for reliable strategic dialogue.",
+    "authors": [
+      "Hengli Li",
+      "Zhaoxin Yu",
+      "Qi Shen",
+      "Chenxi Li",
+      "Mengmeng Wang",
+      "Tinglang Wu",
+      "Yipeng Kang",
+      "Yuxuan Wang",
+      "Song-Chun Zhu",
+      "Zixia Jia",
+      "Zilong Zheng"
+    ],
+    "published": "2025-12-31",
+    "categories": [
+      "cs.CL",
+      "cs.GT",
+      "cs.MA"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.24885v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.24885v1",
+    "fetched_at": "2026-01-01T08:34:38.300414"
+  },
+  {
+    "id": "2512.24766v1",
+    "title": "Dream2Flow: Bridging Video Generation and Open-World Manipulation with 3D Object Flow",
+    "abstract": "Generative video modeling has emerged as a compelling tool to zero-shot reason about plausible physical interactions for open-world manipulation. Yet, it remains a challenge to translate such human-led motions into the low-level actions demanded by robotic systems. We observe that given an initial image and task instruction, these models excel at synthesizing sensible object motions. Thus, we introduce Dream2Flow, a framework that bridges video generation and robotic control through 3D object flow as an intermediate representation. Our method reconstructs 3D object motions from generated videos and formulates manipulation as object trajectory tracking. By separating the state changes from the actuators that realize those changes, Dream2Flow overcomes the embodiment gap and enables zero-shot guidance from pre-trained video models to manipulate objects of diverse categories-including rigid, articulated, deformable, and granular. Through trajectory optimization or reinforcement learning, Dream2Flow converts reconstructed 3D object flow into executable low-level commands without task-specific demonstrations. Simulation and real-world experiments highlight 3D object flow as a general and scalable interface for adapting video generation models to open-world robotic manipulation. Videos and visualizations are available at https://dream2flow.github.io/.",
+    "authors": [
+      "Karthik Dharmarajan",
+      "Wenlong Huang",
+      "Jiajun Wu",
+      "Li Fei-Fei",
+      "Ruohan Zhang"
+    ],
+    "published": "2025-12-31",
+    "categories": [
+      "cs.RO",
+      "cs.AI",
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.24766v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.24766v1",
+    "fetched_at": "2026-01-01T08:34:38.300440"
+  },
+  {
+    "id": "2512.24687v1",
+    "title": "Quantum Visual Word Sense Disambiguation: Unraveling Ambiguities Through Quantum Inference Model",
+    "abstract": "Visual word sense disambiguation focuses on polysemous words, where candidate images can be easily confused. Traditional methods use classical probability to calculate the likelihood of an image matching each gloss of the target word, summing these to form a posterior probability. However, due to the challenge of semantic uncertainty, glosses from different sources inevitably carry semantic biases, which can lead to biased disambiguation results. Inspired by quantum superposition in modeling uncertainty, this paper proposes a Quantum Inference Model for Unsupervised Visual Word Sense Disambiguation (Q-VWSD). It encodes multiple glosses of the target word into a superposition state to mitigate semantic biases. Then, the quantum circuit is executed, and the results are observed. By formalizing our method, we find that Q-VWSD is a quantum generalization of the method based on classical probability. Building on this, we further designed a heuristic version of Q-VWSD that can run more efficiently on classical computing. The experiments demonstrate that our method outperforms state-of-the-art classical methods, particularly by effectively leveraging non-specialized glosses from large language models, which further enhances performance. Our approach showcases the potential of quantum machine learning in practical applications and provides a case for leveraging quantum modeling advantages on classical computers while quantum hardware remains immature.",
+    "authors": [
+      "Wenbo Qiao",
+      "Peng Zhang",
+      "Qinghua Hu"
+    ],
+    "published": "2025-12-31",
+    "categories": [
+      "quant-ph",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.24687v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.24687v1",
+    "fetched_at": "2026-01-01T08:34:38.300463"
+  },
+  {
+    "id": "2512.24673v1",
+    "title": "VLA-RAIL: A Real-Time Asynchronous Inference Linker for VLA Models and Robots",
+    "abstract": "Vision-Language-Action (VLA) models have achieved remarkable breakthroughs in robotics, with the action chunk playing a dominant role in these advances. Given the real-time and continuous nature of robotic motion control, the strategies for fusing a queue of successive action chunks have a profound impact on the overall performance of VLA models. Existing methods suffer from jitter, stalling, or even pauses in robotic action execution, which not only limits the achievable execution speed but also reduces the overall success rate of task completion. This paper introduces VLA-RAIL (A Real-Time Asynchronous Inference Linker), a novel framework designed to address these issues by conducting model inference and robot motion control asynchronously and guaranteeing smooth, continuous, and high-speed action execution. The core contributions of the paper are two fold: a Trajectory Smoother that effectively filters out the noise and jitter in the trajectory of one action chunk using polynomial fitting and a Chunk Fuser that seamlessly align the current executing trajectory and the newly arrived chunk, ensuring position, velocity, and acceleration continuity between two successive action chunks. We validate the effectiveness of VLA-RAIL on a benchmark of dynamic simulation tasks and several real-world manipulation tasks. Experimental results demonstrate that VLA-RAIL significantly reduces motion jitter, enhances execution speed, and improves task success rates, which will become a key infrastructure for the large-scale deployment of VLA models.",
+    "authors": [
+      "Yongsheng Zhao",
+      "Lei Zhao",
+      "Baoping Cheng",
+      "Gongxin Yao",
+      "Xuanzhang Wen",
+      "Han Gao"
+    ],
+    "published": "2025-12-31",
+    "categories": [
+      "cs.RO",
+      "cs.AI",
+      "eess.SY"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.24673v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.24673v1",
+    "fetched_at": "2026-01-01T08:34:38.300489"
+  },
+  {
+    "id": "2512.24635v1",
+    "title": "DynaFix: Iterative Automated Program Repair Driven by Execution-Level Dynamic Information",
+    "abstract": "Automated Program Repair (APR) aims to automatically generate correct patches for buggy programs. Recent approaches leveraging large language models (LLMs) have shown promise but face limitations. Most rely solely on static analysis, ignoring runtime behaviors. Some attempt to incorporate dynamic signals, but these are often restricted to training or fine-tuning, or injected only once into the repair prompt, without iterative use. This fails to fully capture program execution. Current iterative repair frameworks typically rely on coarse-grained feedback, such as pass/fail results or exception types, and do not leverage fine-grained execution-level information effectively. As a result, models struggle to simulate human stepwise debugging, limiting their effectiveness in multi-step reasoning and complex bug repair.   To address these challenges, we propose DynaFix, an execution-level dynamic information-driven APR method that iteratively leverages runtime information to refine the repair process. In each repair round, DynaFix captures execution-level dynamic information such as variable states, control-flow paths, and call stacks, transforming them into structured prompts to guide LLMs in generating candidate patches. If a patch fails validation, DynaFix re-executes the modified program to collect new execution information for the next attempt. This iterative loop incrementally improves patches based on updated feedback, similar to the stepwise debugging practices of human developers. We evaluate DynaFix on the Defects4J v1.2 and v2.0 benchmarks. DynaFix repairs 186 single-function bugs, a 10% improvement over state-of-the-art baselines, including 38 bugs previously unrepaired. It achieves correct patches within at most 35 attempts, reducing the patch search space by 70% compared with existing methods, thereby demonstrating both effectiveness and efficiency in repairing complex bugs.",
+    "authors": [
+      "Zhili Huang",
+      "Ling Xu",
+      "Chao Liu",
+      "Weifeng Sun",
+      "Xu Zhang",
+      "Yan Lei",
+      "Meng Yan",
+      "Hongyu Zhang"
+    ],
+    "published": "2025-12-31",
+    "categories": [
+      "cs.SE",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.24635v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.24635v1",
+    "fetched_at": "2026-01-01T08:34:38.300520"
+  },
+  {
+    "id": "2512.24615v1",
+    "title": "Youtu-Agent: Scaling Agent Productivity with Automated Generation and Hybrid Policy Optimization",
+    "abstract": "Existing Large Language Model (LLM) agent frameworks face two significant challenges: high configuration costs and static capabilities. Building a high-quality agent often requires extensive manual effort in tool integration and prompt engineering, while deployed agents struggle to adapt to dynamic environments without expensive fine-tuning. To address these issues, we propose \\textbf{Youtu-Agent}, a modular framework designed for the automated generation and continuous evolution of LLM agents. Youtu-Agent features a structured configuration system that decouples execution environments, toolkits, and context management, enabling flexible reuse and automated synthesis. We introduce two generation paradigms: a \\textbf{Workflow} mode for standard tasks and a \\textbf{Meta-Agent} mode for complex, non-standard requirements, capable of automatically generating tool code, prompts, and configurations. Furthermore, Youtu-Agent establishes a hybrid policy optimization system: (1) an \\textbf{Agent Practice} module that enables agents to accumulate experience and improve performance through in-context optimization without parameter updates; and (2) an \\textbf{Agent RL} module that integrates with distributed training frameworks to enable scalable and stable reinforcement learning of any Youtu-Agents in an end-to-end, large-scale manner. Experiments demonstrate that Youtu-Agent achieves state-of-the-art performance on WebWalkerQA (71.47\\%) and GAIA (72.8\\%) using open-weight models. Our automated generation pipeline achieves over 81\\% tool synthesis success rate, while the Practice module improves performance on AIME 2024/2025 by +2.7\\% and +5.4\\% respectively. Moreover, our Agent RL training achieves 40\\% speedup with steady performance improvement on 7B LLMs, enhancing coding/reasoning and searching capabilities respectively up to 35\\% and 21\\% on Maths and general/multi-hop QA benchmarks.",
+    "authors": [
+      "Yuchen Shi",
+      "Yuzheng Cai",
+      "Siqi Cai",
+      "Zihan Xu",
+      "Lichao Chen",
+      "Yulei Qin",
+      "Zhijian Zhou",
+      "Xiang Fei",
+      "Chaofan Qiu",
+      "Xiaoyu Tan",
+      "Gang Li",
+      "Zongyi Li",
+      "Haojia Lin",
+      "Guocan Cai",
+      "Yong Mao",
+      "Yunsheng Wu",
+      "Ke Li",
+      "Xing Sun"
+    ],
+    "published": "2025-12-31",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.24615v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.24615v1",
+    "fetched_at": "2026-01-01T08:34:38.300570"
+  },
+  {
+    "id": "2512.24609v1",
+    "title": "Reinforcement Learning-Augmented LLM Agents for Collaborative Decision Making and Performance Optimization",
+    "abstract": "Large Language Models (LLMs) perform well in language tasks but often lack collaborative awareness and struggle to optimize global performance in multi-agent settings. We present a reinforcement learning-augmented LLM agent framework that formulates cooperation as a decentralized partially observable Markov decision process (Dec-POMDP) and adopts centralized training with decentralized execution (CTDE). We introduce Group Relative Policy Optimization (GRPO) to jointly optimize agent policies with access to global signals during training, together with a simplified joint reward that balances task quality, speed, and coordination cost. On collaborative writing and coding benchmarks, our framework delivers a 3x increase in task processing speed over single-agent baselines, 98.7% structural/style consistency in writing, and a 74.6% test pass rate in coding. The approach consistently outperforms strong multi-agent LLM baselines and provides a practical path toward reliable collaboration in complex workflows.",
+    "authors": [
+      "Dong Qiu",
+      "Duo Xu",
+      "Limengxi Yue"
+    ],
+    "published": "2025-12-31",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.24609v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.24609v1",
+    "fetched_at": "2026-01-01T08:34:38.300592"
+  },
+  {
+    "id": "2512.24571v1",
+    "title": "SynRAG: A Large Language Model Framework for Executable Query Generation in Heterogeneous SIEM System",
+    "abstract": "Security Information and Event Management (SIEM) systems are essential for large enterprises to monitor their IT infrastructure by ingesting and analyzing millions of logs and events daily. Security Operations Center (SOC) analysts are tasked with monitoring and analyzing this vast data to identify potential threats and take preventive actions to protect enterprise assets. However, the diversity among SIEM platforms, such as Palo Alto Networks Qradar, Google SecOps, Splunk, Microsoft Sentinel and the Elastic Stack, poses significant challenges. As these systems differ in attributes, architecture, and query languages, making it difficult for analysts to effectively monitor multiple platforms without undergoing extensive training or forcing enterprises to expand their workforce. To address this issue, we introduce SynRAG, a unified framework that automatically generates threat detection or incident investigation queries for multiple SIEM platforms from a platform-agnostic specification. SynRAG can generate platformspecific queries from a single high-level specification written by analysts. Without SynRAG, analysts would need to manually write separate queries for each SIEM platform, since query languages vary significantly across systems. This framework enables seamless threat detection and incident investigation across heterogeneous SIEM environments, reducing the need for specialized training and manual query translation. We evaluate SynRAG against state-of-the-art language models, including GPT, Llama, DeepSeek, Gemma, and Claude, using Qradar and SecOps as representative SIEM systems. Our results demonstrate that SynRAG generates significantly better queries for crossSIEM threat detection and incident investigation compared to the state-of-the-art base models.",
+    "authors": [
+      "Md Hasan Saju",
+      "Austin Page",
+      "Akramul Azim",
+      "Jeff Gardiner",
+      "Farzaneh Abazari",
+      "Frank Eargle"
+    ],
+    "published": "2025-12-31",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.24571v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.24571v1",
+    "fetched_at": "2026-01-01T08:34:38.300618"
+  },
+  {
+    "id": "2512.24565v1",
+    "title": "MCPAgentBench: A Real-world Task Benchmark for Evaluating LLM Agent MCP Tool Use",
+    "abstract": "Large Language Models (LLMs) are increasingly serving as autonomous agents, and their utilization of external tools via the Model Context Protocol (MCP) is considered a future trend. Current MCP evaluation sets suffer from issues such as reliance on external MCP services and a lack of difficulty awareness. To address these limitations, we propose MCPAgentBench, a benchmark based on real-world MCP definitions designed to evaluate the tool-use capabilities of agents. We construct a dataset containing authentic tasks and simulated MCP tools. The evaluation employs a dynamic sandbox environment that presents agents with candidate tool lists containing distractors, thereby testing their tool selection and discrimination abilities. Furthermore, we introduce comprehensive metrics to measure both task completion rates and execution efficiency. Experiments conducted on various latest mainstream Large Language Models reveal significant performance differences in handling complex, multi-step tool invocations. All code is open-source at Github.",
+    "authors": [
+      "Wenrui Liu",
+      "Zixiang Liu",
+      "Elsie Dai",
+      "Wenhan Yu",
+      "Lei Yu",
+      "Tong Yang"
+    ],
+    "published": "2025-12-31",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.24565v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.24565v1",
+    "fetched_at": "2026-01-01T08:34:38.300643"
+  },
+  {
+    "id": "2512.24449v1",
+    "title": "PackKV: Reducing KV Cache Memory Footprint through LLM-Aware Lossy Compression",
+    "abstract": "Transformer-based large language models (LLMs) have demonstrated remarkable potential across a wide range of practical applications. However, long-context inference remains a significant challenge due to the substantial memory requirements of the key-value (KV) cache, which can scale to several gigabytes as sequence length and batch size increase. In this paper, we present \\textbf{PackKV}, a generic and efficient KV cache management framework optimized for long-context generation. %, which synergistically supports both latency-critical and throughput-critical inference scenarios. PackKV introduces novel lossy compression techniques specifically tailored to the characteristics of KV cache data, featuring a careful co-design of compression algorithms and system architecture. Our approach is compatible with the dynamically growing nature of the KV cache while preserving high computational efficiency. Experimental results show that, under the same and minimum accuracy drop as state-of-the-art quantization methods, PackKV achieves, on average, \\textbf{153.2}\\% higher memory reduction rate for the K cache and \\textbf{179.6}\\% for the V cache. Furthermore, PackKV delivers extremely high execution throughput, effectively eliminating decompression overhead and accelerating the matrix-vector multiplication operation. Specifically, PackKV achieves an average throughput improvement of \\textbf{75.7}\\% for K and \\textbf{171.7}\\% for V across A100 and RTX Pro 6000 GPUs, compared to cuBLAS matrix-vector multiplication kernels, while demanding less GPU memory bandwidth. Code available on https://github.com/BoJiang03/PackKV",
+    "authors": [
+      "Bo Jiang",
+      "Taolue Yang",
+      "Youyuan Liu",
+      "Xubin He",
+      "Sheng Di",
+      "Sian Jin"
+    ],
+    "published": "2025-12-30",
+    "categories": [
+      "cs.DC",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.24449v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.24449v1",
+    "fetched_at": "2026-01-01T08:34:38.300669"
+  },
+  {
+    "id": "2512.24402v1",
+    "title": "Fast and Realistic Automated Scenario Simulations and Reporting for an Autonomous Racing Stack",
+    "abstract": "In this paper, we describe the automated simulation and reporting pipeline implemented for our autonomous racing stack, ur.autopilot. The backbone of the simulation is based on a high-fidelity model of the vehicle interfaced as a Functional Mockup Unit (FMU). The pipeline can execute the software stack and the simulation up to three times faster than real-time, locally or on GitHub for Continuous Integration/- Continuous Delivery (CI/CD). As the most important input of the pipeline, there is a set of running scenarios. Each scenario allows the initialization of the ego vehicle in different initial conditions (position and speed), as well as the initialization of any other configuration of the stack. This functionality is essential to validate efficiently critical modules, like the one responsible for high-speed overtaking maneuvers or localization, which are among the most challenging aspects of autonomous racing. Moreover, we describe how we implemented a fault injection module, capable of introducing sensor delays and perturbations as well as modifying outputs of any node of the stack. Finally, we describe the design of our automated reporting process, aimed at maximizing the effectiveness of the simulation analysis.",
+    "authors": [
+      "Giovanni Lambertini",
+      "Matteo Pini",
+      "Eugenio Mascaro",
+      "Francesco Moretti",
+      "Ayoub Raji",
+      "Marko Bertogna"
+    ],
+    "published": "2025-12-30",
+    "categories": [
+      "cs.RO",
+      "cs.AI",
+      "cs.SE",
+      "eess.SY"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.24402v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.24402v1",
+    "fetched_at": "2026-01-01T08:34:38.300700"
+  },
+  {
+    "id": "2512.24325v1",
+    "title": "MaRCA: Multi-Agent Reinforcement Learning for Dynamic Computation Allocation in Large-Scale Recommender Systems",
+    "abstract": "Modern recommender systems face significant computational challenges due to growing model complexity and traffic scale, making efficient computation allocation critical for maximizing business revenue. Existing approaches typically simplify multi-stage computation resource allocation, neglecting inter-stage dependencies, thus limiting global optimality. In this paper, we propose MaRCA, a multi-agent reinforcement learning framework for end-to-end computation resource allocation in large-scale recommender systems. MaRCA models the stages of a recommender system as cooperative agents, using Centralized Training with Decentralized Execution (CTDE) to optimize revenue under computation resource constraints. We introduce an AutoBucket TestBench for accurate computation cost estimation, and a Model Predictive Control (MPC)-based Revenue-Cost Balancer to proactively forecast traffic loads and adjust the revenue-cost trade-off accordingly. Since its end-to-end deployment in the advertising pipeline of a leading global e-commerce platform in November 2024, MaRCA has consistently handled hundreds of billions of ad requests per day and has delivered a 16.67% revenue uplift using existing computation resources.",
+    "authors": [
+      "Wan Jiang",
+      "Xinyi Zang",
+      "Yudong Zhao",
+      "Yusi Zou",
+      "Yunfei Lu",
+      "Junbo Tong",
+      "Yang Liu",
+      "Ming Li",
+      "Jiani Shi",
+      "Xin Yang"
+    ],
+    "published": "2025-12-30",
+    "categories": [
+      "cs.IR",
+      "cs.LG",
+      "cs.MA"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.24325v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.24325v1",
+    "fetched_at": "2026-01-01T08:34:38.300734"
+  },
+  {
+    "id": "2512.23773v1",
+    "title": "FineFT: Efficient and Risk-Aware Ensemble Reinforcement Learning for Futures Trading",
+    "abstract": "Futures are contracts obligating the exchange of an asset at a predetermined date and price, notable for their high leverage and liquidity and, therefore, thrive in the Crypto market. RL has been widely applied in various quantitative tasks. However, most methods focus on the spot and could not be directly applied to the futures market with high leverage because of 2 challenges. First, high leverage amplifies reward fluctuations, making training stochastic and difficult to converge. Second, prior works lacked self-awareness of capability boundaries, exposing them to the risk of significant loss when encountering new market state (e.g.,a black swan event like COVID-19). To tackle these challenges, we propose the Efficient and Risk-Aware Ensemble Reinforcement Learning for Futures Trading (FineFT), a novel three-stage ensemble RL framework with stable training and proper risk management. In stage I, ensemble Q learners are selectively updated by ensemble TD errors to improve convergence. In stage II, we filter the Q-learners based on their profitabilities and train VAEs on market states to identify the capability boundaries of the learners. In stage III, we choose from the filtered ensemble and a conservative policy, guided by trained VAEs, to maintain profitability and mitigate risk with new market states. Through extensive experiments on crypto futures in a high-frequency trading environment with high fidelity and 5x leverage, we demonstrate that FineFT outperforms 12 SOTA baselines in 6 financial metrics, reducing risk by more than 40% while achieving superior profitability compared to the runner-up. Visualization of the selective update mechanism shows that different agents specialize in distinct market dynamics, and ablation studies certify routing with VAEs reduces maximum drawdown effectively, and selective update improves convergence and performance.",
+    "authors": [
+      "Molei Qin",
+      "Xinyu Cai",
+      "Yewen Li",
+      "Haochong Xia",
+      "Chuqiao Zong",
+      "Shuo Sun",
+      "Xinrun Wang",
+      "Bo An"
+    ],
+    "published": "2025-12-29",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.23773v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.23773v1",
+    "fetched_at": "2026-01-01T08:34:55.015800"
+  },
+  {
+    "id": "2512.24314v1",
+    "title": "QianfanHuijin Technical Report: A Novel Multi-Stage Training Paradigm for Finance Industrial LLMs",
+    "abstract": "Domain-specific enhancement of Large Language Models (LLMs) within the financial context has long been a focal point of industrial application. While previous models such as BloombergGPT and Baichuan-Finance primarily focused on knowledge enhancement, the deepening complexity of financial services has driven a growing demand for models that possess not only domain knowledge but also robust financial reasoning and agentic capabilities. In this paper, we present QianfanHuijin, a financial domain LLM, and propose a generalizable multi-stage training paradigm for industrial model enhancement.   Our approach begins with Continual Pre-training (CPT) on financial corpora to consolidate the knowledge base. This is followed by a fine-grained Post-training pipeline designed with increasing specificity: starting with Financial SFT, progressing to Finance Reasoning RL and Finance Agentic RL, and culminating in General RL aligned with real-world business scenarios. Empirical results demonstrate that QianfanHuijin achieves superior performance across various authoritative financial benchmarks. Furthermore, ablation studies confirm that the targeted Reasoning RL and Agentic RL stages yield significant gains in their respective capabilities. These findings validate our motivation and suggest that this fine-grained, progressive post-training methodology is poised to become a mainstream paradigm for various industrial-enhanced LLMs.",
+    "authors": [
+      "Shupeng Li",
+      "Weipeng Lu",
+      "Linyun Liu",
+      "Chen Lin",
+      "Shaofei Li",
+      "Zhendong Tan",
+      "Hanjun Zhong",
+      "Yucheng Zeng",
+      "Chenghao Zhu",
+      "Mengyue Liu",
+      "Daxiang Dong",
+      "Jianmin Wu",
+      "Yunting Xiao",
+      "Annan Li",
+      "Danyu Liu",
+      "Jingnan Zhang",
+      "Licen Liu",
+      "Dawei Yin",
+      "Dou Shen"
+    ],
+    "published": "2025-12-30",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2512.24314v1",
+    "arxiv_url": "https://arxiv.org/abs/2512.24314v1",
+    "fetched_at": "2026-01-01T08:35:31.218044"
+  }
+]
