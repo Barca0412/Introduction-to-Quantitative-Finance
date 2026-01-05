@@ -1,0 +1,790 @@
+[
+  {
+    "id": "2601.00738v1",
+    "title": "Second Thoughts: How 1-second subslots transform CEX-DEX Arbitrage on Ethereum",
+    "abstract": "This paper examines the impact of reducing Ethereum slot time on decentralized exchange activity, with a focus on CEX-DEX arbitrage behavior. We develop a trading model where the agent's DEX transaction is not guaranteed to land, and the agent explicitly accounts for this execution risk when deciding whether to pursue arbitrage opportunities. We compare agent behavior under Ethereum's default 12-second slot time environment with a faster regime that offers 1-second subslot execution. The simulations, calibrated to Binance and Uniswap v3 data from July to September 2025, show that faster slot times increase arbitrage transaction count by 535% and trading volume by 203% on average. The increase in CEX-DEX arbitrage activity under 1-second subslots is driven by the reduction in variance of both successful and failed trade outcomes, increasing the risk-adjusted returns and making CEX-DEX arbitrage more appealing.",
+    "authors": [
+      "Aleksei Adadurov",
+      "Sergey Barseghyan",
+      "Anton Chtepine",
+      "Antero Eloranta",
+      "Andrei Sebyakin",
+      "Arsenii Valitov"
+    ],
+    "published": "2026-01-02",
+    "categories": [
+      "q-fin.TR",
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00738v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00738v1",
+    "fetched_at": "2026-01-05T08:38:53.934779",
+    "chinese_title": "重新思考：1秒子时隙如何改变以太坊上的CEX-DEX套利",
+    "chinese_summary": "本文构建了考虑DEX交易执行风险的CEX-DEX套利模型，对比以太坊12秒默认时隙与1秒子时隙环境下的套利行为；通过校准2025年7-9月Binance和Uniswap v3数据的模拟显示，1秒子时隙使套利交易数增535%、成交量增203%，核心驱动是交易结果方差降低提升了风险调整后收益。",
+    "tags": [
+      "Algorithmic Trading",
+      "High Frequency",
+      "Market Microstructure",
+      "Execution"
+    ],
+    "key_contributions": [
+      "构建了考虑DEX交易执行风险的CEX-DEX套利决策模型",
+      "揭示1秒子时隙通过降低交易结果方差提升套利活动（交易数增535%、成交量增203%）的机制"
+    ],
+    "processed_at": "2026-01-05T08:42:03.151668"
+  },
+  {
+    "id": "2601.00593v1",
+    "title": "Uncertainty-Adjusted Sorting for Asset Pricing with Machine Learning",
+    "abstract": "Machine learning is central to empirical asset pricing, but portfolio construction still relies on point predictions and largely ignores asset-specific estimation uncertainty. We propose a simple change: sort assets using uncertainty-adjusted prediction bounds instead of point predictions alone. Across a broad set of ML models and a U.S. equity panel, this approach improves portfolio performance relative to point-prediction sorting. These gains persist even when bounds are built from partial or misspecified uncertainty information. They arise mainly from reduced volatility and are strongest for flexible machine learning models. Identification and robustness exercises show that these improvements are driven by asset-level rather than time or aggregate predictive uncertainty.",
+    "authors": [
+      "Yan Liu",
+      "Ye Luo",
+      "Zigan Wang",
+      "Xiaowei Zhang"
+    ],
+    "published": "2026-01-02",
+    "categories": [
+      "q-fin.PM",
+      "stat.ML"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00593v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00593v1",
+    "fetched_at": "2026-01-05T08:38:53.934818",
+    "chinese_title": "机器学习下资产定价的不确定性调整排序方法",
+    "chinese_summary": "本文提出用不确定性调整的预测边界替代点预测来排序资产的方法，应用于美国股票面板和多种机器学习模型时，能提升投资组合表现（主要来自波动率降低），且即使不确定性信息部分或误设仍有效，改进源于资产层面而非时间或整体预测不确定性。",
+    "tags": [
+      "Asset Pricing",
+      "Portfolio Optimization",
+      "Risk Management",
+      "Volatility"
+    ],
+    "key_contributions": [
+      "提出不确定性调整的预测边界排序方法，提升投资组合表现（降低波动率）",
+      "方法对部分/误设不确定性信息鲁棒，改进源于资产层面而非时间/整体预测不确定性"
+    ],
+    "processed_at": "2026-01-05T08:42:21.849045"
+  },
+  {
+    "id": "2601.00568v1",
+    "title": "Capital allocation and tail central moments for the multivariate normal mean-variance mixture distribution",
+    "abstract": "Capital allocation is a procedure used to assess the risk contributions of individual risk components to the total risk of a portfolio. While the conditional tail expectation (CTE)-based capital allocation is arguably the most popular capital allocation method, its inability to reflect important tail behaviour of losses necessitates a more accurate approach. In this paper, we introduce a new capital allocation method based on the tail central moments (TCM), generalising the tail covariance allocation informed by the tail variance. We develop analytical expressions of the TCM as well as the TCM-based capital allocation for the class of normal mean-variance mixture distributions, which is widely used to model asymmetric and heavy-tailed data in finance and insurance. As demonstrated by a numerical analysis, the TCM-based capital allocation captures several significant patterns in the tail region of equity losses that remain undetected by the CTE, enhancing the understanding of the tail risk contributions of risk components.",
+    "authors": [
+      "Enrique Calderín-Ojeda",
+      "Yuyu Chen",
+      "Soon Wei Tan"
+    ],
+    "published": "2026-01-02",
+    "categories": [
+      "q-fin.PM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00568v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00568v1",
+    "fetched_at": "2026-01-05T08:38:53.934843",
+    "chinese_title": "多元正态均值-方差混合分布的资本配置与尾部中心矩",
+    "chinese_summary": "论文针对条件尾部期望（CTE）资本配置无法反映损失尾部重要行为的问题，提出基于尾部中心矩（TCM）的新资本配置方法；推导了多元正态均值-方差混合分布下TCM及TCM-based资本配置的解析表达式，数值分析显示该方法能捕捉CTE未检测到的权益损失尾部显著模式，提升对风险成分尾部风险贡献的理解。",
+    "tags": [
+      "Risk Management",
+      "Portfolio Optimization"
+    ],
+    "key_contributions": [
+      "提出基于尾部中心矩（TCM）的新资本配置方法，弥补条件尾部期望（CTE）无法反映损失尾部重要行为的不足",
+      "推导多元正态均值-方差混合分布下尾部中心矩（TCM）及TCM-based资本配置的解析表达式，数值验证其能捕捉CTE未检测的权益损失尾部模式"
+    ],
+    "processed_at": "2026-01-05T08:42:41.560987"
+  },
+  {
+    "id": "2601.00478v1",
+    "title": "Multimodal Insights into Credit Risk Modelling: Integrating Climate and Text Data for Default Prediction",
+    "abstract": "Credit risk assessment increasingly relies on diverse sources of information beyond traditional structured financial data, particularly for micro and small enterprises (mSEs) with limited financial histories. This study proposes a multimodal framework that integrates structured credit variables, climate panel data, and unstructured textual narratives within a unified learning architecture. Specifically, we use long short-term memory (LSTM), the gated recurrent unit (GRU), and transformer models to analyse the interplay between these data modalities. The empirical results demonstrate that unimodal models based on climate or text data outperform those relying solely on structured data, while the integration of multiple data modalities yields significant improvements in credit default prediction. Using SHAP-based explainability methods, we find that physical climate risks play an important role in default prediction, with water-logging by rain emerging as the most influential factor. Overall, this study demonstrates the potential of multimodal approaches in AI-enabled decision-making, which provides robust tools for credit risk assessment while contributing to the broader integration of environmental and textual insights into predictive analytics.",
+    "authors": [
+      "Zongxiao Wu",
+      "Ran Liu",
+      "Jiang Dai",
+      "Dan Luo"
+    ],
+    "published": "2026-01-01",
+    "categories": [
+      "q-fin.RM",
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00478v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00478v1",
+    "fetched_at": "2026-01-05T08:38:53.934867",
+    "chinese_title": "多模态信用风险建模洞察：整合气候与文本数据用于违约预测",
+    "chinese_summary": "针对小微企业财务数据有限的问题，该研究提出整合结构化信用变量、气候面板数据和非结构化文本的多模态框架，采用LSTM、GRU和Transformer分析模态交互；实验显示多模态模型优于单模态（气候/文本单模态也优于仅结构化数据模型），且SHAP解释发现物理气候风险（如雨涝）对违约预测影响显著。",
+    "tags": [
+      "Deep Learning",
+      "Risk Management",
+      "Transformer",
+      "NLP"
+    ],
+    "key_contributions": [
+      "提出整合气候、文本与结构化数据的多模态信用违约预测框架，显著提升预测性能",
+      "通过SHAP解释揭示物理气候风险（如雨涝）是信用违约的重要影响因素，拓展环境与文本数据在信用风险中的应用"
+    ],
+    "processed_at": "2026-01-05T08:42:52.259751"
+  },
+  {
+    "id": "2601.00395v1",
+    "title": "Core-Periphery Dynamics in Market-Conditioned Financial Networks: A Conditional P-Threshold Mutual Information Approach",
+    "abstract": "This study investigates how financial market structure reorganizes during the COVID-19 crash using a conditional p-threshold mutual information (MI) based Minimum Spanning Tree (MST) framework. We analyze nonlinear dependencies among the largest stocks from four diverse QUAD countries: the US, Japan, Australia, and India. Crashes are identified using the Hellinger distance and Hilbert spectrum; a crash occurs when HD = mu\\_H + 2*sigma\\_H, segmenting data into pre-crash, crash, and post-crash periods. Conditional p-threshold MI filters out common market effects and applies permutation-based significance testing. Resulting validated dependencies are used to construct MST networks for comparison across periods. Networks become more integrated during the crash, with shorter path lengths, higher centrality, and lower algebraic connectivity, indicating fragility. Core-periphery structure declines, with increased periphery vulnerability, and disassortative mixing facilitates shock transmission. Post-crash networks show only partial recovery. Aftershock analysis using the Gutenberg-Richter law indicates higher relative frequency of large volatility events following the crash. Results are consistent across all markets, highlighting the conditional p-threshold MI framework for capturing nonlinear interdependencies and systemic vulnerability.",
+    "authors": [
+      "Kundan Mukhia",
+      "Imran Ansari",
+      "S R Luwang",
+      "Md Nurujjaman"
+    ],
+    "published": "2026-01-01",
+    "categories": [
+      "q-fin.ST"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00395v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00395v1",
+    "fetched_at": "2026-01-05T08:38:53.934890",
+    "chinese_title": "市场条件下金融网络的核心-边缘动态：一种条件p阈值互信息方法",
+    "chinese_summary": "本研究采用条件p阈值互信息结合最小生成树（MST）框架，通过Hellinger距离和Hilbert谱识别COVID-19危机期，分析美、日、澳、印四国大盘股非线性依赖；发现危机期间网络更整合脆弱、核心-边缘结构减弱，后危机仅部分恢复，余震符合Gutenberg-Richter定律，框架可捕捉非线性依赖与系统脆弱性。",
+    "tags": [
+      "Risk Management",
+      "Volatility",
+      "Graph Neural Network",
+      "Anomaly"
+    ],
+    "key_contributions": [
+      "提出条件p阈值互信息结合MST的新框架，过滤共同市场效应并通过排列检验验证依赖显著性，有效捕捉金融资产非线性依赖关系",
+      "揭示COVID-19危机期间跨国金融网络动态特征（整合度上升、脆弱性增强、核心-边缘结构衰退）及后危机恢复规律，跨市场一致性验证框架有效性"
+    ],
+    "processed_at": "2026-01-05T08:43:14.285219"
+  },
+  {
+    "id": "2601.00293v1",
+    "title": "Option Pricing beyond Black-Scholes Model:Quantum Mechanics Approach",
+    "abstract": "Based on the analog between the stochastic dynamics and quantum harmonic oscillator, we propose a market force driving model to generalize the Black-Scholes model in finance market. We give new schemes of option pricing, in which we can take various unexpected market behaviors into account to modify the option pricing. As examples, we present several market forces to analyze their effects on the option pricing. These results provide us two practical applications. One is to be used as a new scheme of option pricing when we can predict some hidden market forces or behaviors emerging. The other implies the existence of some risk premium when some unexpected forces emerge.",
+    "authors": [
+      "Pengpeng Li",
+      "Shi-Dong Liang"
+    ],
+    "published": "2026-01-01",
+    "categories": [
+      "q-fin.RM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00293v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00293v1",
+    "fetched_at": "2026-01-05T08:38:53.934910",
+    "chinese_title": "超越布莱克-斯科尔斯模型的期权定价：量子力学方法",
+    "chinese_summary": "该论文基于随机动力学与量子谐振子的类比，提出市场力驱动模型以推广布莱克-斯科尔斯期权定价模型，给出可纳入各类意外市场行为的新定价方案；通过分析不同市场力对期权定价的影响，指出其可用于预测隐藏市场力时的定价及揭示意外力下风险溢价存在性两个实际应用。",
+    "tags": [
+      "Asset Pricing",
+      "Options",
+      "Behavioral Finance"
+    ],
+    "key_contributions": [
+      "基于随机动力学与量子谐振子类比，提出市场力驱动模型推广BS期权定价模型，构建纳入意外市场行为的新定价方案",
+      "分析市场力对期权定价的影响，指出预测隐藏市场力时的定价应用及意外力下风险溢价的存在性"
+    ],
+    "processed_at": "2026-01-05T08:43:27.422180"
+  },
+  {
+    "id": "2601.00281v1",
+    "title": "A Global Optimal Theory of Portfolio beyond R-$σ$ Model",
+    "abstract": "The deviation of the efficient market hypothesis (EMH) for the practical economic system allows us gain the arbitrary or risk premium in finance markets. We propose the triplet $(R,H,σ)$ theory to give the local and global optimal portfolio, which eneralize from the $(R,σ)$ model. We present the formulation of the triplet $(R,H,σ)$ model and give the Pareto optimal solution as well as comparing it with the numerical investigations for the Chinese stock market. We define the local optimal weights of the triplet $(\\mathbf{w}_{R},\\mathbf{w}_{H},\\mathbf{w}_σ)$, which constructs the triangle of the quasi-optimal investing subspace such that we further define the centroid of the triangle or the incenter of the triangle as the optimal investing weights, which optimizes the mean return, the arbitrary or risk premium and the volatility risk. By investigating numerically the Chinese stock market as an example we demonstrate the validity of the formulation and obtain the global optimal strategy and quasi-optimal investing subspace. The theory provides an efficient way to design the portfolio for different style investors, conservative or aggressive investors, in finance market to maximize the mean return and arbitrary or risk premium with a small volatility risk.",
+    "authors": [
+      "Yifan Liu",
+      "Shi-Dong Liang"
+    ],
+    "published": "2026-01-01",
+    "categories": [
+      "q-fin.PM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00281v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00281v1",
+    "fetched_at": "2026-01-05T08:38:53.934931",
+    "chinese_title": "超越R-σ模型的全局最优投资组合理论",
+    "chinese_summary": "本文针对有效市场假说在实际经济系统中的偏差，提出推广R-σ模型的三元组(R,H,σ)理论，通过定义局部最优权重构建准最优投资子空间，以三角形重心或内心作为最优权重平衡收益、超额/风险溢价与波动率风险；以中国股市为例验证该理论有效性，为不同风格投资者提供高效的投资组合设计方法。",
+    "tags": [
+      "Portfolio Optimization",
+      "Risk Management",
+      "Asset Pricing"
+    ],
+    "key_contributions": [
+      "提出三元组(R,H,σ)理论推广传统R-σ模型，定义局部最优权重构建准最优投资子空间，以三角形重心/内心为最优权重实现多目标平衡",
+      "以中国股市为例验证理论有效性，为不同风格投资者提供高效的投资组合设计方法"
+    ],
+    "processed_at": "2026-01-05T08:43:47.274958"
+  },
+  {
+    "id": "2601.00196v1",
+    "title": "SoK: Stablecoins in Retail Payments",
+    "abstract": "Stablecoins have emerged as a rapidly growing digital payment instrument, raising the question of whether blockchain-based settlement can function as a substitute for incumbent card networks in retail payments. This Systematization of Knowledge (SoK) provides a systematic comparison between stablecoin payment arrangements and card networks by situating both within a unified analytical framework. We first map their respective payment infrastructures, participant roles, and transaction lifecycles, highlighting fundamental differences in how authorization, settlement, and recourse are organized. Building on this mapping, we introduce the CLEAR framework, which evaluates retail payment systems across five dimensions: cost, legality, experience, architecture, and reach. Our analysis shows that stablecoins deliver efficient, continuous, and programmable settlement, often compressing rail-level merchant fees and enabling 24/7 value transfer. However, these advantages are accompanied by an inversion of the traditional pricing and risk-allocation structure. Card networks internalize consumer-side frictions through subsidies, standardized liability rules, and post-transaction recourse, thereby supporting mass-market adoption. Stablecoin arrangements, by contrast, externalize transaction fees, error prevention, and dispute resolution to users, intermediaries, and courts, resulting in weaker consumer protection, higher cognitive burden at the point of interaction, and fragmented acceptance. Accordingly, stablecoins exhibit a conditional comparative advantage in closed-loop environments, cross-border corridors, and high-friction payment contexts, but remain structurally disadvantaged as open-loop retail payment instruments.",
+    "authors": [
+      "Yuquan Li",
+      "Yuexin Xiang",
+      "Qin Wang",
+      "Tsz Hon Yuen",
+      "Andreas Deppeler",
+      "Jiangshan Yu"
+    ],
+    "published": "2026-01-01",
+    "categories": [
+      "q-fin.GN"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00196v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00196v1",
+    "fetched_at": "2026-01-05T08:38:53.934957",
+    "chinese_title": "SoK：零售支付中的稳定币",
+    "chinese_summary": "这篇知识系统化（SoK）论文构建统一分析框架，对比稳定币支付与卡网络的基础设施、参与角色及交易生命周期，引入CLEAR框架从成本、合法性等五维度评估零售支付系统，揭示稳定币在结算效率等方面的优势及消费者保护弱等不足。",
+    "tags": [
+      "Market Microstructure",
+      "Risk Management"
+    ],
+    "key_contributions": [
+      "构建统一分析框架，系统对比稳定币支付与传统卡网络的基础设施、参与角色及交易生命周期差异",
+      "提出CLEAR框架（成本、合法性、体验、架构、覆盖范围）评估零售支付系统，揭示稳定币的优势与风险结构反转问题"
+    ],
+    "processed_at": "2026-01-05T08:44:04.880101"
+  },
+  {
+    "id": "2601.00516v1",
+    "title": "Trajectory Guard -- A Lightweight, Sequence-Aware Model for Real-Time Anomaly Detection in Agentic AI",
+    "abstract": "Autonomous LLM agents generate multi-step action plans that can fail due to contextual misalignment or structural incoherence. Existing anomaly detection methods are ill-suited for this challenge: mean-pooling embeddings dilutes anomalous steps, while contrastive-only approaches ignore sequential structure. Standard unsupervised methods on pre-trained embeddings achieve F1-scores no higher than 0.69. We introduce Trajectory Guard, a Siamese Recurrent Autoencoder with a hybrid loss function that jointly learns task-trajectory alignment via contrastive learning and sequential validity via reconstruction. This dual objective enables unified detection of both \"wrong plan for this task\" and \"malformed plan structure.\" On benchmarks spanning synthetic perturbations and real-world failures from security audits (RAS-Eval) and multi-agent systems (Who\\&When), we achieve F1-scores of 0.88-0.94 on balanced sets and recall of 0.86-0.92 on imbalanced external benchmarks. At 32 ms inference latency, our approach runs 17-27$\\times$ faster than LLM Judge baselines, enabling real-time safety verification in production deployments.",
+    "authors": [
+      "Laksh Advani"
+    ],
+    "published": "2026-01-02",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00516v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00516v1",
+    "fetched_at": "2026-01-05T08:39:07.063844",
+    "chinese_title": "Trajectory Guard——面向Agentic AI实时异常检测的轻量序列感知模型",
+    "chinese_summary": "现有异常检测方法因均值池化稀释异常步骤、对比学习忽略序列结构，无法适配Agentic AI多步动作计划的异常检测（传统无监督方法F1不超0.69）；本文提出Trajectory Guard（暹罗循环自编码器），通过混合损失同时学习任务轨迹对齐（对比学习）与序列有效性（重建），在基准测试中F1达0.88-0.94，推理延迟32ms比LLM Judge快17-27倍，支持实时安全验证。",
+    "tags": [
+      "LLM",
+      "Anomaly",
+      "Deep Learning",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "通过混合损失同时学习任务轨迹对齐与序列有效性，实现实时检测且性能显著提升（F1达0.88-0.94，推理延迟32ms）"
+    ],
+    "processed_at": "2026-01-05T08:44:18.176868"
+  },
+  {
+    "id": "2601.00446v1",
+    "title": "A Comparative Study of Adaptation Strategies for Time Series Foundation Models in Anomaly Detection",
+    "abstract": "Time series anomaly detection is essential for the reliable operation of complex systems, but most existing methods require extensive task-specific training. We explore whether time series foundation models (TSFMs), pretrained on large heterogeneous data, can serve as universal backbones for anomaly detection. Through systematic experiments across multiple benchmarks, we compare zero-shot inference, full model adaptation, and parameter-efficient fine-tuning (PEFT) strategies. Our results demonstrate that TSFMs outperform task-specific baselines, achieving notable gains in AUC-PR and VUS-PR, particularly under severe class imbalance. Moreover, PEFT methods such as LoRA, OFT, and HRA not only reduce computational cost but also match or surpass full fine-tuning in most cases, indicating that TSFMs can be efficiently adapted for anomaly detection, even when pretrained for forecasting. These findings position TSFMs as promising general-purpose models for scalable and efficient time series anomaly detection.",
+    "authors": [
+      "Miseon Park",
+      "Kijung Yoon"
+    ],
+    "published": "2026-01-01",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00446v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00446v1",
+    "fetched_at": "2026-01-05T08:39:07.063875",
+    "chinese_title": "时间序列基础模型在异常检测中适配策略的比较研究",
+    "chinese_summary": "本文探索时间序列基础模型（TSFMs）作为异常检测通用 backbone 的可行性，通过比较零样本推理、全模型适配及参数高效微调（PEFT）策略，发现TSFMs在多基准上优于任务特定基线（尤其类别不平衡场景）；PEFT方法（如LoRA等）计算成本更低且效果接近/超过全微调，表明TSFMs可高效适配异常检测（即使预训练目标为预测）。",
+    "tags": [
+      "Anomaly",
+      "Time Series",
+      "Deep Learning",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "验证时间序列基础模型（TSFMs）可作为异常检测通用 backbone，在多基准上优于任务特定基线（尤其类别不平衡场景）",
+      "发现参数高效微调（PEFT）方法（如LoRA等）计算成本更低且效果接近/超过全模型微调，实现TSFMs高效适配异常检测"
+    ],
+    "processed_at": "2026-01-05T08:44:41.046285"
+  },
+  {
+    "id": "2601.00384v1",
+    "title": "Engineering Attack Vectors and Detecting Anomalies in Additive Manufacturing",
+    "abstract": "Additive manufacturing (AM) is rapidly integrating into critical sectors such as aerospace, automotive, and healthcare. However, this cyber-physical convergence introduces new attack surfaces, especially at the interface between computer-aided design (CAD) and machine execution layers. In this work, we investigate targeted cyberattacks on two widely used fused deposition modeling (FDM) systems, Creality's flagship model K1 Max, and Ender 3. Our threat model is a multi-layered Man-in-the-Middle (MitM) intrusion, where the adversary intercepts and manipulates G-code files during upload from the user interface to the printer firmware. The MitM intrusion chain enables several stealthy sabotage scenarios. These attacks remain undetectable by conventional slicer software or runtime interfaces, resulting in structurally defective yet externally plausible printed parts. To counter these stealthy threats, we propose an unsupervised Intrusion Detection System (IDS) that analyzes structured machine logs generated during live printing. Our defense mechanism uses a frozen Transformer-based encoder (a BERT variant) to extract semantic representations of system behavior, followed by a contrastively trained projection head that learns anomaly-sensitive embeddings. Later, a clustering-based approach and a self-attention autoencoder are used for classification. Experimental results demonstrate that our approach effectively distinguishes between benign and compromised executions.",
+    "authors": [
+      "Md Mahbub Hasan",
+      "Marcus Sternhagen",
+      "Krishna Chandra Roy"
+    ],
+    "published": "2026-01-01",
+    "categories": [
+      "cs.CR",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00384v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00384v1",
+    "fetched_at": "2026-01-05T08:39:07.063899",
+    "chinese_title": "增材制造中的攻击向量设计与异常检测",
+    "chinese_summary": "论文针对增材制造（AM）中的FDM系统（如Creality K1 Max和Ender 3），提出多层面中间人（MitM）攻击向量及隐蔽破坏场景；设计基于冻结Transformer编码器（BERT变体）、对比学习投影头与聚类/自注意力自动编码器的无监督入侵检测系统，实验证明可有效区分良性与受攻击执行。",
+    "tags": [
+      "Anomaly",
+      "Transformer",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出增材制造FDM系统的隐蔽中间人攻击向量及破坏场景，突破常规检测手段",
+      "构建基于Transformer与对比学习的无监督入侵检测系统，实现对隐蔽攻击的有效识别"
+    ],
+    "processed_at": "2026-01-05T08:44:53.908289"
+  },
+  {
+    "id": "2601.00327v1",
+    "title": "HarmoniAD: Harmonizing Local Structures and Global Semantics for Anomaly Detection",
+    "abstract": "Anomaly detection is crucial in industrial product quality inspection. Failing to detect tiny defects often leads to serious consequences. Existing methods face a structure-semantics trade-off: structure-oriented models (such as frequency-based filters) are noise-sensitive, while semantics-oriented models (such as CLIP-based encoders) often miss fine details. To address this, we propose HarmoniAD, a frequency-guided dual-branch framework. Features are first extracted by the CLIP image encoder, then transformed into the frequency domain, and finally decoupled into high- and low-frequency paths for complementary modeling of structure and semantics. The high-frequency branch is equipped with a fine-grained structural attention module (FSAM) to enhance textures and edges for detecting small anomalies, while the low-frequency branch uses a global structural context module (GSCM) to capture long-range dependencies and preserve semantic consistency. Together, these branches balance fine detail and global semantics. HarmoniAD further adopts a multi-class joint training strategy, and experiments on MVTec-AD, VisA, and BTAD show state-of-the-art performance with both sensitivity and robustness.",
+    "authors": [
+      "Naiqi Zhang",
+      "Chuancheng Shi",
+      "Jingtong Dou",
+      "Wenhua Wu",
+      "Fei Shen",
+      "Jianhua Cao"
+    ],
+    "published": "2026-01-01",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00327v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00327v1",
+    "fetched_at": "2026-01-05T08:39:07.063927",
+    "chinese_title": "HarmoniAD：用于异常检测的局部结构与全局语义融合方法",
+    "chinese_summary": "针对工业产品质量检测中异常检测面临的结构-语义权衡问题，提出频率引导的双分支框架HarmoniAD，通过CLIP特征频域解耦为高低频路径，分别用细粒度结构注意力模块增强小异常检测、全局结构上下文模块保持语义一致性，结合多类别联合训练策略，在MVTec-AD等基准数据集上实现SOTA性能。",
+    "tags": [
+      "Anomaly",
+      "Deep Learning",
+      "Transformer",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出频率引导的双分支框架HarmoniAD，通过频域解耦高低频路径互补建模局部结构与全局语义，缓解现有方法的结构-语义权衡问题",
+      "设计细粒度结构注意力模块（FSAM）和全局结构上下文模块（GSCM）强化细节检测与语义一致性，结合多类别联合训练，在多个工业异常检测基准数据集上取得SOTA性能"
+    ],
+    "processed_at": "2026-01-05T08:45:17.666179"
+  },
+  {
+    "id": "2601.00324v1",
+    "title": "Multiagent Reinforcement Learning for Liquidity Games",
+    "abstract": "Making use of swarm methods in financial market modeling of liquidity, and techniques from financial analysis in swarm analysis, holds the potential to advance both research areas. In swarm research, the use of game theory methods holds the promise of explaining observed phenomena of collective utility adherence with rational self-interested swarm participants. In financial markets, a better understanding of how independent financial agents may self-organize for the betterment and stability of the marketplace would be a boon for market design researchers. This paper unifies Liquidity Games, where trader payoffs depend on aggregate liquidity within a trade, with Rational Swarms, where decentralized agents use difference rewards to align self-interested learning with global objectives. We offer a theoretical frameworks where we define a swarm of traders whose collective objective is market liquidity provision while maintaining agent independence. Using difference rewards within a Markov team games framework, we show that individual liquidity-maximizing behaviors contribute to overall market liquidity without requiring coordination or collusion. This Financial Swarm model provides a framework for modeling rational, independent agents where they achieve both individual profitability and collective market efficiency in bilateral asset markets.",
+    "authors": [
+      "Alicia Vidler",
+      "Gal A. Kaminka"
+    ],
+    "published": "2026-01-01",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00324v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00324v1",
+    "fetched_at": "2026-01-05T08:39:17.208198",
+    "chinese_title": "用于流动性博弈的多智能体强化学习",
+    "chinese_summary": "该论文将流动性博弈（交易者收益依赖交易总流动性）与理性群体理论结合，提出金融群体模型；通过马尔可夫团队博弈框架下的差异奖励机制，证明独立交易者无需协调即可同时实现个体盈利与集体市场流动性提升，为市场设计提供理论支撑。",
+    "tags": [
+      "Financial Agent",
+      "Reinforcement Learning",
+      "Market Microstructure"
+    ],
+    "key_contributions": [
+      "统一流动性博弈与理性群体理论，构建金融群体模型框架",
+      "证明独立交易者通过差异奖励可同时实现个体盈利与集体市场流动性提升，无需协调"
+    ],
+    "processed_at": "2026-01-05T08:45:35.863676"
+  },
+  {
+    "id": "2601.00689v1",
+    "title": "Cost Optimization in Production Line Using Genetic Algorithm",
+    "abstract": "This paper presents a genetic algorithm (GA) approach to cost-optimal task scheduling in a production line. The system consists of a set of serial processing tasks, each with a given duration, unit execution cost, and precedence constraints, which must be assigned to an unlimited number of stations subject to a per-station duration bound. The objective is to minimize the total production cost, modeled as a station-wise function of task costs and the duration bound, while strictly satisfying all prerequisite and capacity constraints. Two chromosome encoding strategies are investigated: a station-based representation implemented using the JGAP library with SuperGene validity checks, and a task-based representation in which genes encode station assignments directly. For each encoding, standard GA operators (crossover, mutation, selection, and replacement) are adapted to preserve feasibility and drive the population toward lower-cost schedules. Experimental results on three classes of precedence structures-tightly coupled, loosely coupled, and uncoupled-demonstrate that the task-based encoding yields smoother convergence and more reliable cost minimization than the station-based encoding, particularly when the number of valid schedules is large. The study highlights the advantages of GA over gradient-based and analytical methods for combinatorial scheduling problems, especially in the presence of complex constraints and non-differentiable cost landscapes.",
+    "authors": [
+      "Alireza Rezaee"
+    ],
+    "published": "2026-01-02",
+    "categories": [
+      "cs.NE",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00689v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00689v1",
+    "fetched_at": "2026-01-05T08:39:37.231386",
+    "chinese_title": "基于遗传算法的生产线成本优化",
+    "chinese_summary": "论文提出遗传算法（GA）方法解决生产线任务调度的成本优化问题，考虑任务先后约束、单站时长限制等，对比基于站和任务的两种染色体编码策略；实验表明任务基编码收敛更平滑、成本最小化更可靠，且GA适合复杂约束的组合调度问题。",
+    "tags": [
+      "Algorithmic Trading",
+      "Execution"
+    ],
+    "key_contributions": [
+      "提出站基与任务基两种遗传算法染色体编码策略，适配生产线调度的约束要求",
+      "验证任务基编码在收敛性与成本优化效果上优于站基编码，凸显GA在复杂组合调度问题中的优势"
+    ],
+    "processed_at": "2026-01-05T08:45:57.859880"
+  },
+  {
+    "id": "2601.00615v1",
+    "title": "Integrating Multi-Armed Bandit, Active Learning, and Distributed Computing for Scalable Optimization",
+    "abstract": "Modern optimization problems in scientific and engineering domains often rely on expensive black-box evaluations, such as those arising in physical simulations or deep learning pipelines, where gradient information is unavailable or unreliable. In these settings, conventional optimization methods quickly become impractical due to prohibitive computational costs and poor scalability. We propose ALMAB-DC, a unified and modular framework for scalable black-box optimization that integrates active learning, multi-armed bandits, and distributed computing, with optional GPU acceleration. The framework leverages surrogate modeling and information-theoretic acquisition functions to guide informative sample selection, while bandit-based controllers dynamically allocate computational resources across candidate evaluations in a statistically principled manner. These decisions are executed asynchronously within a distributed multi-agent system, enabling high-throughput parallel evaluation. We establish theoretical regret bounds for both UCB-based and Thompson-sampling-based variants and develop a scalability analysis grounded in Amdahl's and Gustafson's laws. Empirical results across synthetic benchmarks, reinforcement learning tasks, and scientific simulation problems demonstrate that ALMAB-DC consistently outperforms state-of-the-art black-box optimizers. By design, ALMAB-DC is modular, uncertainty-aware, and extensible, making it particularly well suited for high-dimensional, resource-intensive optimization challenges.",
+    "authors": [
+      "Foo Hui-Mean",
+      "Yuan-chin Ivan Chang"
+    ],
+    "published": "2026-01-02",
+    "categories": [
+      "stat.CO",
+      "stat.ML"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00615v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00615v1",
+    "fetched_at": "2026-01-05T08:39:37.231431",
+    "chinese_title": "融合多臂老虎机、主动学习与分布式计算的可扩展优化方法",
+    "chinese_summary": "论文提出ALMAB-DC统一模块化框架，整合主动学习、多臂老虎机与分布式计算（可选GPU加速），通过代理建模、信息论采集函数及动态资源分配解决黑箱优化的可扩展性问题；理论证明UCB与汤普森采样变体的regret边界，实证在合成基准、强化学习任务及科学模拟中优于现有方法，且框架模块化可扩展。",
+    "tags": [
+      "Reinforcement Learning",
+      "Deep Learning",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出ALMAB-DC框架，整合主动学习、多臂老虎机与分布式计算，解决黑箱优化的高计算成本与可扩展性问题",
+      "建立UCB和汤普森采样变体的理论regret边界，实证在多场景下优于现有黑箱优化器，框架模块化可扩展"
+    ],
+    "processed_at": "2026-01-05T08:46:21.985887"
+  },
+  {
+    "id": "2601.00536v1",
+    "title": "Retrieval--Reasoning Processes for Multi-hop Question Answering: A Four-Axis Design Framework and Empirical Trends",
+    "abstract": "Multi-hop question answering (QA) requires systems to iteratively retrieve evidence and reason across multiple hops. While recent RAG and agentic methods report strong results, the underlying retrieval--reasoning \\emph{process} is often left implicit, making procedural choices hard to compare across model families. This survey takes the execution procedure as the unit of analysis and introduces a four-axis framework covering (A) overall execution plan, (B) index structure, (C) next-step control (strategies and triggers), and (D) stop/continue criteria. Using this schema, we map representative multi-hop QA systems and synthesize reported ablations and tendencies on standard benchmarks (e.g., HotpotQA, 2WikiMultiHopQA, MuSiQue), highlighting recurring trade-offs among effectiveness, efficiency, and evidence faithfulness. We conclude with open challenges for retrieval--reasoning agents, including structure-aware planning, transferable control policies, and robust stopping under distribution shift.",
+    "authors": [
+      "Yuelyu Ji",
+      "Zhuochun Li",
+      "Rui Meng",
+      "Daqing He"
+    ],
+    "published": "2026-01-02",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00536v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00536v1",
+    "fetched_at": "2026-01-05T08:39:37.231456",
+    "chinese_title": "多跳问答的检索-推理过程：四轴设计框架与实证趋势",
+    "chinese_summary": "本文针对多跳问答中检索-推理过程常隐含、难以跨模型比较的问题，提出包含整体执行计划、索引结构、下一步控制及停止标准的四轴设计框架；通过该框架映射代表性系统并综合基准实验的消融结果与趋势，揭示有效性、效率与证据忠实性的权衡，同时提出结构感知规划等开放挑战。",
+    "tags": [
+      "LLM",
+      "NLP",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出四轴设计框架，以执行过程为分析单元，明确多跳问答检索-推理过程的关键维度",
+      "基于框架映射代表性系统，综合基准实验结果揭示多跳问答系统的权衡关系并提出开放挑战"
+    ],
+    "processed_at": "2026-01-05T08:46:43.877410"
+  },
+  {
+    "id": "2601.00509v1",
+    "title": "Improving LLM-Assisted Secure Code Generation through Retrieval-Augmented-Generation and Multi-Tool Feedback",
+    "abstract": "Large Language Models (LLMs) can generate code but often introduce security vulnerabilities, logical inconsistencies, and compilation errors. Prior work demonstrates that LLMs benefit substantially from structured feedback, static analysis, retrieval augmentation, and execution-based refinement. We propose a retrieval-augmented, multi-tool repair workflow in which a single code-generating LLM iteratively refines its outputs using compiler diagnostics, CodeQL security scanning, and KLEE symbolic execution. A lightweight embedding model is used for semantic retrieval of previously successful repairs, providing security-focused examples that guide generation. Evaluated on a combined dataset of 3,242 programs generated by DeepSeek-Coder-1.3B and CodeLlama-7B, the system demonstrates significant improvements in robustness. For DeepSeek, security vulnerabilities were reduced by 96%. For the larger CodeLlama model, the critical security defect rate was decreased from 58.55% to 22.19%, highlighting the efficacy of tool-assisted self-repair even on \"stubborn\" models.",
+    "authors": [
+      "Vidyut Sriram",
+      "Sawan Pandita",
+      "Achintya Lakshmanan",
+      "Aneesh Shamraj",
+      "Suman Saha"
+    ],
+    "published": "2026-01-01",
+    "categories": [
+      "cs.CR",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00509v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00509v1",
+    "fetched_at": "2026-01-05T08:39:37.231492",
+    "chinese_title": "通过检索增强生成和多工具反馈改进LLM辅助的安全代码生成",
+    "chinese_summary": "论文提出检索增强的多工具修复工作流，让代码生成LLM利用编译器诊断、CodeQL安全扫描和KLEE符号执行迭代优化输出，同时通过轻量嵌入模型检索成功修复案例辅助生成；在3242个程序上评估显示，该方法显著降低安全漏洞率（DeepSeek-Coder减少96%，CodeLlama-7B关键缺陷率从58.55%降至22.19%）。",
+    "tags": [
+      "LLM",
+      "Deep Learning",
+      "Transformer"
+    ],
+    "key_contributions": [
+      "提出结合检索增强与多工具（编译器诊断、CodeQL、KLEE）的迭代修复工作流，辅助LLM生成更安全的代码",
+      "实验验证该方法大幅降低不同规模LLM生成代码的安全漏洞率，提升代码鲁棒性"
+    ],
+    "processed_at": "2026-01-05T08:47:03.149946"
+  },
+  {
+    "id": "2601.00482v1",
+    "title": "Multi-Agent Coordinated Rename Refactoring",
+    "abstract": "The primary value of AI agents in software development lies in their ability to extend the developer's capacity for reasoning and action, not to supplant human involvement. To showcase how to use agents working in tandem with developers, we designed a novel approach for carrying out coordinated renaming. Coordinated renaming, where a single rename refactoring triggers refactorings in multiple, related identifiers, is a frequent yet challenging task. Developers must manually propagate these rename refactorings across numerous files and contexts, a process that is both tedious and highly error-prone. State-of-the-art heuristic-based approaches produce an overwhelming number of false positives, while vanilla Large Language Models (LLMs) provide incomplete suggestions due to their limited context and inability to interact with refactoring tools. This leaves developers with incomplete refactorings or burdens them with filtering too many false positives. Coordinated renaming is exactly the kind of repetitive task that agents can significantly reduce the developers' burden while keeping them in the driver's seat.   We designed, implemented, and evaluated the first multi-agent framework that automates coordinated renaming. It operates on a key insight: a developer's initial refactoring is a clue to infer the scope of related refactorings. Our Scope Inference Agent first transforms this clue into an explicit, natural-language Declared Scope. The Planned Execution Agent then uses this as a strict plan to identify program elements that should undergo refactoring and safely executes the changes by invoking the IDE's own trusted refactoring APIs. Finally, the Replication Agent uses it to guide the project-wide search. We first conducted a formative study on the practice of coordinated renaming in 609K commits in 100 open-source projects and surveyed 205 developers ...",
+    "authors": [
+      "Abhiram Bellur",
+      "Mohammed Raihan Ullah",
+      "Fraol Batole",
+      "Mohit Kansara",
+      "Masaharu Morimoto",
+      "Kai Ishikawa",
+      "Haifeng Chen",
+      "Yaroslav Zharov",
+      "Timofey Bryksin",
+      "Tien N. Nguyen",
+      "Hridesh Rajan",
+      "Danny Dig"
+    ],
+    "published": "2026-01-01",
+    "categories": [
+      "cs.SE",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00482v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00482v1",
+    "fetched_at": "2026-01-05T08:39:37.231533",
+    "chinese_title": "多智能体协调重命名重构",
+    "chinese_summary": "论文针对软件重构中协调重命名任务（单个重命名触发多相关标识符重构）的挑战，设计实现首个多智能体框架，通过范围推断智能体将开发者初始重构转化为显式自然语言范围，再由计划执行智能体处理；解决了启发式方法假阳性多、 vanilla LLM 建议不完整的问题，减轻开发者负担且保持其主导地位。",
+    "tags": [
+      "LLM",
+      "Transformer"
+    ],
+    "key_contributions": [
+      "利用开发者初始重构作为线索，通过多智能体协作减轻开发者负担且保持其主导地位"
+    ],
+    "processed_at": "2026-01-05T08:47:17.594791"
+  },
+  {
+    "id": "2601.00481v1",
+    "title": "MAESTRO: Multi-Agent Evaluation Suite for Testing, Reliability, and Observability",
+    "abstract": "We present MAESTRO, an evaluation suite for the testing, reliability, and observability of LLM-based MAS. MAESTRO standardizes MAS configuration and execution through a unified interface, supports integrating both native and third-party MAS via a repository of examples and lightweight adapters, and exports framework-agnostic execution traces together with system-level signals (e.g., latency, cost, and failures). We instantiate MAESTRO with 12 representative MAS spanning popular agentic frameworks and interaction patterns, and conduct controlled experiments across repeated runs, backend models, and tool configurations. Our case studies show that MAS executions can be structurally stable yet temporally variable, leading to substantial run-to-run variance in performance and reliability. We further find that MAS architecture is the dominant driver of resource profiles, reproducibility, and cost-latency-accuracy trade-off, often outweighing changes in backend models or tool settings. Overall, MAESTRO enables systematic evaluation and provides empirical guidance for designing and optimizing agentic systems.",
+    "authors": [
+      "Tie Ma",
+      "Yixi Chen",
+      "Vaastav Anand",
+      "Alessandro Cornacchia",
+      "Amândio R. Faustino",
+      "Guanheng Liu",
+      "Shan Zhang",
+      "Hongbin Luo",
+      "Suhaib A. Fahmy",
+      "Zafar A. Qazi",
+      "Marco Canini"
+    ],
+    "published": "2026-01-01",
+    "categories": [
+      "cs.NI",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00481v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00481v1",
+    "fetched_at": "2026-01-05T08:39:37.231570",
+    "chinese_title": "MAESTRO：用于测试、可靠性与可观测性的多智能体评估套件",
+    "chinese_summary": "论文提出MAESTRO——针对基于LLM的多智能体系统（MAS）的评估套件，通过统一接口标准化MAS配置与执行，支持集成原生及第三方MAS并导出跨框架执行轨迹与系统信号；实例化12个代表性MAS开展实验，发现MAS执行存在运行间性能可靠性差异，且架构是资源、可复现性等关键属性的主导因素，为智能体系统设计优化提供实证指导。",
+    "tags": [
+      "LLM",
+      "Benchmark",
+      "NLP"
+    ],
+    "key_contributions": [
+      "提出MAESTRO评估套件，标准化基于LLM的MAS的测试、可靠性与可观测性，支持跨框架集成与系统信号导出",
+      "通过实验揭示MAS执行的运行间差异及架构对系统关键属性的主导作用，为智能体系统设计优化提供实证指导"
+    ],
+    "processed_at": "2026-01-05T08:47:38.910131"
+  },
+  {
+    "id": "2601.00397v1",
+    "title": "Revati: Transparent GPU-Free Time-Warp Emulation for LLM Serving",
+    "abstract": "Deploying LLMs efficiently requires testing hundreds of serving configurations, but evaluating each one on a GPU cluster takes hours and costs thousands of dollars. Discrete-event simulators are faster and cheaper, but they require re-implementing the serving system's control logic -- a burden that compounds as frameworks evolve.   We present Revati, a time-warp emulator that enables performance modeling by directly executing real serving system code at simulation-like speed. The system intercepts CUDA API calls to virtualize device management, allowing serving frameworks to run without physical GPUs. Instead of executing GPU kernels, it performs time jumps -- fast-forwarding virtual time by predicted kernel durations. We propose a coordination protocol that synchronizes these jumps across distributed processes while preserving causality. On vLLM and SGLang, Revati achieves less than 5% prediction error across multiple models and parallelism configurations, while running 5-17x faster than real GPU execution.",
+    "authors": [
+      "Amey Agrawal",
+      "Mayank Yadav",
+      "Sukrit Kumar",
+      "Anirudha Agrawal",
+      "Garv Ghai",
+      "Souradeep Bera",
+      "Elton Pinto",
+      "Sirish Gambhira",
+      "Mohammad Adain",
+      "Kasra Sohrab",
+      "Chus Antonanzas",
+      "Alexey Tumanov"
+    ],
+    "published": "2026-01-01",
+    "categories": [
+      "cs.DC",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00397v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00397v1",
+    "fetched_at": "2026-01-05T08:39:37.231608",
+    "chinese_title": "Revati：面向大语言模型服务的透明无GPU时间扭曲仿真系统",
+    "chinese_summary": "针对大语言模型（LLM）服务配置测试中GPU集群评估耗时费钱的问题，提出Revati仿真系统——通过拦截CUDA API虚拟设备管理，无需物理GPU即可直接执行真实服务框架代码，用预测的GPU核持续时间实现时间跳跃加速，且跨分布式进程同步保证因果性；在vLLM和SGLang上测试，预测误差低于5%，速度比真实GPU执行快5-17倍。",
+    "tags": [
+      "LLM",
+      "Transformer",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出透明无GPU的时间扭曲仿真系统Revati，可直接执行真实LLM服务框架代码（无需重写控制逻辑），解决GPU集群评估耗时费钱的问题",
+      "设计跨分布式进程的时间跳跃同步协议，保证因果性的同时实现仿真加速，实验验证预测误差<5%、速度提升5-17倍"
+    ],
+    "processed_at": "2026-01-05T08:48:09.059961"
+  },
+  {
+    "id": "2601.00389v1",
+    "title": "NOS-Gate: Queue-Aware Streaming IDS for Consumer Gateways under Timing-Controlled Evasion",
+    "abstract": "Timing and burst patterns can leak through encryption, and an adaptive adversary can exploit them. This undermines metadata-only detection in a stand-alone consumer gateway. Therefore, consumer gateways need streaming intrusion detection on encrypted traffic using metadata only, under tight CPU and latency budgets. We present a streaming IDS for stand-alone gateways that instantiates a lightweight two-state unit derived from Network-Optimised Spiking (NOS) dynamics per flow, named NOS-Gate. NOS-Gate scores fixed-length windows of metadata features and, under a $K$-of-$M$ persistence rule, triggers a reversible mitigation that temporarily reduces the flow's weight under weighted fair queueing (WFQ). We evaluate NOS-Gate under timing-controlled evasion using an executable 'worlds' benchmark that specifies benign device processes, auditable attacker budgets, contention structure, and packet-level WFQ replay to quantify queue impact. All methods are calibrated label-free via burn-in quantile thresholding. Across multiple reproducible worlds and malicious episodes, at an achieved $0.1%$ false-positive operating point, NOS-Gate attains 0.952 incident recall versus 0.857 for the best baseline in these runs. Under gating, it reduces p99.9 queueing delay and p99.9 collateral delay with a mean scoring cost of ~ 2.09 μs per flow-window on CPU.",
+    "authors": [
+      "Muhammad Bilal",
+      "Omer Tariq",
+      "Hasan Ahmed"
+    ],
+    "published": "2026-01-01",
+    "categories": [
+      "cs.CR",
+      "cs.LG",
+      "cs.NI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00389v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00389v1",
+    "fetched_at": "2026-01-05T08:39:37.231631",
+    "chinese_title": "NOS-Gate：定时控制规避下消费网关的队列感知流式入侵检测系统",
+    "chinese_summary": "论文针对定时控制规避下消费网关加密流量的入侵检测问题，提出基于网络优化脉冲（NOS）动力学的轻量流式IDS NOS-Gate，采用K-of-M持久化规则触发WFQ流量缓解，通过无监督烧入阈值校准；评估显示其在0.1%误报率下召回率达0.952（优于基线0.857），且降低队列延迟、CPU开销约2.09μs/流窗口。",
+    "tags": [
+      "Anomaly",
+      "Benchmark",
+      "Time Series"
+    ],
+    "key_contributions": [
+      "提出适配定时控制规避场景的消费网关流式IDS NOS-Gate，基于轻量NOS单元实现低资源开销下的高检测性能",
+      "构建包含良性进程、攻击者预算等的可执行benchmark，支持无监督校准与多场景评估"
+    ],
+    "processed_at": "2026-01-05T08:48:38.550447"
+  },
+  {
+    "id": "2601.00380v1",
+    "title": "Word Frequency Counting Based on Serverless MapReduce",
+    "abstract": "With the increasing demand for high-performance and high-efficiency computing, cloud computing, especially serverless computing, has gradually become a research hotspot in recent years, attracting numerous research attention. Meanwhile, MapReduce, which is a popular big data processing model in the industry, has been widely applied in various fields. Inspired by the serverless framework of Function as a Service and the high concurrency and robustness of MapReduce programming model, this paper focus on combining them to reduce the time span and increase the efficiency when executing the word frequency counting task. In this case, the paper use a MapReduce programming model based on a serverless computing platform to figure out the most optimized number of Map functions and Reduce functions for a particular task. For the same amount of workload, extensive experiments show both execution time reduces and the overall efficiency of the program improves at different rates as the number of map functions and reduce functions increases. This paper suppose the discovery of the most optimized number of map and reduce functions can help cooperations and programmers figure out the most optimized solutions.",
+    "authors": [
+      "Hanzhe Li",
+      "Bingchen Lin",
+      "Mengyuan Xu"
+    ],
+    "published": "2026-01-01",
+    "categories": [
+      "cs.DC",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00380v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00380v1",
+    "fetched_at": "2026-01-05T08:39:37.231675",
+    "chinese_title": "基于无服务器MapReduce的词频统计",
+    "chinese_summary": "论文结合无服务器计算（FaaS）与MapReduce编程模型，针对词频统计任务探索最优Map和Reduce函数数量；实验表明相同工作量下增加函数数量可降低执行时间、提升效率，该发现有助于企业和开发者确定最优解决方案。",
+    "tags": [
+      "NLP"
+    ],
+    "key_contributions": [
+      "提出结合无服务器计算与MapReduce的词频统计优化方法",
+      "通过实验验证最优Map/Reduce函数数量对效率的提升作用，为任务提供最优解参考"
+    ],
+    "processed_at": "2026-01-05T08:59:11.579338"
+  },
+  {
+    "id": "2601.00268v1",
+    "title": "Beyond Perfect APIs: A Comprehensive Evaluation of LLM Agents Under Real-World API Complexity",
+    "abstract": "We introduce WildAGTEval, a benchmark designed to evaluate large language model (LLM) agents' function-calling capabilities under realistic API complexity. Unlike prior work that assumes an idealized API system and disregards real-world factors such as noisy API outputs, WildAGTEval accounts for two dimensions of real-world complexity: 1. API specification, which includes detailed documentation and usage constraints, and 2. API execution, which captures runtime challenges. Consequently, WildAGTEval offers (i) an API system encompassing 60 distinct complexity scenarios that can be composed into approximately 32K test configurations, and (ii) user-agent interactions for evaluating LLM agents on these scenarios. Using WildAGTEval, we systematically assess several advanced LLMs and observe that most scenarios are challenging, with irrelevant information complexity posing the greatest difficulty and reducing the performance of strong LLMs by 27.3%. Furthermore, our qualitative analysis reveals that LLMs occasionally distort user intent merely to claim task completion, critically affecting user satisfaction.",
+    "authors": [
+      "Doyoung Kim",
+      "Zhiwei Ren",
+      "Jie Hao",
+      "Zhongkai Sun",
+      "Lichao Wang",
+      "Xiyao Ma",
+      "Zack Ye",
+      "Xu Han",
+      "Jun Yin",
+      "Heng Ji",
+      "Wei Shen",
+      "Xing Fan",
+      "Benjamin Yao",
+      "Chenlei Guo"
+    ],
+    "published": "2026-01-01",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00268v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00268v1",
+    "fetched_at": "2026-01-05T08:39:37.231715",
+    "chinese_title": "超越完美API：真实世界API复杂度下LLM智能体的综合评估",
+    "chinese_summary": "本文引入WildAGTEval基准，针对真实世界API的规范（含详细文档、使用约束）与执行两个复杂度维度，构建包含60种场景、约32K测试配置的API系统；通过该基准评估多个先进LLM，发现无关信息复杂度对性能影响最大（强LLM性能下降27.3%），且LLM偶会扭曲用户意图影响满意度。",
+    "tags": [
+      "LLM",
+      "NLP",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出WildAGTEval基准，首次全面考虑真实API的规范与执行复杂度，构建含60场景、32K+测试配置的评估系统",
+      "系统评估多先进LLM，揭示无关信息复杂度对性能的显著影响及LLM扭曲用户意图的问题"
+    ],
+    "processed_at": "2026-01-05T08:59:36.186825"
+  },
+  {
+    "id": "2601.00224v1",
+    "title": "Talk Less, Verify More: Improving LLM Assistants with Semantic Checks and Execution Feedback",
+    "abstract": "As large language model (LLM) assistants become increasingly integrated into enterprise workflows, their ability to generate accurate, semantically aligned, and executable outputs is critical. However, current conversational business analytics (CBA) systems often lack built-in verification mechanisms, leaving users to manually validate potentially flawed results. This paper introduces two complementary verification techniques: Q*, which performs reverse translation and semantic matching between code and user intent, and Feedback+, which incorporates execution feedback to guide code refinement. Embedded within a generator-discriminator framework, these mechanisms shift validation responsibilities from users to the system. Evaluations on three benchmark datasets, Spider, Bird, and GSM8K, demonstrate that both Q* and Feedback+ reduce error rates and task completion time. The study also identifies reverse translation as a key bottleneck, highlighting opportunities for future improvement. Overall, this work contributes a design-oriented framework for building more reliable, enterprise-grade GenAI systems capable of trustworthy decision support.",
+    "authors": [
+      "Yan Sun",
+      "Ming Cai",
+      "Stanley Kok"
+    ],
+    "published": "2026-01-01",
+    "categories": [
+      "cs.CL",
+      "cs.SE"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00224v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00224v1",
+    "fetched_at": "2026-01-05T08:39:37.231736",
+    "chinese_title": "少说多验证：通过语义检查和执行反馈改进大语言模型助手",
+    "chinese_summary": "论文针对企业工作流中的大语言模型（LLM）助手，提出Q*（代码与用户意图的反向翻译+语义匹配）和Feedback+（执行反馈指导代码优化）两种互补验证技术，嵌入生成器-判别器框架以减轻用户验证负担；在Spider、Bird、GSM8K基准数据集上验证了方法可降低错误率和任务完成时间，还指出反向翻译是关键瓶颈。",
+    "tags": [
+      "LLM",
+      "NLP",
+      "Execution",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出Q*（代码-意图反向翻译+语义匹配）和Feedback+（执行反馈优化）两种互补验证技术，嵌入生成器-判别器框架，将验证责任从用户转移到系统",
+      "在三个基准数据集上证明方法可降低错误率和任务完成时间，识别反向翻译为关键瓶颈，为可靠企业级生成式AI系统设计提供参考"
+    ],
+    "processed_at": "2026-01-05T08:59:54.508954"
+  },
+  {
+    "id": "2601.00770v1",
+    "title": "LLM Agents for Combinatorial Efficient Frontiers: Investment Portfolio Optimization",
+    "abstract": "Investment portfolio optimization is a task conducted in all major financial institutions. The Cardinality Constrained Mean-Variance Portfolio Optimization (CCPO) problem formulation is ubiquitous for portfolio optimization. The challenge of this type of portfolio optimization, a mixed-integer quadratic programming (MIQP) problem, arises from the intractability of solutions from exact solvers, where heuristic algorithms are used to find approximate portfolio solutions. CCPO entails many laborious and complex workflows and also requires extensive effort pertaining to heuristic algorithm development, where the combination of pooled heuristic solutions results in improved efficient frontiers. Hence, common approaches are to develop many heuristic algorithms. Agentic frameworks emerge as a promising candidate for many problems within combinatorial optimization, as they have been shown to be equally efficient with regard to automating large workflows and have been shown to be excellent in terms of algorithm development, sometimes surpassing human-level performance. This study implements a novel agentic framework for the CCPO and explores several concrete architectures. In benchmark problems, the implemented agentic framework matches state-of-the-art algorithms. Furthermore, complex workflows and algorithm development efforts are alleviated, while in the worst case, lower but acceptable error is reported.",
+    "authors": [
+      "Simon Paquette-Greenbaum",
+      "Jiangbo Yu"
+    ],
+    "published": "2026-01-02",
+    "categories": [
+      "cs.CE",
+      "cs.AI",
+      "econ.GN"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00770v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00770v1",
+    "fetched_at": "2026-01-05T08:41:33.760165",
+    "chinese_title": "用于组合有效前沿的大语言模型智能体：投资组合优化",
+    "chinese_summary": "本文针对基数约束均值方差投资组合优化（CCPO，一类精确求解困难的混合整数二次规划问题），提出一种基于大语言模型（LLM）智能体的新框架；该框架在基准测试中匹配当前最优算法，同时显著减轻复杂工作流及启发式算法开发负担，最坏情况误差低至可接受范围。",
+    "tags": [
+      "LLM",
+      "Financial Agent",
+      "Portfolio Optimization",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出用于基数约束均值方差投资组合优化（CCPO）的新型LLM智能体框架，探索多种具体架构",
+      "框架性能匹配当前最优算法，且大幅减轻复杂工作流与算法开发负担，最坏情况误差可接受"
+    ],
+    "processed_at": "2026-01-05T09:00:11.228230"
+  }
+]

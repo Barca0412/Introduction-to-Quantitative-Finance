@@ -1,0 +1,489 @@
+[
+  {
+    "id": "2601.00738v1",
+    "title": "Second Thoughts: How 1-second subslots transform CEX-DEX Arbitrage on Ethereum",
+    "abstract": "This paper examines the impact of reducing Ethereum slot time on decentralized exchange activity, with a focus on CEX-DEX arbitrage behavior. We develop a trading model where the agent's DEX transaction is not guaranteed to land, and the agent explicitly accounts for this execution risk when deciding whether to pursue arbitrage opportunities. We compare agent behavior under Ethereum's default 12-second slot time environment with a faster regime that offers 1-second subslot execution. The simulations, calibrated to Binance and Uniswap v3 data from July to September 2025, show that faster slot times increase arbitrage transaction count by 535% and trading volume by 203% on average. The increase in CEX-DEX arbitrage activity under 1-second subslots is driven by the reduction in variance of both successful and failed trade outcomes, increasing the risk-adjusted returns and making CEX-DEX arbitrage more appealing.",
+    "authors": [
+      "Aleksei Adadurov",
+      "Sergey Barseghyan",
+      "Anton Chtepine",
+      "Antero Eloranta",
+      "Andrei Sebyakin",
+      "Arsenii Valitov"
+    ],
+    "published": "2026-01-02",
+    "categories": [
+      "q-fin.TR",
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00738v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00738v1",
+    "fetched_at": "2026-01-05T08:38:53.934779"
+  },
+  {
+    "id": "2601.00593v1",
+    "title": "Uncertainty-Adjusted Sorting for Asset Pricing with Machine Learning",
+    "abstract": "Machine learning is central to empirical asset pricing, but portfolio construction still relies on point predictions and largely ignores asset-specific estimation uncertainty. We propose a simple change: sort assets using uncertainty-adjusted prediction bounds instead of point predictions alone. Across a broad set of ML models and a U.S. equity panel, this approach improves portfolio performance relative to point-prediction sorting. These gains persist even when bounds are built from partial or misspecified uncertainty information. They arise mainly from reduced volatility and are strongest for flexible machine learning models. Identification and robustness exercises show that these improvements are driven by asset-level rather than time or aggregate predictive uncertainty.",
+    "authors": [
+      "Yan Liu",
+      "Ye Luo",
+      "Zigan Wang",
+      "Xiaowei Zhang"
+    ],
+    "published": "2026-01-02",
+    "categories": [
+      "q-fin.PM",
+      "stat.ML"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00593v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00593v1",
+    "fetched_at": "2026-01-05T08:38:53.934818"
+  },
+  {
+    "id": "2601.00568v1",
+    "title": "Capital allocation and tail central moments for the multivariate normal mean-variance mixture distribution",
+    "abstract": "Capital allocation is a procedure used to assess the risk contributions of individual risk components to the total risk of a portfolio. While the conditional tail expectation (CTE)-based capital allocation is arguably the most popular capital allocation method, its inability to reflect important tail behaviour of losses necessitates a more accurate approach. In this paper, we introduce a new capital allocation method based on the tail central moments (TCM), generalising the tail covariance allocation informed by the tail variance. We develop analytical expressions of the TCM as well as the TCM-based capital allocation for the class of normal mean-variance mixture distributions, which is widely used to model asymmetric and heavy-tailed data in finance and insurance. As demonstrated by a numerical analysis, the TCM-based capital allocation captures several significant patterns in the tail region of equity losses that remain undetected by the CTE, enhancing the understanding of the tail risk contributions of risk components.",
+    "authors": [
+      "Enrique Calderín-Ojeda",
+      "Yuyu Chen",
+      "Soon Wei Tan"
+    ],
+    "published": "2026-01-02",
+    "categories": [
+      "q-fin.PM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00568v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00568v1",
+    "fetched_at": "2026-01-05T08:38:53.934843"
+  },
+  {
+    "id": "2601.00478v1",
+    "title": "Multimodal Insights into Credit Risk Modelling: Integrating Climate and Text Data for Default Prediction",
+    "abstract": "Credit risk assessment increasingly relies on diverse sources of information beyond traditional structured financial data, particularly for micro and small enterprises (mSEs) with limited financial histories. This study proposes a multimodal framework that integrates structured credit variables, climate panel data, and unstructured textual narratives within a unified learning architecture. Specifically, we use long short-term memory (LSTM), the gated recurrent unit (GRU), and transformer models to analyse the interplay between these data modalities. The empirical results demonstrate that unimodal models based on climate or text data outperform those relying solely on structured data, while the integration of multiple data modalities yields significant improvements in credit default prediction. Using SHAP-based explainability methods, we find that physical climate risks play an important role in default prediction, with water-logging by rain emerging as the most influential factor. Overall, this study demonstrates the potential of multimodal approaches in AI-enabled decision-making, which provides robust tools for credit risk assessment while contributing to the broader integration of environmental and textual insights into predictive analytics.",
+    "authors": [
+      "Zongxiao Wu",
+      "Ran Liu",
+      "Jiang Dai",
+      "Dan Luo"
+    ],
+    "published": "2026-01-01",
+    "categories": [
+      "q-fin.RM",
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00478v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00478v1",
+    "fetched_at": "2026-01-05T08:38:53.934867"
+  },
+  {
+    "id": "2601.00395v1",
+    "title": "Core-Periphery Dynamics in Market-Conditioned Financial Networks: A Conditional P-Threshold Mutual Information Approach",
+    "abstract": "This study investigates how financial market structure reorganizes during the COVID-19 crash using a conditional p-threshold mutual information (MI) based Minimum Spanning Tree (MST) framework. We analyze nonlinear dependencies among the largest stocks from four diverse QUAD countries: the US, Japan, Australia, and India. Crashes are identified using the Hellinger distance and Hilbert spectrum; a crash occurs when HD = mu\\_H + 2*sigma\\_H, segmenting data into pre-crash, crash, and post-crash periods. Conditional p-threshold MI filters out common market effects and applies permutation-based significance testing. Resulting validated dependencies are used to construct MST networks for comparison across periods. Networks become more integrated during the crash, with shorter path lengths, higher centrality, and lower algebraic connectivity, indicating fragility. Core-periphery structure declines, with increased periphery vulnerability, and disassortative mixing facilitates shock transmission. Post-crash networks show only partial recovery. Aftershock analysis using the Gutenberg-Richter law indicates higher relative frequency of large volatility events following the crash. Results are consistent across all markets, highlighting the conditional p-threshold MI framework for capturing nonlinear interdependencies and systemic vulnerability.",
+    "authors": [
+      "Kundan Mukhia",
+      "Imran Ansari",
+      "S R Luwang",
+      "Md Nurujjaman"
+    ],
+    "published": "2026-01-01",
+    "categories": [
+      "q-fin.ST"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00395v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00395v1",
+    "fetched_at": "2026-01-05T08:38:53.934890"
+  },
+  {
+    "id": "2601.00293v1",
+    "title": "Option Pricing beyond Black-Scholes Model:Quantum Mechanics Approach",
+    "abstract": "Based on the analog between the stochastic dynamics and quantum harmonic oscillator, we propose a market force driving model to generalize the Black-Scholes model in finance market. We give new schemes of option pricing, in which we can take various unexpected market behaviors into account to modify the option pricing. As examples, we present several market forces to analyze their effects on the option pricing. These results provide us two practical applications. One is to be used as a new scheme of option pricing when we can predict some hidden market forces or behaviors emerging. The other implies the existence of some risk premium when some unexpected forces emerge.",
+    "authors": [
+      "Pengpeng Li",
+      "Shi-Dong Liang"
+    ],
+    "published": "2026-01-01",
+    "categories": [
+      "q-fin.RM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00293v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00293v1",
+    "fetched_at": "2026-01-05T08:38:53.934910"
+  },
+  {
+    "id": "2601.00281v1",
+    "title": "A Global Optimal Theory of Portfolio beyond R-$σ$ Model",
+    "abstract": "The deviation of the efficient market hypothesis (EMH) for the practical economic system allows us gain the arbitrary or risk premium in finance markets. We propose the triplet $(R,H,σ)$ theory to give the local and global optimal portfolio, which eneralize from the $(R,σ)$ model. We present the formulation of the triplet $(R,H,σ)$ model and give the Pareto optimal solution as well as comparing it with the numerical investigations for the Chinese stock market. We define the local optimal weights of the triplet $(\\mathbf{w}_{R},\\mathbf{w}_{H},\\mathbf{w}_σ)$, which constructs the triangle of the quasi-optimal investing subspace such that we further define the centroid of the triangle or the incenter of the triangle as the optimal investing weights, which optimizes the mean return, the arbitrary or risk premium and the volatility risk. By investigating numerically the Chinese stock market as an example we demonstrate the validity of the formulation and obtain the global optimal strategy and quasi-optimal investing subspace. The theory provides an efficient way to design the portfolio for different style investors, conservative or aggressive investors, in finance market to maximize the mean return and arbitrary or risk premium with a small volatility risk.",
+    "authors": [
+      "Yifan Liu",
+      "Shi-Dong Liang"
+    ],
+    "published": "2026-01-01",
+    "categories": [
+      "q-fin.PM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00281v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00281v1",
+    "fetched_at": "2026-01-05T08:38:53.934931"
+  },
+  {
+    "id": "2601.00196v1",
+    "title": "SoK: Stablecoins in Retail Payments",
+    "abstract": "Stablecoins have emerged as a rapidly growing digital payment instrument, raising the question of whether blockchain-based settlement can function as a substitute for incumbent card networks in retail payments. This Systematization of Knowledge (SoK) provides a systematic comparison between stablecoin payment arrangements and card networks by situating both within a unified analytical framework. We first map their respective payment infrastructures, participant roles, and transaction lifecycles, highlighting fundamental differences in how authorization, settlement, and recourse are organized. Building on this mapping, we introduce the CLEAR framework, which evaluates retail payment systems across five dimensions: cost, legality, experience, architecture, and reach. Our analysis shows that stablecoins deliver efficient, continuous, and programmable settlement, often compressing rail-level merchant fees and enabling 24/7 value transfer. However, these advantages are accompanied by an inversion of the traditional pricing and risk-allocation structure. Card networks internalize consumer-side frictions through subsidies, standardized liability rules, and post-transaction recourse, thereby supporting mass-market adoption. Stablecoin arrangements, by contrast, externalize transaction fees, error prevention, and dispute resolution to users, intermediaries, and courts, resulting in weaker consumer protection, higher cognitive burden at the point of interaction, and fragmented acceptance. Accordingly, stablecoins exhibit a conditional comparative advantage in closed-loop environments, cross-border corridors, and high-friction payment contexts, but remain structurally disadvantaged as open-loop retail payment instruments.",
+    "authors": [
+      "Yuquan Li",
+      "Yuexin Xiang",
+      "Qin Wang",
+      "Tsz Hon Yuen",
+      "Andreas Deppeler",
+      "Jiangshan Yu"
+    ],
+    "published": "2026-01-01",
+    "categories": [
+      "q-fin.GN"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00196v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00196v1",
+    "fetched_at": "2026-01-05T08:38:53.934957"
+  },
+  {
+    "id": "2601.00516v1",
+    "title": "Trajectory Guard -- A Lightweight, Sequence-Aware Model for Real-Time Anomaly Detection in Agentic AI",
+    "abstract": "Autonomous LLM agents generate multi-step action plans that can fail due to contextual misalignment or structural incoherence. Existing anomaly detection methods are ill-suited for this challenge: mean-pooling embeddings dilutes anomalous steps, while contrastive-only approaches ignore sequential structure. Standard unsupervised methods on pre-trained embeddings achieve F1-scores no higher than 0.69. We introduce Trajectory Guard, a Siamese Recurrent Autoencoder with a hybrid loss function that jointly learns task-trajectory alignment via contrastive learning and sequential validity via reconstruction. This dual objective enables unified detection of both \"wrong plan for this task\" and \"malformed plan structure.\" On benchmarks spanning synthetic perturbations and real-world failures from security audits (RAS-Eval) and multi-agent systems (Who\\&When), we achieve F1-scores of 0.88-0.94 on balanced sets and recall of 0.86-0.92 on imbalanced external benchmarks. At 32 ms inference latency, our approach runs 17-27$\\times$ faster than LLM Judge baselines, enabling real-time safety verification in production deployments.",
+    "authors": [
+      "Laksh Advani"
+    ],
+    "published": "2026-01-02",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00516v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00516v1",
+    "fetched_at": "2026-01-05T08:39:07.063844"
+  },
+  {
+    "id": "2601.00446v1",
+    "title": "A Comparative Study of Adaptation Strategies for Time Series Foundation Models in Anomaly Detection",
+    "abstract": "Time series anomaly detection is essential for the reliable operation of complex systems, but most existing methods require extensive task-specific training. We explore whether time series foundation models (TSFMs), pretrained on large heterogeneous data, can serve as universal backbones for anomaly detection. Through systematic experiments across multiple benchmarks, we compare zero-shot inference, full model adaptation, and parameter-efficient fine-tuning (PEFT) strategies. Our results demonstrate that TSFMs outperform task-specific baselines, achieving notable gains in AUC-PR and VUS-PR, particularly under severe class imbalance. Moreover, PEFT methods such as LoRA, OFT, and HRA not only reduce computational cost but also match or surpass full fine-tuning in most cases, indicating that TSFMs can be efficiently adapted for anomaly detection, even when pretrained for forecasting. These findings position TSFMs as promising general-purpose models for scalable and efficient time series anomaly detection.",
+    "authors": [
+      "Miseon Park",
+      "Kijung Yoon"
+    ],
+    "published": "2026-01-01",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00446v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00446v1",
+    "fetched_at": "2026-01-05T08:39:07.063875"
+  },
+  {
+    "id": "2601.00384v1",
+    "title": "Engineering Attack Vectors and Detecting Anomalies in Additive Manufacturing",
+    "abstract": "Additive manufacturing (AM) is rapidly integrating into critical sectors such as aerospace, automotive, and healthcare. However, this cyber-physical convergence introduces new attack surfaces, especially at the interface between computer-aided design (CAD) and machine execution layers. In this work, we investigate targeted cyberattacks on two widely used fused deposition modeling (FDM) systems, Creality's flagship model K1 Max, and Ender 3. Our threat model is a multi-layered Man-in-the-Middle (MitM) intrusion, where the adversary intercepts and manipulates G-code files during upload from the user interface to the printer firmware. The MitM intrusion chain enables several stealthy sabotage scenarios. These attacks remain undetectable by conventional slicer software or runtime interfaces, resulting in structurally defective yet externally plausible printed parts. To counter these stealthy threats, we propose an unsupervised Intrusion Detection System (IDS) that analyzes structured machine logs generated during live printing. Our defense mechanism uses a frozen Transformer-based encoder (a BERT variant) to extract semantic representations of system behavior, followed by a contrastively trained projection head that learns anomaly-sensitive embeddings. Later, a clustering-based approach and a self-attention autoencoder are used for classification. Experimental results demonstrate that our approach effectively distinguishes between benign and compromised executions.",
+    "authors": [
+      "Md Mahbub Hasan",
+      "Marcus Sternhagen",
+      "Krishna Chandra Roy"
+    ],
+    "published": "2026-01-01",
+    "categories": [
+      "cs.CR",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00384v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00384v1",
+    "fetched_at": "2026-01-05T08:39:07.063899"
+  },
+  {
+    "id": "2601.00327v1",
+    "title": "HarmoniAD: Harmonizing Local Structures and Global Semantics for Anomaly Detection",
+    "abstract": "Anomaly detection is crucial in industrial product quality inspection. Failing to detect tiny defects often leads to serious consequences. Existing methods face a structure-semantics trade-off: structure-oriented models (such as frequency-based filters) are noise-sensitive, while semantics-oriented models (such as CLIP-based encoders) often miss fine details. To address this, we propose HarmoniAD, a frequency-guided dual-branch framework. Features are first extracted by the CLIP image encoder, then transformed into the frequency domain, and finally decoupled into high- and low-frequency paths for complementary modeling of structure and semantics. The high-frequency branch is equipped with a fine-grained structural attention module (FSAM) to enhance textures and edges for detecting small anomalies, while the low-frequency branch uses a global structural context module (GSCM) to capture long-range dependencies and preserve semantic consistency. Together, these branches balance fine detail and global semantics. HarmoniAD further adopts a multi-class joint training strategy, and experiments on MVTec-AD, VisA, and BTAD show state-of-the-art performance with both sensitivity and robustness.",
+    "authors": [
+      "Naiqi Zhang",
+      "Chuancheng Shi",
+      "Jingtong Dou",
+      "Wenhua Wu",
+      "Fei Shen",
+      "Jianhua Cao"
+    ],
+    "published": "2026-01-01",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00327v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00327v1",
+    "fetched_at": "2026-01-05T08:39:07.063927"
+  },
+  {
+    "id": "2601.00324v1",
+    "title": "Multiagent Reinforcement Learning for Liquidity Games",
+    "abstract": "Making use of swarm methods in financial market modeling of liquidity, and techniques from financial analysis in swarm analysis, holds the potential to advance both research areas. In swarm research, the use of game theory methods holds the promise of explaining observed phenomena of collective utility adherence with rational self-interested swarm participants. In financial markets, a better understanding of how independent financial agents may self-organize for the betterment and stability of the marketplace would be a boon for market design researchers. This paper unifies Liquidity Games, where trader payoffs depend on aggregate liquidity within a trade, with Rational Swarms, where decentralized agents use difference rewards to align self-interested learning with global objectives. We offer a theoretical frameworks where we define a swarm of traders whose collective objective is market liquidity provision while maintaining agent independence. Using difference rewards within a Markov team games framework, we show that individual liquidity-maximizing behaviors contribute to overall market liquidity without requiring coordination or collusion. This Financial Swarm model provides a framework for modeling rational, independent agents where they achieve both individual profitability and collective market efficiency in bilateral asset markets.",
+    "authors": [
+      "Alicia Vidler",
+      "Gal A. Kaminka"
+    ],
+    "published": "2026-01-01",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00324v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00324v1",
+    "fetched_at": "2026-01-05T08:39:17.208198"
+  },
+  {
+    "id": "2601.00689v1",
+    "title": "Cost Optimization in Production Line Using Genetic Algorithm",
+    "abstract": "This paper presents a genetic algorithm (GA) approach to cost-optimal task scheduling in a production line. The system consists of a set of serial processing tasks, each with a given duration, unit execution cost, and precedence constraints, which must be assigned to an unlimited number of stations subject to a per-station duration bound. The objective is to minimize the total production cost, modeled as a station-wise function of task costs and the duration bound, while strictly satisfying all prerequisite and capacity constraints. Two chromosome encoding strategies are investigated: a station-based representation implemented using the JGAP library with SuperGene validity checks, and a task-based representation in which genes encode station assignments directly. For each encoding, standard GA operators (crossover, mutation, selection, and replacement) are adapted to preserve feasibility and drive the population toward lower-cost schedules. Experimental results on three classes of precedence structures-tightly coupled, loosely coupled, and uncoupled-demonstrate that the task-based encoding yields smoother convergence and more reliable cost minimization than the station-based encoding, particularly when the number of valid schedules is large. The study highlights the advantages of GA over gradient-based and analytical methods for combinatorial scheduling problems, especially in the presence of complex constraints and non-differentiable cost landscapes.",
+    "authors": [
+      "Alireza Rezaee"
+    ],
+    "published": "2026-01-02",
+    "categories": [
+      "cs.NE",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00689v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00689v1",
+    "fetched_at": "2026-01-05T08:39:37.231386"
+  },
+  {
+    "id": "2601.00615v1",
+    "title": "Integrating Multi-Armed Bandit, Active Learning, and Distributed Computing for Scalable Optimization",
+    "abstract": "Modern optimization problems in scientific and engineering domains often rely on expensive black-box evaluations, such as those arising in physical simulations or deep learning pipelines, where gradient information is unavailable or unreliable. In these settings, conventional optimization methods quickly become impractical due to prohibitive computational costs and poor scalability. We propose ALMAB-DC, a unified and modular framework for scalable black-box optimization that integrates active learning, multi-armed bandits, and distributed computing, with optional GPU acceleration. The framework leverages surrogate modeling and information-theoretic acquisition functions to guide informative sample selection, while bandit-based controllers dynamically allocate computational resources across candidate evaluations in a statistically principled manner. These decisions are executed asynchronously within a distributed multi-agent system, enabling high-throughput parallel evaluation. We establish theoretical regret bounds for both UCB-based and Thompson-sampling-based variants and develop a scalability analysis grounded in Amdahl's and Gustafson's laws. Empirical results across synthetic benchmarks, reinforcement learning tasks, and scientific simulation problems demonstrate that ALMAB-DC consistently outperforms state-of-the-art black-box optimizers. By design, ALMAB-DC is modular, uncertainty-aware, and extensible, making it particularly well suited for high-dimensional, resource-intensive optimization challenges.",
+    "authors": [
+      "Foo Hui-Mean",
+      "Yuan-chin Ivan Chang"
+    ],
+    "published": "2026-01-02",
+    "categories": [
+      "stat.CO",
+      "stat.ML"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00615v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00615v1",
+    "fetched_at": "2026-01-05T08:39:37.231431"
+  },
+  {
+    "id": "2601.00536v1",
+    "title": "Retrieval--Reasoning Processes for Multi-hop Question Answering: A Four-Axis Design Framework and Empirical Trends",
+    "abstract": "Multi-hop question answering (QA) requires systems to iteratively retrieve evidence and reason across multiple hops. While recent RAG and agentic methods report strong results, the underlying retrieval--reasoning \\emph{process} is often left implicit, making procedural choices hard to compare across model families. This survey takes the execution procedure as the unit of analysis and introduces a four-axis framework covering (A) overall execution plan, (B) index structure, (C) next-step control (strategies and triggers), and (D) stop/continue criteria. Using this schema, we map representative multi-hop QA systems and synthesize reported ablations and tendencies on standard benchmarks (e.g., HotpotQA, 2WikiMultiHopQA, MuSiQue), highlighting recurring trade-offs among effectiveness, efficiency, and evidence faithfulness. We conclude with open challenges for retrieval--reasoning agents, including structure-aware planning, transferable control policies, and robust stopping under distribution shift.",
+    "authors": [
+      "Yuelyu Ji",
+      "Zhuochun Li",
+      "Rui Meng",
+      "Daqing He"
+    ],
+    "published": "2026-01-02",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00536v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00536v1",
+    "fetched_at": "2026-01-05T08:39:37.231456"
+  },
+  {
+    "id": "2601.00509v1",
+    "title": "Improving LLM-Assisted Secure Code Generation through Retrieval-Augmented-Generation and Multi-Tool Feedback",
+    "abstract": "Large Language Models (LLMs) can generate code but often introduce security vulnerabilities, logical inconsistencies, and compilation errors. Prior work demonstrates that LLMs benefit substantially from structured feedback, static analysis, retrieval augmentation, and execution-based refinement. We propose a retrieval-augmented, multi-tool repair workflow in which a single code-generating LLM iteratively refines its outputs using compiler diagnostics, CodeQL security scanning, and KLEE symbolic execution. A lightweight embedding model is used for semantic retrieval of previously successful repairs, providing security-focused examples that guide generation. Evaluated on a combined dataset of 3,242 programs generated by DeepSeek-Coder-1.3B and CodeLlama-7B, the system demonstrates significant improvements in robustness. For DeepSeek, security vulnerabilities were reduced by 96%. For the larger CodeLlama model, the critical security defect rate was decreased from 58.55% to 22.19%, highlighting the efficacy of tool-assisted self-repair even on \"stubborn\" models.",
+    "authors": [
+      "Vidyut Sriram",
+      "Sawan Pandita",
+      "Achintya Lakshmanan",
+      "Aneesh Shamraj",
+      "Suman Saha"
+    ],
+    "published": "2026-01-01",
+    "categories": [
+      "cs.CR",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00509v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00509v1",
+    "fetched_at": "2026-01-05T08:39:37.231492"
+  },
+  {
+    "id": "2601.00482v1",
+    "title": "Multi-Agent Coordinated Rename Refactoring",
+    "abstract": "The primary value of AI agents in software development lies in their ability to extend the developer's capacity for reasoning and action, not to supplant human involvement. To showcase how to use agents working in tandem with developers, we designed a novel approach for carrying out coordinated renaming. Coordinated renaming, where a single rename refactoring triggers refactorings in multiple, related identifiers, is a frequent yet challenging task. Developers must manually propagate these rename refactorings across numerous files and contexts, a process that is both tedious and highly error-prone. State-of-the-art heuristic-based approaches produce an overwhelming number of false positives, while vanilla Large Language Models (LLMs) provide incomplete suggestions due to their limited context and inability to interact with refactoring tools. This leaves developers with incomplete refactorings or burdens them with filtering too many false positives. Coordinated renaming is exactly the kind of repetitive task that agents can significantly reduce the developers' burden while keeping them in the driver's seat.   We designed, implemented, and evaluated the first multi-agent framework that automates coordinated renaming. It operates on a key insight: a developer's initial refactoring is a clue to infer the scope of related refactorings. Our Scope Inference Agent first transforms this clue into an explicit, natural-language Declared Scope. The Planned Execution Agent then uses this as a strict plan to identify program elements that should undergo refactoring and safely executes the changes by invoking the IDE's own trusted refactoring APIs. Finally, the Replication Agent uses it to guide the project-wide search. We first conducted a formative study on the practice of coordinated renaming in 609K commits in 100 open-source projects and surveyed 205 developers ...",
+    "authors": [
+      "Abhiram Bellur",
+      "Mohammed Raihan Ullah",
+      "Fraol Batole",
+      "Mohit Kansara",
+      "Masaharu Morimoto",
+      "Kai Ishikawa",
+      "Haifeng Chen",
+      "Yaroslav Zharov",
+      "Timofey Bryksin",
+      "Tien N. Nguyen",
+      "Hridesh Rajan",
+      "Danny Dig"
+    ],
+    "published": "2026-01-01",
+    "categories": [
+      "cs.SE",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00482v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00482v1",
+    "fetched_at": "2026-01-05T08:39:37.231533"
+  },
+  {
+    "id": "2601.00481v1",
+    "title": "MAESTRO: Multi-Agent Evaluation Suite for Testing, Reliability, and Observability",
+    "abstract": "We present MAESTRO, an evaluation suite for the testing, reliability, and observability of LLM-based MAS. MAESTRO standardizes MAS configuration and execution through a unified interface, supports integrating both native and third-party MAS via a repository of examples and lightweight adapters, and exports framework-agnostic execution traces together with system-level signals (e.g., latency, cost, and failures). We instantiate MAESTRO with 12 representative MAS spanning popular agentic frameworks and interaction patterns, and conduct controlled experiments across repeated runs, backend models, and tool configurations. Our case studies show that MAS executions can be structurally stable yet temporally variable, leading to substantial run-to-run variance in performance and reliability. We further find that MAS architecture is the dominant driver of resource profiles, reproducibility, and cost-latency-accuracy trade-off, often outweighing changes in backend models or tool settings. Overall, MAESTRO enables systematic evaluation and provides empirical guidance for designing and optimizing agentic systems.",
+    "authors": [
+      "Tie Ma",
+      "Yixi Chen",
+      "Vaastav Anand",
+      "Alessandro Cornacchia",
+      "Amândio R. Faustino",
+      "Guanheng Liu",
+      "Shan Zhang",
+      "Hongbin Luo",
+      "Suhaib A. Fahmy",
+      "Zafar A. Qazi",
+      "Marco Canini"
+    ],
+    "published": "2026-01-01",
+    "categories": [
+      "cs.NI",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00481v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00481v1",
+    "fetched_at": "2026-01-05T08:39:37.231570"
+  },
+  {
+    "id": "2601.00397v1",
+    "title": "Revati: Transparent GPU-Free Time-Warp Emulation for LLM Serving",
+    "abstract": "Deploying LLMs efficiently requires testing hundreds of serving configurations, but evaluating each one on a GPU cluster takes hours and costs thousands of dollars. Discrete-event simulators are faster and cheaper, but they require re-implementing the serving system's control logic -- a burden that compounds as frameworks evolve.   We present Revati, a time-warp emulator that enables performance modeling by directly executing real serving system code at simulation-like speed. The system intercepts CUDA API calls to virtualize device management, allowing serving frameworks to run without physical GPUs. Instead of executing GPU kernels, it performs time jumps -- fast-forwarding virtual time by predicted kernel durations. We propose a coordination protocol that synchronizes these jumps across distributed processes while preserving causality. On vLLM and SGLang, Revati achieves less than 5% prediction error across multiple models and parallelism configurations, while running 5-17x faster than real GPU execution.",
+    "authors": [
+      "Amey Agrawal",
+      "Mayank Yadav",
+      "Sukrit Kumar",
+      "Anirudha Agrawal",
+      "Garv Ghai",
+      "Souradeep Bera",
+      "Elton Pinto",
+      "Sirish Gambhira",
+      "Mohammad Adain",
+      "Kasra Sohrab",
+      "Chus Antonanzas",
+      "Alexey Tumanov"
+    ],
+    "published": "2026-01-01",
+    "categories": [
+      "cs.DC",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00397v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00397v1",
+    "fetched_at": "2026-01-05T08:39:37.231608"
+  },
+  {
+    "id": "2601.00389v1",
+    "title": "NOS-Gate: Queue-Aware Streaming IDS for Consumer Gateways under Timing-Controlled Evasion",
+    "abstract": "Timing and burst patterns can leak through encryption, and an adaptive adversary can exploit them. This undermines metadata-only detection in a stand-alone consumer gateway. Therefore, consumer gateways need streaming intrusion detection on encrypted traffic using metadata only, under tight CPU and latency budgets. We present a streaming IDS for stand-alone gateways that instantiates a lightweight two-state unit derived from Network-Optimised Spiking (NOS) dynamics per flow, named NOS-Gate. NOS-Gate scores fixed-length windows of metadata features and, under a $K$-of-$M$ persistence rule, triggers a reversible mitigation that temporarily reduces the flow's weight under weighted fair queueing (WFQ). We evaluate NOS-Gate under timing-controlled evasion using an executable 'worlds' benchmark that specifies benign device processes, auditable attacker budgets, contention structure, and packet-level WFQ replay to quantify queue impact. All methods are calibrated label-free via burn-in quantile thresholding. Across multiple reproducible worlds and malicious episodes, at an achieved $0.1%$ false-positive operating point, NOS-Gate attains 0.952 incident recall versus 0.857 for the best baseline in these runs. Under gating, it reduces p99.9 queueing delay and p99.9 collateral delay with a mean scoring cost of ~ 2.09 μs per flow-window on CPU.",
+    "authors": [
+      "Muhammad Bilal",
+      "Omer Tariq",
+      "Hasan Ahmed"
+    ],
+    "published": "2026-01-01",
+    "categories": [
+      "cs.CR",
+      "cs.LG",
+      "cs.NI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00389v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00389v1",
+    "fetched_at": "2026-01-05T08:39:37.231631"
+  },
+  {
+    "id": "2601.00380v1",
+    "title": "Word Frequency Counting Based on Serverless MapReduce",
+    "abstract": "With the increasing demand for high-performance and high-efficiency computing, cloud computing, especially serverless computing, has gradually become a research hotspot in recent years, attracting numerous research attention. Meanwhile, MapReduce, which is a popular big data processing model in the industry, has been widely applied in various fields. Inspired by the serverless framework of Function as a Service and the high concurrency and robustness of MapReduce programming model, this paper focus on combining them to reduce the time span and increase the efficiency when executing the word frequency counting task. In this case, the paper use a MapReduce programming model based on a serverless computing platform to figure out the most optimized number of Map functions and Reduce functions for a particular task. For the same amount of workload, extensive experiments show both execution time reduces and the overall efficiency of the program improves at different rates as the number of map functions and reduce functions increases. This paper suppose the discovery of the most optimized number of map and reduce functions can help cooperations and programmers figure out the most optimized solutions.",
+    "authors": [
+      "Hanzhe Li",
+      "Bingchen Lin",
+      "Mengyuan Xu"
+    ],
+    "published": "2026-01-01",
+    "categories": [
+      "cs.DC",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00380v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00380v1",
+    "fetched_at": "2026-01-05T08:39:37.231675"
+  },
+  {
+    "id": "2601.00268v1",
+    "title": "Beyond Perfect APIs: A Comprehensive Evaluation of LLM Agents Under Real-World API Complexity",
+    "abstract": "We introduce WildAGTEval, a benchmark designed to evaluate large language model (LLM) agents' function-calling capabilities under realistic API complexity. Unlike prior work that assumes an idealized API system and disregards real-world factors such as noisy API outputs, WildAGTEval accounts for two dimensions of real-world complexity: 1. API specification, which includes detailed documentation and usage constraints, and 2. API execution, which captures runtime challenges. Consequently, WildAGTEval offers (i) an API system encompassing 60 distinct complexity scenarios that can be composed into approximately 32K test configurations, and (ii) user-agent interactions for evaluating LLM agents on these scenarios. Using WildAGTEval, we systematically assess several advanced LLMs and observe that most scenarios are challenging, with irrelevant information complexity posing the greatest difficulty and reducing the performance of strong LLMs by 27.3%. Furthermore, our qualitative analysis reveals that LLMs occasionally distort user intent merely to claim task completion, critically affecting user satisfaction.",
+    "authors": [
+      "Doyoung Kim",
+      "Zhiwei Ren",
+      "Jie Hao",
+      "Zhongkai Sun",
+      "Lichao Wang",
+      "Xiyao Ma",
+      "Zack Ye",
+      "Xu Han",
+      "Jun Yin",
+      "Heng Ji",
+      "Wei Shen",
+      "Xing Fan",
+      "Benjamin Yao",
+      "Chenlei Guo"
+    ],
+    "published": "2026-01-01",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00268v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00268v1",
+    "fetched_at": "2026-01-05T08:39:37.231715"
+  },
+  {
+    "id": "2601.00224v1",
+    "title": "Talk Less, Verify More: Improving LLM Assistants with Semantic Checks and Execution Feedback",
+    "abstract": "As large language model (LLM) assistants become increasingly integrated into enterprise workflows, their ability to generate accurate, semantically aligned, and executable outputs is critical. However, current conversational business analytics (CBA) systems often lack built-in verification mechanisms, leaving users to manually validate potentially flawed results. This paper introduces two complementary verification techniques: Q*, which performs reverse translation and semantic matching between code and user intent, and Feedback+, which incorporates execution feedback to guide code refinement. Embedded within a generator-discriminator framework, these mechanisms shift validation responsibilities from users to the system. Evaluations on three benchmark datasets, Spider, Bird, and GSM8K, demonstrate that both Q* and Feedback+ reduce error rates and task completion time. The study also identifies reverse translation as a key bottleneck, highlighting opportunities for future improvement. Overall, this work contributes a design-oriented framework for building more reliable, enterprise-grade GenAI systems capable of trustworthy decision support.",
+    "authors": [
+      "Yan Sun",
+      "Ming Cai",
+      "Stanley Kok"
+    ],
+    "published": "2026-01-01",
+    "categories": [
+      "cs.CL",
+      "cs.SE"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00224v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00224v1",
+    "fetched_at": "2026-01-05T08:39:37.231736"
+  },
+  {
+    "id": "2601.00770v1",
+    "title": "LLM Agents for Combinatorial Efficient Frontiers: Investment Portfolio Optimization",
+    "abstract": "Investment portfolio optimization is a task conducted in all major financial institutions. The Cardinality Constrained Mean-Variance Portfolio Optimization (CCPO) problem formulation is ubiquitous for portfolio optimization. The challenge of this type of portfolio optimization, a mixed-integer quadratic programming (MIQP) problem, arises from the intractability of solutions from exact solvers, where heuristic algorithms are used to find approximate portfolio solutions. CCPO entails many laborious and complex workflows and also requires extensive effort pertaining to heuristic algorithm development, where the combination of pooled heuristic solutions results in improved efficient frontiers. Hence, common approaches are to develop many heuristic algorithms. Agentic frameworks emerge as a promising candidate for many problems within combinatorial optimization, as they have been shown to be equally efficient with regard to automating large workflows and have been shown to be excellent in terms of algorithm development, sometimes surpassing human-level performance. This study implements a novel agentic framework for the CCPO and explores several concrete architectures. In benchmark problems, the implemented agentic framework matches state-of-the-art algorithms. Furthermore, complex workflows and algorithm development efforts are alleviated, while in the worst case, lower but acceptable error is reported.",
+    "authors": [
+      "Simon Paquette-Greenbaum",
+      "Jiangbo Yu"
+    ],
+    "published": "2026-01-02",
+    "categories": [
+      "cs.CE",
+      "cs.AI",
+      "econ.GN"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.00770v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.00770v1",
+    "fetched_at": "2026-01-05T08:41:33.760165"
+  }
+]
