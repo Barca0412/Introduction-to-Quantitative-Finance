@@ -1,0 +1,648 @@
+[
+  {
+    "id": "2601.03794v1",
+    "title": "An Algorithmic Framework for Systematic Literature Reviews: A Case Study for Financial Narratives",
+    "abstract": "This paper introduces an algorithmic framework for conducting systematic literature reviews (SLRs), designed to improve efficiency, reproducibility, and selection quality assessment in the literature review process. The proposed method integrates Natural Language Processing (NLP) techniques, clustering algorithms, and interpretability tools to automate and structure the selection and analysis of academic publications. The framework is applied to a case study focused on financial narratives, an emerging area in financial economics that examines how structured accounts of economic events, formed by the convergence of individual interpretations, influence market dynamics and asset prices. Drawing from the Scopus database of peer-reviewed literature, the review highlights research efforts to model financial narratives using various NLP techniques. Results reveal that while advances have been made, the conceptualization of financial narratives remains fragmented, often reduced to sentiment analysis, topic modeling, or their combination, without a unified theoretical framework. The findings underscore the value of more rigorous and dynamic narrative modeling approaches and demonstrate the effectiveness of the proposed algorithmic SLR methodology.",
+    "authors": [
+      "Gabin Taibi",
+      "Joerg Osterrieder"
+    ],
+    "published": "2026-01-07",
+    "categories": [
+      "q-fin.GN",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.03794v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.03794v1",
+    "fetched_at": "2026-01-08T08:36:30.721911",
+    "chinese_title": "系统文献综述的算法框架：以金融叙事为例",
+    "chinese_summary": "本文提出融合自然语言处理（NLP）、聚类算法及可解释工具的算法框架，用于提升系统文献综述（SLR）的效率、可重复性与选择质量；以金融叙事领域为案例，分析发现该领域概念碎片化、缺乏统一理论框架，验证了所提算法框架的有效性。",
+    "tags": [
+      "NLP",
+      "Behavioral Finance",
+      "Sentiment Analysis",
+      "Asset Pricing"
+    ],
+    "key_contributions": [
+      "提出融合多技术的算法框架，优化系统文献综述的效率、可重复性与选择质量",
+      "以金融叙事为案例揭示领域概念碎片化问题，验证算法框架有效性"
+    ],
+    "processed_at": "2026-01-08T08:43:15.067303"
+  },
+  {
+    "id": "2601.04191v1",
+    "title": "Embedding Autonomous Agents in Resource-Constrained Robotic Platforms",
+    "abstract": "Many embedded devices operate under resource constraints and in dynamic environments, requiring local decision-making capabilities. Enabling devices to make independent decisions in such environments can improve the responsiveness of the system and reduce the dependence on constant external control. In this work, we integrate an autonomous agent, programmed using AgentSpeak, with a small two-wheeled robot that explores a maze using its own decision-making and sensor data. Experimental results show that the agent successfully solved the maze in 59 seconds using 287 reasoning cycles, with decision phases taking less than one millisecond. These results indicate that the reasoning process is efficient enough for real-time execution on resource-constrained hardware. This integration demonstrates how high-level agent-based control can be applied to resource-constrained embedded systems for autonomous operation.",
+    "authors": [
+      "Negar Halakou",
+      "Juan F. Gutierrez",
+      "Ye Sun",
+      "Han Jiang",
+      "Xueming Wu",
+      "Yilun Song",
+      "Andres Gomez"
+    ],
+    "published": "2026-01-07",
+    "categories": [
+      "cs.RO",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.04191v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.04191v1",
+    "fetched_at": "2026-01-08T08:38:32.765136",
+    "chinese_title": "在资源受限的机器人平台中嵌入自主代理",
+    "chinese_summary": "本文将AgentSpeak编程的自主代理与小型两轮机器人集成，使机器人利用自身决策和传感器数据探索迷宫；实验验证推理过程高效（决策阶段<1ms），可在资源受限硬件实时执行，证明高层基于代理的控制可应用于此类嵌入式系统。",
+    "tags": [
+      "Financial Agent"
+    ],
+    "key_contributions": [
+      "实现了AgentSpeak自主代理与资源受限两轮机器人的集成，支持基于自身决策和传感器数据的迷宫探索",
+      "验证了推理过程的实时高效性，证明高层基于代理的控制可适配资源受限嵌入式系统"
+    ],
+    "processed_at": "2026-01-08T08:43:42.267338"
+  },
+  {
+    "id": "2601.04176v1",
+    "title": "Robust Physics Discovery from Highly Corrupted Data: A PINN Framework Applied to the Nonlinear Schrödinger Equation",
+    "abstract": "We demonstrate a deep learning framework capable of recovering physical parameters from the Nonlinear Schrodinger Equation (NLSE) under severe noise conditions. By integrating Physics-Informed Neural Networks (PINNs) with automatic differentiation, we achieve reconstruction of the nonlinear coefficient beta with less than 0.2 percent relative error using only 500 sparse, randomly sampled data points corrupted by 20 percent additive Gaussian noise, a regime where traditional finite difference methods typically fail due to noise amplification in numerical derivatives. We validate the method's generalization capabilities across different physical regimes (beta between 0.5 and 2.0) and varying data availability (between 100 and 1000 training points), demonstrating consistent sub-1 percent accuracy. Statistical analysis over multiple independent runs confirms robustness (standard deviation less than 0.15 percent for beta equals 1.0). The complete pipeline executes in approximately 80 minutes on modest cloud GPU resources (NVIDIA Tesla T4), making the approach accessible for widespread adoption. Our results indicate that physics-based regularization acts as an effective filter against high measurement uncertainty, positioning PINNs as a viable alternative to traditional optimization methods for inverse problems in spatiotemporal dynamics where experimental data is scarce and noisy. All code is made publicly available to facilitate reproducibility.",
+    "authors": [
+      "Pietro de Oliveira Esteves"
+    ],
+    "published": "2026-01-07",
+    "categories": [
+      "cs.LG",
+      "physics.comp-ph"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.04176v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.04176v1",
+    "fetched_at": "2026-01-08T08:38:32.765165",
+    "chinese_title": "高噪声数据下的鲁棒物理发现：应用于非线性薛定谔方程的PINN框架",
+    "chinese_summary": "该论文提出结合物理信息神经网络（PINN）与自动微分的深度学习框架，能在20%加性高斯噪声的严重噪声条件下，用仅500个稀疏随机采样点准确恢复非线性薛定谔方程（NLSE）的非线性系数beta（相对误差<0.2%），突破传统有限差分法因噪声放大导致的失效问题；方法在不同物理区域（beta=0.5~2.0）和数据量（100~1000点）下泛化性良好，鲁棒性高（beta=1.0时标准差<0.15%），且计算资源友好（NVIDIA Tesla T4 GPU约80分钟完成）。",
+    "tags": [
+      "Deep Learning",
+      "Time Series"
+    ],
+    "key_contributions": [
+      "提出PINN与自动微分结合的框架，在严重噪声（20%）和稀疏数据（500点）下准确恢复NLSE的beta参数（相对误差<0.2%），解决传统方法噪声放大失效问题",
+      "验证方法跨不同物理区域和数据量的泛化性，鲁棒性高且计算资源要求低，代码公开可复现"
+    ],
+    "processed_at": "2026-01-08T08:44:15.838622"
+  },
+  {
+    "id": "2601.04171v1",
+    "title": "Agentic Rubrics as Contextual Verifiers for SWE Agents",
+    "abstract": "Verification is critical for improving agents: it provides the reward signal for Reinforcement Learning and enables inference-time gains through Test-Time Scaling (TTS). Despite its importance, verification in software engineering (SWE) agent settings often relies on code execution, which can be difficult to scale due to environment setup overhead. Scalable alternatives such as patch classifiers and heuristic methods exist, but they are less grounded in codebase context and harder to interpret. To this end, we explore Agentic Rubrics: an expert agent interacts with the repository to create a context-grounded rubric checklist, and candidate patches are then scored against it without requiring test execution. On SWE-Bench Verified under parallel TTS evaluation, Agentic Rubrics achieve a score of 54.2% on Qwen3-Coder-30B-A3B and 40.6% on Qwen3-32B, with at least a +3.5 percentage-point gain over the strongest baseline in our comparison set. We further analyze rubric behavior, showing that rubric scores are consistent with ground-truth tests while also flagging issues that tests do not capture. Our ablations show that agentic context gathering is essential for producing codebase-specific, unambiguous criteria. Together, these results suggest that Agentic Rubrics provide an efficient, scalable, and granular verification signal for SWE agents.",
+    "authors": [
+      "Mohit Raghavendra",
+      "Anisha Gunjal",
+      "Bing Liu",
+      "Yunzhong He"
+    ],
+    "published": "2026-01-07",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.04171v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.04171v1",
+    "fetched_at": "2026-01-08T08:38:32.765189",
+    "chinese_title": "Agentic Rubrics作为软件工程智能体的上下文验证器",
+    "chinese_summary": "针对软件工程智能体（SWE Agents）验证依赖代码执行（可扩展性差）的问题，论文提出Agentic Rubrics方法——由专家智能体与代码库交互生成上下文相关的评分清单，候选补丁无需测试执行即可基于该清单评分；实验在SWE-Bench Verified数据集下验证，该方法在Qwen3系列模型上取得优于基线的成绩，且评分与真实测试一致并能发现测试未覆盖的问题， ablation实验证实上下文收集对生成代码库特定准则的必要性，为SWE智能体提供高效可扩展的验证信号。",
+    "tags": [
+      "LLM",
+      "Reinforcement Learning",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出Agentic Rubrics方法，无需代码执行即可为SWE智能体提供上下文相关的验证信号，解决传统执行验证的可扩展性与可解释性问题",
+      "实验证明该方法在SWE-Bench Verified上优于基线，且能发现真实测试未覆盖的问题， ablation验证了上下文收集对生成代码库特定准则的关键作用"
+    ],
+    "processed_at": "2026-01-08T08:44:43.081618"
+  },
+  {
+    "id": "2601.04137v1",
+    "title": "Wow, wo, val! A Comprehensive Embodied World Model Evaluation Turing Test",
+    "abstract": "As world models gain momentum in Embodied AI, an increasing number of works explore using video foundation models as predictive world models for downstream embodied tasks like 3D prediction or interactive generation. However, before exploring these downstream tasks, video foundation models still have two critical questions unanswered: (1) whether their generative generalization is sufficient to maintain perceptual fidelity in the eyes of human observers, and (2) whether they are robust enough to serve as a universal prior for real-world embodied agents. To provide a standardized framework for answering these questions, we introduce the Embodied Turing Test benchmark: WoW-World-Eval (Wow,wo,val). Building upon 609 robot manipulation data, Wow-wo-val examines five core abilities, including perception, planning, prediction, generalization, and execution. We propose a comprehensive evaluation protocol with 22 metrics to assess the models' generation ability, which achieves a high Pearson Correlation between the overall score and human preference (>0.93) and establishes a reliable foundation for the Human Turing Test. On Wow-wo-val, models achieve only 17.27 on long-horizon planning and at best 68.02 on physical consistency, indicating limited spatiotemporal consistency and physical reasoning. For the Inverse Dynamic Model Turing Test, we first use an IDM to evaluate the video foundation models' execution accuracy in the real world. However, most models collapse to $\\approx$ 0% success, while WoW maintains a 40.74% success rate. These findings point to a noticeable gap between the generated videos and the real world, highlighting the urgency and necessity of benchmarking World Model in Embodied AI.",
+    "authors": [
+      "Chun-Kai Fan",
+      "Xiaowei Chi",
+      "Xiaozhu Ju",
+      "Hao Li",
+      "Yong Bao",
+      "Yu-Kai Wang",
+      "Lizhang Chen",
+      "Zhiyuan Jiang",
+      "Kuangzhi Ge",
+      "Ying Li",
+      "Weishi Mi",
+      "Qingpo Wuwu",
+      "Peidong Jia",
+      "Yulin Luo",
+      "Kevin Zhang",
+      "Zhiyuan Qin",
+      "Yong Dai",
+      "Sirui Han",
+      "Yike Guo",
+      "Shanghang Zhang",
+      "Jian Tang"
+    ],
+    "published": "2026-01-07",
+    "categories": [
+      "cs.RO",
+      "cs.AI",
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.04137v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.04137v1",
+    "fetched_at": "2026-01-08T08:38:32.765244",
+    "chinese_title": "Wow, wo, val! 一种综合的具身世界模型评估图灵测试",
+    "chinese_summary": "针对具身AI中视频基础模型作为预测世界模型的评估缺口，论文构建了WoW-World-Eval（Wow-wo-val）基准，基于609个机器人操作数据，从感知、规划等5个核心能力出发设计含22个指标的评估协议，解决了模型生成泛化性和鲁棒性的评估问题。",
+    "tags": [
+      "Benchmark",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "构建了WoW-World-Eval（Wow-wo-val）基准，基于机器人操作数据评估具身世界模型的感知、规划等5项核心能力",
+      "设计含22个指标的评估协议，实现与人类偏好高相关性（>0.93）的可靠评估，填补了模型泛化性与鲁棒性评估的标准化缺口"
+    ],
+    "processed_at": "2026-01-08T08:45:04.363961"
+  },
+  {
+    "id": "2601.04086v1",
+    "title": "KDCM: Reducing Hallucination in LLMs through Explicit Reasoning Structures",
+    "abstract": "To mitigate hallucinations in large language models (LLMs), we propose a framework that focuses on errors induced by prompts. Our method extends a chain-style knowledge distillation approach by incorporating a programmable module that guides knowledge graph exploration. This module is embedded as executable code within the reasoning prompt, allowing the model to leverage external structured knowledge during inference. Based on this design, we develop an enhanced distillation-based reasoning framework that explicitly regulates intermediate reasoning steps, resulting in more reliable predictions. We evaluate the proposed approach on multiple public benchmarks using GPT-4 and LLaMA-3.3. Experimental results show that code-guided reasoning significantly improves contextual modeling and reduces prompt-induced hallucinations. Specifically, HIT@1, HIT@3, and HIT@5 increase by 15.64%, 13.38%, and 13.28%, respectively, with scores exceeding 95% across several evaluation settings. These findings indicate that the proposed method effectively constrains erroneous reasoning while improving both accuracy and interpretability.",
+    "authors": [
+      "Jinbo Hao",
+      "Kai Yang",
+      "Qingzhen Su",
+      "Yifan Li",
+      "Chao Jiang"
+    ],
+    "published": "2026-01-07",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.04086v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.04086v1",
+    "fetched_at": "2026-01-08T08:38:32.765269",
+    "chinese_title": "KDCM：通过显式推理结构减少大语言模型中的幻觉",
+    "chinese_summary": "该论文提出KDCM框架以缓解大语言模型（LLM）的幻觉问题，通过扩展链式知识蒸馏方法，嵌入可编程模块（可执行代码）引导知识图谱探索，显式调控推理中间步骤；实验在多基准上验证，代码引导推理显著提升上下文建模能力、减少提示诱导幻觉，HIT@1等指标提升超13%且部分场景超95%，有效约束错误推理并提升准确率与可解释性。",
+    "tags": [
+      "LLM",
+      "NLP",
+      "Transformer",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出KDCM框架，通过可编程模块（可执行代码）引导知识图谱探索，显式调控推理中间步骤以减少LLM幻觉",
+      "实验验证代码引导推理显著提升上下文建模能力，减少提示诱导幻觉，HIT指标大幅提升且部分场景超95%，同时提升准确率与可解释性"
+    ],
+    "processed_at": "2026-01-08T08:45:25.946695"
+  },
+  {
+    "id": "2601.04060v1",
+    "title": "ComfySearch: Autonomous Exploration and Reasoning for ComfyUI Workflows",
+    "abstract": "AI-generated content has progressed from monolithic models to modular workflows, especially on platforms like ComfyUI, allowing users to customize complex creative pipelines. However, the large number of components in ComfyUI and the difficulty of maintaining long-horizon structural consistency under strict graph constraints frequently lead to low pass rates and workflows of limited quality. To tackle these limitations, we present ComfySearch, an agentic framework that can effectively explore the component space and generate functional ComfyUI pipelines via validation-guided workflow construction. Experiments demonstrate that ComfySearch substantially outperforms existing methods on complex and creative tasks, achieving higher executability (pass) rates, higher solution rates, and stronger generalization.",
+    "authors": [
+      "Jinwei Su",
+      "Qizhen Lan",
+      "Zeyu Wang",
+      "Yinghui Xia",
+      "Hairu Wen",
+      "Yiqun Duan",
+      "Xi Xiao",
+      "Tianyu Shi",
+      "Yang Jingsong",
+      "Lewei He"
+    ],
+    "published": "2026-01-07",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.04060v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.04060v1",
+    "fetched_at": "2026-01-08T08:38:32.765302",
+    "chinese_title": "ComfySearch：ComfyUI工作流的自主探索与推理",
+    "chinese_summary": "论文针对ComfyUI中组件数量多、长程结构一致性难维护导致工作流可执行率低、质量有限的问题，提出ComfySearch智能框架，通过验证引导的工作流构建方式有效探索组件空间并生成可执行的ComfyUI pipeline；实验表明该框架在复杂创意任务上显著优于现有方法，提升了可执行率、解决方案率与泛化能力。",
+    "tags": [
+      "Deep Learning",
+      "Graph Neural Network"
+    ],
+    "key_contributions": [
+      "提出ComfySearch智能框架，通过验证引导的工作流构建解决ComfyUI组件空间探索与长程结构一致性问题",
+      "实验验证该框架在复杂创意任务上显著提升可执行率、解决方案率和泛化能力"
+    ],
+    "processed_at": "2026-01-08T08:45:49.348103"
+  },
+  {
+    "id": "2601.04052v1",
+    "title": "Stable Language Guidance for Vision-Language-Action Models",
+    "abstract": "Vision-Language-Action (VLA) models have demonstrated impressive capabilities in generalized robotic control; however, they remain notoriously brittle to linguistic perturbations. We identify a critical ``modality collapse'' phenomenon where strong visual priors overwhelm sparse linguistic signals, causing agents to overfit to specific instruction phrasings while ignoring the underlying semantic intent. To address this, we propose \\textbf{Residual Semantic Steering (RSS)}, a probabilistic framework that disentangles physical affordance from semantic execution. RSS introduces two theoretical innovations: (1) \\textbf{Monte Carlo Syntactic Integration}, which approximates the true semantic posterior via dense, LLM-driven distributional expansion, and (2) \\textbf{Residual Affordance Steering}, a dual-stream decoding mechanism that explicitly isolates the causal influence of language by subtracting the visual affordance prior. Theoretical analysis suggests that RSS effectively maximizes the mutual information between action and intent while suppressing visual distractors. Empirical results across diverse manipulation benchmarks demonstrate that RSS achieves state-of-the-art robustness, maintaining performance even under adversarial linguistic perturbations.",
+    "authors": [
+      "Zhihao Zhan",
+      "Yuhao Chen",
+      "Jiaying Zhou",
+      "Qinhan Lv",
+      "Hao Liu",
+      "Keze Wang",
+      "Liang Lin",
+      "Guangrun Wang"
+    ],
+    "published": "2026-01-07",
+    "categories": [
+      "cs.RO",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.04052v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.04052v1",
+    "fetched_at": "2026-01-08T08:38:32.765331",
+    "chinese_title": "面向视觉-语言-动作模型的稳定语言引导",
+    "chinese_summary": "本文针对视觉-语言-动作（VLA）模型对语言扰动脆弱、存在“模态坍缩”（视觉先验压倒稀疏语言信号）的问题，提出残差语义引导（RSS）框架，包含蒙特卡洛句法集成（LLM驱动分布扩展近似语义后验）和残差效用引导（双流解码隔离语言因果影响）两大创新；实验表明RSS在对抗语言扰动下保持SOTA鲁棒性，最大化动作与意图互信息并抑制视觉干扰。",
+    "tags": [
+      "LLM",
+      "Deep Learning",
+      "Reinforcement Learning"
+    ],
+    "key_contributions": [
+      "识别VLA模型中“模态坍缩”现象（视觉先验压倒稀疏语言信号导致对特定指令表述过拟合）",
+      "提出RSS框架，通过蒙特卡洛句法集成和残差效用引导提升语言鲁棒性，最大化动作-意图互信息"
+    ],
+    "processed_at": "2026-01-08T08:46:11.046254"
+  },
+  {
+    "id": "2601.03851v1",
+    "title": "Rethinking Table Pruning in TableQA: From Sequential Revisions to Gold Trajectory-Supervised Parallel Search",
+    "abstract": "Table Question Answering (TableQA) benefits significantly from table pruning, which extracts compact sub-tables by eliminating redundant cells to streamline downstream reasoning. However, existing pruning methods typically rely on sequential revisions driven by unreliable critique signals, often failing to detect the loss of answer-critical data. To address this limitation, we propose TabTrim, a novel table pruning framework which transforms table pruning from sequential revisions to gold trajectory-supervised parallel search. TabTrim derives a gold pruning trajectory using the intermediate sub-tables in the execution process of gold SQL queries, and trains a pruner and a verifier to make the step-wise pruning result align with the gold pruning trajectory. During inference, TabTrim performs parallel search to explore multiple candidate pruning trajectories and identify the optimal sub-table. Extensive experiments demonstrate that TabTrim achieves state-of-the-art performance across diverse tabular reasoning tasks: TabTrim-8B reaches 73.5% average accuracy, outperforming the strongest baseline by 3.2%, including 79.4% on WikiTQ and 61.2% on TableBench.",
+    "authors": [
+      "Yu Guo",
+      "Shenghao Ye",
+      "Shuangwu Chen",
+      "Zijian Wen",
+      "Tao Zhang",
+      "Qirui Bai",
+      "Dong Jin",
+      "Yunpeng Hou",
+      "Huasen He",
+      "Jian Yang",
+      "Xiaobin Tan"
+    ],
+    "published": "2026-01-07",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.03851v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.03851v1",
+    "fetched_at": "2026-01-08T08:38:32.765365",
+    "chinese_title": "重新思考表格问答中的表格剪枝：从顺序修订到黄金轨迹监督的并行搜索",
+    "chinese_summary": "针对表格问答（TableQA）中现有剪枝方法依赖不可靠顺序修订、易丢失答案关键数据的问题，提出TabTrim框架；该框架通过黄金SQL执行的中间子表获取黄金剪枝轨迹，训练剪枝器与验证器对齐该轨迹，推理时并行搜索最优子表；实验表明TabTrim在多类表格推理任务中达SOTA，平均准确率超最强基线3.2%。",
+    "tags": [
+      "LLM",
+      "NLP"
+    ],
+    "key_contributions": [
+      "提出TabTrim框架，将表格剪枝从顺序修订转变为黄金轨迹监督的并行搜索，解决现有方法易丢失关键数据的缺陷",
+      "通过黄金SQL执行的中间子表构建黄金剪枝轨迹，训练剪枝器与验证器对齐该轨迹，推理时并行搜索最优子表，实验实现SOTA性能"
+    ],
+    "processed_at": "2026-01-08T08:46:38.791259"
+  },
+  {
+    "id": "2601.03811v1",
+    "title": "EvalBlocks: A Modular Pipeline for Rapidly Evaluating Foundation Models in Medical Imaging",
+    "abstract": "Developing foundation models in medical imaging requires continuous monitoring of downstream performance. Researchers are burdened with tracking numerous experiments, design choices, and their effects on performance, often relying on ad-hoc, manual workflows that are inherently slow and error-prone. We introduce EvalBlocks, a modular, plug-and-play framework for efficient evaluation of foundation models during development. Built on Snakemake, EvalBlocks supports seamless integration of new datasets, foundation models, aggregation methods, and evaluation strategies. All experiments and results are tracked centrally and are reproducible with a single command, while efficient caching and parallel execution enable scalable use on shared compute infrastructure. Demonstrated on five state-of-the-art foundation models and three medical imaging classification tasks, EvalBlocks streamlines model evaluation, enabling researchers to iterate faster and focus on model innovation rather than evaluation logistics. The framework is released as open source software at https://github.com/DIAGNijmegen/eval-blocks.",
+    "authors": [
+      "Jan Tagscherer",
+      "Sarah de Boer",
+      "Lena Philipp",
+      "Fennie van der Graaf",
+      "Dré Peeters",
+      "Joeran Bosma",
+      "Lars Leijten",
+      "Bogdan Obreja",
+      "Ewoud Smit",
+      "Alessa Hering"
+    ],
+    "published": "2026-01-07",
+    "categories": [
+      "cs.CV",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.03811v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.03811v1",
+    "fetched_at": "2026-01-08T08:38:32.765398",
+    "chinese_title": "EvalBlocks：用于快速评估医学影像中基础模型的模块化流程",
+    "chinese_summary": "针对医学影像基础模型开发中评估流程繁琐（手动、临时）的问题，论文提出模块化框架EvalBlocks，基于Snakemake支持数据集、模型等组件的无缝集成，实现实验可追踪、可复现及并行缓存，提升迭代效率；该框架已开源并在多任务多模型上验证有效。",
+    "tags": [
+      "Deep Learning",
+      "Transformer",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出模块化可插拔的EvalBlocks框架，解决医学影像基础模型评估的低效问题",
+      "基于Snakemake实现实验可复现、并行执行与缓存，支持大规模追踪",
+      "开源框架并在多医学影像任务及SOTA模型上验证有效性"
+    ],
+    "processed_at": "2026-01-08T08:46:58.898823"
+  },
+  {
+    "id": "2601.03731v1",
+    "title": "From Laboratory to Real-World Applications: Benchmarking Agentic Code Reasoning at the Repository Level",
+    "abstract": "As large language models (LLMs) evolve into autonomous agents, evaluating repository-level reasoning, the ability to maintain logical consistency across massive, real-world, interdependent file systems, has become critical. Current benchmarks typically fluctuate between isolated code snippets and black-box evaluations. We present RepoReason, a white-box diagnostic benchmark centered on abductive assertion verification. To eliminate memorization while preserving authentic logical depth, we implement an execution-driven mutation framework that utilizes the environment as a semantic oracle to regenerate ground-truth states. Furthermore, we establish a fine-grained diagnostic system using dynamic program slicing, quantifying reasoning via three orthogonal metrics: $ESV$ (reading load), $MCL$ (simulation depth), and $DFI$ (integration width). Comprehensive evaluations of frontier models (e.g., Claude-4.5-Sonnet, DeepSeek-v3.1-Terminus) reveal a prevalent aggregation deficit, where integration width serves as the primary cognitive bottleneck. Our findings provide granular white-box insights for optimizing the next generation of agentic software engineering.",
+    "authors": [
+      "Jia Li",
+      "Yuxin Su",
+      "Michael R. Lyu"
+    ],
+    "published": "2026-01-07",
+    "categories": [
+      "cs.SE",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.03731v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.03731v1",
+    "fetched_at": "2026-01-08T08:38:32.765418",
+    "chinese_title": "从实验室到真实世界应用：基于代码仓库级的智能体代码推理基准测试",
+    "chinese_summary": "本文提出RepoReason基准测试，用于评估LLM智能体在代码仓库级的推理能力（跨大量依赖文件的逻辑一致性）；采用执行驱动的变异框架消除记忆并保留逻辑深度，结合动态程序切片建立细粒度诊断系统，用ESV、MCL、DFI三个正交指标量化推理；对前沿模型的评估揭示其存在聚合缺陷，集成宽度是主要认知瓶颈。",
+    "tags": [
+      "LLM",
+      "Benchmark",
+      "Transformer",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出RepoReason基准测试，聚焦评估LLM智能体在代码仓库级的推理能力（维持跨大量依赖文件的逻辑一致性）",
+      "构建执行驱动的变异框架消除记忆并保留真实逻辑深度，结合动态程序切片建立细粒度诊断系统，用三个正交指标量化推理",
+      "通过前沿模型评估揭示聚合缺陷，指出集成宽度是LLM智能体代码推理的主要认知瓶颈"
+    ],
+    "processed_at": "2026-01-08T08:47:31.775652"
+  },
+  {
+    "id": "2601.03630v1",
+    "title": "Reasoning Model Is Superior LLM-Judge, Yet Suffers from Biases",
+    "abstract": "This paper presents the first systematic comparison investigating whether Large Reasoning Models (LRMs) are superior judge to non-reasoning LLMs. Our empirical analysis yields four key findings: 1) LRMs outperform non-reasoning LLMs in terms of judgment accuracy, particularly on reasoning-intensive tasks; 2) LRMs demonstrate superior instruction-following capabilities in evaluation contexts; 3) LRMs exhibit enhanced robustness against adversarial attacks targeting judgment tasks; 4) However, LRMs still exhibit strong biases in superficial quality. To improve the robustness against biases, we propose PlanJudge, an evaluation strategy that prompts the model to generate an explicit evaluation plan before execution. Despite its simplicity, our experiments demonstrate that PlanJudge significantly mitigates biases in both LRMs and standard LLMs.",
+    "authors": [
+      "Hui Huang",
+      "Xuanxin Wu",
+      "Muyun Yang",
+      "Yuki Arase"
+    ],
+    "published": "2026-01-07",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.03630v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.03630v1",
+    "fetched_at": "2026-01-08T08:38:32.765440",
+    "chinese_title": "推理模型优于LLM评判模型，但仍存在偏差",
+    "chinese_summary": "本文首次系统比较大推理模型（LRMs）与非推理LLM作为评判模型的表现，发现LRMs在评判准确性、指令遵循及对抗鲁棒性上更优但存在表面质量偏差；为此提出PlanJudge策略，通过生成显式评估计划显著缓解两类模型的偏差。",
+    "tags": [
+      "LLM",
+      "Transformer",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出PlanJudge策略，有效缓解LRMs和标准LLM的评判偏差"
+    ],
+    "processed_at": "2026-01-08T08:47:43.575958"
+  },
+  {
+    "id": "2601.03555v1",
+    "title": "SCRIBE: Structured Mid-Level Supervision for Tool-Using Language Models",
+    "abstract": "Training reliable tool-augmented agents remains a significant challenge, largely due to the difficulty of credit assignment in multi-step reasoning. While process-level reward models offer a promising direction, existing LLM-based judges often produce noisy and inconsistent signals because they lack fine-grained, task-specific rubrics to distinguish high-level planning from low-level execution. In this work, we introduce SCRIBE (Skill-Conditioned Reward with Intermediate Behavioral Evaluation), a reinforcement learning framework that intervenes at a novel mid-level abstraction. SCRIBE grounds reward modeling in a curated library of skill prototypes, transforming open-ended LLM evaluation into a constrained verification problem. By routing each subgoal to a corresponding prototype, the reward model is equipped with precise, structured rubrics that substantially reduce reward variance.   Experimental results show that SCRIBE achieves state-of-the-art performance across a range of reasoning and tool-use benchmarks. In particular, it improves the AIME25 accuracy of a Qwen3-4B model from 43.3% to 63.3%, and significantly increases success rates in complex multi-turn tool interactions.   Further analysis of training dynamics reveals a co-evolution across abstraction levels, where mastery of mid-level skills consistently precedes the emergence of effective high-level planning behaviors. Finally, we demonstrate that SCRIBE is additive to low-level tool optimizations, providing a scalable and complementary pathway toward more autonomous and reliable tool-using agents.",
+    "authors": [
+      "Yuxuan Jiang",
+      "Francis Ferraro"
+    ],
+    "published": "2026-01-07",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.03555v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.03555v1",
+    "fetched_at": "2026-01-08T08:38:32.765461",
+    "chinese_title": "SCRIBE：面向工具使用语言模型的结构化中级监督框架",
+    "chinese_summary": "针对工具增强智能体多步推理中信用分配困难、现有过程奖励模型信号噪声大的问题，该文提出SCRIBE强化学习框架，基于 curated技能原型库将开放式LLM评估转为约束验证，用精确结构化rubric降低奖励方差；实验表明其在多推理和工具使用基准达SOTA，且中级技能掌握先于高级规划、可叠加低级别工具优化。",
+    "tags": [
+      "LLM",
+      "Reinforcement Learning",
+      "Transformer"
+    ],
+    "key_contributions": [
+      "提出SCRIBE强化学习框架，基于技能原型库实现结构化中级监督，解决工具增强智能体多步推理信用分配与奖励噪声问题",
+      "实验验证SCRIBE在多推理/工具使用基准达SOTA，揭示中级技能掌握先于高级规划且可叠加低级别工具优化"
+    ],
+    "processed_at": "2026-01-08T08:48:08.675031"
+  },
+  {
+    "id": "2601.03525v1",
+    "title": "VeRPO: Verifiable Dense Reward Policy Optimization for Code Generation",
+    "abstract": "Effective reward design is a central challenge in Reinforcement Learning (RL) for code generation. Mainstream pass/fail outcome rewards enforce functional correctness via executing unit tests, but the resulting sparsity limits potential performance gains. While recent work has explored external Reward Models (RM) to generate richer, continuous rewards, the learned RMs suffer from reward misalignment and prohibitive computational cost. In this paper, we introduce \\textbf{VeRPO} (\\textbf{V}erifiable D\\textbf{e}nse \\textbf{R}eward \\textbf{P}olicy \\textbf{O}ptimization), a novel RL framework for code generation that synthesizes \\textit{robust and dense rewards fully grounded in verifiable execution feedback}. The core idea of VeRPO is constructing dense rewards from weighted partial success: by dynamically estimating the difficulty weight of each unit test based on the execution statistics during training, a dense reward is derived from the sum of weights of the passed unit tests. To solidify the consistency between partial success and end-to-end functional correctness, VeRPO further integrates the dense signal with global execution outcomes, establishing a robust and dense reward paradigm relying solely on verifiable execution feedback. Extensive experiments across diverse benchmarks and settings demonstrate that VeRPO consistently outperforms outcome-driven and RM-based baselines, achieving up to +8.83\\% gain in pass@1 with negligible time cost (< 0.02\\%) and zero GPU memory overhead.",
+    "authors": [
+      "Longwen Wang",
+      "Xuan'er Wu",
+      "Xiaohui Hu",
+      "Yirui Liu",
+      "Yuankai Fan",
+      "Kaidong Yu",
+      "Qizhen Weng",
+      "Wei Xi",
+      "Xuelong Li"
+    ],
+    "published": "2026-01-07",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.03525v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.03525v1",
+    "fetched_at": "2026-01-08T08:38:32.765493",
+    "chinese_title": "VeRPO：用于代码生成的可验证密集奖励策略优化",
+    "chinese_summary": "该论文针对代码生成强化学习中奖励稀疏的问题，提出VeRPO框架，通过动态估计单元测试难度权重合成基于可验证执行反馈的鲁棒密集奖励，并结合全局执行结果强化一致性；实验表明其性能优于基线且成本极低。",
+    "tags": [
+      "Reinforcement Learning",
+      "Deep Learning",
+      "Benchmark",
+      "LLM"
+    ],
+    "key_contributions": [
+      "提出VeRPO框架，基于可验证执行反馈构建动态加权单元测试的密集奖励，并整合全局执行结果提升鲁棒性",
+      "实验验证VeRPO在多基准上优于 outcome-driven 和 RM-based 基线，pass@1提升达8.83%且成本可忽略"
+    ],
+    "processed_at": "2026-01-08T08:48:24.738916"
+  },
+  {
+    "id": "2601.03513v1",
+    "title": "Deploy-Master: Automating the Deployment of 50,000+ Agent-Ready Scientific Tools in One Day",
+    "abstract": "Open-source scientific software is abundant, yet most tools remain difficult to compile, configure, and reuse, sustaining a small-workshop mode of scientific computing. This deployment bottleneck limits reproducibility, large-scale evaluation, and the practical integration of scientific tools into modern AI-for-Science (AI4S) and agentic workflows.   We present Deploy-Master, a one-stop agentic workflow for large-scale tool discovery, build specification inference, execution-based validation, and publication. Guided by a taxonomy spanning 90+ scientific and engineering domains, our discovery stage starts from a recall-oriented pool of over 500,000 public repositories and progressively filters it to 52,550 executable tool candidates under license- and quality-aware criteria. Deploy-Master transforms heterogeneous open-source repositories into runnable, containerized capabilities grounded in execution rather than documentation claims. In a single day, we performed 52,550 build attempts and constructed reproducible runtime environments for 50,112 scientific tools. Each successful tool is validated by a minimal executable command and registered in SciencePedia for search and reuse, enabling direct human use and optional agent-based invocation.   Beyond delivering runnable tools, we report a deployment trace at the scale of 50,000 tools, characterizing throughput, cost profiles, failure surfaces, and specification uncertainty that become visible only at scale. These results explain why scientific software remains difficult to operationalize and motivate shared, observable execution substrates as a foundation for scalable AI4S and agentic science.",
+    "authors": [
+      "Yi Wang",
+      "Zhenting Huang",
+      "Zhaohan Ding",
+      "Ruoxue Liao",
+      "Yuan Huang",
+      "Xinzijian Liu",
+      "Jiajun Xie",
+      "Siheng Chen",
+      "Linfeng Zhang"
+    ],
+    "published": "2026-01-07",
+    "categories": [
+      "cs.SE",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.03513v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.03513v1",
+    "fetched_at": "2026-01-08T08:38:32.765527",
+    "chinese_title": "Deploy-Master：一天内自动化部署5万+个Agent就绪的科学工具",
+    "chinese_summary": "Deploy-Master是面向大规模科学工具的一站式Agentic工作流，可从50万+公共仓库中筛选候选工具，通过构建规范推断、执行验证等步骤，一天内为50112个工具创建可复现的容器化运行环境；该工作流解决了开源科学工具部署难的瓶颈，支持人类直接使用及Agent调用。",
+    "tags": [
+      "Financial Agent",
+      "Execution"
+    ],
+    "key_contributions": [
+      "提出Deploy-Master一站式Agentic工作流，实现科学工具从大规模发现到容器化部署的全流程自动化",
+      "首次实现一天内完成5万+科学工具的可复现运行环境构建，提供规模级部署的吞吐量、成本、失败特征等分析"
+    ],
+    "processed_at": "2026-01-08T08:48:48.473990"
+  },
+  {
+    "id": "2601.03512v1",
+    "title": "Bootstrapping Code Translation with Weighted Multilanguage Exploration",
+    "abstract": "Code translation across multiple programming languages is essential yet challenging due to two vital obstacles: scarcity of parallel data paired with executable test oracles, and optimization imbalance when handling diverse language pairs. We propose BootTrans, a bootstrapping method that resolves both obstacles. Its key idea is to leverage the functional invariance and cross-lingual portability of test suites, adapting abundant pivot-language unit tests to serve as universal verification oracles for multilingual RL training. Our method introduces a dual-pool architecture with seed and exploration pools to progressively expand training data via execution-guided experience collection. Furthermore, we design a language-aware weighting mechanism that dynamically prioritizes harder translation directions based on relative performance across sibling languages, mitigating optimization imbalance. Extensive experiments on the HumanEval-X and TransCoder-Test benchmarks demonstrate substantial improvements over baseline LLMs across all translation directions, with ablations validating the effectiveness of both bootstrapping and weighting components.",
+    "authors": [
+      "Yuhan Wu",
+      "Huan Zhang",
+      "Wei Cheng",
+      "Chen Shen",
+      "Jingyue Yang",
+      "Wei Hu"
+    ],
+    "published": "2026-01-07",
+    "categories": [
+      "cs.SE",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.03512v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.03512v1",
+    "fetched_at": "2026-01-08T08:38:32.765554",
+    "chinese_title": "带加权多语言探索的自举式代码翻译",
+    "chinese_summary": "论文提出BootTrans自举方法，解决跨语言代码翻译中并行数据稀缺（带可执行测试预言机）及语言对优化不平衡问题；核心利用测试套件的功能不变性与跨语言可移植性，通过双池架构逐步扩展训练数据，结合语言感知加权机制动态优先难翻译方向；实验在HumanEval-X等基准上优于基线LLM，消融验证各组件有效性。",
+    "tags": [
+      "LLM",
+      "Deep Learning",
+      "Reinforcement Learning",
+      "NLP"
+    ],
+    "key_contributions": [
+      "提出BootTrans自举框架，利用测试套件跨语言特性扩展训练数据，解决并行数据稀缺问题",
+      "设计语言感知加权机制，缓解多语言对优化不平衡问题"
+    ],
+    "processed_at": "2026-01-08T08:49:19.250996"
+  },
+  {
+    "id": "2601.03948v1",
+    "title": "Trade-R1: Bridging Verifiable Rewards to Stochastic Environments via Process-Level Reasoning Verification",
+    "abstract": "Reinforcement Learning (RL) has enabled Large Language Models (LLMs) to achieve remarkable reasoning in domains like mathematics and coding, where verifiable rewards provide clear signals. However, extending this paradigm to financial decision is challenged by the market's stochastic nature: rewards are verifiable but inherently noisy, causing standard RL to degenerate into reward hacking. To address this, we propose Trade-R1, a model training framework that bridges verifiable rewards to stochastic environments via process-level reasoning verification. Our key innovation is a verification method that transforms the problem of evaluating reasoning over lengthy financial documents into a structured Retrieval-Augmented Generation (RAG) task. We construct a triangular consistency metric, assessing pairwise alignment between retrieved evidence, reasoning chains, and decisions to serve as a validity filter for noisy market returns. We explore two reward integration strategies: Fixed-effect Semantic Reward (FSR) for stable alignment signals, and Dynamic-effect Semantic Reward (DSR) for coupled magnitude optimization. Experiments on different country asset selection demonstrate that our paradigm reduces reward hacking, with DSR achieving superior cross-market generalization while maintaining the highest reasoning consistency.",
+    "authors": [
+      "Rui Sun",
+      "Yifan Sun",
+      "Sheng Xu",
+      "Li Zhao",
+      "Jing Li",
+      "Daxin Jiang",
+      "Chen Hua",
+      "Zuo Bai"
+    ],
+    "published": "2026-01-07",
+    "categories": [
+      "cs.AI",
+      "q-fin.TR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.03948v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.03948v1",
+    "fetched_at": "2026-01-08T08:39:56.231297",
+    "chinese_title": "Trade-R1：通过过程级推理验证连接可验证奖励与随机环境",
+    "chinese_summary": "针对金融市场随机噪声导致RL+LLM出现奖励hacking的问题，提出Trade-R1框架，通过过程级推理验证（将金融文档推理评估转为结构化RAG任务并构建三角一致性指标）连接可验证奖励与随机环境；设计固定效应语义奖励（FSR）和动态效应语义奖励（DSR）两种整合策略，实验显示该框架减少奖励hacking，DSR跨市场泛化与推理一致性更优。",
+    "tags": [
+      "LLM",
+      "Reinforcement Learning",
+      "Financial Agent",
+      "Algorithmic Trading"
+    ],
+    "key_contributions": [
+      "提出Trade-R1框架，通过过程级推理验证（结构化RAG+三角一致性指标）解决金融随机环境下RL+LLM的奖励hacking问题",
+      "设计FSR和DSR两种奖励整合策略，DSR实现跨市场泛化与高推理一致性的平衡"
+    ],
+    "processed_at": "2026-01-08T08:49:34.860131"
+  },
+  {
+    "id": "2601.04160v1",
+    "title": "All That Glisters Is Not Gold: A Benchmark for Reference-Free Counterfactual Financial Misinformation Detection",
+    "abstract": "We introduce RFC Bench, a benchmark for evaluating large language models on financial misinformation under realistic news. RFC Bench operates at the paragraph level and captures the contextual complexity of financial news where meaning emerges from dispersed cues. The benchmark defines two complementary tasks: reference free misinformation detection and comparison based diagnosis using paired original perturbed inputs. Experiments reveal a consistent pattern: performance is substantially stronger when comparative context is available, while reference free settings expose significant weaknesses, including unstable predictions and elevated invalid outputs. These results indicate that current models struggle to maintain coherent belief states without external grounding. By highlighting this gap, RFC Bench provides a structured testbed for studying reference free reasoning and advancing more reliable financial misinformation detection in real world settings.",
+    "authors": [
+      "Yuechen Jiang",
+      "Zhiwei Liu",
+      "Yupeng Cao",
+      "Yueru He",
+      "Ziyang Xu",
+      "Chen Xu",
+      "Zhiyang Deng",
+      "Prayag Tiwari",
+      "Xi Chen",
+      "Alejandro Lopez-Lira",
+      "Jimin Huang",
+      "Junichi Tsujii",
+      "Sophia Ananiadou"
+    ],
+    "published": "2026-01-07",
+    "categories": [
+      "cs.CL",
+      "cs.CE",
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.04160v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.04160v1",
+    "fetched_at": "2026-01-08T08:42:28.526506",
+    "chinese_title": "闪光者未必皆金：无参考反事实金融虚假信息检测基准",
+    "chinese_summary": "本文引入RFC Bench基准，用于评估大模型在真实金融新闻场景下的虚假信息检测能力，包含无参考检测和基于配对输入的比较诊断两个互补任务；实验发现当前模型在有比较上下文时性能较强，但无参考设置下存在预测不稳定、无效输出多等弱点，该基准为研究无参考推理和提升可靠检测提供了结构化测试床。",
+    "tags": [
+      "LLM",
+      "NLP",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出RFC Bench基准，针对真实金融新闻场景的无参考反事实虚假信息检测，包含无参考检测与比较诊断两个互补任务",
+      "通过实验揭示当前大模型在无参考设置下的显著弱点，指出缺乏外部grounding时难维持连贯信念，为相关研究提供结构化测试床"
+    ],
+    "processed_at": "2026-01-08T08:49:50.548645"
+  },
+  {
+    "id": "2601.03927v1",
+    "title": "A comprehensive review and analysis of different modeling approaches for financial index tracking problem",
+    "abstract": "Index tracking, also known as passive investing, has gained significant traction in financial markets due to its cost-effective and efficient approach to replicating the performance of a specific market index. This review paper provides a comprehensive overview of the various modeling approaches and strategies developed for index tracking, highlighting the strengths and limitations of each approach. We categorize the index tracking models into three broad frameworks: optimization-based models, statistical-based models and machine learning based data-driven approach. A comprehensive empirical study conducted on the S\\&P 500 dataset demonstrates that the tracking error volatility model under the optimization-based framework delivers the most precise index tracking, the convex co-integration model, under the statistical-based framework achieves the strongest return-risk balance, and the deep neural network with fixed noise model within the data-driven framework provides a competitive performance with notably low turnover and high computational efficiency. By combining a critical review of the existing literature with comparative empirical analysis, this paper aims to provide insights into the evolving landscape of index tracking and its practical implications for investors and fund managers.",
+    "authors": [
+      "Vrinda Dhingra",
+      "Amita Sharma",
+      "Anubha Goel"
+    ],
+    "published": "2026-01-07",
+    "categories": [
+      "q-fin.PM",
+      "stat.ML"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.03927v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.03927v1",
+    "fetched_at": "2026-01-08T08:42:28.526571",
+    "chinese_title": "金融指数跟踪问题不同建模方法的综合回顾与分析",
+    "chinese_summary": "该论文对金融指数跟踪的三类建模方法（优化类、统计类、机器学习数据驱动类）进行综合回顾，通过S&P500数据集实证对比各方法表现，指出优化类下跟踪误差波动率模型精度最高、统计类下凸协整模型收益风险平衡最优、数据驱动类下带固定噪声的深度神经网络模型 turnover低且计算高效，为投资者提供实践启示。",
+    "tags": [
+      "Portfolio Optimization",
+      "Deep Learning",
+      "Benchmark",
+      "Risk Management"
+    ],
+    "key_contributions": [
+      "系统分类回顾指数跟踪的三类建模方法并分析优劣势",
+      "基于S&P500实证明确各框架下最优方法的表现差异及实践价值"
+    ],
+    "processed_at": "2026-01-08T08:50:01.578737"
+  }
+]
