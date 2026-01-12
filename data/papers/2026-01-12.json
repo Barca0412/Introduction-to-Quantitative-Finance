@@ -1,0 +1,544 @@
+[
+  {
+    "id": "2601.05975v1",
+    "title": "DeePM: Regime-Robust Deep Learning for Systematic Macro Portfolio Management",
+    "abstract": "We propose DeePM (Deep Portfolio Manager), a structured deep-learning macro portfolio manager trained end-to-end to maximize a robust, risk-adjusted utility. DeePM addresses three fundamental challenges in financial learning: (1) it resolves the asynchronous \"ragged filtration\" problem via a Directed Delay (Causal Sieve) mechanism that prioritizes causal impulse-response learning over information freshness; (2) it combats low signal-to-noise ratios via a Macroeconomic Graph Prior, regularizing cross-asset dependence according to economic first principles; and (3) it optimizes a distributionally robust objective where a smooth worst-window penalty serves as a differentiable proxy for Entropic Value-at-Risk (EVaR) - a window-robust utility encouraging strong performance in the most adverse historical subperiods. In large-scale backtests from 2010-2025 on 50 diversified futures with highly realistic transaction costs, DeePM attains net risk-adjusted returns that are roughly twice those of classical trend-following strategies and passive benchmarks, solely using daily closing prices. Furthermore, DeePM improves upon the state-of-the-art Momentum Transformer architecture by roughly fifty percent. The model demonstrates structural resilience across the 2010s \"CTA (Commodity Trading Advisor) Winter\" and the post-2020 volatility regime shift, maintaining consistent performance through the pandemic, inflation shocks, and the subsequent higher-for-longer environment. Ablation studies confirm that strictly lagged cross-sectional attention, graph prior, principled treatment of transaction costs, and robust minimax optimization are the primary drivers of this generalization capability.",
+    "authors": [
+      "Kieran Wood",
+      "Stephen J. Roberts",
+      "Stefan Zohren"
+    ],
+    "published": "2026-01-09",
+    "categories": [
+      "q-fin.TR",
+      "cs.LG",
+      "stat.ML"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.05975v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.05975v1",
+    "fetched_at": "2026-01-12T08:37:36.906535"
+  },
+  {
+    "id": "2601.05924v1",
+    "title": "Geopolitical and Institutional Constraints on Adaptive Market Efficiency -- A Feasibility Diagnostic for Robust Portfolio Construction",
+    "abstract": "This paper develops a structural framework for characterizing the informational feasibility of financial markets under heterogeneous institutional and geopolitical conditions. Departing from the assumption of uniform and time-invariant market efficiency, adaptive efficiency is conceptualized as a localized and state-dependent property emerging from the interaction between economic scale, institutional enforcement, and geopolitical embedding. To operationalize this perspective, the paper introduces the Geopolitical-Adaptive Efficiency Ratio (GAER), a descriptive cross-sectional indicator measuring the concentration of adaptive-efficiency-supporting mass within institutionally and geopolitically central assets. GAER is not a return-predictive signal, factor, or regime classifier. Instead, it functions as a diagnostic boundary condition, delimiting the domain in which ranking-based and robustness-oriented portfolio construction methods are plausibly applicable. The framework integrates insights from adaptive market theory, institutional economics, and political economy, linking disclosure continuity, liquidity provision, and enforcement credibility to the persistence of informational signals in asset prices. GAER is formalized, its theoretical properties are discussed, and its interpretation is illustrated using a global equity snapshot based on publicly observable information. The contribution separates informational feasibility from portfolio construction and execution, providing a conceptual foundation for constraint-aware financial modeling without reliance on forecast-driven assumptions or parametric optimization.",
+    "authors": [
+      "Roberto Garrone"
+    ],
+    "published": "2026-01-09",
+    "categories": [
+      "q-fin.PM",
+      "q-fin.GN"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.05924v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.05924v1",
+    "fetched_at": "2026-01-12T08:37:36.906569"
+  },
+  {
+    "id": "2601.05716v1",
+    "title": "When the Rules Change: Adaptive Signal Extraction via Kalman Filtering and Markov-Switching Regimes",
+    "abstract": "Static linear models of order flow assume constant parameters, failing precisely when they are needed most: during periods of market stress and structural change. This paper proposes a dynamic, state-dependent framework for order flow signal extraction that adapts to shifting market conditions in the Korean stock market. Using daily transaction data from 2020--2024 covering 2,439 stocks and 2.79 million stock-day observations, we implement three complementary methodologies: (1) an Adaptive Kalman Filter where measurement noise variance is explicitly coupled to market volatility; (2) a three-state Markov-Switching model identifying Bull, Normal, and Crisis regimes; and (3) an Asymmetric Response Function capturing differential investor reactions to positive versus negative shocks. We find that foreign investor predictive power increases 8.9-fold during crisis periods relative to bull markets ($β_{crisis}=0.00204$ vs. $β_{bull}=0.00023$), while individual investors exhibit momentum-chasing behavior with 6.3 times stronger response to positive shocks. The integrated ``All-Weather'' strategy provides modest drawdown reduction during extreme market events, though challenges remain in the post-COVID high-rate environment.",
+    "authors": [
+      "Sungwoo Kang"
+    ],
+    "published": "2026-01-09",
+    "categories": [
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.05716v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.05716v1",
+    "fetched_at": "2026-01-12T08:37:36.906591"
+  },
+  {
+    "id": "2601.05290v1",
+    "title": "Multi-Period Martingale Optimal Transport: Classical Theory, Neural Acceleration, and Financial Applications",
+    "abstract": "This paper develops a computational framework for Multi-Period Martingale Optimal Transport (MMOT), addressing convergence rates, algorithmic efficiency, and financial calibration. Our contributions include: (1) Theoretical analysis: We establish discrete convergence rates of $O(\\sqrt{Δt} \\log(1/Δt))$ via Donsker's principle and linear algorithmic convergence of $(1-κ)^{2/3}$; (2) Algorithmic improvements: We introduce incremental updates ($O(M^2)$ complexity) and adaptive sparse grids; (3) Numerical implementation: A hybrid neural-projection solver is proposed, combining transformer-based warm-starting with Newton-Raphson projection. Once trained, the pure neural solver achieves a $1{,}597\\times$ online inference speedup ($4.7$s $\\to 2.9$ms) suitable for real-time applications, while the hybrid solver ensures martingale constraints to $10^{-6}$ precision. Validated on 12,000 synthetic instances (GBM, Merton, Heston) and 120 real market scenarios.",
+    "authors": [
+      "Sri Sairam Gautam B"
+    ],
+    "published": "2026-01-07",
+    "categories": [
+      "q-fin.CP",
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.05290v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.05290v1",
+    "fetched_at": "2026-01-12T08:37:36.906772"
+  },
+  {
+    "id": "2601.04160v3",
+    "title": "All That Glisters Is Not Gold: A Benchmark for Reference-Free Counterfactual Financial Misinformation Detection",
+    "abstract": "We introduce RFC Bench, a benchmark for evaluating large language models on financial misinformation under realistic news. RFC Bench operates at the paragraph level and captures the contextual complexity of financial news where meaning emerges from dispersed cues. The benchmark defines two complementary tasks: reference free misinformation detection and comparison based diagnosis using paired original perturbed inputs. Experiments reveal a consistent pattern: performance is substantially stronger when comparative context is available, while reference free settings expose significant weaknesses, including unstable predictions and elevated invalid outputs. These results indicate that current models struggle to maintain coherent belief states without external grounding. By highlighting this gap, RFC Bench provides a structured testbed for studying reference free reasoning and advancing more reliable financial misinformation detection in real world settings.",
+    "authors": [
+      "Yuechen Jiang",
+      "Zhiwei Liu",
+      "Yupeng Cao",
+      "Yueru He",
+      "Ziyang Xu",
+      "Chen Xu",
+      "Zhiyang Deng",
+      "Prayag Tiwari",
+      "Xi Chen",
+      "Alejandro Lopez-Lira",
+      "Jimin Huang",
+      "Junichi Tsujii",
+      "Sophia Ananiadou"
+    ],
+    "published": "2026-01-07",
+    "categories": [
+      "cs.CL",
+      "cs.CE",
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.04160v3",
+    "arxiv_url": "https://arxiv.org/abs/2601.04160v3",
+    "fetched_at": "2026-01-12T08:37:36.906811"
+  },
+  {
+    "id": "2601.04246v2",
+    "title": "Technology Adoption and Network Externalities in Financial Systems: A Spatial-Network Approach",
+    "abstract": "This paper develops a unified framework for analyzing technology adoption in financial networks that incorporates spatial spillovers, network externalities, and their interaction. The framework characterizes adoption dynamics through a master equation whose solution admits a Feynman-Kac representation as expected cumulative adoption pressure along stochastic paths through spatial-network space. From this representation, I derive the Adoption Amplification Factor -- a structural measure of technology leadership that captures the ratio of total system-wide adoption to initial adoption following a localized shock. A Levy jump-diffusion extension with state-dependent jump intensity captures critical mass dynamics: below threshold, adoption evolves through gradual diffusion; above threshold, cascade dynamics accelerate adoption through discrete jumps. Applying the framework to SWIFT gpi adoption among 17 Global Systemically Important Banks, I find strong support for the two-regime characterization. Network-central banks adopt significantly earlier ($ρ= -0.69$, $p = 0.002$), and pre-threshold adopters have significantly higher amplification factors than post-threshold adopters (11.81 versus 7.83, $p = 0.010$). Founding members, representing 29 percent of banks, account for 39 percent of total system amplification -- sufficient to trigger cascade dynamics. Controlling for firm size and network position, CEO age delays adoption by 11-15 days per year.",
+    "authors": [
+      "Tatsuru Kikuchi"
+    ],
+    "published": "2026-01-06",
+    "categories": [
+      "econ.EM",
+      "econ.TH",
+      "q-fin.GN",
+      "q-fin.TR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.04246v2",
+    "arxiv_url": "https://arxiv.org/abs/2601.04246v2",
+    "fetched_at": "2026-01-12T08:37:36.907091"
+  },
+  {
+    "id": "2601.05428v1",
+    "title": "Dynamic Inclusion and Bounded Multi-Factor Tilts for Robust Portfolio Construction",
+    "abstract": "This paper proposes a portfolio construction framework designed to remain robust under estimation error, non-stationarity, and realistic trading constraints. The methodology combines dynamic asset eligibility, deterministic rebalancing, and bounded multi-factor tilts applied to an equal-weight baseline. Asset eligibility is formalized as a state-dependent constraint on portfolio construction, allowing factor exposure to adjust endogenously in response to observable market conditions such as liquidity, volatility, and cross-sectional breadth. Rather than estimating expected returns or covariances, the framework relies on cross-sectional rankings and hard structural bounds to control concentration, turnover, and fragility. The resulting approach is fully algorithmic, transparent, and directly implementable. It provides a robustness-oriented alternative to parametric optimization and unconstrained multi-factor models, particularly suited for long-horizon allocations where stability and operational feasibility are primary objectives.",
+    "authors": [
+      "Roberto Garrone"
+    ],
+    "published": "2026-01-08",
+    "categories": [
+      "math.OC",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.05428v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.05428v1",
+    "fetched_at": "2026-01-12T08:37:43.154647"
+  },
+  {
+    "id": "2601.05988v1",
+    "title": "CyberGFM: Graph Foundation Models for Lateral Movement Detection in Enterprise Networks",
+    "abstract": "Representing networks as a graph and training a link prediction model using benign connections is an effective method of anomaly-based intrusion detection. Existing works using this technique have shown great success using temporal graph neural networks and skip-gram-based approaches on random walks. However, random walk-based approaches are unable to incorporate rich edge data, while the GNN-based approaches require large amounts of memory to train. In this work, we propose extending the original insight from random walk-based skip-grams--that random walks through a graph are analogous to sentences in a corpus--to the more modern transformer-based foundation models. Using language models that take advantage of GPU optimizations, we can quickly train a graph foundation model to predict missing tokens in random walks through a network of computers. The graph foundation model is then finetuned for link prediction and used as a network anomaly detector. This new approach allows us to combine the efficiency of random walk-based methods and the rich semantic representation of deep learning methods. This system, which we call CyberGFM, achieved state-of-the-art results on three widely used network anomaly detection datasets, delivering a up to 2$\\times$ improvement in average precision. We found that CyberGFM outperforms all prior works in unsupervised link prediction for network anomaly detection, using the same number of parameters, and with equal or better efficiency than the previous best approaches.",
+    "authors": [
+      "Isaiah J. King",
+      "Bernardo Trindade",
+      "Benjamin Bowman",
+      "H. Howie Huang"
+    ],
+    "published": "2026-01-09",
+    "categories": [
+      "cs.CR",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.05988v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.05988v1",
+    "fetched_at": "2026-01-12T08:37:49.360205"
+  },
+  {
+    "id": "2601.05984v1",
+    "title": "Community-Based Model Sharing and Generalisation: Anomaly Detection in IoT Temperature Sensor Networks",
+    "abstract": "The rapid deployment of Internet of Things (IoT) devices has led to large-scale sensor networks that monitor environmental and urban phenomena in real time. Communities of Interest (CoIs) provide a promising paradigm for organising heterogeneous IoT sensor networks by grouping devices with similar operational and environmental characteristics. This work presents an anomaly detection framework based on the CoI paradigm by grouping sensors into communities using a fused similarity matrix that incorporates temporal correlations via Spearman coefficients, spatial proximity using Gaussian distance decay, and elevation similarities. For each community, representative stations based on the best silhouette are selected and three autoencoder architectures (BiLSTM, LSTM, and MLP) are trained using Bayesian hyperparameter optimization with expanding window cross-validation and tested on stations from the same cluster and the best representative stations of other clusters. The models are trained on normal temperature patterns of the data and anomalies are detected through reconstruction error analysis. Experimental results show a robust within-community performance across the evaluated configurations, while variations across communities are observed. Overall, the results support the applicability of community-based model sharing in reducing computational overhead and to analyse model generalisability across IoT sensor networks.",
+    "authors": [
+      "Sahibzada Saadoon Hammad",
+      "Joaquín Huerta Guijarro",
+      "Francisco Ramos",
+      "Michael Gould Carlson",
+      "Sergio Trilles Oliver"
+    ],
+    "published": "2026-01-09",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.05984v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.05984v1",
+    "fetched_at": "2026-01-12T08:37:49.360239"
+  },
+  {
+    "id": "2601.05759v1",
+    "title": "Variational Autoencoders for P-wave Detection on Strong Motion Earthquake Spectrograms",
+    "abstract": "Accurate P-wave detection is critical for earthquake early warning, yet strong-motion records pose challenges due to high noise levels, limited labeled data, and complex waveform characteristics. This study reframes P-wave arrival detection as a self-supervised anomaly detection task to evaluate how architectural variations regulate the trade-off between reconstruction fidelity and anomaly discrimination. Through a comprehensive grid search of 492 Variational Autoencoder configurations, we show that while skip connections minimize reconstruction error (Mean Absolute Error approximately 0.0012), they induce \"overgeneralization\", allowing the model to reconstruct noise and masking the detection signal. In contrast, attention mechanisms prioritize global context over local detail and yield the highest detection performance with an area-under-the-curve of 0.875. The attention-based Variational Autoencoder achieves an area-under-the-curve of 0.91 in the 0 to 40-kilometer near-source range, demonstrating high suitability for immediate early warning applications. These findings establish that architectural constraints favoring global context over pixel-perfect reconstruction are essential for robust, self-supervised P-wave detection.",
+    "authors": [
+      "Turkan Simge Ispak",
+      "Salih Tileylioglu",
+      "Erdem Akagunduz"
+    ],
+    "published": "2026-01-09",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.05759v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.05759v1",
+    "fetched_at": "2026-01-12T08:37:49.360262"
+  },
+  {
+    "id": "2601.05527v1",
+    "title": "DeMa: Dual-Path Delay-Aware Mamba for Efficient Multivariate Time Series Analysis",
+    "abstract": "Accurate and efficient multivariate time series (MTS) analysis is increasingly critical for a wide range of intelligent applications. Within this realm, Transformers have emerged as the predominant architecture due to their strong ability to capture pairwise dependencies. However, Transformer-based models suffer from quadratic computational complexity and high memory overhead, limiting their scalability and practical deployment in long-term and large-scale MTS modeling. Recently, Mamba has emerged as a promising linear-time alternative with high expressiveness. Nevertheless, directly applying vanilla Mamba to MTS remains suboptimal due to three key limitations: (i) the lack of explicit cross-variate modeling, (ii) difficulty in disentangling the entangled intra-series temporal dynamics and inter-series interactions, and (iii) insufficient modeling of latent time-lag interaction effects. These issues constrain its effectiveness across diverse MTS tasks. To address these challenges, we propose DeMa, a dual-path delay-aware Mamba backbone. DeMa preserves Mamba's linear-complexity advantage while substantially improving its suitability for MTS settings. Specifically, DeMa introduces three key innovations: (i) it decomposes the MTS into intra-series temporal dynamics and inter-series interactions; (ii) it develops a temporal path with a Mamba-SSD module to capture long-range dynamics within each individual series, enabling series-independent, parallel computation; and (iii) it designs a variate path with a Mamba-DALA module that integrates delay-aware linear attention to model cross-variate dependencies. Extensive experiments on five representative tasks, long- and short-term forecasting, data imputation, anomaly detection, and series classification, demonstrate that DeMa achieves state-of-the-art performance while delivering remarkable computational efficiency.",
+    "authors": [
+      "Rui An",
+      "Haohao Qu",
+      "Wenqi Fan",
+      "Xuequn Shang",
+      "Qing Li"
+    ],
+    "published": "2026-01-09",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.05527v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.05527v1",
+    "fetched_at": "2026-01-12T08:37:49.360287"
+  },
+  {
+    "id": "2601.05300v1",
+    "title": "TIME: Temporally Intelligent Meta-reasoning Engine for Context Triggered Explicit Reasoning",
+    "abstract": "Reasoning oriented large language models often expose explicit \"thinking\" as long, turn-global traces at the start of every response, either always on or toggled externally at inference time. While useful for arithmetic, programming, and problem solving, this design is costly, blurs claim level auditability, and cannot re-trigger explicit reasoning once the model begins presenting. Dialogue models are also largely blind to temporal structure, treating replies after seconds and replies after weeks as equivalent unless time is stated in text. We introduce TIME, the Temporally Intelligent Meta-reasoning Engine, a behavioral alignment framework that treats explicit reasoning as a context sensitive resource driven by discourse and temporal cues. TIME augments dialogue with optional ISO 8601 <time> tags, tick turns that represent silent gaps, and short <think> blocks that can appear anywhere in a reply. A four-phase curriculum including a small, maximally diverse full-batch alignment step trains Qwen3 dense models to invoke brief, in-place reasoning bursts and keep user facing text compact. We evaluate with TIMEBench, a temporally grounded dialogue benchmark probing chronology, commonsense under gaps and offsets, anomaly detection, and continuity. Across 4B to 32B scales, TIME improves TIMEBench scores over base Qwen3 in both thinking and no-thinking modes while reducing reasoning tokens by about an order of magnitude. Our training data and code are available at https://github.com/The-Coherence-Initiative/TIME and TIMEBench is available at https://github.com/The-Coherence-Initiative/TIMEBench",
+    "authors": [
+      "Susmit Das"
+    ],
+    "published": "2026-01-08",
+    "categories": [
+      "cs.LG",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.05300v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.05300v1",
+    "fetched_at": "2026-01-12T08:37:49.360306"
+  },
+  {
+    "id": "2601.06007v1",
+    "title": "Don't Break the Cache: An Evaluation of Prompt Caching for Long-Horizon Agentic Tasks",
+    "abstract": "Recent advancements in Large Language Model (LLM) agents have enabled complex multi-turn agentic tasks requiring extensive tool calling, where conversations can span dozens of API calls with increasingly large context windows. However, although major LLM providers offer prompt caching to reduce cost and latency, its benefits for agentic workloads remain underexplored in the research literature. To our knowledge, no prior work quantifies these cost savings or compares caching strategies for multi-turn agentic tasks. We present a comprehensive evaluation of prompt caching across three major LLM providers (OpenAI, Anthropic, and Google) and compare three caching strategies, including full context caching, system prompt only caching, and caching that excludes dynamic tool results. We evaluate on DeepResearchBench, a multi-turn agentic benchmark where agents autonomously execute real-world web search tool calls to answer complex research questions, measuring both API cost and time to first token (TTFT) across over 500 agent sessions with 10,000-token system prompts. Our results demonstrate that prompt caching reduces API costs by 45-80% and improves time to first token by 13-31% across providers. We find that strategic prompt cache block control, such as placing dynamic content at the end of the system prompt, avoiding dynamic traditional function calling, and excluding dynamic tool results, provides more consistent benefits than naive full-context caching, which can paradoxically increase latency. Our analysis reveals nuanced variations in caching behavior across providers, and we provide practical guidance for implementing prompt caching in production agentic systems.",
+    "authors": [
+      "Elias Lumer",
+      "Faheem Nizar",
+      "Akshaya Jangiti",
+      "Kevin Frank",
+      "Anmol Gulati",
+      "Mandar Phadate",
+      "Vamse Kumar Subbiah"
+    ],
+    "published": "2026-01-09",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.06007v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.06007v1",
+    "fetched_at": "2026-01-12T08:38:17.313963"
+  },
+  {
+    "id": "2601.05991v1",
+    "title": "Open-Vocabulary 3D Instruction Ambiguity Detection",
+    "abstract": "In safety-critical domains, linguistic ambiguity can have severe consequences; a vague command like \"Pass me the vial\" in a surgical setting could lead to catastrophic errors. Yet, most embodied AI research overlooks this, assuming instructions are clear and focusing on execution rather than confirmation. To address this critical safety gap, we are the first to define Open-Vocabulary 3D Instruction Ambiguity Detection, a fundamental new task where a model must determine if a command has a single, unambiguous meaning within a given 3D scene. To support this research, we build Ambi3D, the large-scale benchmark for this task, featuring over 700 diverse 3D scenes and around 22k instructions. Our analysis reveals a surprising limitation: state-of-the-art 3D Large Language Models (LLMs) struggle to reliably determine if an instruction is ambiguous. To address this challenge, we propose AmbiVer, a two-stage framework that collects explicit visual evidence from multiple views and uses it to guide an vision-language model (VLM) in judging instruction ambiguity. Extensive experiments demonstrate the challenge of our task and the effectiveness of AmbiVer, paving the way for safer and more trustworthy embodied AI. Code and dataset available at https://jiayuding031020.github.io/ambi3d/.",
+    "authors": [
+      "Jiayu Ding",
+      "Haoran Tang",
+      "Ge Li"
+    ],
+    "published": "2026-01-09",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.05991v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.05991v1",
+    "fetched_at": "2026-01-12T08:38:17.313995"
+  },
+  {
+    "id": "2601.05930v1",
+    "title": "Can We Predict Before Executing Machine Learning Agents?",
+    "abstract": "Autonomous machine learning agents have revolutionized scientific discovery, yet they remain constrained by a Generate-Execute-Feedback paradigm. Previous approaches suffer from a severe Execution Bottleneck, as hypothesis evaluation relies strictly on expensive physical execution. To bypass these physical constraints, we internalize execution priors to substitute costly runtime checks with instantaneous predictive reasoning, drawing inspiration from World Models. In this work, we formalize the task of Data-centric Solution Preference and construct a comprehensive corpus of 18,438 pairwise comparisons. We demonstrate that LLMs exhibit significant predictive capabilities when primed with a Verified Data Analysis Report, achieving 61.5% accuracy and robust confidence calibration. Finally, we instantiate this framework in FOREAGENT, an agent that employs a Predict-then-Verify loop, achieving a 6x acceleration in convergence while surpassing execution-based baselines by +6%. Our code and dataset will be publicly available soon at https://github.com/zjunlp/predict-before-execute.",
+    "authors": [
+      "Jingsheng Zheng",
+      "Jintian Zhang",
+      "Yujie Luo",
+      "Yuren Mao",
+      "Yunjun Gao",
+      "Lun Du",
+      "Huajun Chen",
+      "Ningyu Zhang"
+    ],
+    "published": "2026-01-09",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.LG",
+      "cs.MA"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.05930v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.05930v1",
+    "fetched_at": "2026-01-12T08:38:17.314028"
+  },
+  {
+    "id": "2601.05923v1",
+    "title": "Cedalion Tutorial: A Python-based framework for comprehensive analysis of multimodal fNIRS & DOT from the lab to the everyday world",
+    "abstract": "Functional near-infrared spectroscopy (fNIRS) and diffuse optical tomography (DOT) are rapidly evolving toward wearable, multimodal, and data-driven, AI-supported neuroimaging in the everyday world. However, current analytical tools are fragmented across platforms, limiting reproducibility, interoperability, and integration with modern machine learning (ML) workflows. Cedalion is a Python-based open-source framework designed to unify advanced model-based and data-driven analysis of multimodal fNIRS and DOT data within a reproducible, extensible, and community-driven environment. Cedalion integrates forward modelling, photogrammetric optode co-registration, signal processing, GLM Analysis, DOT image reconstruction, and ML-based data-driven methods within a single standardized architecture based on the Python ecosystem. It adheres to SNIRF and BIDS standards, supports cloud-executable Jupyter notebooks, and provides containerized workflows for scalable, fully reproducible analysis pipelines that can be provided alongside original research publications. Cedalion connects established optical-neuroimaging pipelines with ML frameworks such as scikit-learn and PyTorch, enabling seamless multimodal fusion with EEG, MEG, and physiological data. It implements validated algorithms for signal-quality assessment, motion correction, GLM modelling, and DOT reconstruction, complemented by modules for simulation, data augmentation, and multimodal physiology analysis. Automated documentation links each method to its source publication, and continuous-integration testing ensures robustness. This tutorial paper provides seven fully executable notebooks that demonstrate core features. Cedalion offers an open, transparent, and community extensible foundation that supports reproducible, scalable, cloud- and ML-ready fNIRS/DOT workflows for laboratory-based and real-world neuroimaging.",
+    "authors": [
+      "E. Middell",
+      "L. Carlton",
+      "S. Moradi",
+      "T. Codina",
+      "T. Fischer",
+      "J. Cutler",
+      "S. Kelley",
+      "J. Behrendt",
+      "T. Dissanayake",
+      "N. Harmening",
+      "M. A. Yücel",
+      "D. A. Boas",
+      "A. von Lühmann"
+    ],
+    "published": "2026-01-09",
+    "categories": [
+      "eess.SP",
+      "cs.AI",
+      "cs.LG",
+      "eess.IV",
+      "q-bio.QM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.05923v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.05923v1",
+    "fetched_at": "2026-01-12T08:38:17.314071"
+  },
+  {
+    "id": "2601.05899v1",
+    "title": "TowerMind: A Tower Defence Game Learning Environment and Benchmark for LLM as Agents",
+    "abstract": "Recent breakthroughs in Large Language Models (LLMs) have positioned them as a promising paradigm for agents, with long-term planning and decision-making emerging as core general-purpose capabilities for adapting to diverse scenarios and tasks. Real-time strategy (RTS) games serve as an ideal testbed for evaluating these two capabilities, as their inherent gameplay requires both macro-level strategic planning and micro-level tactical adaptation and action execution. Existing RTS game-based environments either suffer from relatively high computational demands or lack support for textual observations, which has constrained the use of RTS games for LLM evaluation. Motivated by this, we present TowerMind, a novel environment grounded in the tower defense (TD) subgenre of RTS games. TowerMind preserves the key evaluation strengths of RTS games for assessing LLMs, while featuring low computational demands and a multimodal observation space, including pixel-based, textual, and structured game-state representations. In addition, TowerMind supports the evaluation of model hallucination and provides a high degree of customizability. We design five benchmark levels to evaluate several widely used LLMs under different multimodal input settings. The results reveal a clear performance gap between LLMs and human experts across both capability and hallucination dimensions. The experiments further highlight key limitations in LLM behavior, such as inadequate planning validation, a lack of multifinality in decision-making, and inefficient action use. We also evaluate two classic reinforcement learning algorithms: Ape-X DQN and PPO. By offering a lightweight and multimodal design, TowerMind complements the existing RTS game-based environment landscape and introduces a new benchmark for the AI agent field. The source code is publicly available on GitHub(https://github.com/tb6147877/TowerMind).",
+    "authors": [
+      "Dawei Wang",
+      "Chengming Zhou",
+      "Di Zhao",
+      "Xinyuan Liu",
+      "Marci Chi Ma",
+      "Gary Ushaw",
+      "Richard Davison"
+    ],
+    "published": "2026-01-09",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.05899v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.05899v1",
+    "fetched_at": "2026-01-12T08:38:17.314108"
+  },
+  {
+    "id": "2601.05890v1",
+    "title": "StackPlanner: A Centralized Hierarchical Multi-Agent System with Task-Experience Memory Management",
+    "abstract": "Multi-agent systems based on large language models, particularly centralized architectures, have recently shown strong potential for complex and knowledge-intensive tasks. However, central agents often suffer from unstable long-horizon collaboration due to the lack of memory management, leading to context bloat, error accumulation, and poor cross-task generalization. To address both task-level memory inefficiency and the inability to reuse coordination experience, we propose StackPlanner, a hierarchical multi-agent framework with explicit memory control. StackPlanner addresses these challenges by decoupling high-level coordination from subtask execution with active task-level memory control, and by learning to retrieve and exploit reusable coordination experience via structured experience memory and reinforcement learning. Experiments on multiple deep-search and agent system benchmarks demonstrate the effectiveness of our approach in enabling reliable long-horizon multi-agent collaboration.",
+    "authors": [
+      "Ruizhe Zhang",
+      "Xinke Jiang",
+      "Zhibang Yang",
+      "Zhixin Zhang",
+      "Jiaran Gao",
+      "Yuzhen Xiao",
+      "Hongbin Lai",
+      "Xu Chu",
+      "Junfeng Zhao",
+      "Yasha Wang"
+    ],
+    "published": "2026-01-09",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.05890v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.05890v1",
+    "fetched_at": "2026-01-12T08:38:17.314142"
+  },
+  {
+    "id": "2601.05787v1",
+    "title": "From Off-Policy to On-Policy: Enhancing GUI Agents via Bi-level Expert-to-Policy Assimilation",
+    "abstract": "Vision-language models are increasingly deployed as computer-use agents (CUAs) that operate desktops and browsers. Top-performing CUAs are framework-based systems that decompose planning and execution, while end-to-end screenshot-to-action policies are easier to deploy but lag behind on benchmarks such as OSWorld-Verified. GUI datasets like OSWorld pose two bottlenecks: they expose only a few hundred interactive, verifiable tasks and environments, and expert trajectories must be gathered by interacting with these environments, making such data hard to scale. We therefore ask how reinforcement learning from verifiable rewards (RLVR) can best exploit a small pool of exist expert trajectories to train end-to-end policies. Naively mixing these off-policy traces into on-policy RLVR is brittle: even after format conversion, expert trajectories exhibit structural mismatch and distribution shift from the learner. We propose BEPA (Bi-Level Expert-to-Policy Assimilation), which turns static expert traces into policy-aligned guidance via self-rolled reachable trajectories under the base policy (LEVEL-1) and a per-task, dynamically updated cache used in RLVR (LEVEL-2). On OSWorld-Verified, BEPA improves UITARS1.5-7B success from 22.87% to 32.13% and raises a held-out split from 5.74% to 10.30%, with consistent gains on MMBench-GUI and Online-Mind2Web. Our code and data are available at: https://github.com/LEON-gittech/Verl_GUI.git",
+    "authors": [
+      "Zezhou Wang",
+      "Ziyun Zhang",
+      "Xiaoyi Zhang",
+      "Zhuzhong Qian",
+      "Yan Lu"
+    ],
+    "published": "2026-01-09",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.05787v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.05787v1",
+    "fetched_at": "2026-01-12T08:38:17.314167"
+  },
+  {
+    "id": "2601.05770v1",
+    "title": "Weights to Code: Extracting Interpretable Algorithms from the Discrete Transformer",
+    "abstract": "Algorithm extraction aims to synthesize executable programs directly from models trained on specific algorithmic tasks, enabling de novo algorithm discovery without relying on human-written code. However, extending this paradigm to Transformer is hindered by superposition, where entangled features encoded in overlapping directions obstruct the extraction of symbolic expressions. In this work, we propose the Discrete Transformer, an architecture explicitly engineered to bridge the gap between continuous representations and discrete symbolic logic. By enforcing a strict functional disentanglement, which constrains Numerical Attention to information routing and Numerical MLP to element-wise arithmetic, and employing temperature-annealed sampling, our method effectively facilitates the extraction of human-readable programs. Empirically, the Discrete Transformer not only achieves performance comparable to RNN-based baselines but crucially extends interpretability to continuous variable domains. Moreover, our analysis of the annealing process shows that the efficient discrete search undergoes a clear phase transition from exploration to exploitation. We further demonstrate that our method enables fine-grained control over synthesized programs by imposing inductive biases. Collectively, these findings establish the Discrete Transformer as a robust framework for demonstration-free algorithm discovery, offering a rigorous pathway toward Transformer interpretability.",
+    "authors": [
+      "Yifan Zhang",
+      "Wei Bi",
+      "Kechi Zhang",
+      "Dongming Jin",
+      "Jie Fu",
+      "Zhi Jin"
+    ],
+    "published": "2026-01-09",
+    "categories": [
+      "cs.LG",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.05770v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.05770v1",
+    "fetched_at": "2026-01-12T08:38:17.314194"
+  },
+  {
+    "id": "2601.05755v1",
+    "title": "VIGIL: Defending LLM Agents Against Tool Stream Injection via Verify-Before-Commit",
+    "abstract": "LLM agents operating in open environments face escalating risks from indirect prompt injection, particularly within the tool stream where manipulated metadata and runtime feedback hijack execution flow. Existing defenses encounter a critical dilemma as advanced models prioritize injected rules due to strict alignment while static protection mechanisms sever the feedback loop required for adaptive reasoning. To reconcile this conflict, we propose \\textbf{VIGIL}, a framework that shifts the paradigm from restrictive isolation to a verify-before-commit protocol. By facilitating speculative hypothesis generation and enforcing safety through intent-grounded verification, \\textbf{VIGIL} preserves reasoning flexibility while ensuring robust control. We further introduce \\textbf{SIREN}, a benchmark comprising 959 tool stream injection cases designed to simulate pervasive threats characterized by dynamic dependencies. Extensive experiments demonstrate that \\textbf{VIGIL} outperforms state-of-the-art dynamic defenses by reducing the attack success rate by over 22\\% while more than doubling the utility under attack compared to static baselines, thereby achieving an optimal balance between security and utility. Code is available at https://anonymous.4open.science/r/VIGIL-378B/.",
+    "authors": [
+      "Junda Lin",
+      "Zhaomeng Zhou",
+      "Zhi Zheng",
+      "Shuochen Liu",
+      "Tong Xu",
+      "Yong Chen",
+      "Enhong Chen"
+    ],
+    "published": "2026-01-09",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.05755v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.05755v1",
+    "fetched_at": "2026-01-12T08:38:17.314225"
+  },
+  {
+    "id": "2601.05529v1",
+    "title": "Safety Not Found (404): Hidden Risks of LLM-Based Robotics Decision Making",
+    "abstract": "One mistake by an AI system in a safety-critical setting can cost lives. As Large Language Models (LLMs) become integral to robotics decision-making, the physical dimension of risk grows; a single wrong instruction can directly endanger human safety. This paper addresses the urgent need to systematically evaluate LLM performance in scenarios where even minor errors are catastrophic. Through a qualitative evaluation of a fire evacuation scenario, we identified critical failure cases in LLM-based decision-making. Based on these, we designed seven tasks for quantitative assessment, categorized into: Complete Information, Incomplete Information, and Safety-Oriented Spatial Reasoning (SOSR). Complete information tasks utilize ASCII maps to minimize interpretation ambiguity and isolate spatial reasoning from visual processing. Incomplete information tasks require models to infer missing context, testing for spatial continuity versus hallucinations. SOSR tasks use natural language to evaluate safe decision-making in life-threatening contexts. We benchmark various LLMs and Vision-Language Models (VLMs) across these tasks. Beyond aggregate performance, we analyze the implications of a 1% failure rate, highlighting how \"rare\" errors escalate into catastrophic outcomes. Results reveal serious vulnerabilities: several models achieved a 0% success rate in ASCII navigation, while in a simulated fire drill, models instructed robots to move toward hazardous areas instead of emergency exits. Our findings lead to a sobering conclusion: current LLMs are not ready for direct deployment in safety-critical systems. A 99% accuracy rate is dangerously misleading in robotics, as it implies one out of every hundred executions could result in catastrophic harm. We demonstrate that even state-of-the-art models cannot guarantee safety, and absolute reliance on them creates unacceptable risks.",
+    "authors": [
+      "Jua Han",
+      "Jaeyoon Seo",
+      "Jungbin Min",
+      "Jean Oh",
+      "Jihie Kim"
+    ],
+    "published": "2026-01-09",
+    "categories": [
+      "cs.AI",
+      "cs.RO"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.05529v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.05529v1",
+    "fetched_at": "2026-01-12T08:38:17.314250"
+  },
+  {
+    "id": "2601.05524v1",
+    "title": "Double: Breaking the Acceleration Limit via Double Retrieval Speculative Parallelism",
+    "abstract": "Parallel Speculative Decoding (PSD) accelerates traditional Speculative Decoding (SD) by overlapping draft generation with verification. However, it remains hampered by two fundamental challenges: (1) a theoretical speedup ceiling dictated by the speed ratio between the draft and target models, and (2) high computational waste and pipeline stall due to mid-sequence token rejections of early errors. To address these limitations, we introduce \\textsc{Double} (Double Retrieval Speculative Parallelism). By bridging the gap between SD and PSD, our framework resolves the Retrieval \\emph{Precision-Efficiency Dilemma} through a novel synchronous mechanism. Specifically, we enable the draft model to execute iterative retrieval speculations to break the theoretical speedup limits; to alleviate rejections without rollback, the target model performs authoritative retrieval to generate multi-token guidance. \\textsc{Double} is entirely training-free and lossless. Extensive experiments demonstrate state-of-the-art speedup of $\\textbf{5.3}\\times$ on LLaMA3.3-70B and $\\textbf{2.8}\\times$ on Qwen3-32B, significantly outperforming the advanced method EAGLE-3 that requires extensive model training.",
+    "authors": [
+      "Yuhao Shen",
+      "Tianyu Liu",
+      "Junyi Shen",
+      "Jinyang Wu",
+      "Quan Kong",
+      "Li Huan",
+      "Cong Wang"
+    ],
+    "published": "2026-01-09",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.05524v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.05524v1",
+    "fetched_at": "2026-01-12T08:38:17.314277"
+  },
+  {
+    "id": "2601.05475v1",
+    "title": "MaxCode: A Max-Reward Reinforcement Learning Framework for Automated Code Optimization",
+    "abstract": "Large Language Models (LLMs) demonstrate strong capabilities in general coding tasks but encounter two key challenges when optimizing code: (i) the complexity of writing optimized code (such as performant CUDA kernels and competition-level CPU code) requires expertise in systems, algorithms and specific languages and (ii) requires interpretation of performance metrics like timing and device utilization beyond binary correctness. In this work, we explore inference-time search algorithms that guide the LLM to discover better solutions through iterative refinement based on execution feedback. Our approach, called MaxCode unifies existing search methods under a max-reward reinforcement learning framework, making the observation and action-value functions modular for modification. To enhance the observation space, we integrate a natural language critique model that converts raw execution feedback into diagnostic insights about errors and performance bottlenecks, and the best-discounted reward seen so far. Together, these provide richer input to the code proposal function. To improve exploration during search, we train a generative reward-to-go model using action values from rollouts to rerank potential solutions. Testing on the KernelBench (CUDA) and PIE (C++) optimization benchmarks shows that MaxCode improves optimized code performance compared to baselines, achieving 20.3% and 10.1% relative improvements in absolute speedup value and relative speedup ranking, respectively.",
+    "authors": [
+      "Jiefu Ou",
+      "Sapana Chaudhary",
+      "Kaj Bostrom",
+      "Nathaniel Weir",
+      "Shuai Zhang",
+      "Huzefa Rangwala",
+      "George Karypis"
+    ],
+    "published": "2026-01-09",
+    "categories": [
+      "cs.LG",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.05475v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.05475v1",
+    "fetched_at": "2026-01-12T08:38:17.314305"
+  },
+  {
+    "id": "2601.05467v1",
+    "title": "STELP: Secure Transpilation and Execution of LLM-Generated Programs",
+    "abstract": "Rapid evolution of Large Language Models (LLMs) has achieved major advances in reasoning, planning, and function-calling capabilities. Multi-agentic collaborative frameworks using such LLMs place them at the center of solving software development-related tasks such as code generation. However, direct use of LLM generated code in production software development systems is problematic. The code could be unstable or erroneous and contain vulnerabilities such as data poisoning, malicious attacks, and hallucinations that could lead to widespread system malfunctions. This prohibits the adoption of LLM generated code in production AI systems where human code reviews and traditional secure testing tools are impractical or untrustworthy. In this paper, we discuss safety and reliability problems with the execution of LLM generated code and propose a Secure Transpiler and Executor of LLM-Generated Program (STELP), capable of executing LLM-generated code in a controlled and safe manner. STELP secures autonomous production AI systems involving code generation, filling the critical void left by the impracticality or limitations of traditional secure testing methodologies and human oversight. This includes applications such as headless code generation-execution and LLMs that produce executable code snippets as an action plan to be executed in real time. We contribute a human-validated dataset of insecure code snippets and benchmark our approach on publicly available datasets for correctness, safety, and latency. Our results demonstrate that our approach outperforms an existing method by a significant margin, particularly in its ability to safely execute risky code snippets. Warning: This paper contains malicious code snippets that should be run with caution.",
+    "authors": [
+      "Swapnil Shinde",
+      "Sahil Wadhwa",
+      "Andy Luo",
+      "Emily Chen"
+    ],
+    "published": "2026-01-09",
+    "categories": [
+      "cs.SE",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.05467v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.05467v1",
+    "fetched_at": "2026-01-12T08:38:17.314327"
+  },
+  {
+    "id": "2601.05445v1",
+    "title": "Knowledge-Driven Multi-Turn Jailbreaking on Large Language Models",
+    "abstract": "Large Language Models (LLMs) face a significant threat from multi-turn jailbreak attacks, where adversaries progressively steer conversations to elicit harmful outputs. However, the practical effectiveness of existing attacks is undermined by several critical limitations: they struggle to maintain a coherent progression over long interactions, often losing track of what has been accomplished and what remains to be done; they rely on rigid or pre-defined patterns, and fail to adapt to the LLM's dynamic and unpredictable conversational state. To address these shortcomings, we introduce Mastermind, a multi-turn jailbreak framework that adopts a dynamic and self-improving approach. Mastermind operates in a closed loop of planning, execution, and reflection, enabling it to autonomously build and refine its knowledge of model vulnerabilities through interaction. It employs a hierarchical planning architecture that decouples high-level attack objectives from low-level tactical execution, ensuring long-term focus and coherence. This planning is guided by a knowledge repository that autonomously discovers and refines effective attack patterns by reflecting on interactive experiences. Mastermind leverages this accumulated knowledge to dynamically recombine and adapt attack vectors, dramatically improving both effectiveness and resilience. We conduct comprehensive experiments against state-of-the-art models, including GPT-5 and Claude 3.7 Sonnet. The results demonstrate that Mastermind significantly outperforms existing baselines, achieving substantially higher attack success rates and harmfulness ratings. Moreover, our framework exhibits notable resilience against multiple advanced defense mechanisms.",
+    "authors": [
+      "Songze Li",
+      "Ruishi He",
+      "Xiaojun Jia",
+      "Jun Wang",
+      "Zhihui Fu"
+    ],
+    "published": "2026-01-09",
+    "categories": [
+      "cs.CR",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.05445v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.05445v1",
+    "fetched_at": "2026-01-12T08:38:17.314352"
+  },
+  {
+    "id": "2601.05407v1",
+    "title": "Interactive Distillation for Cooperative Multi-Agent Reinforcement Learning",
+    "abstract": "Knowledge distillation (KD) has the potential to accelerate MARL by employing a centralized teacher for decentralized students but faces key bottlenecks. Specifically, there are (1) challenges in synthesizing high-performing teaching policies in complex domains, (2) difficulties when teachers must reason in out-of-distribution (OOD) states, and (3) mismatches between the decentralized students' and the centralized teacher's observation spaces. To address these limitations, we propose HINT (Hierarchical INteractive Teacher-based transfer), a novel KD framework for MARL in a centralized training, decentralized execution setup. By leveraging hierarchical RL, HINT provides a scalable, high-performing teacher. Our key innovation, pseudo off-policy RL, enables the teacher policy to be updated using both teacher and student experience, thereby improving OOD adaptation. HINT also applies performance-based filtering to retain only outcome-relevant guidance, reducing observation mismatches. We evaluate HINT on challenging cooperative domains (e.g., FireCommander for resource allocation, MARINE for tactical combat). Across these benchmarks, HINT outperforms baselines, achieving improvements of 60% to 165% in success rate.",
+    "authors": [
+      "Minwoo Cho",
+      "Batuhan Altundas",
+      "Matthew Gombolay"
+    ],
+    "published": "2026-01-08",
+    "categories": [
+      "cs.LG",
+      "cs.MA"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.05407v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.05407v1",
+    "fetched_at": "2026-01-12T08:38:17.314373"
+  }
+]
