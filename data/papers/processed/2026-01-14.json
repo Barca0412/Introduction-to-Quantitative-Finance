@@ -1,0 +1,874 @@
+[
+  {
+    "id": "2601.08721v1",
+    "title": "Feasibility-First Satellite Integration in Robust Portfolio Architectures",
+    "abstract": "The integration of thematic satellite allocations into core-satellite portfolio architectures is commonly approached using factor exposures, discretionary convictions, or backtested performance, with feasibility assessed primarily through liquidity screens or market-impact considerations. While such approaches may be appropriate at institutional scale, they are ill-suited to small portfolios and robustness-oriented allocation frameworks, where dominant constraints arise not from return predictability or trading capacity, but from fixed costs, irreversibility risk, and governance complexity. This paper develops a feasibility-first, non-predictive framework for satellite integration that is explicitly scale-aware. We formalize four nested feasibility layers (physical, economic, structural, and epistemic) that jointly determine whether a satellite allocation is admissible. Physical feasibility ensures implementability under concave market-impact laws; economic feasibility suppresses noise-dominated reallocations via cost-dominance threshold constraints; structural feasibility bounds satellite size through an explicit optionality budget defined by tolerable loss under thesis failure; and epistemic feasibility limits satellite breadth and dispersion through an entropy-based complexity budget. Within this hierarchy, structural optionality is identified as the primary design principle for thematic satellites, with the remaining layers acting as robustness lenses rather than optimization criteria. The framework yields closed-form feasibility bounds on satellite size, turnover, and breadth without reliance on return forecasts, factor premia, or backtested performance, providing a disciplined basis for integrating thematic satellites into small, robustness-oriented portfolios.",
+    "authors": [
+      "Roberto Garrone"
+    ],
+    "published": "2026-01-13",
+    "categories": [
+      "q-fin.PM",
+      "econ.GN"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.08721v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.08721v1",
+    "fetched_at": "2026-01-14T08:35:54.071280",
+    "chinese_title": "稳健投资组合架构中基于可行性优先的卫星资产整合",
+    "chinese_summary": "现有核心-卫星投资组合整合方法不适用于小投资组合及稳健配置框架（核心约束为固定成本、不可逆风险等而非收益可预测性）；论文提出可行性优先、规模感知的无预测性框架，形式化物理、经济、结构、认知四层嵌套可行性以判断卫星配置是否可接受，将结构期权性确立为主题卫星的核心设计原则。",
+    "tags": [
+      "Portfolio Optimization",
+      "Risk Management",
+      "Execution"
+    ],
+    "key_contributions": [
+      "指出现有核心-卫星整合方法对小投资组合及稳健配置框架的不适用性（核心约束源于固定成本、不可逆风险等而非收益可预测性）",
+      "提出可行性优先、规模感知的无预测性框架，形式化四层嵌套可行性并确立结构期权性为主题卫星核心设计原则"
+    ],
+    "processed_at": "2026-01-14T08:39:12.257264"
+  },
+  {
+    "id": "2601.08641v1",
+    "title": "Resisting Manipulative Bots in Memecoin Copy Trading: A Multi-Agent Approach with Chain-of-Thought Reasoning",
+    "abstract": "The launch of \\$Trump coin ignited a wave in meme coin investment. Copy trading, as a strategy-agnostic approach that eliminates the need for deep trading knowledge, quickly gains widespread popularity in the meme coin market. However, copy trading is not a guarantee of profitability due to the prevalence of manipulative bots, the uncertainty of the followed wallets' future performance, and the lag in trade execution. Recently, large language models (LLMs) have shown promise in financial applications by effectively understanding multi-modal data and producing explainable decisions. However, a single LLM struggles with complex, multi-faceted tasks such as asset allocation. These challenges are even more pronounced in cryptocurrency markets, where LLMs often lack sufficient domain-specific knowledge in their training data.   To address these challenges, we propose an explainable multi-agent system for meme coin copy trading. Inspired by the structure of an asset management team, our system decomposes the complex task into subtasks and coordinates specialized agents to solve them collaboratively. Employing few-shot chain-of-though (CoT) prompting, each agent acquires professional meme coin trading knowledge, interprets multi-modal data, and generates explainable decisions. Using a dataset of 1,000 meme coin projects' transaction data, our empirical evaluation shows that the proposed multi-agent system outperforms both traditional machine learning models and single LLMs, achieving 73% and 70% precision in identifying high-quality meme coin projects and key opinion leader (KOL) wallets, respectively. The selected KOLs collectively generated a total profit of \\$500,000 across these projects.",
+    "authors": [
+      "Yichen Luo",
+      "Yebo Feng",
+      "Jiahua Xu",
+      "Yang Liu"
+    ],
+    "published": "2026-01-13",
+    "categories": [
+      "cs.AI",
+      "q-fin.TR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.08641v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.08641v1",
+    "fetched_at": "2026-01-14T08:35:54.071324",
+    "chinese_title": "抵抗模因币跟单交易中的操纵机器人：一种结合思维链推理的多智能体方法",
+    "chinese_summary": "针对模因币跟单交易中操纵机器人、收益不确定性及执行滞后等问题，论文提出可解释多智能体系统，分解任务为子任务并协调专业智能体协作；每个智能体通过少样本思维链提示获取专业知识、解释多模态数据并生成可解释决策，实证表明其优于传统机器学习模型与单大语言模型。",
+    "tags": [
+      "LLM",
+      "Financial Agent",
+      "Algorithmic Trading",
+      "Behavioral Finance"
+    ],
+    "key_contributions": [
+      "提出基于多智能体+思维链推理的可解释系统，解决模因币跟单交易中的操纵等核心挑战",
+      "实证验证该系统在模因币交易中的表现优于传统模型与单大语言模型，具备可解释性"
+    ],
+    "processed_at": "2026-01-14T08:39:22.365829"
+  },
+  {
+    "id": "2601.08598v1",
+    "title": "Systemic Risk Surveillance",
+    "abstract": "Following several episodes of financial market turmoil in recent decades, changes in systemic risk have drawn growing attention. Therefore, we propose surveillance schemes for systemic risk, which allow to detect misspecified systemic risk forecasts in an \"online\" fashion. This enables daily monitoring of the forecasts while controlling for the accumulation of false test rejections. Such online schemes are vital in taking timely countermeasures to avoid financial distress. Our monitoring procedures allow multiple series at once to be monitored, thus increasing the likelihood and the speed at which early signs of trouble may be picked up. The tests hold size by construction, such that the null of correct systemic risk assessments is only rejected during the monitoring period with (at most) a pre-specified probability. Monte Carlo simulations illustrate the good finite-sample properties of our procedures. An empirical application to US banks during multiple crises demonstrates the usefulness of our surveillance schemes for both regulators and financial institutions.",
+    "authors": [
+      "Timo Dimitriadis",
+      "Yannick Hoga"
+    ],
+    "published": "2026-01-13",
+    "categories": [
+      "econ.EM",
+      "q-fin.RM",
+      "stat.ME"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.08598v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.08598v1",
+    "fetched_at": "2026-01-14T08:35:54.071349",
+    "chinese_title": "系统性风险监测",
+    "chinese_summary": "针对近几十年金融动荡后系统性风险受关注的问题，提出在线监测系统性风险预测的方案，可每日监测多序列并控制假阳性错误；通过蒙特卡洛模拟验证其有限样本性质，实证应用于美国银行危机证明对监管者和金融机构的实用性。",
+    "tags": [
+      "Risk Management",
+      "Time Series",
+      "Anomaly"
+    ],
+    "key_contributions": [
+      "提出在线监测系统性风险预测的方案，支持多序列每日监测并控制假阳性错误",
+      "通过蒙特卡洛模拟验证有限样本性质，实证应用证明对监管和金融机构的实用性"
+    ],
+    "processed_at": "2026-01-14T08:39:39.315976"
+  },
+  {
+    "id": "2601.08571v1",
+    "title": "Regime Discovery and Intra-Regime Return Dynamics in Global Equity Markets",
+    "abstract": "Financial markets alternate between tranquil periods and episodes of stress, and return dynamics can change substantially across these regimes. We study regime-dependent dynamics in developed and developing equity indices using a data-driven Hilbert--Huang-based regime identification and profiling pipeline, followed by variable-length Markov modeling of categorized returns. Market regimes are identified using an Empirical Mode Decomposition-based Hilbert--Huang Transform, where instantaneous energy from the Hilbert spectrum separates Normal, High, and Extreme regimes. We then profile each regime using Holo--Hilbert Spectral Analysis, which jointly resolves carrier frequencies, amplitude-modulation frequencies, and amplitude-modulation energy (AME). AME, interpreted as volatility intensity, declines monotonically from Extreme to High to Normal regimes. This decline is markedly sharper in developed markets, while developing markets retain higher baseline volatility intensity even in Normal regimes. Building on these regime-specific volatility signatures, we discretize daily returns into five quintile states $\\mathtt{R}_1$ to $\\mathtt{R}_5$ and estimate Variable-Length Markov Chains via context trees within each regime. Unconditional state probabilities show tail states dominate in Extreme regimes and recede as regimes stabilize, alongside persistent downside asymmetry. Entropy peaks in High regimes, indicating maximum unpredictability during moderate-volatility periods. Conditional transition dynamics, evaluated over contexts of length up to three days from the context-tree estimates, indicate that developed markets normalize more effectively as stress subsides, whereas developing markets retain residual tail dependence and downside persistence even in Normal regimes, consistent with a coexistence of continuation and burst-like shifts.",
+    "authors": [
+      "Salam Rabindrajit Luwang",
+      "Buddha Nath Sharma",
+      "Kundan Mukhia",
+      "Md. Nurujjaman",
+      "Anish Rai",
+      "Filippo Petroni",
+      "Luis E. C. Rocha"
+    ],
+    "published": "2026-01-13",
+    "categories": [
+      "q-fin.ST",
+      "q-fin.MF",
+      "q-fin.RM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.08571v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.08571v1",
+    "fetched_at": "2026-01-14T08:35:54.071379",
+    "chinese_title": "全球股票市场的状态发现与状态内收益动态",
+    "chinese_summary": "本文采用基于希尔伯特-黄变换的无监督方法识别全球股票市场的正常、高波动与极端状态，结合全息希尔伯特谱分析刻画各状态的波动率强度特征，进一步用变长马尔可夫链建模状态内收益动态；发现发达市场状态间波动率下降更显著，极端状态下尾部收益占主导，高波动状态收益不可预测性最高。",
+    "tags": [
+      "Time Series",
+      "Volatility",
+      "Risk Management",
+      "Asset Pricing"
+    ],
+    "key_contributions": [
+      "提出基于希尔伯特-黄变换的无监督方法，准确识别全球股票市场的三类状态并揭示发达与发展中市场的状态波动率特征差异",
+      "利用变长马尔可夫链建模各状态内收益动态，发现极端状态下尾部收益占主导、高波动状态收益不可预测性最高等关键规律"
+    ],
+    "processed_at": "2026-01-14T08:40:00.515763"
+  },
+  {
+    "id": "2601.08540v1",
+    "title": "Systemic Risk in DeFi: A Network-Based Fragility Analysis of TVL Dynamics",
+    "abstract": "Systemic risk refers to the overall vulnerability arising from the high degree of interconnectedness and interdependence within the financial system. In the rapidly developing decentralized finance (DeFi) ecosystem, numerous studies have analyzed systemic risk through specific channels such as liquidity pressures, leverage mechanisms, smart contract risks, and historical risk events. However, these studies are mostly event-driven or focused on isolated risk channels, paying limited attention to the structural dimension of systemic risk. Overall, this study provides a unified quantitative framework for ecosystem-level analysis and continuous monitoring of systemic risk in DeFi. From a network-based perspective, this paper proposes the DeFi Correlation Fragility Indicator (CFI), constructed from time-varying correlation networks at the protocol category level. The CFI captures ecosystem-wide structural fragility associated with correlation concentration and increasing synchronicity. Furthermore, we define a Risk Contribution Score (RCS) to quantify the marginal contribution of different protocol types to overall systemic risk. By combining the CFI and RCS, the framework enables both the tracking of time-varying systemic risk and identification of structurally important functional modules in risk accumulation and amplification.",
+    "authors": [
+      "Shiyu Zhang",
+      "Zining Wang",
+      "Jin Zheng",
+      "John Cartlidge"
+    ],
+    "published": "2026-01-13",
+    "categories": [
+      "q-fin.RM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.08540v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.08540v1",
+    "fetched_at": "2026-01-14T08:35:54.071404",
+    "chinese_title": "DeFi中的系统性风险：基于TVL动态的网络型脆弱性分析",
+    "chinese_summary": "针对DeFi系统性风险研究多为事件驱动或孤立渠道分析、忽视结构维度的不足，该文从网络视角提出基于协议类别时变相关网络的DeFi相关脆弱性指标（CFI），并定义风险贡献得分（RCS），构建统一量化框架以跟踪时变系统性风险并识别风险积累放大中的关键功能模块。",
+    "tags": [
+      "Risk Management",
+      "Time Series",
+      "Graph Neural Network"
+    ],
+    "key_contributions": [
+      "提出基于协议类别时变相关网络的DeFi相关脆弱性指标（CFI），捕捉生态系统-wide的结构性脆弱性",
+      "定义风险贡献得分（RCS）量化不同协议类型对整体系统性风险的边际贡献，构建统一框架实现风险跟踪与关键模块识别"
+    ],
+    "processed_at": "2026-01-14T08:40:25.316704"
+  },
+  {
+    "id": "2601.08263v1",
+    "title": "A Blessing in Disguise: How DeFi Hacks Trigger Unintended Liquidity Injections into US Money Markets",
+    "abstract": "Do vulnerabilities in Decentralized Finance (DeFi) destabilize traditional short-term funding markets? While the prevailing \"Contagion Hypothesis\" posits that the liquidation of stablecoin reserves triggers fire-sale spirals that transmit distress to traditional markets , we document a robust \"Flight-to-Quality\" effect to the contrary. In the wake of major DeFi exploits, spreads on 3-month AA-rated commercial paper (CP) exhibit a paradoxical narrowing. We identify a \"liquidity recycling\" mechanism driving this outcome: capital fleeing DeFi protocols is re-intermediated into the traditional financial system via Prime Money Market Funds (MMFs) , where strict regulatory constraints (e.g., SEC Rule 2a-7) compel these funds to purchase high-quality paper. Our estimates indicate that this institutional demand shock quantitatively overwhelms the supply shock driven by stablecoin issuer redemptions. Rather than acting as vectors of financial contagion , these crypto native shocks serve as an inadvertent \"safety valve\" in segmented markets , providing transient liquidity support and effectively subsidizing borrowing costs for high-grade issuers in the real economy.",
+    "authors": [
+      "Tingyi Lin"
+    ],
+    "published": "2026-01-13",
+    "categories": [
+      "q-fin.GN",
+      "econ.EM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.08263v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.08263v1",
+    "fetched_at": "2026-01-14T08:35:54.071422",
+    "chinese_title": "因祸得福：DeFi黑客攻击如何意外向美国货币市场注入流动性",
+    "chinese_summary": "论文反驳传统“传染假说”，发现DeFi重大攻击后美国3个月AA级商业票据利差反而收窄；其机制为逃离DeFi的资本通过受SEC规则约束的Prime货币市场基金进入传统市场，机构需求冲击超过稳定币赎回的供给冲击；结论是DeFi冲击未引发传染，反而成为市场安全阀，补贴实体经济高评级主体融资成本。",
+    "tags": [
+      "Asset Pricing",
+      "Market Microstructure",
+      "Risk Management"
+    ],
+    "key_contributions": [
+      "首次证实DeFi重大攻击后美国AA级商业票据利差收窄，反驳“传染假说”的预测；揭示“流动性循环”机制，说明逃离DeFi的资本经Prime货币市场基金进入传统市场，成为市场安全阀并补贴实体经济融资成本"
+    ],
+    "processed_at": "2026-01-14T08:40:53.749462"
+  },
+  {
+    "id": "2601.07991v1",
+    "title": "Optimal Option Portfolios for Student t Returns",
+    "abstract": "We provide an explicit solution for optimal option portfolios under variance and Value at Risk (VaR) minimization when the underlying returns follow a Student t-distribution. The novelty of our paper is the departure from the traditional normal returns setting. Our main contribution is the methodology for obtaining optimal portfolios. Numerical experiments reveal that, as expected, the optimal variance and VaR portfolio compositions differ by a significant amount, suggesting that more realistic tail risk settings can lead to potentially more realistic portfolio allocations.",
+    "authors": [
+      "Kyle Sung",
+      "Traian A. Pirvu"
+    ],
+    "published": "2026-01-12",
+    "categories": [
+      "q-fin.PM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.07991v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.07991v1",
+    "fetched_at": "2026-01-14T08:35:54.071442",
+    "chinese_title": "学生t分布下的最优期权投资组合",
+    "chinese_summary": "论文针对标的收益服从学生t分布的场景，给出方差与风险价值（VaR）最小化下最优期权投资组合的显式解；其创新在于突破传统正态收益假设，数值实验显示最优方差与VaR投资组合构成差异显著，更贴近现实尾部风险的设定可带来更合理的配置。",
+    "tags": [
+      "Portfolio Optimization",
+      "Risk Management",
+      "Options"
+    ],
+    "key_contributions": [
+      "针对学生t分布收益，推导得到方差和VaR最小化下最优期权投资组合的显式解",
+      "突破传统正态收益假设，揭示现实尾部风险设定下最优投资组合构成的显著差异"
+    ],
+    "processed_at": "2026-01-14T08:41:11.321300"
+  },
+  {
+    "id": "2601.07942v1",
+    "title": "Enhancing Portfolio Optimization with Deep Learning Insights",
+    "abstract": "Our work focuses on deep learning (DL) portfolio optimization, tackling challenges in long-only, multi-asset strategies across market cycles. We propose training models with limited regime data using pre-training techniques and leveraging transformer architectures for state variable inclusion. Evaluating our approach against traditional methods shows promising results, demonstrating our models' resilience in volatile markets. These findings emphasize the evolving landscape of DL-driven portfolio optimization, stressing the need for adaptive strategies to navigate dynamic market conditions and improve predictive accuracy.",
+    "authors": [
+      "Brandon Luo",
+      "Jim Skufca"
+    ],
+    "published": "2026-01-12",
+    "categories": [
+      "q-fin.PM",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.07942v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.07942v1",
+    "fetched_at": "2026-01-14T08:35:54.071465",
+    "chinese_title": "利用深度学习见解增强投资组合优化",
+    "chinese_summary": "该研究聚焦深度学习驱动的投资组合优化，针对跨市场周期的多头多资产策略挑战，提出用预训练技术处理有限制度数据、结合Transformer架构纳入状态变量的方法；经评估，模型在波动市场表现出韧性，优于传统方法，凸显自适应策略对动态市场的必要性。",
+    "tags": [
+      "Deep Learning",
+      "Transformer",
+      "Portfolio Optimization"
+    ],
+    "key_contributions": [
+      "提出结合预训练技术与Transformer架构的深度学习方法，解决有限制度数据下的多头多资产投资组合优化问题",
+      "验证该方法在波动市场的韧性，优于传统方法，强调自适应策略的重要性"
+    ],
+    "processed_at": "2026-01-14T08:41:31.592827"
+  },
+  {
+    "id": "2601.07852v1",
+    "title": "Utility-Weighted Forecasting and Calibration for Risk-Adjusted Decisions under Trading Frictions",
+    "abstract": "Forecasting accuracy is routinely optimised in financial prediction tasks even though investment and risk-management decisions are executed under transaction costs, market impact, capacity limits, and binding risk constraints. This paper treats forecasting as an econometric input to a constrained decision problem. A predictive distribution induces a decision rule through a utility objective combined with an explicit friction operator consisting of both a cost functional and a feasible-set constraint system. The econometric target becomes minimisation of expected decision loss net of costs rather than minimisation of prediction error. The paper develops a utility-weighted calibration criterion aligned to the decision loss and establishes sufficient conditions under which calibrated predictive distributions weakly dominate uncalibrated alternatives. An empirical study using a pre-committed nested walk-forward protocol on liquid equity index futures confirms the theory: the proposed utility-weighted calibration reduces realised decision loss by over 30\\% relative to an uncalibrated baseline ($t$-stat -30.31) for loss differential and improves the Sharpe ratio from -3.62 to -2.29 during a drawdown regime. The mechanism is identified as a structural reduction in the frequency of binding constraints (from 16.0\\% to 5.1\\%), preventing the \"corner solution\" failures that characterize overconfident forecasts in high-friction environments.",
+    "authors": [
+      "Craig S Wright"
+    ],
+    "published": "2026-01-09",
+    "categories": [
+      "econ.EM",
+      "q-fin.CP",
+      "q-fin.PM",
+      "q-fin.TR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.07852v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.07852v1",
+    "fetched_at": "2026-01-14T08:35:54.071820",
+    "chinese_title": "交易摩擦下风险调整决策的效用加权预测与校准",
+    "chinese_summary": "本文指出传统金融预测仅优化准确性却忽略交易摩擦等约束，提出将预测作为约束决策问题的计量输入，以效用加权校准准则最小化含成本的决策损失；实证验证其能显著降低决策损失（超30%），减少约束绑定频率，避免过度自信预测的角解问题。",
+    "tags": [
+      "Portfolio Optimization",
+      "Risk Management",
+      "Execution",
+      "Market Microstructure"
+    ],
+    "key_contributions": [
+      "提出效用加权校准准则，将预测目标从最小化预测误差转向最小化含交易摩擦的决策损失，建立校准分布弱优于未校准的充分条件",
+      "实证验证该方法显著降低决策损失（超30%），减少约束绑定频率，避免过度自信预测的角解问题"
+    ],
+    "processed_at": "2026-01-14T08:41:51.650279"
+  },
+  {
+    "id": "2601.08659v1",
+    "title": "TRACE: Reconstruction-Based Anomaly Detection in Ensemble and Time-Dependent Simulations",
+    "abstract": "Detecting anomalies in high-dimensional, time-dependent simulation data is challenging due to complex spatial and temporal dynamics. We study reconstruction-based anomaly detection for ensemble data from parameterized Kármán vortex street simulations using convolutional autoencoders. We compare a 2D autoencoder operating on individual frames with a 3D autoencoder that processes short temporal stacks. The 2D model identifies localized spatial irregularities in single time steps, while the 3D model exploits spatio-temporal context to detect anomalous motion patterns and reduces redundant detections across time. We further evaluate volumetric time-dependent data and find that reconstruction errors are strongly influenced by the spatial distribution of mass, with highly concentrated regions yielding larger errors than dispersed configurations. Our results highlight the importance of temporal context for robust anomaly detection in dynamic simulations.",
+    "authors": [
+      "Hamid Gadirov",
+      "Martijn Westra",
+      "Steffen Frey"
+    ],
+    "published": "2026-01-13",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.08659v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.08659v1",
+    "fetched_at": "2026-01-14T08:36:06.512880",
+    "chinese_title": "TRACE：集合与时间依赖模拟中的基于重构的异常检测",
+    "chinese_summary": "论文针对高维时间依赖模拟数据的异常检测挑战，采用卷积自动编码器研究参数化卡门涡街模拟集合数据的基于重构异常检测，对比2D（单帧）与3D（短时时间栈）模型，发现3D模型利用时空上下文检测异常运动模式并减少时间冗余检测，且重构误差受质量空间分布影响，凸显时空上下文对鲁棒异常检测的重要性。",
+    "tags": [
+      "Anomaly",
+      "Deep Learning",
+      "Time Series"
+    ],
+    "key_contributions": [
+      "对比2D与3D卷积自动编码器在集合与时间依赖模拟数据异常检测中的表现，验证3D模型利用时空上下文提升检测效果",
+      "揭示重构误差受质量空间分布影响，凸显时空上下文对动态模拟异常检测的关键作用"
+    ],
+    "processed_at": "2026-01-14T08:42:04.376740"
+  },
+  {
+    "id": "2601.08511v1",
+    "title": "STAR: Detecting Inference-time Backdoors in LLM Reasoning via State-Transition Amplification Ratio",
+    "abstract": "Recent LLMs increasingly integrate reasoning mechanisms like Chain-of-Thought (CoT). However, this explicit reasoning exposes a new attack surface for inference-time backdoors, which inject malicious reasoning paths without altering model parameters. Because these attacks generate linguistically coherent paths, they effectively evade conventional detection. To address this, we propose STAR (State-Transition Amplification Ratio), a framework that detects backdoors by analyzing output probability shifts. STAR exploits the statistical discrepancy where a malicious input-induced path exhibits high posterior probability despite a low prior probability in the model's general knowledge. We quantify this state-transition amplification and employ the CUSUM algorithm to detect persistent anomalies. Experiments across diverse models (8B-70B) and five benchmark datasets demonstrate that STAR exhibits robust generalization capabilities, consistently achieving near-perfect performance (AUROC $\\approx$ 1.0) with approximately $42\\times$ greater efficiency than existing baselines. Furthermore, the framework proves robust against adaptive attacks attempting to bypass detection.",
+    "authors": [
+      "Seong-Gyu Park",
+      "Sohee Park",
+      "Jisu Lee",
+      "Hyunsik Na",
+      "Daeseon Choi"
+    ],
+    "published": "2026-01-13",
+    "categories": [
+      "cs.CL",
+      "cs.CR",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.08511v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.08511v1",
+    "fetched_at": "2026-01-14T08:36:06.512917",
+    "chinese_title": "STAR：通过状态转移放大率检测LLM推理中的推理时后门",
+    "chinese_summary": "针对LLM推理（如思维链CoT）带来的推理时后门攻击（现有方法难检测），论文提出STAR框架：通过分析输出概率偏移，利用恶意输入路径“先验概率低但后验概率高”的统计差异，结合CUSUM算法检测异常；实验表明STAR泛化性强、效率比基线高约42倍且抗自适应攻击。",
+    "tags": [
+      "LLM",
+      "Anomaly",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出基于状态转移放大率和CUSUM算法的STAR框架，有效检测LLM推理中的推理时后门",
+      "实验验证STAR在多模型多数据集上泛化性强、效率高且抗自适应攻击"
+    ],
+    "processed_at": "2026-01-14T08:42:15.355928"
+  },
+  {
+    "id": "2601.07951v1",
+    "title": "Hybrid SARIMA LSTM Model for Local Weather Forecasting: A Residual Learning Approach for Data Driven Meteorological Prediction",
+    "abstract": "Accurately forecasting long-term atmospheric variables remains a defining challenge in meteorological science due to the chaotic nature of atmospheric systems. Temperature data represents a complex superposition of deterministic cyclical climate forces and stochastic, short-term fluctuations. While planetary mechanics drive predictable seasonal periodicities, rapid meteorological changes such as thermal variations, pressure anomalies, and humidity shifts introduce nonlinear volatilities that defy simple extrapolation. Historically, the Seasonal Autoregressive Integrated Moving Average (SARIMA) model has been the standard for modeling historical weather data, prized for capturing linear seasonal trends. However, SARIMA operates under strict assumptions of stationarity, failing to capture abrupt, nonlinear transitions. This leads to systematic residual errors, manifesting as the under-prediction of sudden spikes or the over-smoothing of declines. Conversely, Deep Learning paradigms, specifically Long Short-Term Memory (LSTM) networks, demonstrate exceptional efficacy in handling intricate time-series data. By utilizing memory gates, LSTMs learn complex nonlinear dependencies. Yet, LSTMs face instability in open-loop forecasting; without ground truth feedback, minor deviations compound recursively, causing divergence. To resolve these limitations, we propose a Hybrid SARIMA-LSTM architecture. This framework employs a residual-learning strategy to decompose temperature into a predictable climate component and a nonlinear weather component. The SARIMA unit models the robust, long-term seasonal trend, while the LSTM is trained exclusively on the residuals the nonlinear errors SARIMA fails to capture. By fusing statistical stability with neural plasticity, this hybrid approach minimizes error propagation and enhances long-horizon accuracy.",
+    "authors": [
+      "Shreyas Rajeev",
+      "Karthik Mudenahalli Ashoka",
+      "Amit Mallappa Tiparaddi"
+    ],
+    "published": "2026-01-12",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.07951v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.07951v1",
+    "fetched_at": "2026-01-14T08:36:06.512939",
+    "chinese_title": "混合SARIMA-LSTM模型用于本地天气预报：一种数据驱动气象预测的残差学习方法",
+    "chinese_summary": "针对气象数据兼具确定性周期与非线性波动的复合特性，以及SARIMA无法捕捉非线性突变、LSTM开环预测不稳定的问题，论文提出基于残差学习的混合SARIMA-LSTM模型，先通过SARIMA建模线性季节趋势，再用LSTM学习其残差（非线性部分），提升长期气象变量（如温度）的预测精度。",
+    "tags": [
+      "Time Series",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出残差学习驱动的混合SARIMA-LSTM模型，融合SARIMA的线性趋势捕捉能力与LSTM的非线性依赖学习能力",
+      "解决传统模型的局限，提升气象时间序列（如温度）的预测稳定性与精度"
+    ],
+    "processed_at": "2026-01-14T08:42:30.921651"
+  },
+  {
+    "id": "2601.08806v1",
+    "title": "APEX-SWE",
+    "abstract": "We introduce the AI Productivity Index for Software Engineering (APEX-SWE), a benchmark for assessing whether frontier AI models can execute economically valuable software engineering work. Unlike existing evaluations that focus on narrow, well-defined tasks, APEX-SWE assesses two novel task types that reflect real-world software engineering work: (1) Integration tasks (n=100), which require constructing end-to-end systems across heterogeneous cloud primitives, business applications, and infrastructure-as-code services, and (2) Observability tasks (n=100), which require debugging production failures using telemetry signals such as logs and dashboards, as well as unstructured context. We evaluated eight frontier models on APEX-SWE. Gemini 3 Pro (Thinking = High) performs best, with a Pass@1 score of 25\\%. Our analysis shows that strong performance is primarily driven by epistemic reasoning, defined as the ability to distinguish between assumptions and verified facts, combined with agency to resolve uncertainty prior to acting. We open-source the APEX-SWE evaluation harness and a dev set (n=50).",
+    "authors": [
+      "Abhi Kottamasu",
+      "Akul Datta",
+      "Aakash Barthwal",
+      "Chirag Mahapatra",
+      "Ajay Arun",
+      "Adarsh Hiremath",
+      "Brendan Foody",
+      "Bertie Vidgen"
+    ],
+    "published": "2026-01-13",
+    "categories": [
+      "cs.SE",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.08806v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.08806v1",
+    "fetched_at": "2026-01-14T08:36:34.471442",
+    "chinese_title": "软件工程师AI生产力指数（APEX-SWE）",
+    "chinese_summary": "论文提出软件工程师AI生产力指数（APEX-SWE）基准，用于评估前沿AI模型执行有经济价值的软件工程工作的能力，其包含集成任务（构建跨异构云原语等的端到端系统）和可观测性任务（利用遥测信号调试生产故障）两类真实场景任务；对8个前沿模型的评估显示Gemini 3 Pro表现最佳（Pass@1得25%），分析发现强性能由认知推理（区分假设与验证事实）及行动前解决不确定性的主动性驱动，且论文开源了评估工具与开发集。",
+    "tags": [
+      "LLM",
+      "Benchmark",
+      "Transformer"
+    ],
+    "key_contributions": [
+      "提出APEX-SWE基准，聚焦真实软件工程场景的集成与可观测性两类新任务，弥补现有窄任务评估的不足",
+      "揭示前沿AI模型软件工程能力的核心驱动因素：认知推理结合行动前解决不确定性的主动性",
+      "开源APEX-SWE评估工具与开发集，支持相关研究与模型迭代"
+    ],
+    "processed_at": "2026-01-14T08:43:06.122719"
+  },
+  {
+    "id": "2601.08747v1",
+    "title": "To Retrieve or To Think? An Agentic Approach for Context Evolution",
+    "abstract": "Current context augmentation methods, such as retrieval-augmented generation, are essential for solving knowledge-intensive reasoning tasks.However, they typically adhere to a rigid, brute-force strategy that executes retrieval at every step. This indiscriminate approach not only incurs unnecessary computational costs but also degrades performance by saturating the context with irrelevant noise. To address these limitations, we introduce Agentic Context Evolution (ACE), a framework inspired by human metacognition that dynamically determines whether to seek new evidence or reason with existing knowledge. ACE employs a central orchestrator agent to make decisions strategically via majority voting.It aims to alternate between activating a retriever agent for external retrieval and a reasoner agent for internal analysis and refinement. By eliminating redundant retrieval steps, ACE maintains a concise and evolved context. Extensive experiments on challenging multi-hop QA benchmarks demonstrate that ACE significantly outperforms competitive baselines in accuracy while achieving efficient token consumption.Our work provides valuable insights into advancing context-evolved generation for complex, knowledge-intensive tasks.",
+    "authors": [
+      "Rubing Chen",
+      "Jian Wang",
+      "Wenjie Li",
+      "Xiao-Yong Wei",
+      "Qing Li"
+    ],
+    "published": "2026-01-13",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.08747v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.08747v1",
+    "fetched_at": "2026-01-14T08:36:34.471478",
+    "chinese_title": "检索还是思考？一种用于上下文演化的智能体方法",
+    "chinese_summary": "现有上下文增强方法（如检索增强生成）常采用刚性暴力检索策略，导致计算成本冗余且上下文被无关噪声污染；论文提出ACE框架，通过中央协调智能体动态决策检索新证据或推理现有知识，交替激活检索与推理智能体以保持简洁演化的上下文；实验在多跳QA基准上验证了ACE的准确率优势与高效令牌消耗。",
+    "tags": [
+      "LLM",
+      "NLP",
+      "Financial Agent",
+      "Transformer"
+    ],
+    "key_contributions": [
+      "提出受人类元认知启发的ACE框架，动态决策检索或推理以优化上下文演化",
+      "在多跳QA任务中验证ACE的准确率优势与高效令牌消耗，为知识密集型任务提供新思路"
+    ],
+    "processed_at": "2026-01-14T08:43:31.319014"
+  },
+  {
+    "id": "2601.08689v1",
+    "title": "QuantEval: A Benchmark for Financial Quantitative Tasks in Large Language Models",
+    "abstract": "Large Language Models (LLMs) have shown strong capabilities across many domains, yet their evaluation in financial quantitative tasks remains fragmented and mostly limited to knowledge-centric question answering. We introduce QuantEval, a benchmark that evaluates LLMs across three essential dimensions of quantitative finance: knowledge-based QA, quantitative mathematical reasoning, and quantitative strategy coding. Unlike prior financial benchmarks, QuantEval integrates a CTA-style backtesting framework that executes model-generated strategies and evaluates them using financial performance metrics, enabling a more realistic assessment of quantitative coding ability. We evaluate some state-of-the-art open-source and proprietary LLMs and observe substantial gaps to human experts, particularly in reasoning and strategy coding. Finally, we conduct large-scale supervised fine-tuning and reinforcement learning experiments on domain-aligned data, demonstrating consistent improvements. We hope QuantEval will facilitate research on LLMs' quantitative finance capabilities and accelerate their practical adoption in real-world trading workflows. We additionally release the full deterministic backtesting configuration (asset universe, cost model, and metric definitions) to ensure strict reproducibility.",
+    "authors": [
+      "Zhaolu Kang",
+      "Junhao Gong",
+      "Wenqing Hu",
+      "Shuo Yin",
+      "Kehan Jiang",
+      "Zhicheng Fang",
+      "Yingjie He",
+      "Chunlei Meng",
+      "Rong Fu",
+      "Dongyang Chen",
+      "Leqi Zheng",
+      "Eric Hanchen Jiang",
+      "Yunfei Feng",
+      "Yitong Leng",
+      "Junfan Zhu",
+      "Xiaoyou Chen",
+      "Xi Yang",
+      "Richeng Xuan"
+    ],
+    "published": "2026-01-13",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.08689v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.08689v1",
+    "fetched_at": "2026-01-14T08:36:34.471527",
+    "chinese_title": "QuantEval：大语言模型金融量化任务基准",
+    "chinese_summary": "论文引入QuantEval基准，从知识问答、量化数学推理、量化策略编码三个维度评估大语言模型，集成CTA风格回测框架评估策略执行能力；发现模型与人类专家存在差距，通过领域微调及强化学习实验验证性能提升，同时发布可复现的回测配置。",
+    "tags": [
+      "LLM",
+      "Benchmark",
+      "Algorithmic Trading",
+      "Reinforcement Learning"
+    ],
+    "key_contributions": [
+      "提出整合多维度金融量化任务及回测框架的QuantEval基准，填补现有金融LLM评估的碎片化问题",
+      "通过实验验证领域对齐微调与强化学习对LLM金融量化能力的提升，发布可严格复现的回测配置"
+    ],
+    "processed_at": "2026-01-14T08:43:41.340928"
+  },
+  {
+    "id": "2601.08654v1",
+    "title": "RULERS: Locked Rubrics and Evidence-Anchored Scoring for Robust LLM Evaluation",
+    "abstract": "The LLM-as-a-Judge paradigm promises scalable rubric-based evaluation, yet aligning frozen black-box models with human standards remains a challenge due to inherent generation stochasticity. We reframe judge alignment as a criteria transfer problem and isolate three recurrent failure modes: rubric instability caused by prompt sensitivity, unverifiable reasoning that lacks auditable evidence, and scale misalignment with human grading boundaries. To address these issues, we introduce RULERS (Rubric Unification, Locking, and Evidence-anchored Robust Scoring), a compiler-executor framework that transforms natural language rubrics into executable specifications. RULERS operates by compiling criteria into versioned immutable bundles, enforcing structured decoding with deterministic evidence verification, and applying lightweight Wasserstein-based post-hoc calibration, all without updating model parameters. Extensive experiments on essay and summarization benchmarks demonstrate that RULERS significantly outperforms representative baselines in human agreement, maintains strong stability against adversarial rubric perturbations, and enables smaller models to rival larger proprietary judges. Overall, our results suggest that reliable LLM judging requires executable rubrics, verifiable evidence, and calibrated scales rather than prompt phrasing alone. Code is available at https://github.com/LabRAI/Rulers.git.",
+    "authors": [
+      "Yihan Hong",
+      "Huaiyuan Yao",
+      "Bolin Shen",
+      "Wanpeng Xu",
+      "Hua Wei",
+      "Yushun Dong"
+    ],
+    "published": "2026-01-13",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.08654v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.08654v1",
+    "fetched_at": "2026-01-14T08:36:34.471555",
+    "chinese_title": "RULERS：面向稳健LLM评估的锁定评分标准与证据锚定评分",
+    "chinese_summary": "针对LLM作为评判者时存在的评分标准不稳定、推理不可验证、尺度与人类对齐差等问题，论文提出RULERS框架，通过将自然语言评分标准编译为可执行规范（含版本化不可变bundle、结构化解码+证据验证、轻量Wasserstein校准）实现稳健评估；实验验证其在人类一致性、抗扰动性上优于基线，且小模型可媲美大模型。",
+    "tags": [
+      "LLM",
+      "NLP",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出RULERS框架，以可执行评分标准、证据验证及校准解决LLM评判的三大核心问题，无需更新模型参数",
+      "实验证明RULERS在人类一致性、抗扰动性上优于基线，且小模型可媲美大模型"
+    ],
+    "processed_at": "2026-01-14T08:43:57.576543"
+  },
+  {
+    "id": "2601.08653v1",
+    "title": "Prism: Towards Lowering User Cognitive Load in LLMs via Complex Intent Understanding",
+    "abstract": "Large Language Models are rapidly emerging as web-native interfaces to social platforms. On the social web, users frequently have ambiguous and dynamic goals, making complex intent understanding-rather than single-turn execution-the cornerstone of effective human-LLM collaboration. Existing approaches attempt to clarify user intents through sequential or parallel questioning, yet they fall short of addressing the core challenge: modeling the logical dependencies among clarification questions. Inspired by the Cognitive Load Theory, we propose Prism, a novel framework for complex intent understanding that enables logically coherent and efficient intent clarification. Prism comprises four tailored modules: a complex intent decomposition module, which decomposes user intents into smaller, well-structured elements and identifies logical dependencies among them; a logical clarification generation module, which organizes clarification questions based on these dependencies to ensure coherent, low-friction interactions; an intent-aware reward module, which evaluates the quality of clarification trajectories via an intent-aware reward function and leverages Monte Carlo Sample to simulate user-LLM interactions for large-scale,high-quality training data generation; and a self-evolved intent tuning module, which iteratively refines the LLM's logical clarification capability through data-driven feedback and optimization. Prism consistently outperforms existing approaches across clarification interactions, intent execution, and cognitive load benchmarks. It achieves stateof-the-art logical consistency, reduces logical conflicts to 11.5%, increases user satisfaction by 14.4%, and decreases task completion time by 34.8%. All data and code are released.",
+    "authors": [
+      "Zenghua Liao",
+      "Jinzhi Liao",
+      "Xiang Zhao"
+    ],
+    "published": "2026-01-13",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.08653v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.08653v1",
+    "fetched_at": "2026-01-14T08:36:34.471576",
+    "chinese_title": "Prism：通过复杂意图理解降低LLM用户认知负荷的方法",
+    "chinese_summary": "针对社交网络中用户意图模糊动态的问题，现有LLM澄清方法未处理澄清问题的逻辑依赖，本文受认知负荷理论启发提出Prism框架，通过复杂意图分解、逻辑澄清生成、意图感知奖励和自进化意图调优四个模块，实现高效低摩擦的复杂意图理解，实验表现优于现有方法。",
+    "tags": [
+      "LLM",
+      "NLP",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出Prism框架，解决现有LLM澄清方法未处理澄清问题逻辑依赖的核心挑战",
+      "设计包含四个功能模块的完整流程，通过意图感知奖励和自进化调优提升复杂意图理解能力，实验验证性能更优"
+    ],
+    "processed_at": "2026-01-14T08:44:20.942273"
+  },
+  {
+    "id": "2601.08605v1",
+    "title": "ExpSeek: Self-Triggered Experience Seeking for Web Agents",
+    "abstract": "Experience intervention in web agents emerges as a promising technical paradigm, enhancing agent interaction capabilities by providing valuable insights from accumulated experiences. However, existing methods predominantly inject experience passively as global context before task execution, struggling to adapt to dynamically changing contextual observations during agent-environment interaction. We propose ExpSeek, which shifts experience toward step-level proactive seeking: (1) estimating step-level entropy thresholds to determine intervention timing using the model's intrinsic signals; (2) designing step-level tailor-designed experience content. Experiments on Qwen3-8B and 32B models across four challenging web agent benchmarks demonstrate that ExpSeek achieves absolute improvements of 9.3% and 7.5%, respectively. Our experiments validate the feasibility and advantages of entropy as a self-triggering signal, reveal that even a 4B small-scale experience model can significantly boost the performance of larger agent models.",
+    "authors": [
+      "Wenyuan Zhang",
+      "Xinghua Zhang",
+      "Haiyang Yu",
+      "Shuaiyi Nie",
+      "Bingli Wu",
+      "Juwei Yue",
+      "Tingwen Liu",
+      "Yongbin Li"
+    ],
+    "published": "2026-01-13",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.08605v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.08605v1",
+    "fetched_at": "2026-01-14T08:36:34.471632",
+    "chinese_title": "ExpSeek：面向Web Agent的自触发经验寻求方法",
+    "chinese_summary": "现有Web Agent经验干预多为任务前被动全局注入，难以适配动态交互上下文；本文提出ExpSeek，通过模型内在信号估计步级熵阈值确定干预时机，设计步级定制经验内容以实现主动经验寻求，实验表明其显著提升Qwen3系列模型在Web Agent基准上的性能，且小经验模型可有效增强大模型表现。",
+    "tags": [
+      "LLM",
+      "Benchmark",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出ExpSeek主动步级经验寻求框架，基于模型内在熵信号自触发干预时机并设计步级定制经验内容",
+      "验证熵作为自触发信号的可行性，且小经验模型可显著提升大Web Agent模型性能"
+    ],
+    "processed_at": "2026-01-14T08:44:39.291929"
+  },
+  {
+    "id": "2601.08406v1",
+    "title": "WebTrap Park: An Automated Platform for Systematic Security Evaluation of Web Agents",
+    "abstract": "Web Agents are increasingly deployed to perform complex tasks in real web environments, yet their security evaluation remains fragmented and difficult to standardize. We present WebTrap Park, an automated platform for systematic security evaluation of Web Agents through direct observation of their concrete interactions with live web pages. WebTrap Park instantiates three major sources of security risk into 1,226 executable evaluation tasks and enables action based assessment without requiring agent modification. Our results reveal clear security differences across agent frameworks, highlighting the importance of agent architecture beyond the underlying model. WebTrap Park is publicly accessible at https://security.fudan.edu.cn/webagent and provides a scalable foundation for reproducible Web Agent security evaluation.",
+    "authors": [
+      "Xinyi Wu",
+      "Jiagui Chen",
+      "Geng Hong",
+      "Jiayi Dong",
+      "Xudong Pan",
+      "Jiarun Dai",
+      "Min Yang"
+    ],
+    "published": "2026-01-13",
+    "categories": [
+      "cs.AI",
+      "cs.CR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.08406v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.08406v1",
+    "fetched_at": "2026-01-14T08:36:34.471659",
+    "chinese_title": "WebTrap Park：面向Web Agent的系统化安全评估自动化平台",
+    "chinese_summary": "针对Web Agent安全评估碎片化、难标准化的问题，论文提出自动化平台WebTrap Park，将三大安全风险源转化为1226个可执行评估任务，无需修改Agent即可基于其行为进行评估；实验揭示不同Agent框架的安全差异，强调架构对安全的重要性，且平台公开可复现。",
+    "tags": [
+      "LLM",
+      "Benchmark",
+      "Risk Management"
+    ],
+    "key_contributions": [
+      "提出WebTrap Park自动化平台，将三大安全风险源转化为1226个可执行任务，无需修改Agent即可基于行为开展安全评估",
+      "实验揭示不同Agent框架的安全差异，强调架构对安全的关键作用，且平台公开可复现，为Web Agent安全评估提供可扩展基础"
+    ],
+    "processed_at": "2026-01-14T08:45:02.542000"
+  },
+  {
+    "id": "2601.08343v1",
+    "title": "When KV Cache Reuse Fails in Multi-Agent Systems: Cross-Candidate Interaction is Crucial for LLM Judges",
+    "abstract": "Multi-agent LLM systems routinely generate multiple candidate responses that are aggregated by an LLM judge. To reduce the dominant prefill cost in such pipelines, recent work advocates KV cache reuse across partially shared contexts and reports substantial speedups for generation agents. In this work, we show that these efficiency gains do not transfer uniformly to judge-centric inference. Across GSM8K, MMLU, and HumanEval, we find that reuse strategies that are effective for execution agents can severely perturb judge behavior: end-task accuracy may appear stable, yet the judge's selection becomes highly inconsistent with dense prefill. We quantify this risk using Judge Consistency Rate (JCR) and provide diagnostics showing that reuse systematically weakens cross-candidate attention, especially for later candidate blocks. Our ablation further demonstrates that explicit cross-candidate interaction is crucial for preserving dense-prefill decisions. Overall, our results identify a previously overlooked failure mode of KV cache reuse and highlight judge-centric inference as a distinct regime that demands dedicated, risk-aware system design.",
+    "authors": [
+      "Sichu Liang",
+      "Zhenglin Wang",
+      "Jiajia Chu",
+      "Pengfei Xia",
+      "Hui Zang",
+      "Deyu Zhou"
+    ],
+    "published": "2026-01-13",
+    "categories": [
+      "cs.MA",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.08343v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.08343v1",
+    "fetched_at": "2026-01-14T08:36:34.471690",
+    "chinese_title": "当多智能体系统中KV缓存复用失效时：跨候选交互对LLM评判至关重要",
+    "chinese_summary": "研究发现多智能体系统中对生成智能体有效的KV缓存复用策略，在以评判为中心的推理中会严重干扰LLM评判行为，导致其选择与密集预填充时高度不一致；通过评判一致性率（JCR）量化该风险，诊断发现复用会系统性削弱跨候选注意力，消融实验证实显式跨候选交互对保留决策至关重要，指出评判中心推理需专用风险感知系统设计。",
+    "tags": [
+      "LLM",
+      "NLP",
+      "Transformer"
+    ],
+    "key_contributions": [
+      "揭示多智能体系统中KV缓存复用在评判中心推理中的失效模式，即复用会干扰LLM评判行为、降低选择一致性"
+    ],
+    "processed_at": "2026-01-14T08:45:15.114358"
+  },
+  {
+    "id": "2601.08334v1",
+    "title": "Automated Machine Learning in Radiomics: A Comparative Evaluation of Performance, Efficiency and Accessibility",
+    "abstract": "Automated machine learning (AutoML) frameworks can lower technical barriers for predictive and prognostic model development in radiomics by enabling researchers without programming expertise to build models. However, their effectiveness in addressing radiomics-specific challenges remains unclear. This study evaluates the performance, efficiency, and accessibility of general-purpose and radiomics-specific AutoML frameworks on diverse radiomics classification tasks, thereby highlighting development needs for radiomics. Ten public/private radiomics datasets with varied imaging modalities (CT/MRI), sizes, anatomies and endpoints were used. Six general-purpose and five radiomics-specific frameworks were tested with predefined parameters using standardized cross-validation. Evaluation metrics included AUC, runtime, together with qualitative aspects related to software status, accessibility, and interpretability. Simplatab, a radiomics-specific tool with a no-code interface, achieved the highest average test AUC (81.81%) with a moderate runtime (~1 hour). LightAutoML, a general-purpose framework, showed the fastest execution with competitive performance (78.74% mean AUC in six minutes). Most radiomics-specific frameworks were excluded from the performance analysis due to obsolescence, extensive programming requirements, or computational inefficiency. Conversely, general-purpose frameworks demonstrated higher accessibility and ease of implementation. Simplatab provides an effective balance of performance, efficiency, and accessibility for radiomics classification problems. However, significant gaps remain, including the lack of accessible survival analysis support and the limited integration of feature reproducibility and harmonization within current AutoML frameworks. Future research should focus on adapting AutoML solutions to better address these radiomics-specific challenges.",
+    "authors": [
+      "Jose Lozano-Montoya",
+      "Emilio Soria-Olivas",
+      "Almudena Fuster-Matanzo",
+      "Angel Alberich-Bayarri",
+      "Ana Jimenez-Pastor"
+    ],
+    "published": "2026-01-13",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.08334v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.08334v1",
+    "fetched_at": "2026-01-14T08:36:34.471715",
+    "chinese_title": "自动机器学习在放射组学中的应用：性能、效率和可及性的比较评估",
+    "chinese_summary": "该研究针对放射组学分类任务，评估通用及专用AutoML框架的性能、效率与可及性；通过10个多模态/规模数据集测试11个框架，发现Simplatab（专用无代码工具）平均AUC最高，LightAutoML（通用）执行最快且性能有竞争力，多数专用框架因过时等问题被排除，通用框架可及性更高。",
+    "tags": [
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "首次系统对比通用与放射组学专用AutoML框架在多任务下的性能、效率和可及性",
+      "揭示专用框架局限性与通用框架优势，为放射组学模型开发提供实用参考"
+    ],
+    "processed_at": "2026-01-14T08:45:26.575111"
+  },
+  {
+    "id": "2601.08327v1",
+    "title": "Safe Heterogeneous Multi-Agent RL with Communication Regularization for Coordinated Target Acquisition",
+    "abstract": "This paper introduces a decentralized multi-agent reinforcement learning framework enabling structurally heterogeneous teams of agents to jointly discover and acquire randomly located targets in environments characterized by partial observability, communication constraints, and dynamic interactions. Each agent's policy is trained with the Multi-Agent Proximal Policy Optimization algorithm and employs a Graph Attention Network encoder that integrates simulated range-sensing data with communication embeddings exchanged among neighboring agents, enabling context-aware decision-making from both local sensing and relational information. In particular, this work introduces a unified framework that integrates graph-based communication and trajectory-aware safety through safety filters. The architecture is supported by a structured reward formulation designed to encourage effective target discovery and acquisition, collision avoidance, and de-correlation between the agents' communication vectors by promoting informational orthogonality. The effectiveness of the proposed reward function is demonstrated through a comprehensive ablation study. Moreover, simulation results demonstrate safe and stable task execution, confirming the framework's effectiveness.",
+    "authors": [
+      "Gabriele Calzolari",
+      "Vidya Sumathy",
+      "Christoforos Kanellakis",
+      "George Nikolakopoulos"
+    ],
+    "published": "2026-01-13",
+    "categories": [
+      "cs.RO",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.08327v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.08327v1",
+    "fetched_at": "2026-01-14T08:36:34.471738",
+    "chinese_title": "基于通信正则化的安全异构多智能体强化学习在协同目标捕获中的应用",
+    "chinese_summary": "论文提出去中心化异构多智能体强化学习框架，采用MAPPO算法结合图注意力网络编码器整合局部感知与通信嵌入实现上下文感知决策，引入安全过滤器与结构化奖励函数（鼓励目标捕获、避撞及通信向量正交去相关），经消融研究与仿真验证其安全稳定的任务执行能力。",
+    "tags": [
+      "Reinforcement Learning",
+      "Graph Neural Network",
+      "Financial Agent"
+    ],
+    "key_contributions": [
+      "构建去中心化异构多智能体强化学习框架，利用图注意力网络整合感知与通信信息实现上下文感知决策",
+      "提出集成图通信与轨迹感知安全的统一架构，设计结构化奖励函数并通过消融与仿真验证有效性"
+    ],
+    "processed_at": "2026-01-14T08:45:43.570966"
+  },
+  {
+    "id": "2601.08308v1",
+    "title": "AgriAgent: Contract-Driven Planning and Capability-Aware Tool Orchestration in Real-World Agriculture",
+    "abstract": "Intelligent agent systems in real-world agricultural scenarios must handle diverse tasks under multimodal inputs, ranging from lightweight information understanding to complex multi-step execution. However, most existing approaches rely on a unified execution paradigm, which struggles to accommodate large variations in task complexity and incomplete tool availability commonly observed in agricultural environments. To address this challenge, we propose AgriAgent, a two-level agent framework for real-world agriculture. AgriAgent adopts a hierarchical execution strategy based on task complexity: simple tasks are handled through direct reasoning by modality-specific agents, while complex tasks trigger a contract-driven planning mechanism that formulates tasks as capability requirements and performs capability-aware tool orchestration and dynamic tool generation, enabling multi-step and verifiable execution with failure recovery. Experimental results show that AgriAgent achieves higher execution success rates and robustness on complex tasks compared to existing tool-centric agent baselines that rely on unified execution paradigms. All code, data will be released at after our work be accepted to promote reproducible research.",
+    "authors": [
+      "Bo Yang",
+      "Yu Zhang",
+      "Yunkui Chen",
+      "Lanfei Feng",
+      "Xiao Xu",
+      "Nueraili Aierken",
+      "Shijian Li"
+    ],
+    "published": "2026-01-13",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.08308v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.08308v1",
+    "fetched_at": "2026-01-14T08:36:34.471766",
+    "chinese_title": "AgriAgent：现实农业场景中基于契约驱动规划与能力感知工具编排的智能体框架",
+    "chinese_summary": "论文针对现实农业场景中智能体需处理多模态输入下多样任务的问题，提出AgriAgent两层智能体框架，采用分层执行策略（简单任务由模态特定智能体直接推理，复杂任务触发契约驱动规划），实现能力感知的工具编排、动态生成及故障恢复；实验表明其在复杂任务上比现有统一执行范式的工具中心智能体基线有更高执行成功率与鲁棒性。",
+    "tags": [
+      "Financial Agent",
+      "Execution",
+      "LLM"
+    ],
+    "key_contributions": [
+      "提出AgriAgent两层智能体框架，针对农业场景任务复杂度差异采用分层执行策略，适配多模态输入与工具可用性变化",
+      "设计契约驱动规划机制，实现能力感知的工具编排、动态生成及故障恢复，提升复杂任务执行成功率与鲁棒性"
+    ],
+    "processed_at": "2026-01-14T08:46:14.719014"
+  },
+  {
+    "id": "2601.08274v1",
+    "title": "Discovery and Reinforcement of Tool-Integrated Reasoning Chains via Rollout Trees",
+    "abstract": "Tool-Integrated Reasoning has emerged as a key paradigm to augment Large Language Models (LLMs) with computational capabilities, yet integrating tool-use into long Chain-of-Thought (long CoT) remains underexplored, largely due to the scarcity of training data and the challenge of integrating tool-use without compromising the model's intrinsic long-chain reasoning. In this paper, we introduce DART (Discovery And Reinforcement of Tool-Integrated Reasoning Chains via Rollout Trees), a reinforcement learning framework that enables spontaneous tool-use during long CoT reasoning without human annotation. DART operates by constructing dynamic rollout trees during training to discover valid tool-use opportunities, branching out at promising positions to explore diverse tool-integrated trajectories. Subsequently, a tree-based process advantage estimation identifies and credits specific sub-trajectories where tool invocation positively contributes to the solution, effectively reinforcing these beneficial behaviors. Extensive experiments on challenging benchmarks like AIME and GPQA-Diamond demonstrate that DART significantly outperforms existing methods, successfully harmonizing tool execution with long CoT reasoning.",
+    "authors": [
+      "Kun Li",
+      "Zenan Xu",
+      "Junan Li",
+      "Zengrui Jin",
+      "Jinghao Deng",
+      "Zexuan Qiu",
+      "Bo Zhou"
+    ],
+    "published": "2026-01-13",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.08274v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.08274v1",
+    "fetched_at": "2026-01-14T08:36:34.471792",
+    "chinese_title": "基于展开树的工具集成推理链发现与强化",
+    "chinese_summary": "针对长思维链（CoT）中整合工具使用的不足（数据稀缺、难平衡工具与长链推理），本文提出DART框架，通过动态展开树发现工具使用机会并探索多样化轨迹，再经树基优势估计强化有益工具调用行为；无需人工标注即可自发在长CoT中使用工具，在AIME等基准上显著优于现有方法。",
+    "tags": [
+      "LLM",
+      "Reinforcement Learning",
+      "NLP"
+    ],
+    "key_contributions": [
+      "提出无需人工标注的DART框架，实现长CoT推理中的自发工具使用，平衡工具整合与长链推理能力",
+      "通过动态展开树探索工具轨迹、树基优势估计强化有益调用，在AIME等基准上显著优于现有方法"
+    ],
+    "processed_at": "2026-01-14T08:46:37.475120"
+  },
+  {
+    "id": "2601.08235v1",
+    "title": "MPCI-Bench: A Benchmark for Multimodal Pairwise Contextual Integrity Evaluation of Language Model Agents",
+    "abstract": "As language-model agents evolve from passive chatbots into proactive assistants that handle personal data, evaluating their adherence to social norms becomes increasingly critical, often through the lens of Contextual Integrity (CI). However, existing CI benchmarks are largely text-centric and primarily emphasize negative refusal scenarios, overlooking multimodal privacy risks and the fundamental trade-off between privacy and utility. In this paper, we introduce MPCI-Bench, the first Multimodal Pairwise Contextual Integrity benchmark for evaluating privacy behavior in agentic settings. MPCI-Bench consists of paired positive and negative instances derived from the same visual source and instantiated across three tiers: normative Seed judgments, context-rich Story reasoning, and executable agent action Traces. Data quality is ensured through a Tri-Principle Iterative Refinement pipeline. Evaluations of state-of-the-art multimodal models reveal systematic failures to balance privacy and utility and a pronounced modality leakage gap, where sensitive visual information is leaked more frequently than textual information. We will open-source MPCI-Bench to facilitate future research on agentic CI.",
+    "authors": [
+      "Shouju Wang",
+      "Haopeng Zhang"
+    ],
+    "published": "2026-01-13",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.08235v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.08235v1",
+    "fetched_at": "2026-01-14T08:36:34.471826",
+    "chinese_title": "MPCI-Bench：语言模型Agent的多模态成对上下文完整性评估基准",
+    "chinese_summary": "现有上下文完整性（CI）基准多以文本为中心、侧重拒绝场景，忽略多模态隐私风险与隐私-效用权衡；论文提出首个多模态成对CI基准MPCI-Bench，含同一视觉源的正负实例（分规范种子、故事推理、动作轨迹三层），通过三原则迭代优化保证数据质量；评估发现SOTA多模态模型存在隐私-效用平衡失效及视觉敏感信息更易泄露的模态泄漏差距，将开源该基准。",
+    "tags": [
+      "LLM",
+      "Benchmark",
+      "Transformer"
+    ],
+    "key_contributions": [
+      "提出首个多模态成对上下文完整性评估基准MPCI-Bench，构建三层实例并通过三原则迭代优化保障数据质量",
+      "揭示SOTA多模态模型在隐私-效用平衡及模态泄漏方面的系统性缺陷，开源基准助力后续研究"
+    ],
+    "processed_at": "2026-01-14T08:47:06.049879"
+  },
+  {
+    "id": "2601.08166v1",
+    "title": "ZeroDVFS: Zero-Shot LLM-Guided Core and Frequency Allocation for Embedded Platforms",
+    "abstract": "Dynamic voltage and frequency scaling (DVFS) and task-to-core allocation are critical for thermal management and balancing energy and performance in embedded systems. Existing approaches either rely on utilization-based heuristics that overlook stall times, or require extensive offline profiling for table generation, preventing runtime adaptation. We propose a model-based hierarchical multi-agent reinforcement learning (MARL) framework for thermal- and energy-aware scheduling on multi-core platforms. Two collaborative agents decompose the exponential action space, achieving 358ms latency for subsequent decisions. First decisions require 3.5 to 8.0s including one-time LLM feature extraction. An accurate environment model leverages regression techniques to predict thermal dynamics and performance states. When combined with LLM-extracted semantic features, the environment model enables zero-shot deployment for new workloads on trained platforms by generating synthetic training data without requiring workload-specific profiling samples. We introduce LLM-based semantic feature extraction that characterizes OpenMP programs through 13 code-level features without execution. The Dyna-Q-inspired framework integrates direct reinforcement learning with model-based planning, achieving 20x faster convergence than model-free methods. Experiments on BOTS and PolybenchC benchmarks across NVIDIA Jetson TX2, Jetson Orin NX, RubikPi, and Intel Core i7 demonstrate 7.09x better energy efficiency and 4.0x better makespan than Linux ondemand governor. First-decision latency is 8,300x faster than table-based profiling, enabling practical deployment in dynamic embedded systems.",
+    "authors": [
+      "Mohammad Pivezhandi",
+      "Mahdi Banisharif",
+      "Abusayeed Saifullah",
+      "Ali Jannesari"
+    ],
+    "published": "2026-01-13",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.08166v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.08166v1",
+    "fetched_at": "2026-01-14T08:36:34.471849",
+    "chinese_title": "ZeroDVFS：面向嵌入式平台的零样本LLM指导核心与频率分配",
+    "chinese_summary": "该论文提出ZeroDVFS框架，采用基于模型的分层多智能体强化学习（MARL）实现嵌入式多核平台的热与能量感知调度，结合LLM提取代码语义特征实现新工作负载零样本部署，且Dyna-Q启发框架使收敛速度比无模型方法快20倍，实验验证能效显著提升。",
+    "tags": [
+      "LLM",
+      "Reinforcement Learning"
+    ],
+    "key_contributions": [
+      "提出基于模型的分层多智能体强化学习（MARL）框架，分解指数级动作空间，实现低延迟调度决策",
+      "结合LLM提取代码语义特征，实现新工作负载的零样本部署，无需特定 profiling 样本，且Dyna-Q启发框架加速收敛20倍"
+    ],
+    "processed_at": "2026-01-14T08:47:29.222944"
+  },
+  {
+    "id": "2601.07853v1",
+    "title": "FinVault: Benchmarking Financial Agent Safety in Execution-Grounded Environments",
+    "abstract": "Financial agents powered by large language models (LLMs) are increasingly deployed for investment analysis, risk assessment, and automated decision-making, where their abilities to plan, invoke tools, and manipulate mutable state introduce new security risks in high-stakes and highly regulated financial environments. However, existing safety evaluations largely focus on language-model-level content compliance or abstract agent settings, failing to capture execution-grounded risks arising from real operational workflows and state-changing actions. To bridge this gap, we propose FinVault, the first execution-grounded security benchmark for financial agents, comprising 31 regulatory case-driven sandbox scenarios with state-writable databases and explicit compliance constraints, together with 107 real-world vulnerabilities and 963 test cases that systematically cover prompt injection, jailbreaking, financially adapted attacks, as well as benign inputs for false-positive evaluation. Experimental results reveal that existing defense mechanisms remain ineffective in realistic financial agent settings, with average attack success rates (ASR) still reaching up to 50.0\\% on state-of-the-art models and remaining non-negligible even for the most robust systems (ASR 6.7\\%), highlighting the limited transferability of current safety designs and the need for stronger financial-specific defenses. Our code can be found at https://github.com/aifinlab/FinVault.",
+    "authors": [
+      "Zhi Yang",
+      "Runguo Li",
+      "Qiqi Qiang",
+      "Jiashun Wang",
+      "Fangqi Lou",
+      "Mengping Li",
+      "Dongpo Cheng",
+      "Rui Xu",
+      "Heng Lian",
+      "Shuo Zhang",
+      "Xiaolong Liang",
+      "Xiaoming Huang",
+      "Zheng Wei",
+      "Zhaowei Liu",
+      "Xin Guo",
+      "Huacan Wang",
+      "Ronghao Chen",
+      "Liwen Zhang"
+    ],
+    "published": "2026-01-09",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.07853v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.07853v1",
+    "fetched_at": "2026-01-14T08:37:11.914498",
+    "chinese_title": "FinVault：在执行落地环境中基准测试金融智能体安全性",
+    "chinese_summary": "论文指出现有金融智能体安全评估未覆盖执行落地场景中的风险，提出首个执行落地安全基准FinVault，包含31个监管案例驱动的沙盒场景、107个真实漏洞及963个测试用例；实验显示现有防御在真实金融场景效果不佳，需更强的金融特定防御。",
+    "tags": [
+      "LLM",
+      "Financial Agent",
+      "Benchmark",
+      "Risk Management"
+    ],
+    "key_contributions": [
+      "提出首个执行落地的金融智能体安全基准FinVault，涵盖监管案例场景、真实漏洞及多类型测试用例",
+      "通过实验揭示现有防御机制在真实金融智能体场景中效果有限，凸显金融特定安全设计的必要性"
+    ],
+    "processed_at": "2026-01-14T08:47:40.131557"
+  }
+]
