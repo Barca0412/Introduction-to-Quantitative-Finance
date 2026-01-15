@@ -1,0 +1,467 @@
+[
+  {
+    "id": "2601.09324v1",
+    "title": "Martingale expansion for stochastic volatility",
+    "abstract": "The martingale expansion provides a refined approximation to the marginal distributions of martingales beyond the normal approximation implied by the martingale central limit theorem. We develop a martingale expansion framework specifically suited to continuous stochastic volatility models. Our approach accommodates both small volatility-of-volatility and fast mean-reversion models, yielding first-order perturbation expansions under essentially minimal conditions.",
+    "authors": [
+      "Masaaki Fukasawa"
+    ],
+    "published": "2026-01-14",
+    "categories": [
+      "math.PR",
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.09324v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.09324v1",
+    "fetched_at": "2026-01-15T08:38:27.128019"
+  },
+  {
+    "id": "2601.09127v1",
+    "title": "Robo-Advising in Motion: A Model Predictive Control Approach",
+    "abstract": "Robo-advisors (RAs) are automated portfolio management systems that complement traditional financial advisors by offering lower fees and smaller initial investment requirements. While most existing RAs rely on static, one-period allocation methods, we propose a dynamic, multi-period asset-allocation framework that leverages Model Predictive Control (MPC) to generate suboptimal but practically effective strategies. Our approach combines a Hidden Markov Model with Black-Litterman (BL) methodology to forecast asset returns and covariances, and incorporates practically important constraints, including turnover limits, transaction costs, and target portfolio allocations. We study two predominant optimality criteria in wealth management: dynamic mean-variance (MV) and dynamic risk-budgeting (MRB). Numerical experiments demonstrate that MPC-based strategies consistently outperform myopic approaches, with MV providing flexible and diversified portfolios, while MRB delivers smoother allocations less sensitive to key parameters. These findings highlight the trade-offs between adaptability and stability in practical robo-advising design.",
+    "authors": [
+      "Tomasz R. Bielecki",
+      "Igor Cialenco"
+    ],
+    "published": "2026-01-14",
+    "categories": [
+      "q-fin.PM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.09127v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.09127v1",
+    "fetched_at": "2026-01-15T08:38:27.128057"
+  },
+  {
+    "id": "2601.09074v1",
+    "title": "The Fourier estimator of spot volatility: Unbounded coefficients and jumps in the price process",
+    "abstract": "In this paper we study the Fourier estimator of Malliavin and Mancino for the spot volatility. We establish the convergence of the trigonometric polynomial to the volatility's path in a setting that includes the following aspects. First, the volatility is required to satisfy a mild integrability condition, but otherwise allowed to be unbounded. Second, the price process is assumed to have cadlag paths, not necessarily continuous. We obtain convergence rates for the probability of a bad approximation in estimated coefficients, with a speed that allow to obtain an almost sure convergence and not just in probability in the estimated reconstruction of the volatility's path. This is a new result even in the setting of continuous paths. We prove that a rescaled trigonometric polynomial approximate the quadratic jump process.",
+    "authors": [
+      "L. J. Espinosa González",
+      "Erick Treviño Aguilar"
+    ],
+    "published": "2026-01-14",
+    "categories": [
+      "q-fin.CP",
+      "math.PR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.09074v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.09074v1",
+    "fetched_at": "2026-01-15T08:38:27.128082"
+  },
+  {
+    "id": "2601.08896v1",
+    "title": "XGBoost Forecasting of NEPSE Index Log Returns with Walk Forward Validation",
+    "abstract": "This study develops a robust machine learning framework for one-step-ahead forecasting of daily log-returns in the Nepal Stock Exchange (NEPSE) Index using the XGBoost regressor. A comprehensive feature set is engineered, including lagged log-returns (up to 30 days) and established technical indicators such as short- and medium-term rolling volatility measures and the 14-period Relative Strength Index. Hyperparameter optimization is performed using Optuna with time-series cross-validation on the initial training segment. Out-of-sample performance is rigorously assessed via walk-forward validation under both expanding and fixed-length rolling window schemes across multiple lag configurations, simulating real-world deployment and avoiding lookahead bias. Predictive accuracy is evaluated using root mean squared error, mean absolute error, coefficient of determination (R-squared), and directional accuracy on both log-returns and reconstructed closing prices. Empirical results show that the optimal configuration, an expanding window with 20 lags, outperforms tuned ARIMA and Ridge regression benchmarks, achieving the lowest log-return RMSE (0.013450) and MAE (0.009814) alongside a directional accuracy of 65.15%. While the R-squared remains modest, consistent with the noisy nature of financial returns, primary emphasis is placed on relative error reduction and directional prediction. Feature importance analysis and visual inspection further enhance interpretability. These findings demonstrate the effectiveness of gradient boosting ensembles in modeling nonlinear dynamics in volatile emerging market time series and establish a reproducible benchmark for NEPSE Index forecasting.",
+    "authors": [
+      "Sahaj Raj Malla",
+      "Shreeyash Kayastha",
+      "Rumi Suwal",
+      "Harish Chandra Bhandari",
+      "Rajendra Adhikari"
+    ],
+    "published": "2026-01-13",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "q-fin.ST"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.08896v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.08896v1",
+    "fetched_at": "2026-01-15T08:38:27.128156"
+  },
+  {
+    "id": "2601.09287v1",
+    "title": "Explainable Autoencoder-Based Anomaly Detection in IEC 61850 GOOSE Networks",
+    "abstract": "The IEC 61850 Generic Object-Oriented Substation Event (GOOSE) protocol plays a critical role in real-time protection and automation of digital substations, yet its lack of native security mechanisms can expose power systems to sophisticated cyberattacks. Traditional rule-based and supervised intrusion detection techniques struggle to detect protocol-compliant and zero-day attacks under significant class imbalance and limited availability of labeled data. This paper proposes an explainable, unsupervised multi-view anomaly detection framework for IEC 61850 GOOSE networks that explicitly separates semantic integrity and temporal availability. The approach employs asymmetric autoencoders trained only on real operational GOOSE traffic to learn distinct latent representations of sequence-based protocol semantics and timing-related transmission dynamics in normal traffic. Anomaly detection is implemented using reconstruction errors mixed with statistically grounded thresholds, enabling robust detection without specified attack types. Feature-level reconstruction analysis provides intrinsic explainability by directly linking detection outcomes to IEC 61850 protocol characteristics. The proposed framework is evaluated using real substation traffic for training and a public dataset containing normal traffic and message suppression, data manipulation, and denial-of-service attacks for testing. Experimental results show attack detection rates above 99% with false positives remaining below 5% of total traffic, demonstrating strong generalization across environments and effective operation under extreme class imbalance and interpretable anomaly attribution.",
+    "authors": [
+      "Dafne Lozano-Paredes",
+      "Luis Bote-Curiel",
+      "Juan Ramón Feijóo-Martínez",
+      "Ismael Gómez-Talal",
+      "José Luis Rojo-Álvarez"
+    ],
+    "published": "2026-01-14",
+    "categories": [
+      "cs.CR",
+      "cs.LG",
+      "eess.SP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.09287v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.09287v1",
+    "fetched_at": "2026-01-15T08:38:39.879202"
+  },
+  {
+    "id": "2601.09258v1",
+    "title": "LatencyPrism: Online Non-intrusive Latency Sculpting for SLO-Guaranteed LLM Inference",
+    "abstract": "LLM inference latency critically determines user experience and operational costs, directly impacting throughput under SLO constraints. Even brief latency spikes degrade service quality despite acceptable average performance. However, distributed inference environments featuring diverse software frameworks and XPU architectures combined with dynamic workloads make latency analysis challenging. Constrained by intrusive designs that necessitate service restarts or even suspension, and by hardware-bound implementations that fail to adapt to heterogeneous inference environments, existing AI profiling methods are often inadequate for real-time production analysis.   We present LatencyPrism, the first zero-intrusion multi-platform latency sculpting system. It aims to break down the inference latency across pipeline, proactively alert on inference latency anomalies, and guarantee adherence to SLOs, all without requiring code modifications or service restarts. LatencyPrism has been deployed across thousands of XPUs for over six months. It enables low-overhead real-time monitoring at batch level with alerts triggered in milliseconds. This approach distinguishes between workload-driven latency variations and anomalies indicating underlying issues with an F1-score of 0.98. We also conduct extensive experiments and investigations into root cause analysis to demonstrate LatencyPrism's capability.",
+    "authors": [
+      "Du Yin",
+      "Jiayi Ren",
+      "Xiayu Sun",
+      "Tianyao Zhou",
+      "Haizhu Zhou",
+      "Ruiyan Ma",
+      "Danyang Zhang"
+    ],
+    "published": "2026-01-14",
+    "categories": [
+      "cs.DC",
+      "cs.LG",
+      "cs.OS"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.09258v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.09258v1",
+    "fetched_at": "2026-01-15T08:38:39.879241"
+  },
+  {
+    "id": "2601.09147v1",
+    "title": "SSVP: Synergistic Semantic-Visual Prompting for Industrial Zero-Shot Anomaly Detection",
+    "abstract": "Zero-Shot Anomaly Detection (ZSAD) leverages Vision-Language Models (VLMs) to enable supervision-free industrial inspection. However, existing ZSAD paradigms are constrained by single visual backbones, which struggle to balance global semantic generalization with fine-grained structural discriminability. To bridge this gap, we propose Synergistic Semantic-Visual Prompting (SSVP), that efficiently fuses diverse visual encodings to elevate model's fine-grained perception. Specifically, SSVP introduces the Hierarchical Semantic-Visual Synergy (HSVS) mechanism, which deeply integrates DINOv3's multi-scale structural priors into the CLIP semantic space. Subsequently, the Vision-Conditioned Prompt Generator (VCPG) employs cross-modal attention to guide dynamic prompt generation, enabling linguistic queries to precisely anchor to specific anomaly patterns. Furthermore, to address the discrepancy between global scoring and local evidence, the Visual-Text Anomaly Mapper (VTAM) establishes a dual-gated calibration paradigm. Extensive evaluations on seven industrial benchmarks validate the robustness of our method; SSVP achieves state-of-the-art performance with 93.0\\% Image-AUROC and 92.2\\% Pixel-AUROC on MVTec-AD, significantly outperforming existing zero-shot approaches.",
+    "authors": [
+      "Chenhao Fu",
+      "Han Fang",
+      "Xiuzheng Zheng",
+      "Wenbo Wei",
+      "Yonghua Li",
+      "Hao Sun",
+      "Xuelong Li"
+    ],
+    "published": "2026-01-14",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.09147v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.09147v1",
+    "fetched_at": "2026-01-15T08:38:39.879270"
+  },
+  {
+    "id": "2601.08928v1",
+    "title": "DriftGuard: A Hierarchical Framework for Concept Drift Detection and Remediation in Supply Chain Forecasting",
+    "abstract": "Supply chain forecasting models degrade over time as real-world conditions change. Promotions shift, consumer preferences evolve, and supply disruptions alter demand patterns, causing what is known as concept drift. This silent degradation leads to stockouts or excess inventory without triggering any system warnings. Current industry practice relies on manual monitoring and scheduled retraining every 3-6 months, which wastes computational resources during stable periods while missing rapid drift events. Existing academic methods focus narrowly on drift detection without addressing diagnosis or remediation, and they ignore the hierarchical structure inherent in supply chain data. What retailers need is an end-to-end system that detects drift early, explains its root causes, and automatically corrects affected models. We propose DriftGuard, a five-module framework that addresses the complete drift lifecycle. The system combines an ensemble of four complementary detection methods, namely error-based monitoring, statistical tests, autoencoder anomaly detection, and Cumulative Sum (CUSUM) change-point analysis, with hierarchical propagation analysis to identify exactly where drift occurs across product lines. Once detected, Shapley Additive Explanations (SHAP) analysis diagnoses the root causes, and a cost-aware retraining strategy selectively updates only the most affected models. Evaluated on over 30,000 time series from the M5 retail dataset, DriftGuard achieves 97.8% detection recall within 4.2 days and delivers up to 417 return on investment through targeted remediation.",
+    "authors": [
+      "Shahnawaz Alam",
+      "Mohammed Abdul Rahman",
+      "Bareera Sadeqa"
+    ],
+    "published": "2026-01-13",
+    "categories": [
+      "cs.LG",
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.08928v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.08928v1",
+    "fetched_at": "2026-01-15T08:38:39.879291"
+  },
+  {
+    "id": "2601.08910v1",
+    "title": "Towards a Self-Driving Trigger at the LHC: Adaptive Response in Real Time",
+    "abstract": "Real-time data filtering and selection -- or trigger -- systems at high-throughput scientific facilities such as the experiments at the Large Hadron Collider (LHC) must process extremely high-rate data streams under stringent bandwidth, latency, and storage constraints. Yet these systems are typically designed as static, hand-tuned menus of selection criteria grounded in prior knowledge and simulation. In this work, we further explore the concept of a self-driving trigger, an autonomous data-filtering framework that reallocates resources and adjusts thresholds dynamically in real-time to optimize signal efficiency, rate stability, and computational cost as instrumentation and environmental conditions evolve. We introduce a benchmark ecosystem to emulate realistic collider scenarios and demonstrate real-time optimization of a menu including canonical energy sum triggers as well as modern anomaly-detection algorithms that target non-standard event topologies using machine learning. Using simulated data streams and publicly available collision data from the Compact Muon Solenoid (CMS) experiment, we demonstrate the capability to dynamically and automatically optimize trigger performance under specific cost objectives without manual retuning. Our adaptive strategy shifts trigger design from static menus with heuristic tuning to intelligent, automated, data-driven control, unlocking greater flexibility and discovery potential in future high-energy physics analyses.",
+    "authors": [
+      "Shaghayegh Emami",
+      "Cecilia Tosciri",
+      "Giovanna Salvi",
+      "Zixin Ding",
+      "Yuxin Chen",
+      "Abhijith Gandrakota",
+      "Christian Herwig",
+      "David W. Miller",
+      "Jennifer Ngadiuba",
+      "Nhan Tran"
+    ],
+    "published": "2026-01-13",
+    "categories": [
+      "physics.ins-det",
+      "cs.AI",
+      "hep-ex"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.08910v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.08910v1",
+    "fetched_at": "2026-01-15T08:38:39.879324"
+  },
+  {
+    "id": "2601.09708v1",
+    "title": "Fast-ThinkAct: Efficient Vision-Language-Action Reasoning via Verbalizable Latent Planning",
+    "abstract": "Vision-Language-Action (VLA) tasks require reasoning over complex visual scenes and executing adaptive actions in dynamic environments. While recent studies on reasoning VLAs show that explicit chain-of-thought (CoT) can improve generalization, they suffer from high inference latency due to lengthy reasoning traces. We propose Fast-ThinkAct, an efficient reasoning framework that achieves compact yet performant planning through verbalizable latent reasoning. Fast-ThinkAct learns to reason efficiently with latent CoTs by distilling from a teacher, driven by a preference-guided objective to align manipulation trajectories that transfers both linguistic and visual planning capabilities for embodied control. This enables reasoning-enhanced policy learning that effectively connects compact reasoning to action execution. Extensive experiments across diverse embodied manipulation and reasoning benchmarks demonstrate that Fast-ThinkAct achieves strong performance with up to 89.3\\% reduced inference latency over state-of-the-art reasoning VLAs, while maintaining effective long-horizon planning, few-shot adaptation, and failure recovery.",
+    "authors": [
+      "Chi-Pin Huang",
+      "Yunze Man",
+      "Zhiding Yu",
+      "Min-Hung Chen",
+      "Jan Kautz",
+      "Yu-Chiang Frank Wang",
+      "Fu-En Yang"
+    ],
+    "published": "2026-01-14",
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.LG",
+      "cs.RO"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.09708v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.09708v1",
+    "fetched_at": "2026-01-15T08:39:08.404237"
+  },
+  {
+    "id": "2601.09703v1",
+    "title": "ShortCoder: Knowledge-Augmented Syntax Optimization for Token-Efficient Code Generation",
+    "abstract": "Code generation tasks aim to automate the conversion of user requirements into executable code, significantly reducing manual development efforts and enhancing software productivity. The emergence of large language models (LLMs) has significantly advanced code generation, though their efficiency is still impacted by certain inherent architectural constraints. Each token generation necessitates a complete inference pass, requiring persistent retention of contextual information in memory and escalating resource consumption. While existing research prioritizes inference-phase optimizations such as prompt compression and model quantization, the generation phase remains underexplored. To tackle these challenges, we propose a knowledge-infused framework named ShortCoder, which optimizes code generation efficiency while preserving semantic equivalence and readability. In particular, we introduce: (1) ten syntax-level simplification rules for Python, derived from AST-preserving transformations, achieving 18.1% token reduction without functional compromise; (2) a hybrid data synthesis pipeline integrating rule-based rewriting with LLM-guided refinement, producing ShorterCodeBench, a corpus of validated tuples of original code and simplified code with semantic consistency; (3) a fine-tuning strategy that injects conciseness awareness into the base LLMs. Extensive experimental results demonstrate that ShortCoder consistently outperforms state-of-the-art methods on HumanEval, achieving an improvement of 18.1%-37.8% in generation efficiency over previous methods while ensuring the performance of code generation.",
+    "authors": [
+      "Sicong Liu",
+      "Yanxian Huang",
+      "Mingwei Liu",
+      "Jiachi Chen",
+      "Ensheng Shi",
+      "Yuchi Ma",
+      "Hongyu Zhang",
+      "Yin Zhang",
+      "Yanlin Wang"
+    ],
+    "published": "2026-01-14",
+    "categories": [
+      "cs.SE",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.09703v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.09703v1",
+    "fetched_at": "2026-01-15T08:39:08.404279"
+  },
+  {
+    "id": "2601.09636v1",
+    "title": "PersonalAlign: Hierarchical Implicit Intent Alignment for Personalized GUI Agent with Long-Term User-Centric Records",
+    "abstract": "While GUI agents have shown strong performance under explicit and completion instructions, real-world deployment requires aligning with users' more complex implicit intents. In this work, we highlight Hierarchical Implicit Intent Alignment for Personalized GUI Agent (PersonalAlign), a new agent task that requires agents to leverage long-term user records as persistent context to resolve omitted preferences in vague instructions and anticipate latent routines by user state for proactive assistance. To facilitate this study, we introduce AndroidIntent, a benchmark designed to evaluate agents' ability in resolving vague instructions and providing proactive suggestions through reasoning over long-term user records. We annotated 775 user-specific preferences and 215 routines from 20k long-term records across different users for evaluation. Furthermore, we introduce Hierarchical Intent Memory Agent (HIM-Agent), which maintains a continuously updating personal memory and hierarchically organizes user preferences and routines for personalization. Finally, we evaluate a range of GUI agents on AndroidIntent, including GPT-5, Qwen3-VL, and UI-TARS, further results show that HIM-Agent significantly improves both execution and proactive performance by 15.7% and 7.3%.",
+    "authors": [
+      "Yibo Lyu",
+      "Gongwei Chen",
+      "Rui Shao",
+      "Weili Guan",
+      "Liqiang Nie"
+    ],
+    "published": "2026-01-14",
+    "categories": [
+      "cs.AI",
+      "cs.CV",
+      "cs.HC",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.09636v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.09636v1",
+    "fetched_at": "2026-01-15T08:39:08.404306"
+  },
+  {
+    "id": "2601.09625v1",
+    "title": "The Promptware Kill Chain: How Prompt Injections Gradually Evolved Into a Multi-Step Malware",
+    "abstract": "The rapid adoption of large language model (LLM)-based systems -- from chatbots to autonomous agents capable of executing code and financial transactions -- has created a new attack surface that existing security frameworks inadequately address. The dominant framing of these threats as \"prompt injection\" -- a catch-all phrase for security failures in LLM-based systems -- obscures a more complex reality: Attacks on LLM-based systems increasingly involve multi-step sequences that mirror traditional malware campaigns. In this paper, we propose that attacks targeting LLM-based applications constitute a distinct class of malware, which we term \\textit{promptware}, and introduce a five-step kill chain model for analyzing these threats. The framework comprises Initial Access (prompt injection), Privilege Escalation (jailbreaking), Persistence (memory and retrieval poisoning), Lateral Movement (cross-system and cross-user propagation), and Actions on Objective (ranging from data exfiltration to unauthorized transactions). By mapping recent attacks to this structure, we demonstrate that LLM-related attacks follow systematic sequences analogous to traditional malware campaigns. The promptware kill chain offers security practitioners a structured methodology for threat modeling and provides a common vocabulary for researchers across AI safety and cybersecurity to address a rapidly evolving threat landscape.",
+    "authors": [
+      "Ben Nassi",
+      "Bruce Schneier",
+      "Oleg Brodt"
+    ],
+    "published": "2026-01-14",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.09625v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.09625v1",
+    "fetched_at": "2026-01-15T08:39:08.404328"
+  },
+  {
+    "id": "2601.09503v1",
+    "title": "What Do LLM Agents Know About Their World? Task2Quiz: A Paradigm for Studying Environment Understanding",
+    "abstract": "Large language model (LLM) agents have demonstrated remarkable capabilities in complex decision-making and tool-use tasks, yet their ability to generalize across varying environments remains a under-examined concern. Current evaluation paradigms predominantly rely on trajectory-based metrics that measure task success, while failing to assess whether agents possess a grounded, transferable model of the environment. To address this gap, we propose Task-to-Quiz (T2Q), a deterministic and automated evaluation paradigm designed to decouple task execution from world-state understanding. We instantiate this paradigm in T2QBench, a suite comprising 30 environments and 1,967 grounded QA pairs across multiple difficulty levels. Our extensive experiments reveal that task success is often a poor proxy for environment understanding, and that current memory machanism can not effectively help agents acquire a grounded model of the environment. These findings identify proactive exploration and fine-grained state representation as primary bottlenecks, offering a robust foundation for developing more generalizable autonomous agents.",
+    "authors": [
+      "Siyuan Liu",
+      "Hongbang Yuan",
+      "Xinze Li",
+      "Ziyue Zhu",
+      "Yixin Cao",
+      "Yu-Gang Jiang"
+    ],
+    "published": "2026-01-14",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.09503v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.09503v1",
+    "fetched_at": "2026-01-15T08:39:08.404355"
+  },
+  {
+    "id": "2601.09334v1",
+    "title": "High-Performance Serverless Computing: A Systematic Literature Review on Serverless for HPC, AI, and Big Data",
+    "abstract": "The widespread deployment of large-scale, compute-intensive applications such as high-performance computing, artificial intelligence, and big data is leading to convergence between cloud and high-performance computing infrastructures. Cloud providers are increasingly integrating high-performance computing capabilities in their infrastructures, such as hardware accelerators and high-speed interconnects, while researchers in the high-performance computing community are starting to explore cloud-native paradigms to improve scalability, elasticity, and resource utilization. In this context, serverless computing emerges as a promising execution model to efficiently handle highly dynamic, parallel, and distributed workloads. This paper presents a comprehensive systematic literature review of 122 research articles published between 2018 and early 2025, exploring the use of the serverless paradigm to develop, deploy, and orchestrate compute-intensive applications across cloud, high-performance computing, and hybrid environments. From these, a taxonomy comprising eight primary research directions and nine targeted use case domains is proposed, alongside an analysis of recent publication trends and collaboration networks among authors, highlighting the growing interest and interconnections within this emerging research field. Overall, this work aims to offer a valuable foundation for both new researchers and experienced practitioners, guiding the development of next-generation serverless solutions for parallel compute-intensive applications.",
+    "authors": [
+      "Valerio Besozzi",
+      "Matteo Della Bartola",
+      "Patrizio Dazzi",
+      "Marco Danelutto"
+    ],
+    "published": "2026-01-14",
+    "categories": [
+      "cs.DC",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.09334v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.09334v1",
+    "fetched_at": "2026-01-15T08:39:08.404384"
+  },
+  {
+    "id": "2601.09306v1",
+    "title": "On-Device Large Language Models for Sequential Recommendation",
+    "abstract": "On-device recommendation is critical for a number of real-world applications, especially in scenarios that have agreements on execution latency, user privacy, and robust functionality when internet connectivity is unstable or even impossible. While large language models (LLMs) can now provide exceptional capabilities that model user behavior for sequential recommendation tasks, their substantial memory footprint and computational overhead make the deployment on resource-constrained devices a high risk proposition. In this paper, we propose OD-LLM, the first task-adaptive compression framework explicitly designed to provide efficient and accurate on-device deployment of LLMs for sequential recommendation tasks. OD-LLM uniquely integrates two complementary compression strategies: a low-rank structural compression algorithm which uses Singular Value Decomposition (SVD) to significantly reduce parameter redundancy in the model, and a novel tokenization normalization technique that better complements the low-rank decomposition process being used. Additionally, to minimize any potential performance degradation when using higher compression ratios, a novel progressive alignment algorithm is used to iteratively refine the parameters required layerwise in the target model. Empirical evaluations conducted on sequential recommendation benchmarks show that OD-LLM exhibits no loss in effectiveness when compared to the original recommendation model, when the deployed model size is halved. These promising results demonstrate the efficacy and scalability of OD-LLM, making this novel solution a practical alternative for real-time, on-device solutions wishing to replace expensive, remotely executed LLMs.",
+    "authors": [
+      "Xin Xia",
+      "Hongzhi Yin",
+      "Shane Culpepper"
+    ],
+    "published": "2026-01-14",
+    "categories": [
+      "cs.IR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.09306v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.09306v1",
+    "fetched_at": "2026-01-15T08:39:08.404407"
+  },
+  {
+    "id": "2601.09259v1",
+    "title": "MAXS: Meta-Adaptive Exploration with LLM Agents",
+    "abstract": "Large Language Model (LLM) Agents exhibit inherent reasoning abilities through the collaboration of multiple tools. However, during agent inference, existing methods often suffer from (i) locally myopic generation, due to the absence of lookahead, and (ii) trajectory instability, where minor early errors can escalate into divergent reasoning paths. These issues make it difficult to balance global effectiveness and computational efficiency. To address these two issues, we propose meta-adaptive exploration with LLM agents https://github.com/exoskeletonzj/MAXS, a meta-adaptive reasoning framework based on LLM Agents that flexibly integrates tool execution and reasoning planning. MAXS employs a lookahead strategy to extend reasoning paths a few steps ahead, estimating the advantage value of tool usage, and combines step consistency variance and inter-step trend slopes to jointly select stable, consistent, and high-value reasoning steps. Additionally, we introduce a trajectory convergence mechanism that controls computational cost by halting further rollouts once path consistency is achieved, enabling a balance between resource efficiency and global effectiveness in multi-tool reasoning. We conduct extensive empirical studies across three base models (MiMo-VL-7B, Qwen2.5-VL-7B, Qwen2.5-VL-32B) and five datasets, demonstrating that MAXS consistently outperforms existing methods in both performance and inference efficiency. Further analysis confirms the effectiveness of our lookahead strategy and tool usage.",
+    "authors": [
+      "Jian Zhang",
+      "Zhiyuan Wang",
+      "Zhangqi Wang",
+      "Yu He",
+      "Haoran Luo",
+      "li yuan",
+      "Lingling Zhang",
+      "Rui Mao",
+      "Qika Lin",
+      "Jun Liu"
+    ],
+    "published": "2026-01-14",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.09259v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.09259v1",
+    "fetched_at": "2026-01-15T08:39:08.404440"
+  },
+  {
+    "id": "2601.09097v1",
+    "title": "Programming over Thinking: Efficient and Robust Multi-Constraint Planning",
+    "abstract": "Multi-constraint planning involves identifying, evaluating, and refining candidate plans while satisfying multiple, potentially conflicting constraints. Existing large language model (LLM) approaches face fundamental limitations in this domain. Pure reasoning paradigms, which rely on long natural language chains, are prone to inconsistency, error accumulation, and prohibitive cost as constraints compound. Conversely, LLMs combined with coding- or solver-based strategies lack flexibility: they often generate problem-specific code from scratch or depend on fixed solvers, failing to capture generalizable logic across diverse problems. To address these challenges, we introduce the Scalable COde Planning Engine (SCOPE), a framework that disentangles query-specific reasoning from generic code execution. By separating reasoning from execution, SCOPE produces solver functions that are consistent, deterministic, and reusable across queries while requiring only minimal changes to input parameters. SCOPE achieves state-of-the-art performance while lowering cost and latency. For example, with GPT-4o, it reaches 93.1% success on TravelPlanner, a 61.6% gain over the best baseline (CoT) while cutting inference cost by 1.4x and time by ~4.67x. Code is available at https://github.com/DerrickGXD/SCOPE.",
+    "authors": [
+      "Derrick Goh Xin Deik",
+      "Quanyu Long",
+      "Zhengyuan Liu",
+      "Nancy F. Chen",
+      "Wenya Wang"
+    ],
+    "published": "2026-01-14",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.09097v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.09097v1",
+    "fetched_at": "2026-01-15T08:39:08.404466"
+  },
+  {
+    "id": "2601.09084v1",
+    "title": "How Many Human Judgments Are Enough? Feasibility Limits of Human Preference Evaluation",
+    "abstract": "Human preference evaluations are widely used to compare generative models, yet it remains unclear how many judgments are required to reliably detect small improvements. We show that when preference signal is diffuse across prompts (i.e., all prompt types are similarly informative), proportional allocation is minimax-optimal: no allocation strategy substantially improves detectability. Empirical analysis of large-scale human preference datasets shows that most comparisons fall into this diffuse regime, exhibiting small preference margins that require far more judgments than typically collected, even in well-sampled comparisons. These limits persist across evaluation protocols and modalities, including chat, image generation, and code generation with execution feedback. In contrast, curated benchmarks that reduce prompt induced variability systematically induce larger margins and improve detectability through a $1.5\\times$ reduction in prompt-level variance. Our results show that inconclusive or negative human evaluation outcomes frequently reflect underpowered evaluation rather than model equivalence, underscoring the need to account explicitly for effect size, budget, and protocol design.",
+    "authors": [
+      "Wilson Y. Lee"
+    ],
+    "published": "2026-01-14",
+    "categories": [
+      "cs.CL",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.09084v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.09084v1",
+    "fetched_at": "2026-01-15T08:39:08.404484"
+  },
+  {
+    "id": "2601.09035v1",
+    "title": "A Decompilation-Driven Framework for Malware Detection with Large Language Models",
+    "abstract": "The parallel evolution of Large Language Models (LLMs) with advanced code-understanding capabilities and the increasing sophistication of malware presents a new frontier for cybersecurity research. This paper evaluates the efficacy of state-of-the-art LLMs in classifying executable code as either benign or malicious. We introduce an automated pipeline that first decompiles Windows executable into a C code using Ghidra disassembler and then leverages LLMs to perform the classification. Our evaluation reveals that while standard LLMs show promise, they are not yet robust enough to replace traditional anti-virus software. We demonstrate that a fine-tuned model, trained on curated malware and benign datasets, significantly outperforms its vanilla counterpart. However, the performance of even this specialized model degrades notably when encountering newer malware. This finding demonstrates the critical need for continuous fine-tuning with emerging threats to maintain model effectiveness against the changing coding patterns and behaviors of malicious software.",
+    "authors": [
+      "Aniesh Chawla",
+      "Udbhav Prasad"
+    ],
+    "published": "2026-01-14",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.09035v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.09035v1",
+    "fetched_at": "2026-01-15T08:39:08.404504"
+  },
+  {
+    "id": "2601.09031v1",
+    "title": "Generalizable Geometric Prior and Recurrent Spiking Feature Learning for Humanoid Robot Manipulation",
+    "abstract": "Humanoid robot manipulation is a crucial research area for executing diverse human-level tasks, involving high-level semantic reasoning and low-level action generation. However, precise scene understanding and sample-efficient learning from human demonstrations remain critical challenges, severely hindering the applicability and generalizability of existing frameworks. This paper presents a novel RGMP-S, Recurrent Geometric-prior Multimodal Policy with Spiking features, facilitating both high-level skill reasoning and data-efficient motion synthesis. To ground high-level reasoning in physical reality, we leverage lightweight 2D geometric inductive biases to enable precise 3D scene understanding within the vision-language model. Specifically, we construct a Long-horizon Geometric Prior Skill Selector that effectively aligns the semantic instructions with spatial constraints, ultimately achieving robust generalization in unseen environments. For the data efficiency issue in robotic action generation, we introduce a Recursive Adaptive Spiking Network. We parameterize robot-object interactions via recursive spiking for spatiotemporal consistency, fully distilling long-horizon dynamic features while mitigating the overfitting issue in sparse demonstration scenarios. Extensive experiments are conducted across the Maniskill simulation benchmark and three heterogeneous real-world robotic systems, encompassing a custom-developed humanoid, a desktop manipulator, and a commercial robotic platform. Empirical results substantiate the superiority of our method over state-of-the-art baselines and validate the efficacy of the proposed modules in diverse generalization scenarios. To facilitate reproducibility, the source code and video demonstrations are publicly available at https://github.com/xtli12/RGMP-S.git.",
+    "authors": [
+      "Xuetao Li",
+      "Wenke Huang",
+      "Mang Ye",
+      "Jifeng Xuan",
+      "Bo Du",
+      "Sheng Liu",
+      "Miao Li"
+    ],
+    "published": "2026-01-13",
+    "categories": [
+      "cs.RO",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.09031v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.09031v1",
+    "fetched_at": "2026-01-15T08:39:08.404532"
+  },
+  {
+    "id": "2601.08747v2",
+    "title": "To Retrieve or To Think? An Agentic Approach for Context Evolution",
+    "abstract": "Current context augmentation methods, such as retrieval-augmented generation, are essential for solving knowledge-intensive reasoning tasks. However, they typically adhere to a rigid, brute-force strategy that executes retrieval at every step. This indiscriminate approach not only incurs unnecessary computational costs but also degrades performance by saturating the context with irrelevant noise. To address these limitations, we introduce Agentic Context Evolution (ACE), a framework inspired by human metacognition that dynamically determines whether to seek new evidence or reason with existing knowledge. ACE employs a central orchestrator agent to make decisions strategically via majority voting. It aims to alternate between activating a retriever agent for external retrieval and a reasoner agent for internal analysis and refinement. By eliminating redundant retrieval steps, ACE maintains a concise and evolved context. Extensive experiments on challenging multi-hop QA benchmarks demonstrate that ACE significantly outperforms competitive baselines in accuracy while achieving efficient token consumption. Our work provides valuable insights into advancing context-evolved generation for complex, knowledge-intensive tasks.",
+    "authors": [
+      "Rubing Chen",
+      "Jian Wang",
+      "Wenjie Li",
+      "Xiao-Yong Wei",
+      "Qing Li"
+    ],
+    "published": "2026-01-13",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.08747v2",
+    "arxiv_url": "https://arxiv.org/abs/2601.08747v2",
+    "fetched_at": "2026-01-15T08:39:08.404584"
+  },
+  {
+    "id": "2601.09151v1",
+    "title": "Interpretable Probability Estimation with LLMs via Shapley Reconstruction",
+    "abstract": "Large Language Models (LLMs) demonstrate potential to estimate the probability of uncertain events, by leveraging their extensive knowledge and reasoning capabilities. This ability can be applied to support intelligent decision-making across diverse fields, such as financial forecasting and preventive healthcare. However, directly prompting LLMs for probability estimation faces significant challenges: their outputs are often noisy, and the underlying predicting process is opaque. In this paper, we propose PRISM: Probability Reconstruction via Shapley Measures, a framework that brings transparency and precision to LLM-based probability estimation. PRISM decomposes an LLM's prediction by quantifying the marginal contribution of each input factor using Shapley values. These factor-level contributions are then aggregated to reconstruct a calibrated final estimate. In our experiments, we demonstrate PRISM improves predictive accuracy over direct prompting and other baselines, across multiple domains including finance, healthcare, and agriculture. Beyond performance, PRISM provides a transparent prediction pipeline: our case studies visualize how individual factors shape the final estimate, helping build trust in LLM-based decision support systems.",
+    "authors": [
+      "Yang Nan",
+      "Qihao Wen",
+      "Jiahao Wang",
+      "Pengfei He",
+      "Ravi Tandon",
+      "Yong Ge",
+      "Han Xu"
+    ],
+    "published": "2026-01-14",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.09151v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.09151v1",
+    "fetched_at": "2026-01-15T08:40:56.018762"
+  }
+]
