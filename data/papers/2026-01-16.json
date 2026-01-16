@@ -1,0 +1,612 @@
+[
+  {
+    "id": "2601.10591v1",
+    "title": "ProbFM: Probabilistic Time Series Foundation Model with Uncertainty Decomposition",
+    "abstract": "Time Series Foundation Models (TSFMs) have emerged as a promising approach for zero-shot financial forecasting, demonstrating strong transferability and data efficiency gains. However, their adoption in financial applications is hindered by fundamental limitations in uncertainty quantification: current approaches either rely on restrictive distributional assumptions, conflate different sources of uncertainty, or lack principled calibration mechanisms. While recent TSFMs employ sophisticated techniques such as mixture models, Student's t-distributions, or conformal prediction, they fail to address the core challenge of providing theoretically-grounded uncertainty decomposition. For the very first time, we present a novel transformer-based probabilistic framework, ProbFM (probabilistic foundation model), that leverages Deep Evidential Regression (DER) to provide principled uncertainty quantification with explicit epistemic-aleatoric decomposition. Unlike existing approaches that pre-specify distributional forms or require sampling-based inference, ProbFM learns optimal uncertainty representations through higher-order evidence learning while maintaining single-pass computational efficiency. To rigorously evaluate the core DER uncertainty quantification approach independent of architectural complexity, we conduct an extensive controlled comparison study using a consistent LSTM architecture across five probabilistic methods: DER, Gaussian NLL, Student's-t NLL, Quantile Loss, and Conformal Prediction. Evaluation on cryptocurrency return forecasting demonstrates that DER maintains competitive forecasting accuracy while providing explicit epistemic-aleatoric uncertainty decomposition. This work establishes both an extensible framework for principled uncertainty quantification in foundation models and empirical evidence for DER's effectiveness in financial applications.",
+    "authors": [
+      "Arundeep Chinta",
+      "Lucas Vinh Tran",
+      "Jay Katukuri"
+    ],
+    "published": "2026-01-15",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "q-fin.RM",
+      "q-fin.TR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.10591v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.10591v1",
+    "fetched_at": "2026-01-16T08:35:37.817931"
+  },
+  {
+    "id": "2601.10517v1",
+    "title": "From rough to multifractal multidimensional volatility: A multidimensional Log S-fBM model",
+    "abstract": "We introduce the multivariate Log S-fBM model (mLog S-fBM), extending the univariate framework proposed by Wu \\textit{et al.} to the multidimensional setting. We define the multidimensional Stationary fractional Brownian motion (mS-fBM), characterized by marginals following S-fBM dynamics and a specific cross-covariance structure. It is parametrized by a correlation scale $T$, marginal-specific intermittency parameters and Hurst exponents, as well as their multidimensional counterparts: the co-intermittency matrix and the co-Hurst matrix. The mLog S-fBM is constructed by modeling volatility components as exponentials of the mS-fBM, preserving the dependence structure of the Gaussian core. We demonstrate that the model is well-defined for any co-Hurst matrix with entries in $[0, \\frac{1}{2}[$, supporting vanishing co-Hurst parameters to bridge rough volatility and multifractal regimes. We generalize the small intermittency approximation technique to the multivariate setting to develop an efficient Generalized Method of Moments calibration procedure, estimating cross-covariance parameters for pairs of marginals. We validate it on synthetic data and apply it to S\\&P 500 market data, modeling stock return fluctuations. Diagonal estimates of the stock Hurst matrix, corresponding to single-stock log-volatility Hurst exponents, are close to 0, indicating multifractal behavior, while co-Hurst off-diagonal entries are close to the Hurst exponent of the S\\&P 500 index ($H \\approx 0.12$), and co-intermittency off-diagonal entries align with univariate intermittency estimates.",
+    "authors": [
+      "Othmane Zarhali",
+      "Emmanuel Bacry",
+      "Jean-François Muzy"
+    ],
+    "published": "2026-01-15",
+    "categories": [
+      "q-fin.ST"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.10517v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.10517v1",
+    "fetched_at": "2026-01-16T08:35:37.817970"
+  },
+  {
+    "id": "2601.10375v1",
+    "title": "Dynamic reinsurance via martingale transport",
+    "abstract": "We formulate a dynamic reinsurance problem in which the insurer seeks to control the terminal distribution of its surplus while minimizing the L2-norm of the ceded risk. Using techniques from martingale optimal transport, we show that, under suitable assumptions, the problem admits a tractable solution analogous to the Bass martingale. We first consider the case where the insurer wants to match a given terminal distribution of the surplus process, and then relax this condition by only requiring certain moment or risk-based constraints.",
+    "authors": [
+      "Beatrice Acciaio",
+      "Brandon Garcia Flores",
+      "Antonio Marini",
+      "Gudmund Pammer"
+    ],
+    "published": "2026-01-15",
+    "categories": [
+      "q-fin.RM",
+      "math.OC",
+      "math.PR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.10375v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.10375v1",
+    "fetched_at": "2026-01-16T08:35:37.817997"
+  },
+  {
+    "id": "2601.10143v1",
+    "title": "History Is Not Enough: An Adaptive Dataflow System for Financial Time-Series Synthesis",
+    "abstract": "In quantitative finance, the gap between training and real-world performance-driven by concept drift and distributional non-stationarity-remains a critical obstacle for building reliable data-driven systems. Models trained on static historical data often overfit, resulting in poor generalization in dynamic markets. The mantra \"History Is Not Enough\" underscores the need for adaptive data generation that learns to evolve with the market rather than relying solely on past observations. We present a drift-aware dataflow system that integrates machine learning-based adaptive control into the data curation process. The system couples a parameterized data manipulation module comprising single-stock transformations, multi-stock mix-ups, and curation operations, with an adaptive planner-scheduler that employs gradient-based bi-level optimization to control the system. This design unifies data augmentation, curriculum learning, and data workflow management under a single differentiable framework, enabling provenance-aware replay and continuous data quality monitoring. Extensive experiments on forecasting and reinforcement learning trading tasks demonstrate that our framework enhances model robustness and improves risk-adjusted returns. The system provides a generalizable approach to adaptive data management and learning-guided workflow automation for financial data.",
+    "authors": [
+      "Haochong Xia",
+      "Yao Long Teng",
+      "Regan Tan",
+      "Molei Qin",
+      "Xinrun Wang",
+      "Bo An"
+    ],
+    "published": "2026-01-15",
+    "categories": [
+      "cs.AI",
+      "q-fin.TR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.10143v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.10143v1",
+    "fetched_at": "2026-01-16T08:35:37.818025"
+  },
+  {
+    "id": "2601.10043v1",
+    "title": "Instruction Finetuning LLaMA-3-8B Model Using LoRA for Financial Named Entity Recognition",
+    "abstract": "Particularly, financial named-entity recognition (NER) is one of the many important approaches to translate unformatted reports and news into structured knowledge graphs. However, free, easy-to-use large language models (LLMs) often fail to differentiate organisations as people, or disregard an actual monetary amount entirely. This paper takes Meta's Llama 3 8B and applies it to financial NER by combining instruction fine-tuning and Low-Rank Adaptation (LoRA). Each annotated sentence is converted into an instruction-input-output triple, enabling the model to learn task descriptions while fine-tuning with small low-rank matrices instead of updating all weights. Using a corpus of 1,693 sentences, our method obtains a micro-F1 score of 0.894 compared with Qwen3-8B, Baichuan2-7B, T5, and BERT-Base. We present dataset statistics, describe training hyperparameters, and perform visualizations of entity density, learning curves, and evaluation metrics. Our results show that instruction tuning combined with parameter-efficient fine-tuning enables state-of-the-art performance on domain-sensitive NER.",
+    "authors": [
+      "Zhiming Lian"
+    ],
+    "published": "2026-01-15",
+    "categories": [
+      "q-fin.CP",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.10043v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.10043v1",
+    "fetched_at": "2026-01-16T08:35:37.818067"
+  },
+  {
+    "id": "2601.09927v1",
+    "title": "Efficiency versus Robustness under Tail Misspecification: Importance Sampling and Moment-Based VaR Bracketing",
+    "abstract": "Value-at-Risk (VaR) estimation at high confidence levels is inherently a rare-event problem and is particularly sensitive to tail behavior and model misspecification. This paper studies the performance of two simulation-based VaR estimation approaches, importance sampling and discrete moment matching, under controlled tail misspecification. The analysis separates the nominal model used for estimator construction from the true data-generating process used for evaluation, allowing the effects of heavy-tailed returns to be examined in a transparent and reproducible setting. Daily returns of a broad equity market proxy are used to calibrate a nominal Gaussian model, while true returns are generated from Student-t distributions with varying degrees of freedom to represent increasingly heavy tails. Importance sampling is implemented via exponential tilting of the Gaussian model, and VaR is estimated through likelihood-weighted root-finding. Discrete moment matching constructs deterministic lower and upper VaR bounds by enforcing a finite number of moment constraints on a discretized loss distribution. The results demonstrate a clear trade-off between efficiency and robustness. Importance sampling produces low-variance VaR estimates under the nominal model but systematically underestimates the true VaR under heavy-tailed returns, with bias increasing at higher confidence levels and for thicker tails. In contrast, discrete moment matching yields conservative VaR bracketing that remains robust under tail misspecification. These findings highlight that variance reduction alone is insufficient for reliable tail risk estimation when model uncertainty is significant.",
+    "authors": [
+      " Aditri"
+    ],
+    "published": "2026-01-14",
+    "categories": [
+      "q-fin.RM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.09927v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.09927v1",
+    "fetched_at": "2026-01-16T08:35:37.818086"
+  },
+  {
+    "id": "2601.09872v1",
+    "title": "A continuous-time Kyle model with price-responsive traders",
+    "abstract": "Classical Kyle-type models of informed trading typically treat noise trader demand as purely exogenous. In reality, many market participants react to price movements and news, generating feedback effects that can significantly alter market dynamics. This paper develops a continuous-time Kyle framework in which two types of price-responsive traders (momentum and contrarian traders) adjust their demand in response to price signals. This extension yields a finite-dimensional Kalman filter for price discovery and leads to a forward-backward Riccati system characterizing equilibrium. We show that when feedback is weak, equilibrium exists and is unique as a smooth perturbation of the classical Kyle solution, allowing us to derive explicit comparative statics for insider profits and price informativeness. For stronger feedback, the model generates rich dynamics, including potential multiplicity of equilibria and amplification effects. Our framework thus bridges the gap between purely exogenous noise and more realistic, behaviorally motivated trading.",
+    "authors": [
+      "Eunjung Noh"
+    ],
+    "published": "2026-01-14",
+    "categories": [
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.09872v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.09872v1",
+    "fetched_at": "2026-01-16T08:35:37.818104"
+  },
+  {
+    "id": "2601.09949v1",
+    "title": "Kinematic Tokenization: Optimization-Based Continuous-Time Tokens for Learnable Decision Policies in Noisy Time Series",
+    "abstract": "Transformers are designed for discrete tokens, yet many real-world signals are continuous processes observed through noisy sampling. Discrete tokenizations (raw values, patches, finite differences) can be brittle in low signal-to-noise regimes, especially when downstream objectives impose asymmetric penalties that rationally encourage abstention. We introduce Kinematic Tokenization, an optimization-based continuous-time representation that reconstructs an explicit spline from noisy measurements and tokenizes local spline coefficients (position, velocity, acceleration, jerk). This is applied to financial time series data in the form of asset prices in conjunction with trading volume profiles. Across a multi-asset daily-equity testbed, we use a risk-averse asymmetric classification objective as a stress test for learnability. Under this objective, several discrete baselines collapse to an absorbing cash policy (the Liquidation Equilibrium), whereas the continuous spline tokens sustain calibrated, non-trivial action distributions and stable policies. These results suggest that explicit continuous-time tokens can improve the learnability and calibration of selective decision policies in noisy time series under abstention-inducing losses.",
+    "authors": [
+      "Griffin Kearney"
+    ],
+    "published": "2026-01-15",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "math.OC"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.09949v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.09949v1",
+    "fetched_at": "2026-01-16T08:35:40.927573"
+  },
+  {
+    "id": "2601.10148v1",
+    "title": "DecisionLLM: Large Language Models for Long Sequence Decision Exploration",
+    "abstract": "Long-sequence decision-making, which is usually addressed through reinforcement learning (RL), is a critical component for optimizing strategic operations in dynamic environments, such as real-time bidding in computational advertising. The Decision Transformer (DT) introduced a powerful paradigm by framing RL as an autoregressive sequence modeling problem. Concurrently, Large Language Models (LLMs) have demonstrated remarkable success in complex reasoning and planning tasks. This inspires us whether LLMs, which share the same Transformer foundation, but operate at a much larger scale, can unlock new levels of performance in long-horizon sequential decision-making problem. This work investigates the application of LLMs to offline decision making tasks. A fundamental challenge in this domain is the LLMs' inherent inability to interpret continuous values, as they lack a native understanding of numerical magnitude and order when values are represented as text strings. To address this, we propose treating trajectories as a distinct modality. By learning to align trajectory data with natural language task descriptions, our model can autoregressively predict future decisions within a cohesive framework we term DecisionLLM. We establish a set of scaling laws governing this paradigm, demonstrating that performance hinges on three factors: model scale, data volume, and data quality. In offline experimental benchmarks and bidding scenarios, DecisionLLM achieves strong performance. Specifically, DecisionLLM-3B outperforms the traditional Decision Transformer (DT) by 69.4 on Maze2D umaze-v1 and by 0.085 on AuctionNet. It extends the AIGB paradigm and points to promising directions for future exploration in online bidding.",
+    "authors": [
+      "Xiaowei Lv",
+      "Zhilin Zhang",
+      "Yijun Li",
+      "Yusen Huo",
+      "Siyuan Ju",
+      "Xuyan Li",
+      "Chunxiang Hong",
+      "Tianyu Wang",
+      "Yongcai Wang",
+      "Peng Sun",
+      "Chuan Yu",
+      "Jian Xu",
+      "Bo Zheng"
+    ],
+    "published": "2026-01-15",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.10148v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.10148v1",
+    "fetched_at": "2026-01-16T08:35:44.039627"
+  },
+  {
+    "id": "2601.10494v1",
+    "title": "CROCS: A Two-Stage Clustering Framework for Behaviour-Centric Consumer Segmentation with Smart Meter Data",
+    "abstract": "With grid operators confronting rising uncertainty from renewable integration and a broader push toward electrification, Demand-Side Management (DSM) -- particularly Demand Response (DR) -- has attracted significant attention as a cost-effective mechanism for balancing modern electricity systems. Unprecedented volumes of consumption data from a continuing global deployment of smart meters enable consumer segmentation based on real usage behaviours, promising to inform the design of more effective DSM and DR programs. However, existing clustering-based segmentation methods insufficiently reflect the behavioural diversity of consumers, often relying on rigid temporal alignment, and faltering in the presence of anomalies, missing data, or large-scale deployments.   To address these challenges, we propose a novel two-stage clustering framework -- Clustered Representations Optimising Consumer Segmentation (CROCS). In the first stage, each consumer's daily load profiles are clustered independently to form a Representative Load Set (RLS), providing a compact summary of their typical diurnal consumption behaviours. In the second stage, consumers are clustered using the Weighted Sum of Minimum Distances (WSMD), a novel set-to-set measure that compares RLSs by accounting for both the prevalence and similarity of those behaviours. Finally, community detection on the WSMD-induced graph reveals higher-order prototypes that embody the shared diurnal behaviours defining consumer groups, enhancing the interpretability of the resulting clusters.   Extensive experiments on both synthetic and real Australian smart meter datasets demonstrate that CROCS captures intra-consumer variability, uncovers both synchronous and asynchronous behavioural similarities, and remains robust to anomalies and missing data, while scaling efficiently through natural parallelisation. These results...",
+    "authors": [
+      "Luke W. Yerbury",
+      "Ricardo J. G. B. Campello",
+      "G. C. Livingston",
+      "Mark Goldsworthy",
+      "Lachlan O'Neil"
+    ],
+    "published": "2026-01-15",
+    "categories": [
+      "stat.ML",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.10494v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.10494v1",
+    "fetched_at": "2026-01-16T08:35:50.238281"
+  },
+  {
+    "id": "2601.10193v1",
+    "title": "GFM4GA: Graph Foundation Model for Group Anomaly Detection",
+    "abstract": "Group anomaly detection is crucial in many network applications, but faces challenges due to diverse anomaly patterns. Motivated by the success of large language models (LLMs) in natural language processing, graph foundation models (GFMs) is proposed to handle few-shot learning task with fewer labeling efforts. GFMs have been successfully applied to detection of individual anomalies but cannot be generalized to group anomalies, as group anomaly patterns must be detected as a whole and individuals in an abnormal group can look rather normal. Therefore, we propose GFM4GA, a novel graph foundation model for group anomaly detection. The pipeline is pretrained via dual-level contrastive learning based on feature-based estimation and group extraction, to capture potential group anomaly structure and feature inconsistencies. In the downstream tasks, the pipeline is finetuned in parameter-constrained and group-anomaly-proportion weighted few-shot settings, and its adaptive ability to unseen group anomalies expanded via group contexts determined by labeled anomaly neighbors. Experiments show that GFM4GA surpasses group anomaly detectors and GFMs for individual anomalies, achieving average improvements of 2.85% in AUROC and 2.55% in AUPRC.",
+    "authors": [
+      "Jiujiu Chen",
+      "Weijun Zeng",
+      "Shaofeng Hu",
+      "Sihong Xie",
+      "Hui Xiong"
+    ],
+    "published": "2026-01-15",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.10193v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.10193v1",
+    "fetched_at": "2026-01-16T08:35:50.238317"
+  },
+  {
+    "id": "2601.10130v1",
+    "title": "Redundancy-Driven Top-$k$ Functional Dependency Discovery",
+    "abstract": "Functional dependencies (FDs) are basic constraints in relational databases and are used for many data management tasks. Most FD discovery algorithms find all valid dependencies, but this causes two problems. First, the computational cost is prohibitive: computational complexity grows quadratically with the number of tuples and exponentially with the number of attributes, making discovery slow on large-scale and high-dimensional data. Second, the result set can be huge, making it hard to identify useful dependencies. We propose SDP (Selective-Discovery-and-Prune), which discovers the top-$k$ FDs ranked by redundancy count. Redundancy count measures how much duplicated information an FD explains and connects directly to storage overhead and update anomalies. SDP uses an upper bound on redundancy to prune the search space. It is proved that this upper bound is monotone: adding attributes refines partitions and thus decreases the bound. Once the bound falls below the top-$k$ threshold, the entire branch can be skipped. We improve SDP with three optimizations: ordering attributes by partition cardinality, using pairwise statistics in a Partition Cardinality Matrix to tighten bounds, and a global scheduler to explore promising branches first. Experiments on over 40 datasets show that SDP is much faster and uses less memory than exhaustive methods.",
+    "authors": [
+      "Xiaolong Wan",
+      "Xixian Han"
+    ],
+    "published": "2026-01-15",
+    "categories": [
+      "cs.DB",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.10130v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.10130v1",
+    "fetched_at": "2026-01-16T08:35:50.238338"
+  },
+  {
+    "id": "2601.09902v1",
+    "title": "A Novel Contrastive Loss for Zero-Day Network Intrusion Detection",
+    "abstract": "Machine learning has achieved state-of-the-art results in network intrusion detection; however, its performance significantly degrades when confronted by a new attack class -- a zero-day attack. In simple terms, classical machine learning-based approaches are adept at identifying attack classes on which they have been previously trained, but struggle with those not included in their training data. One approach to addressing this shortcoming is to utilise anomaly detectors which train exclusively on benign data with the goal of generalising to all attack classes -- both known and zero-day. However, this comes at the expense of a prohibitively high false positive rate. This work proposes a novel contrastive loss function which is able to maintain the advantages of other contrastive learning-based approaches (robustness to imbalanced data) but can also generalise to zero-day attacks. Unlike anomaly detectors, this model learns the distributions of benign traffic using both benign and known malign samples, i.e. other well-known attack classes (not including the zero-day class), and consequently, achieves significant performance improvements. The proposed approach is experimentally verified on the Lycos2017 dataset where it achieves an AUROC improvement of .000065 and .060883 over previous models in known and zero-day attack detection, respectively. Finally, the proposed method is extended to open-set recognition achieving OpenAUC improvements of .170883 over existing approaches.",
+    "authors": [
+      "Jack Wilkie",
+      "Hanan Hindy",
+      "Craig Michie",
+      "Christos Tachtatzis",
+      "James Irvine",
+      "Robert Atkinson"
+    ],
+    "published": "2026-01-14",
+    "categories": [
+      "cs.CR",
+      "cs.AI",
+      "cs.LG",
+      "cs.NI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.09902v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.09902v1",
+    "fetched_at": "2026-01-16T08:35:50.238366"
+  },
+  {
+    "id": "2601.09768v1",
+    "title": "CLiMB: A Domain-Informed Novelty Detection Clustering Framework for Scientific Discovery",
+    "abstract": "In data-driven scientific discovery, a challenge lies in classifying well-characterized phenomena while identifying novel anomalies. Current semi-supervised clustering algorithms do not always fully address this duality, often assuming that supervisory signals are globally representative. Consequently, methods often enforce rigid constraints that suppress unanticipated patterns or require a pre-specified number of clusters, rendering them ineffective for genuine novelty detection. To bridge this gap, we introduce CLiMB (CLustering in Multiphase Boundaries), a domain-informed framework decoupling the exploitation of prior knowledge from the exploration of unknown structures. Using a sequential two-phase approach, CLiMB first anchors known clusters using constrained partitioning, and subsequently applies density-based clustering to residual data to reveal arbitrary topologies. We demonstrate this framework on RR Lyrae stars data from the Gaia Data Release 3. CLiMB attains an Adjusted Rand Index of 0.829 with 90% seed coverage in recovering known Milky Way substructures, drastically outperforming heuristic and constraint-based baselines, which stagnate below 0.20. Furthermore, sensitivity analysis confirms CLiMB's superior data efficiency, showing monotonic improvement as knowledge increases. Finally, the framework successfully isolates three dynamical features (Shiva, Shakti, and the Galactic Disk) in the unlabelled field, validating its potential for scientific discovery.",
+    "authors": [
+      "Lorenzo Monti",
+      "Tatiana Muraveva",
+      "Brian Sheridan",
+      "Davide Massari",
+      "Alessia Garofalo",
+      "Gisella Clementini",
+      "Umberto Michelucci"
+    ],
+    "published": "2026-01-14",
+    "categories": [
+      "astro-ph.IM",
+      "astro-ph.GA",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.09768v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.09768v1",
+    "fetched_at": "2026-01-16T08:35:50.238394"
+  },
+  {
+    "id": "2601.10560v1",
+    "title": "Learning Latency-Aware Orchestration for Parallel Multi-Agent Systems",
+    "abstract": "Multi-agent systems (MAS) enable complex reasoning by coordinating multiple agents, but often incur high inference latency due to multi-step execution and repeated model invocations, severely limiting their scalability and usability in time-sensitive scenarios. Most existing approaches primarily optimize task performance and inference cost, and explicitly or implicitly assume sequential execution, making them less optimal for controlling latency under parallel execution. In this work, we investigate learning-based orchestration of multi-agent systems with explicit latency supervision under parallel execution. We propose Latency-Aware Multi-agent System (LAMaS), a latency-aware multi-agent orchestration framework that enables parallel execution and explicitly optimizes the critical execution path, allowing the controller to construct execution topology graphs with lower latency under parallel execution. Our experiments show that our approach reduces critical path length by 38-46% compared to the state-of-the-art baseline for multi-agent architecture search across multiple benchmarks, while maintaining or even improving task performance. These results highlight the importance of explicitly optimizing latency under parallel execution when designing efficient multi-agent systems. The code is available at https://github.com/xishi404/LAMaS",
+    "authors": [
+      "Xi Shi",
+      "Mengxin Zheng",
+      "Qian Lou"
+    ],
+    "published": "2026-01-15",
+    "categories": [
+      "cs.MA",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.10560v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.10560v1",
+    "fetched_at": "2026-01-16T08:36:18.175740"
+  },
+  {
+    "id": "2601.10485v1",
+    "title": "Panning for Gold: Expanding Domain-Specific Knowledge Graphs with General Knowledge",
+    "abstract": "Domain-specific knowledge graphs (DKGs) often lack coverage compared to general knowledge graphs (GKGs). To address this, we introduce Domain-specific Knowledge Graph Fusion (DKGF), a novel task that enriches DKGs by integrating relevant facts from GKGs. DKGF faces two key challenges: high ambiguity in domain relevance and misalignment in knowledge granularity across graphs. We propose ExeFuse, a simple yet effective Fact-as-Program paradigm. It treats each GKG fact as a latent semantic program, maps abstract relations to granularity-aware operators, and verifies domain relevance via program executability on the target DKG. This unified probabilistic framework jointly resolves relevance and granularity issues. We construct two benchmarks, DKGF(W-I) and DKGF(Y-I), with 21 evaluation configurations. Extensive experiments validate the task's importance and our model's effectiveness, providing the first standardized testbed for DKGF.",
+    "authors": [
+      "Runhao Zhao",
+      "Weixin Zeng",
+      "Wentao Zhang",
+      "Chong Chen",
+      "Zhengpin Li",
+      "Xiang Zhao",
+      "Lei Chen"
+    ],
+    "published": "2026-01-15",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.10485v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.10485v1",
+    "fetched_at": "2026-01-16T08:36:18.175780"
+  },
+  {
+    "id": "2601.10440v1",
+    "title": "AgentGuardian: Learning Access Control Policies to Govern AI Agent Behavior",
+    "abstract": "Artificial intelligence (AI) agents are increasingly used in a variety of domains to automate tasks, interact with users, and make decisions based on data inputs. Ensuring that AI agents perform only authorized actions and handle inputs appropriately is essential for maintaining system integrity and preventing misuse. In this study, we introduce the AgentGuardian, a novel security framework that governs and protects AI agent operations by enforcing context-aware access-control policies. During a controlled staging phase, the framework monitors execution traces to learn legitimate agent behaviors and input patterns. From this phase, it derives adaptive policies that regulate tool calls made by the agent, guided by both real-time input context and the control flow dependencies of multi-step agent actions. Evaluation across two real-world AI agent applications demonstrates that AgentGuardian effectively detects malicious or misleading inputs while preserving normal agent functionality. Moreover, its control-flow-based governance mechanism mitigates hallucination-driven errors and other orchestration-level malfunctions.",
+    "authors": [
+      "Nadya Abaev",
+      "Denis Klimov",
+      "Gerard Levinov",
+      "David Mimran",
+      "Yuval Elovici",
+      "Asaf Shabtai"
+    ],
+    "published": "2026-01-15",
+    "categories": [
+      "cs.CR",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.10440v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.10440v1",
+    "fetched_at": "2026-01-16T08:36:18.175808"
+  },
+  {
+    "id": "2601.10402v1",
+    "title": "Toward Ultra-Long-Horizon Agentic Science: Cognitive Accumulation for Machine Learning Engineering",
+    "abstract": "The advancement of artificial intelligence toward agentic science is currently bottlenecked by the challenge of ultra-long-horizon autonomy, the ability to sustain strategic coherence and iterative correction over experimental cycles spanning days or weeks. While Large Language Models (LLMs) have demonstrated prowess in short-horizon reasoning, they are easily overwhelmed by execution details in the high-dimensional, delayed-feedback environments of real-world research, failing to consolidate sparse feedback into coherent long-term guidance. Here, we present ML-Master 2.0, an autonomous agent that masters ultra-long-horizon machine learning engineering (MLE) which is a representative microcosm of scientific discovery. By reframing context management as a process of cognitive accumulation, our approach introduces Hierarchical Cognitive Caching (HCC), a multi-tiered architecture inspired by computer systems that enables the structural differentiation of experience over time. By dynamically distilling transient execution traces into stable knowledge and cross-task wisdom, HCC allows agents to decouple immediate execution from long-term experimental strategy, effectively overcoming the scaling limits of static context windows. In evaluations on OpenAI's MLE-Bench under 24-hour budgets, ML-Master 2.0 achieves a state-of-the-art medal rate of 56.44%. Our findings demonstrate that ultra-long-horizon autonomy provides a scalable blueprint for AI capable of autonomous exploration beyond human-precedent complexities.",
+    "authors": [
+      "Xinyu Zhu",
+      "Yuzhu Cai",
+      "Zexi Liu",
+      "Bingyang Zheng",
+      "Cheng Wang",
+      "Rui Ye",
+      "Jiaao Chen",
+      "Hanrui Wang",
+      "Wei-Chen Wang",
+      "Yuzhi Zhang",
+      "Linfeng Zhang",
+      "Weinan E",
+      "Di Jin",
+      "Siheng Chen"
+    ],
+    "published": "2026-01-15",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.10402v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.10402v1",
+    "fetched_at": "2026-01-16T08:36:18.175849"
+  },
+  {
+    "id": "2601.10398v1",
+    "title": "LatentRefusal: Latent-Signal Refusal for Unanswerable Text-to-SQL Queries",
+    "abstract": "In LLM-based text-to-SQL systems, unanswerable and underspecified user queries may generate not only incorrect text but also executable programs that yield misleading results or violate safety constraints, posing a major barrier to safe deployment. Existing refusal strategies for such queries either rely on output-level instruction following, which is brittle due to model hallucinations, or estimate output uncertainty, which adds complexity and overhead. To address this challenge, we formalize safe refusal in text-to-SQL systems as an answerability-gating problem and propose LatentRefusal, a latent-signal refusal mechanism that predicts query answerability from intermediate hidden activations of a large language model. We introduce the Tri-Residual Gated Encoder, a lightweight probing architecture, to suppress schema noise and amplify sparse, localized cues of question-schema mismatch that indicate unanswerability. Extensive empirical evaluations across diverse ambiguous and unanswerable settings, together with ablation studies and interpretability analyses, demonstrate the effectiveness of the proposed approach and show that LatentRefusal provides an attachable and efficient safety layer for text-to-SQL systems. Across four benchmarks, LatentRefusal improves average F1 to 88.5 percent on both backbones while adding approximately 2 milliseconds of probe overhead.",
+    "authors": [
+      "Xuancheng Ren",
+      "Shijing Hu",
+      "Zhihui Lu",
+      "Jiangqi Huang",
+      "Qiang Duan"
+    ],
+    "published": "2026-01-15",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.10398v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.10398v1",
+    "fetched_at": "2026-01-16T08:36:18.175877"
+  },
+  {
+    "id": "2601.10338v1",
+    "title": "Agent Skills in the Wild: An Empirical Study of Security Vulnerabilities at Scale",
+    "abstract": "The rise of AI agent frameworks has introduced agent skills, modular packages containing instructions and executable code that dynamically extend agent capabilities. While this architecture enables powerful customization, skills execute with implicit trust and minimal vetting, creating a significant yet uncharacterized attack surface. We conduct the first large-scale empirical security analysis of this emerging ecosystem, collecting 42,447 skills from two major marketplaces and systematically analyzing 31,132 using SkillScan, a multi-stage detection framework integrating static analysis with LLM-based semantic classification. Our findings reveal pervasive security risks: 26.1% of skills contain at least one vulnerability, spanning 14 distinct patterns across four categories: prompt injection, data exfiltration, privilege escalation, and supply chain risks. Data exfiltration (13.3%) and privilege escalation (11.8%) are most prevalent, while 5.2% of skills exhibit high-severity patterns strongly suggesting malicious intent. We find that skills bundling executable scripts are 2.12x more likely to contain vulnerabilities than instruction-only skills (OR=2.12, p<0.001). Our contributions include: (1) a grounded vulnerability taxonomy derived from 8,126 vulnerable skills, (2) a validated detection methodology achieving 86.7% precision and 82.5% recall, and (3) an open dataset and detection toolkit to support future research. These results demonstrate an urgent need for capability-based permission systems and mandatory security vetting before this attack vector is further exploited.",
+    "authors": [
+      "Yi Liu",
+      "Weizhe Wang",
+      "Ruitao Feng",
+      "Yao Zhang",
+      "Guangquan Xu",
+      "Gelei Deng",
+      "Yuekang Li",
+      "Leo Zhang"
+    ],
+    "published": "2026-01-15",
+    "categories": [
+      "cs.CR",
+      "cs.AI",
+      "cs.CL",
+      "cs.SE"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.10338v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.10338v1",
+    "fetched_at": "2026-01-16T08:36:18.175910"
+  },
+  {
+    "id": "2601.10318v1",
+    "title": "Boundary-Aware NL2SQL: Integrating Reliability through Hybrid Reward and Data Synthesis",
+    "abstract": "In this paper, we present BAR-SQL (Boundary-Aware Reliable NL2SQL), a unified training framework that embeds reliability and boundary awareness directly into the generation process. We introduce a Seed Mutation data synthesis paradigm that constructs a representative enterprise corpus, explicitly encompassing multi-step analytical queries alongside boundary cases including ambiguity and schema limitations. To ensure interpretability, we employ Knowledge-Grounded Reasoning Synthesis, which produces Chain-of-Thought traces explicitly anchored in schema metadata and business rules. The model is trained through a two-stage process: Supervised Fine-Tuning (SFT) followed by Reinforcement Learning via Group Relative Policy Optimization. We design a Task-Conditioned Hybrid Reward mechanism that simultaneously optimizes SQL execution accuracy-leveraging Abstract Syntax Tree analysis and dense result matching-and semantic precision in abstention responses. To evaluate reliability alongside generation accuracy, we construct and release Ent-SQL-Bench, which jointly assesse SQL precision and boundary-aware abstention across ambiguous and unanswerable queries. Experimental results on this benchmark demonstrate that BAR-SQL achieves 91.48% average accuracy, outperforming leading proprietary models, including Claude 4.5 Sonnet and GPT-5, in both SQL generation quality and boundary-aware abstention capability. The source code and benchmark are available anonymously at: https://github.com/TianSongS/BAR-SQL.",
+    "authors": [
+      "Songsong Tian",
+      "Kongsheng Zhuo",
+      "Zhendong Wang",
+      "Rong Shen",
+      "Shengtao Zhang",
+      "Yong Wu"
+    ],
+    "published": "2026-01-15",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.10318v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.10318v1",
+    "fetched_at": "2026-01-16T08:36:18.175936"
+  },
+  {
+    "id": "2601.10156v1",
+    "title": "ToolSafe: Enhancing Tool Invocation Safety of LLM-based agents via Proactive Step-level Guardrail and Feedback",
+    "abstract": "While LLM-based agents can interact with environments via invoking external tools, their expanded capabilities also amplify security risks. Monitoring step-level tool invocation behaviors in real time and proactively intervening before unsafe execution is critical for agent deployment, yet remains under-explored. In this work, we first construct TS-Bench, a novel benchmark for step-level tool invocation safety detection in LLM agents. We then develop a guardrail model, TS-Guard, using multi-task reinforcement learning. The model proactively detects unsafe tool invocation actions before execution by reasoning over the interaction history. It assesses request harmfulness and action-attack correlations, producing interpretable and generalizable safety judgments and feedback. Furthermore, we introduce TS-Flow, a guardrail-feedback-driven reasoning framework for LLM agents, which reduces harmful tool invocations of ReAct-style agents by 65 percent on average and improves benign task completion by approximately 10 percent under prompt injection attacks.",
+    "authors": [
+      "Yutao Mou",
+      "Zhangchi Xue",
+      "Lijun Li",
+      "Peiyang Liu",
+      "Shikun Zhang",
+      "Wei Ye",
+      "Jing Shao"
+    ],
+    "published": "2026-01-15",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.10156v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.10156v1",
+    "fetched_at": "2026-01-16T08:36:18.175963"
+  },
+  {
+    "id": "2601.10154v1",
+    "title": "MHub.ai: A Simple, Standardized, and Reproducible Platform for AI Models in Medical Imaging",
+    "abstract": "Artificial intelligence (AI) has the potential to transform medical imaging by automating image analysis and accelerating clinical research. However, research and clinical use are limited by the wide variety of AI implementations and architectures, inconsistent documentation, and reproducibility issues. Here, we introduce MHub.ai, an open-source, container-based platform that standardizes access to AI models with minimal configuration, promoting accessibility and reproducibility in medical imaging. MHub.ai packages models from peer-reviewed publications into standardized containers that support direct processing of DICOM and other formats, provide a unified application interface, and embed structured metadata. Each model is accompanied by publicly available reference data that can be used to confirm model operation. MHub.ai includes an initial set of state-of-the-art segmentation, prediction, and feature extraction models for different modalities. The modular framework enables adaptation of any model and supports community contributions. We demonstrate the utility of the platform in a clinical use case through comparative evaluation of lung segmentation models. To further strengthen transparency and reproducibility, we publicly release the generated segmentations and evaluation metrics and provide interactive dashboards that allow readers to inspect individual cases and reproduce or extend our analysis. By simplifying model use, MHub.ai enables side-by-side benchmarking with identical execution commands and standardized outputs, and lowers the barrier to clinical translation.",
+    "authors": [
+      "Leonard Nürnberg",
+      "Dennis Bontempi",
+      "Suraj Pai",
+      "Curtis Lisle",
+      "Steve Pieper",
+      "Ron Kikinis",
+      "Sil van de Leemput",
+      "Rahul Soni",
+      "Gowtham Murugesan",
+      "Cosmin Ciausu",
+      "Miriam Groeneveld",
+      "Felix J. Dorfner",
+      "Jue Jiang",
+      "Aneesh Rangnekar",
+      "Harini Veeraraghavan",
+      "Joeran S. Bosma",
+      "Keno Bressem",
+      "Raymond Mak",
+      "Andrey Fedorov",
+      "Hugo JWL Aerts"
+    ],
+    "published": "2026-01-15",
+    "categories": [
+      "cs.AI",
+      "cs.CV",
+      "cs.ET",
+      "cs.LG",
+      "cs.SE"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.10154v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.10154v1",
+    "fetched_at": "2026-01-16T08:36:18.176014"
+  },
+  {
+    "id": "2601.10120v1",
+    "title": "TopoDIM: One-shot Topology Generation of Diverse Interaction Modes for Multi-Agent Systems",
+    "abstract": "Optimizing communication topology in LLM-based multi-agent system is critical for enabling collective intelligence. Existing methods mainly rely on spatio-temporal interaction paradigms, where the sequential execution of multi-round dialogues incurs high latency and computation. Motivated by the recent insights that evaluation and debate mechanisms can improve problem-solving in multi-agent systems, we propose TopoDIM, a framework for one-shot Topology generation with Diverse Interaction Modes. Designed for decentralized execution to enhance adaptability and privacy, TopoDIM enables agents to autonomously construct heterogeneous communication without iterative coordination, achieving token efficiency and improved task performance. Experiments demonstrate that TopoDIM reduces total token consumption by 46.41% while improving average performance by 1.50% over state-of-the-art methods. Moreover, the framework exhibits strong adaptability in organizing communication among heterogeneous agents. Code is available at: https://anonymous.4open.science/r/TopoDIM-8D35/",
+    "authors": [
+      "Rui Sun",
+      "Jie Ding",
+      "Chenghua Gong",
+      "Tianjun Gu",
+      "Yihang Jiang",
+      "Juyuan Zhang",
+      "Liming Pan",
+      "Linyuan Lü"
+    ],
+    "published": "2026-01-15",
+    "categories": [
+      "cs.MA",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.10120v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.10120v1",
+    "fetched_at": "2026-01-16T08:36:18.176060"
+  },
+  {
+    "id": "2601.10101v1",
+    "title": "MATRIX AS PLAN: Structured Logical Reasoning with Feedback-Driven Replanning",
+    "abstract": "As knowledge and semantics on the web grow increasingly complex, enhancing Large Language Models (LLMs) comprehension and reasoning capabilities has become particularly important. Chain-of-Thought (CoT) prompting has been shown to enhance the reasoning capabilities of LLMs. However, it still falls short on logical reasoning tasks that rely on symbolic expressions and strict deductive rules. Neuro-symbolic methods address this gap by enforcing formal correctness through external solvers. Yet these solvers are highly format-sensitive, and small instabilities in model outputs can lead to frequent processing failures. LLM-driven approaches avoid parsing brittleness, but they lack structured representations and process-level error-correction mechanisms. To further enhance the logical reasoning capabilities of LLMs, we propose MatrixCoT, a structured CoT framework with a matrix-based plan. Specifically, we normalize and type natural language expressions, attach explicit citation fields, and introduce a matrix-based planning method to preserve global relations among steps. The plan becomes a verifiable artifact, making execution more stable. For verification, we also add a feedback-driven replanning mechanism. Under semantic-equivalence constraints, it identifies omissions and defects, rewrites and compresses the dependency matrix, and produces a more trustworthy final answer. Experiments on five logical-reasoning benchmarks and five LLMs show that, without relying on external solvers, MatrixCoT enhances both robustness and interpretability when tackling complex symbolic reasoning tasks, while maintaining competitive performance.",
+    "authors": [
+      "Ke Chen",
+      "Jiandian Zeng",
+      "Zihao Peng",
+      "Guo Li",
+      "Guangxue Zhang",
+      "Tian Wang"
+    ],
+    "published": "2026-01-15",
+    "categories": [
+      "cs.AI",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.10101v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.10101v1",
+    "fetched_at": "2026-01-16T08:36:18.176087"
+  },
+  {
+    "id": "2601.10080v1",
+    "title": "Deriving Character Logic from Storyline as Codified Decision Trees",
+    "abstract": "Role-playing (RP) agents rely on behavioral profiles to act consistently across diverse narrative contexts, yet existing profiles are largely unstructured, non-executable, and weakly validated, leading to brittle agent behavior. We propose Codified Decision Trees (CDT), a data-driven framework that induces an executable and interpretable decision structure from large-scale narrative data. CDT represents behavioral profiles as a tree of conditional rules, where internal nodes correspond to validated scene conditions and leaves encode grounded behavioral statements, enabling deterministic retrieval of context-appropriate rules at execution time. The tree is learned by iteratively inducing candidate scene-action rules, validating them against data, and refining them through hierarchical specialization, yielding profiles that support transparent inspection and principled updates. Across multiple benchmarks, CDT substantially outperforms human-written profiles and prior profile induction methods on $85$ characters across $16$ artifacts, indicating that codified and validated behavioral representations lead to more reliable agent grounding.",
+    "authors": [
+      "Letian Peng",
+      "Kun Zhou",
+      "Longfei Yun",
+      "Yupeng Hou",
+      "Jingbo Shang"
+    ],
+    "published": "2026-01-15",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.10080v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.10080v1",
+    "fetched_at": "2026-01-16T08:36:18.176111"
+  },
+  {
+    "id": "2601.10011v1",
+    "title": "Memo-SQL: Structured Decomposition and Experience-Driven Self-Correction for Training-Free NL2SQL",
+    "abstract": "Existing NL2SQL systems face two critical limitations: (1) they rely on in-context learning with only correct examples, overlooking the rich signal in historical error-fix pairs that could guide more robust self-correction; and (2) test-time scaling approaches often decompose questions arbitrarily, producing near-identical SQL candidates across runs and diminishing ensemble gains. Moreover, these methods suffer from a stark accuracy-efficiency trade-off: high performance demands excessive computation, while fast variants compromise quality. We present Memo-SQL, a training-free framework that addresses these issues through two simple ideas: structured decomposition and experience-aware self-correction. Instead of leaving decomposition to chance, we apply three clear strategies, entity-wise, hierarchical, and atomic sequential, to encourage diverse reasoning. For correction, we build a dynamic memory of both successful queries and historical error-fix pairs, and use retrieval-augmented prompting to bring relevant examples into context at inference time, no fine-tuning or external APIs required. On BIRD, Memo-SQL achieves 68.5% execution accuracy, setting a new state of the art among open, zero-fine-tuning methods, while using over 10 times fewer resources than prior TTS approaches.",
+    "authors": [
+      "Zerui Yang",
+      "Weichuan Wang",
+      "Yanwei Xu",
+      "Linqi Song",
+      "Yudai Matsuda",
+      "Wei Han",
+      "Bo Bai"
+    ],
+    "published": "2026-01-15",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.10011v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.10011v1",
+    "fetched_at": "2026-01-16T08:36:18.176138"
+  },
+  {
+    "id": "2601.09923v1",
+    "title": "CaMeLs Can Use Computers Too: System-level Security for Computer Use Agents",
+    "abstract": "AI agents are vulnerable to prompt injection attacks, where malicious content hijacks agent behavior to steal credentials or cause financial loss. The only known robust defense is architectural isolation that strictly separates trusted task planning from untrusted environment observations. However, applying this design to Computer Use Agents (CUAs) -- systems that automate tasks by viewing screens and executing actions -- presents a fundamental challenge: current agents require continuous observation of UI state to determine each action, conflicting with the isolation required for security. We resolve this tension by demonstrating that UI workflows, while dynamic, are structurally predictable. We introduce Single-Shot Planning for CUAs, where a trusted planner generates a complete execution graph with conditional branches before any observation of potentially malicious content, providing provable control flow integrity guarantees against arbitrary instruction injections. Although this architectural isolation successfully prevents instruction injections, we show that additional measures are needed to prevent Branch Steering attacks, which manipulate UI elements to trigger unintended valid paths within the plan. We evaluate our design on OSWorld, and retain up to 57% of the performance of frontier models while improving performance for smaller open-source models by up to 19%, demonstrating that rigorous security and utility can coexist in CUAs.",
+    "authors": [
+      "Hanna Foerster",
+      "Robert Mullins",
+      "Tom Blanchard",
+      "Nicolas Papernot",
+      "Kristina Nikolić",
+      "Florian Tramèr",
+      "Ilia Shumailov",
+      "Cheng Zhang",
+      "Yiren Zhao"
+    ],
+    "published": "2026-01-14",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.09923v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.09923v1",
+    "fetched_at": "2026-01-16T08:36:18.176169"
+  },
+  {
+    "id": "2601.09876v1",
+    "title": "Patient-Similarity Cohort Reasoning in Clinical Text-to-SQL",
+    "abstract": "Real-world clinical text-to-SQL requires reasoning over heterogeneous EHR tables, temporal windows, and patient-similarity cohorts to produce executable queries. We introduce CLINSQL, a benchmark of 633 expert-annotated tasks on MIMIC-IV v3.1 that demands multi-table joins, clinically meaningful filters, and executable SQL. Solving CLINSQL entails navigating schema metadata and clinical coding systems, handling long contexts, and composing multi-step queries beyond traditional text-to-SQL. We evaluate 22 proprietary and open-source models under Chain-of-Thought self-refinement and use rubric-based SQL analysis with execution checks that prioritize critical clinical requirements. Despite recent advances, performance remains far from clinical reliability: on the test set, GPT-5-mini attains 74.7% execution score, DeepSeek-R1 leads open-source at 69.2% and Gemini-2.5-Pro drops from 85.5% on Easy to 67.2% on Hard. Progress on CLINSQL marks tangible advances toward clinically reliable text-to-SQL for real-world EHR analytics.",
+    "authors": [
+      "Yifei Shen",
+      "Yilun Zhao",
+      "Justice Ou",
+      "Tinglin Huang",
+      "Arman Cohan"
+    ],
+    "published": "2026-01-14",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.09876v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.09876v1",
+    "fetched_at": "2026-01-16T08:36:18.176193"
+  }
+]
