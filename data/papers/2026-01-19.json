@@ -1,0 +1,546 @@
+[
+  {
+    "id": "2601.11375v1",
+    "title": "Automated Liquidity: Market Impact, Cycles, and De-pegging Risk",
+    "abstract": "Three traits of decentralized finance are studied. First, the market impact function is derived for optimal-growth liquidity providers. For a standard random walk, the classic square-root impact is recovered. An extension is then derived to fit general fractional Ornstein-Uhlenbeck processes. These findings break with the linearized liquidity models used in most decentralized exchanges. Second, a Constant Product Market Maker is viewed as a multi-phase Carnot engine, where one phase matches the exchange of tokens by a liquidity taker, and another the change of pool size by a liquidity provider. Third, stablecoin de-pegging is a form of catastrophe risk. By using growth optimization, default odds are linked to the cost of catastrophe bonds. De-pegging insurance can act as a counterweight and a key marketing tool when the law forbids the payment of interest on stablecoins.",
+    "authors": [
+      "B. K. Meister"
+    ],
+    "published": "2026-01-16",
+    "categories": [
+      "q-fin.PM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.11375v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.11375v1",
+    "fetched_at": "2026-01-19T08:38:29.983698"
+  },
+  {
+    "id": "2601.11348v1",
+    "title": "Optimal Abatement Schedules for Excess Carbon Emissions Towards a Net-Zero Target",
+    "abstract": "Achieving net-zero carbon emissions requires a transformation of energy systems, industrial processes, and consumption patterns. In particular, a transition towards that goal involves a gradual reduction of excess carbon emissions that are not essential for the well-functioning of society. In this paper we study this problem from a stochastic control perspective to identify the optimal gradual reduction of the emission rate, when an allocated excess carbon budget is used up over time. Assuming that updates of the available carbon budget follow a diffusion process, we identify the emission strategy that maximizes expected discounted emissions under the constraint of a non-increasing emission rate, with an additional term rewarding the amount of time for which the budget is not yet depleted. We establish a link of this topic to optimal dividend problems in insurance risk theory under ratcheting constraints and show that the value function is the unique viscosity solution of the associated Hamilton-Jacobi-Bellman equation. We provide numerical illustrations of the resulting optimal abatement schedule of emissions and a quantitative evaluation of the effect of the non-increasing rate constraint on the value function.",
+    "authors": [
+      "Hansjoerg Albrecher",
+      "Nora Muler"
+    ],
+    "published": "2026-01-16",
+    "categories": [
+      "math.OC",
+      "q-fin.RM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.11348v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.11348v1",
+    "fetched_at": "2026-01-19T08:38:29.983733"
+  },
+  {
+    "id": "2601.11305v1",
+    "title": "Multiscaling in the Rough Bergomi Model: A Tale of Tails",
+    "abstract": "The rough Bergomi (rBergomi) model, characterised by its roughness parameter $H$, has been shown to exhibit multiscaling behaviour as $H$ approaches zero. Multiscaling has profound implications for financial modelling: it affects extreme risk estimation, influences optimal portfolio allocation across different time horizons, and challenges traditional option pricing approaches that assume uniscaling behaviours. Understanding whether multiscaling arises primarily from the roughness of volatility paths or from the resulting fat-tailed returns has important implications for financial modelling, option pricing, and risk management. This paper investigates the real source of this multiscaling behaviour by introducing a novel two-stage statistical testing procedure. In the first stage, we establish the presence of multiscaling in the rBergomi model against an uniscaling fractional Brownian motion process. We quantify multiscaling by using weighted least squares regression that accounts for heteroscedastic estimation errors across moments. In the second stage, we apply shuffled surrogates that preserve return distributions while destroying temporal correlations. This is done by using distance-based permutation tests robust to asymmetric null distributions. In order to validate our procedure, we check the robustness of the results by using synthetic processes with known multifractal properties, namely the Multifractal Random Walk (MRW) and the Fractional Lévy Stable Motion (FLSM). We provide compelling evidence that multiscaling in the rBergomi model arises primarily from fat-tailed return distributions rather than memory effects. Our findings suggest that the apparent multiscaling in rough volatility models is largely attributable to distributional properties rather than genuine temporal scaling behaviour.",
+    "authors": [
+      "Giuseppe Brandi",
+      "Tiziana Di Matteo"
+    ],
+    "published": "2026-01-16",
+    "categories": [
+      "q-fin.ST"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.11305v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.11305v1",
+    "fetched_at": "2026-01-19T08:38:29.983755"
+  },
+  {
+    "id": "2601.11209v1",
+    "title": "SANOS -- Smooth strictly Arbitrage-free Non-parametric Option Surfaces",
+    "abstract": "We present a simple, numerically efficient but highly flexible non-parametric method to construct representations of option price surfaces which are both smooth and strictly arbitrage-free across time and strike. The method can be viewed as a smooth generalization of the widely-known linear interpolation scheme, and retains the simplicity and transparency of that baseline. Calibration of the model to observed market quotes is formulated as a linear program, allowing bid-ask spreads to be incorporated directly via linear penalties or inequalities, and delivering materially lower computational cost than most of the currently available implied-volatility surface fitting routines. As a further contribution, we derive an equivalent parameterization of the proposed surface in terms of strictly positive \"discrete local volatility\" variables. This yields, to our knowledge, the first construction of smooth, strictly arbitrage-free option price surfaces while requiring only trivial parameter constraints (positivity). We illustrate the approach using S&P 500 index options",
+    "authors": [
+      "Hans Buehler",
+      "Blanka Horvath",
+      "Anastasis Kratsios",
+      "Yannick Limmer",
+      "Raeid Saqur"
+    ],
+    "published": "2026-01-16",
+    "categories": [
+      "q-fin.CP",
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.11209v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.11209v1",
+    "fetched_at": "2026-01-19T08:38:29.983782"
+  },
+  {
+    "id": "2601.11201v1",
+    "title": "Fast Times, Slow Times: Timescale Separation in Financial Timeseries Data",
+    "abstract": "Financial time series exhibit multiscale behavior, with interaction between multiple processes operating on different timescales. This paper introduces a method for separating these processes using variance and tail stationarity criteria, framed as generalized eigenvalue problems. The approach allows for the identification of slow and fast components in asset returns and prices, with applications to parameter drift, mean reversion, and tail risk management. Empirical examples using currencies, equity ETFs and treasury yields illustrate the practical utility of the method.",
+    "authors": [
+      "Jan Rosenzweig"
+    ],
+    "published": "2026-01-16",
+    "categories": [
+      "q-fin.PM",
+      "q-fin.CP",
+      "q-fin.RM",
+      "q-fin.ST",
+      "q-fin.TR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.11201v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.11201v1",
+    "fetched_at": "2026-01-19T08:38:29.983800"
+  },
+  {
+    "id": "2601.11134v1",
+    "title": "FSL-BDP: Federated Survival Learning with Bayesian Differential Privacy for Credit Risk Modeling",
+    "abstract": "Credit risk models are a critical decision-support tool for financial institutions, yet tightening data-protection rules (e.g., GDPR, CCPA) increasingly prohibit cross-border sharing of borrower data, even as these models benefit from cross-institution learning. Traditional default prediction suffers from two limitations: binary classification ignores default timing, treating early defaulters (high loss) equivalently to late defaulters (low loss), and centralized training violates emerging regulatory constraints. We propose a Federated Survival Learning framework with Bayesian Differential Privacy (FSL-BDP) that models time-to-default trajectories without centralizing sensitive data. The framework provides Bayesian (data-dependent) differential privacy (DP) guarantees while enabling institutions to jointly learn risk dynamics. Experiments on three real-world credit datasets (LendingClub, SBA, Bondora) show that federation fundamentally alters the relative effectiveness of privacy mechanisms. While classical DP performs better than Bayesian DP in centralized settings, the latter benefits substantially more from federation (+7.0\\% vs +1.4\\%), achieving near parity of non-private performance and outperforming classical DP in the majority of participating clients. This ranking reversal yields a key decision-support insight: privacy mechanism selection should be evaluated in the target deployment architecture, rather than centralized benchmarks. These findings provide actionable guidance for practitioners designing privacy-preserving decision support systems in regulated, multi-institutional environments.",
+    "authors": [
+      "Sultan Amed",
+      "Tanmay Sen",
+      "Sayantan Banerjee"
+    ],
+    "published": "2026-01-16",
+    "categories": [
+      "cs.LG",
+      "q-fin.RM",
+      "stat.ML"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.11134v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.11134v1",
+    "fetched_at": "2026-01-19T08:38:29.983839"
+  },
+  {
+    "id": "2601.11097v1",
+    "title": "KANHedge: Efficient Hedging of High-Dimensional Options Using Kolmogorov-Arnold Network-Based BSDE Solver",
+    "abstract": "High-dimensional option pricing and hedging present significant challenges in quantitative finance, where traditional PDE-based methods struggle with the curse of dimensionality. The BSDE framework offers a computationally efficient alternative to PDE-based methods, and recently proposed deep BSDE solvers, generally utilizing conventional Multi-Layer Perceptrons (MLPs), build upon this framework to provide a scalable alternative to numerical BSDE solvers. In this research, we show that although such MLP-based deep BSDEs demonstrate promising results in option pricing, there remains room for improvement regarding hedging performance. To address this issue, we introduce KANHedge, a novel BSDE-based hedger that leverages Kolmogorov-Arnold Networks (KANs) within the BSDE framework. Unlike conventional MLP approaches that use fixed activation functions, KANs employ learnable B-spline activation functions that provide enhanced function approximation capabilities for continuous derivatives. We comprehensively evaluate KANHedge on both European and American basket options across multiple dimensions and market conditions. Our experimental results demonstrate that while KANHedge and MLP achieve comparable pricing accuracy, KANHedge provides improved hedging performance. Specifically, KANHedge achieves considerable reductions in hedging cost metrics, demonstrating enhanced risk control capabilities.",
+    "authors": [
+      "Rushikesh Handal",
+      "Masanori Hirano"
+    ],
+    "published": "2026-01-16",
+    "categories": [
+      "q-fin.CP",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.11097v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.11097v1",
+    "fetched_at": "2026-01-19T08:38:29.983858"
+  },
+  {
+    "id": "2601.10851v1",
+    "title": "Event-Driven Market Co-Movement Dynamics in Critical Mineral Equities: An Empirical Framework Using Change Point Detection and Cross-Sectional Analysis",
+    "abstract": "This study examines market behavior in critical mineral investments using a novel analytical framework that combines change-point detection (PELT algorithm) with cross-sectional analysis. This research analyzes ESG-ranked critical mineral ETFs from March 31, 2014, to April 19, 2024, using the S&P 500 as a benchmark to evaluate market co-movements. The findings demonstrate that different critical mineral investments experienced change points at distinct times, but three major dates, July 23, 2015; March 17, 2020; and December 1, 2020, were common and aligned with global events such as the oil market shock, the COVID-19 pandemic, and later market adjustments. Herding behavior among investors increased after these shocks, following the 2015 and 2020 crises, but shifted to anti-herding after positive vaccine news in late 2020 and after the Russian invasion of Ukraine in 2022. The sensitivity analysis shows that investor coordination is strongest during market downturns but exhibits greater variation during stable periods or after major developments, with these dynamics sensitive to the length of the observation period. Additionally, anti-herding became more apparent during crises, suggesting investors reacted to specific risks rather than moving in lockstep, especially in response to geopolitical shocks.",
+    "authors": [
+      "Haibo Wang"
+    ],
+    "published": "2026-01-15",
+    "categories": [
+      "econ.EM",
+      "q-fin.PM",
+      "q-fin.PR",
+      "q-fin.RM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.10851v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.10851v1",
+    "fetched_at": "2026-01-19T08:38:29.983876"
+  },
+  {
+    "id": "2601.10812v1",
+    "title": "Optimal Liquidation of Perpetual Contracts",
+    "abstract": "An agent holds a position in a perpetual contract with payoff function $ψ$ and attempts to liquidate the position while managing transaction costs, inventory risk, and funding rate payments. By solving the agent's stochastic control problem we obtain a closed-form expression for the optimal trading strategy when the payoff function is given by $ψ(s) = s$. When the payoff function is non-linear we provide approximations to the optimal strategy which apply when the funding rate parameter is small or when the length of the trading interval is small. We further prove that when $ψ$ is non-linear, the short time approximation can be written in terms of the closed-form trading strategy corresponding to the case of the identity payoff function.",
+    "authors": [
+      "Ryan Donnelly",
+      "Junhan Lin",
+      "Matthew Lorig"
+    ],
+    "published": "2026-01-15",
+    "categories": [
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.10812v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.10812v1",
+    "fetched_at": "2026-01-19T08:38:29.983896"
+  },
+  {
+    "id": "2601.11091v1",
+    "title": "Split-and-Conquer: Distributed Factor Modeling for High-Dimensional Matrix-Variate Time Series",
+    "abstract": "In this paper, we propose a distributed framework for reducing the dimensionality of high-dimensional, large-scale, heterogeneous matrix-variate time series data using a factor model. The data are first partitioned column-wise (or row-wise) and allocated to node servers, where each node estimates the row (or column) loading matrix via two-dimensional tensor PCA. These local estimates are then transmitted to a central server and aggregated, followed by a final PCA step to obtain the global row (or column) loading matrix estimator. Given the estimated loading matrices, the corresponding factor matrices are subsequently computed. Unlike existing distributed approaches, our framework preserves the latent matrix structure, thereby improving computational efficiency and enhancing information utilization. We also discuss row- and column-wise clustering procedures for settings in which the group memberships are unknown. Furthermore, we extend the analysis to unit-root nonstationary matrix-variate time series. Asymptotic properties of the proposed method are derived for the diverging dimension of the data in each computing unit and the sample size $T$. Simulation results assess the computational efficiency and estimation accuracy of the proposed framework, and real data applications further validate its predictive performance.",
+    "authors": [
+      "Hangjin Jiang",
+      "Yuzhou Li",
+      "Zhaoxing Gao"
+    ],
+    "published": "2026-01-16",
+    "categories": [
+      "stat.ML",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.11091v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.11091v1",
+    "fetched_at": "2026-01-19T08:38:36.290185"
+  },
+  {
+    "id": "2601.11500v1",
+    "title": "QUPID: A Partitioned Quantum Neural Network for Anomaly Detection in Smart Grid",
+    "abstract": "Smart grid infrastructures have revolutionized energy distribution, but their day-to-day operations require robust anomaly detection methods to counter risks associated with cyber-physical threats and system faults potentially caused by natural disasters, equipment malfunctions, and cyber attacks. Conventional machine learning (ML) models are effective in several domains, yet they struggle to represent the complexities observed in smart grid systems. Furthermore, traditional ML models are highly susceptible to adversarial manipulations, making them increasingly unreliable for real-world deployment. Quantum ML (QML) provides a unique advantage, utilizing quantum-enhanced feature representations to model the intricacies of the high-dimensional nature of smart grid systems while demonstrating greater resilience to adversarial manipulation. In this work, we propose QUPID, a partitioned quantum neural network (PQNN) that outperforms traditional state-of-the-art ML models in anomaly detection. We extend our model to R-QUPID that even maintains its performance when including differential privacy (DP) for enhanced robustness. Moreover, our partitioning framework addresses a significant scalability problem in QML by efficiently distributing computational workloads, making quantum-enhanced anomaly detection practical in large-scale smart grid environments. Our experimental results across various scenarios exemplifies the efficacy of QUPID and R-QUPID to significantly improve anomaly detection capabilities and robustness compared to traditional ML approaches.",
+    "authors": [
+      "Hoang M. Ngo",
+      "Tre' R. Jeter",
+      "Jung Taek Seo",
+      "My T. Thai"
+    ],
+    "published": "2026-01-16",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.11500v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.11500v1",
+    "fetched_at": "2026-01-19T08:38:42.586732"
+  },
+  {
+    "id": "2601.11415v1",
+    "title": "Zero-Shot Detection of Elastic Transient Morphology Across Physical Systems",
+    "abstract": "We test whether a representation learned from interferometric strain transients in gravitational-wave observatories can act as a frozen morphology-sensitive operator for unseen sensors, provided the target signals preserve coherent elastic transient structure. Using a neural encoder trained exclusively on non-Gaussian instrumental glitches, we perform strict zero-shot anomaly analysis on rolling-element bearings without retraining, fine-tuning, or target-domain labels.   On the IMS-NASA run-to-failure dataset, the operator yields a monotonic health index HI(t) = s0.99(t)/tau normalized to an early-life reference distribution, enabling fixed false-alarm monitoring at 1-q = 1e-3 with tau = Q0.999(P0). In discrete fault regimes (CWRU), it achieves strong window-level discrimination (AUC_win about 0.90) and file-level separability approaching unity (AUC_file about 0.99). Electrically dominated vibration signals (VSB) show weak, non-selective behavior, delineating a physical boundary for transfer.   Under a matched IMS controlled-split protocol, a generic EfficientNet-B0 encoder pretrained on ImageNet collapses in the intermittent regime (Lambda_tail about 2), while the interferometric operator retains strong extreme-event selectivity (Lambda_tail about 860), indicating that the effect is not a generic property of CNN features. Controlled morphology-destruction transformations selectively degrade performance despite per-window normalization, consistent with sensitivity to coherent time-frequency organization rather than marginal amplitude statistics.",
+    "authors": [
+      "Jose Sánchez Andreu"
+    ],
+    "published": "2026-01-16",
+    "categories": [
+      "astro-ph.IM",
+      "cs.LG",
+      "physics.data-an"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.11415v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.11415v1",
+    "fetched_at": "2026-01-19T08:38:42.586760"
+  },
+  {
+    "id": "2601.11154v1",
+    "title": "Assesing the Viability of Unsupervised Learning with Autoencoders for Predictive Maintenance in Helicopter Engines",
+    "abstract": "Unplanned engine failures in helicopters can lead to severe operational disruptions, safety hazards, and costly repairs. To mitigate these risks, this study compares two predictive maintenance strategies for helicopter engines: a supervised classification pipeline and an unsupervised anomaly detection approach based on autoencoders (AEs). The supervised method relies on labelled examples of both normal and faulty behaviour, while the unsupervised approach learns a model of normal operation using only healthy engine data, flagging deviations as potential faults. Both methods are evaluated on a real-world dataset comprising labelled snapshots of helicopter engine telemetry. While supervised models demonstrate strong performance when annotated failures are available, the AE achieves effective detection without requiring fault labels, making it particularly well suited for settings where failure data are scarce or incomplete. The comparison highlights the practical trade-offs between accuracy, data availability, and deployment feasibility, and underscores the potential of unsupervised learning as a viable solution for early fault detection in aerospace applications.",
+    "authors": [
+      "P. Sánchez",
+      "K. Reyes",
+      "B. Radu",
+      "E. Fernández"
+    ],
+    "published": "2026-01-16",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.11154v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.11154v1",
+    "fetched_at": "2026-01-19T08:38:42.586782"
+  },
+  {
+    "id": "2601.10993v1",
+    "title": "Memorize Early, Then Query: Inlier-Memorization-Guided Active Outlier Detection",
+    "abstract": "Outlier detection (OD) aims to identify abnormal instances, known as outliers or anomalies, by learning typical patterns of normal data, or inliers. Performing OD under an unsupervised regime-without any information about anomalous instances in the training data-is challenging. A recently observed phenomenon, known as the inlier-memorization (IM) effect, where deep generative models (DGMs) tend to memorize inlier patterns during early training, provides a promising signal for distinguishing outliers. However, existing unsupervised approaches that rely solely on the IM effect still struggle when inliers and outliers are not well-separated or when outliers form dense clusters. To address these limitations, we incorporate active learning to selectively acquire informative labels, and propose IMBoost, a novel framework that explicitly reinforces the IM effect to improve outlier detection. Our method consists of two stages: 1) a warm-up phase that induces and promotes the IM effect, and 2) a polarization phase in which actively queried samples are used to maximize the discrepancy between inlier and outlier scores. In particular, we propose a novel query strategy and tailored loss function in the polarization phase to effectively identify informative samples and fully leverage the limited labeling budget. We provide a theoretical analysis showing that the IMBoost consistently decreases inlier risk while increasing outlier risk throughout training, thereby amplifying their separation. Extensive experiments on diverse benchmark datasets demonstrate that IMBoost not only significantly outperforms state-of-the-art active OD methods but also requires substantially less computational cost.",
+    "authors": [
+      "Minseo Kang",
+      "Seunghwan Park",
+      "Dongha Kim"
+    ],
+    "published": "2026-01-16",
+    "categories": [
+      "stat.ML",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.10993v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.10993v1",
+    "fetched_at": "2026-01-19T08:38:42.586802"
+  },
+  {
+    "id": "2601.11492v1",
+    "title": "BoxMind: Closed-loop AI strategy optimization for elite boxing validated in the 2024 Olympics",
+    "abstract": "Competitive sports require sophisticated tactical analysis, yet combat disciplines like boxing remain underdeveloped in AI-driven analytics due to the complexity of action dynamics and the lack of structured tactical representations. To address this, we present BoxMind, a closed-loop AI expert system validated in elite boxing competition. By defining atomic punch events with precise temporal boundaries and spatial and technical attributes, we parse match footage into 18 hierarchical technical-tactical indicators. We then propose a graph-based predictive model that fuses these explicit technical-tactical profiles with learnable, time-variant latent embeddings to capture the dynamics of boxer matchups. Modeling match outcome as a differentiable function of technical-tactical indicators, we turn winning probability gradients into executable tactical adjustments. Experiments show that the outcome prediction model achieves state-of-the-art performance, with 69.8% accuracy on BoxerGraph test set and 87.5% on Olympic matches. Using this predictive model as a foundation, the system generates strategic recommendations that demonstrate proficiency comparable to human experts. BoxMind is validated through a closed-loop deployment during the 2024 Paris Olympics, directly contributing to the Chinese National Team's historic achievement of three gold and two silver medals. BoxMind establishes a replicable paradigm for transforming unstructured video data into strategic intelligence, bridging the gap between computer vision and decision support in competitive sports.",
+    "authors": [
+      "Kaiwen Wang",
+      "Kaili Zheng",
+      "Rongrong Deng",
+      "Qingmin Fan",
+      "Milin Zhang",
+      "Zongrui Li",
+      "Xuesi Zhou",
+      "Bo Han",
+      "Liren Chen",
+      "Chenyi Guo",
+      "Ji Wu"
+    ],
+    "published": "2026-01-16",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.11492v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.11492v1",
+    "fetched_at": "2026-01-19T08:39:10.926184"
+  },
+  {
+    "id": "2601.11421v1",
+    "title": "The Great March 100: 100 Detail-oriented Tasks for Evaluating Embodied AI Agents",
+    "abstract": "Recently, with the rapid development of robot learning and imitation learning, numerous datasets and methods have emerged. However, these datasets and their task designs often lack systematic consideration and principles. This raises important questions: Do the current datasets and task designs truly advance the capabilities of robotic agents? Do evaluations on a few common tasks accurately reflect the differentiated performance of various methods proposed by different teams and evaluated on different tasks? To address these issues, we introduce the Great March 100 (\\textbf{GM-100}) as the first step towards a robot learning Olympics. GM-100 consists of 100 carefully designed tasks that cover a wide range of interactions and long-tail behaviors, aiming to provide a diverse and challenging set of tasks to comprehensively evaluate the capabilities of robotic agents and promote diversity and complexity in robot dataset task designs. These tasks are developed through systematic analysis and expansion of existing task designs, combined with insights from human-object interaction primitives and object affordances. We collect a large amount of trajectory data on different robotic platforms and evaluate several baseline models. Experimental results demonstrate that the GM-100 tasks are 1) feasible to execute and 2) sufficiently challenging to effectively differentiate the performance of current VLA models. Our data and code are available at https://rhos.ai/research/gm-100.",
+    "authors": [
+      "Ziyu Wang",
+      "Chenyuan Liu",
+      "Yushun Xiang",
+      "Runhao Zhang",
+      "Qingbo Hao",
+      "Hongliang Lu",
+      "Houyu Chen",
+      "Zhizhong Feng",
+      "Kaiyue Zheng",
+      "Dehao Ye",
+      "Xianchao Zeng",
+      "Xinyu Zhou",
+      "Boran Wen",
+      "Jiaxin Li",
+      "Mingyu Zhang",
+      "Kecheng Zheng",
+      "Qian Zhu",
+      "Ran Cheng",
+      "Yong-Lu Li"
+    ],
+    "published": "2026-01-16",
+    "categories": [
+      "cs.RO",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.11421v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.11421v1",
+    "fetched_at": "2026-01-19T08:39:10.926242"
+  },
+  {
+    "id": "2601.11147v1",
+    "title": "Do We Always Need Query-Level Workflows? Rethinking Agentic Workflow Generation for Multi-Agent Systems",
+    "abstract": "Multi-Agent Systems (MAS) built on large language models typically solve complex tasks by coordinating multiple agents through workflows. Existing approaches generates workflows either at task level or query level, but their relative costs and benefits remain unclear. After rethinking and empirical analyses, we show that query-level workflow generation is not always necessary, since a small set of top-K best task-level workflows together already covers equivalent or even more queries. We further find that exhaustive execution-based task-level evaluation is both extremely token-costly and frequently unreliable. Inspired by the idea of self-evolution and generative reward modeling, we propose a low-cost task-level generation framework \\textbf{SCALE}, which means \\underline{\\textbf{S}}elf prediction of the optimizer with few shot \\underline{\\textbf{CAL}}ibration for \\underline{\\textbf{E}}valuation instead of full validation execution. Extensive experiments demonstrate that \\textbf{SCALE} maintains competitive performance, with an average degradation of just 0.61\\% compared to existing approach across multiple datasets, while cutting overall token usage by up to 83\\%.",
+    "authors": [
+      "Zixu Wang",
+      "Bingbing Xu",
+      "Yige Yuan",
+      "Huawei Shen",
+      "Xueqi Cheng"
+    ],
+    "published": "2026-01-16",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.11147v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.11147v1",
+    "fetched_at": "2026-01-19T08:39:10.926265"
+  },
+  {
+    "id": "2601.11109v1",
+    "title": "Vision-as-Inverse-Graphics Agent via Interleaved Multimodal Reasoning",
+    "abstract": "Vision-as-inverse-graphics, the concept of reconstructing an image as an editable graphics program is a long-standing goal of computer vision. Yet even strong VLMs aren't able to achieve this in one-shot as they lack fine-grained spatial and physical grounding capability. Our key insight is that closing this gap requires interleaved multimodal reasoning through iterative execution and verification. Stemming from this, we present VIGA (Vision-as-Inverse-Graphic Agent) that starts from an empty world and reconstructs or edits scenes through a closed-loop write-run-render-compare-revise procedure. To support long-horizon reasoning, VIGA combines (i) a skill library that alternates generator and verifier roles and (ii) an evolving context memory that contains plans, code diffs, and render history. VIGA is task-agnostic as it doesn't require auxiliary modules, covering a wide range of tasks such as 3D reconstruction, multi-step scene editing, 4D physical interaction, and 2D document editing, etc. Empirically, we found VIGA substantially improves one-shot baselines on BlenderGym (35.32%) and SlideBench (117.17%). Moreover, VIGA is also model-agnostic as it doesn't require finetuning, enabling a unified protocol to evaluate heterogeneous foundation VLMs. To better support this protocol, we introduce BlenderBench, a challenging benchmark that stress-tests interleaved multimodal reasoning with graphics engine, where VIGA improves by 124.70%.",
+    "authors": [
+      "Shaofeng Yin",
+      "Jiaxin Ge",
+      "Zora Zhiruo Wang",
+      "Xiuyu Li",
+      "Michael J. Black",
+      "Trevor Darrell",
+      "Angjoo Kanazawa",
+      "Haiwen Feng"
+    ],
+    "published": "2026-01-16",
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.GR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.11109v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.11109v1",
+    "fetched_at": "2026-01-19T08:39:10.926293"
+  },
+  {
+    "id": "2601.11100v1",
+    "title": "ReCreate: Reasoning and Creating Domain Agents Driven by Experience",
+    "abstract": "Large Language Model agents are reshaping the industrial landscape. However, most practical agents remain human-designed because tasks differ widely, making them labor-intensive to build. This situation poses a central question: can we automatically create and adapt domain agents in the wild? While several recent approaches have sought to automate agent creation, they typically treat agent generation as a black-box procedure and rely solely on final performance metrics to guide the process. Such strategies overlook critical evidence explaining why an agent succeeds or fails, and often require high computational costs. To address these limitations, we propose ReCreate, an experience-driven framework for the automatic creation of domain agents. ReCreate systematically leverages agent interaction histories, which provide rich concrete signals on both the causes of success or failure and the avenues for improvement. Specifically, we introduce an agent-as-optimizer paradigm that effectively learns from experience via three key components: (i) an experience storage and retrieval mechanism for on-demand inspection; (ii) a reasoning-creating synergy pipeline that maps execution experience into scaffold edits; and (iii) hierarchical updates that abstract instance-level details into reusable domain patterns. In experiments across diverse domains, ReCreate consistently outperforms human-designed agents and existing automated agent generation methods, even when starting from minimal seed scaffolds.",
+    "authors": [
+      "Zhezheng Hao",
+      "Hong Wang",
+      "Jian Luo",
+      "Jianqing Zhang",
+      "Yuyan Zhou",
+      "Qiang Lin",
+      "Can Wang",
+      "Hande Dong",
+      "Jiawei Chen"
+    ],
+    "published": "2026-01-16",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.11100v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.11100v1",
+    "fetched_at": "2026-01-19T08:39:10.926322"
+  },
+  {
+    "id": "2601.11077v1",
+    "title": "ABC-Bench: Benchmarking Agentic Backend Coding in Real-World Development",
+    "abstract": "The evolution of Large Language Models (LLMs) into autonomous agents has expanded the scope of AI coding from localized code generation to complex, repository-level, and execution-driven problem solving. However, current benchmarks predominantly evaluate code logic in static contexts, neglecting the dynamic, full-process requirements of real-world engineering, particularly in backend development which demands rigorous environment configuration and service deployment. To address this gap, we introduce ABC-Bench, a benchmark explicitly designed to evaluate agentic backend coding within a realistic, executable workflow. Using a scalable automated pipeline, we curated 224 practical tasks spanning 8 languages and 19 frameworks from open-source repositories. Distinct from previous evaluations, ABC-Bench require the agents to manage the entire development lifecycle from repository exploration to instantiating containerized services and pass the external end-to-end API tests. Our extensive evaluation reveals that even state-of-the-art models struggle to deliver reliable performance on these holistic tasks, highlighting a substantial disparity between current model capabilities and the demands of practical backend engineering. Our code is available at https://github.com/OpenMOSS/ABC-Bench.",
+    "authors": [
+      "Jie Yang",
+      "Honglin Guo",
+      "Li Ji",
+      "Jiazheng Zhou",
+      "Rui Zheng",
+      "Zhikai Lei",
+      "Shuo Zhang",
+      "Zhiheng Xi",
+      "Shichun Liu",
+      "Yuxin Wang",
+      "Bo Wang",
+      "Yining Zheng",
+      "Tao Gui",
+      "Xipeng Qiu"
+    ],
+    "published": "2026-01-16",
+    "categories": [
+      "cs.SE",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.11077v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.11077v1",
+    "fetched_at": "2026-01-19T08:39:10.926358"
+  },
+  {
+    "id": "2601.11063v1",
+    "title": "H-AIM: Orchestrating LLMs, PDDL, and Behavior Trees for Hierarchical Multi-Robot Planning",
+    "abstract": "In embodied artificial intelligence, enabling heterogeneous robot teams to execute long-horizon tasks from high-level instructions remains a critical challenge. While large language models (LLMs) show promise in instruction parsing and preliminary planning, they exhibit limitations in long-term reasoning and dynamic multi-robot coordination. We propose Hierarchical Autonomous Intelligent Multi-Robot Planning(H-AIM), a novel embodied multi-robot task planning framework that addresses these issues through a three-stage cascaded architecture: 1) It leverages an LLM to parse instructions and generate Planning Domain Definition Language (PDDL) problem descriptions, thereby transforming commands into formal planning problems; 2) It combines the semantic reasoning of LLMs with the search capabilities of a classical planner to produce optimized action sequences; 3) It compiles the resulting plan into behavior trees for reactive control. The framework supports dynamically sized heterogeneous robot teams via a shared blackboard mechanism for communication and state synchronization. To validate our approach, we introduce the MACE-THOR benchmark dataset, comprising 42 complex tasks across 8 distinct household layouts. Experimental results demonstrate that H-AIM achieves a remarkable performance improvement, elevating the task success rate from 12% to 55% and boosting the goal condition recall from 32% to 72% against the strongest baseline, LaMMA-P.",
+    "authors": [
+      "Haishan Zeng",
+      "Peng Li"
+    ],
+    "published": "2026-01-16",
+    "categories": [
+      "cs.RO",
+      "cs.AI",
+      "cs.CV",
+      "cs.LG",
+      "cs.MA"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.11063v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.11063v1",
+    "fetched_at": "2026-01-19T08:39:10.926377"
+  },
+  {
+    "id": "2601.11047v1",
+    "title": "CoG: Controllable Graph Reasoning via Relational Blueprints and Failure-Aware Refinement over Knowledge Graphs",
+    "abstract": "Large Language Models (LLMs) have demonstrated remarkable reasoning capabilities but often grapple with reliability challenges like hallucinations. While Knowledge Graphs (KGs) offer explicit grounding, existing paradigms of KG-augmented LLMs typically exhibit cognitive rigidity--applying homogeneous search strategies that render them vulnerable to instability under neighborhood noise and structural misalignment leading to reasoning stagnation. To address these challenges, we propose CoG, a training-free framework inspired by Dual-Process Theory that mimics the interplay between intuition and deliberation. First, functioning as the fast, intuitive process, the Relational Blueprint Guidance module leverages relational blueprints as interpretable soft structural constraints to rapidly stabilize the search direction against noise. Second, functioning as the prudent, analytical process, the Failure-Aware Refinement module intervenes upon encountering reasoning impasses. It triggers evidence-conditioned reflection and executes controlled backtracking to overcome reasoning stagnation. Experimental results on three benchmarks demonstrate that CoG significantly outperforms state-of-the-art approaches in both accuracy and efficiency.",
+    "authors": [
+      "Yuanxiang Liu",
+      "Songze Li",
+      "Xiaoke Guo",
+      "Zhaoyan Gong",
+      "Qifei Zhang",
+      "Huajun Chen",
+      "Wen Zhang"
+    ],
+    "published": "2026-01-16",
+    "categories": [
+      "cs.CL",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.11047v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.11047v1",
+    "fetched_at": "2026-01-19T08:39:10.926402"
+  },
+  {
+    "id": "2601.11044v1",
+    "title": "AgencyBench: Benchmarking the Frontiers of Autonomous Agents in 1M-Token Real-World Contexts",
+    "abstract": "Large Language Models (LLMs) based autonomous agents demonstrate multifaceted capabilities to contribute substantially to economic production. However, existing benchmarks remain focused on single agentic capability, failing to capture long-horizon real-world scenarios. Moreover, the reliance on human-in-the-loop feedback for realistic tasks creates a scalability bottleneck, hindering automated rollout collection and evaluation. To bridge this gap, we introduce AgencyBench, a comprehensive benchmark derived from daily AI usage, evaluating 6 core agentic capabilities across 32 real-world scenarios, comprising 138 tasks with specific queries, deliverables, and rubrics. These scenarios require an average of 90 tool calls, 1 million tokens, and hours of execution time to resolve. To enable automated evaluation, we employ a user simulation agent to provide iterative feedback, and a Docker sandbox to conduct visual and functional rubric-based assessment. Experiments reveal that closed-source models significantly outperform open-source models (48.4% vs 32.1%). Further analysis reveals significant disparities across models in resource efficiency, feedback-driven self-correction, and specific tool-use preferences. Finally, we investigate the impact of agentic scaffolds, observing that proprietary models demonstrate superior performance within their native ecosystems (e.g., Claude-4.5-Opus via Claude-Agent-SDK), while open-source models exhibit distinct performance peaks, suggesting potential optimization for specific execution frameworks. AgencyBench serves as a critical testbed for next-generation agents, highlighting the necessity of co-optimizing model architecture with agentic frameworks. We believe this work sheds light on the future direction of autonomous agents, and we release the full benchmark and evaluation toolkit at https://github.com/GAIR-NLP/AgencyBench.",
+    "authors": [
+      "Keyu Li",
+      "Junhao Shi",
+      "Yang Xiao",
+      "Mohan Jiang",
+      "Jie Sun",
+      "Yunze Wu",
+      "Shijie Xia",
+      "Xiaojie Cai",
+      "Tianze Xu",
+      "Weiye Si",
+      "Wenjie Li",
+      "Dequan Wang",
+      "Pengfei Liu"
+    ],
+    "published": "2026-01-16",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.11044v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.11044v1",
+    "fetched_at": "2026-01-19T08:39:10.926437"
+  },
+  {
+    "id": "2601.11035v1",
+    "title": "Your One-Stop Solution for AI-Generated Video Detection",
+    "abstract": "Recent advances in generative modeling can create remarkably realistic synthetic videos, making it increasingly difficult for humans to distinguish them from real ones and necessitating reliable detection methods.   However, two key limitations hinder the development of this field.   \\textbf{From the dataset perspective}, existing datasets are often limited in scale and constructed using outdated or narrowly scoped generative models, making it difficult to capture the diversity and rapid evolution of modern generative techniques. Moreover, the dataset construction process frequently prioritizes quantity over quality, neglecting essential aspects such as semantic diversity, scenario coverage, and technological representativeness.   \\textbf{From the benchmark perspective}, current benchmarks largely remain at the stage of dataset creation, leaving many fundamental issues and in-depth analysis yet to be systematically explored.   Addressing this gap, we propose AIGVDBench, a benchmark designed to be comprehensive and representative, covering \\textbf{31} state-of-the-art generation models and over \\textbf{440,000} videos. By executing more than \\textbf{1,500} evaluations on \\textbf{33} existing detectors belonging to four distinct categories. This work presents \\textbf{8 in-depth analyses} from multiple perspectives and identifies \\textbf{4 novel findings} that offer valuable insights for future research. We hope this work provides a solid foundation for advancing the field of AI-generated video detection.   Our benchmark is open-sourced at https://github.com/LongMa-2025/AIGVDBench.",
+    "authors": [
+      "Long Ma",
+      "Zihao Xue",
+      "Yan Wang",
+      "Zhiyuan Yan",
+      "Jin Xu",
+      "Xiaorui Jiang",
+      "Haiyang Yu",
+      "Yong Liao",
+      "Zhen Bi"
+    ],
+    "published": "2026-01-16",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.11035v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.11035v1",
+    "fetched_at": "2026-01-19T08:39:10.926467"
+  },
+  {
+    "id": "2601.10971v1",
+    "title": "AJAR: Adaptive Jailbreak Architecture for Red-teaming",
+    "abstract": "As Large Language Models (LLMs) evolve from static chatbots into autonomous agents capable of tool execution, the landscape of AI safety is shifting from content moderation to action security. However, existing red-teaming frameworks remain bifurcated: they either focus on rigid, script-based text attacks or lack the architectural modularity to simulate complex, multi-turn agentic exploitations. In this paper, we introduce AJAR (Adaptive Jailbreak Architecture for Red-teaming), a proof-of-concept framework designed to bridge this gap through Protocol-driven Cognitive Orchestration. Built upon the robust runtime of Petri, AJAR leverages the Model Context Protocol (MCP) to decouple adversarial logic from the execution loop, encapsulating state-of-the-art algorithms like X-Teaming as standardized, plug-and-play services. We validate the architectural feasibility of AJAR through a controlled qualitative case study, demonstrating its ability to perform stateful backtracking within a tool-use environment. Furthermore, our preliminary exploration of the \"Agentic Gap\" reveals a complex safety dynamic: while tool usage introduces new injection vectors via code execution, the cognitive load of parameter formatting can inadvertently disrupt persona-based attacks. AJAR is open-sourced to facilitate the standardized, environment-aware evaluation of this emerging attack surface. The code and data are available at https://github.com/douyipu/ajar.",
+    "authors": [
+      "Yipu Dou",
+      "Wang Yang"
+    ],
+    "published": "2026-01-16",
+    "categories": [
+      "cs.CR",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.10971v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.10971v1",
+    "fetched_at": "2026-01-19T08:39:10.926484"
+  },
+  {
+    "id": "2601.08689v2",
+    "title": "QuantEval: A Benchmark for Financial Quantitative Tasks in Large Language Models",
+    "abstract": "Large Language Models (LLMs) have shown strong capabilities across many domains, yet their evaluation in financial quantitative tasks remains fragmented and mostly limited to knowledge-centric question answering. We introduce QuantEval, a benchmark that evaluates LLMs across three essential dimensions of quantitative finance: knowledge-based QA, quantitative mathematical reasoning, and quantitative strategy coding. Unlike prior financial benchmarks, QuantEval integrates a CTA-style backtesting framework that executes model-generated strategies and evaluates them using financial performance metrics, enabling a more realistic assessment of quantitative coding ability. We evaluate some state-of-the-art open-source and proprietary LLMs and observe substantial gaps to human experts, particularly in reasoning and strategy coding. Finally, we conduct large-scale supervised fine-tuning and reinforcement learning experiments on domain-aligned data, demonstrating consistent improvements. We hope QuantEval will facilitate research on LLMs' quantitative finance capabilities and accelerate their practical adoption in real-world trading workflows. We additionally release the full deterministic backtesting configuration (asset universe, cost model, and metric definitions) to ensure strict reproducibility.",
+    "authors": [
+      "Zhaolu Kang",
+      "Junhao Gong",
+      "Wenqing Hu",
+      "Shuo Yin",
+      "Kehan Jiang",
+      "Zhicheng Fang",
+      "Yingjie He",
+      "Chunlei Meng",
+      "Rong Fu",
+      "Dongyang Chen",
+      "Leqi Zheng",
+      "Eric Hanchen Jiang",
+      "Yunfei Feng",
+      "Yitong Leng",
+      "Junfan Zhu",
+      "Xiaoyou Chen",
+      "Xi Yang",
+      "Richeng Xuan"
+    ],
+    "published": "2026-01-13",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.08689v2",
+    "arxiv_url": "https://arxiv.org/abs/2601.08689v2",
+    "fetched_at": "2026-01-19T08:40:01.465740"
+  }
+]
