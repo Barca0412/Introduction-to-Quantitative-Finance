@@ -1,0 +1,964 @@
+[
+  {
+    "id": "2601.14139v1",
+    "title": "Log-optimality with small liability stream",
+    "abstract": "In an incomplete financial market with general continuous semimartingale dynamics; we model an investor with log-utility preferences who, in addition to an initial capital, receives units of a non-traded endowment process. Using duality techniques, we derive the fourth-order expansion of the primal value function with respect to the units $ε$, held in the non-traded endowment. In turn, this lays the foundation for expanding the optimal wealth process, in this context, up to second order w.r.t. $ε$. The key processes underpinning the aforementioned results are given in terms of Kunita-Watanabe projections, mirroring the case of lower order expansions of similar nature. Both the case of finite and infinite horizons are treated in a unified manner.",
+    "authors": [
+      "Michail Anthropelos",
+      "Constantinos Kardaras",
+      "Constantinos Stefanakis"
+    ],
+    "published": "2026-01-20",
+    "categories": [
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.14139v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.14139v1",
+    "fetched_at": "2026-01-21T08:37:00.451763"
+  },
+  {
+    "id": "2601.14062v1",
+    "title": "Demystifying the trend of the healthcare index: Is historical price a key driver?",
+    "abstract": "Healthcare sector indices consolidate the economic health of pharmaceutical, biotechnology, and healthcare service firms. The short-term movements in these indices are closely intertwined with capital allocation decisions affecting research and development investment, drug availability, and long-term health outcomes. This research investigates whether historical open-high-low-close (OHLC) index data contain sufficient information for predicting the directional movement of the opening index on the subsequent trading day. The problem is formulated as a supervised classification task involving a one-step-ahead rolling window. A diverse feature set is constructed, comprising original prices, volatility-based technical indicators, and a novel class of nowcasting features derived from mutual OHLC ratios. The framework is evaluated on data from healthcare indices in the U.S. and Indian markets over a five-year period spanning multiple economic phases, including the COVID-19 pandemic. The results demonstrate robust predictive performance, with accuracy exceeding 0.8 and Matthews correlation coefficients above 0.6. Notably, the proposed nowcasting features have emerged as a key determinant of the market movement. We have employed the Shapley-based explainability paradigm to further elucidate the contribution of the features: outcomes reveal the dominant role of the nowcasting features, followed by a more moderate contribution of original prices. This research offers a societal utility: the proposed features and model for short-term forecasting of healthcare indices can reduce information asymmetry and support a more stable and equitable health economy.",
+    "authors": [
+      "Payel Sadhukhan",
+      "Samrat Gupta",
+      "Subhasis Ghosh",
+      "Tanujit Chakraborty"
+    ],
+    "published": "2026-01-20",
+    "categories": [
+      "q-fin.ST",
+      "stat.AP",
+      "stat.ML"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.14062v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.14062v1",
+    "fetched_at": "2026-01-21T08:37:00.451805"
+  },
+  {
+    "id": "2601.14005v1",
+    "title": "Leveraged positions on decentralized lending platforms",
+    "abstract": "We develop a mathematical framework to optimize leveraged staking (\"loopy\") strategies in Decentralized Finance (DeFi), in which a staked asset is supplied as collateral, the underlying is borrowed and re-staked, and the loop can be repeated across multiple lending markets. Exploiting the fact that DeFi borrow rates are deterministic functions of pool utilization, we reduce the multi-market problem to a convex allocation over market exposures and obtain closed-form solutions under three interest-rate models: linear, kinked, and adaptive (Morpho's AdaptiveCurveIRM). The framework incorporates market-specific leverage limits, utilization-dependent borrowing costs, and transaction fees. Backtests on the Ethereum and Base blockchains using the largest Morpho wstETH/WETH markets (from January 1 to April 1, 2025) show that rebalanced leveraged positions can reach up to 6.2% APY versus 3.1% for unleveraged staking, with strong dependence on position size and rebalancing frequency. Our results provide a mathematical basis for transparent, automated DeFi portfolio optimization.",
+    "authors": [
+      "Bastien Baude",
+      "Vincent Danos",
+      "Hamza El Khalloufi"
+    ],
+    "published": "2026-01-20",
+    "categories": [
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.14005v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.14005v1",
+    "fetched_at": "2026-01-21T08:37:00.451831"
+  },
+  {
+    "id": "2601.13770v1",
+    "title": "Look-Ahead-Bench: a Standardized Benchmark of Look-ahead Bias in Point-in-Time LLMs for Finance",
+    "abstract": "We introduce Look-Ahead-Bench, a standardized benchmark measuring look-ahead bias in Point-in-Time (PiT) Large Language Models (LLMs) within realistic and practical financial workflows. Unlike most existing approaches that primarily test inner lookahead knowledge via Q\\\\&A, our benchmark evaluates model behavior in practical scenarios. To distinguish genuine predictive capability from memorization-based performance, we analyze performance decay across temporally distinct market regimes, incorporating several quantitative baselines to establish performance thresholds. We evaluate prominent open-source LLMs -- Llama 3.1 (8B and 70B) and DeepSeek 3.2 -- against a family of Point-in-Time LLMs (Pitinf-Small, Pitinf-Medium, and frontier-level model Pitinf-Large) from PiT-Inference. Results reveal significant lookahead bias in standard LLMs, as measured with alpha decay, unlike Pitinf models, which demonstrate improved generalization and reasoning abilities as they scale in size. This work establishes a foundation for the standardized evaluation of temporal bias in financial LLMs and provides a practical framework for identifying models suitable for real-world deployment. Code is available on GitHub: https://github.com/benstaf/lookaheadbench",
+    "authors": [
+      "Mostapha Benhenda"
+    ],
+    "published": "2026-01-20",
+    "categories": [
+      "cs.AI",
+      "cs.CL",
+      "cs.LG",
+      "q-fin.CP",
+      "q-fin.GN"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.13770v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.13770v1",
+    "fetched_at": "2026-01-21T08:37:00.451853"
+  },
+  {
+    "id": "2601.13493v1",
+    "title": "LQ Mean Field Games with Common Noise in Hilbert Spaces: Small and Arbitrary Finite Time Horizons",
+    "abstract": "We extend the results of (Liu and Firoozi, 2025), which develops the theory of linear-quadratic (LQ) mean field games in Hilbert spaces, by incorporating a common noise. This common noise is an infinite-dimensional Wiener process affecting the dynamics of all agents. In the presence of common noise, the mean-field consistency condition is characterized by a system of coupled forward-backward stochastic evolution equations (FBSEEs) in Hilbert spaces, whereas in its absence, it is represented by forward-backward deterministic evolution equations. We establish the existence and uniqueness of solutions to the coupled linear FBSEEs associated with the LQ MFG setting for small time horizons and prove the $ε$-Nash property of the resulting equilibrium strategy. Furthermore, for the first time in the literature, we develop an analysis that establishes the well-posedness of these coupled linear FBSEEs in Hilbert spaces, for which only mild solutions exist, over arbitrary finite time horizons.",
+    "authors": [
+      "Hanchao Liu",
+      "Dena Firoozi"
+    ],
+    "published": "2026-01-20",
+    "categories": [
+      "math.OC",
+      "math.FA",
+      "math.PR",
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.13493v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.13493v1",
+    "fetched_at": "2026-01-21T08:37:00.451875"
+  },
+  {
+    "id": "2601.13421v1",
+    "title": "Market Making and Transient Impact in Spot FX",
+    "abstract": "Dealers in foreign exchange markets provide bid and ask prices to their clients at which they are happy to buy and sell, respectively. To manage risk, dealers can skew their quotes and hedge in the interbank market. Hedging offers certainty but comes with transaction costs and market impact. Optimal market making with execution has previously been addressed within the Almgren-Chriss market impact model, which includes instantaneous and permanent components. However, there is overwhelming empirical evidence of the transient nature of market impact, with instantaneous and permanent impacts arising as the two limiting cases. In this note, we consider an intermediate scenario and study the interplay between risk management and impact resilience.",
+    "authors": [
+      "Alexander Barzykin"
+    ],
+    "published": "2026-01-19",
+    "categories": [
+      "q-fin.TR",
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.13421v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.13421v1",
+    "fetched_at": "2026-01-21T08:37:00.451893"
+  },
+  {
+    "id": "2601.13281v1",
+    "title": "Spectral Dynamics and Regularization for High-Dimensional Copulas",
+    "abstract": "We introduce a novel model for time-varying, asymmetric, tail-dependent copulas in high dimensions that incorporates both spectral dynamics and regularization. The dynamics of the dependence matrix' eigenvalues are modeled in a score-driven way, while biases in the unconditional eigenvalue spectrum are resolved by non-linear shrinkage. The dynamic parameterization of the copula dependence matrix ensures that it satisfies the appropriate restrictions at all times and for any dimension. The model is parsimonious, computationally efficient, easily scalable to high dimensions, and performs well for both simulated and empirical data. In an empirical application to financial market dynamics using 100 stocks from 10 different countries and 10 different industry sectors, we find that our copula model captures both geographic and industry related co-movements and outperforms recent computationally more intensive clustering-based factor copula alternatives. Both the spectral dynamics and the regularization contribute to the new model's performance. During periods of market stress, we find that the spectral dynamics reveal strong increases in international stock market dependence, which causes reductions in diversification potential and increases in systemic risk.",
+    "authors": [
+      "Koos B. Gubbels",
+      "Andre Lucas"
+    ],
+    "published": "2026-01-19",
+    "categories": [
+      "econ.EM",
+      "q-fin.RM",
+      "stat.AP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.13281v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.13281v1",
+    "fetched_at": "2026-01-21T08:37:00.451914"
+  },
+  {
+    "id": "2601.12990v1",
+    "title": "Beyond Visual Realism: Toward Reliable Financial Time Series Generation",
+    "abstract": "Generative models for financial time series often create data that look realistic and even reproduce stylized facts such as fat tails or volatility clustering. However, these apparent successes break down under trading backtests: models like GANs or WGAN-GP frequently collapse, yielding extreme and unrealistic results that make the synthetic data unusable in practice. We identify the root cause in the neglect of financial asymmetry and rare tail events, which strongly affect market risk but are often overlooked by objectives focusing on distribution matching. To address this, we introduce the Stylized Facts Alignment GAN (SFAG), which converts key stylized facts into differentiable structural constraints and jointly optimizes them with adversarial loss. This multi-constraint design ensures that generated series remain aligned with market dynamics not only in plots but also in backtesting. Experiments on the Shanghai Composite Index (2004--2024) show that while baseline GANs produce unstable and implausible trading outcomes, SFAG generates synthetic data that preserve stylized facts and support robust momentum strategy performance. Our results highlight that structure-preserving objectives are essential to bridge the gap between superficial realism and practical usability in financial generative modeling.",
+    "authors": [
+      "Fan Zhang",
+      "Jiabin Luo",
+      "Zheng Zhang",
+      "Shuanghong Huang",
+      "Zhipeng Liu",
+      "Yu Chen"
+    ],
+    "published": "2026-01-19",
+    "categories": [
+      "q-fin.ST",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.12990v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.12990v1",
+    "fetched_at": "2026-01-21T08:37:00.451941"
+  },
+  {
+    "id": "2601.12839v1",
+    "title": "Knowledge-Integrated Representation Learning for Crypto Anomaly Detection under Extreme Label Scarcity; Relational Domain-Logic Integration with Retrieval-Grounded Context and Path-Level Explanations",
+    "abstract": "Detecting anomalous trajectories in decentralized crypto networks is fundamentally challenged by extreme label scarcity and the adaptive evasion strategies of illicit actors. While Graph Neural Networks (GNNs) effectively capture local structural patterns, they struggle to internalize multi hop, logic driven motifs such as fund dispersal and layering that characterize sophisticated money laundering, limiting their forensic accountability under regulations like the FATF Travel Rule. To address this limitation, we propose Relational Domain Logic Integration (RDLI), a framework that embeds expert derived heuristics as differentiable, logic aware latent signals within representation learning. Unlike static rule based approaches, RDLI enables the detection of complex transactional flows that evade standard message passing. To further account for market volatility, we incorporate a Retrieval Grounded Context (RGC) module that conditions anomaly scoring on regulatory and macroeconomic context, mitigating false positives caused by benign regime shifts. Under extreme label scarcity (0.01%), RDLI outperforms state of the art GNN baselines by 28.9% in F1 score. A micro expert user study further confirms that RDLI path level explanations significantly improve trustworthiness, perceived usefulness, and clarity compared to existing methods, highlighting the importance of integrating domain logic with contextual grounding for both accuracy and explainability.",
+    "authors": [
+      "Gyuyeon Na",
+      "Minjung Park",
+      "Soyoun Kim",
+      "Jungbin Shin",
+      "Sangmi Chai"
+    ],
+    "published": "2026-01-19",
+    "categories": [
+      "cs.LG",
+      "q-fin.RM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.12839v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.12839v1",
+    "fetched_at": "2026-01-21T08:37:00.451966"
+  },
+  {
+    "id": "2601.12655v1",
+    "title": "Optimal Underreporting and Competitive Equilibrium",
+    "abstract": "This paper develops a dynamic insurance market model comprising two competing insurance companies and a continuum of insureds, and examines the interaction between strategic underreporting by the insureds and competitive pricing between the insurance companies under a Bonus-Malus System (BMS) framework. For the first time in an oligopolistic setting, we establish the existence and uniqueness of the insureds' optimal reporting barrier, as well as its continuous dependence on the BMS premiums. For the 2-class BMS case, we prove the existence of Nash equilibrium premium strategies and conduct an extensive sensitivity analysis on the impact of the model parameters on the equilibrium premiums.",
+    "authors": [
+      "Zongxia Liang",
+      "Jiayu Zhang",
+      "Zhou Zhou",
+      "Bin Zou"
+    ],
+    "published": "2026-01-19",
+    "categories": [
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.12655v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.12655v1",
+    "fetched_at": "2026-01-21T08:37:00.451994"
+  },
+  {
+    "id": "2601.12541v1",
+    "title": "Admissible Information Structures and the Non-Existence of Global Martingale Pricing",
+    "abstract": "No-arbitrage asset pricing characterizes valuation through the existence of equivalent martingale measures relative to a filtration and a class of admissible trading strategies. In practice, pricing is performed across multiple asset classes driven by economic variables that are only partially spanned by traded instruments, raising a structural question: does there exist a single admissible information structure under which all traded assets can be jointly priced as martingales?. We treat the filtration as an endogenous object constrained by admissibility and time-ordering, rather than as an exogenous primitive. For any finite collection of assets, whenever martingale pricing is feasible under some admissible filtration, it is already feasible under a canonical minimal filtration generated by the asset prices themselves; these pricing-sufficient filtrations are unique up to null sets and stable under restriction and aggregation when a common pricing measure exists. Our main result shows that this local compatibility does not extend globally: with three independent unspanned finite-variation drivers, there need not exist any admissible filtration and equivalent measure under which all assets are jointly martingales. The obstruction is sharp (absent with one driver and compatible pairwise with two) and equivalent to failure of admissible dynamic completeness. We complement the theory with numerical diagnostics based on discrete-time Doob--Meyer decompositions, illustrating how admissible information structures suppress predictable components, while inadmissible filtrations generate systematic predictability.",
+    "authors": [
+      "Alejandro Rodriguez Dominguez"
+    ],
+    "published": "2026-01-18",
+    "categories": [
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.12541v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.12541v1",
+    "fetched_at": "2026-01-21T08:37:00.452012"
+  },
+  {
+    "id": "2601.12414v1",
+    "title": "On the Order Between the Standard Deviation and Gini Mean Difference",
+    "abstract": "In this paper, we study the order between the standard deviation (SD) and the Gini mean difference (GMD) and derive sharp, interpretable sufficient conditions under which one exceeds the other. By expressing both the SD and the GMD in terms of pairwise differences and linking their comparison to the mean excess function of the absolute difference of two i.i.d.\\ copies, we reduce the problem to structural properties of the underlying distribution. Using tools from reliability and survival analysis, we show that SD dominance arises under heavy-tailed regimes, characterized by decreasing hazard rates or increasing reverse hazard rates. Conversely, when both tails are light -- equivalently, when the hazard rate is increasing and the reverse hazard rate is decreasing -- the GMD dominates the SD.   We further demonstrate that these dominance relations are preserved under affine transformations, mixtures, convolutions, and tail truncation, and we extend the analysis to discrete distributions. Numerous examples illustrate the sharpness of the results and highlight the distinct roles played by tail behavior and distributional regularity. Our findings provide a unified framework for understanding dispersion ordering and offer clear guidance for the choice of variability measures in risk-sensitive applications.",
+    "authors": [
+      "Nawaf Mohammed"
+    ],
+    "published": "2026-01-18",
+    "categories": [
+      "q-fin.RM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.12414v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.12414v1",
+    "fetched_at": "2026-01-21T08:37:00.452031"
+  },
+  {
+    "id": "2601.12175v1",
+    "title": "Distributional Fitting and Tail Analysis of Lead-Time Compositions: Nights vs. Revenue on Airbnb",
+    "abstract": "We analyze daily lead-time distributions for two Airbnb demand metrics, Nights Booked (volume) and Gross Booking Value (revenue), treating each day's allocation across 0-365 days as a compositional vector. The data span 2,557 days from January 2019 through December 2025 in a large North American region. Three findings emerge. First, GBV concentrates more heavily in mid-range horizons: beyond 90 days, GBV tail mass typically exceeds Nights by 20-50%, with ratios reaching 75% at the 180-day threshold during peak seasons. Second, Gamma and Weibull distributions fit comparably well under interval-censored cross-entropy. Gamma wins on 61% of days for Nights and 52% for GBV, with Weibull close behind at 38% and 45%. Lognormal rarely wins (<3%). Nonparametric GAMs achieve 18-80x lower CRPS but sacrifice interpretability. Third, generalized Pareto fits suggest bounded tails for both metrics at thresholds below 150 days, though this may partly reflect right-truncation at 365 days; above 150 days, estimates destabilize. Bai-Perron tests with HAC standard errors identify five structural breaks in the Wasserstein distance series, with early breaks coinciding with COVID-19 disruptions. The results show that volume and revenue lead-time shapes diverge systematically, that simple two-parameter distributions capture daily pmfs adequately, and that tail inference requires care near truncation boundaries.",
+    "authors": [
+      "Harrison E. Katz",
+      "Jess Needleman",
+      "Liz Medina"
+    ],
+    "published": "2026-01-17",
+    "categories": [
+      "q-fin.ST",
+      "stat.AP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.12175v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.12175v1",
+    "fetched_at": "2026-01-21T08:37:00.452052"
+  },
+  {
+    "id": "2601.11958v1",
+    "title": "Autonomous Market Intelligence: Agentic AI Nowcasting Predicts Stock Returns",
+    "abstract": "Can fully agentic AI nowcast stock returns? We deploy a state-of-the-art Large Language Model to evaluate the attractiveness of each Russell 1000 stock daily, starting from April 2025 when AI web interfaces enabled real-time search. Our data contribution is unique along three dimensions. First, the nowcasting framework is completely out-of-sample and free of look-ahead bias by construction: predictions are collected at the current edge of time, ensuring the AI has no knowledge of future outcomes. Second, this temporal design is irreproducible -- once the information environment passes, it can never be recreated. Third, our framework is 100% agentic: we do not feed the model news, disclosures, or curated text; it autonomously searches the web, filters sources, and synthesises information into quantitative predictions. We find that AI possesses genuine stock selection ability, but only for identifying top winners. Longing the 20 highest-ranked stocks generates a daily Fama-French five-factor plus momentum alpha of 18.4 basis points and an annualised Sharpe ratio of 2.43. Critically, these returns derive from an implementable strategy trading highly liquid Russell 1000 constituents, with transaction costs representing less than 10\\% of gross alpha. However, this predictability is highly concentrated: expanding beyond the top tier rapidly dilutes alpha, and bottom-ranked stocks exhibit returns statistically indistinguishable from the market. We hypothesise that this asymmetry reflects online information structure: genuinely positive news generates coherent signals, while negative news is contaminated by strategic corporate obfuscation and social media noise.",
+    "authors": [
+      "Zefeng Chen",
+      "Darcy Pu"
+    ],
+    "published": "2026-01-17",
+    "categories": [
+      "q-fin.GN",
+      "q-fin.PM",
+      "q-fin.TR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.11958v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.11958v1",
+    "fetched_at": "2026-01-21T08:37:00.452073"
+  },
+  {
+    "id": "2601.11209v2",
+    "title": "SANOS Smooth strictly Arbitrage-free Non-parametric Option Surfaces",
+    "abstract": "We present a simple, numerically efficient but highly flexible non-parametric method to construct representations of option price surfaces which are both smooth and strictly arbitrage-free across time and strike. The method can be viewed as a smooth generalization of the widely-known linear interpolation scheme, and retains the simplicity and transparency of that baseline. Calibration of the model to observed market quotes is formulated as a linear program, allowing bid-ask spreads to be incorporated directly via linear penalties or inequalities, and delivering materially lower computational cost than most of the currently available implied-volatility surface fitting routines. As a further contribution, we derive an equivalent parameterization of the proposed surface in terms of strictly positive \"discrete local volatility\" variables. This yields, to our knowledge, the first construction of smooth, strictly arbitrage-free option price surfaces while requiring only trivial parameter constraints (positivity). We illustrate the approach using S&P 500 index options",
+    "authors": [
+      "Hans Buehler",
+      "Blanka Horvath",
+      "Anastasis Kratsios",
+      "Yannick Limmer",
+      "Raeid Saqur"
+    ],
+    "published": "2026-01-16",
+    "categories": [
+      "q-fin.CP",
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.11209v2",
+    "arxiv_url": "https://arxiv.org/abs/2601.11209v2",
+    "fetched_at": "2026-01-21T08:37:00.452156"
+  },
+  {
+    "id": "2601.09949v2",
+    "title": "Kinematic Tokenization: Optimization-Based Continuous-Time Tokens for Learnable Decision Policies in Noisy Time Series",
+    "abstract": "Transformers are designed for discrete tokens, yet many real-world signals are continuous processes observed through noisy sampling. Discrete tokenizations (raw values, patches, finite differences) can be brittle in low signal-to-noise regimes, especially when downstream objectives impose asymmetric penalties that rationally encourage abstention. We introduce Kinematic Tokenization, an optimization-based continuous-time representation that reconstructs an explicit spline from noisy measurements and tokenizes local spline coefficients (position, velocity, acceleration, jerk). This is applied to financial time series data in the form of asset prices in conjunction with trading volume profiles. Across a multi-asset daily-equity testbed, we use a risk-averse asymmetric classification objective as a stress test for learnability. Under this objective, several discrete baselines collapse to an absorbing cash policy (the Liquidation Equilibrium), whereas the continuous spline tokens sustain calibrated, non-trivial action distributions and stable policies. These results suggest that explicit continuous-time tokens can improve the learnability and calibration of selective decision policies in noisy time series under abstention-inducing losses.",
+    "authors": [
+      "Griffin Kearney"
+    ],
+    "published": "2026-01-15",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "math.OC"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.09949v2",
+    "arxiv_url": "https://arxiv.org/abs/2601.09949v2",
+    "fetched_at": "2026-01-21T08:37:03.599239"
+  },
+  {
+    "id": "2601.12213v1",
+    "title": "One-Sided Matrix Completion from Ultra-Sparse Samples",
+    "abstract": "Matrix completion is a classical problem that has received recurring interest across a wide range of fields. In this paper, we revisit this problem in an ultra-sparse sampling regime, where each entry of an unknown, $n\\times d$ matrix $M$ (with $n \\ge d$) is observed independently with probability $p = C / d$, for a fixed integer $C \\ge 2$. This setting is motivated by applications involving large, sparse panel datasets, where the number of rows far exceeds the number of columns. When each row contains only $C$ entries -- fewer than the rank of $M$ -- accurate imputation of $M$ is impossible. Instead, we estimate the row span of $M$ or the averaged second-moment matrix $T = M^{\\top} M / n$.   The empirical second-moment matrix computed from observed entries exhibits non-random and sparse missingness. We propose an unbiased estimator that normalizes each nonzero entry of the second moment by its observed frequency, followed by gradient descent to impute the missing entries of $T$. The normalization divides a weighted sum of $n$ binomial random variables by the total number of ones. We show that the estimator is unbiased for any $p$ and enjoys low variance. When the row vectors of $M$ are drawn uniformly from a rank-$r$ factor model satisfying an incoherence condition, we prove that if $n \\ge O({d r^5 ε^{-2} C^{-2} \\log d})$, any local minimum of the gradient-descent objective is approximately global and recovers $T$ with error at most $ε^2$.   Experiments on both synthetic and real-world data validate our approach. On three MovieLens datasets, our algorithm reduces bias by $88\\%$ relative to baseline estimators. We also empirically validate the linear sampling complexity of $n$ relative to $d$ on synthetic data. On an Amazon reviews dataset with sparsity $10^{-7}$, our method reduces the recovery error of $T$ by $59\\%$ and $M$ by $38\\%$ compared to baseline methods.",
+    "authors": [
+      "Hongyang R. Zhang",
+      "Zhenshuo Zhang",
+      "Huy L. Nguyen",
+      "Guanghui Lan"
+    ],
+    "published": "2026-01-18",
+    "categories": [
+      "cs.LG",
+      "math.OC",
+      "stat.ML"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.12213v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.12213v1",
+    "fetched_at": "2026-01-21T08:37:06.745382"
+  },
+  {
+    "id": "2601.12039v1",
+    "title": "Nonlinear Dynamic Factor Analysis With a Transformer Network",
+    "abstract": "The paper develops a Transformer architecture for estimating dynamic factors from multivariate time series data under flexible identification assumptions. Performance on small datasets is improved substantially by using a conventional factor model as prior information via a regularization term in the training objective. The results are interpreted with Attention matrices that quantify the relative importance of variables and their lags for the factor estimate. Time variation in Attention patterns can help detect regime switches and evaluate narratives. Monte Carlo experiments suggest that the Transformer is more accurate than the linear factor model, when the data deviate from linear-Gaussian assumptions. An empirical application uses the Transformer to construct a coincident index of U.S. real economic activity.",
+    "authors": [
+      "Oliver Snellman"
+    ],
+    "published": "2026-01-17",
+    "categories": [
+      "econ.EM",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.12039v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.12039v1",
+    "fetched_at": "2026-01-21T08:37:06.745412"
+  },
+  {
+    "id": "2601.13748v1",
+    "title": "EEG-Titans: Long-Horizon Seizure Forecasting via Dual-Branch Attention and Neural Memory",
+    "abstract": "Accurate epileptic seizure prediction from electroencephalography (EEG) remains challenging because pre-ictal dynamics may span long time horizons while clinically relevant signatures can be subtle and transient. Many deep learning models face a persistent trade-off between capturing local spatiotemporal patterns and maintaining informative long-range context when operating on ultralong sequences. We propose EEG-Titans, a dualbranch architecture that incorporates a modern neural memory mechanism for long-context modeling. The model combines sliding-window attention to capture short-term anomalies with a recurrent memory pathway that summarizes slower, progressive trends over time. On the CHB-MIT scalp EEG dataset, evaluated under a chronological holdout protocol, EEG-Titans achieves 99.46% average segment-level sensitivity across 18 subjects. We further analyze safety-first operating points on artifact-prone recordings and show that a hierarchical context strategy extending the receptive field for high-noise subjects can markedly reduce false alarms (down to 0.00 FPR/h in an extreme outlier) without sacrificing sensitivity. These results indicate that memory-augmented long-context modeling can provide robust seizure forecasting under clinically constrained evaluation",
+    "authors": [
+      "Tien-Dat Pham",
+      "Xuan-The Tran"
+    ],
+    "published": "2026-01-20",
+    "categories": [
+      "cs.LG",
+      "cs.HC"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.13748v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.13748v1",
+    "fetched_at": "2026-01-21T08:37:13.029776"
+  },
+  {
+    "id": "2601.13644v1",
+    "title": "Towards Token-Level Text Anomaly Detection",
+    "abstract": "Despite significant progress in text anomaly detection for web applications such as spam filtering and fake news detection, existing methods are fundamentally limited to document-level analysis, unable to identify which specific parts of a text are anomalous. We introduce token-level anomaly detection, a novel paradigm that enables fine-grained localization of anomalies within text. We formally define text anomalies at both document and token-levels, and propose a unified detection framework that operates across multiple levels. To facilitate research in this direction, we collect and annotate three benchmark datasets spanning spam, reviews and grammar errors with token-level labels. Experimental results demonstrate that our framework get better performance than other 6 baselines, opening new possibilities for precise anomaly localization in text. All the codes and data are publicly available on https://github.com/charles-cao/TokenCore.",
+    "authors": [
+      "Yang Cao",
+      "Bicheng Yu",
+      "Sikun Yang",
+      "Ming Liu",
+      "Yujiu Yang"
+    ],
+    "published": "2026-01-20",
+    "categories": [
+      "cs.CL",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.13644v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.13644v1",
+    "fetched_at": "2026-01-21T08:37:13.029813"
+  },
+  {
+    "id": "2601.13546v1",
+    "title": "ChatAD: Reasoning-Enhanced Time-Series Anomaly Detection with Multi-Turn Instruction Evolution",
+    "abstract": "LLM-driven Anomaly Detection (AD) helps enhance the understanding and explanatory abilities of anomalous behaviors in Time Series (TS). Existing methods face challenges of inadequate reasoning ability, deficient multi-turn dialogue capability, and narrow generalization. To this end, we 1) propose a multi-agent-based TS Evolution algorithm named TSEvol. On top of it, we 2) introduce the AD reasoning and multi-turn dialogue Dataset TSEData-20K and contribute the Chatbot family for AD, including ChatAD-Llama3-8B, Qwen2.5-7B, and Mistral-7B. Furthermore, 3) we propose the TS Kahneman-Tversky Optimization (TKTO) to enhance ChatAD's cross-task generalization capability. Lastly, 4) we propose a LLM-driven Learning-based AD Benchmark LLADBench to evaluate the performance of ChatAD and nine baselines across seven datasets and tasks. Our three ChatAD models achieve substantial gains, up to 34.50% in accuracy, 34.71% in F1, and a 37.42% reduction in false positives. Besides, via KTKO, our optimized ChatAD achieves competitive performance in reasoning and cross-task generalization on classification, forecasting, and imputation.",
+    "authors": [
+      "Hui Sun",
+      "Chang Xu",
+      "Haonan Xie",
+      "Hao Li",
+      "Yuhao Huang",
+      "Chuheng Zhang",
+      "Ming Jin",
+      "Xiaoguang Liu",
+      "Gang Wang",
+      "Jiang Bian"
+    ],
+    "published": "2026-01-20",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.13546v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.13546v1",
+    "fetched_at": "2026-01-21T08:37:13.029849"
+  },
+  {
+    "id": "2601.12866v1",
+    "title": "PDFInspect: A Unified Feature Extraction Framework for Malicious Document Detection",
+    "abstract": "The increasing prevalence of malicious Portable Document Format (PDF) files necessitates robust and comprehensive feature extraction techniques for effective detection and analysis. This work presents a unified framework that integrates graph-based, structural, and metadata-driven analysis to generate a rich feature representation for each PDF document. The system extracts text from PDF pages and constructs undirected graphs based on pairwise word relationships, enabling the computation of graph-theoretic features such as node count, edge density, and clustering coefficient. Simultaneously, the framework parses embedded metadata to quantify character distributions, entropy patterns, and inconsistencies across fields such as author, title, and producer. Temporal features are derived from creation and modification timestamps to capture behavioral signatures, while structural elements including, object streams, fonts, and embedded images, are quantified to reflect document complexity. Boolean flags for potentially malicious PDF constructs (e.g., JavaScript, launch actions) are also extracted. Together, these features form a high-dimensional vector representation (170 dimensions) that is well-suited for downstream tasks such as malware classification, anomaly detection, and forensic analysis. The proposed approach is scalable, extensible, and designed to support real-world PDF threat intelligence workflows.6",
+    "authors": [
+      "Sharmila S P"
+    ],
+    "published": "2026-01-19",
+    "categories": [
+      "cs.CR",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.12866v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.12866v1",
+    "fetched_at": "2026-01-21T08:37:13.029868"
+  },
+  {
+    "id": "2601.12745v1",
+    "title": "A Graph Prompt Fine-Tuning Method for WSN Spatio-Temporal Correlation Anomaly Detection",
+    "abstract": "Anomaly detection of multi-temporal modal data in Wireless Sensor Network (WSN) can provide an important guarantee for reliable network operation. Existing anomaly detection methods in multi-temporal modal data scenarios have the problems of insufficient extraction of spatio-temporal correlation features, high cost of anomaly sample category annotation, and imbalance of anomaly samples. In this paper, a graph neural network anomaly detection backbone network incorporating spatio-temporal correlation features and a multi-task self-supervised training strategy of \"pre-training - graph prompting - fine-tuning\" are designed for the characteristics of WSN graph structure data. First, the anomaly detection backbone network is designed by improving the Mamba model based on a multi-scale strategy and inter-modal fusion method, and combining it with a variational graph convolution module, which is capable of fully extracting spatio-temporal correlation features in the multi-node, multi-temporal modal scenarios of WSNs. Secondly, we design a three-subtask learning \"pre-training\" method with no-negative comparative learning, prediction, and reconstruction to learn generic features of WSN data samples from unlabeled data, and design a \"graph prompting-fine-tuning\" mechanism to guide the pre-trained self-supervised learning. The model is fine-tuned through the \"graph prompting-fine-tuning\" mechanism to guide the pre-trained self-supervised learning model to complete the parameter fine-tuning, thereby reducing the training cost and enhancing the detection generalization performance. The F1 metrics obtained from experiments on the public dataset and the actual collected dataset are up to 91.30% and 92.31%, respectively, which provides better detection performance and generalization ability than existing methods designed by the method.",
+    "authors": [
+      "Miao Ye",
+      "Jing Cui",
+      "Yuan huang",
+      "Qian He",
+      "Yong Wang",
+      "Jiwen Zhang"
+    ],
+    "published": "2026-01-19",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.12745v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.12745v1",
+    "fetched_at": "2026-01-21T08:37:13.029923"
+  },
+  {
+    "id": "2601.12667v1",
+    "title": "Empowering All-in-Loop Health Management of Spacecraft Power System in the Mega-Constellation Era via Human-AI Collaboration",
+    "abstract": "It is foreseeable that the number of spacecraft will increase exponentially, ushering in an era dominated by satellite mega-constellations (SMC). This necessitates a focus on energy in space: spacecraft power systems (SPS), especially their health management (HM), given their role in power supply and high failure rates. Providing health management for dozens of SPS and for thousands of SPS represents two fundamentally different paradigms. Therefore, to adapt the health management in the SMC era, this work proposes a principle of aligning underlying capabilities (AUC principle) and develops SpaceHMchat, an open-source Human-AI collaboration (HAIC) framework for all-in-loop health management (AIL HM). SpaceHMchat serves across the entire loop of work condition recognition, anomaly detection, fault localization, and maintenance decision making, achieving goals such as conversational task completion, adaptive human-in-the-loop learning, personnel structure optimization, knowledge sharing, efficiency enhancement, as well as transparent reasoning and improved interpretability. Meanwhile, to validate this exploration, a hardware-realistic fault injection experimental platform is established, and its simulation model is built and open-sourced, both fully replicating the real SPS. The corresponding experimental results demonstrate that SpaceHMchat achieves excellent performance across 23 quantitative metrics, such as 100% conclusion accuracy in logical reasoning of work condition recognition, over 99% success rate in anomaly detection tool invocation, over 90% precision in fault localization, and knowledge base search time under 3 minutes in maintenance decision-making. Another contribution of this work is the release of the first-ever AIL HM dataset of SPS. This dataset contains four sub-datasets, involving 4 types of AIL HM sub-tasks, 17 types of faults, and over 700,000 timestamps.",
+    "authors": [
+      "Yi Di",
+      "Zhibin Zhao",
+      "Fujin Wang",
+      "Xue Liu",
+      "Jiafeng Tang",
+      "Jiaxin Ren",
+      "Zhi Zhai",
+      "Xuefeng Chen"
+    ],
+    "published": "2026-01-19",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.12667v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.12667v1",
+    "fetched_at": "2026-01-21T08:37:13.029954"
+  },
+  {
+    "id": "2601.12660v1",
+    "title": "Toward Faithful Explanations in Acoustic Anomaly Detection",
+    "abstract": "Interpretability is essential for user trust in real-world anomaly detection applications. However, deep learning models, despite their strong performance, often lack transparency. In this work, we study the interpretability of autoencoder-based models for audio anomaly detection, by comparing a standard autoencoder (AE) with a mask autoencoder (MAE) in terms of detection performance and interpretability. We applied several attribution methods, including error maps, saliency maps, SmoothGrad, Integrated Gradients, GradSHAP, and Grad-CAM. Although MAE shows a slightly lower detection, it consistently provides more faithful and temporally precise explanations, suggesting a better alignment with true anomalies. To assess the relevance of the regions highlighted by the explanation method, we propose a perturbation-based faithfulness metric that replaces them with their reconstructions to simulate normal input. Our findings, based on experiments in a real industrial scenario, highlight the importance of incorporating interpretability into anomaly detection pipelines and show that masked training improves explanation quality without compromising performance.",
+    "authors": [
+      "Maab Elrashid",
+      "Anthony Deschênes",
+      "Cem Subakan",
+      "Mirco Ravanelli",
+      "Rémi Georges",
+      "Michael Morin"
+    ],
+    "published": "2026-01-19",
+    "categories": [
+      "cs.SD",
+      "cs.LG",
+      "eess.AS"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.12660v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.12660v1",
+    "fetched_at": "2026-01-21T08:37:13.029981"
+  },
+  {
+    "id": "2601.12426v1",
+    "title": "Graph Attention Networks with Physical Constraints for Anomaly Detection",
+    "abstract": "Water distribution systems (WDSs) face increasing cyber-physical risks, which make reliable anomaly detection essential. Many data-driven models ignore network topology and are hard to interpret, while model-based ones depend strongly on parameter accuracy. This work proposes a hydraulic-aware graph attention network using normalized conservation law violations as features. It combines mass and energy balance residuals with graph attention and bidirectional LSTM to learn spatio-temporal patterns. A multi-scale module aggregates detection scores from node to network level. On the BATADAL dataset, it reaches $F1=0.979$, showing $3.3$pp gain and high robustness under $15\\%$ parameter noise.",
+    "authors": [
+      "Mohammadhossein Homaei",
+      "Iman Khazrak",
+      "Ruben Molano",
+      "Andres Caro",
+      "Mar Avila"
+    ],
+    "published": "2026-01-18",
+    "categories": [
+      "cs.LG",
+      "cs.CR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.12426v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.12426v1",
+    "fetched_at": "2026-01-21T08:37:13.030057"
+  },
+  {
+    "id": "2601.12286v1",
+    "title": "Conversational Context Classification: A Representation Engineering Approach",
+    "abstract": "The increasing prevalence of Large Language Models (LLMs) demands effective safeguards for their operation, particularly concerning their tendency to generate out-of-context responses. A key challenge is accurately detecting when LLMs stray from expected conversational norms, manifesting as topic shifts, factual inaccuracies, or outright hallucinations. Traditional anomaly detection struggles to directly apply within contextual semantics. This paper outlines our experiment in exploring the use of Representation Engineering (RepE) and One-Class Support Vector Machine (OCSVM) to identify subspaces within the internal states of LLMs that represent a specific context. By training OCSVM on in-context examples, we establish a robust boundary within the LLM's hidden state latent space. We evaluate out study with two open source LLMs - Llama and Qwen models in specific contextual domain. Our approach entailed identifying the optimal layers within the LLM's internal state subspaces that strongly associates with the context of interest. Our evaluation results showed promising results in identifying the subspace for a specific context. Aside from being useful in detecting in or out of context conversation threads, this research work contributes to the study of better interpreting LLMs.",
+    "authors": [
+      "Jonathan Pan"
+    ],
+    "published": "2026-01-18",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.CR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.12286v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.12286v1",
+    "fetched_at": "2026-01-21T08:37:13.030075"
+  },
+  {
+    "id": "2601.12231v1",
+    "title": "Wavelet-Aware Anomaly Detection in Multi-Channel User Logs via Deviation Modulation and Resolution-Adaptive Attention",
+    "abstract": "Insider threat detection is a key challenge in enterprise security, relying on user activity logs that capture rich and complex behavioral patterns. These logs are often multi-channel, non-stationary, and anomalies are rare, making anomaly detection challenging. To address these issues, we propose a novel framework that integrates wavelet-aware modulation, multi-resolution wavelet decomposition, and resolution-adaptive attention for robust anomaly detection. Our approach first applies a deviation-aware modulation scheme to suppress routine behaviors while amplifying anomalous deviations. Next, discrete wavelet transform (DWT) decomposes the log signals into multi-resolution representations, capturing both long-term trends and short-term anomalies. Finally, a learnable attention mechanism dynamically reweights the most discriminative frequency bands for detection. On the CERT r4.2 benchmark, our approach consistently outperforms existing baselines in precision, recall, and F1 score across various time granularities and scenarios.",
+    "authors": [
+      "Kaichuan Kong",
+      "Dongjie Liu",
+      "Xiaobo Jin",
+      "Shijie Xu",
+      "Guanggang Geng"
+    ],
+    "published": "2026-01-18",
+    "categories": [
+      "cs.LG",
+      "cs.CR",
+      "stat.CO"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.12231v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.12231v1",
+    "fetched_at": "2026-01-21T08:37:13.030101"
+  },
+  {
+    "id": "2601.11998v1",
+    "title": "Hybrid IDS Using Signature-Based and Anomaly-Based Detection",
+    "abstract": "Intrusion detection systems (IDS) are essential for protecting computer systems and networks against a wide range of cyber threats that continue to evolve over time. IDS are commonly categorized into two main types, each with its own strengths and limitations, such as difficulty in detecting previously unseen attacks and the tendency to generate high false positive rates. This paper presents a comprehensive survey and a conceptual overview of Hybrid IDS, which integrate signature-based and anomaly-based detection techniques to enhance attack detection capabilities. The survey examines recent research on Hybrid IDS, classifies existing models into functional categories, and discusses their advantages, limitations, and application domains, including financial systems, air traffic control, and social networks. In addition, recent trends in Hybrid IDS research, such as machine learning-based approaches and cloud-based deployments, are reviewed. Finally, this work outlines potential future research directions aimed at developing more cost-effective Hybrid IDS solutions with improved ability to detect emerging and sophisticated cyberattacks.",
+    "authors": [
+      "Messaouda Boutassetta",
+      "Amina Makhlouf",
+      "Newfel Messaoudi",
+      "Abdelmadjid Benmachiche",
+      "Ines Boutabia"
+    ],
+    "published": "2026-01-17",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.11998v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.11998v1",
+    "fetched_at": "2026-01-21T08:37:13.030125"
+  },
+  {
+    "id": "2601.11937v1",
+    "title": "Impact of Circuit Depth versus Qubit Count on Variational Quantum Classifiers for Higgs Boson Signal Detection",
+    "abstract": "High-Energy Physics (HEP) experiments, such as those at the Large Hadron Collider (LHC), generate massive datasets that challenge classical computational limits. Quantum Machine Learning (QML) offers a potential advantage in processing high-dimensional data; however, finding the optimal architecture for current Noisy Intermediate-Scale Quantum (NISQ) devices remains an open challenge. This study investigates the performance of Variational Quantum Classifiers (VQC) in detecting Higgs Boson signals using the ATLAS Higgs Boson Machine Learning Challenge 2014 experiment dataset. We implemented a dimensionality reduction pipeline using Principal Component Analysis (PCA) to map 30 physical features into 4-qubit and 8-qubit latent spaces. We benchmarked three configurations: (A) a shallow 4-qubit circuit, (B) a deep 4-qubit circuit with increased entanglement layers, and (C) an expanded 8-qubit circuit. Experimental results demonstrate that increasing circuit depth significantly improves performance, yielding the highest accuracy of 56.2% (Configuration B), compared to a baseline of 51.9%. Conversely, simply scaling to 8 qubits resulted in a performance degradation to 50.6% due to optimization challenges associated with Barren Plateaus in the larger Hilbert space. These findings suggest that for near-term quantum hardware, prioritizing circuit depth and entanglement capability is more critical than increasing qubit count for effective anomaly detection in HEP data.",
+    "authors": [
+      "Fatih Maulana"
+    ],
+    "published": "2026-01-17",
+    "categories": [
+      "quant-ph",
+      "cs.LG",
+      "hep-ex"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.11937v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.11937v1",
+    "fetched_at": "2026-01-21T08:37:13.030143"
+  },
+  {
+    "id": "2601.11833v1",
+    "title": "Karhunen-Loève Expansion-Based Residual Anomaly Map for Resource-Efficient Glioma MRI Segmentation",
+    "abstract": "Accurate segmentation of brain tumors is essential for clinical diagnosis and treatment planning. Deep learning is currently the state-of-the-art for brain tumor segmentation, yet it requires either large datasets or extensive computational resources that are inaccessible in most areas. This makes the problem increasingly difficult: state-of-the-art models use thousands of training cases and vast computational power, where performance drops sharply when either is limited. The top performer in the Brats GLI 2023 competition relied on supercomputers trained on over 92,000 augmented MRI scans using an AMD EPYC 7402 CPU, six NVIDIA RTX 6000 GPUs (48GB VRAM each), and 1024GB of RAM over multiple weeks. To address this, the Karhunen--Loève Expansion (KLE) was implemented as a feature extraction step on downsampled, z-score normalized MRI volumes. Each 240$\\times$240$\\times$155 multi-modal scan is reduced to four $48^3$ channels and compressed into 32 KL coefficients. The resulting approximate reconstruction enables a residual-based anomaly map, which is upsampled and added as a fifth channel to a compact 3D U-Net. All experiments were run on a consumer workstation (AMD Ryzen 5 7600X CPU, RTX 4060Ti (8GB VRAM), and 64GB RAM while using far fewer training cases. This model achieves post-processed Dice scores of 0.929 (WT), 0.856 (TC), and 0.821 (ET), with HD95 distances of 2.93, 6.78, and 10.35 voxels. These results are significantly better than the winning BraTS 2023 methodology for HD95 distances and WT dice scores. This demonstrates that a KLE-based residual anomaly map can dramatically reduce computational cost and data requirements while retaining state-of-the-art performance.",
+    "authors": [
+      "Anthony Hur"
+    ],
+    "published": "2026-01-16",
+    "categories": [
+      "q-bio.QM",
+      "cs.CV",
+      "cs.LG",
+      "eess.IV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.11833v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.11833v1",
+    "fetched_at": "2026-01-21T08:37:13.030161"
+  },
+  {
+    "id": "2601.11816v1",
+    "title": "POLARIS: Typed Planning and Governed Execution for Agentic AI in Back-Office Automation",
+    "abstract": "Enterprise back office workflows require agentic systems that are auditable, policy-aligned, and operationally predictable, capabilities that generic multi-agent setups often fail to deliver. We present POLARIS (Policy-Aware LLM Agentic Reasoning for Integrated Systems), a governed orchestration framework that treats automation as typed plan synthesis and validated execution over LLM agents. A planner proposes structurally diverse, type checked directed acyclic graphs (DAGs), a rubric guided reasoning module selects a single compliant plan, and execution is guarded by validator gated checks, a bounded repair loop, and compiled policy guardrails that block or route side effects before they occur. Applied to document centric finance tasks, POLARIS produces decision grade artifacts and full execution traces while reducing human intervention. Empirically, POLARIS achieves a micro F1 of 0.81 on the SROIE dataset and, on a controlled synthetic suite, achieves 0.95 to 1.00 precision for anomaly routing with preserved audit trails. These evaluations constitute an initial benchmark for governed Agentic AI. POLARIS provides a methodological and benchmark reference for policy-aligned Agentic AI. Keywords Agentic AI, Enterprise Automation, Back-Office Tasks, Benchmarks, Governance, Typed Planning, Evaluation",
+    "authors": [
+      "Zahra Moslemi",
+      "Keerthi Koneru",
+      "Yen-Ting Lee",
+      "Sheethal Kumar",
+      "Ramesh Radhakrishnan"
+    ],
+    "published": "2026-01-16",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.11816v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.11816v1",
+    "fetched_at": "2026-01-21T08:37:13.030195"
+  },
+  {
+    "id": "2601.13082v1",
+    "title": "Adversarial News and Lost Profits: Manipulating Headlines in LLM-Driven Algorithmic Trading",
+    "abstract": "Large Language Models (LLMs) are increasingly adopted in the financial domain. Their exceptional capabilities to analyse textual data make them well-suited for inferring the sentiment of finance-related news. Such feedback can be leveraged by algorithmic trading systems (ATS) to guide buy/sell decisions. However, this practice bears the risk that a threat actor may craft \"adversarial news\" intended to mislead an LLM. In particular, the news headline may include \"malicious\" content that remains invisible to human readers but which is still ingested by the LLM. Although prior work has studied textual adversarial examples, their system-wide impact on LLM-supported ATS has not yet been quantified in terms of monetary risk. To address this threat, we consider an adversary with no direct access to an ATS but able to alter stock-related news headlines on a single day. We evaluate two human-imperceptible manipulations in a financial context: Unicode homoglyph substitutions that misroute models during stock-name recognition, and hidden-text clauses that alter the sentiment of the news headline. We implement a realistic ATS in Backtrader that fuses an LSTM-based price forecast with LLM-derived sentiment (FinBERT, FinGPT, FinLLaMA, and six general-purpose LLMs), and quantify monetary impact using portfolio metrics. Experiments on real-world data show that manipulating a one-day attack over 14 months can reliably mislead LLMs and reduce annual returns by up to 17.7 percentage points. To assess real-world feasibility, we analyze popular scraping libraries and trading platforms and survey 27 FinTech practitioners, confirming our hypotheses. We notified trading platform owners of this security issue.",
+    "authors": [
+      "Advije Rizvani",
+      "Giovanni Apruzzese",
+      "Pavel Laskov"
+    ],
+    "published": "2026-01-19",
+    "categories": [
+      "cs.CR",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.13082v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.13082v1",
+    "fetched_at": "2026-01-21T08:37:31.860714"
+  },
+  {
+    "id": "2601.14242v1",
+    "title": "APEX-Agents",
+    "abstract": "We introduce the AI Productivity Index for Agents (APEX-Agents), a benchmark for assessing whether AI agents can execute long-horizon, cross-application tasks created by investment banking analysts, management consultants, and corporate lawyers. APEX-Agents requires agents to navigate realistic work environments with files and tools. We test eight agents for the leaderboard using Pass@1. Gemini 3 Flash (Thinking=High) achieves the highest score of 24.0%, followed by GPT-5.2 (Thinking=High), Claude Opus 4.5 (Thinking=High), and Gemini 3 Pro (Thinking=High). We open source the APEX-Agents benchmark (n=480) with all prompts, rubrics, gold outputs, files, and metadata. We also open-source Archipelago, our infrastructure for agent execution and evaluation.",
+    "authors": [
+      "Bertie Vidgen",
+      "Austin Mann",
+      "Abby Fennelly",
+      "John Wright Stanly",
+      "Lucas Rothman",
+      "Marco Burstein",
+      "Julien Benchek",
+      "David Ostrofsky",
+      "Anirudh Ravichandran",
+      "Debnil Sur",
+      "Neel Venugopal",
+      "Alannah Hsia",
+      "Isaac Robinson",
+      "Calix Huang",
+      "Olivia Varones",
+      "Daniyal Khan",
+      "Michael Haines",
+      "Zach Richards",
+      "Chirag Mahapatra",
+      "Brendan Foody",
+      "Osvald Nitski"
+    ],
+    "published": "2026-01-20",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.14242v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.14242v1",
+    "fetched_at": "2026-01-21T08:37:41.299036"
+  },
+  {
+    "id": "2601.14238v1",
+    "title": "Spatiotemporal Wildfire Prediction and Reinforcement Learning for Helitack Suppression",
+    "abstract": "Wildfires are growing in frequency and intensity, devastating ecosystems and communities while causing billions of dollars in suppression costs and economic damage annually in the U.S. Traditional wildfire management is mostly reactive, addressing fires only after they are detected. We introduce \\textit{FireCastRL}, a proactive artificial intelligence (AI) framework that combines wildfire forecasting with intelligent suppression strategies. Our framework first uses a deep spatiotemporal model to predict wildfire ignition. For high-risk predictions, we deploy a pre-trained reinforcement learning (RL) agent to execute real-time suppression tactics with helitack units inside a physics-informed 3D simulation. The framework generates a threat assessment report to help emergency responders optimize resource allocation and planning. In addition, we are publicly releasing a large-scale, spatiotemporal dataset containing $\\mathbf{9.5}$ million samples of environmental variables for wildfire prediction. Our work demonstrates how deep learning and RL can be combined to support both forecasting and tactical wildfire response. More details can be found at https://sites.google.com/view/firecastrl.",
+    "authors": [
+      "Shaurya Mathur",
+      "Shreyas Bellary Manjunath",
+      "Nitin Kulkarni",
+      "Alina Vereshchaka"
+    ],
+    "published": "2026-01-20",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.14238v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.14238v1",
+    "fetched_at": "2026-01-21T08:37:41.299071"
+  },
+  {
+    "id": "2601.13918v1",
+    "title": "AgentEHR: Advancing Autonomous Clinical Decision-Making via Retrospective Summarization",
+    "abstract": "Large Language Models have demonstrated profound utility in the medical domain. However, their application to autonomous Electronic Health Records~(EHRs) navigation remains constrained by a reliance on curated inputs and simplified retrieval tasks. To bridge the gap between idealized experimental settings and realistic clinical environments, we present AgentEHR. This benchmark challenges agents to execute complex decision-making tasks, such as diagnosis and treatment planning, requiring long-range interactive reasoning directly within raw and high-noise databases. In tackling these tasks, we identify that existing summarization methods inevitably suffer from critical information loss and fractured reasoning continuity. To address this, we propose RetroSum, a novel framework that unifies a retrospective summarization mechanism with an evolving experience strategy. By dynamically re-evaluating interaction history, the retrospective mechanism prevents long-context information loss and ensures unbroken logical coherence. Additionally, the evolving strategy bridges the domain gap by retrieving accumulated experience from a memory bank. Extensive empirical evaluations demonstrate that RetroSum achieves performance gains of up to 29.16% over competitive baselines, while significantly decreasing total interaction errors by up to 92.3%.",
+    "authors": [
+      "Yusheng Liao",
+      "Chuan Xuan",
+      "Yutong Cai",
+      "Lina Yang",
+      "Zhe Chen",
+      "Yanfeng Wang",
+      "Yu Wang"
+    ],
+    "published": "2026-01-20",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.13918v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.13918v1",
+    "fetched_at": "2026-01-21T08:37:41.299102"
+  },
+  {
+    "id": "2601.13864v1",
+    "title": "HardSecBench: Benchmarking the Security Awareness of LLMs for Hardware Code Generation",
+    "abstract": "Large language models (LLMs) are being increasingly integrated into practical hardware and firmware development pipelines for code generation. Existing studies have primarily focused on evaluating the functional correctness of LLM-generated code, yet paid limited attention to its security issues. However, LLM-generated code that appears functionally sound may embed security flaws which could induce catastrophic damages after deployment. This critical research gap motivates us to design a benchmark for assessing security awareness under realistic specifications. In this work, we introduce HardSecBench, a benchmark with 924 tasks spanning Verilog Register Transfer Level (RTL) and firmware-level C, covering 76 hardware-relevant Common Weakness Enumeration (CWE) entries. Each task includes a structured specification, a secure reference implementation, and executable tests. To automate artifact synthesis, we propose a multi-agent pipeline that decouples synthesis from verification and grounds evaluation in execution evidence, enabling reliable evaluation. Using HardSecBench, we evaluate a range of LLMs on hardware and firmware code generation and find that models often satisfy functional requirements while still leaving security risks. We also find that security results vary with prompting. These findings highlight pressing challenges and offer actionable insights for future advancements in LLM-assisted hardware design. Our data and code will be released soon.",
+    "authors": [
+      "Qirui Chen",
+      "Jingxian Shuai",
+      "Shuangwu Chen",
+      "Shenghao Ye",
+      "Zijian Wen",
+      "Xufei Su",
+      "Jie Jin",
+      "Jiangming Li",
+      "Jun Chen",
+      "Xiaobin Tan",
+      "Jian Yang"
+    ],
+    "published": "2026-01-20",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.13864v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.13864v1",
+    "fetched_at": "2026-01-21T08:37:41.299139"
+  },
+  {
+    "id": "2601.13695v1",
+    "title": "OptiSQL: Executable SQL Generation from Optical TokensOptiSQL: Executable SQL Generation from Optical Tokens",
+    "abstract": "Executable SQL generation is typically studied in text-to-SQL settings, where tables are provided as fully linearized textual schemas and contents. While effective, this formulation assumes access to structured text and incurs substantial token overhead, which is misaligned with many real-world scenarios where tables appear as visual artifacts in documents or webpages. We investigate whether compact optical representations can serve as an efficient interface for executable semantic parsing. We present OptiSQL, a vision-driven framework that generates executable SQL directly from table images and natural language questions using compact optical tokens. OptiSQL leverages an OCR-oriented visual encoder to compress table structure and content into a small set of optical tokens and fine-tunes a pretrained decoder for SQL generation while freezing the encoder to isolate representation sufficiency. Experiments on a visualized version of Spider 2.0-Snow show that OptiSQL retains strong execution accuracy while reducing table input tokens by an order of magnitude. Robustness analyses further demonstrate that optical tokens preserve essential structural information under visual perturbations.",
+    "authors": [
+      "Sifan Li",
+      "Hongkai Chen",
+      "Yujun Cai",
+      "Liyang Chen",
+      "Qingwen Ye",
+      "Yiwei Wang"
+    ],
+    "published": "2026-01-20",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.13695v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.13695v1",
+    "fetched_at": "2026-01-21T08:37:41.299166"
+  },
+  {
+    "id": "2601.13562v1",
+    "title": "Reasoning is a Modality",
+    "abstract": "The Abstraction and Reasoning Corpus (ARC) provides a compact laboratory for studying abstract reasoning, an ability central to human intelligence. Modern AI systems, including LLMs and ViTs, largely operate as sequence-of-behavior prediction machines: they match observable behaviors by modeling token statistics without a persistent, readable mental state. This creates a gap with human-like behavior: humans can explain an action by decoding internal state, while AI systems can produce fluent post-hoc rationalizations that are not grounded in such a state. We hypothesize that reasoning is a modality: reasoning should exist as a distinct channel separate from the low-level workspace on which rules are applied. To test this hypothesis, on solving ARC tasks as a visual reasoning problem, we designed a novel role-separated transformer block that splits global controller tokens from grid workspace tokens, enabling iterative rule execution. Trained and evaluated within the VARC vision-centric protocol, our method achieved 62.6% accuracy on ARC-1, surpassing average human performance (60.2%) and outperforming prior methods significantly. Qualitatively, our models exhibit more coherent rule-application structure than the dense ViT baseline, consistent with a shift away from plausible probability blobs toward controller-driven reasoning.",
+    "authors": [
+      "Zhiguang Liu",
+      "Yi Shang"
+    ],
+    "published": "2026-01-20",
+    "categories": [
+      "cs.AI",
+      "cs.CV",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.13562v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.13562v1",
+    "fetched_at": "2026-01-21T08:37:41.299191"
+  },
+  {
+    "id": "2601.13508v1",
+    "title": "CatMaster: An Agentic Autonomous System for Computational Heterogeneous Catalysis Research",
+    "abstract": "Density functional theory (DFT) is widely used to connect atomic structure with catalytic behavior, but computational heterogeneous catalysis studies often require long workflows that are costly, iterative, and sensitive to setup choices. Besides the intrinsic cost and accuracy limits of first-principles calculations, practical workflow issues such as keeping references consistent, preparing many related inputs, recovering from failed runs on computing clusters, and maintaining a complete record of what was done, can slow down projects and make results difficult to reproduce or extend.   Here we present CatMaster, a large-language-model (LLM)-driven agent system that turns natural language requests into complete calculation workspaces, including structures, inputs, outputs, logs, and a concise run record. CatMaster maintains a persistent project record of key facts, constraints, and file pointers to support inspection and restartability. It is paired with a multi-fidelity tool library that covers rapid surrogate relaxations and high-fidelity DFT calculations for validation when needed. We demonstrate CatMaster on four demonstrations of increasing complexity: an O2 spin-state check with remote execution, BCC Fe surface energies with a protocol-sensitivity study and CO adsorption site ranking, high-throughput Pt--Ni--Cu alloy screening for hydrogen evolution reaction (HER) descriptors with surrogate-to-DFT validation, and a demonstration beyond the predefined tool set, including equation-of-state fitting for BCC Fe and CO-FeN4-graphene single-atom catalyst geometry preparation. By reducing manual scripting and bookkeeping while keeping the full evidence trail, CatMaster aims to help catalysis researchers focus on modeling choices and chemical interpretation rather than workflow management.",
+    "authors": [
+      "Honghao Chen",
+      "Jiangjie Qiu",
+      "Yi Shen Tew",
+      "Xiaonan Wang"
+    ],
+    "published": "2026-01-20",
+    "categories": [
+      "cond-mat.mtrl-sci",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.13508v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.13508v1",
+    "fetched_at": "2026-01-21T08:37:41.299217"
+  },
+  {
+    "id": "2601.13443v1",
+    "title": "Explicit Cognitive Allocation: A Principle for Governed and Auditable Inference in Large Language Models",
+    "abstract": "The rapid adoption of large language models (LLMs) has enabled new forms of AI-assisted reasoning across scientific, technical, and organizational domains. However, prevailing modes of LLM use remain cognitively unstructured: problem framing, knowledge exploration, retrieval, methodological awareness, and explanation are typically collapsed into a single generative process. This cognitive collapse limits traceability, weakens epistemic control, and undermines reproducibility, particularly in high-responsibility settings.   We introduce Explicit Cognitive Allocation, a general principle for structuring AI-assisted inference through the explicit separation and orchestration of epistemic functions. We instantiate this principle in the Cognitive Universal Agent (CUA), an architecture that organizes inference into distinct stages of exploration and framing, epistemic anchoring, instrumental and methodological mapping, and interpretive synthesis. Central to this framework is the notion of Universal Cognitive Instruments (UCIs), which formalize heterogeneous means, including computational, experimental, organizational, regulatory, and educational instruments, through which abstract inquiries become investigable.   We evaluate the effects of explicit cognitive and instrumental allocation through controlled comparisons between CUA-orchestrated inference and baseline LLM inference under matched execution conditions. Across multiple prompts in the agricultural domain, CUA inference exhibits earlier and structurally governed epistemic convergence, higher epistemic alignment under semantic expansion, and systematic exposure of the instrumental landscape of inquiry. In contrast, baseline LLM inference shows greater variability in alignment and fails to explicitly surface instrumental structure.",
+    "authors": [
+      "Héctor Manuel Manzanilla-Granados",
+      "Zaira Navarrete-Cazales",
+      "Miriam Pescador-Rojas",
+      "Tonahtiu Ramírez-Romero"
+    ],
+    "published": "2026-01-19",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.13443v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.13443v1",
+    "fetched_at": "2026-01-21T08:37:41.299242"
+  },
+  {
+    "id": "2601.13401v1",
+    "title": "Reasoning with Pixel-level Precision: QVLM Architecture and SQuID Dataset for Quantitative Geospatial Analytics",
+    "abstract": "Current Vision-Language Models (VLMs) fail at quantitative spatial reasoning because their architectures destroy pixel-level information required for counting and measurements. Vision encoders compress images through patch embeddings, reducing spatial indexing and losing the precise pixel-level tracking required for accurate counting. We present two contributions to address this fundamental limitation. First, we introduce SQuID (Satellite Quantitative Intelligence Dataset), a benchmark of 2,000 satellite image Question-Answer pairs with both numerical range and categorical answers, designed to evaluate quantitative spatial reasoning. The dataset spans three difficulty tiers with annotations automatically generated from human labels and their learned variability. Second, we propose QVLM (Quantitative Vision-Language Model), a code-generation architecture that maintains pixel precision by decoupling language understanding from visual analysis. Instead of encoding images into embeddings, QVLM generates executable code that first calls a segmentation model to obtain pixel-level masks, then operates directly on these masks, preserving spatial indexing throughout the reasoning process. Our experiments show that QVLM using GPT-5 as coder achieves 42.0% accuracy on SQuID compared to 28.1% for a VLM prompted with image-question pairs. Our work reveals that, for quantitative spatial reasoning, architectural decoupling enables better accuracy on quantitative tasks.",
+    "authors": [
+      "Peter A. Massih",
+      "Eric Cosatto"
+    ],
+    "published": "2026-01-19",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.13401v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.13401v1",
+    "fetched_at": "2026-01-21T08:37:41.299262"
+  },
+  {
+    "id": "2601.13398v1",
+    "title": "Can LLMs Compress (and Decompress)? Evaluating Code Understanding and Execution via Invertibility",
+    "abstract": "LLMs demonstrate strong performance on code benchmarks, yet round-trip code execution reveals limitations in their ability to maintain consistent reasoning across forward and backward execution. We present RoundTripCodeEval (RTCE), a comprehensive benchmark consisting of four distinct code execution reasoning tasks designed to rigorously test round-trip consistency. RTCE provides an execution-free, exact-match evaluation of bijection fidelity, assessing whether models preserve a consistent one-to-one mapping between encoding and decoding operations across various algorithms and directions. We systematically evaluate state-of-the-art Code-LLMs using zero-shot prompting, supervised fine-tuning on execution traces, and self-reflection mechanisms. Each yields modest improvements, but none closes the gap, indicating that current LLMs struggle with true round-trip consistency, which demonstrates that they lack the internal coherence required for trustworthy code reasoning. RTCE surfaces several new and previously unmeasured insights that are not captured by existing I/O-prediction, execution-reasoning, or round-trip natural-language benchmarks. We will release the code and the dataset upon acceptance.",
+    "authors": [
+      "Nickil Maveli",
+      "Antonio Vergari",
+      "Shay B. Cohen"
+    ],
+    "published": "2026-01-19",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.PL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.13398v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.13398v1",
+    "fetched_at": "2026-01-21T08:37:41.299284"
+  },
+  {
+    "id": "2601.13383v1",
+    "title": "A Lightweight Modular Framework for Constructing Autonomous Agents Driven by Large Language Models: Design, Implementation, and Applications in AgentForge",
+    "abstract": "The emergence of LLMs has catalyzed a paradigm shift in autonomous agent development, enabling systems capable of reasoning, planning, and executing complex multi-step tasks. However, existing agent frameworks often suffer from architectural rigidity, vendor lock-in, and prohibitive complexity that impedes rapid prototyping and deployment. This paper presents AgentForge, a lightweight, open-source Python framework designed to democratize the construction of LLM-driven autonomous agents through a principled modular architecture. AgentForge introduces three key innovations: (1) a composable skill abstraction that enables fine-grained task decomposition with formally defined input-output contracts, (2) a unified LLM backend interface supporting seamless switching between cloud-based APIs and local inference engines, and (3) a declarative YAML-based configuration system that separates agent logic from implementation details. We formalize the skill composition mechanism as a directed acyclic graph (DAG) and prove its expressiveness for representing arbitrary sequential and parallel task workflows. Comprehensive experimental evaluation across four benchmark scenarios demonstrates that AgentForge achieves competitive task completion rates while reducing development time by 62% compared to LangChain and 78% compared to direct API integration. Latency measurements confirm sub-100ms orchestration overhead, rendering the framework suitable for real-time applications. The modular design facilitates extension: we demonstrate the integration of six built-in skills and provide comprehensive documentation for custom skill development. AgentForge addresses a critical gap in the LLM agent ecosystem by providing researchers and practitioners with a production-ready foundation for constructing, evaluating, and deploying autonomous agents without sacrificing flexibility or performance.",
+    "authors": [
+      "Akbar Anbar Jafari",
+      "Cagri Ozcinar",
+      "Gholamreza Anbarjafari"
+    ],
+    "published": "2026-01-19",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.13383v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.13383v1",
+    "fetched_at": "2026-01-21T08:37:41.299305"
+  },
+  {
+    "id": "2601.13111v1",
+    "title": "CORE-T: COherent REtrieval of Tables for Text-to-SQL",
+    "abstract": "Realistic text-to-SQL workflows often require joining multiple tables. As a result, accurately retrieving the relevant set of tables becomes a key bottleneck for end-to-end performance. We study an open-book setting where queries must be answered over large, heterogeneous table collections pooled from many sources, without clean scoping signals such as database identifiers. Here, dense retrieval (DR) achieves high recall but returns many distractors, while join-aware alternatives often rely on extra assumptions and/or incur high inference overhead. We propose CORE-T, a scalable, training-free framework that enriches tables with LLM-generated purpose metadata and pre-computes a lightweight table-compatibility cache. At inference time, DR returns top-K candidates; a single LLM call selects a coherent, joinable subset, and a simple additive adjustment step restores strongly compatible tables. Across Bird, Spider, and MMQA, CORE-T improves table-selection F1 by up to 22.7 points while retrieving up to 42% fewer tables, improving multi-table execution accuracy by up to 5.0 points on Bird and 6.9 points on MMQA, and using 4-5x fewer tokens than LLM-intensive baselines.",
+    "authors": [
+      "Hassan Soliman",
+      "Vivek Gupta",
+      "Dan Roth",
+      "Iryna Gurevych"
+    ],
+    "published": "2026-01-19",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.IR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.13111v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.13111v1",
+    "fetched_at": "2026-01-21T08:37:41.299328"
+  },
+  {
+    "id": "2601.13097v1",
+    "title": "RM -RF: Reward Model for Run-Free Unit Test Evaluation",
+    "abstract": "We present RM-RF, a lightweight reward model for run-free evaluation of automatically generated unit tests. Instead of repeatedly compiling and executing candidate tests, RM-RF predicts - from source and test code alone - three execution-derived signals: (1) whether the augmented test suite compiles and runs successfully, (2) whether the generated test cases increase code coverage, and (3) whether the generated test cases improve the mutation kill rate. To train and evaluate RM-RF we assemble a multilingual dataset (Java, Python, Go) of focal files, test files, and candidate test additions labeled by an execution-based pipeline, and we release an associated dataset and methodology for comparative evaluation. We tested multiple model families and tuning regimes (zero-shot, full fine-tuning, and PEFT via LoRA), achieving an average F1 of 0.69 across the three targets. Compared to conventional compile-and-run instruments, RM-RF provides substantially lower latency and infrastructure cost while delivering competitive predictive fidelity, enabling fast, scalable feedback for large-scale test generation and RL-based code optimization.",
+    "authors": [
+      "Elena Bruches",
+      "Daniil Grebenkin",
+      "Mikhail Klementev",
+      "Vadim Alperovich",
+      "Roman Derunets",
+      "Dari Baturova",
+      "Georgy Mkrtchyan",
+      "Oleg Sedukhin",
+      "Ivan Bondarenko",
+      "Nikolay Bushkov",
+      "Stanislav Moiseev"
+    ],
+    "published": "2026-01-19",
+    "categories": [
+      "cs.SE",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.13097v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.13097v1",
+    "fetched_at": "2026-01-21T08:37:41.299364"
+  },
+  {
+    "id": "2601.13079v1",
+    "title": "Polychronous Wave Computing: Timing-Native Address Selection in Spiking Networks",
+    "abstract": "Spike timing offers a combinatorial address space, suggesting that timing-based spiking inference can be executed as lookup and routing rather than as dense multiply--accumulate. Yet most neuromorphic and photonic systems still digitize events into timestamps, bins, or rates and then perform selection in clocked logic. We introduce Polychronous Wave Computing (PWC), a timing-native address-selection primitive that maps relative spike latencies directly to a discrete output route in the wave domain. Spike times are phase-encoded in a rotating frame and processed by a programmable multiport interferometer that evaluates K template correlations in parallel; a driven--dissipative winner-take-all stage then performs a physical argmax, emitting a one-hot output port. We derive the operating envelope imposed by phase wrapping and mutual coherence, and collapse timing jitter, static phase mismatch, and dephasing into a single effective phase-noise budget whose induced winner--runner-up margin predicts boundary-first failures and provides an intensity-only calibration target. Simulations show that nonlinear competition improves routing fidelity compared with noisy linear intensity readout, and that hardware-in-the-loop phase tuning rescues a temporal-order gate from 55.9% to 97.2% accuracy under strong static mismatch. PWC provides a fast routing coprocessor for LUT-style spiking networks and sparse top-1 gates (e.g., mixture-of-experts routing) across polaritonic, photonic, and oscillator platforms.",
+    "authors": [
+      "Natalila G. Berloff"
+    ],
+    "published": "2026-01-19",
+    "categories": [
+      "cond-mat.dis-nn",
+      "cs.LG",
+      "cs.NE",
+      "physics.optics"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.13079v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.13079v1",
+    "fetched_at": "2026-01-21T08:37:41.299382"
+  },
+  {
+    "id": "2601.13060v1",
+    "title": "MagicGUI-RMS: A Multi-Agent Reward Model System for Self-Evolving GUI Agents via Automated Feedback Reflux",
+    "abstract": "Graphical user interface (GUI) agents are rapidly progressing toward autonomous interaction and reliable task execution across diverse applications. However, two central challenges remain unresolved: automating the evaluation of agent trajectories and generating high-quality training data at scale to enable continual improvement. Existing approaches often depend on manual annotation or static rule-based verification, which restricts scalability and limits adaptability in dynamic environments. We present MagicGUI-RMS, a multi-agent reward model system that delivers adaptive trajectory evaluation, corrective feedback, and self-evolving learning capabilities. MagicGUI-RMS integrates a Domain-Specific Reward Model (DS-RM) with a General-Purpose Reward Model (GP-RM), enabling fine-grained action assessment and robust generalization across heterogeneous GUI tasks. To support reward learning at scale, we design a structured data construction pipeline that automatically produces balanced and diverse reward datasets, effectively reducing annotation costs while maintaining sample fidelity. During execution, the reward model system identifies erroneous actions, proposes refined alternatives, and continuously enhances agent behavior through an automated data-reflux mechanism. Extensive experiments demonstrate that MagicGUI-RMS yields substantial gains in task accuracy, behavioral robustness. These results establish MagicGUI-RMS as a principled and effective foundation for building self-improving GUI agents driven by reward-based adaptation.",
+    "authors": [
+      "Zecheng Li",
+      "Zhihui Cao",
+      "Wenke Huang",
+      "Yudong Zhang",
+      "Keying Qi",
+      "Rui Wang",
+      "Zeyu Zheng",
+      "Jian Zhao",
+      "Hao Zhu",
+      "Hengxin Wu",
+      "Yuran Wang",
+      "Guitao Fan",
+      "Guokun Wu",
+      "Yicong Liu",
+      "Zhilin Gao",
+      "Haikun Xu",
+      "He Yang",
+      "Minqi Xiang",
+      "Xingyu Liu",
+      "Zuojian Wang"
+    ],
+    "published": "2026-01-19",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.13060v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.13060v1",
+    "fetched_at": "2026-01-21T08:37:41.299435"
+  },
+  {
+    "id": "2601.13435v1",
+    "title": "A Learnable Wavelet Transformer for Long-Short Equity Trading and Risk-Adjusted Return Optimization",
+    "abstract": "Learning profitable intraday trading policies from financial time series is challenging due to heavy noise, non-stationarity, and strong cross-sectional dependence among related assets. We propose \\emph{WaveLSFormer}, a learnable wavelet-based long-short Transformer that jointly performs multi-scale decomposition and return-oriented decision learning. Specifically, a learnable wavelet front-end generates low-/high-frequency components via an end-to-end trained filter bank, guided by spectral regularizers that encourage stable and well-separated frequency bands. To fuse multi-scale information, we introduce a low-guided high-frequency injection (LGHI) module that refines low-frequency representations with high-frequency cues while controlling training stability. The model outputs a portfolio of long/short positions that is rescaled to satisfy a fixed risk budget, and is optimized directly with a trading objective and risk-aware regularization. Extensive experiments on five years of hourly data across six industry groups, evaluated over ten random seeds, demonstrate that WaveLSFormer consistently outperforms MLP, LSTM and Transformer backbones, with and without fixed discrete wavelet front-ends. On average in all industries, WaveLSFormer achieves a cumulative overall strategy return of $0.607 \\pm 0.045$ and a Sharpe ratio of $2.157 \\pm 0.166$, substantially improving both profitability and risk-adjusted returns over the strongest baselines.",
+    "authors": [
+      "Shuozhe Li",
+      "Du Cheng",
+      "Leqi Liu"
+    ],
+    "published": "2026-01-19",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.13435v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.13435v1",
+    "fetched_at": "2026-01-21T08:38:12.731057"
+  }
+]
