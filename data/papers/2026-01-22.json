@@ -1,0 +1,368 @@
+[
+  {
+    "id": "2601.14852v1",
+    "title": "Beyond Carr Madan: A Projection Approach to Risk-Neutral Moment Estimation",
+    "abstract": "We propose a projection method to estimate risk-neutral moments from option prices. We derive a finite-sample bound implying that the projection estimator attains (up to a constant) the smallest pricing error within the span of traded option payoffs. This finite-sample optimality is not available for the widely used Carr--Madan approximation. Simulations show sizable accuracy gains for key quantities such as VIX and SVIX. We then extend the framework to multiple underlyings, deriving necessary and sufficient conditions under which simple options complete the market in higher dimensions, and providing estimators for joint moments. In our empirical application, we recover risk-neutral correlations and joint tail risk from FX options alone, addressing a longstanding measurement problem raised by Ross (1976). Our joint tail-risk measure predicts future joint currency crashes and identifies periods in which currency portfolios are particularly useful for hedging.",
+    "authors": [
+      "Tjeerd De Vries"
+    ],
+    "published": "2026-01-21",
+    "categories": [
+      "q-fin.GN"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.14852v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.14852v1",
+    "fetched_at": "2026-01-22T08:37:30.233613"
+  },
+  {
+    "id": "2601.15177v1",
+    "title": "Dynamic Management of a Deep Learning-Based Anomaly Detection System for 5G Networks",
+    "abstract": "Fog and mobile edge computing (MEC) will play a key role in the upcoming fifth generation (5G) mobile networks to support decentralized applications, data analytics and management into the network itself by using a highly distributed compute model. Furthermore, increasing attention is paid to providing user-centric cybersecurity solutions, which particularly require collecting, processing and analyzing significantly large amount of data traffic and huge number of network connections in 5G networks. In this regard, this paper proposes a MEC-oriented solution in 5G mobile networks to detect network anomalies in real-time and in autonomic way. Our proposal uses deep learning techniques to analyze network flows and to detect network anomalies. Moreover, it uses policies in order to provide an efficient and dynamic management system of the computing resources used in the anomaly detection process. The paper presents relevant aspects of the deployment of the proposal and experimental results to show its performance.",
+    "authors": [
+      "Lorenzo Fernández Maimó",
+      "Alberto Huertas Celdrán",
+      "Manuel Gil Pérez",
+      "Félix J. García Clemente",
+      "Gregorio Martínez Pérez"
+    ],
+    "published": "2026-01-21",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.15177v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.15177v1",
+    "fetched_at": "2026-01-22T08:37:46.210590"
+  },
+  {
+    "id": "2601.14336v1",
+    "title": "Log anomaly detection via Meta Learning and Prototypical Networks for Cross domain generalization",
+    "abstract": "Log anomaly detection is essential for system reliability, but it is extremely challenging to do considering it involves class imbalance. Additionally, the models trained in one domain are not applicable to other domains, necessitating the need for cross-domain adaptation (such as HDFS and Linux). Traditional detection models often fail to generalize due to significant data drift and the inherent absence of labeled anomalies in new target domains. To handle the above challenges, we proposed a new end-to-end framework based on a meta-learning approach. Our methodology first gets the data ready by combining a Drain3 log parsing mechanism with a dynamic drift-based labeling technique that uses semantic and fuzzy matching to move existing anomaly knowledge from one source to another. BERT-based semantic embeddings are obtained, and the feature selection is invoked to reduce the dimensionality. Later, Model Agnostic Meta-Learning (MAML) and Prototypical Networks models are trained to adapt quickly and effectively. The SMOTE oversampling method is employed to handle imbalances in the data. All the results are obtained by employing the leave-one-out source method, and the corresponding mean F1 scores are reported. Our empirical findings validate that the proposed meta-learning-driven approach yielded the highest mean F1 score and proved to be effective for cross-domain settings.",
+    "authors": [
+      "Krishna Sharma",
+      "Vivek Yelleti"
+    ],
+    "published": "2026-01-20",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.14336v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.14336v1",
+    "fetched_at": "2026-01-22T08:37:46.210621"
+  },
+  {
+    "id": "2601.14305v1",
+    "title": "An Optimized Decision Tree-Based Framework for Explainable IoT Anomaly Detection",
+    "abstract": "The increase in the number of Internet of Things (IoT) devices has tremendously increased the attack surface of cyber threats thus making a strong intrusion detection system (IDS) with a clear explanation of the process essential towards resource-constrained environments. Nevertheless, current IoT IDS systems are usually traded off with detection quality, model elucidability, and computational effectiveness, thus the deployment on IoT devices. The present paper counteracts these difficulties by suggesting an explainable AI (XAI) framework based on an optimized Decision Tree classifier with both local and global importance methods: SHAP values that estimate feature attribution using local explanations, and Morris sensitivity analysis that identifies the feature importance in a global view. The proposed system attains the state of art on the test performance with 99.91% accuracy, F1-score of 99.51% and Cohen Kappa of 0.9960 and high stability is confirmed by a cross validation mean accuracy of 98.93%. Efficiency is also enhanced in terms of computations to provide faster inferences compared to those that are generalized in ensemble models. SrcMac has shown as the most significant predictor in feature analyses according to SHAP and Morris methods. Compared to the previous work, our solution eliminates its major drawback lack because it allows us to apply it to edge devices and, therefore, achieve real-time processing, adhere to the new regulation of transparency in AI, and achieve high detection rates on attacks of dissimilar classes. This combination performance of high accuracy, explainability, and low computation make the framework useful and reliable as a resource-constrained IoT security problem in real environments.",
+    "authors": [
+      " Ashikuzzaman",
+      "Md. Shawkat Hossain",
+      "Jubayer Abdullah Joy",
+      "Md Zahid Akon",
+      "Md Manjur Ahmed",
+      "Md. Naimul Islam"
+    ],
+    "published": "2026-01-18",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.14305v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.14305v1",
+    "fetched_at": "2026-01-22T08:37:46.210929"
+  },
+  {
+    "id": "2601.15164v1",
+    "title": "V-CAGE: Context-Aware Generation and Verification for Scalable Long-Horizon Embodied Tasks",
+    "abstract": "Learning long-horizon embodied behaviors from synthetic data remains challenging because generated scenes are often physically implausible, language-driven programs frequently \"succeed\" without satisfying task semantics, and high-level instructions require grounding into executable action sequences. To address these limitations, we introduce V-CAGE, a closed-loop framework for generating robust, semantically aligned manipulation datasets at scale. First, we propose a context-aware instantiation mechanism that enforces geometric consistency during scene synthesis. By dynamically maintaining a map of prohibited spatial areas as objects are placed, our system prevents interpenetration and ensures reachable, conflict-free configurations in cluttered environments. Second, to bridge the gap between abstract intent and low-level control, we employ a hierarchical instruction decomposition module. This decomposes high-level goals (e.g., \"get ready for work\") into compositional action primitives, facilitating coherent long-horizon planning. Crucially, we enforce semantic correctness through a VLM-based verification loop. Acting as a visual critic, the VLM performs rigorous rejection sampling after each subtask, filtering out \"silent failures\" where code executes but fails to achieve the visual goal. Experiments demonstrate that V-CAGE yields datasets with superior physical and semantic fidelity, significantly boosting the success rate and generalization of downstream policies compared to non-verified baselines.",
+    "authors": [
+      "Yaru Liu",
+      "Ao-bo Wang",
+      "Nanyang Ye"
+    ],
+    "published": "2026-01-21",
+    "categories": [
+      "cs.RO",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.15164v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.15164v1",
+    "fetched_at": "2026-01-22T08:38:13.922595"
+  },
+  {
+    "id": "2601.15141v1",
+    "title": "CLEANER: Self-Purified Trajectories Boost Agentic Reinforcement Learning",
+    "abstract": "Agentic Reinforcement Learning (RL) has empowered Large Language Models (LLMs) to utilize tools like Python interpreters for complex problem-solving. However, for parameter-constrained models (e.g., 4B--7B), the exploration phase is often plagued by frequent execution failures, creating noisy trajectories that hinder policy optimization. Under standard outcome-based reward settings, this noise leads to a critical credit assignment issue, where erroneous actions are inadvertently reinforced alongside successful outcomes. Existing mitigations face a dilemma: dense rewards often trigger reward hacking, while supersampling incurs prohibitive computational costs. To address these challenges, we propose CLEANER. Distinct from external filtering methods, CLEANER exploits the model's intrinsic self-correction capabilities to eliminate error-contaminated context directly during data collection. At its core, the Similarity-Aware Adaptive Rollback (SAAR) mechanism autonomously constructs clean, purified trajectories by retrospectively replacing failures with successful self-corrections. Based on semantic similarity, SAAR adaptively regulates replacement granularity from shallow execution repairs to deep reasoning substitutions. By training on these self-purified paths, the model internalizes correct reasoning patterns rather than error-recovery loops. Empirical results on AIME24/25, GPQA, and LiveCodeBench show average accuracy gains of 6%, 3%, and 5% over baselines. Notably, CLEANER matches state-of-the-art performance using only one-third of the training steps, highlighting trajectory purification as a scalable solution for efficient agentic RL. Our models and code are available at GitHub",
+    "authors": [
+      "Tianshi Xu",
+      "Yuteng Chen",
+      "Meng Li"
+    ],
+    "published": "2026-01-21",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.15141v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.15141v1",
+    "fetched_at": "2026-01-22T08:38:13.922626"
+  },
+  {
+    "id": "2601.15120v1",
+    "title": "Emerging from Ground: Addressing Intent Deviation in Tool-Using Agents via Deriving Real Calls into Virtual Trajectories",
+    "abstract": "LLMs have advanced tool-using agents for real-world applications, yet they often lead to unexpected behaviors or results. Beyond obvious failures, the subtle issue of \"intent deviation\" severely hinders reliable evaluation and performance improvement. Existing post-training methods generally leverage either real system samples or virtual data simulated by LLMs. However, the former is costly due to reliance on hand-crafted user requests, while the latter suffers from distribution shift from the real tools in the wild. Additionally, both methods lack negative samples tailored to intent deviation scenarios, hindering effective guidance on preference learning. We introduce RISE, a \"Real-to-Virtual\" method designed to mitigate intent deviation. Anchoring on verified tool primitives, RISE synthesizes virtual trajectories and generates diverse negative samples through mutation on critical parameters. With synthetic data, RISE fine-tunes backbone LLMs via the two-stage training for intent alignment. Evaluation results demonstrate that data synthesized by RISE achieve promising results in eight metrics covering user requires, execution trajectories and agent responses. Integrating with training, RISE achieves an average 35.28% improvement in Acctask (task completion) and 23.27% in Accintent (intent alignment), outperforming SOTA baselines by 1.20--42.09% and 1.17--54.93% respectively.",
+    "authors": [
+      "Qian Xiong",
+      "Yuekai Huang",
+      "Yujia Zheng",
+      "Tianhao Li",
+      "Ziyou Jiang",
+      "Zhiyuan Chang",
+      "Zhaoyang Li",
+      "Huanxiang Feng",
+      "Mingyang Li"
+    ],
+    "published": "2026-01-21",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.15120v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.15120v1",
+    "fetched_at": "2026-01-22T08:38:13.922661"
+  },
+  {
+    "id": "2601.15074v1",
+    "title": "SmartOracle -- An Agentic Approach to Mitigate Noise in Differential Oracles",
+    "abstract": "Differential fuzzers detect bugs by executing identical inputs across distinct implementations of the same specification, such as JavaScript interpreters. Validating the outputs requires an oracle and for differential testing of JavaScript, these are constructed manually, making them expensive, time-consuming, and prone to false positives. Worse, when the specification evolves, this manual effort must be repeated.   Inspired by the success of agentic systems in other SE domains, this paper introduces SmartOracle. SmartOracle decomposes the manual triage workflow into specialized Large Language Model (LLM) sub-agents. These agents synthesize independently gathered evidence from terminal runs and targeted specification queries to reach a final verdict.   For historical benchmarks, SmartOracle achieves 0.84 recall with an 18% false positive rate. Compared to a sequential Gemini 2.5 Pro baseline, it improves triage accuracy while reducing analysis time by 4$\\times$ and API costs by 10$\\times$. In active fuzzing campaigns, SmartOracle successfully identified and reported previously unknown specification-level issues across major engines, including bugs in V8, JavaScriptCore, and GraalJS.   The success of SmartOracle's agentic architecture on Javascript suggests it might be useful other software systems- a research direction we will explore in future work.",
+    "authors": [
+      "Srinath Srinivasan",
+      "Tim Menzies",
+      "Marcelo D'Amorim"
+    ],
+    "published": "2026-01-21",
+    "categories": [
+      "cs.SE",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.15074v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.15074v1",
+    "fetched_at": "2026-01-22T08:38:13.922686"
+  },
+  {
+    "id": "2601.15064v1",
+    "title": "Incentive-Tuning: Understanding and Designing Incentives for Empirical Human-AI Decision-Making Studies",
+    "abstract": "AI has revolutionised decision-making across various fields. Yet human judgement remains paramount for high-stakes decision-making. This has fueled explorations of collaborative decision-making between humans and AI systems, aiming to leverage the strengths of both. To explore this dynamic, researchers conduct empirical studies, investigating how humans use AI assistance for decision-making and how this collaboration impacts results. A critical aspect of conducting these studies is the role of participants, often recruited through crowdsourcing platforms. The validity of these studies hinges on the behaviours of the participants, hence effective incentives that can potentially affect these behaviours are a key part of designing and executing these studies. In this work, we aim to address the critical role of incentive design for conducting empirical human-AI decision-making studies, focusing on understanding, designing, and documenting incentive schemes. Through a thematic review of existing research, we explored the current practices, challenges, and opportunities associated with incentive design for human-AI decision-making empirical studies. We identified recurring patterns, or themes, such as what comprises the components of an incentive scheme, how incentive schemes are manipulated by researchers, and the impact they can have on research outcomes. Leveraging the acquired understanding, we curated a set of guidelines to aid researchers in designing effective incentive schemes for their studies, called the Incentive-Tuning Framework, outlining how researchers can undertake, reflect on, and document the incentive design process. By advocating for a standardised yet flexible approach to incentive design and contributing valuable insights along with practical tools, we hope to pave the way for more reliable and generalizable knowledge in the field of human-AI decision-making.",
+    "authors": [
+      "Simran Kaur",
+      "Sara Salimzadeh",
+      "Ujwal Gadiraju"
+    ],
+    "published": "2026-01-21",
+    "categories": [
+      "cs.HC",
+      "cs.AI",
+      "cs.GT",
+      "cs.IR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.15064v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.15064v1",
+    "fetched_at": "2026-01-22T08:38:13.922709"
+  },
+  {
+    "id": "2601.15059v1",
+    "title": "The Responsibility Vacuum: Organizational Failure in Scaled Agent Systems",
+    "abstract": "Modern CI/CD pipelines integrating agent-generated code exhibit a structural failure in responsibility attribution. Decisions are executed through formally correct approval processes, yet no entity possesses both the authority to approve those decisions and the epistemic capacity to meaningfully understand their basis.   We define this condition as responsibility vacuum: a state in which decisions occur, but responsibility cannot be attributed because authority and verification capacity do not coincide. We show that this is not a process deviation or technical defect, but a structural property of deployments where decision generation throughput exceeds bounded human verification capacity.   We identify a scaling limit under standard deployment assumptions, including parallel agent generation, CI-based validation, and individualized human approval gates. Beyond a throughput threshold, verification ceases to function as a decision criterion and is replaced by ritualized approval based on proxy signals. Personalized responsibility becomes structurally unattainable in this regime.   We further characterize a CI amplification dynamic, whereby increasing automated validation coverage raises proxy signal density without restoring human capacity. Under fixed time and attention constraints, this accelerates cognitive offloading in the broad sense and widens the gap between formal approval and epistemic understanding. Additional automation therefore amplifies, rather than mitigates, the responsibility vacuum.   We conclude that unless organizations explicitly redesign decision boundaries or reassign responsibility away from individual decisions toward batch- or system-level ownership, responsibility vacuum remains an invisible but persistent failure mode in scaled agent deployments.",
+    "authors": [
+      "Oleg Romanchuk",
+      "Roman Bondar"
+    ],
+    "published": "2026-01-21",
+    "categories": [
+      "cs.AI",
+      "eess.SY"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.15059v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.15059v1",
+    "fetched_at": "2026-01-22T08:38:13.922730"
+  },
+  {
+    "id": "2601.14971v1",
+    "title": "Fine-Grained Traceability for Transparent ML Pipelines",
+    "abstract": "Modern machine learning systems are increasingly realised as multistage pipelines, yet existing transparency mechanisms typically operate at a model level: they describe what a system is and why it behaves as it does, but not how individual data samples are operationally recorded, tracked, and verified as they traverse the pipeline. This absence of verifiable, sample-level traceability leaves practitioners and users unable to determine whether a specific sample was used, when it was processed, or whether the corresponding records remain intact over time. We introduce FG-Trac, a model-agnostic framework that establishes verifiable, fine-grained sample-level traceability throughout machine learning pipelines. FG-Trac defines an explicit mechanism for capturing and verifying sample lifecycle events across preprocessing and training, computes contribution scores explicitly grounded in training checkpoints, and anchors these traces to tamper-evident cryptographic commitments. The framework integrates without modifying model architectures or training objectives, reconstructing complete and auditable data-usage histories with practical computational overhead. Experiments on a canonical convolutional neural network and a multimodal graph learning pipeline demonstrate that FG-Trac preserves predictive performance while enabling machine learning systems to furnish verifiable evidence of how individual samples were used and propagated during model execution.",
+    "authors": [
+      "Liping Chen",
+      "Mujie Liu",
+      "Haytham Fayek"
+    ],
+    "published": "2026-01-21",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.14971v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.14971v1",
+    "fetched_at": "2026-01-22T08:38:13.922752"
+  },
+  {
+    "id": "2601.14945v1",
+    "title": "TIDAL: Temporally Interleaved Diffusion and Action Loop for High-Frequency VLA Control",
+    "abstract": "Large-scale Vision-Language-Action (VLA) models offer semantic generalization but suffer from high inference latency, limiting them to low-frequency batch-and-execute paradigm. This frequency mismatch creates an execution blind spot, causing failures in dynamic environments where targets move during the open-loop execution window. We propose TIDAL (Temporally Interleaved Diffusion and Action Loop), a hierarchical framework that decouples semantic reasoning from high-frequency actuation. TIDAL operates as a backbone-agnostic module for diffusion-based VLAs, using a dual-frequency architecture to redistribute the computational budget. Specifically, a low-frequency macro-intent loop caches semantic embeddings, while a high-frequency micro-control loop interleaves single-step flow integration with execution. This design enables approximately 9 Hz control updates on edge hardware (vs. approximately 2.4 Hz baselines) without increasing marginal overhead. To handle the resulting latency shift, we introduce a temporally misaligned training strategy where the policy learns predictive compensation using stale semantic intent alongside real-time proprioception. Additionally, we address the insensitivity of static vision encoders to velocity by incorporating a differential motion predictor. TIDAL is architectural, making it orthogonal to system-level optimizations. Experiments show a 2x performance gain over open-loop baselines in dynamic interception tasks. Despite a marginal regression in static success rates, our approach yields a 4x increase in feedback frequency and extends the effective horizon of semantic embeddings beyond the native action chunk size. Under non-paused inference protocols, TIDAL remains robust where standard baselines fail due to latency.",
+    "authors": [
+      "Yuteng Sun",
+      "Haoran Wang",
+      "Ruofei Bai",
+      "Zhengguo Li",
+      "Jun Li",
+      "Meng Yee",
+      " Chuah",
+      "Wei Yun Yau"
+    ],
+    "published": "2026-01-21",
+    "categories": [
+      "cs.RO",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.14945v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.14945v1",
+    "fetched_at": "2026-01-22T08:38:13.922787"
+  },
+  {
+    "id": "2601.14914v1",
+    "title": "CodeDelegator: Mitigating Context Pollution via Role Separation in Code-as-Action Agents",
+    "abstract": "Recent advances in large language models (LLMs) allow agents to represent actions as executable code, offering greater expressivity than traditional tool-calling. However, real-world tasks often demand both strategic planning and detailed implementation. Using a single agent for both leads to context pollution from debugging traces and intermediate failures, impairing long-horizon performance. We propose CodeDelegator, a multi-agent framework that separates planning from implementation via role specialization. A persistent Delegator maintains strategic oversight by decomposing tasks, writing specifications, and monitoring progress without executing code. For each sub-task, a new Coder agent is instantiated with a clean context containing only its specification, shielding it from prior failures. To coordinate between agents, we introduce Ephemeral-Persistent State Separation (EPSS), which isolates each Coder's execution state while preserving global coherence, preventing debugging traces from polluting the Delegator's context. Experiments on various benchmarks demonstrate the effectiveness of CodeDelegator across diverse scenarios.",
+    "authors": [
+      "Tianxiang Fei",
+      "Cheng Chen",
+      "Yue Pan",
+      "Mao Zheng",
+      "Mingyang Song"
+    ],
+    "published": "2026-01-21",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.14914v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.14914v1",
+    "fetched_at": "2026-01-22T08:38:13.922812"
+  },
+  {
+    "id": "2601.14894v1",
+    "title": "To Neuro-Symbolic Classification and Beyond by Compiling Description Logic Ontologies to Probabilistic Circuits",
+    "abstract": "Background: Neuro-symbolic methods enhance the reliability of neural network classifiers through logical constraints, but they lack native support for ontologies.   Objectives: We aim to develop a neuro-symbolic method that reliably outputs predictions consistent with a Description Logic ontology that formalizes domain-specific knowledge.   Methods: We encode a Description Logic ontology as a circuit, a feed-forward differentiable computational graph that supports tractable execution of queries and transformations. We show that the circuit can be used to (i) generate synthetic datasets that capture the semantics of the ontology; (ii) efficiently perform deductive reasoning on a GPU; (iii) implement neuro-symbolic models whose predictions are approximately or provably consistent with the knowledge defined in the ontology.   Results We show that the synthetic dataset generated using the circuit qualitatively captures the semantics of the ontology while being challenging for Machine Learning classifiers, including neural networks. Moreover, we show that compiling the ontology into a circuit is a promising approach for scalable deductive reasoning, with runtimes up to three orders of magnitude faster than available reasoners. Finally, we show that our neuro-symbolic classifiers reliably produce consistent predictions when compared to neural network baselines, maintaining competitive performances or even outperforming them.   Conclusions By compiling Description Logic ontologies into circuits, we obtain a tighter integration between the Deep Learning and Knowledge Representation fields. We show that a single circuit representation can be used to tackle different challenging tasks closely related to real-world applications.",
+    "authors": [
+      "Nicolas Lazzari",
+      "Valentina Presutti",
+      "Antonio Vergari"
+    ],
+    "published": "2026-01-21",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.14894v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.14894v1",
+    "fetched_at": "2026-01-22T08:38:13.922835"
+  },
+  {
+    "id": "2601.14790v1",
+    "title": "CI4A: Semantic Component Interfaces for Agents Empowering Web Automation",
+    "abstract": "While Large Language Models demonstrate remarkable proficiency in high-level semantic planning, they remain limited in handling fine-grained, low-level web component manipulations. To address this limitation, extensive research has focused on enhancing model grounding capabilities through techniques such as Reinforcement Learning. However, rather than compelling agents to adapt to human-centric interfaces, we propose constructing interaction interfaces specifically optimized for agents. This paper introduces Component Interface for Agent (CI4A), a semantic encapsulation mechanism that abstracts the complex interaction logic of UI components into a set of unified tool primitives accessible to agents. We implemented CI4A within Ant Design, an industrial-grade front-end framework, covering 23 categories of commonly used UI components. Furthermore, we developed a hybrid agent featuring an action space that dynamically updates according to the page state, enabling flexible invocation of available CI4A tools. Leveraging the CI4A-integrated Ant Design, we refactored and upgraded the WebArena benchmark to evaluate existing SoTA methods. Experimental results demonstrate that the CI4A-based agent significantly outperforms existing approaches, achieving a new SoTA task success rate of 86.3%, alongside substantial improvements in execution efficiency.",
+    "authors": [
+      "Zhi Qiu",
+      "Jiazheng Sun",
+      "Chenxiao Xia",
+      "Jun Zheng",
+      "Xin Peng"
+    ],
+    "published": "2026-01-21",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.14790v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.14790v1",
+    "fetched_at": "2026-01-22T08:38:13.922860"
+  },
+  {
+    "id": "2601.14713v1",
+    "title": "Adaptive Fidelity Estimation for Quantum Programs with Graph-Guided Noise Awareness",
+    "abstract": "Fidelity estimation is a critical yet resource-intensive step in testing quantum programs on noisy intermediate-scale quantum (NISQ) devices, where the required number of measurements is difficult to predefine due to hardware noise, device heterogeneity, and transpilation-induced circuit transformations. We present QuFid, an adaptive and noise-aware framework that determines measurement budgets online by leveraging circuit structure and runtime statistical feedback. QuFid models a quantum program as a directed acyclic graph (DAG) and employs a control-flow-aware random walk to characterize noise propagation along gate dependencies. Backend-specific effects are captured via transpilation-induced structural deformation metrics, which are integrated into the random-walk formulation to induce a noise-propagation operator. Circuit complexity is then quantified through the spectral characteristics of this operator, providing a principled and lightweight basis for adaptive measurement planning. Experiments on 18 quantum benchmarks executed on IBM Quantum backends show that QuFid significantly reduces measurement cost compared to fixed-shot and learning-based baselines, while consistently maintaining acceptable fidelity bias.",
+    "authors": [
+      "Tingting Li",
+      "Ziming Zhao",
+      "Jianwei Yin"
+    ],
+    "published": "2026-01-21",
+    "categories": [
+      "quant-ph",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.14713v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.14713v1",
+    "fetched_at": "2026-01-22T08:38:13.922881"
+  },
+  {
+    "id": "2601.14698v1",
+    "title": "ClaimDB: A Fact Verification Benchmark over Large Structured Data",
+    "abstract": "Despite substantial progress in fact-verification benchmarks, claims grounded in large-scale structured data remain underexplored. In this work, we introduce ClaimDB, the first fact-verification benchmark where the evidence for claims is derived from compositions of millions of records and multiple tables. ClaimDB consists of 80 unique real-life databases covering a wide range of domains, from governance and healthcare to media, education and the natural sciences. At this scale, verification approaches that rely on \"reading\" the evidence break down, forcing a timely shift toward reasoning in executable programs. We conduct extensive experiments with 30 state-of-the-art proprietary and open-source (below 70B) LLMs and find that none exceed 83% accuracy, with more than half below 55%. Our analysis also reveals that both closed- and open-source models struggle with abstention -- the ability to admit that there is no evidence to decide -- raising doubts about their reliability in high-stakes data analysis. We release the benchmark, code, and the LLM leaderboard at https://claimdb.github.io .",
+    "authors": [
+      "Michael Theologitis",
+      "Preetam Prabhu Srikar Dammu",
+      "Chirag Shah",
+      "Dan Suciu"
+    ],
+    "published": "2026-01-21",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.14698v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.14698v1",
+    "fetched_at": "2026-01-22T08:38:13.922903"
+  },
+  {
+    "id": "2601.14652v1",
+    "title": "MAS-Orchestra: Understanding and Improving Multi-Agent Reasoning Through Holistic Orchestration and Controlled Benchmarks",
+    "abstract": "While multi-agent systems (MAS) promise elevated intelligence through coordination of agents, current approaches to automatic MAS design under-deliver. Such shortcomings stem from two key factors: (1) methodological complexity - agent orchestration is performed using sequential, code-level execution that limits global system-level holistic reasoning and scales poorly with agent complexity - and (2) efficacy uncertainty - MAS are deployed without understanding if there are tangible benefits compared to single-agent systems (SAS). We propose MAS-Orchestra, a training-time framework that formulates MAS orchestration as a function-calling reinforcement learning problem with holistic orchestration, generating an entire MAS at once. In MAS-Orchestra, complex, goal-oriented sub-agents are abstracted as callable functions, enabling global reasoning over system structure while hiding internal execution details. To rigorously study when and why MAS are beneficial, we introduce MASBENCH, a controlled benchmark that characterizes tasks along five axes: Depth, Horizon, Breadth, Parallel, and Robustness. Our analysis reveals that MAS gains depend critically on task structure, verification protocols, and the capabilities of both orchestrator and sub-agents, rather than holding universally. Guided by these insights, MAS-Orchestra achieves consistent improvements on public benchmarks including mathematical reasoning, multi-hop QA, and search-based QA. Together, MAS-Orchestra and MASBENCH enable better training and understanding of MAS in the pursuit of multi-agent intelligence.",
+    "authors": [
+      "Zixuan Ke",
+      "Yifei Ming",
+      "Austin Xu",
+      "Ryan Chin",
+      "Xuan-Phi Nguyen",
+      "Prathyusha Jwalapuram",
+      "Semih Yavuz",
+      "Caiming Xiong",
+      "Shafiq Joty"
+    ],
+    "published": "2026-01-21",
+    "categories": [
+      "cs.AI",
+      "cs.CL",
+      "cs.MA"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.14652v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.14652v1",
+    "fetched_at": "2026-01-22T08:38:13.922935"
+  },
+  {
+    "id": "2601.14628v1",
+    "title": "A Brain-inspired Embodied Intelligence for Fluid and Fast Reflexive Robotics Control",
+    "abstract": "Recent advances in embodied intelligence have leveraged massive scaling of data and model parameters to master natural-language command following and multi-task control. In contrast, biological systems demonstrate an innate ability to acquire skills rapidly from sparse experience. Crucially, current robotic policies struggle to replicate the dynamic stability, reflexive responsiveness, and temporal memory inherent in biological motion. Here we present Neuromorphic Vision-Language-Action (NeuroVLA), a framework that mimics the structural organization of the bio-nervous system between the cortex, cerebellum, and spinal cord. We adopt a system-level bio-inspired design: a high-level model plans goals, an adaptive cerebellum module stabilizes motion using high-frequency sensors feedback, and a bio-inspired spinal layer executes lightning-fast actions generation. NeuroVLA represents the first deployment of a neuromorphic VLA on physical robotics, achieving state-of-the-art performance. We observe the emergence of biological motor characteristics without additional data or special guidance: it stops the shaking in robotic arms, saves significant energy(only 0.4w on Neuromorphic Processor), shows temporal memory ability and triggers safety reflexes in less than 20 milliseconds.",
+    "authors": [
+      "Weiyu Guo",
+      "He Zhang",
+      "Pengteng Li",
+      "Tiefu Cai",
+      "Ziyang Chen",
+      "Yandong Guo",
+      "Xiao He",
+      "Yongkui Yang",
+      "Ying Sun",
+      "Hui Xiong"
+    ],
+    "published": "2026-01-21",
+    "categories": [
+      "cs.RO",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.14628v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.14628v1",
+    "fetched_at": "2026-01-22T08:38:13.922968"
+  }
+]

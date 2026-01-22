@@ -1,0 +1,591 @@
+[
+  {
+    "id": "2601.14852v1",
+    "title": "Beyond Carr Madan: A Projection Approach to Risk-Neutral Moment Estimation",
+    "abstract": "We propose a projection method to estimate risk-neutral moments from option prices. We derive a finite-sample bound implying that the projection estimator attains (up to a constant) the smallest pricing error within the span of traded option payoffs. This finite-sample optimality is not available for the widely used Carr--Madan approximation. Simulations show sizable accuracy gains for key quantities such as VIX and SVIX. We then extend the framework to multiple underlyings, deriving necessary and sufficient conditions under which simple options complete the market in higher dimensions, and providing estimators for joint moments. In our empirical application, we recover risk-neutral correlations and joint tail risk from FX options alone, addressing a longstanding measurement problem raised by Ross (1976). Our joint tail-risk measure predicts future joint currency crashes and identifies periods in which currency portfolios are particularly useful for hedging.",
+    "authors": [
+      "Tjeerd De Vries"
+    ],
+    "published": "2026-01-21",
+    "categories": [
+      "q-fin.GN"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.14852v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.14852v1",
+    "fetched_at": "2026-01-22T08:37:30.233613",
+    "chinese_title": "超越Carr-Madan：风险中性矩估计的投影方法",
+    "chinese_summary": "本文提出投影方法估计风险中性矩，推导其有限样本最优性（优于Carr-Madan近似），模拟显示VIX等关键量精度提升；扩展至多标的框架，推导简单期权实现高维市场完备的充要条件并估计联合矩；实证用外汇期权恢复风险中性相关与联合尾部风险，可预测联合货币崩溃并识别对冲时段。",
+    "tags": [
+      "Options",
+      "Volatility",
+      "Risk Management",
+      "Asset Pricing"
+    ],
+    "key_contributions": [
+      "提出投影方法估计风险中性矩，证明其有限样本最优性（优于Carr-Madan近似），提升VIX等关键量精度",
+      "扩展至多标的框架，推导市场完备条件并估计联合矩，实证用外汇期权恢复风险中性相关与联合尾部风险，可预测联合货币崩溃并识别对冲时段"
+    ],
+    "processed_at": "2026-01-22T08:40:38.881664"
+  },
+  {
+    "id": "2601.15177v1",
+    "title": "Dynamic Management of a Deep Learning-Based Anomaly Detection System for 5G Networks",
+    "abstract": "Fog and mobile edge computing (MEC) will play a key role in the upcoming fifth generation (5G) mobile networks to support decentralized applications, data analytics and management into the network itself by using a highly distributed compute model. Furthermore, increasing attention is paid to providing user-centric cybersecurity solutions, which particularly require collecting, processing and analyzing significantly large amount of data traffic and huge number of network connections in 5G networks. In this regard, this paper proposes a MEC-oriented solution in 5G mobile networks to detect network anomalies in real-time and in autonomic way. Our proposal uses deep learning techniques to analyze network flows and to detect network anomalies. Moreover, it uses policies in order to provide an efficient and dynamic management system of the computing resources used in the anomaly detection process. The paper presents relevant aspects of the deployment of the proposal and experimental results to show its performance.",
+    "authors": [
+      "Lorenzo Fernández Maimó",
+      "Alberto Huertas Celdrán",
+      "Manuel Gil Pérez",
+      "Félix J. García Clemente",
+      "Gregorio Martínez Pérez"
+    ],
+    "published": "2026-01-21",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.15177v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.15177v1",
+    "fetched_at": "2026-01-22T08:37:46.210590",
+    "chinese_title": "基于深度学习的5G网络异常检测系统动态管理",
+    "chinese_summary": "本文针对5G移动网络，提出面向边缘计算（MEC）的实时自主异常检测方案，采用深度学习分析网络流检测异常，并通过策略动态管理异常检测过程中的计算资源，同时给出部署细节及性能实验结果。",
+    "tags": [
+      "Anomaly",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出面向5G移动网络MEC的实时自主网络异常检测方案，结合深度学习实现网络流异常检测",
+      "设计基于策略的计算资源动态管理机制，优化异常检测过程的资源效率"
+    ],
+    "processed_at": "2026-01-22T08:40:52.715257"
+  },
+  {
+    "id": "2601.14336v1",
+    "title": "Log anomaly detection via Meta Learning and Prototypical Networks for Cross domain generalization",
+    "abstract": "Log anomaly detection is essential for system reliability, but it is extremely challenging to do considering it involves class imbalance. Additionally, the models trained in one domain are not applicable to other domains, necessitating the need for cross-domain adaptation (such as HDFS and Linux). Traditional detection models often fail to generalize due to significant data drift and the inherent absence of labeled anomalies in new target domains. To handle the above challenges, we proposed a new end-to-end framework based on a meta-learning approach. Our methodology first gets the data ready by combining a Drain3 log parsing mechanism with a dynamic drift-based labeling technique that uses semantic and fuzzy matching to move existing anomaly knowledge from one source to another. BERT-based semantic embeddings are obtained, and the feature selection is invoked to reduce the dimensionality. Later, Model Agnostic Meta-Learning (MAML) and Prototypical Networks models are trained to adapt quickly and effectively. The SMOTE oversampling method is employed to handle imbalances in the data. All the results are obtained by employing the leave-one-out source method, and the corresponding mean F1 scores are reported. Our empirical findings validate that the proposed meta-learning-driven approach yielded the highest mean F1 score and proved to be effective for cross-domain settings.",
+    "authors": [
+      "Krishna Sharma",
+      "Vivek Yelleti"
+    ],
+    "published": "2026-01-20",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.14336v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.14336v1",
+    "fetched_at": "2026-01-22T08:37:46.210621",
+    "chinese_title": "基于元学习和原型网络的日志异常检测用于跨域泛化",
+    "chinese_summary": "论文针对日志异常检测中类不平衡、跨域泛化难（如HDFS与Linux域差异）的问题，提出端到端框架：结合Drain3日志解析与动态漂移标注（语义+模糊匹配迁移异常知识），用BERT语义嵌入降维，MAML+原型网络快速适应，SMOTE处理不平衡；实验用留一源法验证，该框架跨域F1得分最高，泛化有效。",
+    "tags": [
+      "Anomaly",
+      "Deep Learning",
+      "Transformer"
+    ],
+    "key_contributions": [
+      "提出端到端元学习框架，整合日志解析、动态标注、语义嵌入等模块，解决日志异常检测的类不平衡与跨域泛化难题",
+      "实验验证框架在跨域设置下F1得分最优，有效提升异常检测的跨域泛化能力"
+    ],
+    "processed_at": "2026-01-22T08:41:11.029143"
+  },
+  {
+    "id": "2601.14305v1",
+    "title": "An Optimized Decision Tree-Based Framework for Explainable IoT Anomaly Detection",
+    "abstract": "The increase in the number of Internet of Things (IoT) devices has tremendously increased the attack surface of cyber threats thus making a strong intrusion detection system (IDS) with a clear explanation of the process essential towards resource-constrained environments. Nevertheless, current IoT IDS systems are usually traded off with detection quality, model elucidability, and computational effectiveness, thus the deployment on IoT devices. The present paper counteracts these difficulties by suggesting an explainable AI (XAI) framework based on an optimized Decision Tree classifier with both local and global importance methods: SHAP values that estimate feature attribution using local explanations, and Morris sensitivity analysis that identifies the feature importance in a global view. The proposed system attains the state of art on the test performance with 99.91% accuracy, F1-score of 99.51% and Cohen Kappa of 0.9960 and high stability is confirmed by a cross validation mean accuracy of 98.93%. Efficiency is also enhanced in terms of computations to provide faster inferences compared to those that are generalized in ensemble models. SrcMac has shown as the most significant predictor in feature analyses according to SHAP and Morris methods. Compared to the previous work, our solution eliminates its major drawback lack because it allows us to apply it to edge devices and, therefore, achieve real-time processing, adhere to the new regulation of transparency in AI, and achieve high detection rates on attacks of dissimilar classes. This combination performance of high accuracy, explainability, and low computation make the framework useful and reliable as a resource-constrained IoT security problem in real environments.",
+    "authors": [
+      " Ashikuzzaman",
+      "Md. Shawkat Hossain",
+      "Jubayer Abdullah Joy",
+      "Md Zahid Akon",
+      "Md Manjur Ahmed",
+      "Md. Naimul Islam"
+    ],
+    "published": "2026-01-18",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.14305v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.14305v1",
+    "fetched_at": "2026-01-22T08:37:46.210929",
+    "chinese_title": "基于优化决策树的可解释物联网异常检测框架",
+    "chinese_summary": "论文针对物联网（IoT）入侵检测系统（IDS）在检测质量、可解释性与计算效率间的权衡问题，提出一种基于优化决策树的可解释AI（XAI）框架，结合SHAP值（局部特征归因）和Morris敏感性分析（全局特征重要性）；该框架测试性能优异（99.91%准确率、99.51%F1分数等），计算效率提升支持边缘设备实时处理，满足AI透明度监管要求。",
+    "tags": [
+      "Anomaly"
+    ],
+    "key_contributions": [
+      "提出结合SHAP局部解释与Morris全局分析的优化决策树XAI框架，解决IoT IDS在检测质量、可解释性和计算效率的权衡问题",
+      "实现优异检测性能且计算效率提升，支持边缘设备实时处理，满足AI透明度监管要求"
+    ],
+    "processed_at": "2026-01-22T08:41:23.239226"
+  },
+  {
+    "id": "2601.15164v1",
+    "title": "V-CAGE: Context-Aware Generation and Verification for Scalable Long-Horizon Embodied Tasks",
+    "abstract": "Learning long-horizon embodied behaviors from synthetic data remains challenging because generated scenes are often physically implausible, language-driven programs frequently \"succeed\" without satisfying task semantics, and high-level instructions require grounding into executable action sequences. To address these limitations, we introduce V-CAGE, a closed-loop framework for generating robust, semantically aligned manipulation datasets at scale. First, we propose a context-aware instantiation mechanism that enforces geometric consistency during scene synthesis. By dynamically maintaining a map of prohibited spatial areas as objects are placed, our system prevents interpenetration and ensures reachable, conflict-free configurations in cluttered environments. Second, to bridge the gap between abstract intent and low-level control, we employ a hierarchical instruction decomposition module. This decomposes high-level goals (e.g., \"get ready for work\") into compositional action primitives, facilitating coherent long-horizon planning. Crucially, we enforce semantic correctness through a VLM-based verification loop. Acting as a visual critic, the VLM performs rigorous rejection sampling after each subtask, filtering out \"silent failures\" where code executes but fails to achieve the visual goal. Experiments demonstrate that V-CAGE yields datasets with superior physical and semantic fidelity, significantly boosting the success rate and generalization of downstream policies compared to non-verified baselines.",
+    "authors": [
+      "Yaru Liu",
+      "Ao-bo Wang",
+      "Nanyang Ye"
+    ],
+    "published": "2026-01-21",
+    "categories": [
+      "cs.RO",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.15164v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.15164v1",
+    "fetched_at": "2026-01-22T08:38:13.922595",
+    "chinese_title": "V-CAGE：面向可扩展长时程具身任务的上下文感知生成与验证",
+    "chinese_summary": "该论文针对合成数据学习长时程具身行为的挑战，提出V-CAGE闭环框架；其包含上下文感知实例化机制（动态维护禁止区域确保场景几何一致性）、分层指令分解模块（拆解高层目标为动作基元）及VLM验证循环（过滤静默失败）；实验表明该框架生成的数据集保真度更高，显著提升下游策略的成功率与泛化性。",
+    "tags": [
+      "Deep Learning",
+      "Reinforcement Learning",
+      "Transformer"
+    ],
+    "key_contributions": [
+      "提出上下文感知实例化机制，通过动态维护禁止空间区域确保场景合成的几何一致性与无冲突配置",
+      "构建基于VLM的验证循环，过滤执行但未达视觉目标的“静默失败”，提升数据集语义保真度并增强下游策略性能"
+    ],
+    "processed_at": "2026-01-22T08:42:02.600748"
+  },
+  {
+    "id": "2601.15141v1",
+    "title": "CLEANER: Self-Purified Trajectories Boost Agentic Reinforcement Learning",
+    "abstract": "Agentic Reinforcement Learning (RL) has empowered Large Language Models (LLMs) to utilize tools like Python interpreters for complex problem-solving. However, for parameter-constrained models (e.g., 4B--7B), the exploration phase is often plagued by frequent execution failures, creating noisy trajectories that hinder policy optimization. Under standard outcome-based reward settings, this noise leads to a critical credit assignment issue, where erroneous actions are inadvertently reinforced alongside successful outcomes. Existing mitigations face a dilemma: dense rewards often trigger reward hacking, while supersampling incurs prohibitive computational costs. To address these challenges, we propose CLEANER. Distinct from external filtering methods, CLEANER exploits the model's intrinsic self-correction capabilities to eliminate error-contaminated context directly during data collection. At its core, the Similarity-Aware Adaptive Rollback (SAAR) mechanism autonomously constructs clean, purified trajectories by retrospectively replacing failures with successful self-corrections. Based on semantic similarity, SAAR adaptively regulates replacement granularity from shallow execution repairs to deep reasoning substitutions. By training on these self-purified paths, the model internalizes correct reasoning patterns rather than error-recovery loops. Empirical results on AIME24/25, GPQA, and LiveCodeBench show average accuracy gains of 6%, 3%, and 5% over baselines. Notably, CLEANER matches state-of-the-art performance using only one-third of the training steps, highlighting trajectory purification as a scalable solution for efficient agentic RL. Our models and code are available at GitHub",
+    "authors": [
+      "Tianshi Xu",
+      "Yuteng Chen",
+      "Meng Li"
+    ],
+    "published": "2026-01-21",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.15141v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.15141v1",
+    "fetched_at": "2026-01-22T08:38:13.922626",
+    "chinese_title": "CLEANER：自净化轨迹提升智能体强化学习",
+    "chinese_summary": "针对参数受限大模型（4B-7B）在智能体强化学习中因执行失败产生噪声轨迹、导致信用分配困难的问题，论文提出CLEANER方法，核心是相似性感知自适应回滚（SAAR）机制，通过语义相似度自适应替换失败轨迹为成功自修正以生成自净化轨迹；在AIME24/25、GPQA、LiveCodeBench等数据集上，该方法平均准确率较基线提升6%、3%、5%。",
+    "tags": [
+      "LLM",
+      "Reinforcement Learning",
+      "Execution"
+    ],
+    "key_contributions": [
+      "提出CLEANER方法，利用模型自身自修正能力，通过SAAR机制生成自净化轨迹，解决参数受限大模型智能体强化学习中的噪声轨迹与信用分配问题",
+      "在多基准数据集（AIME24/25、GPQA、LiveCodeBench）上验证有效，平均准确率显著优于基线方法"
+    ],
+    "processed_at": "2026-01-22T08:42:28.335432"
+  },
+  {
+    "id": "2601.15120v1",
+    "title": "Emerging from Ground: Addressing Intent Deviation in Tool-Using Agents via Deriving Real Calls into Virtual Trajectories",
+    "abstract": "LLMs have advanced tool-using agents for real-world applications, yet they often lead to unexpected behaviors or results. Beyond obvious failures, the subtle issue of \"intent deviation\" severely hinders reliable evaluation and performance improvement. Existing post-training methods generally leverage either real system samples or virtual data simulated by LLMs. However, the former is costly due to reliance on hand-crafted user requests, while the latter suffers from distribution shift from the real tools in the wild. Additionally, both methods lack negative samples tailored to intent deviation scenarios, hindering effective guidance on preference learning. We introduce RISE, a \"Real-to-Virtual\" method designed to mitigate intent deviation. Anchoring on verified tool primitives, RISE synthesizes virtual trajectories and generates diverse negative samples through mutation on critical parameters. With synthetic data, RISE fine-tunes backbone LLMs via the two-stage training for intent alignment. Evaluation results demonstrate that data synthesized by RISE achieve promising results in eight metrics covering user requires, execution trajectories and agent responses. Integrating with training, RISE achieves an average 35.28% improvement in Acctask (task completion) and 23.27% in Accintent (intent alignment), outperforming SOTA baselines by 1.20--42.09% and 1.17--54.93% respectively.",
+    "authors": [
+      "Qian Xiong",
+      "Yuekai Huang",
+      "Yujia Zheng",
+      "Tianhao Li",
+      "Ziyou Jiang",
+      "Zhiyuan Chang",
+      "Zhaoyang Li",
+      "Huanxiang Feng",
+      "Mingyang Li"
+    ],
+    "published": "2026-01-21",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.15120v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.15120v1",
+    "fetched_at": "2026-01-22T08:38:13.922661",
+    "chinese_title": "从现实出发：通过将真实调用转化为虚拟轨迹解决工具使用Agent的意图偏差问题",
+    "chinese_summary": "针对工具使用Agent中意图偏差问题（现有方法依赖手工请求成本高、虚拟数据分布偏移且缺乏针对性负样本），论文提出Real-to-Virtual方法RISE，锚定验证工具原语合成虚拟轨迹并通过关键参数变异生成多样负样本，经两阶段微调实现意图对齐；实验表明RISE在任务完成和意图对齐指标上显著优于现有方法，平均提升35.28%和23.27%。",
+    "tags": [
+      "LLM",
+      "NLP",
+      "Financial Agent",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出Real-to-Virtual方法RISE，通过锚定验证工具原语合成虚拟轨迹并生成针对性负样本，解决工具使用Agent意图偏差问题中真实样本成本高、虚拟样本分布偏移的挑战",
+      "实验验证RISE在任务完成（Acctask）和意图对齐（Accintent）指标上显著优于现有SOTA方法，平均提升35.28%和23.27%"
+    ],
+    "processed_at": "2026-01-22T08:43:11.533718"
+  },
+  {
+    "id": "2601.15074v1",
+    "title": "SmartOracle -- An Agentic Approach to Mitigate Noise in Differential Oracles",
+    "abstract": "Differential fuzzers detect bugs by executing identical inputs across distinct implementations of the same specification, such as JavaScript interpreters. Validating the outputs requires an oracle and for differential testing of JavaScript, these are constructed manually, making them expensive, time-consuming, and prone to false positives. Worse, when the specification evolves, this manual effort must be repeated.   Inspired by the success of agentic systems in other SE domains, this paper introduces SmartOracle. SmartOracle decomposes the manual triage workflow into specialized Large Language Model (LLM) sub-agents. These agents synthesize independently gathered evidence from terminal runs and targeted specification queries to reach a final verdict.   For historical benchmarks, SmartOracle achieves 0.84 recall with an 18% false positive rate. Compared to a sequential Gemini 2.5 Pro baseline, it improves triage accuracy while reducing analysis time by 4$\\times$ and API costs by 10$\\times$. In active fuzzing campaigns, SmartOracle successfully identified and reported previously unknown specification-level issues across major engines, including bugs in V8, JavaScriptCore, and GraalJS.   The success of SmartOracle's agentic architecture on Javascript suggests it might be useful other software systems- a research direction we will explore in future work.",
+    "authors": [
+      "Srinath Srinivasan",
+      "Tim Menzies",
+      "Marcelo D'Amorim"
+    ],
+    "published": "2026-01-21",
+    "categories": [
+      "cs.SE",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.15074v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.15074v1",
+    "fetched_at": "2026-01-22T08:38:13.922686",
+    "chinese_title": "SmartOracle——一种缓解差分oracle噪声的智能体方法",
+    "chinese_summary": "该文针对JavaScript解释器差分测试中手动oracle成本高、易误报的问题，提出SmartOracle方法，将手动分类工作流分解为专门的大语言模型（LLM）子智能体，通过综合终端运行和规范查询的独立证据得出最终判断；其在历史基准上召回率达0.84、误报率18%，比基线提升准确率并减少4倍分析时间、10倍API成本，还发现了V8等主流引擎的未知规范问题。",
+    "tags": [
+      "LLM",
+      "Transformer",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出基于LLM子智能体的SmartOracle方法，自动化缓解JavaScript差分oracle的噪声问题",
+      "在基准测试中提升准确率、降低分析时间与API成本，且发现主流JS引擎的未知规范问题"
+    ],
+    "processed_at": "2026-01-22T08:43:37.638595"
+  },
+  {
+    "id": "2601.15064v1",
+    "title": "Incentive-Tuning: Understanding and Designing Incentives for Empirical Human-AI Decision-Making Studies",
+    "abstract": "AI has revolutionised decision-making across various fields. Yet human judgement remains paramount for high-stakes decision-making. This has fueled explorations of collaborative decision-making between humans and AI systems, aiming to leverage the strengths of both. To explore this dynamic, researchers conduct empirical studies, investigating how humans use AI assistance for decision-making and how this collaboration impacts results. A critical aspect of conducting these studies is the role of participants, often recruited through crowdsourcing platforms. The validity of these studies hinges on the behaviours of the participants, hence effective incentives that can potentially affect these behaviours are a key part of designing and executing these studies. In this work, we aim to address the critical role of incentive design for conducting empirical human-AI decision-making studies, focusing on understanding, designing, and documenting incentive schemes. Through a thematic review of existing research, we explored the current practices, challenges, and opportunities associated with incentive design for human-AI decision-making empirical studies. We identified recurring patterns, or themes, such as what comprises the components of an incentive scheme, how incentive schemes are manipulated by researchers, and the impact they can have on research outcomes. Leveraging the acquired understanding, we curated a set of guidelines to aid researchers in designing effective incentive schemes for their studies, called the Incentive-Tuning Framework, outlining how researchers can undertake, reflect on, and document the incentive design process. By advocating for a standardised yet flexible approach to incentive design and contributing valuable insights along with practical tools, we hope to pave the way for more reliable and generalizable knowledge in the field of human-AI decision-making.",
+    "authors": [
+      "Simran Kaur",
+      "Sara Salimzadeh",
+      "Ujwal Gadiraju"
+    ],
+    "published": "2026-01-21",
+    "categories": [
+      "cs.HC",
+      "cs.AI",
+      "cs.GT",
+      "cs.IR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.15064v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.15064v1",
+    "fetched_at": "2026-01-22T08:38:13.922709",
+    "chinese_title": "激励调优：理解与设计实证人机决策研究中的激励机制",
+    "chinese_summary": "该论文聚焦实证人机决策研究中的激励设计问题，通过主题式综述梳理现有研究的实践、挑战与机会，识别出激励方案的组成、操纵方式及对研究结果的影响等核心主题；在此基础上整理了一套指导研究者设计有效激励方案的指南，以提升此类研究的有效性。",
+    "tags": [
+      "Behavioral Finance"
+    ],
+    "key_contributions": [
+      "通过主题式综述系统梳理实证人机决策研究中激励设计的实践、挑战与机会，识别核心主题",
+      "整理实用指南辅助研究者设计有效激励方案，提升研究有效性"
+    ],
+    "processed_at": "2026-01-22T08:43:55.645975"
+  },
+  {
+    "id": "2601.15059v1",
+    "title": "The Responsibility Vacuum: Organizational Failure in Scaled Agent Systems",
+    "abstract": "Modern CI/CD pipelines integrating agent-generated code exhibit a structural failure in responsibility attribution. Decisions are executed through formally correct approval processes, yet no entity possesses both the authority to approve those decisions and the epistemic capacity to meaningfully understand their basis.   We define this condition as responsibility vacuum: a state in which decisions occur, but responsibility cannot be attributed because authority and verification capacity do not coincide. We show that this is not a process deviation or technical defect, but a structural property of deployments where decision generation throughput exceeds bounded human verification capacity.   We identify a scaling limit under standard deployment assumptions, including parallel agent generation, CI-based validation, and individualized human approval gates. Beyond a throughput threshold, verification ceases to function as a decision criterion and is replaced by ritualized approval based on proxy signals. Personalized responsibility becomes structurally unattainable in this regime.   We further characterize a CI amplification dynamic, whereby increasing automated validation coverage raises proxy signal density without restoring human capacity. Under fixed time and attention constraints, this accelerates cognitive offloading in the broad sense and widens the gap between formal approval and epistemic understanding. Additional automation therefore amplifies, rather than mitigates, the responsibility vacuum.   We conclude that unless organizations explicitly redesign decision boundaries or reassign responsibility away from individual decisions toward batch- or system-level ownership, responsibility vacuum remains an invisible but persistent failure mode in scaled agent deployments.",
+    "authors": [
+      "Oleg Romanchuk",
+      "Roman Bondar"
+    ],
+    "published": "2026-01-21",
+    "categories": [
+      "cs.AI",
+      "eess.SY"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.15059v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.15059v1",
+    "fetched_at": "2026-01-22T08:38:13.922730",
+    "chinese_title": "责任真空：规模化智能体系统中的组织失效",
+    "chinese_summary": "该论文指出集成智能体生成代码的现代CI/CD流水线存在责任归因的结构失效，定义“责任真空”为权威与认知理解能力不重合导致无法归因责任的状态；证明这是决策生成吞吐量超人类验证能力的结构属性，同时识别缩放限制及CI放大动态（自动化验证覆盖增加反而扩大正式审批与认知理解的差距）。",
+    "tags": [
+      "Financial Agent",
+      "Algorithmic Trading",
+      "Risk Management"
+    ],
+    "key_contributions": [
+      "定义“责任真空”概念，证明其是规模化智能体系统中决策生成吞吐量超人类验证能力时的结构属性（非流程偏差或技术缺陷）",
+      "揭示CI放大动态：自动化验证覆盖增加会扩大正式审批与认知理解的差距，加速认知卸载，加剧责任真空"
+    ],
+    "processed_at": "2026-01-22T08:44:21.793655"
+  },
+  {
+    "id": "2601.14971v1",
+    "title": "Fine-Grained Traceability for Transparent ML Pipelines",
+    "abstract": "Modern machine learning systems are increasingly realised as multistage pipelines, yet existing transparency mechanisms typically operate at a model level: they describe what a system is and why it behaves as it does, but not how individual data samples are operationally recorded, tracked, and verified as they traverse the pipeline. This absence of verifiable, sample-level traceability leaves practitioners and users unable to determine whether a specific sample was used, when it was processed, or whether the corresponding records remain intact over time. We introduce FG-Trac, a model-agnostic framework that establishes verifiable, fine-grained sample-level traceability throughout machine learning pipelines. FG-Trac defines an explicit mechanism for capturing and verifying sample lifecycle events across preprocessing and training, computes contribution scores explicitly grounded in training checkpoints, and anchors these traces to tamper-evident cryptographic commitments. The framework integrates without modifying model architectures or training objectives, reconstructing complete and auditable data-usage histories with practical computational overhead. Experiments on a canonical convolutional neural network and a multimodal graph learning pipeline demonstrate that FG-Trac preserves predictive performance while enabling machine learning systems to furnish verifiable evidence of how individual samples were used and propagated during model execution.",
+    "authors": [
+      "Liping Chen",
+      "Mujie Liu",
+      "Haytham Fayek"
+    ],
+    "published": "2026-01-21",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.14971v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.14971v1",
+    "fetched_at": "2026-01-22T08:38:13.922752",
+    "chinese_title": "面向透明机器学习流水线的细粒度可追溯性",
+    "chinese_summary": "现有机器学习可解释性机制多聚焦模型层面，缺乏样本级可验证追溯。论文提出模型无关的FG-Trac框架，通过捕获样本生命周期事件、计算训练检查点关联的贡献分数并锚定抗篡改加密承诺，实现流水线中样本级可验证追溯，且不修改模型架构与训练目标，实验验证其不影响预测性能并能提供样本使用的可审计历史。",
+    "tags": [
+      "Deep Learning",
+      "Graph Neural Network"
+    ],
+    "key_contributions": [
+      "提出模型无关的FG-Trac框架，实现机器学习流水线中样本级的可验证细粒度追溯",
+      "框架不修改模型架构与训练目标，且实验证明不影响预测性能，可提供样本使用的可审计历史"
+    ],
+    "processed_at": "2026-01-22T08:44:55.133913"
+  },
+  {
+    "id": "2601.14945v1",
+    "title": "TIDAL: Temporally Interleaved Diffusion and Action Loop for High-Frequency VLA Control",
+    "abstract": "Large-scale Vision-Language-Action (VLA) models offer semantic generalization but suffer from high inference latency, limiting them to low-frequency batch-and-execute paradigm. This frequency mismatch creates an execution blind spot, causing failures in dynamic environments where targets move during the open-loop execution window. We propose TIDAL (Temporally Interleaved Diffusion and Action Loop), a hierarchical framework that decouples semantic reasoning from high-frequency actuation. TIDAL operates as a backbone-agnostic module for diffusion-based VLAs, using a dual-frequency architecture to redistribute the computational budget. Specifically, a low-frequency macro-intent loop caches semantic embeddings, while a high-frequency micro-control loop interleaves single-step flow integration with execution. This design enables approximately 9 Hz control updates on edge hardware (vs. approximately 2.4 Hz baselines) without increasing marginal overhead. To handle the resulting latency shift, we introduce a temporally misaligned training strategy where the policy learns predictive compensation using stale semantic intent alongside real-time proprioception. Additionally, we address the insensitivity of static vision encoders to velocity by incorporating a differential motion predictor. TIDAL is architectural, making it orthogonal to system-level optimizations. Experiments show a 2x performance gain over open-loop baselines in dynamic interception tasks. Despite a marginal regression in static success rates, our approach yields a 4x increase in feedback frequency and extends the effective horizon of semantic embeddings beyond the native action chunk size. Under non-paused inference protocols, TIDAL remains robust where standard baselines fail due to latency.",
+    "authors": [
+      "Yuteng Sun",
+      "Haoran Wang",
+      "Ruofei Bai",
+      "Zhengguo Li",
+      "Jun Li",
+      "Meng Yee",
+      " Chuah",
+      "Wei Yun Yau"
+    ],
+    "published": "2026-01-21",
+    "categories": [
+      "cs.RO",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.14945v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.14945v1",
+    "fetched_at": "2026-01-22T08:38:13.922787",
+    "chinese_title": "TIDAL：用于高频视觉-语言-动作控制的时间交错扩散与动作循环框架",
+    "chinese_summary": "针对大规模视觉-语言-动作（VLA）模型推理延迟高、仅能低频批量执行导致动态环境失败的问题，论文提出TIDAL分层框架，通过双频架构（低频宏意图循环缓存语义嵌入、高频微控制循环交错单步流积分与执行）解耦语义推理与高频驱动，同时引入时间错位训练策略和差分运动预测器解决延迟偏移，在边缘硬件实现约9Hz控制更新（基线约2.4Hz），动态拦截任务性能较开环基线提升2倍。",
+    "tags": [
+      "High Frequency",
+      "Execution",
+      "Deep Learning",
+      "Reinforcement Learning"
+    ],
+    "key_contributions": [
+      "提出TIDAL双频分层框架，解耦语义推理与高频驱动，在边缘硬件实现约9Hz的控制更新频率（较基线提升近4倍）",
+      "引入时间错位训练策略和差分运动预测器，解决延迟偏移问题，动态拦截任务性能较开环基线提升2倍"
+    ],
+    "processed_at": "2026-01-22T08:45:18.940880"
+  },
+  {
+    "id": "2601.14914v1",
+    "title": "CodeDelegator: Mitigating Context Pollution via Role Separation in Code-as-Action Agents",
+    "abstract": "Recent advances in large language models (LLMs) allow agents to represent actions as executable code, offering greater expressivity than traditional tool-calling. However, real-world tasks often demand both strategic planning and detailed implementation. Using a single agent for both leads to context pollution from debugging traces and intermediate failures, impairing long-horizon performance. We propose CodeDelegator, a multi-agent framework that separates planning from implementation via role specialization. A persistent Delegator maintains strategic oversight by decomposing tasks, writing specifications, and monitoring progress without executing code. For each sub-task, a new Coder agent is instantiated with a clean context containing only its specification, shielding it from prior failures. To coordinate between agents, we introduce Ephemeral-Persistent State Separation (EPSS), which isolates each Coder's execution state while preserving global coherence, preventing debugging traces from polluting the Delegator's context. Experiments on various benchmarks demonstrate the effectiveness of CodeDelegator across diverse scenarios.",
+    "authors": [
+      "Tianxiang Fei",
+      "Cheng Chen",
+      "Yue Pan",
+      "Mao Zheng",
+      "Mingyang Song"
+    ],
+    "published": "2026-01-21",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.14914v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.14914v1",
+    "fetched_at": "2026-01-22T08:38:13.922812",
+    "chinese_title": "CodeDelegator：通过代码即行动代理的角色分离缓解上下文污染",
+    "chinese_summary": "针对LLM代码即行动代理中单一代理同时承担战略规划与详细实现导致的上下文污染问题，论文提出多代理框架CodeDelegator，通过角色分离（Delegator负责战略监督，Coder负责子任务实现）并引入EPSS机制隔离执行状态与全局连贯，实验验证其能有效提升长序列任务性能",
+    "tags": [
+      "LLM",
+      "NLP",
+      "Financial Agent",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出多代理框架CodeDelegator，通过角色分离（Delegator与Coder）缓解代码即行动代理中的上下文污染问题",
+      "引入Ephemeral-Persistent State Separation（EPSS）机制，隔离执行状态与全局连贯以避免调试痕迹污染"
+    ],
+    "processed_at": "2026-01-22T08:45:41.884864"
+  },
+  {
+    "id": "2601.14894v1",
+    "title": "To Neuro-Symbolic Classification and Beyond by Compiling Description Logic Ontologies to Probabilistic Circuits",
+    "abstract": "Background: Neuro-symbolic methods enhance the reliability of neural network classifiers through logical constraints, but they lack native support for ontologies.   Objectives: We aim to develop a neuro-symbolic method that reliably outputs predictions consistent with a Description Logic ontology that formalizes domain-specific knowledge.   Methods: We encode a Description Logic ontology as a circuit, a feed-forward differentiable computational graph that supports tractable execution of queries and transformations. We show that the circuit can be used to (i) generate synthetic datasets that capture the semantics of the ontology; (ii) efficiently perform deductive reasoning on a GPU; (iii) implement neuro-symbolic models whose predictions are approximately or provably consistent with the knowledge defined in the ontology.   Results We show that the synthetic dataset generated using the circuit qualitatively captures the semantics of the ontology while being challenging for Machine Learning classifiers, including neural networks. Moreover, we show that compiling the ontology into a circuit is a promising approach for scalable deductive reasoning, with runtimes up to three orders of magnitude faster than available reasoners. Finally, we show that our neuro-symbolic classifiers reliably produce consistent predictions when compared to neural network baselines, maintaining competitive performances or even outperforming them.   Conclusions By compiling Description Logic ontologies into circuits, we obtain a tighter integration between the Deep Learning and Knowledge Representation fields. We show that a single circuit representation can be used to tackle different challenging tasks closely related to real-world applications.",
+    "authors": [
+      "Nicolas Lazzari",
+      "Valentina Presutti",
+      "Antonio Vergari"
+    ],
+    "published": "2026-01-21",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.14894v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.14894v1",
+    "fetched_at": "2026-01-22T08:38:13.922835",
+    "chinese_title": "通过将描述逻辑本体编译为概率电路实现神经符号分类及更广泛应用",
+    "chinese_summary": "该论文提出将描述逻辑本体编码为概率电路（可微计算图）的方法，实现三大核心功能：生成符合本体语义的合成数据集、GPU上高效演绎推理（速度比现有推理器快三个数量级）、构建神经符号分类器（预测与本体知识一致且性能不低于基线模型）。",
+    "tags": [
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出描述逻辑本体到概率电路的编译方法，支持本体语义合成数据生成、GPU高效演绎推理及神经符号分类",
+      "神经符号分类器预测与本体知识一致且性能有竞争力，演绎推理速度比现有工具快三个数量级"
+    ],
+    "processed_at": "2026-01-22T08:46:10.952117"
+  },
+  {
+    "id": "2601.14790v1",
+    "title": "CI4A: Semantic Component Interfaces for Agents Empowering Web Automation",
+    "abstract": "While Large Language Models demonstrate remarkable proficiency in high-level semantic planning, they remain limited in handling fine-grained, low-level web component manipulations. To address this limitation, extensive research has focused on enhancing model grounding capabilities through techniques such as Reinforcement Learning. However, rather than compelling agents to adapt to human-centric interfaces, we propose constructing interaction interfaces specifically optimized for agents. This paper introduces Component Interface for Agent (CI4A), a semantic encapsulation mechanism that abstracts the complex interaction logic of UI components into a set of unified tool primitives accessible to agents. We implemented CI4A within Ant Design, an industrial-grade front-end framework, covering 23 categories of commonly used UI components. Furthermore, we developed a hybrid agent featuring an action space that dynamically updates according to the page state, enabling flexible invocation of available CI4A tools. Leveraging the CI4A-integrated Ant Design, we refactored and upgraded the WebArena benchmark to evaluate existing SoTA methods. Experimental results demonstrate that the CI4A-based agent significantly outperforms existing approaches, achieving a new SoTA task success rate of 86.3%, alongside substantial improvements in execution efficiency.",
+    "authors": [
+      "Zhi Qiu",
+      "Jiazheng Sun",
+      "Chenxiao Xia",
+      "Jun Zheng",
+      "Xin Peng"
+    ],
+    "published": "2026-01-21",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.14790v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.14790v1",
+    "fetched_at": "2026-01-22T08:38:13.922860",
+    "chinese_title": "CI4A：赋能Web自动化的Agent语义组件接口",
+    "chinese_summary": "针对大语言模型（LLM）在细粒度Web组件操作上的不足，论文提出Agent语义组件接口（CI4A），将UI组件交互逻辑抽象为统一工具原语；基于工业级前端框架Ant Design实现CI4A并覆盖23类常用组件，开发动态更新动作空间的混合Agent，升级WebArena基准后实验显示其任务成功率达86.3%（新SOTA）且执行效率显著提升。",
+    "tags": [
+      "LLM",
+      "Reinforcement Learning",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出CI4A语义封装机制，将UI组件复杂交互逻辑抽象为Agent可访问的统一工具原语，优化Web交互接口；",
+      "基于Ant Design实现CI4A并覆盖23类常用UI组件，开发动态动作空间的混合Agent，升级WebArena基准并验证其任务成功率86.3%（新SOTA）。"
+    ],
+    "processed_at": "2026-01-22T08:46:47.928076"
+  },
+  {
+    "id": "2601.14713v1",
+    "title": "Adaptive Fidelity Estimation for Quantum Programs with Graph-Guided Noise Awareness",
+    "abstract": "Fidelity estimation is a critical yet resource-intensive step in testing quantum programs on noisy intermediate-scale quantum (NISQ) devices, where the required number of measurements is difficult to predefine due to hardware noise, device heterogeneity, and transpilation-induced circuit transformations. We present QuFid, an adaptive and noise-aware framework that determines measurement budgets online by leveraging circuit structure and runtime statistical feedback. QuFid models a quantum program as a directed acyclic graph (DAG) and employs a control-flow-aware random walk to characterize noise propagation along gate dependencies. Backend-specific effects are captured via transpilation-induced structural deformation metrics, which are integrated into the random-walk formulation to induce a noise-propagation operator. Circuit complexity is then quantified through the spectral characteristics of this operator, providing a principled and lightweight basis for adaptive measurement planning. Experiments on 18 quantum benchmarks executed on IBM Quantum backends show that QuFid significantly reduces measurement cost compared to fixed-shot and learning-based baselines, while consistently maintaining acceptable fidelity bias.",
+    "authors": [
+      "Tingting Li",
+      "Ziming Zhao",
+      "Jianwei Yin"
+    ],
+    "published": "2026-01-21",
+    "categories": [
+      "quant-ph",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.14713v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.14713v1",
+    "fetched_at": "2026-01-22T08:38:13.922881",
+    "chinese_title": "基于图引导噪声感知的量子程序自适应保真度估计",
+    "chinese_summary": "针对噪声中等规模量子（NISQ）设备上量子程序保真度估计资源消耗大的问题，提出QuFid自适应噪声感知框架；该框架将量子程序建模为有向无环图（DAG），通过控制流感知随机游走刻画噪声传播，结合后端特定结构变形指标，利用噪声传播算子谱特性量化电路复杂度以自适应规划测量预算；实验表明QuFid显著降低测量成本且保持可接受的保真度偏差。",
+    "tags": [
+      "Graph Neural Network",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出QuFid自适应噪声感知框架，在线确定量子程序保真度估计的测量预算，解决NISQ设备上预定义测量次数困难的问题",
+      "结合电路DAG结构、噪声传播随机游走及后端特定指标，基于算子谱特性量化电路复杂度以自适应规划测量预算，实验验证其显著降低测量成本且保持保真度偏差可接受"
+    ],
+    "processed_at": "2026-01-22T08:47:24.552570"
+  },
+  {
+    "id": "2601.14698v1",
+    "title": "ClaimDB: A Fact Verification Benchmark over Large Structured Data",
+    "abstract": "Despite substantial progress in fact-verification benchmarks, claims grounded in large-scale structured data remain underexplored. In this work, we introduce ClaimDB, the first fact-verification benchmark where the evidence for claims is derived from compositions of millions of records and multiple tables. ClaimDB consists of 80 unique real-life databases covering a wide range of domains, from governance and healthcare to media, education and the natural sciences. At this scale, verification approaches that rely on \"reading\" the evidence break down, forcing a timely shift toward reasoning in executable programs. We conduct extensive experiments with 30 state-of-the-art proprietary and open-source (below 70B) LLMs and find that none exceed 83% accuracy, with more than half below 55%. Our analysis also reveals that both closed- and open-source models struggle with abstention -- the ability to admit that there is no evidence to decide -- raising doubts about their reliability in high-stakes data analysis. We release the benchmark, code, and the LLM leaderboard at https://claimdb.github.io .",
+    "authors": [
+      "Michael Theologitis",
+      "Preetam Prabhu Srikar Dammu",
+      "Chirag Shah",
+      "Dan Suciu"
+    ],
+    "published": "2026-01-21",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.14698v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.14698v1",
+    "fetched_at": "2026-01-22T08:38:13.922903",
+    "chinese_title": "ClaimDB：面向大规模结构化数据的事实验证基准",
+    "chinese_summary": "本文构建了首个面向大规模结构化数据（多表、百万级记录）的事实验证基准ClaimDB，涵盖治理、医疗等80个真实领域数据库；实验评估30个SOTA LLMs发现其准确率最高仅83%，超半数低于55%且弃权能力不足，同时发布基准、代码及LLM排行榜。",
+    "tags": [
+      "LLM",
+      "NLP",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "构建首个基于大规模结构化数据的事实验证基准ClaimDB，覆盖多领域真实数据库",
+      "系统评估SOTA LLMs在该基准的表现，揭示其准确率与弃权能力不足"
+    ],
+    "processed_at": "2026-01-22T08:47:42.821751"
+  },
+  {
+    "id": "2601.14652v1",
+    "title": "MAS-Orchestra: Understanding and Improving Multi-Agent Reasoning Through Holistic Orchestration and Controlled Benchmarks",
+    "abstract": "While multi-agent systems (MAS) promise elevated intelligence through coordination of agents, current approaches to automatic MAS design under-deliver. Such shortcomings stem from two key factors: (1) methodological complexity - agent orchestration is performed using sequential, code-level execution that limits global system-level holistic reasoning and scales poorly with agent complexity - and (2) efficacy uncertainty - MAS are deployed without understanding if there are tangible benefits compared to single-agent systems (SAS). We propose MAS-Orchestra, a training-time framework that formulates MAS orchestration as a function-calling reinforcement learning problem with holistic orchestration, generating an entire MAS at once. In MAS-Orchestra, complex, goal-oriented sub-agents are abstracted as callable functions, enabling global reasoning over system structure while hiding internal execution details. To rigorously study when and why MAS are beneficial, we introduce MASBENCH, a controlled benchmark that characterizes tasks along five axes: Depth, Horizon, Breadth, Parallel, and Robustness. Our analysis reveals that MAS gains depend critically on task structure, verification protocols, and the capabilities of both orchestrator and sub-agents, rather than holding universally. Guided by these insights, MAS-Orchestra achieves consistent improvements on public benchmarks including mathematical reasoning, multi-hop QA, and search-based QA. Together, MAS-Orchestra and MASBENCH enable better training and understanding of MAS in the pursuit of multi-agent intelligence.",
+    "authors": [
+      "Zixuan Ke",
+      "Yifei Ming",
+      "Austin Xu",
+      "Ryan Chin",
+      "Xuan-Phi Nguyen",
+      "Prathyusha Jwalapuram",
+      "Semih Yavuz",
+      "Caiming Xiong",
+      "Shafiq Joty"
+    ],
+    "published": "2026-01-21",
+    "categories": [
+      "cs.AI",
+      "cs.CL",
+      "cs.MA"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.14652v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.14652v1",
+    "fetched_at": "2026-01-22T08:38:13.922935",
+    "chinese_title": "MAS-Orchestra：通过整体编排与受控基准理解并改进多智能体推理",
+    "chinese_summary": "针对多智能体系统（MAS）设计中方法复杂（序列执行限制全局推理）、效果不确定（缺乏与单智能体对比的清晰认知）的问题，论文提出MAS-Orchestra框架，将编排建模为函数调用强化学习问题，抽象子智能体为可调用函数实现整体推理；同时引入受控基准MASBENCH，从深度、视野等五个维度刻画任务，分析MAS收益的关键因素；实验在数学推理、多跳QA等基准上验证了性能提升。",
+    "tags": [
+      "Reinforcement Learning",
+      "Benchmark",
+      "NLP",
+      "LLM"
+    ],
+    "key_contributions": [
+      "提出MAS-Orchestra框架，将多智能体编排建模为函数调用强化学习问题，实现全局整体推理",
+      "引入受控基准MASBENCH，从五个维度刻画任务并揭示MAS收益的关键影响因素"
+    ],
+    "processed_at": "2026-01-22T08:48:02.591949"
+  },
+  {
+    "id": "2601.14628v1",
+    "title": "A Brain-inspired Embodied Intelligence for Fluid and Fast Reflexive Robotics Control",
+    "abstract": "Recent advances in embodied intelligence have leveraged massive scaling of data and model parameters to master natural-language command following and multi-task control. In contrast, biological systems demonstrate an innate ability to acquire skills rapidly from sparse experience. Crucially, current robotic policies struggle to replicate the dynamic stability, reflexive responsiveness, and temporal memory inherent in biological motion. Here we present Neuromorphic Vision-Language-Action (NeuroVLA), a framework that mimics the structural organization of the bio-nervous system between the cortex, cerebellum, and spinal cord. We adopt a system-level bio-inspired design: a high-level model plans goals, an adaptive cerebellum module stabilizes motion using high-frequency sensors feedback, and a bio-inspired spinal layer executes lightning-fast actions generation. NeuroVLA represents the first deployment of a neuromorphic VLA on physical robotics, achieving state-of-the-art performance. We observe the emergence of biological motor characteristics without additional data or special guidance: it stops the shaking in robotic arms, saves significant energy(only 0.4w on Neuromorphic Processor), shows temporal memory ability and triggers safety reflexes in less than 20 milliseconds.",
+    "authors": [
+      "Weiyu Guo",
+      "He Zhang",
+      "Pengteng Li",
+      "Tiefu Cai",
+      "Ziyang Chen",
+      "Yandong Guo",
+      "Xiao He",
+      "Yongkui Yang",
+      "Ying Sun",
+      "Hui Xiong"
+    ],
+    "published": "2026-01-21",
+    "categories": [
+      "cs.RO",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.14628v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.14628v1",
+    "fetched_at": "2026-01-22T08:38:13.922968",
+    "chinese_title": "一种受大脑启发的具身智能用于流畅快速的反射式机器人控制",
+    "chinese_summary": "论文提出受大脑启发的具身智能框架NeuroVLA，模仿生物神经系统（皮层、小脑、脊髓）结构，包含高层目标规划、自适应小脑模块（基于高频传感器反馈稳定运动）、生物启发脊髓层（快速动作生成）三部分；该框架首次在物理机器人上部署神经形态VLA，实现SOTA性能，且无需额外数据或特殊指导即可涌现机械臂防抖、低能耗、时间记忆、20ms内触发安全反射等生物运动特性。",
+    "tags": [
+      "Deep Learning",
+      "High Frequency"
+    ],
+    "key_contributions": [
+      "提出受大脑启发的NeuroVLA框架，首次在物理机器人上部署神经形态VLA并达到SOTA性能",
+      "无需额外数据或特殊指导即可涌现机械臂防抖、低能耗、时间记忆、20ms内安全反射等生物运动特性"
+    ],
+    "processed_at": "2026-01-22T08:48:22.843614"
+  }
+]
