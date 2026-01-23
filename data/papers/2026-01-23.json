@@ -1,0 +1,378 @@
+[
+  {
+    "id": "2601.14139v2",
+    "title": "Log-optimality with small liability stream",
+    "abstract": "In an incomplete financial market with general continuous semimartingale dynamics; we model an investor with log-utility preferences who, in addition to an initial capital, receives units of a non-traded endowment process. Using duality techniques, we derive the fourth-order expansion of the primal value function with respect to the units $ε$, held in the non-traded endowment. In turn, this lays the foundation for expanding the optimal wealth process, in this context, up to second order w.r.t. $ε$. The key processes underpinning the aforementioned results are given in terms of Kunita-Watanabe projections, mirroring the case of lower order expansions of similar nature. Both the case of finite and infinite horizons are treated in a unified manner.",
+    "authors": [
+      "Michail Anthropelos",
+      "Constantinos Kardaras",
+      "Constantinos Stefanakis"
+    ],
+    "published": "2026-01-20",
+    "categories": [
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.14139v2",
+    "arxiv_url": "https://arxiv.org/abs/2601.14139v2",
+    "fetched_at": "2026-01-23T08:35:41.186987"
+  },
+  {
+    "id": "2601.15798v1",
+    "title": "VitalDiagnosis: AI-Driven Ecosystem for 24/7 Vital Monitoring and Chronic Disease Management",
+    "abstract": "Chronic diseases have become the leading cause of death worldwide, a challenge intensified by strained medical resources and an aging population. Individually, patients often struggle to interpret early signs of deterioration or maintain adherence to care plans. In this paper, we introduce VitalDiagnosis, an LLM-driven ecosystem designed to shift chronic disease management from passive monitoring to proactive, interactive engagement. By integrating continuous data from wearable devices with the reasoning capabilities of LLMs, the system addresses both acute health anomalies and routine adherence. It analyzes triggers through context-aware inquiries, produces provisional insights within a collaborative patient-clinician workflow, and offers personalized guidance. This approach aims to promote a more proactive and cooperative care paradigm, with the potential to enhance patient self-management and reduce avoidable clinical workload.",
+    "authors": [
+      "Zhikai Xue",
+      "Tianqianjin Lin",
+      "Pengwei Yan",
+      "Ruichun Wang",
+      "Yuxin Liu",
+      "Zhuoren Jiang",
+      "Xiaozhong Liu"
+    ],
+    "published": "2026-01-22",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.15798v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.15798v1",
+    "fetched_at": "2026-01-23T08:35:53.517470"
+  },
+  {
+    "id": "2601.15641v1",
+    "title": "Machine Failure Detection Based on Projected Quantum Models",
+    "abstract": "Detecting machine failures promptly is of utmost importance in industry for maintaining efficiency and minimizing downtime. This paper introduces a failure detection algorithm based on quantum computing and a statistical change-point detection approach. Our method leverages the potential of projected quantum feature maps to enhance the precision of anomaly detection in machine monitoring systems. We empirically validate our approach on benchmark multi-dimensional time series datasets as well as on a real-world dataset comprising IoT sensor readings from operational machines, ensuring the practical relevance of our study. The algorithm was executed on IBM's 133-qubit Heron quantum processor, demonstrating the feasibility of integrating quantum computing into industrial maintenance procedures. The presented results underscore the effectiveness of our quantum-based failure detection system, showcasing its capability to accurately identify anomalies in noisy time series data. This work not only highlights the potential of quantum computing in industrial diagnostics but also paves the way for more sophisticated quantum algorithms in the realm of predictive maintenance.",
+    "authors": [
+      "Larry Bowden",
+      "Qi Chu",
+      "Bernard Cena",
+      "Kentaro Ohno",
+      "Bob Parney",
+      "Deepak Sharma",
+      "Mitsuharu Takeori"
+    ],
+    "published": "2026-01-22",
+    "categories": [
+      "quant-ph",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.15641v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.15641v1",
+    "fetched_at": "2026-01-23T08:35:53.517507"
+  },
+  {
+    "id": "2601.16206v1",
+    "title": "LLM-in-Sandbox Elicits General Agentic Intelligence",
+    "abstract": "We introduce LLM-in-Sandbox, enabling LLMs to explore within a code sandbox (i.e., a virtual computer), to elicit general intelligence in non-code domains. We first demonstrate that strong LLMs, without additional training, exhibit generalization capabilities to leverage the code sandbox for non-code tasks. For example, LLMs spontaneously access external resources to acquire new knowledge, leverage the file system to handle long contexts, and execute scripts to satisfy formatting requirements. We further show that these agentic capabilities can be enhanced through LLM-in-Sandbox Reinforcement Learning (LLM-in-Sandbox-RL), which uses only non-agentic data to train models for sandbox exploration. Experiments demonstrate that LLM-in-Sandbox, in both training-free and post-trained settings, achieves robust generalization spanning mathematics, physics, chemistry, biomedicine, long-context understanding, and instruction following. Finally, we analyze LLM-in-Sandbox's efficiency from computational and system perspectives, and open-source it as a Python package to facilitate real-world deployment.",
+    "authors": [
+      "Daixuan Cheng",
+      "Shaohan Huang",
+      "Yuxian Gu",
+      "Huatong Song",
+      "Guoxin Chen",
+      "Li Dong",
+      "Wayne Xin Zhao",
+      "Ji-Rong Wen",
+      "Furu Wei"
+    ],
+    "published": "2026-01-22",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.16206v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.16206v1",
+    "fetched_at": "2026-01-23T08:36:21.225545"
+  },
+  {
+    "id": "2601.16038v1",
+    "title": "Grounding Large Language Models in Reaction Knowledge Graphs for Synthesis Retrieval",
+    "abstract": "Large Language Models (LLMs) can aid synthesis planning in chemistry, but standard prompting methods often yield hallucinated or outdated suggestions. We study LLM interactions with a reaction knowledge graph by casting reaction path retrieval as a Text2Cypher (natural language to graph query) generation problem, and define single- and multi-step retrieval tasks. We compare zero-shot prompting to one-shot variants using static, random, and embedding-based exemplar selection, and assess a checklist-driven validator/corrector loop. To evaluate our framework, we consider query validity and retrieval accuracy. We find that one-shot prompting with aligned exemplars consistently performs best. Our checklist-style self-correction loop mainly improves executability in zero-shot settings and offers limited additional retrieval gains once a good exemplar is present. We provide a reproducible Text2Cypher evaluation setup to facilitate further work on KG-grounded LLMs for synthesis planning. Code is available at https://github.com/Intelligent-molecular-systems/KG-LLM-Synthesis-Retrieval.",
+    "authors": [
+      "Olga Bunkova",
+      "Lorenzo Di Fruscia",
+      "Sophia Rupprecht",
+      "Artur M. Schweidtmann",
+      "Marcel J. T. Reinders",
+      "Jana M. Weber"
+    ],
+    "published": "2026-01-22",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.16038v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.16038v1",
+    "fetched_at": "2026-01-23T08:36:21.225580"
+  },
+  {
+    "id": "2601.15912v1",
+    "title": "TeNet: Text-to-Network for Compact Policy Synthesis",
+    "abstract": "Robots that follow natural-language instructions often either plan at a high level using hand-designed interfaces or rely on large end-to-end models that are difficult to deploy for real-time control. We propose TeNet (Text-to-Network), a framework for instantiating compact, task-specific robot policies directly from natural language descriptions. TeNet conditions a hypernetwork on text embeddings produced by a pretrained large language model (LLM) to generate a fully executable policy, which then operates solely on low-dimensional state inputs at high control frequencies. By using the language only once at the policy instantiation time, TeNet inherits the general knowledge and paraphrasing robustness of pretrained LLMs while remaining lightweight and efficient at execution time. To improve generalization, we optionally ground language in behavior during training by aligning text embeddings with demonstrated actions, while requiring no demonstrations at inference time. Experiments on MuJoCo and Meta-World benchmarks show that TeNet produces policies that are orders of magnitude smaller than sequence-based baselines, while achieving strong performance in both multi-task and meta-learning settings and supporting high-frequency control. These results show that text-conditioned hypernetworks offer a practical way to build compact, language-driven controllers for ressource-constrained robot control tasks with real-time requirements.",
+    "authors": [
+      "Ariyan Bighashdel",
+      "Kevin Sebastian Luck"
+    ],
+    "published": "2026-01-22",
+    "categories": [
+      "cs.RO",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.15912v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.15912v1",
+    "fetched_at": "2026-01-23T08:36:21.225601"
+  },
+  {
+    "id": "2601.15876v1",
+    "title": "EvoCUA: Evolving Computer Use Agents via Learning from Scalable Synthetic Experience",
+    "abstract": "The development of native computer-use agents (CUA) represents a significant leap in multimodal AI. However, their potential is currently bottlenecked by the constraints of static data scaling. Existing paradigms relying primarily on passive imitation of static datasets struggle to capture the intricate causal dynamics inherent in long-horizon computer tasks. In this work, we introduce EvoCUA, a native computer use agentic model. Unlike static imitation, EvoCUA integrates data generation and policy optimization into a self-sustaining evolutionary cycle. To mitigate data scarcity, we develop a verifiable synthesis engine that autonomously generates diverse tasks coupled with executable validators. To enable large-scale experience acquisition, we design a scalable infrastructure orchestrating tens of thousands of asynchronous sandbox rollouts. Building on these massive trajectories, we propose an iterative evolving learning strategy to efficiently internalize this experience. This mechanism dynamically regulates policy updates by identifying capability boundaries -- reinforcing successful routines while transforming failure trajectories into rich supervision through error analysis and self-correction. Empirical evaluations on the OSWorld benchmark demonstrate that EvoCUA achieves a success rate of 56.7%, establishing a new open-source state-of-the-art. Notably, EvoCUA significantly outperforms the previous best open-source model, OpenCUA-72B (45.0%), and surpasses leading closed-weights models such as UI-TARS-2 (53.1%). Crucially, our results underscore the generalizability of this approach: the evolving paradigm driven by learning from experience yields consistent performance gains across foundation models of varying scales, establishing a robust and scalable path for advancing native agent capabilities.",
+    "authors": [
+      "Taofeng Xue",
+      "Chong Peng",
+      "Mianqiu Huang",
+      "Linsen Guo",
+      "Tiancheng Han",
+      "Haozhe Wang",
+      "Jianing Wang",
+      "Xiaocheng Zhang",
+      "Xin Yang",
+      "Dengchang Zhao",
+      "Jinrui Ding",
+      "Xiandi Ma",
+      "Yuchen Xie",
+      "Peng Pei",
+      "Xunliang Cai",
+      "Xipeng Qiu"
+    ],
+    "published": "2026-01-22",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.15876v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.15876v1",
+    "fetched_at": "2026-01-23T08:36:21.225644"
+  },
+  {
+    "id": "2601.15802v1",
+    "title": "A Beacon Based Solution for Autonomous UUVs GNSS-Denied Stealthy Navigation",
+    "abstract": "Autonomous Unmanned Underwater Vehicles (UUVs) enable military and civilian covert operations in coastal areas without relying on support vessels or Global Navigation Satellite Systems (GNSS). Such operations are critical when surface access is not possible and stealthy navigation is required in restricted environments such as protected zones or dangerous areas under access ban. GNSS denied navigation is then essential to maintaining concealment as surfacing could expose UUVs to detection. To ensure a precise fleet positioning a constellation of beacons deployed by aerial or surface drones establish a synthetic landmark network that will guide the fleet of UUVs along an optimized path from the continental shelf to the goal on the shore. These beacons either submerged or floating emit acoustic signals for UUV localisation and navigation. A hierarchical planner generates an adaptive route for the drones executing primitive actions while continuously monitoring and replanning as needed to maintain trajectory accuracy.",
+    "authors": [
+      "Alexandre Albore",
+      "Humbert Fiorino",
+      "Damien Pellier"
+    ],
+    "published": "2026-01-22",
+    "categories": [
+      "cs.RO",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.15802v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.15802v1",
+    "fetched_at": "2026-01-23T08:36:21.225665"
+  },
+  {
+    "id": "2601.15778v1",
+    "title": "Agentic Confidence Calibration",
+    "abstract": "AI agents are rapidly advancing from passive language models to autonomous systems executing complex, multi-step tasks. Yet their overconfidence in failure remains a fundamental barrier to deployment in high-stakes settings. Existing calibration methods, built for static single-turn outputs, cannot address the unique challenges of agentic systems, such as compounding errors along trajectories, uncertainty from external tools, and opaque failure modes. To address these challenges, we introduce, for the first time, the problem of Agentic Confidence Calibration and propose Holistic Trajectory Calibration (HTC), a novel diagnostic framework that extracts rich process-level features ranging from macro dynamics to micro stability across an agent's entire trajectory. Powered by a simple, interpretable model, HTC consistently surpasses strong baselines in both calibration and discrimination, across eight benchmarks, multiple LLMs, and diverse agent frameworks. Beyond performance, HTC delivers three essential advances: it provides interpretability by revealing the signals behind failure, enables transferability by applying across domains without retraining, and achieves generalization through a General Agent Calibrator (GAC) that achieves the best calibration (lowest ECE) on the out-of-domain GAIA benchmark. Together, these contributions establish a new process-centric paradigm for confidence calibration, providing a framework for diagnosing and enhancing the reliability of AI agents.",
+    "authors": [
+      "Jiaxin Zhang",
+      "Caiming Xiong",
+      "Chien-Sheng Wu"
+    ],
+    "published": "2026-01-22",
+    "categories": [
+      "cs.AI",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.15778v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.15778v1",
+    "fetched_at": "2026-01-23T08:36:21.225686"
+  },
+  {
+    "id": "2601.15729v1",
+    "title": "DualShield: Safe Model Predictive Diffusion via Reachability Analysis for Interactive Autonomous Driving",
+    "abstract": "Diffusion models have emerged as a powerful approach for multimodal motion planning in autonomous driving. However, their practical deployment is typically hindered by the inherent difficulty in enforcing vehicle dynamics and a critical reliance on accurate predictions of other agents, making them prone to safety issues under uncertain interactions. To address these limitations, we introduce DualShield, a planning and control framework that leverages Hamilton-Jacobi (HJ) reachability value functions in a dual capacity. First, the value functions act as proactive guidance, steering the diffusion denoising process towards safe and dynamically feasible regions. Second, they form a reactive safety shield using control barrier-value functions (CBVFs) to modify the executed actions and ensure safety. This dual mechanism preserves the rich exploration capabilities of diffusion models while providing principled safety assurance under uncertain and even adversarial interactions. Simulations in challenging unprotected U-turn scenarios demonstrate that DualShield significantly improves both safety and task efficiency compared to leading methods from different planning paradigms under uncertainty.",
+    "authors": [
+      "Rui Yang",
+      "Lei Zheng",
+      "Ruoyu Yao",
+      "Jun Ma"
+    ],
+    "published": "2026-01-22",
+    "categories": [
+      "cs.RO",
+      "cs.AI",
+      "eess.SY"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.15729v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.15729v1",
+    "fetched_at": "2026-01-23T08:36:21.225709"
+  },
+  {
+    "id": "2601.15728v1",
+    "title": "Benchmarking Text-to-Python against Text-to-SQL: The Impact of Explicit Logic and Ambiguity",
+    "abstract": "While Text-to-SQL remains the dominant approach for database interaction, real-world analytics increasingly require the flexibility of general-purpose programming languages such as Python or Pandas to manage file-based data and complex analytical workflows. Despite this growing need, the reliability of Text-to-Python in core data retrieval remains underexplored relative to the mature SQL ecosystem. To address this gap, we introduce BIRD-Python, a benchmark designed for cross-paradigm evaluation. We systematically refined the original dataset to reduce annotation noise and align execution semantics, thereby establishing a consistent and standardized baseline for comparison. Our analysis reveals a fundamental paradigmatic divergence: whereas SQL leverages implicit DBMS behaviors through its declarative structure, Python requires explicit procedural logic, making it highly sensitive to underspecified user intent. To mitigate this challenge, we propose the Logic Completion Framework (LCF), which resolves ambiguity by incorporating latent domain knowledge into the generation process. Experimental results show that (1) performance differences primarily stem from missing domain context rather than inherent limitations in code generation, and (2) when these gaps are addressed, Text-to-Python achieves performance parity with Text-to-SQL. These findings establish Python as a viable foundation for analytical agents-provided that systems effectively ground ambiguous natural language inputs in executable logical specifications. Resources are available at https://anonymous.4open.science/r/Bird-Python-43B7/.",
+    "authors": [
+      "Hangle Hu",
+      "Chenyu Hou",
+      "Bin Cao",
+      "Ruizhe Li"
+    ],
+    "published": "2026-01-22",
+    "categories": [
+      "cs.AI",
+      "cs.SE"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.15728v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.15728v1",
+    "fetched_at": "2026-01-23T08:36:21.225736"
+  },
+  {
+    "id": "2601.15709v1",
+    "title": "AgentSM: Semantic Memory for Agentic Text-to-SQL",
+    "abstract": "Recent advances in LLM-based Text-to-SQL have achieved remarkable gains on public benchmarks such as BIRD and Spider. Yet, these systems struggle to scale in realistic enterprise settings with large, complex schemas, diverse SQL dialects, and expensive multi-step reasoning. Emerging agentic approaches show potential for adaptive reasoning but often suffer from inefficiency and instability-repeating interactions with databases, producing inconsistent outputs, and occasionally failing to generate valid answers. To address these challenges, we introduce Agent Semantic Memory (AgentSM), an agentic framework for Text-to-SQL that builds and leverages interpretable semantic memory. Instead of relying on raw scratchpads or vector retrieval, AgentSM captures prior execution traces-or synthesizes curated ones-as structured programs that directly guide future reasoning. This design enables systematic reuse of reasoning paths, which allows agents to scale to larger schemas, more complex questions, and longer trajectories efficiently and reliably. Compared to state-of-the-art systems, AgentSM achieves higher efficiency by reducing average token usage and trajectory length by 25% and 35%, respectively, on the Spider 2.0 benchmark. It also improves execution accuracy, reaching a state-of-the-art accuracy of 44.8% on the Spider 2.0 Lite benchmark.",
+    "authors": [
+      "Asim Biswal",
+      "Chuan Lei",
+      "Xiao Qin",
+      "Aodong Li",
+      "Balakrishnan Narayanaswamy",
+      "Tim Kraska"
+    ],
+    "published": "2026-01-22",
+    "categories": [
+      "cs.AI",
+      "cs.DB",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.15709v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.15709v1",
+    "fetched_at": "2026-01-23T08:36:21.225763"
+  },
+  {
+    "id": "2601.15703v1",
+    "title": "Agentic Uncertainty Quantification",
+    "abstract": "Although AI agents have demonstrated impressive capabilities in long-horizon reasoning, their reliability is severely hampered by the ``Spiral of Hallucination,'' where early epistemic errors propagate irreversibly. Existing methods face a dilemma: uncertainty quantification (UQ) methods typically act as passive sensors, only diagnosing risks without addressing them, while self-reflection mechanisms suffer from continuous or aimless corrections. To bridge this gap, we propose a unified Dual-Process Agentic UQ (AUQ) framework that transforms verbalized uncertainty into active, bi-directional control signals. Our architecture comprises two complementary mechanisms: System 1 (Uncertainty-Aware Memory, UAM), which implicitly propagates verbalized confidence and semantic explanations to prevent blind decision-making; and System 2 (Uncertainty-Aware Reflection, UAR), which utilizes these explanations as rational cues to trigger targeted inference-time resolution only when necessary. This enables the agent to balance efficient execution and deep deliberation dynamically. Extensive experiments on closed-loop benchmarks and open-ended deep research tasks demonstrate that our training-free approach achieves superior performance and trajectory-level calibration. We believe this principled framework AUQ represents a significant step towards reliable agents.",
+    "authors": [
+      "Jiaxin Zhang",
+      "Prafulla Kumar Choubey",
+      "Kung-Hsiang Huang",
+      "Caiming Xiong",
+      "Chien-Sheng Wu"
+    ],
+    "published": "2026-01-22",
+    "categories": [
+      "cs.AI",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.15703v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.15703v1",
+    "fetched_at": "2026-01-23T08:36:21.225787"
+  },
+  {
+    "id": "2601.15687v1",
+    "title": "FARM: Field-Aware Resolution Model for Intelligent Trigger-Action Automation",
+    "abstract": "Trigger-Action Programming (TAP) platforms such as IFTTT and Zapier enable Web of Things (WoT) automation by composing event-driven rules across heterogeneous services. A TAP applet links a trigger to an action and must bind trigger outputs (ingredients) to action inputs (fields) to be executable. Prior work largely treats TAP as service-level prediction from natural language, which often yields non-executable applets that still require manual configuration. We study the function-level configuration problem: generating complete applets with correct ingredient-to-field bindings. We propose FARM (Field-Aware Resolution Model), a two-stage architecture for automated applet generation with full configuration. Stage 1 trains contrastive dual encoders with selective layer freezing over schema-enriched representations, retrieving candidates from 1,724 trigger functions and 1,287 action functions (2.2M possible trigger-action pairs). Stage 2 performs selection and configuration using an LLM-based multi-agent pipeline. It includes intent analysis, trigger selection, action selection via cross-schema scoring, and configuration verification. Agents coordinate through shared state and agreement-based selection. FARM achieves 81% joint accuracy on Gold (62% Noisy, 70% One-shot) at the function level, where both trigger and action functions must match the ground truth. For comparison with service-level baselines, we map functions to their parent services and evaluate at the service level. FARM reaches 81% joint accuracy and improves over TARGE by 23 percentage points. FARM also generates ingredient-to-field bindings, producing executable automation configurations.",
+    "authors": [
+      "Khusrav Badalov",
+      "Young Yoon"
+    ],
+    "published": "2026-01-22",
+    "categories": [
+      "cs.SE",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.15687v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.15687v1",
+    "fetched_at": "2026-01-23T08:36:21.225806"
+  },
+  {
+    "id": "2601.15625v1",
+    "title": "Robust Tool Use via Fission-GRPO: Learning to Recover from Execution Errors",
+    "abstract": "Large language models (LLMs) can call tools effectively, yet they remain brittle in multi-turn execution: following a tool call error, smaller models often degenerate into repetitive invalid re-invocations, failing to interpret error feedback and self-correct. This brittleness hinders reliable real-world deployment, where the execution errors are inherently inevitable during tool interaction procedures. We identify a key limitation of current approaches: standard reinforcement learning (RL) treats errors as sparse negative rewards, providing no guidance on how to recover, while pre-collected synthetic error-correction datasets suffer from distribution mismatch with the model's on-policy error modes. To bridge this gap, we propose Fission-GRPO, a framework that converts execution errors into corrective supervision within the RL training loop. Our core mechanism fissions each failed trajectory into a new training instance by augmenting it with diagnostic feedback from a finetuned Error Simulator, then resampling recovery rollouts on-policy. This enables the model to learn from the precise errors it makes during exploration, rather than from static, pre-collected error cases. On the BFCL v4 Multi-Turn, Fission-GRPO improves the error recovery rate of Qwen3-8B by 5.7% absolute, crucially, yielding a 4% overall accuracy gain (42.75% to 46.75%) over GRPO and outperforming specialized tool-use agents.",
+    "authors": [
+      "Zhiwei Zhang",
+      "Fei Zhao",
+      "Rui Wang",
+      "Zezhong Wang",
+      "Bin Liang",
+      "Jiakang Wang",
+      "Yao Hu",
+      "Shaosheng Cao",
+      "Kam-Fai Wong"
+    ],
+    "published": "2026-01-22",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.15625v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.15625v1",
+    "fetched_at": "2026-01-23T08:36:21.225865"
+  },
+  {
+    "id": "2601.15599v1",
+    "title": "Autonomous Business System via Neuro-symbolic AI",
+    "abstract": "Current business environments require organizations to continuously reconfigure cross-functional processes, yet enterprise systems are still organized around siloed departments, rigid workflows, and hard-coded automation. Meanwhile large language models (LLMs) excel at interpreting natural language and unstructured data but lack deterministic, verifiable execution of complex business logic. To address this gap, here we introduce AUTOBUS, an Autonomous Business System that integrates LLM-based AI agents, predicate-logic programming, and business-semantics-centric enterprise data into a coherent neuro-symbolic AI architecture for orchestrating end-to-end business initiatives. AUTOBUS models an initiative as a network of tasks with explicit pre/post conditions, required data, evaluation rules, and API-level actions. Enterprise data is organized as a knowledge graph whose entities, relationships, and constraints are translated into logic facts and foundational rules, providing the semantic grounding for task reasoning. Core AI agents synthesize task instructions, enterprise semantics, and available tools into task-specific logic programs, which are executed by a logic engine that enforces constraints, coordinates auxiliary tools, and orchestrate execution of actions and outcomes. Humans define and maintain the semantics, policies and task instructions, curate tools, and supervise high-impact or ambiguous decisions, ensuring accountability and adaptability. We detail the AUTOBUS architecture, the anatomy of the AI agent generated logic programs, and the role of humans and auxiliary tools in the lifecycle of a business initiative.",
+    "authors": [
+      "Cecil Pang",
+      "Hiroki Sayama"
+    ],
+    "published": "2026-01-22",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.15599v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.15599v1",
+    "fetched_at": "2026-01-23T08:36:21.225883"
+  },
+  {
+    "id": "2601.15561v1",
+    "title": "Enhanced Convergence in p-bit Based Simulated Annealing with Partial Deactivation for Large-Scale Combinatorial Optimization Problems",
+    "abstract": "This article critically investigates the limitations of the simulated annealing algorithm using probabilistic bits (pSA) in solving large-scale combinatorial optimization problems. The study begins with an in-depth analysis of the pSA process, focusing on the issues resulting from unexpected oscillations among p-bits. These oscillations hinder the energy reduction of the Ising model and thus obstruct the successful execution of pSA in complex tasks. Through detailed simulations, we unravel the root cause of this energy stagnation, identifying the feedback mechanism inherent to the pSA operation as the primary contributor to these disruptive oscillations. To address this challenge, we propose two novel algorithms, time average pSA (TApSA) and stalled pSA (SpSA). These algorithms are designed based on partial deactivation of p-bits and are thoroughly tested using Python simulations on maximum cut benchmarks that are typical combinatorial optimization problems. On the 16 benchmarks from 800 to 5,000 nodes, the proposed methods improve the normalized cut value from 0.8% to 98.4% on average in comparison with the conventional pSA.",
+    "authors": [
+      "Naoya Onizawa",
+      "Takahiro Hanyu"
+    ],
+    "published": "2026-01-22",
+    "categories": [
+      "cs.ET",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.15561v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.15561v1",
+    "fetched_at": "2026-01-23T08:36:21.225902"
+  },
+  {
+    "id": "2601.15322v1",
+    "title": "Replayable Financial Agents: A Determinism-Faithfulness Assurance Harness for Tool-Using LLM Agents",
+    "abstract": "LLM agents struggle with regulatory audit replay: when asked to reproduce a flagged transaction decision with identical inputs, most deployments fail to return consistent results. This paper introduces the Determinism-Faithfulness Assurance Harness (DFAH), a framework for measuring trajectory determinism and evidence-conditioned faithfulness in tool-using agents deployed in financial services.   Across 74 configurations (12 models, 4 providers, 8-24 runs each at T=0.0) in non-agentic baseline experiments, 7-20B parameter models achieved 100% determinism, while 120B+ models required 3.7x larger validation samples to achieve equivalent statistical reliability. Agentic tool-use introduces additional variance (see Tables 4-7). Contrary to the assumed reliability-capability trade-off, a positive Pearson correlation emerged (r = 0.45, p < 0.01, n = 51 at T=0.0) between determinism and faithfulness; models producing consistent outputs also tended to be more evidence-aligned.   Three financial benchmarks are provided (compliance triage, portfolio constraints, DataOps exceptions; 50 cases each) along with an open-source stress-test harness. In these benchmarks and under DFAH evaluation settings, Tier 1 models with schema-first architectures achieved determinism levels consistent with audit replay requirements.",
+    "authors": [
+      "Raffi Khatchadourian"
+    ],
+    "published": "2026-01-17",
+    "categories": [
+      "cs.AI",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.15322v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.15322v1",
+    "fetched_at": "2026-01-23T08:36:58.294565"
+  },
+  {
+    "id": "2601.15597v1",
+    "title": "Neural Nonlinear Shrinkage of Covariance Matrices for Minimum Variance Portfolio Optimization",
+    "abstract": "This paper introduces a neural network-based nonlinear shrinkage estimator of covariance matrices for the purpose of minimum variance portfolio optimization. It is a hybrid approach that integrates statistical estimation with machine learning. Starting from the Ledoit-Wolf (LW) shrinkage estimator, we decompose the LW covariance matrix into its eigenvalues and eigenvectors, and apply a lightweight transformer-based neural network to learn a nonlinear eigenvalue shrinkage function. Trained with portfolio risk as the loss function, the resulting precision matrix (the inverse covariance matrix) estimator directly targets portfolio risk minimization. By conditioning on the sample-to-dimension ratio, the approach remains scalable across different sample sizes and asset universes. Empirical results on stock daily returns from Standard & Poor's 500 Index (S&P500) demonstrate that the proposed method consistently achieves lower out-of-sample realized risk than benchmark approaches. This highlights the promise of integrating structural statistical models with data-driven learning.",
+    "authors": [
+      "Liusha Yang",
+      "Siqi Zhao",
+      "Shuqi Chai"
+    ],
+    "published": "2026-01-22",
+    "categories": [
+      "cs.LG",
+      "eess.SP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.15597v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.15597v1",
+    "fetched_at": "2026-01-23T08:38:09.311906"
+  }
+]
