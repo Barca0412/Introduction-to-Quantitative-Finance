@@ -1,0 +1,518 @@
+[
+  {
+    "id": "2601.16821v1",
+    "title": "Directional-Shift Dirichlet ARMA Models for Compositional Time Series with Structural Break Intervention",
+    "abstract": "Compositional time series, vectors of proportions summing to unity observed over time, frequently exhibit structural breaks due to external shocks, policy changes, or market disruptions. Standard methods either ignore such breaks or handle them through ad-hoc dummy variables that cannot extrapolate beyond the estimation sample. We develop a Bayesian Dirichlet ARMA model augmented with a directional-shift intervention mechanism that captures structural breaks through three interpretable parameters: a unit direction vector specifying which components gain or lose share, an amplitude controlling the magnitude of redistribution, and a logistic gate governing the timing and speed of transition. The model preserves compositional constraints by construction, maintains innovation-form DARMA dynamics for short-run dependence, and produces coherent probabilistic forecasts during and after structural breaks. We establish that the directional shift corresponds to geodesic motion on the simplex and is invariant to the choice of ILR basis. A comprehensive simulation study with 400 fits across 8 scenarios demonstrates that when the shift direction is correctly identified (77.5% of cases), amplitude and timing parameters are recovered with near-zero bias, and credible intervals for the mean composition achieve nominal 80% coverage; we address the sign identification challenge through a hemisphere constraint. An empirical application to fee recognition lead-time distributions during COVID-19 compares baseline, fixed-effects, and intervention specifications in rolling forecast evaluation, demonstrating the intervention model's superior point accuracy (Aitchison distance 0.83 vs. 0.90) and calibration (87% vs. 71% coverage) during structural transitions.",
+    "authors": [
+      "Harrison Katz"
+    ],
+    "published": "2026-01-23",
+    "categories": [
+      "stat.ME",
+      "q-fin.ST",
+      "stat.AP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.16821v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.16821v1",
+    "fetched_at": "2026-01-26T08:38:16.946706",
+    "chinese_title": "带结构突变干预的成分时间序列定向偏移Dirichlet ARMA模型",
+    "chinese_summary": "论文针对存在结构突变的成分时间序列（比例向量序列），提出贝叶斯Dirichlet ARMA模型并加入定向偏移干预机制，通过方向向量、幅度、逻辑门三个可解释参数捕捉结构突变；模型保持成分约束、维持创新型DARMA的短期依赖，能生成突变期间及之后的连贯概率预测，且定向偏移对ILR基选择不变，模拟与实证验证了其有效性。",
+    "tags": [
+      "Time Series",
+      "Anomaly"
+    ],
+    "key_contributions": [
+      "提出带定向偏移干预的贝叶斯Dirichlet ARMA模型，通过三个可解释参数捕捉成分时间序列的结构突变，保持成分约束与短期依赖",
+      "证明定向偏移的测地线运动性质与ILR基不变性，模拟实证验证模型参数恢复和预测的有效性"
+    ],
+    "processed_at": "2026-01-26T08:41:32.032765"
+  },
+  {
+    "id": "2601.16805v1",
+    "title": "Network Security under Heterogeneous Cyber-Risk Profiles and Contagion",
+    "abstract": "Cyber risk has become a critical financial threat in today's interconnected digital economy. This paper introduces a cyber-risk management framework for networked digital systems that combines the strategic behavior of players with contagion dynamics within a security game. We address the problem of optimally allocating cybersecurity resources across a network, focusing on the heterogeneous valuations of nodes by attackers and defenders, some areas may be of high interest to the attacker, while others are prioritized by the defender. We explore how this asymmetry drives attack and defense strategies and shapes the system's overall resilience. We extend a method to determine optimal resource allocation based on simple network metrics weighted by the defender's and attacker's risk profiles. We further propose risk measures based on contagion paths and analyze how propagation dynamics influence optimal defense strategies. Numerical experiments explore risk versus cost efficient frontiers varying network topologies and risk profiles, revealing patterns of resource allocation and cyber deception effects. These findings provide actionable insights for designing resilient digital infrastructures and mitigating systemic cyber risk.",
+    "authors": [
+      "Elisa Botteghi",
+      "Martino S. Centonze",
+      "Davide Pastorello",
+      "Daniele Tantari"
+    ],
+    "published": "2026-01-23",
+    "categories": [
+      "cs.CR",
+      "cs.GT",
+      "cs.SI",
+      "q-fin.RM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.16805v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.16805v1",
+    "fetched_at": "2026-01-26T08:38:16.946748",
+    "chinese_title": "异构网络风险特征与传播下的网络安全",
+    "chinese_summary": "本文提出互联数字系统的网络风险管理框架，结合参与者策略行为与风险传播动态，针对攻击者与防御者的节点异构估值扩展最优资源分配方法；提出基于传播路径的风险度量，通过数值实验揭示资源分配模式与网络欺骗效应，为 resilient 数字基础设施设计提供实用见解。",
+    "tags": [
+      "Risk Management",
+      "Behavioral Finance"
+    ],
+    "key_contributions": [
+      "提出结合参与者策略行为与风险传播动态的互联数字系统网络风险管理框架，考虑攻击者与防御者的节点异构估值",
+      "扩展基于加权网络指标的最优资源分配方法，提出传播路径相关风险度量并通过数值实验揭示资源分配模式与网络欺骗效应，为 resilient 数字基础设施设计提供实用见解"
+    ],
+    "processed_at": "2026-01-26T08:42:26.801150"
+  },
+  {
+    "id": "2601.16446v1",
+    "title": "Brownian ReLU(Br-ReLU): A New Activation Function for a Long-Short Term Memory (LSTM) Network",
+    "abstract": "Deep learning models are effective for sequential data modeling, yet commonly used activation functions such as ReLU, LeakyReLU, and PReLU often exhibit gradient instability when applied to noisy, non-stationary financial time series. This study introduces BrownianReLU, a stochastic activation function induced by Brownian motion that enhances gradient propagation and learning stability in Long Short-Term Memory (LSTM) networks. Using Monte Carlo simulation, BrownianReLU provides a smooth, adaptive response for negative inputs, mitigating the dying ReLU problem. The proposed activation is evaluated on financial time series from Apple, GCB, and the S&P 500, as well as LendingClub loan data for classification. Results show consistently lower Mean Squared Error and higher $R^2$ values, indicating improved predictive accuracy and generalization. Although ROC-AUC metric is limited in classification tasks, activation choice significantly affects the trade-off between accuracy and sensitivity, with Brownian ReLU and the selected activation functions yielding practically meaningful performance.",
+    "authors": [
+      "George Awiakye-Marfo",
+      "Elijah Agbosu",
+      "Victoria Mawuena Barns",
+      "Samuel Asante Gyamerah"
+    ],
+    "published": "2026-01-23",
+    "categories": [
+      "cs.LG",
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.16446v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.16446v1",
+    "fetched_at": "2026-01-26T08:38:16.946774",
+    "chinese_title": "布朗ReLU（Br-ReLU）：一种用于长短期记忆（LSTM）网络的新激活函数",
+    "chinese_summary": "针对常用激活函数在噪声非平稳金融时间序列中梯度不稳定的问题，该研究提出基于布朗运动的随机激活函数布朗ReLU（Br-ReLU），通过蒙特卡洛模拟为负输入提供平滑自适应响应以缓解死ReLU问题；在金融时间序列预测和贷款分类任务中，该激活函数显著提升了模型预测精度与泛化性。",
+    "tags": [
+      "Deep Learning",
+      "Time Series",
+      "Asset Pricing"
+    ],
+    "key_contributions": [
+      "提出基于布朗运动的随机激活函数布朗ReLU（Br-ReLU），通过蒙特卡洛模拟为负输入提供平滑自适应响应，缓解LSTM中常用激活函数的梯度不稳定与死ReLU问题",
+      "在金融时间序列预测（苹果、GCB、标普500）和贷款分类（LendingClub）任务中验证，该激活函数显著提升模型预测精度与泛化性"
+    ],
+    "processed_at": "2026-01-26T08:43:00.045965"
+  },
+  {
+    "id": "2601.16274v1",
+    "title": "A Nonlinear Target-Factor Model with Attention Mechanism for Mixed-Frequency Data",
+    "abstract": "We propose Mixed-Panels-Transformer Encoder (MPTE), a novel framework for estimating factor models in panel datasets with mixed frequencies and nonlinear signals. Traditional factor models rely on linear signal extraction and require homogeneous sampling frequencies, limiting their applicability to modern high-dimensional datasets where variables are observed at different temporal resolutions. Our approach leverages Transformer-style attention mechanisms to enable context-aware signal construction through flexible, data-dependent weighting schemes that replace fixed linear combinations with adaptive reweighting based on similarity and relevance. We extend classical principal component analysis (PCA) to accommodate general temporal and cross-sectional attention matrices, allowing the model to learn how to aggregate information across frequencies without manual alignment or pre-specified weights. For linear activation functions, we establish consistency and asymptotic normality of factor and loading estimators, showing that our framework nests Target PCA as a special case while providing efficiency gains through transfer learning across auxiliary datasets. The nonlinear extension uses a Transformer architecture to capture complex hierarchical interactions while preserving the theoretical foundations. In simulations, MPTE demonstrates superior performance in nonlinear environments, and in an empirical application to 13 macroeconomic forecasting targets using a selected set of 48 monthly and quarterly series from the FRED-MD and FRED-QD databases, our method achieves competitive performance against established benchmarks. We further analyze attention patterns and systematically ablate model components to assess variable importance and temporal dependence. The resulting patterns highlight which indicators and horizons are most influential for forecasting.",
+    "authors": [
+      "Alessio Brini",
+      "Ekaterina Seregina"
+    ],
+    "published": "2026-01-22",
+    "categories": [
+      "econ.EM",
+      "q-fin.ST"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.16274v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.16274v1",
+    "fetched_at": "2026-01-26T08:38:16.946793",
+    "chinese_title": "一种适用于混合频率数据的带注意力机制的非线性目标因子模型",
+    "chinese_summary": "本文提出混合面板Transformer编码器（MPTE）框架，用于混合频率面板数据的因子模型估计，通过Transformer注意力机制替代传统线性组合，实现自适应加权聚合跨频率信息，无需手动对齐或预设权重；线性情形下证明因子及载荷估计量的一致性与渐近正态性，嵌套Target PCA并通过辅助数据迁移学习提升效率，非线性扩展则保留理论基础同时捕捉复杂层级交互；模拟与宏观经济预测实证验证其性能优势。",
+    "tags": [
+      "Factor Model",
+      "Transformer",
+      "Time Series",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出MPTE框架，适配混合频率面板数据的因子模型，用注意力机制实现自适应跨频率信息聚合，无需手动对齐",
+      "线性情形下建立估计量的理论性质（一致性、渐近正态），嵌套Target PCA且通过迁移学习增效，非线性扩展保留理论基础并捕捉复杂交互"
+    ],
+    "processed_at": "2026-01-26T08:43:27.358099"
+  },
+  {
+    "id": "2601.13493v2",
+    "title": "Infinite-Dimensional LQ Mean Field Games with Common Noise: Small and Arbitrary Finite Time Horizons",
+    "abstract": "We extend the results of (Liu and Firoozi, 2025), which develops the theory of linear-quadratic (LQ) mean field games (MFGs) in Hilbert spaces, by incorporating a common noise. This common noise is modeled as an infinite-dimensional Wiener process affecting the dynamics of all agents. In the presence of common noise, the mean-field consistency condition is characterized by a system of coupled forward-backward stochastic evolution equations (FBSEEs) in Hilbert spaces, whereas, in its absence it is represented by coupled forward-backward deterministic evolution equations. We establish the existence and uniqueness of solutions to the coupled linear FBSEEs associated with the LQ MFG framework for small time horizons and prove the $ε$-Nash property of the resulting equilibrium strategy. Furthermore, we establish the well-posedness of these coupled linear FBSEEs for arbitrary finite time horizons. Beyond the specific context of MFGs, our analysis also yields a broader contribution by providing, to the best of our knowledge, the first well-posedness result for a class of infinite-dimensional linear FBSEEs, for which only mild solutions exist, over arbitrary finite time horizons.",
+    "authors": [
+      "Hanchao Liu",
+      "Dena Firoozi"
+    ],
+    "published": "2026-01-20",
+    "categories": [
+      "math.OC",
+      "math.FA",
+      "math.PR",
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.13493v2",
+    "arxiv_url": "https://arxiv.org/abs/2601.13493v2",
+    "fetched_at": "2026-01-26T08:38:16.946908",
+    "chinese_title": "带公共噪声的无限维线性二次平均场博弈：小时间范围与任意有限时间范围",
+    "chinese_summary": "本文扩展无限维Hilbert空间线性二次（LQ）平均场博弈理论，引入影响所有主体的无限维维纳过程作为公共噪声，此时平均场一致性条件由耦合的前向-后向随机演化方程（FBSEE）刻画；证明小时间范围下该耦合线性FBSEE解的存在唯一性及均衡策略的ε-纳什性质，任意有限时间范围下建立其适定性，还首次给出此类无限维线性FBSEE的任意有限时间范围适定性结果。",
+    "tags": [
+      "Volatility",
+      "Portfolio Optimization",
+      "Risk Management",
+      "Financial Agent"
+    ],
+    "key_contributions": [
+      "引入无限维维纳过程作为公共噪声，将无限维LQ平均场博弈的平均场一致性条件刻画为耦合的无限维前向-后向随机演化方程（FBSEE）",
+      "证明小时间范围下该耦合FBSEE解的存在唯一性及均衡策略的ε-纳什性质，任意有限时间范围下建立其适定性，且首次给出此类无限维线性FBSEE的任意有限时间范围适定性结果"
+    ],
+    "processed_at": "2026-01-26T08:44:06.744409"
+  },
+  {
+    "id": "2601.16965v1",
+    "title": "Spatial-Agent: Agentic Geo-spatial Reasoning with Scientific Core Concepts",
+    "abstract": "Geospatial reasoning is essential for real-world applications such as urban analytics, transportation planning, and disaster response. However, existing LLM-based agents often fail at genuine geospatial computation, relying instead on web search or pattern matching while hallucinating spatial relationships. We present Spatial-Agent, an AI agent grounded in foundational theories of spatial information science. Our approach formalizes geo-analytical question answering as a concept transformation problem, where natural-language questions are parsed into executable workflows represented as GeoFlow Graphs -- directed acyclic graphs with nodes corresponding to spatial concepts and edges representing transformations. Drawing on spatial information theory, Spatial-Agent extracts spatial concepts, assigns functional roles with principled ordering constraints, and composes transformation sequences through template-based generation. Extensive experiments on MapEval-API and MapQA benchmarks demonstrate that Spatial-Agent significantly outperforms existing baselines including ReAct and Reflexion, while producing interpretable and executable geospatial workflows.",
+    "authors": [
+      "Riyang Bao",
+      "Cheng Yang",
+      "Dazhou Yu",
+      "Zhexiang Tang",
+      "Gengchen Mai",
+      "Liang Zhao"
+    ],
+    "published": "2026-01-23",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.16965v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.16965v1",
+    "fetched_at": "2026-01-26T08:38:56.764066",
+    "chinese_title": "空间智能体：基于科学核心概念的智能体式地理空间推理",
+    "chinese_summary": "本文提出基于空间信息科学基础理论的Spatial-Agent，将地理分析问答形式化为概念转换问题，用GeoFlow Graph（节点为空间概念、边为转换的有向无环图）表示可执行工作流；通过提取空间概念、分配带约束的功能角色及模板生成转换序列实现推理，实验表明其显著优于ReAct等基线且生成可解释可执行的工作流。",
+    "tags": [
+      "LLM",
+      "NLP",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出基于空间信息科学理论的Spatial-Agent，将地理分析问答形式化为概念转换问题，用GeoFlow Graph构建可执行工作流",
+      "在MapEval-API和MapQA基准上显著优于ReAct等现有基线，生成可解释可执行的地理空间工作流"
+    ],
+    "processed_at": "2026-01-26T08:44:32.936976"
+  },
+  {
+    "id": "2601.16863v1",
+    "title": "Mixture-of-Models: Unifying Heterogeneous Agents via N-Way Self-Evaluating Deliberation",
+    "abstract": "This paper introduces the N-Way Self-Evaluating Deliberation (NSED) protocol, a Runtime Mixture-of-Models (MoM) architecture that constructs emergent composite models from a plurality of distinct expert agents. Unlike traditional Mixture-of-Experts (MoE) which rely on static gating networks, NSED employs a Dynamic Expertise Broker - a runtime optimization engine that treats model selection as a variation of the Knapsack Problem, binding heterogeneous checkpoints to functional roles based on live telemetry and cost constraints. At the execution layer, we formalize deliberation as a Macro-Scale Recurrent Neural Network (RNN), where the consensus state loops back through a semantic forget gate to enable iterative refinement without proportional VRAM scaling. Key components include an orchestration fabric for trustless N-to-N peer review, a Quadratic Voting activation function for non-linear consensus, and a feedback-driven state update. Empirical validation on challenging benchmarks (AIME 2025, LiveCodeBench) demonstrates that this topology allows ensembles of small (less than 20B) consumer-grade models to match or exceed the performance of state-of-the-art 100B+ parameter models, establishing a new hardware arbitrage efficiency frontier. Furthermore, testing on the DarkBench safety suite reveals intrinsic alignment properties, with peer-mediated correction reducing sycophancy scores below that of any individual agent.",
+    "authors": [
+      "Tims Pecerskis",
+      "Aivars Smirnovs"
+    ],
+    "published": "2026-01-23",
+    "categories": [
+      "cs.AI",
+      "cs.LG",
+      "cs.MA",
+      "eess.SY"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.16863v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.16863v1",
+    "fetched_at": "2026-01-26T08:38:56.764094",
+    "chinese_title": "模型混合：通过N向自评估商议统一异构智能体",
+    "chinese_summary": "本文提出N向自评估商议（NSED）协议，这是一种运行时模型混合架构，通过动态专业经纪人（将模型选择视为背包问题变种，基于实时遥测和成本约束绑定异构检查点到功能角色）及宏尺度RNN等组件，实现小于20B的消费级小模型集合匹配或超越100B+模型性能；此外，该架构在安全测试中显示内在对齐属性，同行介导纠正降低了谄媚分数。",
+    "tags": [
+      "LLM",
+      "Deep Learning",
+      "Financial Agent",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出NSED协议，以动态专业经纪人（背包问题变种）和宏尺度RNN等为核心组件，实现小模型集合匹配大模型性能，开辟硬件套利效率新前沿",
+      "验证该架构具有内在对齐属性，同行介导的评审机制有效降低智能体的谄媚分数"
+    ],
+    "processed_at": "2026-01-26T08:45:07.671145"
+  },
+  {
+    "id": "2601.16795v1",
+    "title": "Building a Robust Risk-Based Access Control System to Combat Ransomware's Capability to Encrypt: A Machine Learning Approach",
+    "abstract": "Ransomware core capability, unauthorized encryption, demands controls that identify and block malicious cryptographic activity without disrupting legitimate use. We present a probabilistic, risk-based access control architecture that couples machine learning inference with mandatory access control to regulate encryption on Linux in real time. The system builds a specialized dataset from the native ftrace framework using the function_graph tracer, yielding high-resolution kernel-function execution traces augmented with resource and I/O counters. These traces support both a supervised classifier and interpretable rules that drive an SELinux policy via lightweight booleans, enabling context-sensitive permit/deny decisions at the moment encryption begins. Compared to approaches centered on sandboxing, hypervisor introspection, or coarse system-call telemetry, the function-level tracing we adopt provides finer behavioral granularity than syscall-only telemetry while avoiding the virtualization/VMI overhead of sandbox-based approaches. Our current user-space prototype has a non-trivial footprint under burst I/O; we quantify it and recognize that a production kernel-space solution should aim to address this. We detail dataset construction, model training and rule extraction, and the run-time integration that gates file writes for suspect encryption while preserving benign cryptographic workflows. During evaluation, the two-layer composition retains model-level detection quality while delivering rule-like responsiveness; we also quantify operational footprint and outline engineering steps to reduce CPU and memory overhead for enterprise deployment. The result is a practical path from behavioral tracing and learning to enforceable, explainable, and risk-proportionate encryption control on production Linux systems.",
+    "authors": [
+      "Kenan Begovic",
+      "Abdulaziz Al-Ali",
+      "Qutaibah Malluhi"
+    ],
+    "published": "2026-01-23",
+    "categories": [
+      "cs.CR",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.16795v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.16795v1",
+    "fetched_at": "2026-01-26T08:38:56.764114",
+    "chinese_title": "构建对抗勒索软件加密能力的健壮风险型访问控制系统：一种机器学习方法",
+    "chinese_summary": "该文提出一种概率风险型访问控制架构，结合机器学习推理与强制访问控制，通过Linux ftrace的函数图追踪构建高分辨率内核执行轨迹数据集，驱动可解释规则与监督分类器实时监管加密活动；相比沙箱、虚拟机 introspection 等方法，该方法函数级追踪粒度更细且无虚拟化开销，能在不干扰合法加密的前提下阻断恶意加密；原型评估显示其保留检测质量，但I/O突发下存在非平凡开销，需生产内核空间方案优化。",
+    "tags": [
+      "Risk Management",
+      "Anomaly",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出概率风险型访问控制架构，结合机器学习推理与强制访问控制，通过Linux函数级追踪构建高分辨率轨迹数据集，实现恶意加密活动的实时监管",
+      "相比沙箱、虚拟机 introspection 等方法，该方法函数级追踪粒度更细且无虚拟化开销，能在不干扰合法加密的前提下阻断恶意行为"
+    ],
+    "processed_at": "2026-01-26T08:45:39.677346"
+  },
+  {
+    "id": "2601.16622v1",
+    "title": "E2Former-V2: On-the-Fly Equivariant Attention with Linear Activation Memory",
+    "abstract": "Equivariant Graph Neural Networks (EGNNs) have become a widely used approach for modeling 3D atomistic systems. However, mainstream architectures face critical scalability bottlenecks due to the explicit construction of geometric features or dense tensor products on \\textit{every} edge. To overcome this, we introduce \\textbf{E2Former-V2}, a scalable architecture that integrates algebraic sparsity with hardware-aware execution. We first propose \\textbf{E}quivariant \\textbf{A}xis-\\textbf{A}ligned \\textbf{S}parsification (EAAS). EAAS builds on Wigner-$6j$ convolution by exploiting an $\\mathrm{SO}(3) \\rightarrow \\mathrm{SO}(2)$ change of basis to transform computationally expensive dense tensor contractions into efficient, sparse parity re-indexing operations. Building on this representation, we introduce \\textbf{On-the-Fly Equivariant Attention}, a fully node-centric mechanism implemented via a custom fused Triton kernel. By eliminating materialized edge tensors and maximizing SRAM utilization, our kernel achieves a \\textbf{20$\\times$ improvement in TFLOPS} compared to standard implementations. Extensive experiments on the SPICE and OMol25 datasets demonstrate that E2Former-V2 maintains comparable predictive performance while notably accelerating inference. This work demonstrates that large equivariant transformers can be trained efficiently using widely accessible GPU platforms. The code is avalible at https://github.com/IQuestLab/UBio-MolFM/tree/e2formerv2.",
+    "authors": [
+      "Lin Huang",
+      "Chengxiang Huang",
+      "Ziang Wang",
+      "Yiyue Du",
+      "Chu Wang",
+      "Haocheng Lu",
+      "Yunyang Li",
+      "Xiaoli Liu",
+      "Arthur Jiang",
+      "Jia Zhang"
+    ],
+    "published": "2026-01-23",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.16622v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.16622v1",
+    "fetched_at": "2026-01-26T08:38:56.764144",
+    "chinese_title": "E2Former-V2：带线性激活记忆的实时等变注意力机制",
+    "chinese_summary": "针对等变图神经网络（EGNNs）在3D原子系统建模中因显式几何特征构建或稠密张量积导致的可扩展性瓶颈，论文提出E2Former-V2架构；引入等变轴对齐稀疏化（EAAS）和实时等变注意力机制，结合定制Triton融合内核优化硬件利用，实现20倍TFLOPS提升；在SPICE和OMol25数据集上验证了该架构保持预测性能且显著加速推理的效果。",
+    "tags": [
+      "Graph Neural Network",
+      "Transformer",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出等变轴对齐稀疏化（EAAS），通过SO(3)→SO(2)基变换将计算密集的稠密张量收缩转化为高效稀疏parity重索引操作，缓解EGNNs的可扩展性瓶颈",
+      "设计实时等变注意力机制，结合定制Triton融合内核消除显式边张量并最大化SRAM利用率，实现比标准实现高20倍的TFLOPS性能",
+      "在SPICE和OMol25数据集上验证E2Former-V2可保持预测性能同时显著加速推理，证明通用GPU可高效训练大型等变Transformer"
+    ],
+    "processed_at": "2026-01-26T08:46:03.042212"
+  },
+  {
+    "id": "2601.16510v1",
+    "title": "Learning to Optimize by Differentiable Programming",
+    "abstract": "Solving massive-scale optimization problems requires scalable first-order methods with low per-iteration cost. This tutorial highlights a shift in optimization: using differentiable programming not only to execute algorithms but to learn how to design them. Modern frameworks such as PyTorch, TensorFlow, and JAX enable this paradigm through efficient automatic differentiation. Embedding first-order methods within these systems allows end-to-end training that improves convergence and solution quality. Guided by Fenchel-Rockafellar duality, the tutorial demonstrates how duality-informed iterative schemes such as ADMM and PDHG can be learned and adapted. Case studies across LP, OPF, Laplacian regularization, and neural network verification illustrate these gains.",
+    "authors": [
+      "Liping Tao",
+      "Xindi Tong",
+      "Chee Wei Tan"
+    ],
+    "published": "2026-01-23",
+    "categories": [
+      "cs.MS",
+      "cs.LG",
+      "math.OC"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.16510v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.16510v1",
+    "fetched_at": "2026-01-26T08:38:56.764163",
+    "chinese_title": "通过可微编程学习优化",
+    "chinese_summary": "该论文针对大规模优化问题，提出利用可微编程的新范式——不仅执行优化算法，还学习设计算法；借助PyTorch等框架的自动微分嵌入一阶方法实现端到端训练，结合Fenchel-Rockafellar对偶改进ADMM、PDHG等迭代方案，以提升收敛性与解质量，并用线性规划（LP）、最优潮流（OPF）等案例验证。",
+    "tags": [
+      "Deep Learning",
+      "Portfolio Optimization"
+    ],
+    "key_contributions": [
+      "提出可微编程范式，实现从仅执行优化算法到学习设计算法的转变，借助自动微分支持端到端训练",
+      "结合Fenchel-Rockafellar对偶改进ADMM、PDHG等对偶迭代方案，提升大规模优化问题的收敛性与解质量"
+    ],
+    "processed_at": "2026-01-26T08:46:34.476298"
+  },
+  {
+    "id": "2601.16489v1",
+    "title": "EvoConfig: Self-Evolving Multi-Agent Systems for Efficient Autonomous Environment Configuration",
+    "abstract": "A reliable executable environment is the foundation for ensuring that large language models solve software engineering tasks. Due to the complex and tedious construction process, large-scale configuration is relatively inefficient. However, most methods always overlook fine-grained analysis of the actions performed by the agent, making it difficult to handle complex errors and resulting in configuration failures. To address this bottleneck, we propose EvoConfig, an efficient environment configuration framework that optimizes multi-agent collaboration to build correct runtime environments. EvoConfig features an expert diagnosis module for fine-grained post-execution analysis, and a self-evolving mechanism that lets expert agents self-feedback and dynamically adjust error-fixing priorities in real time. Empirically, EvoConfig matches the previous state-of-the-art Repo2Run on Repo2Run's 420 repositories, while delivering clear gains on harder cases: on the more challenging Envbench, EvoConfig achieves a 78.1% success rate, outperforming Repo2Run by 7.1%. Beyond end-to-end success, EvoConfig also demonstrates stronger debugging competence, achieving higher accuracy in error identification and producing more effective repair recommendations than existing methods.",
+    "authors": [
+      "Xinshuai Guo",
+      "Jiayi Kuang",
+      "Linyue Pan",
+      "Yinghui Li",
+      "Yangning Li",
+      "Hai-Tao Zheng",
+      "Ying Shen",
+      "Di Yin",
+      "Xing Sun"
+    ],
+    "published": "2026-01-23",
+    "categories": [
+      "cs.SE",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.16489v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.16489v1",
+    "fetched_at": "2026-01-26T08:38:56.764192",
+    "chinese_title": "EvoConfig：用于高效自主环境配置的自演化多智能体系统",
+    "chinese_summary": "针对现有环境配置方法忽略智能体动作细粒度分析、难以处理复杂错误的问题，提出EvoConfig框架，包含专家诊断模块（细粒度执行后分析）和自演化机制（智能体自我反馈、动态调整错误修复优先级）；实验显示其在基准测试中性能优于当前最优方法，调试能力更强。",
+    "tags": [
+      "LLM",
+      "Deep Learning",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出集成专家诊断模块与自演化机制的EvoConfig框架，实现高效自主环境配置",
+      "实验验证其在基准测试中优于现有SOTA方法，且调试能力更强（错误识别更准确、修复建议更有效）"
+    ],
+    "processed_at": "2026-01-26T08:46:53.096523"
+  },
+  {
+    "id": "2601.16344v1",
+    "title": "DSGym: A Holistic Framework for Evaluating and Training Data Science Agents",
+    "abstract": "Data science agents promise to accelerate discovery and insight-generation by turning data into executable analyses and findings. Yet existing data science benchmarks fall short due to fragmented evaluation interfaces that make cross-benchmark comparison difficult, narrow task coverage and a lack of rigorous data grounding. In particular, we show that a substantial portion of tasks in current benchmarks can be solved without using the actual data. To address these limitations, we introduce DSGym, a standardized framework for evaluating and training data science agents in self-contained execution environments. Unlike static benchmarks, DSGym provides a modular architecture that makes it easy to add tasks, agent scaffolds, and tools, positioning it as a live, extensible testbed. We curate DSGym-Tasks, a holistic task suite that standardizes and refines existing benchmarks via quality and shortcut solvability filtering. We further expand coverage with (1) DSBio: expert-derived bioinformatics tasks grounded in literature and (2) DSPredict: challenging prediction tasks spanning domains such as computer vision, molecular prediction, and single-cell perturbation. Beyond evaluation, DSGym enables agent training via execution-verified data synthesis pipeline. As a case study, we build a 2,000-example training set and trained a 4B model in DSGym that outperforms GPT-4o on standardized analysis benchmarks. Overall, DSGym enables rigorous end-to-end measurement of whether agents can plan, implement, and validate data analyses in realistic scientific context.",
+    "authors": [
+      "Fan Nie",
+      "Junlin Wang",
+      "Harper Hua",
+      "Federico Bianchi",
+      "Yongchan Kwon",
+      "Zhenting Qi",
+      "Owen Queen",
+      "Shang Zhu",
+      "James Zou"
+    ],
+    "published": "2026-01-22",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.16344v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.16344v1",
+    "fetched_at": "2026-01-26T08:38:56.764223",
+    "chinese_title": "DSGym：用于评估和训练数据科学智能体的整体框架",
+    "chinese_summary": "针对现有数据科学基准存在碎片化、任务覆盖窄及可被非数据依赖方式解决等缺陷，论文提出DSGym——一个模块化可扩展的评估与训练数据科学智能体的框架；该框架包含标准化任务套件DSGym-Tasks（含专家衍生的生物信息学任务DSBio和多领域预测任务DSPredict），并通过执行验证的数据合成 pipeline 训练智能体，案例中训练的4B模型在标准化分析基准上优于GPT-4o。",
+    "tags": [
+      "LLM",
+      "Benchmark",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出DSGym模块化框架，解决现有数据科学基准的碎片化、任务覆盖不足及可被shortcut解决等问题，提供可扩展的评估与训练环境",
+      "构建包含DSBio（生物信息学任务）和DSPredict（多领域预测任务）的DSGym-Tasks任务套件，并通过执行验证的数据合成 pipeline 训练出在标准化分析基准上优于GPT-4o的4B模型"
+    ],
+    "processed_at": "2026-01-26T08:47:30.158166"
+  },
+  {
+    "id": "2601.16336v1",
+    "title": "DMAVA: Distributed Multi-Autonomous Vehicle Architecture Using Autoware",
+    "abstract": "Simulating and validating coordination among multiple autonomous vehicles (AVs) is a challenging task as most existing simulation architectures are limited to single-vehicle operation or rely on centralized control. This paper presents a Distributed Multi-AV Architecture (DMAVA) that enables synchronized, real-time autonomous driving simulation across multiple physical hosts. Each vehicle runs its own complete AV stack and operates independently from other AVs. The vehicles in the simulation maintain synchronized coordination through a low-latency data-centric communication layer. The proposed system integrates ROS 2 Humble, Autoware Universe, AWSIM Labs, and Zenoh to support concurrent execution of multiple Autoware stacks within a shared Unity-based environment. Experiments conducted on multiple-host configurations demonstrate stable localization, reliable inter-host communication, and fully synchronized closed-loop control. The DMAVA also serves as a foundation for Multi-Vehicle Autonomous Valet Parking, demonstrating its extensibility toward higher-level cooperative autonomy. Demo videos and source code are available at: https://github.com/zubxxr/distributed-multi-autonomous-vehicle-architecture.",
+    "authors": [
+      "Zubair Islam",
+      "Mohamed El-Darieby"
+    ],
+    "published": "2026-01-22",
+    "categories": [
+      "cs.RO",
+      "cs.AI",
+      "cs.MA"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.16336v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.16336v1",
+    "fetched_at": "2026-01-26T08:38:56.764241",
+    "chinese_title": "DMAVA：基于Autoware的分布式多自动驾驶车辆架构",
+    "chinese_summary": "针对现有自动驾驶仿真架构多局限于单车辆或集中控制的问题，本文提出基于ROS 2 Humble、Autoware Universe等工具的分布式多自动驾驶车辆架构（DMAVA），支持多物理主机同步实时仿真，各车辆独立运行完整自动驾驶栈并通过低延迟通信层协调；实验验证了其稳定定位、可靠跨主机通信及全同步闭环控制能力，且可扩展至多车代客泊车场景。",
+    "tags": [
+      "Deep Learning",
+      "Reinforcement Learning"
+    ],
+    "key_contributions": [
+      "提出分布式多自动驾驶车辆架构（DMAVA），支持多物理主机同步实时仿真，各车辆独立运行完整自动驾驶栈并通过低延迟通信层协调",
+      "验证稳定定位、可靠跨主机通信及全同步闭环控制，且可扩展至多车代客泊车场景"
+    ],
+    "processed_at": "2026-01-26T08:47:55.184788"
+  },
+  {
+    "id": "2601.16327v1",
+    "title": "DMV-AVP: Distributed Multi-Vehicle Autonomous Valet Parking using Autoware",
+    "abstract": "This paper presents the DMV-AVP System, a distributed simulation of Multi-Vehicle Autonomous Valet Parking (AVP). The system was implemented as an application of the Distributed Multi-Vehicle Architecture (DMAVA) for synchronized multi-host execution. Most existing simulation approaches rely on centralized or non-distributed designs that constrain scalability and limit fully autonomous control. This work introduces two modules built on top of the DMAVA: 1) a Multi-Vehicle AVP Node that performs state-based coordination, queuing, and reservation management across multiple vehicles, and 2) a Unity-Integrated YOLOv5 Parking Spot Detection Module that provides real-time, vision-based perception within AWSIM Labs. Both modules integrate seamlessly with the DMAVA and extend it specifically for multi-vehicle AVP operation, supported by a Zenoh-based communication layer that ensures low-latency topic synchronization and coordinated behavior across hosts. Experiments conducted on two- and three-host configurations demonstrate deterministic coordination, conflict-free parking behavior, and scalable performance across distributed Autoware instances. The results confirm that the proposed Distributed Multi-Vehicle AVP System supports cooperative AVP simulation and establishes a foundation for future real-world and hardware-in-the-loop validation. Demo videos and source code are available at https://github.com/zubxxr/multi-vehicle-avp",
+    "authors": [
+      "Zubair Islam",
+      "Mohamed El-Darieby"
+    ],
+    "published": "2026-01-22",
+    "categories": [
+      "cs.RO",
+      "cs.AI",
+      "cs.MA"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.16327v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.16327v1",
+    "fetched_at": "2026-01-26T08:38:56.764259",
+    "chinese_title": "DMV-AVP：基于Autoware的分布式多车辆自主代客泊车系统",
+    "chinese_summary": "本文提出基于分布式多车辆架构（DMAVA）的分布式多车辆自主代客泊车（DMV-AVP）系统，包含状态协调与预约管理的多车辆AVP节点、Unity集成YOLOv5的实时停车检测模块，通过Zenoh通信层实现低延迟同步；实验验证2-3主机配置下的确定性协调与可扩展性能，为合作AVP仿真及实车验证奠基。",
+    "tags": [
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "设计基于DMAVA的分布式多车辆AVP系统，包含协调管理节点与视觉检测模块，突破集中式设计的可扩展性限制",
+      "实验验证多主机配置下的确定性协调、无冲突停车及可扩展性能，为后续实车/硬件在环验证提供基础"
+    ],
+    "processed_at": "2026-01-26T08:48:20.704410"
+  },
+  {
+    "id": "2601.16280v1",
+    "title": "When Agents Fail to Act: A Diagnostic Framework for Tool Invocation Reliability in Multi-Agent LLM Systems",
+    "abstract": "Multi-agent systems powered by large language models (LLMs) are transforming enterprise automation, yet systematic evaluation methodologies for assessing tool-use reliability remain underdeveloped. We introduce a comprehensive diagnostic framework that leverages big data analytics to evaluate procedural reliability in intelligent agent systems, addressing critical needs for SME-centric deployment in privacy-sensitive environments. Our approach features a 12-category error taxonomy capturing failure modes across tool initialization, parameter handling, execution, and result interpretation. Through systematic evaluation of 1,980 deterministic test instances spanning both open-weight models (Qwen2.5 series, Functionary) and proprietary alternatives (GPT-4, Claude 3.5/3.7) across diverse edge hardware configurations, we identify actionable reliability thresholds for production deployment. Our analysis reveals that procedural reliability, particularly tool initialization failures, constitutes the primary bottleneck for smaller models, while qwen2.5:32b achieves flawless performance matching GPT-4.1. The framework demonstrates that mid-sized models (qwen2.5:14b) offer practical accuracy-efficiency trade-offs on commodity hardware (96.6\\% success rate, 7.3 s latency), enabling cost-effective intelligent agent deployment for resource-constrained organizations. This work establishes foundational infrastructure for systematic reliability evaluation of tool-augmented multi-agent AI systems.",
+    "authors": [
+      "Donghao Huang",
+      "Gauri Malwe",
+      "Zhaoxia Wang"
+    ],
+    "published": "2026-01-22",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.16280v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.16280v1",
+    "fetched_at": "2026-01-26T08:38:56.764278",
+    "chinese_title": "当智能体无法行动时：多智能体LLM系统中工具调用可靠性的诊断框架",
+    "chinese_summary": "论文针对多智能体LLM系统工具调用可靠性评估方法缺失的问题，提出包含12类错误分类的综合诊断框架；通过评估1980个确定性测试实例对比开源（如Qwen2.5系列）与闭源（如GPT-4）模型，揭示中小模型工具初始化失败为主要瓶颈，中模型Qwen2.5:14b在普通硬件上实现成本效益的准确性-效率权衡，为资源受限组织部署提供支撑。",
+    "tags": [
+      "LLM",
+      "Financial Agent",
+      "Transformer"
+    ],
+    "key_contributions": [
+      "提出含12类错误分类的综合诊断框架，系统评估多智能体LLM系统的工具调用可靠性",
+      "通过实证分析揭示不同模型可靠性表现，指出中小模型瓶颈并给出资源受限组织的成本效益部署建议"
+    ],
+    "processed_at": "2026-01-26T08:48:50.529929"
+  },
+  {
+    "id": "2601.15876v2",
+    "title": "EvoCUA: Evolving Computer Use Agents via Learning from Scalable Synthetic Experience",
+    "abstract": "The development of native computer-use agents (CUA) represents a significant leap in multimodal AI. However, their potential is currently bottlenecked by the constraints of static data scaling. Existing paradigms relying primarily on passive imitation of static datasets struggle to capture the intricate causal dynamics inherent in long-horizon computer tasks. In this work, we introduce EvoCUA, a native computer use agentic model. Unlike static imitation, EvoCUA integrates data generation and policy optimization into a self-sustaining evolutionary cycle. To mitigate data scarcity, we develop a verifiable synthesis engine that autonomously generates diverse tasks coupled with executable validators. To enable large-scale experience acquisition, we design a scalable infrastructure orchestrating tens of thousands of asynchronous sandbox rollouts. Building on these massive trajectories, we propose an iterative evolving learning strategy to efficiently internalize this experience. This mechanism dynamically regulates policy updates by identifying capability boundaries -- reinforcing successful routines while transforming failure trajectories into rich supervision through error analysis and self-correction. Empirical evaluations on the OSWorld benchmark demonstrate that EvoCUA achieves a success rate of 56.7%, establishing a new open-source state-of-the-art. Notably, EvoCUA significantly outperforms the previous best open-source model, OpenCUA-72B (45.0%), and surpasses leading closed-weights models such as UI-TARS-2 (53.1%). Crucially, our results underscore the generalizability of this approach: the evolving paradigm driven by learning from experience yields consistent performance gains across foundation models of varying scales, establishing a robust and scalable path for advancing native agent capabilities.",
+    "authors": [
+      "Taofeng Xue",
+      "Chong Peng",
+      "Mianqiu Huang",
+      "Linsen Guo",
+      "Tiancheng Han",
+      "Haozhe Wang",
+      "Jianing Wang",
+      "Xiaocheng Zhang",
+      "Xin Yang",
+      "Dengchang Zhao",
+      "Jinrui Ding",
+      "Xiandi Ma",
+      "Yuchen Xie",
+      "Peng Pei",
+      "Xunliang Cai",
+      "Xipeng Qiu"
+    ],
+    "published": "2026-01-22",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.15876v2",
+    "arxiv_url": "https://arxiv.org/abs/2601.15876v2",
+    "fetched_at": "2026-01-26T08:38:56.764386",
+    "chinese_title": "EvoCUA：通过可扩展合成经验学习的进化型计算机使用代理",
+    "chinese_summary": "该论文提出EvoCUA——一种原生计算机使用代理模型，针对静态数据缩放瓶颈，通过自维持进化循环整合数据生成与策略优化；构建可验证合成引擎生成多样任务及可执行验证器，设计大规模异步沙盒rollout基础设施，结合迭代进化学习策略动态调节策略更新，在OSWorld基准上取得56.7%的成功率，刷新开源SOTA。",
+    "tags": [
+      "LLM",
+      "Financial Agent",
+      "Reinforcement Learning",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出EvoCUA模型，通过自维持进化循环整合数据生成与策略优化，突破计算机使用代理的静态数据缩放瓶颈",
+      "构建可验证合成引擎与大规模异步沙盒rollout基础设施，结合迭代进化学习策略，在OSWorld基准上刷新开源SOTA"
+    ],
+    "processed_at": "2026-01-26T08:49:14.480995"
+  }
+]
