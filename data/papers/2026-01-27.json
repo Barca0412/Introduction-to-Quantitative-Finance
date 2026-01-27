@@ -1,0 +1,624 @@
+[
+  {
+    "id": "2601.18686v1",
+    "title": "Optimal strategy and deep hedging for share repurchase programs",
+    "abstract": "In recent decades, companies have frequently adopted share repurchase programs to return capital to shareholders or for other strategic purposes, instructing investment banks to rapidly buy back shares on their behalf. When the executing institution is allowed to hedge its exposure, it encounters several challenges due to the intrinsic features of the product. Moreover, contractual clauses or market regulations on trading activity may make it infeasible to rely on Greeks. In this work, we address the hedging of these products by developing a machine-learning framework that determines the optimal execution of the buyback while explicitly accounting for the bank's actual trading capabilities. This unified treatment of execution and hedging yields substantial performance improvements, resulting in an optimized policy that provides a feasible and realistic hedging approach. The pricing of these programs can be framed in terms of the discount that banks offer to the client on the price at which the shares are delivered. Since, in our framework, risk measures serve as objective functions, we exploit the concept of indifference pricing to compute this discount, thereby capturing the actual execution performance.",
+    "authors": [
+      "Stefano Corti",
+      "Roberto Daluiso",
+      "Andrea Pallavicini"
+    ],
+    "published": "2026-01-26",
+    "categories": [
+      "q-fin.PR",
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.18686v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.18686v1",
+    "fetched_at": "2026-01-27T08:38:04.422972"
+  },
+  {
+    "id": "2601.18634v1",
+    "title": "The Compounded BSDE method: A fully-forward method for option pricing and optimal stopping problems in finance",
+    "abstract": "We propose the Compound BSDE method, a fully forward, deep-learning-based approach for solving a broad class of problems in financial mathematics, including optimal stopping. The method is based on a reformulation of option pricing problems in terms of a system of backward stochastic differential equations (BSDEs), which offers a new perspective on the numerical treatment of compound options and optimal stopping problems such as Bermudan option pricing. Building on the classical deep BSDE method for a single BSDE, we develop an algorithm for compound BSDEs and establish its convergence properties. In particular, we derive an \\emph{a posteriori} error estimate for the proposed method. Numerical experiments demonstrate the accuracy and computational efficiency of the approach, and illustrate its effectiveness for high-dimensional option pricing and optimal stopping problems.",
+    "authors": [
+      "Zhipeng Huang",
+      "Cornelis W. Oosterlee"
+    ],
+    "published": "2026-01-26",
+    "categories": [
+      "q-fin.CP",
+      "math.NA",
+      "q-fin.PR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.18634v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.18634v1",
+    "fetched_at": "2026-01-27T08:38:04.423008"
+  },
+  {
+    "id": "2601.18124v1",
+    "title": "The Sherman-Morrison-Markowitz Portfolio",
+    "abstract": "We show that the Markowitz portfolio is a scalar multiple of another portfolio which replaces the covariance with the second moment matrix, via simple application of the Sherman-Morrison identity. Moreover it is shown that when using conditional estimates of the first two moments, this \"Sherman-Morrison-Markowitz\" portfolio solves the standard unconditional portfolio optimization problems. We argue that in multi-period portfolio optimization problems it is more natural to replace variance and covariance with their uncentered counterparts. We extend the theory to deal with constraints in expectation, where we find a decomposition of squared effects into spanned and orthogonal components. Compared to the Markowitz portfolio, the Sherman-Morrison-Markowitz portfolio downlevers by a small amount that depends on the conditional squared maximal Sharpe ratio; the practical impact will be fairly small, however. We present some example use cases for the theory.",
+    "authors": [
+      "Steven E. Pav"
+    ],
+    "published": "2026-01-26",
+    "categories": [
+      "q-fin.PM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.18124v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.18124v1",
+    "fetched_at": "2026-01-27T08:38:04.423030"
+  },
+  {
+    "id": "2601.17773v1",
+    "title": "MarketGANs: Multivariate financial time-series data augmentation using generative adversarial networks",
+    "abstract": "This paper introduces MarketGAN, a factor-based generative framework for high-dimensional asset return generation under severe data scarcity. We embed an explicit asset-pricing factor structure as an economic inductive bias and generate returns as a single joint vector, thereby preserving cross-sectional dependence and tail co-movement alongside inter-temporal dynamics. MarketGAN employs generative adversarial learning with a temporal convolutional network (TCN) backbone, which models stochastic, time-varying factor loadings and volatilities and captures long-range temporal dependence. Using daily returns of large U.S. equities, we find that MarketGAN more closely matches empirical stylized facts of asset returns, including heavy-tailed marginal distributions, volatility clustering, leverage effects, and, most notably, high-dimensional cross-sectional correlation structures and tail co-movement across assets, than conventional factor-model-based bootstrap approaches. In portfolio applications, covariance estimates derived from MarketGAN-generated samples outperform those derived from other methods when factor information is at least weakly informative, demonstrating tangible economic value.",
+    "authors": [
+      "Jeonggyu Huh",
+      "Seungwon Jeong",
+      "Hyun-Gyoon Kim",
+      "Hyeng Keun Koo",
+      "Byung Hwa Lim"
+    ],
+    "published": "2026-01-25",
+    "categories": [
+      "q-fin.ST",
+      "cs.LG",
+      "econ.EM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.17773v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.17773v1",
+    "fetched_at": "2026-01-27T08:38:04.423058"
+  },
+  {
+    "id": "2601.17248v1",
+    "title": "VIX and European options with jumps in the short-maturity regime",
+    "abstract": "We present a study of the short-maturity asymptotics for VIX and European option prices in local-stochastic volatility models with compound Poisson jumps. Both out-of-the-money (OTM) and at-the-money (ATM) asymptotics are considered. The leading-order asymptotics are obtained in closed-form. We apply our results to three examples: the Eraker model, a Kou-type model, and a folded normal model. Numerical illustrations are provided for these three examples that show the accuracy of predictions based on the asymptotic results.",
+    "authors": [
+      "Desen Guo",
+      "Dan Pirjol",
+      "Xiaoyu Wang",
+      "Lingjiong Zhu"
+    ],
+    "published": "2026-01-24",
+    "categories": [
+      "q-fin.PR",
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.17248v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.17248v1",
+    "fetched_at": "2026-01-27T08:38:04.423083"
+  },
+  {
+    "id": "2601.17247v1",
+    "title": "Learning Market Making with Closing Auctions",
+    "abstract": "In this work, we investigate the market-making problem on a trading session in which a continuous phase on a limit order book is followed by a closing auction. Whereas standard optimal market-making models typically rely on terminal inventory penalties to manage end-of-day risk, ignoring the significant liquidity events available in closing auctions, we propose a Deep Q-Learning framework that explicitly incorporates this mechanism. We introduce a market-making framework designed to explicitly anticipate the closing auction, continuously refining the projected clearing price as the trading session evolves. We develop a generative stochastic market model to simulate the trading session and to emulate the market. Our theoretical model and Deep Q-Learning method is applied on the generator in two settings: (1) when the mid price follows a rough Heston model with generative data from this stochastic model; and (2) when the mid price corresponds to historical data of assets from the S&P 500 index and the performance of our algorithm is compared with classical benchmarks from optimal market making.",
+    "authors": [
+      "Julius Graf",
+      "Thibaut Mastrolia"
+    ],
+    "published": "2026-01-24",
+    "categories": [
+      "q-fin.TR",
+      "math.OC"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.17247v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.17247v1",
+    "fetched_at": "2026-01-27T08:38:04.423104"
+  },
+  {
+    "id": "2601.17245v1",
+    "title": "Pregeometric Origins of Liquidity Geometry in Financial Order Books",
+    "abstract": "We propose a structural framework for the geometry of financial order books in which liquidity, supply, and demand are treated as emergent observables rather than primitive economic variables. The market is modeled as an inflationary relational system without assumed metric, temporal, or price coordinates. Observable quantities arise only through projection, implemented here via spectral embeddings of the graph Laplacian. A one-dimensional projection induces a price-like coordinate, while the projected density defines liquidity profiles around the mid price. Under a minimal single-scale hypothesis -- excluding intrinsic length scales beyond distance to the mid and finite visibility -- we show that projected supply and demand are constrained to gamma-like functional forms. In discrete data, this prediction translates into integrated-gamma cumulative profiles. We test these results using high-frequency Level~II data for several U.S. equities and find robust agreement across assets and intraday windows. Explicit comparison with alternative cumulative models using information criteria demonstrates a systematic preference for the integrated-gamma geometry. A minimal simulation of inflationary relational dynamics reproduces the same structure without invoking agent behavior or price formation mechanisms. These results indicate that key regularities of order-book liquidity reflect geometric constraints induced by observation rather than detailed microstructural dynamics.   Supplementary Material is available at the arXiv submission.",
+    "authors": [
+      "João P. da Cruz"
+    ],
+    "published": "2026-01-24",
+    "categories": [
+      "q-fin.TR",
+      "physics.soc-ph"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.17245v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.17245v1",
+    "fetched_at": "2026-01-27T08:38:04.423125"
+  },
+  {
+    "id": "2601.18128v1",
+    "title": "Nonlinear multi-study factor analysis",
+    "abstract": "High-dimensional data often exhibit variation that can be captured by lower dimensional factors. For high-dimensional data from multiple studies or environments, one goal is to understand which underlying factors are common to all studies, and which factors are study or environment-specific. As a particular example, we consider platelet gene expression data from patients in different disease groups. In this data, factors correspond to clusters of genes which are co-expressed; we may expect some clusters (or biological pathways) to be active for all diseases, while some clusters are only active for a specific disease. To learn these factors, we consider a nonlinear multi-study factor model, which allows for both shared and specific factors. To fit this model, we propose a multi-study sparse variational autoencoder. The underlying model is sparse in that each observed feature (i.e. each dimension of the data) depends on a small subset of the latent factors. In the genomics example, this means each gene is active in only a few biological processes. Further, the model implicitly induces a penalty on the number of latent factors, which helps separate the shared factors from the group-specific factors. We prove that the latent factors are identified, and demonstrate our method recovers meaningful factors in the platelet gene expression data.",
+    "authors": [
+      "Gemma E. Moran",
+      "Anandi Krishnan"
+    ],
+    "published": "2026-01-26",
+    "categories": [
+      "stat.ML",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.18128v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.18128v1",
+    "fetched_at": "2026-01-27T08:38:10.532115"
+  },
+  {
+    "id": "2601.18754v1",
+    "title": "$α^3$-SecBench: A Large-Scale Evaluation Suite of Security, Resilience, and Trust for LLM-based UAV Agents over 6G Networks",
+    "abstract": "Autonomous unmanned aerial vehicle (UAV) systems are increasingly deployed in safety-critical, networked environments where they must operate reliably in the presence of malicious adversaries. While recent benchmarks have evaluated large language model (LLM)-based UAV agents in reasoning, navigation, and efficiency, systematic assessment of security, resilience, and trust under adversarial conditions remains largely unexplored, particularly in emerging 6G-enabled settings.   We introduce $α^{3}$-SecBench, the first large-scale evaluation suite for assessing the security-aware autonomy of LLM-based UAV agents under realistic adversarial interference. Building on multi-turn conversational UAV missions from $α^{3}$-Bench, the framework augments benign episodes with 20,000 validated security overlay attack scenarios targeting seven autonomy layers, including sensing, perception, planning, control, communication, edge/cloud infrastructure, and LLM reasoning. $α^{3}$-SecBench evaluates agents across three orthogonal dimensions: security (attack detection and vulnerability attribution), resilience (safe degradation behavior), and trust (policy-compliant tool usage).   We evaluate 23 state-of-the-art LLMs from major industrial providers and leading AI labs using thousands of adversarially augmented UAV episodes sampled from a corpus of 113,475 missions spanning 175 threat types. While many models reliably detect anomalous behavior, effective mitigation, vulnerability attribution, and trustworthy control actions remain inconsistent. Normalized overall scores range from 12.9% to 57.1%, highlighting a significant gap between anomaly detection and security-aware autonomous decision-making. We release $α^{3}$-SecBench on GitHub: https://github.com/maferrag/AlphaSecBench",
+    "authors": [
+      "Mohamed Amine Ferrag",
+      "Abderrahmane Lakas",
+      "Merouane Debbah"
+    ],
+    "published": "2026-01-26",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.18754v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.18754v1",
+    "fetched_at": "2026-01-27T08:38:16.618252"
+  },
+  {
+    "id": "2601.17786v1",
+    "title": "Beyond a Single Perspective: Text Anomaly Detection with Multi-View Language Representations",
+    "abstract": "Text anomaly detection (TAD) plays a critical role in various language-driven real-world applications, including harmful content moderation, phishing detection, and spam review filtering. While two-step \"embedding-detector\" TAD methods have shown state-of-the-art performance, their effectiveness is often limited by the use of a single embedding model and the lack of adaptability across diverse datasets and anomaly types. To address these limitations, we propose to exploit the embeddings from multiple pretrained language models and integrate them into $MCA^2$, a multi-view TAD framework. $MCA^2$ adopts a multi-view reconstruction model to effectively extract normal textual patterns from multiple embedding perspectives. To exploit inter-view complementarity, a contrastive collaboration module is designed to leverage and strengthen the interactions across different views. Moreover, an adaptive allocation module is developed to automatically assign the contribution weight of each view, thereby improving the adaptability to diverse datasets. Extensive experiments on 10 benchmark datasets verify the effectiveness of $MCA^2$ against strong baselines. The source code of $MCA^2$ is available at https://github.com/yankehan/MCA2.",
+    "authors": [
+      "Yixin Liu",
+      "Kehan Yan",
+      "Shiyuan Li",
+      "Qingfeng Chen",
+      "Shirui Pan"
+    ],
+    "published": "2026-01-25",
+    "categories": [
+      "cs.CL",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.17786v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.17786v1",
+    "fetched_at": "2026-01-27T08:38:16.618285"
+  },
+  {
+    "id": "2601.17542v1",
+    "title": "Cognitive Platform Engineering for Autonomous Cloud Operations",
+    "abstract": "Modern DevOps practices have accelerated software delivery through automation, CI/CD pipelines, and observability tooling,but these approaches struggle to keep pace with the scale and dynamism of cloud-native systems. As telemetry volume grows and configuration drift increases, traditional, rule-driven automation often results in reactive operations, delayed remediation, and dependency on manual expertise. This paper introduces Cognitive Platform Engineering, a next-generation paradigm that integrates sensing, reasoning, and autonomous action directly into the platform lifecycle. This paper propose a four-plane reference architecture that unifies data collection, intelligent inference, policy-driven orchestration, and human experience layers within a continuous feedback loop. A prototype implementation built with Kubernetes, Terraform, Open Policy Agent, and ML-based anomaly detection demonstrates improvements in mean time to resolution, resource efficiency, and compliance. The results show that embedding intelligence into platform operations enables resilient, self-adjusting, and intent-aligned cloud environments. The paper concludes with research opportunities in reinforcement learning, explainable governance, and sustainable self-managing cloud ecosystems.",
+    "authors": [
+      "Vinoth Punniyamoorthy",
+      "Nitin Saksena",
+      "Srivenkateswara Reddy Sankiti",
+      "Nachiappan Chockalingam",
+      "Aswathnarayan Muthukrishnan Kirubakaran",
+      "Shiva Kumar Reddy Carimireddy",
+      "Durgaraman Maruthavanan"
+    ],
+    "published": "2026-01-24",
+    "categories": [
+      "cs.AI",
+      "cs.SE"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.17542v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.17542v1",
+    "fetched_at": "2026-01-27T08:38:16.618329"
+  },
+  {
+    "id": "2601.17430v1",
+    "title": "Active Hypothesis Testing for Correlated Combinatorial Anomaly Detection",
+    "abstract": "We study the problem of identifying an anomalous subset of streams under correlated noise, motivated by monitoring and security in cyber-physical systems. This problem can be viewed as a form of combinatorial pure exploration, where each stream plays the role of an arm and measurements must be allocated sequentially under uncertainty. Existing combinatorial bandit and hypothesis testing methods typically assume independent observations and fail to exploit correlation for efficient measurement design. We propose ECC-AHT, an adaptive algorithm that selects continuous, constrained measurements to maximize Chernoff information between competing hypotheses, enabling active noise cancellation through differential sensing. ECC-AHT achieves optimal sample complexity guarantees and significantly outperforms state-of-the-art baselines in both synthetic and real-world correlated environments. The code is available on https://github.com/VincentdeCristo/ECC-AHT",
+    "authors": [
+      "Zichuan Yang",
+      "Yiming Xing"
+    ],
+    "published": "2026-01-24",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.17430v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.17430v1",
+    "fetched_at": "2026-01-27T08:38:16.618349"
+  },
+  {
+    "id": "2601.17301v1",
+    "title": "Tabular Foundation Models are Strong Graph Anomaly Detectors",
+    "abstract": "Graph anomaly detection (GAD), which aims to identify abnormal nodes that deviate from the majority, has become increasingly important in high-stakes Web domains. However, existing GAD methods follow a \"one model per dataset\" paradigm, leading to high computational costs, substantial data demands, and poor generalization when transferred to new datasets. This calls for a foundation model that enables a \"one-for-all\" GAD solution capable of detecting anomalies across diverse graphs without retraining. Yet, achieving this is challenging due to the large structural and feature heterogeneity across domains. In this paper, we propose TFM4GAD, a simple yet effective framework that adapts tabular foundation models (TFMs) for graph anomaly detection. Our key insight is that the core challenges of foundation GAD, handling heterogeneous features, generalizing across domains, and operating with scarce labels, are the exact problems that modern TFMs are designed to solve via synthetic pre-training and powerful in-context learning. The primary challenge thus becomes structural: TFMs are agnostic to graph topology. TFM4GAD bridges this gap by \"flattening\" the graph, constructing an augmented feature table that enriches raw node features with Laplacian embeddings, local and global structural characteristics, and anomaly-sensitive neighborhood aggregations. This augmented table is processed by a TFM in a fully in-context regime. Extensive experiments on multiple datasets with various TFM backbones reveal that TFM4GAD surprisingly achieves significant performance gains over specialized GAD models trained from scratch. Our work offers a new perspective and a practical paradigm for leveraging TFMs as powerful, generalist graph anomaly detectors.",
+    "authors": [
+      "Yunhui Liu",
+      "Tieke He",
+      "Yongchao Liu",
+      "Can Yi",
+      "Hong Jin",
+      "Chuntao Hong"
+    ],
+    "published": "2026-01-24",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.17301v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.17301v1",
+    "fetched_at": "2026-01-27T08:38:16.618412"
+  },
+  {
+    "id": "2601.17050v1",
+    "title": "Single-Pixel Vision-Language Model for Intrinsic Privacy-Preserving Behavioral Intelligence",
+    "abstract": "Adverse social interactions, such as bullying, harassment, and other illicit activities, pose significant threats to individual well-being and public safety, leaving profound impacts on physical and mental health. However, these critical events frequently occur in privacy-sensitive environments like restrooms, and changing rooms, where conventional surveillance is prohibited or severely restricted by stringent privacy regulations and ethical concerns. Here, we propose the Single-Pixel Vision-Language Model (SP-VLM), a novel framework that reimagines secure environmental monitoring. It achieves intrinsic privacy-by-design by capturing human dynamics through inherently low-dimensional single-pixel modalities and inferring complex behavioral patterns via seamless vision-language integration. Building on this framework, we demonstrate that single-pixel sensing intrinsically suppresses identity recoverability, rendering state-of-the-art face recognition systems ineffective below a critical sampling rate. We further show that SP-VLM can nonetheless extract meaningful behavioral semantics, enabling robust anomaly detection, people counting, and activity understanding from severely degraded single-pixel observations. Combining these findings, we identify a practical sampling-rate regime in which behavioral intelligence emerges while personal identity remains strongly protected. Together, these results point to a human-rights-aligned pathway for safety monitoring that can support timely intervention without normalizing intrusive surveillance in privacy-sensitive spaces.",
+    "authors": [
+      "Hongjun An",
+      "Yiliang Song",
+      "Jiawei Shao",
+      "Zhe Sun",
+      "Xuelong Li"
+    ],
+    "published": "2026-01-21",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.17050v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.17050v1",
+    "fetched_at": "2026-01-27T08:38:16.618519"
+  },
+  {
+    "id": "2601.18790v1",
+    "title": "MortalMATH: Evaluating the Conflict Between Reasoning Objectives and Emergency Contexts",
+    "abstract": "Large Language Models are increasingly optimized for deep reasoning, prioritizing the correct execution of complex tasks over general conversation. We investigate whether this focus on calculation creates a \"tunnel vision\" that ignores safety in critical situations. We introduce MortalMATH, a benchmark of 150 scenarios where users request algebra help while describing increasingly life-threatening emergencies (e.g., stroke symptoms, freefall). We find a sharp behavioral split: generalist models (like Llama-3.1) successfully refuse the math to address the danger. In contrast, specialized reasoning models (like Qwen-3-32b and GPT-5-nano) often ignore the emergency entirely, maintaining over 95 percent task completion rates while the user describes dying. Furthermore, the computational time required for reasoning introduces dangerous delays: up to 15 seconds before any potential help is offered. These results suggest that training models to relentlessly pursue correct answers may inadvertently unlearn the survival instincts required for safe deployment.",
+    "authors": [
+      "Etienne Lanzeray",
+      "Stephane Meilliez",
+      "Malo Ruelle",
+      "Damien Sileo"
+    ],
+    "published": "2026-01-26",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.18790v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.18790v1",
+    "fetched_at": "2026-01-27T08:38:44.010967"
+  },
+  {
+    "id": "2601.18747v1",
+    "title": "Capturing P: On the Expressive Power and Efficient Evaluation of Boolean Retrieval",
+    "abstract": "Modern information retrieval is transitioning from simple document filtering to complex, neuro-symbolic reasoning workflows. However, current retrieval architectures face a fundamental efficiency dilemma when handling the rigorous logical and arithmetic constraints required by this new paradigm. Standard iterator-based engines (Document-at-a-Time) do not natively support complex, nested logic graphs; forcing them to execute such queries typically results in intractable runtime performance. Conversely, naive recursive approaches (Term-at-a-Time), while capable of supporting these structures, suffer from prohibitive memory consumption when enforcing broad logical exclusions.   In this paper, we propose that a retrieval engine must be capable of ``Capturing $\\mathbf{P}$'' -- evaluating any polynomial-time property directly over its index in a computationally efficient manner. We define a formal Retrieval Language ($\\mathcal{L}_R$) based on Directed Acyclic Graphs (DAGs) and prove it precisely captures the complexity class $\\mathbf{P}$. We introduce \\texttt{ComputePN}, a novel evaluation algorithm that makes $\\mathcal{L}_R$ tractable. By combining native DAG traversal with a memory-efficient ``Positive-Negative'' response mechanism, \\texttt{ComputePN} ensures the efficient evaluation of any query in $\\mathcal{L}_R$. This work establishes the theoretical foundation for turning the search index into a general-purpose computational engine.",
+    "authors": [
+      "Amir Aavani"
+    ],
+    "published": "2026-01-26",
+    "categories": [
+      "cs.IR",
+      "cs.AI",
+      "cs.CC",
+      "cs.CL",
+      "cs.DB"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.18747v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.18747v1",
+    "fetched_at": "2026-01-27T08:38:44.010996"
+  },
+  {
+    "id": "2601.18733v1",
+    "title": "Advances and Innovations in the Multi-Agent Robotic System (MARS) Challenge",
+    "abstract": "Recent advancements in multimodal large language models and vision-languageaction models have significantly driven progress in Embodied AI. As the field transitions toward more complex task scenarios, multi-agent system frameworks are becoming essential for achieving scalable, efficient, and collaborative solutions. This shift is fueled by three primary factors: increasing agent capabilities, enhancing system efficiency through task delegation, and enabling advanced human-agent interactions. To address the challenges posed by multi-agent collaboration, we propose the Multi-Agent Robotic System (MARS) Challenge, held at the NeurIPS 2025 Workshop on SpaVLE. The competition focuses on two critical areas: planning and control, where participants explore multi-agent embodied planning using vision-language models (VLMs) to coordinate tasks and policy execution to perform robotic manipulation in dynamic environments. By evaluating solutions submitted by participants, the challenge provides valuable insights into the design and coordination of embodied multi-agent systems, contributing to the future development of advanced collaborative AI systems.",
+    "authors": [
+      "Li Kang",
+      "Heng Zhou",
+      "Xiufeng Song",
+      "Rui Li",
+      "Bruno N. Y. Chen",
+      "Ziye Wang",
+      "Ximeng Meng",
+      "Stone Tao",
+      "Yiran Qin",
+      "Xiaohong Liu",
+      "Ruimao Zhang",
+      "Lei Bai",
+      "Yilun Du",
+      "Hao Su",
+      "Philip Torr",
+      "Zhenfei Yin",
+      "Ruihao Gong",
+      "Yejun Zeng",
+      "Fengjun Zhong",
+      "Shenghao Jin",
+      "Jinyang Guo",
+      "Xianglong Liu",
+      "Xiaojun Jia",
+      "Tianqi Shan",
+      "Wenqi Ren",
+      "Simeng Qin",
+      "Jialing Yang",
+      "Xiaoyu Ma",
+      "Tianxing Chen",
+      "Zixuan Li",
+      "Zijian Cai",
+      "Yan Qin",
+      "Yusen Qin",
+      "Qiangyu Chen",
+      "Kaixuan Wang",
+      "Zhaoming Han",
+      "Yao Mu",
+      "Ping Luo",
+      "Yuanqi Yao",
+      "Haoming Song",
+      "Jan-Nico Zaech",
+      "Fabien Despinoy",
+      "Danda Pani Paudel",
+      "Luc Van Gool"
+    ],
+    "published": "2026-01-26",
+    "categories": [
+      "cs.RO",
+      "cs.AI",
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.18733v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.18733v1",
+    "fetched_at": "2026-01-27T08:38:44.011092"
+  },
+  {
+    "id": "2601.18512v1",
+    "title": "Using Large Language Models to Construct Virtual Top Managers: A Method for Organizational Research",
+    "abstract": "This study introduces a methodological framework that uses large language models to create virtual personas of real top managers. Drawing on real CEO communications and Moral Foundations Theory, we construct LLM-based participants that simulate the decision-making of individual leaders. Across three phases, we assess construct validity, reliability, and behavioral fidelity by benchmarking these virtual CEOs against human participants. Our results indicate that theoretically scaffolded personas approximate the moral judgements observed in human samples, suggesting that LLM-based personas can serve as credible and complementary tools for organizational research in contexts where direct access to executives is limited. We conclude by outlining implications for future research using LLM-based personas in organizational settings.",
+    "authors": [
+      "Antonio Garzon-Vico",
+      "Krithika Sharon Komalapati",
+      "Arsalan Shahid",
+      "Jan Rosier"
+    ],
+    "published": "2026-01-26",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.18512v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.18512v1",
+    "fetched_at": "2026-01-27T08:38:44.011115"
+  },
+  {
+    "id": "2601.18418v1",
+    "title": "daVinci-Dev: Agent-native Mid-training for Software Engineering",
+    "abstract": "Recently, the frontier of Large Language Model (LLM) capabilities has shifted from single-turn code generation to agentic software engineering-a paradigm where models autonomously navigate, edit, and test complex repositories. While post-training methods have become the de facto approach for code agents, **agentic mid-training**-mid-training (MT) on large-scale data that mirrors authentic agentic workflows-remains critically underexplored due to substantial resource requirements, despite offering a more scalable path to instilling foundational agentic behaviors than relying solely on expensive reinforcement learning. A central challenge in realizing effective agentic mid-training is the distribution mismatch between static training data and the dynamic, feedback-rich environment of real development. To address this, we present a systematic study of agentic mid-training, establishing both the data synthesis principles and training methodology for effective agent development at scale. Central to our approach is **agent-native data**-supervision comprising two complementary types of trajectories: **contextually-native trajectories** that preserve the complete information flow an agent experiences, offering broad coverage and diversity; and **environmentally-native trajectories** collected from executable repositories where observations stem from actual tool invocations and test executions, providing depth and interaction authenticity. We verify the model's agentic capabilities on `SWE-Bench Verified`. We demonstrate our superiority over the previous open software engineering mid-training recipe `Kimi-Dev` under two post-training settings with an aligned base model and agentic scaffold, while using less than half mid-training tokens (73.1B). Besides relative advantage, our best performing 32B and 72B models achieve **56.1%** and **58.5%** resolution rates, respectively, which are ...",
+    "authors": [
+      "Ji Zeng",
+      "Dayuan Fu",
+      "Tiantian Mi",
+      "Yumin Zhuang",
+      "Yaxing Huang",
+      "Xuefeng Li",
+      "Lyumanshan Ye",
+      "Muhang Xie",
+      "Qishuo Hua",
+      "Zhen Huang",
+      "Mohan Jiang",
+      "Hanning Wang",
+      "Jifan Lin",
+      "Yang Xiao",
+      "Jie Sun",
+      "Yunze Wu",
+      "Pengfei Liu"
+    ],
+    "published": "2026-01-26",
+    "categories": [
+      "cs.SE",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.18418v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.18418v1",
+    "fetched_at": "2026-01-27T08:38:44.011161"
+  },
+  {
+    "id": "2601.18381v1",
+    "title": "AI Agent for Reverse-Engineering Legacy Finite-Difference Code and Translating to Devito",
+    "abstract": "To facilitate the transformation of legacy finite difference implementations into the Devito environment, this study develops an integrated AI agent framework. Retrieval-Augmented Generation (RAG) and open-source Large Language Models are combined through multi-stage iterative workflows in the system's hybrid LangGraph architecture. The agent constructs an extensive Devito knowledge graph through document parsing, structure-aware segmentation, extraction of entity relationships, and Leiden-based community detection. GraphRAG optimisation enhances query performance across semantic communities that include seismic wave simulation, computational fluid dynamics, and performance tuning libraries. A reverse engineering component derives three-level query strategies for RAG retrieval through static analysis of Fortran source code. To deliver precise contextual information for language model guidance, the multi-stage retrieval pipeline performs parallel searching, concept expansion, community-scale retrieval, and semantic similarity analysis. Code synthesis is governed by Pydantic-based constraints to guarantee structured outputs and reliability. A comprehensive validation framework integrates conventional static analysis with the G-Eval approach, covering execution correctness, structural soundness, mathematical consistency, and API compliance. The overall agent workflow is implemented on the LangGraph framework and adopts concurrent processing to support quality-based iterative refinement and state-aware dynamic routing. The principal contribution lies in the incorporation of feedback mechanisms motivated by reinforcement learning, enabling a transition from static code translation toward dynamic and adaptive analytical behavior.",
+    "authors": [
+      "Yinghan Hou",
+      "Zongyou Yang"
+    ],
+    "published": "2026-01-26",
+    "categories": [
+      "cs.AI",
+      "cs.SE"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.18381v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.18381v1",
+    "fetched_at": "2026-01-27T08:38:44.011185"
+  },
+  {
+    "id": "2601.18352v1",
+    "title": "Code over Words: Overcoming Semantic Inertia via Code-Grounded Reasoning",
+    "abstract": "LLMs struggle with Semantic Inertia: the inability to inhibit pre-trained priors (e.g., \"Lava is Dangerous\") when dynamic, in-context rules contradict them. We probe this phenomenon using Baba Is You, where physical laws are mutable text rules, enabling precise evaluation of models' ability to override learned priors when rules change. We quantatively observe that larger models can exhibit inverse scaling: they perform worse than smaller models when natural language reasoning requires suppressing pre-trained associations (e.g., accepting \"Lava is Safe\"). Our analysis attributes this to natural language encoding, which entangles descriptive semantics and logical rules, leading to persistent hallucinations of familiar physics despite explicit contradictory rules. Here we show that representing dynamics as executable code, rather than descriptive text, reverses this trend and enables effective prior inhibition. We introduce Code-Grounded Vistas (LCV), which fine-tunes models on counterfactual pairs and identifies states with contradictory rules, thereby forcing attention to logical constraints rather than visual semantics. This training-time approach outperforms expensive inference-time search methods in both efficiency and accuracy. Our results demonstrate that representation fundamentally determines whether scaling improves or impairs contextual reasoning. This challenges the assumption that larger models are universally better, with implications for domains that require dynamic overriding of learned priors.",
+    "authors": [
+      "Manjie Xu",
+      "Isabella Yin",
+      "Xinyi Tu",
+      "Chi Zhang",
+      "Yixin Zhu"
+    ],
+    "published": "2026-01-26",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.18352v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.18352v1",
+    "fetched_at": "2026-01-27T08:38:44.011210"
+  },
+  {
+    "id": "2601.18320v1",
+    "title": "MultiVis-Agent: A Multi-Agent Framework with Logic Rules for Reliable and Comprehensive Cross-Modal Data Visualization",
+    "abstract": "Real-world visualization tasks involve complex, multi-modal requirements that extend beyond simple text-to-chart generation, requiring reference images, code examples, and iterative refinement. Current systems exhibit fundamental limitations: single-modality input, one-shot generation, and rigid workflows. While LLM-based approaches show potential for these complex requirements, they introduce reliability challenges including catastrophic failures and infinite loop susceptibility. To address this gap, we propose MultiVis-Agent, a logic rule-enhanced multi-agent framework for reliable multi-modal and multi-scenario visualization generation. Our approach introduces a four-layer logic rule framework that provides mathematical guarantees for system reliability while maintaining flexibility. Unlike traditional rule-based systems, our logic rules are mathematical constraints that guide LLM reasoning rather than replacing it. We formalize the MultiVis task spanning four scenarios from basic generation to iterative refinement, and develop MultiVis-Bench, a benchmark with over 1,000 cases for multi-modal visualization evaluation. Extensive experiments demonstrate that our approach achieves 75.63% visualization score on challenging tasks, significantly outperforming baselines (57.54-62.79%), with task completion rates of 99.58% and code execution success rates of 94.56% (vs. 74.48% and 65.10% without logic rules), successfully addressing both complexity and reliability challenges in automated visualization generation.",
+    "authors": [
+      "Jinwei Lu",
+      "Yuanfeng Song",
+      "Chen Zhang",
+      "Raymond Chi-Wing Wong"
+    ],
+    "published": "2026-01-26",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.DB"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.18320v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.18320v1",
+    "fetched_at": "2026-01-27T08:38:44.011233"
+  },
+  {
+    "id": "2601.18308v1",
+    "title": "A Generative AI-Driven Reliability Layer for Action-Oriented Disaster Resilience",
+    "abstract": "As climate-related hazards intensify, conventional early warning systems (EWS) disseminate alerts rapidly but often fail to trigger timely protective actions, leading to preventable losses and inequities. We introduce Climate RADAR (Risk-Aware, Dynamic, and Action Recommendation system), a generative AI-based reliability layer that reframes disaster communication from alerts delivered to actions executed. It integrates meteorological, hydrological, vulnerability, and social data into a composite risk index and employs guardrail-embedded large language models (LLMs) to deliver personalized recommendations across citizen, volunteer, and municipal interfaces. Evaluation through simulations, user studies, and a municipal pilot shows improved outcomes, including higher protective action execution, reduced response latency, and increased usability and trust. By combining predictive analytics, behavioral science, and responsible AI, Climate RADAR advances people-centered, transparent, and equitable early warning systems, offering practical pathways toward compliance-ready disaster resilience infrastructures.",
+    "authors": [
+      "Geunsik Lim"
+    ],
+    "published": "2026-01-26",
+    "categories": [
+      "cs.AI",
+      "cs.SI",
+      "eess.SY"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.18308v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.18308v1",
+    "fetched_at": "2026-01-27T08:38:44.011251"
+  },
+  {
+    "id": "2601.18226v1",
+    "title": "Yunjue Agent Tech Report: A Fully Reproducible, Zero-Start In-Situ Self-Evolving Agent System for Open-Ended Tasks",
+    "abstract": "Conventional agent systems often struggle in open-ended environments where task distributions continuously drift and external supervision is scarce. Their reliance on static toolsets or offline training lags behind these dynamics, leaving the system's capability boundaries rigid and unknown. To address this, we propose the In-Situ Self-Evolving paradigm. This approach treats sequential task interactions as a continuous stream of experience, enabling the system to distill short-term execution feedback into long-term, reusable capabilities without access to ground-truth labels. Within this framework, we identify tool evolution as the critical pathway for capability expansion, which provides verifiable, binary feedback signals. Within this framework, we develop Yunjue Agent, a system that iteratively synthesizes, optimizes, and reuses tools to navigate emerging challenges. To optimize evolutionary efficiency, we further introduce a Parallel Batch Evolution strategy. Empirical evaluations across five diverse benchmarks under a zero-start setting demonstrate significant performance gains over proprietary baselines. Additionally, complementary warm-start evaluations confirm that the accumulated general knowledge can be seamlessly transferred to novel domains. Finally, we propose a novel metric to monitor evolution convergence, serving as a function analogous to training loss in conventional optimization. We open-source our codebase, system traces, and evolved tools to facilitate future research in resilient, self-evolving intelligence.",
+    "authors": [
+      "Haotian Li",
+      "Shijun Yang",
+      "Weizhen Qi",
+      "Silei Zhao",
+      "Rui Hua",
+      "Mingzhu Song",
+      "Xiaojian Yang",
+      "Chao Peng"
+    ],
+    "published": "2026-01-26",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.18226v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.18226v1",
+    "fetched_at": "2026-01-27T08:38:44.011281"
+  },
+  {
+    "id": "2601.18202v1",
+    "title": "SAGE: Steerable Agentic Data Generation for Deep Search with Execution Feedback",
+    "abstract": "Deep search agents, which aim to answer complex questions requiring reasoning across multiple documents, can significantly speed up the information-seeking process. Collecting human annotations for this application is prohibitively expensive due to long and complex exploration trajectories. We propose an agentic pipeline that automatically generates high quality, difficulty-controlled deep search question-answer pairs for a given corpus and a target difficulty level. Our pipeline, SAGE, consists of a data generator which proposes QA pairs and a search agent which attempts to solve the generated question and provide execution feedback for the data generator. The two components interact over multiple rounds to iteratively refine the question-answer pairs until they satisfy the target difficulty level. Our intrinsic evaluation shows SAGE generates questions that require diverse reasoning strategies, while significantly increases the correctness and difficulty of the generated data. Our extrinsic evaluation demonstrates up to 23% relative performance gain on popular deep search benchmarks by training deep search agents with our synthetic data. Additional experiments show that agents trained on our data can adapt from fixed-corpus retrieval to Google Search at inference time, without further training.",
+    "authors": [
+      "Fangyuan Xu",
+      "Rujun Han",
+      "Yanfei Chen",
+      "Zifeng Wang",
+      "I-Hung Hsu",
+      "Jun Yan",
+      "Vishy Tirumalashetty",
+      "Eunsol Choi",
+      "Tomas Pfister",
+      "Chen-Yu Lee"
+    ],
+    "published": "2026-01-26",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.18202v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.18202v1",
+    "fetched_at": "2026-01-27T08:38:44.011331"
+  },
+  {
+    "id": "2601.18197v1",
+    "title": "GAIA: A Data Flywheel System for Training GUI Test-Time Scaling Critic Models",
+    "abstract": "While Large Vision-Language Models (LVLMs) have significantly advanced GUI agents' capabilities in parsing textual instructions, interpreting screen content, and executing tasks, a critical challenge persists: the irreversibility of agent operations, where a single erroneous action can trigger catastrophic deviations. To address this, we propose the GUI Action Critic's Data Flywheel System (GAIA), a training framework that enables the models to have iterative critic capabilities, which are used to improve the Test-Time Scaling (TTS) of basic GUI agents' performance. Specifically, we train an Intuitive Critic Model (ICM) using positive and negative action examples from a base agent first. This critic evaluates the immediate correctness of the agent's intended actions, thereby selecting operations with higher success probability. Then, the initial critic guides agent actions to collect refined positive/negative samples, initiating the self-improving cycle. The augmented data then trains a second-round critic with enhanced discernment capability. We conduct experiments on various datasets and demonstrate that the proposed ICM can improve the test-time performance of various closed-source and open-source models, and the performance can be gradually improved as the data is recycled. The code and dataset will be publicly released.",
+    "authors": [
+      "Shaokang Wang",
+      "Pei Fu",
+      "Ruoceng Zhang",
+      "Shaojie Zhang",
+      "Xiuwen Xi",
+      "Jiahui Yang",
+      "Bin Qin",
+      "Ying Huang",
+      "Zhenbo Luo",
+      "Jian Luan"
+    ],
+    "published": "2026-01-26",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.18197v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.18197v1",
+    "fetched_at": "2026-01-27T08:38:44.011365"
+  },
+  {
+    "id": "2601.18188v1",
+    "title": "\\textsc{NaVIDA}: Vision-Language Navigation with Inverse Dynamics Augmentation",
+    "abstract": "Vision-and-Language Navigation (VLN) requires agents to interpret natural language instructions and act coherently in visually rich environments. However, most existing methods rely on reactive state-action mappings without explicitly modeling how actions causally transform subsequent visual observations. Lacking such vision-action causality, agents cannot anticipate the visual changes induced by its own actions, leading to unstable behaviors, weak generalization, and cumulative error along trajectory. To address these issues, we introduce \\textsc{NaVIDA} (\\textbf{Nav}igation with \\textbf{I}nverse \\textbf{D}ynamics \\textbf{A}ugmentation), a unified VLN framework that couples policy learning with action-grounded visual dynamics and adaptive execution. \\textsc{NaVIDA} augments training with chunk-based inverse-dynamics supervision to learn causal relationship between visual changes and corresponding actions. To structure this supervision and extend the effective planning range, \\textsc{NaVIDA} employs hierarchical probabilistic action chunking (HPAC), which organizes trajectories into multi-step chunks and provides discriminative, longer-range visual-change cues. To further curb error accumulation and stabilize behavior at inference, an entropy-guided mechanism adaptively sets the execution horizon of action chunks. Extensive experiments show that \\textsc{NaVIDA} achieves superior navigation performance compared to state-of-the-art methods with fewer parameters (3B vs. 8B). Real-world robot evaluations further validate the practical feasibility and effectiveness of our approach. Code and data will be available upon acceptance.",
+    "authors": [
+      "Weiye Zhu",
+      "Zekai Zhang",
+      "Xiangchen Wang",
+      "Hewei Pan",
+      "Teng Wang",
+      "Tiantian Geng",
+      "Rongtao Xu",
+      "Feng Zheng"
+    ],
+    "published": "2026-01-26",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.18188v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.18188v1",
+    "fetched_at": "2026-01-27T08:38:44.011394"
+  },
+  {
+    "id": "2601.18119v1",
+    "title": "Beyond Text-to-SQL: Can LLMs Really Debug Enterprise ETL SQL?",
+    "abstract": "SQL is central to enterprise data engineering, yet generating fully correct SQL code in a single attempt remains difficult, even for experienced developers and advanced text-to-SQL LLMs, often requiring multiple debugging iterations. We introduce OurBench, the first benchmark for enterprise-level SQL reasoning and debugging. Our benchmark is built on two key innovations: (1) an automated construction workflow that uses reverse engineering to systematically inject realistic bugs into large-scale SQL code, enabling scalable and diverse benchmark generation; and (2) an execution-free evaluation framework tailored to enterprise settings, providing fast, accurate, and resource-efficient assessment.   OurBench comprises 469 OurBenchSyn queries featuring syntax errors with explicit error messages, and 516 OurBenchSem queries targeting semantic errors in which the code fails to meet user intent. The queries are highly complex, averaging over 140 lines and featuring deep and wide abstract syntax trees.   Evaluation of nearly 30 LLMs reveals a substantial performance gap: the best-performing model, Claude-4-Sonnet, achieves only 36.46 percent accuracy on OurBenchSyn and 32.17 percent on OurBenchSem, while most models score below 20 percent. We further explore four solution strategies, identify key challenges, and outline promising directions for enterprise SQL debugging with LLMs.",
+    "authors": [
+      "Jing Ye",
+      "Yiwen Duan",
+      "Yonghong Yu",
+      "Victor Ma",
+      "Yang Gao",
+      "Xing Chen"
+    ],
+    "published": "2026-01-26",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.18119v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.18119v1",
+    "fetched_at": "2026-01-27T08:38:44.011421"
+  },
+  {
+    "id": "2601.18089v1",
+    "title": "LatentMoE: Toward Optimal Accuracy per FLOP and Parameter in Mixture of Experts",
+    "abstract": "Mixture of Experts (MoEs) have become a central component of many state-of-the-art open-source and proprietary large language models. Despite their widespread adoption, it remains unclear how close existing MoE architectures are to optimal with respect to inference cost, as measured by accuracy per floating-point operation and per parameter. In this work, we revisit MoE design from a hardware-software co-design perspective, grounded in empirical and theoretical considerations. We characterize key performance bottlenecks across diverse deployment regimes, spanning offline high-throughput execution and online, latency-critical inference. Guided by these insights, we introduce LatentMoE, a new model architecture resulting from systematic design exploration and optimized for maximal accuracy per unit of compute. Empirical design space exploration at scales of up to 95B parameters and over a 1T-token training horizon, together with supporting theoretical analysis, shows that LatentMoE consistently outperforms standard MoE architectures in terms of accuracy per FLOP and per parameter. Given its strong performance, the LatentMoE architecture has been adopted by the flagship Nemotron-3 Super and Ultra models and scaled to substantially larger regimes, including longer token horizons and larger model sizes, as reported in Nvidia et al. (arXiv:2512.20856).",
+    "authors": [
+      "Venmugil Elango",
+      "Nidhi Bhatia",
+      "Roger Waleffe",
+      "Rasoul Shafipour",
+      "Tomer Asida",
+      "Abhinav Khattar",
+      "Nave Assaf",
+      "Maximilian Golub",
+      "Joey Guman",
+      "Tiyasa Mitra",
+      "Ritchie Zhao",
+      "Ritika Borkar",
+      "Ran Zilberstein",
+      "Mostofa Patwary",
+      "Mohammad Shoeybi",
+      "Bita Rouhani"
+    ],
+    "published": "2026-01-26",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.18089v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.18089v1",
+    "fetched_at": "2026-01-27T08:38:44.011464"
+  }
+]
