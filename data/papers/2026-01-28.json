@@ -1,0 +1,536 @@
+[
+  {
+    "id": "2601.19511v1",
+    "title": "P-Sensitive Functions and Localizations",
+    "abstract": "This paper assumes a robust stochastic model where a set $\\mathcal{P}$ of probability measures replaces the single probability measure of dominated models. We introduce and study $\\mathcal{P}$-sensitive functions defined on robust function spaces of random variables. We show that $\\mathcal{P}$-sensitive functions are precisely those that admit a representation via so-called functional localization. The theory is applied to solving robust optimization problems, to convex risk measures, and to the study of no arbitrage in robust one-period financial models.",
+    "authors": [
+      "Johannes Langner",
+      "Gregor Svindland"
+    ],
+    "published": "2026-01-27",
+    "categories": [
+      "math.PR",
+      "math.FA",
+      "math.OC",
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.19511v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.19511v1",
+    "fetched_at": "2026-01-28T08:37:39.356016"
+  },
+  {
+    "id": "2601.19504v1",
+    "title": "Generating Alpha: A Hybrid AI-Driven Trading System Integrating Technical Analysis, Machine Learning and Financial Sentiment for Regime-Adaptive Equity Strategies",
+    "abstract": "The intricate behavior patterns of financial markets are influenced by fundamental, technical, and psychological factors. During times of high volatility and regime shifts causes many traditional strategies like trend-following or mean-reversion to fail. This paper proposes a hybrid AI-based trading strategy that combines (1) trend-following and directional momentum capture via EMA and MACD, (2) detection of price normalization through mean-reversion using RSI and Bollinger Bands, (3) market psychological interpretation through sentiment analysis using FinBERT, (4) signal generation through machine learning using XGBoost and (5)dynamically adjusting exposure with market regime filtering based on volatility and return environments. The system achieved a final portfolio value of $235,492.83, yielding a return of 135.49% on initial investment over a period of 24 months. The hybrid model outperformed major benchmark indexes like S&P 500 and NASDAQ-100 over the same period showing strong flexibility and lower downside risk with superior profits validating the use of multi-modal AI in algorithmic trading.",
+    "authors": [
+      "Varun Narayan Kannan Pillai",
+      "Akshay Ajith",
+      "Sumesh K J"
+    ],
+    "published": "2026-01-27",
+    "categories": [
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.19504v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.19504v1",
+    "fetched_at": "2026-01-28T08:37:39.356053"
+  },
+  {
+    "id": "2601.19369v1",
+    "title": "Directional Liquidity and Geometric Shear in Pregeometric Order Books",
+    "abstract": "We introduce a structural framework for the geometry of financial order books in which liquidity, supply, and demand are treated as emergent observables rather than primitive market variables. The market is modeled as a relational substrate without assumed metric, temporal, or price coordinates. Observable quantities arise only through observation, implemented here as a reduction of relational degrees of freedom followed by a low-dimensional spectral projection. A one-dimensional projection induces a price-like coordinate and a projected liquidity density around the mid price, from which bid and ask sides emerge as two complementary restrictions. We show that directional liquidity imbalances decompose naturally into a rigid drift of the projected density and a geometric shear mode that deforms the bid--ask structure without inducing price motion. Under a minimal single-scale hypothesis, the shear geometry constrains the projected liquidity to a gamma-like functional form, appearing as an integrated-gamma profile in discrete data. Empirical analysis of high-frequency Level~II data across multiple U.S. equities confirms this geometry and shows that it outperforms standard alternative cumulative models under explicit model comparison and residual diagnostics.",
+    "authors": [
+      "João P. da Cruz"
+    ],
+    "published": "2026-01-27",
+    "categories": [
+      "q-fin.TR",
+      "physics.soc-ph"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.19369v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.19369v1",
+    "fetched_at": "2026-01-28T08:37:39.356075"
+  },
+  {
+    "id": "2601.19321v1",
+    "title": "Predictive Accuracy versus Interpretability in Energy Markets: A Copula-Enhanced TVP-SVAR Analysis",
+    "abstract": "This paper investigates whether structural econometric models can rival machine learning in forecasting energy--macro dynamics while retaining causal interpretability. Using monthly data from 1999 to 2025, we develop a unified framework that integrates Time-Varying Parameter Structural VARs (TVP-SVAR) with advanced dependence structures, including DCC-GARCH, t-copulas, and mixed Clayton--Frank--Gumbel copulas. These models are empirically evaluated against leading machine learning techniques Gaussian Process Regression (GPR), Artificial Neural Networks, Random Forests, and Support Vector Regression across seven macro-financial and energy variables, with Brent crude oil as the central asset. The findings reveal three major insights. First, TVP-SVAR consistently outperforms standard VAR models, confirming structural instability in energy transmission channels. Second, copula-based extensions capture non-linear and tail dependence more effectively than symmetric DCC models, particularly during periods of macroeconomic stress. Third, despite their methodological differences, copula-enhanced econometric models and GPR achieve statistically equivalent predictive accuracy (t-test p = 0.8444). However, only the econometric approach provides interpretable impulse responses, regime shifts, and tail-risk diagnostics. We conclude that machine learning can replicate predictive performance but cannot substitute the explanatory power of structural econometrics. This synthesis offers a pathway where AI accuracy and economic interpretability jointly inform energy policy and risk management.",
+    "authors": [
+      "Fredy Pokou",
+      "Jules Sadefo Kamdem",
+      "Kpante Emmanuel Gnandi"
+    ],
+    "published": "2026-01-27",
+    "categories": [
+      "q-fin.CP",
+      "q-fin.ST",
+      "stat.ML"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.19321v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.19321v1",
+    "fetched_at": "2026-01-28T08:37:39.356099"
+  },
+  {
+    "id": "2601.18991v1",
+    "title": "Who Restores the Peg? A Mean-Field Game Approach to Model Stablecoin Market Dynamics",
+    "abstract": "USDC and USDT are the dominant stablecoins pegged to \\$1 with a total market capitalization of over \\$300B and rising. Stablecoins make dollar value globally accessible with secure transfer and settlement. Yet in practice, these stablecoins experience periods of stress and de-pegging from their \\$1 target, posing significant systemic risks. The behavior of market participants during these stress events and the collective actions that either restore or break the peg are not well understood. This paper addresses the question: who restores the peg? We develop a dynamic, agent-based mean-field game framework for fiat-collateralized stablecoins, in which a large population of arbitrageurs and retail traders strategically interacts across explicit primary (mint/redeem) and secondary (exchange) markets during a de-peg episode. The key advantage of this equilibrium formulation is that it endogenously maps market frictions into a market-clearing price path and implied net order flows, allowing us to attribute peg-reverting pressure by channel and to stress-test when a given mechanism becomes insufficient for recovery. Using three historical de-peg events, we show that the calibrated equilibrium reproduces observed recovery half-lives and yields an order flow decomposition in which system-wide stress is predominantly stabilized by primary-market arbitrage, whereas episodes with impaired primary redemption require a joint recovery via both primary and secondary markets. Finally, a quantitative sensitivity analysis of primary-rail frictions identifies a non-linear breakdown threshold. Beyond this point, secondary-market liquidity acts mainly as a second-order amplifier around this primary-market bottleneck.",
+    "authors": [
+      "Hardhik Mohanty",
+      "Bhaskar Krishnamachari"
+    ],
+    "published": "2026-01-26",
+    "categories": [
+      "q-fin.TR",
+      "cs.GT",
+      "econ.GN"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.18991v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.18991v1",
+    "fetched_at": "2026-01-28T08:37:39.356120"
+  },
+  {
+    "id": "2601.18815v1",
+    "title": "Prediction Markets as Bayesian Inverse Problems: Uncertainty Quantification, Identifiability, and Information Gain from Price-Volume Histories under Latent Types",
+    "abstract": "Prediction markets are often described as mechanisms that ``aggregate information'' into prices, yet the mapping from dispersed private information to observed market histories is typically noisy, endogenous, and shaped by heterogeneous and strategic participation. This paper formulates prediction markets as Bayesian inverse problems in which the unknown event outcome \\(Y\\in\\{0,1\\}\\) is inferred from an observed history of market-implied probabilities and traded volumes. We introduce a mechanism-agnostic observation model in log-odds space in which price increments conditional on volume arise from a latent mixture of trader types. The resulting likelihood class encompasses informed and uninformed trading, heavy-tailed microstructure noise, and adversarial or manipulative flow, while requiring only price and volume as observables.   Within this framework we define posterior uncertainty quantification for \\(Y\\), provide identifiability and well-posedness criteria in terms of Kullback--Leibler separation between outcome-conditional increment laws, and derive posterior concentration statements and finite-sample error bounds under general regularity assumptions. We further study stability of posterior odds to perturbations of the observed price--volume path and define realized and expected information gain via the posterior-vs-prior KL divergence and mutual information. The inverse-problem formulation yields explicit diagnostics for regimes in which market histories are informative and stable versus regimes in which inference is ill-posed due to type-composition confounding or outcome--nuisance symmetries.   Extensive experiments on synthetic data validate our theoretical predictions regarding posterior concentration rates and identifiability thresholds.",
+    "authors": [
+      "Juan Pablo Madrigal-Cianci",
+      "Camilo Monsalve Maya",
+      "Lachlan Breakey"
+    ],
+    "published": "2026-01-22",
+    "categories": [
+      "q-fin.MF",
+      "stat.ML"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.18815v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.18815v1",
+    "fetched_at": "2026-01-28T08:37:39.356381"
+  },
+  {
+    "id": "2601.19833v1",
+    "title": "A Multi-directional Meta-Learning Framework for Class-Generalizable Anomaly Detection",
+    "abstract": "In this paper, we address the problem of class-generalizable anomaly detection, where the objective is to develop a unified model by focusing our learning on the available normal data and a small amount of anomaly data in order to detect the completely unseen anomalies, also referred to as the out-of-distribution (OOD) classes. Adding to this challenge is the fact that the anomaly data is rare and costly to label. To achieve this, we propose a multidirectional meta-learning algorithm -- at the inner level, the model aims to learn the manifold of the normal data (representation); at the outer level, the model is meta-tuned with a few anomaly samples to maximize the softmax confidence margin between the normal and anomaly samples (decision surface calibration), treating normals as in-distribution (ID) and anomalies as out-of-distribution (OOD). By iteratively repeating this process over multiple episodes of predominantly normal and a small number of anomaly samples, we realize a multidirectional meta-learning framework. This two-level optimization, enhanced by multidirectional training, enables stronger generalization to unseen anomaly classes.",
+    "authors": [
+      "Padmaksha Roy",
+      "Lamine Mili",
+      "Almuatazbellah Boker"
+    ],
+    "published": "2026-01-27",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.19833v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.19833v1",
+    "fetched_at": "2026-01-28T08:37:51.682180"
+  },
+  {
+    "id": "2601.19578v1",
+    "title": "Yunque DeepResearch Technical Report",
+    "abstract": "Deep research has emerged as a transformative capability for autonomous agents, empowering Large Language Models to navigate complex, open-ended tasks. However, realizing its full potential is hindered by critical limitations, including escalating contextual noise in long-horizon tasks, fragility leading to cascading errors, and a lack of modular extensibility. To address these challenges, we introduce Yunque DeepResearch, a hierarchical, modular, and robust framework. The architecture is characterized by three key components: (1) a centralized Multi-Agent Orchestration System that routes subtasks to an Atomic Capability Pool of tools and specialized sub-agents; (2) a Dynamic Context Management mechanism that structures completed sub-goals into semantic summaries to mitigate information overload; and (3) a proactive Supervisor Module that ensures resilience through active anomaly detection and context pruning. Yunque DeepResearch achieves state-of-the-art performance across a range of agentic deep research benchmarks, including GAIA, BrowseComp, BrowseComp-ZH, and Humanity's Last Exam. We open-source the framework, reproducible implementations, and application cases to empower the community.",
+    "authors": [
+      "Yuxuan Cai",
+      "Xinyi Lai",
+      "Peng Yuan",
+      "Weiting Liu",
+      "Huajian Li",
+      "Mingda Li",
+      "Xinghua Wang",
+      "Shengxie Zheng",
+      "Yanchao Hao",
+      "Yuyang Yin",
+      "Zheng Wei"
+    ],
+    "published": "2026-01-27",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.19578v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.19578v1",
+    "fetched_at": "2026-01-28T08:37:51.682225"
+  },
+  {
+    "id": "2601.19255v1",
+    "title": "LLM-Assisted Logic Rule Learning: Scaling Human Expertise for Time Series Anomaly Detection",
+    "abstract": "Time series anomaly detection is critical for supply chain management to take proactive operations, but faces challenges: classical unsupervised anomaly detection based on exploiting data patterns often yields results misaligned with business requirements and domain knowledge, while manual expert analysis cannot scale to millions of products in the supply chain. We propose a framework that leverages large language models (LLMs) to systematically encode human expertise into interpretable, logic-based rules for detecting anomaly patterns in supply chain time series data. Our approach operates in three stages: 1) LLM-based labeling of training data instructed by domain knowledge, 2) automated generation and iterative improvements of symbolic rules through LLM-driven optimization, and 3) rule augmentation with business-relevant anomaly categories supported by LLMs to enhance interpretability. The experiment results showcase that our approach outperforms the unsupervised learning methods in both detection accuracy and interpretability. Furthermore, compared to direct LLM deployment for time series anomaly detection, our approach provides consistent, deterministic results with low computational latency and cost, making it ideal for production deployment. The proposed framework thus demonstrates how LLMs can bridge the gap between scalable automation and expert-driven decision-making in operational settings.",
+    "authors": [
+      "Haoting Zhang",
+      "Shekhar Jain"
+    ],
+    "published": "2026-01-27",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.19255v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.19255v1",
+    "fetched_at": "2026-01-28T08:37:51.682247"
+  },
+  {
+    "id": "2601.19102v1",
+    "title": "OWLEYE: Zero-Shot Learner for Cross-Domain Graph Data Anomaly Detection",
+    "abstract": "Graph data is informative to represent complex relationships such as transactions between accounts, communications between devices, and dependencies among machines or processes. Correspondingly, graph anomaly detection (GAD) plays a critical role in identifying anomalies across various domains, including finance, cybersecurity, manufacturing, etc. Facing the large-volume and multi-domain graph data, nascent efforts attempt to develop foundational generalist models capable of detecting anomalies in unseen graphs without retraining. To the best of our knowledge, the different feature semantics and dimensions of cross-domain graph data heavily hinder the development of the graph foundation model, leaving further in-depth continual learning and inference capabilities a quite open problem. Hence, we propose OWLEYE, a novel zero-shot GAD framework that learns transferable patterns of normal behavior from multiple graphs, with a threefold contribution. First, OWLEYE proposes a cross-domain feature alignment module to harmonize feature distributions, which preserves domain-specific semantics during alignment. Second, with aligned features, to enable continuous learning capabilities, OWLEYE designs the multi-domain multi-pattern dictionary learning to encode shared structural and attribute-based patterns. Third, for achieving the in-context learning ability, OWLEYE develops a truncated attention-based reconstruction module to robustly detect anomalies without requiring labeled data for unseen graph-structured data. Extensive experiments on real-world datasets demonstrate that OWLEYE achieves superior performance and generalizability compared to state-of-the-art baselines, establishing a strong foundation for scalable and label-efficient anomaly detection.",
+    "authors": [
+      "Lecheng Zheng",
+      "Dongqi Fu",
+      "Zihao Li",
+      "Jingrui He"
+    ],
+    "published": "2026-01-27",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.19102v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.19102v1",
+    "fetched_at": "2026-01-28T08:37:51.682272"
+  },
+  {
+    "id": "2601.19026v1",
+    "title": "Is Finer Better? The Limits of Microscaling Formats in Large Language Models",
+    "abstract": "Microscaling data formats leverage per-block tensor quantization to enable aggressive model compression with limited loss in accuracy. Unlocking their potential for efficient training and inference necessitates hardware-friendly implementations that handle matrix multiplications in a native format and adopt efficient error-mitigation strategies. Herein, we report the emergence of a surprising behavior associated with microscaling quantization, whereas the output of a quantized model degrades as block size is decreased below a given threshold. This behavior clashes with the expectation that a smaller block size should allow for a better representation of the tensor elements. We investigate this phenomenon both experimentally and theoretically, decoupling the sources of quantization error behind it. Experimentally, we analyze the distributions of several Large Language Models and identify the conditions driving the anomalous behavior. Theoretically, we lay down a framework showing remarkable agreement with experimental data from pretrained model distributions and ideal ones. Overall, we show that the anomaly is driven by the interplay between narrow tensor distributions and the limited dynamic range of the quantized scales. Based on these insights, we propose the use of FP8 unsigned E5M3 (UE5M3) as a novel hardware-friendly format for the scales in FP4 microscaling data types. We demonstrate that UE5M3 achieves comparable performance to the conventional FP8 unsigned E4M3 scales while obviating the need of global scaling operations on weights and activations.",
+    "authors": [
+      "Andrea Fasoli",
+      "Monodeep Kar",
+      "Chi-Chun Liu",
+      "Swagath Venkataramani",
+      "Viji Srinivasan",
+      "Leland Chang",
+      "Naigang Wang"
+    ],
+    "published": "2026-01-26",
+    "categories": [
+      "cs.LG",
+      "cs.AR",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.19026v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.19026v1",
+    "fetched_at": "2026-01-28T08:37:51.682302"
+  },
+  {
+    "id": "2601.19017v1",
+    "title": "A Framework for Evaluating Faithfulness in Explainable AI for Machine Anomalous Sound Detection Using Frequency-Band Perturbation",
+    "abstract": "Explainable AI (XAI) is commonly applied to anomalous sound detection (ASD) models to identify which time-frequency regions of an audio signal contribute to an anomaly decision. However, most audio explanations rely on qualitative inspection of saliency maps, leaving open the question of whether these attributions accurately reflect the spectral cues the model uses. In this work, we introduce a new quantitative framework for evaluating XAI faithfulness in machine-sound analysis by directly linking attribution relevance to model behaviour through systematic frequency-band removal. This approach provides an objective measure of whether an XAI method for machine ASD correctly identifies frequency regions that influence an ASD model's predictions. By using four widely adopted methods, namely Integrated Gradients, Occlusion, Grad-CAM and SmoothGrad, we show that XAI techniques differ in reliability, with Occlusion demonstrating the strongest alignment with true model sensitivity and gradient-+based methods often failing to accurately capture spectral dependencies. The proposed framework offers a reproducible way to benchmark audio explanations and enables more trustworthy interpretation of spectrogram-based ASD systems.",
+    "authors": [
+      "Alexander Buck",
+      "Georgina Cosma",
+      "Iain Phillips",
+      "Paul Conway",
+      "Patrick Baker"
+    ],
+    "published": "2026-01-26",
+    "categories": [
+      "cs.SD",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.19017v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.19017v1",
+    "fetched_at": "2026-01-28T08:37:51.682328"
+  },
+  {
+    "id": "2601.18823v1",
+    "title": "VAE with Hyperspherical Coordinates: Improving Anomaly Detection from Hypervolume-Compressed Latent Space",
+    "abstract": "Variational autoencoders (VAE) encode data into lower-dimensional latent vectors before decoding those vectors back to data. Once trained, one can hope to detect out-of-distribution (abnormal) latent vectors, but several issues arise when the latent space is high dimensional. This includes an exponential growth of the hypervolume with the dimension, which severely affects the generative capacity of the VAE. In this paper, we draw insights from high dimensional statistics: in these regimes, the latent vectors of a standard VAE are distributed on the `equators' of a hypersphere, challenging the detection of anomalies. We propose to formulate the latent variables of a VAE using hyperspherical coordinates, which allows compressing the latent vectors towards a given direction on the hypersphere, thereby allowing for a more expressive approximate posterior. We show that this improves both the fully unsupervised and OOD anomaly detection ability of the VAE, achieving the best performance on the datasets we considered, outperforming existing methods. For the unsupervised and OOD modalities, respectively, these are: i) detecting unusual landscape from the Mars Rover camera and unusual Galaxies from ground based imagery (complex, real world datasets); ii) standard benchmarks like Cifar10 and subsets of ImageNet as the in-distribution (ID) class.",
+    "authors": [
+      "Alejandro Ascarate",
+      "Leo Lebrat",
+      "Rodrigo Santa Cruz",
+      "Clinton Fookes",
+      "Olivier Salvado"
+    ],
+    "published": "2026-01-25",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.18823v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.18823v1",
+    "fetched_at": "2026-01-28T08:37:51.682408"
+  },
+  {
+    "id": "2601.19752v1",
+    "title": "Agentic Design Patterns: A System-Theoretic Framework",
+    "abstract": "With the development of foundation model (FM), agentic AI systems are getting more attention, yet their inherent issues like hallucination and poor reasoning, coupled with the frequent ad-hoc nature of system design, lead to unreliable and brittle applications. Existing efforts to characterise agentic design patterns often lack a rigorous systems-theoretic foundation, resulting in high-level or convenience-based taxonomies that are difficult to implement. This paper addresses this gap by introducing a principled methodology for engineering robust AI agents. We propose two primary contributions: first, a novel system-theoretic framework that deconstructs an agentic AI system into five core, interacting functional subsystems: Reasoning & World Model, Perception & Grounding, Action Execution, Learning & Adaptation, and Inter-Agent Communication. Second, derived from this architecture and directly mapped to a comprehensive taxonomy of agentic challenges, we present a collection of 12 agentic design patterns. These patterns - categorised as Foundational, Cognitive & Decisional, Execution & Interaction, and Adaptive & Learning - offer reusable, structural solutions to recurring problems in agent design. The utility of the framework is demonstrated by a case study on the ReAct framework, showing how the proposed patterns can rectify systemic architectural deficiencies. This work provides a foundational language and a structured methodology to standardise agentic design communication among researchers and engineers, leading to more modular, understandable, and reliable autonomous systems.",
+    "authors": [
+      "Minh-Dung Dao",
+      "Quy Minh Le",
+      "Hoang Thanh Lam",
+      "Duc-Trong Le",
+      "Quoc-Viet Pham",
+      "Barry O'Sullivan",
+      "Hoang D. Nguyen"
+    ],
+    "published": "2026-01-27",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.19752v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.19752v1",
+    "fetched_at": "2026-01-28T08:38:19.373730"
+  },
+  {
+    "id": "2601.19607v1",
+    "title": "ComAgent: Multi-LLM based Agentic AI Empowered Intelligent Wireless Networks",
+    "abstract": "Emerging 6G networks rely on complex cross-layer optimization, yet manually translating high-level intents into mathematical formulations remains a bottleneck. While Large Language Models (LLMs) offer promise, monolithic approaches often lack sufficient domain grounding, constraint awareness, and verification capabilities. To address this, we present ComAgent, a multi-LLM agentic AI framework. ComAgent employs a closed-loop Perception-Planning-Action-Reflection cycle, coordinating specialized agents for literature search, coding, and scoring to autonomously generate solver-ready formulations and reproducible simulations. By iteratively decomposing problems and self-correcting errors, the framework effectively bridges the gap between user intent and execution. Evaluations demonstrate that ComAgent achieves expert-comparable performance in complex beamforming optimization and outperforms monolithic LLMs across diverse wireless tasks, highlighting its potential for automating design in emerging wireless networks.",
+    "authors": [
+      "Haoyun Li",
+      "Ming Xiao",
+      "Kezhi Wang",
+      "Robert Schober",
+      "Dong In Kim",
+      "Yong Liang Guan"
+    ],
+    "published": "2026-01-27",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.19607v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.19607v1",
+    "fetched_at": "2026-01-28T08:38:19.373765"
+  },
+  {
+    "id": "2601.19568v1",
+    "title": "Learning Adaptive Parallel Execution for Efficient Code Localization",
+    "abstract": "Code localization constitutes a key bottleneck in automated software development pipelines. While concurrent tool execution can enhance discovery speed, current agents demonstrate a 34.9\\% redundant invocation rate, which negates parallelism benefits. We propose \\textbf{FuseSearch}, reformulating parallel code localization as a \\textbf{joint quality-efficiency optimization} task. Through defining \\textbf{tool efficiency} -- the ratio of unique information gain to invocation count -- we utilize a two-phase SFT and RL training approach for learning adaptive parallel strategies. Different from fixed-breadth approaches, FuseSearch dynamically modulates search breadth according to task context, evolving from exploration phases to refinement stages. Evaluated on SWE-bench Verified, FuseSearch-4B achieves SOTA-level performance (84.7\\% file-level and 56.4\\% function-level $F_1$ scores) with 93.6\\% speedup, utilizing 67.7\\% fewer turns and 68.9\\% fewer tokens. Results indicate that efficiency-aware training naturally improves quality through eliminating noisy redundant signals, enabling high-performance cost-effective localization agents.",
+    "authors": [
+      "Ke Xu",
+      "Siyang Xiao",
+      "Ming Liang",
+      "Yichen Yu",
+      "Zhixiang Wang",
+      "Jingxuan Xu",
+      "Dajun Chen",
+      "Wei Jiang",
+      "Yong Li"
+    ],
+    "published": "2026-01-27",
+    "categories": [
+      "cs.AI",
+      "cs.SE"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.19568v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.19568v1",
+    "fetched_at": "2026-01-28T08:38:19.373799"
+  },
+  {
+    "id": "2601.19510v1",
+    "title": "ALRM: Agentic LLM for Robotic Manipulation",
+    "abstract": "Large Language Models (LLMs) have recently empowered agentic frameworks to exhibit advanced reasoning and planning capabilities. However, their integration in robotic control pipelines remains limited in two aspects: (1) prior \\ac{llm}-based approaches often lack modular, agentic execution mechanisms, limiting their ability to plan, reflect on outcomes, and revise actions in a closed-loop manner; and (2) existing benchmarks for manipulation tasks focus on low-level control and do not systematically evaluate multistep reasoning and linguistic variation. In this paper, we propose Agentic LLM for Robot Manipulation (ALRM), an LLM-driven agentic framework for robotic manipulation. ALRM integrates policy generation with agentic execution through a ReAct-style reasoning loop, supporting two complementary modes: Code-asPolicy (CaP) for direct executable control code generation, and Tool-as-Policy (TaP) for iterative planning and tool-based action execution. To enable systematic evaluation, we also introduce a novel simulation benchmark comprising 56 tasks across multiple environments, capturing linguistically diverse instructions. Experiments with ten LLMs demonstrate that ALRM provides a scalable, interpretable, and modular approach for bridging natural language reasoning with reliable robotic execution. Results reveal Claude-4.1-Opus as the top closed-source model and Falcon-H1-7B as the top open-source model under CaP.",
+    "authors": [
+      "Vitor Gaboardi dos Santos",
+      "Ibrahim Khadraoui",
+      "Ibrahim Farhat",
+      "Hamza Yous",
+      "Samy Teffahi",
+      "Hakim Hacid"
+    ],
+    "published": "2026-01-27",
+    "categories": [
+      "cs.RO",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.19510v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.19510v1",
+    "fetched_at": "2026-01-28T08:38:19.373826"
+  },
+  {
+    "id": "2601.19367v1",
+    "title": "CHEHAB RL: Learning to Optimize Fully Homomorphic Encryption Computations",
+    "abstract": "Fully Homomorphic Encryption (FHE) enables computations directly on encrypted data, but its high computational cost remains a significant barrier. Writing efficient FHE code is a complex task requiring cryptographic expertise, and finding the optimal sequence of program transformations is often intractable. In this paper, we propose CHEHAB RL, a novel framework that leverages deep reinforcement learning (RL) to automate FHE code optimization. Instead of relying on predefined heuristics or combinatorial search, our method trains an RL agent to learn an effective policy for applying a sequence of rewriting rules to automatically vectorize scalar FHE code while reducing instruction latency and noise growth. The proposed approach supports the optimization of both structured and unstructured code. To train the agent, we synthesize a diverse dataset of computations using a large language model (LLM). We integrate our proposed approach into the CHEHAB FHE compiler and evaluate it on a suite of benchmarks, comparing its performance against Coyote, a state-of-the-art vectorizing FHE compiler. The results show that our approach generates code that is $5.3\\times$ faster in execution, accumulates $2.54\\times$ less noise, while the compilation process itself is $27.9\\times$ faster than Coyote (geometric means).",
+    "authors": [
+      "Bilel Sefsaf",
+      "Abderraouf Dandani",
+      "Abdessamed Seddiki",
+      "Arab Mohammed",
+      "Eduardo Chielle",
+      "Michail Maniatakos",
+      "Riyadh Baghdadi"
+    ],
+    "published": "2026-01-27",
+    "categories": [
+      "cs.CR",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.19367v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.19367v1",
+    "fetched_at": "2026-01-28T08:38:19.373854"
+  },
+  {
+    "id": "2601.19306v1",
+    "title": "Curiosity Driven Knowledge Retrieval for Mobile Agents",
+    "abstract": "Mobile agents have made progress toward reliable smartphone automation, yet performance in complex applications remains limited by incomplete knowledge and weak generalization to unseen environments. We introduce a curiosity driven knowledge retrieval framework that formalizes uncertainty during execution as a curiosity score. When this score exceeds a threshold, the system retrieves external information from documentation, code repositories, and historical trajectories. Retrieved content is organized into structured AppCards, which encode functional semantics, parameter conventions, interface mappings, and interaction patterns. During execution, an enhanced agent selectively integrates relevant AppCards into its reasoning process, thereby compensating for knowledge blind spots and improving planning reliability. Evaluation on the AndroidWorld benchmark shows consistent improvements across backbones, with an average gain of six percentage points and a new state of the art success rate of 88.8\\% when combined with GPT-5. Analysis indicates that AppCards are particularly effective for multi step and cross application tasks, while improvements depend on the backbone model. Case studies further confirm that AppCards reduce ambiguity, shorten exploration, and support stable execution trajectories. Task trajectories are publicly available at https://lisalsj.github.io/Droidrun-appcard/.",
+    "authors": [
+      "Sijia Li",
+      "Xiaoyu Tan",
+      "Shahir Ali",
+      "Niels Schmidt",
+      "Gengchen Ma",
+      "Xihe Qiu"
+    ],
+    "published": "2026-01-27",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.19306v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.19306v1",
+    "fetched_at": "2026-01-28T08:38:19.373884"
+  },
+  {
+    "id": "2601.19290v1",
+    "title": "MetaGen: Self-Evolving Roles and Topologies for Multi-Agent LLM Reasoning",
+    "abstract": "Large language models are increasingly deployed as multi-agent systems, where specialized roles communicate and collaborate through structured interactions to solve complex tasks that often exceed the capacity of a single agent. However, most existing systems still rely on a fixed role library and an execution-frozen interaction topology, a rigid design choice that frequently leads to task mismatch, prevents timely adaptation when new evidence emerges during reasoning, and further inflates inference cost. We introduce MetaGen, a training-free framework that adapts both the role space and the collaboration topology at inference time, without updating base model weights. MetaGen generates and rewrites query-conditioned role specifications to maintain a controllable dynamic role pool, then instantiates a constrained execution graph around a minimal backbone. During execution, it iteratively updates role prompts and adjusts structural decisions using lightweight feedback signals. Experiments on code generation and multi-step reasoning benchmarks show that MetaGen improves the accuracy and cost tradeoff over strong multi-agent baselines.",
+    "authors": [
+      "Yimeng Wang",
+      "Jiaxing Zhao",
+      "Hongbin Xie",
+      "Hexing Ma",
+      "Yuzhen Lei",
+      "Shuangxue Liu",
+      "Xuan Song",
+      "Zichen Zhang",
+      "Haoran Zhang"
+    ],
+    "published": "2026-01-27",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.19290v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.19290v1",
+    "fetched_at": "2026-01-28T08:38:19.373916"
+  },
+  {
+    "id": "2601.19204v1",
+    "title": "MATA: A Trainable Hierarchical Automaton System for Multi-Agent Visual Reasoning",
+    "abstract": "Recent vision-language models have strong perceptual ability but their implicit reasoning is hard to explain and easily generates hallucinations on complex queries. Compositional methods improve interpretability, but most rely on a single agent or hand-crafted pipeline and cannot decide when to collaborate across complementary agents or compete among overlapping ones. We introduce MATA (Multi-Agent hierarchical Trainable Automaton), a multi-agent system presented as a hierarchical finite-state automaton for visual reasoning whose top-level transitions are chosen by a trainable hyper agent. Each agent corresponds to a state in the hyper automaton, and runs a small rule-based sub-automaton for reliable micro-control. All agents read and write a shared memory, yielding transparent execution history. To supervise the hyper agent's transition policy, we build transition-trajectory trees and transform to memory-to-next-state pairs, forming the MATA-SFT-90K dataset for supervised finetuning (SFT). The finetuned LLM as the transition policy understands the query and the capacity of agents, and it can efficiently choose the optimal agent to solve the task. Across multiple visual reasoning benchmarks, MATA achieves the state-of-the-art results compared with monolithic and compositional baselines. The code and dataset are available at https://github.com/ControlNet/MATA.",
+    "authors": [
+      "Zhixi Cai",
+      "Fucai Ke",
+      "Kevin Leo",
+      "Sukai Huang",
+      "Maria Garcia de la Banda",
+      "Peter J. Stuckey",
+      "Hamid Rezatofighi"
+    ],
+    "published": "2026-01-27",
+    "categories": [
+      "cs.AI",
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.19204v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.19204v1",
+    "fetched_at": "2026-01-28T08:38:19.373944"
+  },
+  {
+    "id": "2601.19202v1",
+    "title": "Do Images Speak Louder than Words? Investigating the Effect of Textual Misinformation in VLMs",
+    "abstract": "Vision-Language Models (VLMs) have shown strong multimodal reasoning capabilities on Visual-Question-Answering (VQA) benchmarks. However, their robustness against textual misinformation remains under-explored. While existing research has studied the effect of misinformation in text-only domains, it is not clear how VLMs arbitrate between contradictory information from different modalities. To bridge the gap, we first propose the CONTEXT-VQA (i.e., Conflicting Text) dataset, consisting of image-question pairs together with systematically generated persuasive prompts that deliberately conflict with visual evidence. Then, a thorough evaluation framework is designed and executed to benchmark the susceptibility of various models to these conflicting multimodal inputs. Comprehensive experiments over 11 state-of-the-art VLMs reveal that these models are indeed vulnerable to misleading textual prompts, often overriding clear visual evidence in favor of the conflicting text, and show an average performance drop of over 48.2% after only one round of persuasive conversation. Our findings highlight a critical limitation in current VLMs and underscore the need for improved robustness against textual manipulation.",
+    "authors": [
+      "Chi Zhang",
+      "Wenxuan Ding",
+      "Jiale Liu",
+      "Mingrui Wu",
+      "Qingyun Wu",
+      "Ray Mooney"
+    ],
+    "published": "2026-01-27",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.19202v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.19202v1",
+    "fetched_at": "2026-01-28T08:38:19.373970"
+  },
+  {
+    "id": "2601.19199v1",
+    "title": "MAGNET: Towards Adaptive GUI Agents with Memory-Driven Knowledge Evolution",
+    "abstract": "Mobile GUI agents powered by large foundation models enable autonomous task execution, but frequent updates altering UI appearance and reorganizing workflows cause agents trained on historical data to fail. Despite surface changes, functional semantics and task intents remain fundamentally stable. Building on this insight, we introduce MAGNET, a memory-driven adaptive agent framework with dual-level memory: stationary memory linking diverse visual features to stable functional semantics for robust action grounding and procedural memory capturing stable task intents across varying workflows. We propose a dynamic memory evolution mechanism that continuously refines both memories by prioritizing frequently accessed knowledge. Online benchmark AndroidWorld evaluations show substantial improvements over baselines, while offline benchmarks confirm consistent gains under distribution shifts. These results validate that leveraging stable structures across interface changes improves agent performance and generalization in evolving software environments.",
+    "authors": [
+      "Libo Sun",
+      "Jiwen Zhang",
+      "Siyuan Wang",
+      "Zhongyu Wei"
+    ],
+    "published": "2026-01-27",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.19199v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.19199v1",
+    "fetched_at": "2026-01-28T08:38:19.373992"
+  },
+  {
+    "id": "2601.19193v1",
+    "title": "CoReTab: Improving Multimodal Table Understanding with Code-driven Reasoning",
+    "abstract": "Existing datasets for multimodal table understanding, such as MMTab, primarily provide short factual answers without explicit multi-step reasoning supervision. Models trained on these datasets often generate brief responses that offers insufficient accuracy and limited interpretability into how these models arrive at the final answer. We introduce CoReTab, a code-driven reasoning framework that produces scalable, interpretable, and automatically verifiable annotations by coupling multi-step reasoning with executable Python code. Using the CoReTab framework, we curate a dataset of 115K verified samples averaging 529 tokens per response and fine-tune open-source MLLMs through a three-stage pipeline. We evaluate the resulting model trained on CoReTab across 17 MMTab benchmarks spanning table question answering, fact verification, and table structure understanding. Our model achieves significant gains of +6.2%, +5.7%, and +25.6%, respectively, over MMTab-trained baselines, while producing transparent and verifiable reasoning traces. These results establish CoReTab as a robust and generalizable supervision framework for improving multi-step reasoning in multimodal table understanding.",
+    "authors": [
+      "Van-Quang Nguyen",
+      "Takayuki Okatani"
+    ],
+    "published": "2026-01-27",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.19193v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.19193v1",
+    "fetched_at": "2026-01-28T08:38:19.374011"
+  },
+  {
+    "id": "2601.19171v1",
+    "title": "Bridging Gulfs in UI Generation through Semantic Guidance",
+    "abstract": "While generative AI enables high-fidelity UI generation from text prompts, users struggle to articulate design intent and evaluate or refine results-creating gulfs of execution and evaluation. To understand the information needed for UI generation, we conducted a thematic analysis of UI prompting guidelines, identifying key design semantics and discovering that they are hierarchical and interdependent. Leveraging these findings, we developed a system that enables users to specify semantics, visualize relationships, and extract how semantics are reflected in generated UIs. By making semantics serve as an intermediate representation between human intent and AI output, our system bridges both gulfs by making requirements explicit and outcomes interpretable. A comparative user study suggests that our approach enhances users' perceived control over intent expression, outcome interpretation, and facilitates more predictable, iterative refinement. Our work demonstrates how explicit semantic representation enables systematic and explainable exploration of design possibilities in AI-driven UI design.",
+    "authors": [
+      "Seokhyeon Park",
+      "Soohyun Lee",
+      "Eugene Choi",
+      "Hyunwoo Kim",
+      "Minkyu Kweon",
+      "Yumin Song",
+      "Jinwook Seo"
+    ],
+    "published": "2026-01-27",
+    "categories": [
+      "cs.HC",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.19171v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.19171v1",
+    "fetched_at": "2026-01-28T08:38:19.374040"
+  },
+  {
+    "id": "2601.19151v1",
+    "title": "TS-Debate: Multimodal Collaborative Debate for Zero-Shot Time Series Reasoning",
+    "abstract": "Recent progress at the intersection of large language models (LLMs) and time series (TS) analysis has revealed both promise and fragility. While LLMs can reason over temporal structure given carefully engineered context, they often struggle with numeric fidelity, modality interference, and principled cross-modal integration. We present TS-Debate, a modality-specialized, collaborative multi-agent debate framework for zero-shot time series reasoning. TS-Debate assigns dedicated expert agents to textual context, visual patterns, and numerical signals, preceded by explicit domain knowledge elicitation, and coordinates their interaction via a structured debate protocol. Reviewer agents evaluate agent claims using a verification-conflict-calibration mechanism, supported by lightweight code execution and numerical lookup for programmatic verification. This architecture preserves modality fidelity, exposes conflicting evidence, and mitigates numeric hallucinations without task-specific fine-tuning. Across 20 tasks spanning three public benchmarks, TS-Debate achieves consistent and significant performance improvements over strong baselines, including standard multimodal debate in which all agents observe all inputs.",
+    "authors": [
+      "Patara Trirat",
+      "Jin Myung Kwak",
+      "Jay Heo",
+      "Heejun Lee",
+      "Sung Ju Hwang"
+    ],
+    "published": "2026-01-27",
+    "categories": [
+      "cs.AI",
+      "cs.MA"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.19151v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.19151v1",
+    "fetched_at": "2026-01-28T08:38:19.374064"
+  },
+  {
+    "id": "2601.19106v1",
+    "title": "Detecting and Correcting Hallucinations in LLM-Generated Code via Deterministic AST Analysis",
+    "abstract": "Large Language Models (LLMs) for code generation boost productivity but frequently introduce Knowledge Conflicting Hallucinations (KCHs), subtle, semantic errors, such as non-existent API parameters, that evade linters and cause runtime failures. Existing mitigations like constrained decoding or non-deterministic LLM-in-the-loop repair are often unreliable for these errors. This paper investigates whether a deterministic, static-analysis framework can reliably detect \\textit{and} auto-correct KCHs. We propose a post-processing framework that parses generated code into an Abstract Syntax Tree (AST) and validates it against a dynamically-generated Knowledge Base (KB) built via library introspection. This non-executing approach uses deterministic rules to find and fix both API and identifier-level conflicts. On a manually-curated dataset of 200 Python snippets, our framework detected KCHs with 100\\% precision and 87.6\\% recall (0.934 F1-score), and successfully auto-corrected 77.0\\% of all identified hallucinations. Our findings demonstrate that this deterministic post-processing approach is a viable and reliable alternative to probabilistic repair, offering a clear path toward trustworthy code generation.",
+    "authors": [
+      "Dipin Khati",
+      "Daniel Rodriguez-Cardenas",
+      "Paul Pantzer",
+      "Denys Poshyvanyk"
+    ],
+    "published": "2026-01-27",
+    "categories": [
+      "cs.SE",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.19106v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.19106v1",
+    "fetched_at": "2026-01-28T08:38:19.374088"
+  }
+]
