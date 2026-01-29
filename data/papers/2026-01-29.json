@@ -1,0 +1,632 @@
+[
+  {
+    "id": "2601.20643v1",
+    "title": "Shrinkage Estimators for Mean and Covariance: Evidence on Portfolio Efficiency Across Market Dimensions",
+    "abstract": "The mean-variance model remains the most prevalent investment framework, built on diversification principles. However, it consistently struggles with estimation errors in expected returns and the covariance matrix, its core parameters. To address this concern, this research evaluates the performance of mean variance (MV) and global minimum-variance (GMV) models across various shrinkage estimators designed to improve these parameters. Specifically, we examine five shrinkage estimators for expected returns and eleven for the covariance matrix. To compare multiple portfolios, we employ a super efficient data envelopment analysis model to rank the portfolios according to investors risk-return preferences. Our comprehensive empirical investigation utilizes six real world datasets with different dimensional characteristics, applying a rolling window methodology across three out of sample testing periods. Following the ranking process, we examine the chosen shrinkage based MV or GMV portfolios against five traditional portfolio optimization techniques classical MV and GMV for sample estimates, MiniMax, conditional value at risk, and semi mean absolute deviation risk measures. Our empirical findings reveal that, in most scenarios, the GMV model combined with the Ledoit Wolf two parameter shrinkage covariance estimator (COV2) represents the optimal selection for a broad spectrum of investors. Meanwhile, the MV model utilizing COV2 alongside the sample mean (SM) proves more suitable for return oriented investors. These two identified models demonstrate superior performance compared to traditional benchmark approaches. Overall, this study lays the groundwork for a more comprehensive understanding of how specific shrinkage models perform across diverse investor profiles and market setups.",
+    "authors": [
+      "Rupendra Yadav",
+      "Amita Sharma",
+      "Aparna Mehra"
+    ],
+    "published": "2026-01-28",
+    "categories": [
+      "q-fin.PM",
+      "stat.AP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.20643v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.20643v1",
+    "fetched_at": "2026-01-29T08:46:41.168509"
+  },
+  {
+    "id": "2601.20533v1",
+    "title": "Incorporating data drift to perform survival analysis on credit risk",
+    "abstract": "Survival analysis has become a standard approach for modelling time to default by time-varying covariates in credit risk. Unlike most existing methods that implicitly assume a stationary data-generating process, in practise, mortgage portfolios are exposed to various forms of data drift caused by changing borrower behaviour, macroeconomic conditions, policy regimes and so on. This study investigates the impact of data drift on survival-based credit risk models and proposes a dynamic joint modelling framework to improve robustness under non-stationary environments. The proposed model integrates a longitudinal behavioural marker derived from balance dynamics with a discrete-time hazard formulation, combined with landmark one-hot encoding and isotonic calibration. Three types of data drift (sudden, incremental and recurring) are simulated and analysed on mortgage loan datasets from Freddie Mac. Experiments and corresponding evidence show that the proposed landmark-based joint model consistently outperforms classical survival models, tree-based drift-adaptive learners and gradient boosting methods in terms of discrimination and calibration across all drift scenarios, which confirms the superiority of our model design.",
+    "authors": [
+      "Jianwei Peng",
+      "Stefan Lessmann"
+    ],
+    "published": "2026-01-28",
+    "categories": [
+      "stat.ML",
+      "cs.LG",
+      "q-fin.RM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.20533v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.20533v1",
+    "fetched_at": "2026-01-29T08:46:41.168549"
+  },
+  {
+    "id": "2601.20452v1",
+    "title": "Manipulation in Prediction Markets: An Agent-based Modeling Experiment",
+    "abstract": "Prediction markets mobilize financial incentives to forecast binary event outcomes through the aggregation of dispersed beliefs and heterogeneous information. Their growing popularity and demonstrated predictive accuracy in political elections have raised speculation and concern regarding their susceptibility to manipulation and the potential consequences for democratic processes. Using agent-based simulations combined with an analytic characterization of price dynamics, we study how high-budget agents can introduce price distortions in prediction markets. We explore the persistence and stability of these distortions in the presence of herding or stubborn agents, and analyze how agent expertise affects market-price variance. Firstly we propose an agent-based model of a prediction market in which bettors with heterogeneous expertise, noisy private information, variable learning rates and budgets observe the evolution of public opinion on a binary election outcome to inform their betting strategies in the market. The model exhibits stability across a broad parameter space, with complex agent behaviors and price interactions producing self-regulatory price discovery. Second, using this simulation framework, we investigate the conditions under which a highly resourced minority, or ''whale'' agent, with a biased valuation can distort the market price, and for how long. We find that biased whales can temporarily shift prices, with the magnitude and duration of distortion increasing when non-whale bettors exhibit herding behavior and slow learning. Our theoretical analysis corroborates these results, showing that whales can shift prices proportionally to their share of market capital, with distortion duration depending on non-whale learning rates and herding intensity.",
+    "authors": [
+      "Bridget Smart",
+      "Ebba Mark",
+      "Anne Bastian",
+      "Josefina Waugh"
+    ],
+    "published": "2026-01-28",
+    "categories": [
+      "econ.GN",
+      "physics.soc-ph",
+      "q-fin.TR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.20452v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.20452v1",
+    "fetched_at": "2026-01-29T08:46:41.168578"
+  },
+  {
+    "id": "2601.20336v1",
+    "title": "Do Whitepaper Claims Predict Market Behavior? Evidence from Cryptocurrency Factor Analysis",
+    "abstract": "Cryptocurrency projects articulate value propositions through whitepapers, making claims about functionality and technical capabilities. This study investigates whether these narratives align with observed market behavior. We construct a pipeline combining zero-shot NLP classification (BART-MNLI) with CP tensor decomposition to compare three spaces: (1) a claims matrix from 24 whitepapers across 10 semantic categories, (2) market statistics for 49 assets over two years of hourly data, and (3) latent factors from tensor decomposition (rank 2, 92.45% variance explained). Using Procrustes rotation and Tucker's congruence coefficient, we test alignment across 23 common entities.   Results show weak alignment: claims-statistics (phi=0.341, p=0.332), claims-factors (phi=0.077, p=0.747), and statistics-factors (phi=0.197, p<0.001). The statistics-factors significance validates our methodology, confirming the pipeline detects relationships when present. Inter-model validation with DeBERTa-v3 yields 32% exact agreement but 67% top-3 agreement. Cross-sectional analysis reveals heterogeneous contributions: NEAR, MKR, ATOM show positive alignment while ENS, UNI, Bitcoin diverge most. Excluding Bitcoin confirms results are not driven by market dominance.   We interpret findings as weak alignment between whitepaper narratives and market factor structure. Limited power (n=23) precludes distinguishing weak from no alignment, but strong alignment (phi>=0.70) can be confidently rejected. Implications for narrative economics and investment analysis are discussed.",
+    "authors": [
+      "Murad Farzulla"
+    ],
+    "published": "2026-01-28",
+    "categories": [
+      "q-fin.CP",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.20336v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.20336v1",
+    "fetched_at": "2026-01-29T08:46:41.168601"
+  },
+  {
+    "id": "2601.20251v1",
+    "title": "Efficient Evaluation of LLM Performance with Statistical Guarantees",
+    "abstract": "Exhaustively evaluating many large language models (LLMs) on a large suite of benchmarks is expensive. We cast benchmarking as finite-population inference and, under a fixed query budget, seek tight confidence intervals (CIs) for model accuracy with valid frequentist coverage. We propose Factorized Active Querying (FAQ), which (a) leverages historical information through a Bayesian factor model; (b) adaptively selects questions using a hybrid variance-reduction/active-learning sampling policy; and (c) maintains validity through Proactive Active Inference -- a finite-population extension of active inference (Zrnic & Candes, 2024) that enables direct question selection while preserving coverage. With negligible overhead cost, FAQ delivers up to $5\\times$ effective sample size gains over strong baselines on two benchmark suites, across varying historical-data missingness levels: this means that it matches the CI width of uniform sampling while using up to $5\\times$ fewer queries. We release our source code and our curated datasets to support reproducible evaluation and future research.",
+    "authors": [
+      "Skyler Wu",
+      "Yash Nair",
+      "Emmanuel J. Candés"
+    ],
+    "published": "2026-01-28",
+    "categories": [
+      "stat.ML",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.20251v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.20251v1",
+    "fetched_at": "2026-01-29T08:46:47.373172"
+  },
+  {
+    "id": "2601.20830v1",
+    "title": "VSCOUT: A Hybrid Variational Autoencoder Approach to Outlier Detection in High-Dimensional Retrospective Monitoring",
+    "abstract": "Modern industrial and service processes generate high-dimensional, non-Gaussian, and contamination-prone data that challenge the foundational assumptions of classical Statistical Process Control (SPC). Heavy tails, multimodality, nonlinear dependencies, and sparse special-cause observations can distort baseline estimation, mask true anomalies, and prevent reliable identification of an in-control (IC) reference set. To address these challenges, we introduce VSCOUT, a distribution-free framework designed specifically for retrospective (Phase I) monitoring in high-dimensional settings. VSCOUT combines an Automatic Relevance Determination Variational Autoencoder (ARD-VAE) architecture with ensemble-based latent outlier filtering and changepoint detection. The ARD prior isolates the most informative latent dimensions, while the ensemble and changepoint filters identify pointwise and structural contamination within the determined latent space. A second-stage retraining step removes flagged observations and re-estimates the latent structure using only the retained inliers, mitigating masking and stabilizing the IC latent manifold. This two-stage refinement produces a clean and reliable IC baseline suitable for subsequent Phase II deployment. Extensive experiments across benchmark datasets demonstrate that VSCOUT achieves superior sensitivity to special-cause structure while maintaining controlled false alarms, outperforming classical SPC procedures, robust estimators, and modern machine-learning baselines. Its scalability, distributional flexibility, and resilience to complex contamination patterns position VSCOUT as a practical and effective method for retrospective modeling and anomaly detection in AI-enabled environments.",
+    "authors": [
+      "Waldyn G. Martinez"
+    ],
+    "published": "2026-01-28",
+    "categories": [
+      "stat.ML",
+      "cs.LG",
+      "stat.CO"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.20830v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.20830v1",
+    "fetched_at": "2026-01-29T08:46:53.583327"
+  },
+  {
+    "id": "2601.20626v1",
+    "title": "Trigger Optimization and Event Classification for Dark Matter Searches in the CYGNO Experiment Using Machine Learning",
+    "abstract": "The CYGNO experiment employs an optical-readout Time Projection Chamber (TPC) to search for rare low-energy interactions using finely resolved scintillation images. While the optical readout provides rich topological information, it produces large, sparse megapixel images that challenge real-time triggering, data reduction, and background discrimination.   We summarize two complementary machine-learning approaches developed within CYGNO. First, we present a fast and fully unsupervised strategy for online data reduction based on reconstruction-based anomaly detection. A convolutional autoencoder trained exclusively on pedestal images (i.e. frames acquired with GEM amplification disabled) learns the detector noise morphology and highlights particle-induced structures through localized reconstruction residuals, from which compact Regions of Interest (ROIs) are extracted. On real prototype data, the selected configuration retains (93.0 +/- 0.2)% of reconstructed signal intensity while discarding (97.8 +/- 0.1)% of the image area, with ~25 ms per-frame inference time on a consumer GPU.   Second, we report a weakly supervised application of the Classification Without Labels (CWoLa) framework to data acquired with an Americium--Beryllium neutron source. Using only mixed AmBe and standard datasets (no event-level labels), a convolutional classifier learns to identify nuclear-recoil-like topologies. The achieved performance approaches the theoretical limit imposed by the mixture composition and isolates a high-score population with compact, approximately circular morphologies consistent with nuclear recoils.",
+    "authors": [
+      "F. D. Amaro",
+      "R. Antonietti",
+      "E. Baracchini",
+      "L. Benussi",
+      "C. Capoccia",
+      "M. Caponero",
+      "L. G. M. de Carvalho",
+      "G. Cavoto",
+      "I. A. Costa",
+      "A. Croce",
+      "M. D'Astolfo",
+      "G. D'Imperio",
+      "G. Dho",
+      "E. Di Marco",
+      "J. M. F. dos Santos",
+      "D. Fiorina",
+      "F. Iacoangeli",
+      "Z. Islam",
+      "E. Kemp",
+      "H. P. Lima",
+      "G. Maccarrone",
+      "R. D. P. Mano",
+      "D. J. G. Marques",
+      "G. Mazzitelli",
+      "P. Meloni",
+      "A. Messina",
+      "C. M. B. Monteiro",
+      "R. A. Nobrega",
+      "G. M. Oppedisano",
+      "I. F. Pains",
+      "E. Paoletti",
+      "F. Petrucci",
+      "S. Piacentini",
+      "D. Pierluigi",
+      "D. Pinci",
+      "F. Renga",
+      "A. Russo",
+      "G. Saviano",
+      "P. A. O. C. Silva",
+      "N. J. Spooner",
+      "R. Tesauro",
+      "S. Tomassini",
+      "D. Tozzi"
+    ],
+    "published": "2026-01-28",
+    "categories": [
+      "physics.ins-det",
+      "cs.LG",
+      "physics.data-an"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.20626v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.20626v1",
+    "fetched_at": "2026-01-29T08:46:53.583427"
+  },
+  {
+    "id": "2601.20367v1",
+    "title": "Unsupervised Anomaly Detection in Multi-Agent Trajectory Prediction via Transformer-Based Models",
+    "abstract": "Identifying safety-critical scenarios is essential for autonomous driving, but the rarity of such events makes supervised labeling impractical. Traditional rule-based metrics like Time-to-Collision are too simplistic to capture complex interaction risks, and existing methods lack a systematic way to verify whether statistical anomalies truly reflect physical danger. To address this gap, we propose an unsupervised anomaly detection framework based on a multi-agent Transformer that models normal driving and measures deviations through prediction residuals. A dual evaluation scheme has been proposed to assess both detection stability and physical alignment: Stability is measured using standard ranking metrics in which Kendall Rank Correlation Coefficient captures rank agreement and Jaccard index captures the consistency of the top-K selected items; Physical alignment is assessed through correlations with established Surrogate Safety Measures (SSM). Experiments on the NGSIM dataset demonstrate our framework's effectiveness: We show that the maximum residual aggregator achieves the highest physical alignment while maintaining stability. Furthermore, our framework identifies 388 unique anomalies missed by Time-to-Collision and statistical baselines, capturing subtle multi-agent risks like reactive braking under lateral drift. The detected anomalies are further clustered into four interpretable risk types, offering actionable insights for simulation and testing.",
+    "authors": [
+      "Qing Lyu",
+      "Zhe Fu",
+      "Alexandre Bayen"
+    ],
+    "published": "2026-01-28",
+    "categories": [
+      "cs.LG",
+      "eess.SY"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.20367v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.20367v1",
+    "fetched_at": "2026-01-29T08:46:53.583449"
+  },
+  {
+    "id": "2601.20333v1",
+    "title": "Test-Time Adaptation for Anomaly Segmentation via Topology-Aware Optimal Transport Chaining",
+    "abstract": "Deep topological data analysis (TDA) offers a principled framework for capturing structural invariants such as connectivity and cycles that persist across scales, making it a natural fit for anomaly segmentation (AS). Unlike thresholdbased binarisation, which produces brittle masks under distribution shift, TDA allows anomalies to be characterised as disruptions to global structure rather than local fluctuations. We introduce TopoOT, a topology-aware optimal transport (OT) framework that integrates multi-filtration persistence diagrams (PDs) with test-time adaptation (TTA). Our key innovation is Optimal Transport Chaining, which sequentially aligns PDs across thresholds and filtrations, yielding geodesic stability scores that identify features consistently preserved across scales. These stabilityaware pseudo-labels supervise a lightweight head trained online with OT-consistency and contrastive objectives, ensuring robust adaptation under domain shift. Across standard 2D and 3D anomaly detection benchmarks, TopoOT achieves state-of-the-art performance, outperforming the most competitive methods by up to +24.1% mean F1 on 2D datasets and +10.2% on 3D AS benchmarks.",
+    "authors": [
+      "Ali Zia",
+      "Usman Ali",
+      "Umer Ramzan",
+      "Abdul Rehman",
+      "Abdelwahed Khamis",
+      "Wei Xiang"
+    ],
+    "published": "2026-01-28",
+    "categories": [
+      "cs.CV",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.20333v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.20333v1",
+    "fetched_at": "2026-01-29T08:46:53.583475"
+  },
+  {
+    "id": "2601.20148v1",
+    "title": "LogSieve: Task-Aware CI Log Reduction for Sustainable LLM-Based Analysis",
+    "abstract": "Logs are essential for understanding Continuous Integration (CI) behavior, particularly for diagnosing build failures and performance regressions. Yet their growing volume and verbosity make both manual inspection and automated analysis increasingly costly, time-consuming, and environmentally costly. While prior work has explored log compression, anomaly detection, and LLM-based log analysis, most efforts target structured system logs rather than the unstructured, noisy, and verbose logs typical of CI workflows.   We present LogSieve, a lightweight, RCA-aware and semantics-preserving log reduction technique that filters low-information lines while retaining content relevant to downstream reasoning. Evaluated on CI logs from 20 open-source Android projects using GitHub Actions, LogSieve achieves an average 42% reduction in lines and 40% reduction in tokens with minimal semantic loss. This pre-inference reduction lowers computational cost and can proportionally reduce energy use (and associated emissions) by decreasing the volume of data processed during LLM inference.   Compared with structure-first baselines (LogZip and random-line removal), LogSieve preserves much higher semantic and categorical fidelity (Cosine = 0.93, GPTScore = 0.93, 80% exact-match accuracy). Embedding-based classifiers automate relevance detection with near-human accuracy (97%), enabling scalable and sustainable integration of semantics-aware filtering into CI workflows. LogSieve thus bridges log management and LLM reasoning, offering a practical path toward greener and more interpretable CI automation.",
+    "authors": [
+      "Marcus Emmanuel Barnes",
+      "Taher A. Ghaleb",
+      "Safwat Hassan"
+    ],
+    "published": "2026-01-28",
+    "categories": [
+      "cs.SE",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.20148v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.20148v1",
+    "fetched_at": "2026-01-29T08:46:53.583496"
+  },
+  {
+    "id": "2601.20103v1",
+    "title": "Benchmarking Reward Hack Detection in Code Environments via Contrastive Analysis",
+    "abstract": "Recent advances in reinforcement learning for code generation have made robust environments essential to prevent reward hacking. As LLMs increasingly serve as evaluators in code-based RL, their ability to detect reward hacking remains understudied. In this paper, we propose a novel taxonomy of reward exploits spanning across 54 categories and introduce TRACE (Testing Reward Anomalies in Code Environments), a synthetically curated and human-verified benchmark containing 517 testing trajectories. Unlike prior work that evaluates reward hack detection in isolated classification scenarios, we contrast these evaluations with a more realistic, contrastive anomaly detection setup on TRACE. Our experiments reveal that models capture reward hacks more effectively in contrastive settings than in isolated classification settings, with GPT-5.2 with highest reasoning mode achieving the best detection rate at 63%, up from 45% in isolated settings on TRACE. Building on this insight, we demonstrate that state-of-the-art models struggle significantly more with semantically contextualized reward hacks compared to syntactically contextualized ones. We further conduct qualitative analyses of model behaviors, as well as ablation studies showing that the ratio of benign to hacked trajectories and analysis cluster sizes substantially impact detection performance. We release the benchmark and evaluation harness to enable the community to expand TRACE and evaluate their models.",
+    "authors": [
+      "Darshan Deshpande",
+      "Anand Kannappan",
+      "Rebecca Qian"
+    ],
+    "published": "2026-01-27",
+    "categories": [
+      "cs.SE",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.20103v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.20103v1",
+    "fetched_at": "2026-01-29T08:46:53.583518"
+  },
+  {
+    "id": "2601.19992v1",
+    "title": "BayPrAnoMeta: Bayesian Proto-MAML for Few-Shot Industrial Image Anomaly Detection",
+    "abstract": "Industrial image anomaly detection is a challenging problem owing to extreme class imbalance and the scarcity of labeled defective samples, particularly in few-shot settings. We propose BayPrAnoMeta, a Bayesian generalization of Proto-MAML for few-shot industrial image anomaly detection. Unlike existing Proto-MAML approaches that rely on deterministic class prototypes and distance-based adaptation, BayPrAnoMeta replaces prototypes with task-specific probabilistic normality models and performs inner-loop adaptation via a Bayesian posterior predictive likelihood. We model normal support embeddings with a Normal-Inverse-Wishart (NIW) prior, producing a Student-$t$ predictive distribution that enables uncertainty-aware, heavy-tailed anomaly scoring and is essential for robustness in extreme few-shot settings. We further extend BayPrAnoMeta to a federated meta-learning framework with supervised contrastive regularization for heterogeneous industrial clients and prove convergence to stationary points of the resulting nonconvex objective. Experiments on the MVTec AD benchmark demonstrate consistent and significant AUROC improvements over MAML, Proto-MAML, and PatchCore-based methods in few-shot anomaly detection settings.",
+    "authors": [
+      "Soham Sarkar",
+      "Tanmay Sen",
+      "Sayantan Banerjee"
+    ],
+    "published": "2026-01-27",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.19992v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.19992v1",
+    "fetched_at": "2026-01-29T08:46:53.583538"
+  },
+  {
+    "id": "2601.20680v1",
+    "title": "Online Density-Based Clustering for Real-Time Narrative Evolution Monitorin",
+    "abstract": "Automated narrative intelligence systems for social media monitoring face significant scalability challenges when processing continuous data streams using traditional batch clustering algorithms. We investigate the replacement of HDBSCAN (offline clustering) with online (streaming/incremental) clustering methods in a production narrative report generation pipeline. The proposed system employs a three-stage architecture (data collection, modeling, dashboard generation) that processes thousands of multilingual social media documents daily. While HDBSCAN excels at discovering hierarchical density-based clusters and handling noise, its batch-only nature necessitates complete retraining for each time window, resulting in memory constraints, computational inefficiency, and inability to adapt to evolving narratives in real-time. This work evaluates a bunch of online clustering algorithms across dimensions of cluster quality preservation, computational efficiency, memory footprint, and integration compatibility with existing workflows. We propose evaluation criteria that balance traditional clustering metrics (Silhouette Coefficient, Davies-Bouldin Index) with narrative metrics (narrative distinctness, contingency and variance). Our methodology includes sliding-window simulations on historical datasets from Ukraine information space, enabling comparative analysis of algorithmic trade-offs in realistic operational contexts. This research addresses a critical gap between batch-oriented topic modeling frameworks and the streaming nature of social media monitoring, with implications for computational social science, crisis informatics, and narrative surveillance systems.",
+    "authors": [
+      "Ostap Vykhopen",
+      "Viktoria Skorik",
+      "Maxim Tereschenko",
+      "Veronika Solopova"
+    ],
+    "published": "2026-01-28",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.20680v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.20680v1",
+    "fetched_at": "2026-01-29T08:47:12.154203"
+  },
+  {
+    "id": "2601.20852v1",
+    "title": "C3Box: A CLIP-based Class-Incremental Learning Toolbox",
+    "abstract": "Traditional machine learning systems are typically designed for static data distributions, which suffer from catastrophic forgetting when learning from evolving data streams. Class-Incremental Learning (CIL) addresses this challenge by enabling learning systems to continuously learn new classes while preserving prior knowledge. With the rise of pre-trained models (PTMs) such as CLIP, leveraging their strong generalization and semantic alignment capabilities has become a promising direction in CIL. However, existing CLIP-based CIL methods are often scattered across disparate codebases, rely on inconsistent configurations, hindering fair comparisons, reproducibility, and practical adoption. Therefore, we propose C3Box (CLIP-based Class-inCremental learning toolBOX), a modular and comprehensive Python toolbox. C3Box integrates representative traditional CIL methods, ViT-based CIL methods, and state-of-the-art CLIP-based CIL methods into a unified CLIP-based framework. By inheriting the streamlined design of PyCIL, C3Box provides a JSON-based configuration and standardized execution pipeline. This design enables reproducible experimentation with low engineering overhead and makes C3Box a reliable benchmark platform for continual learning research. Designed to be user-friendly, C3Box relies only on widely used open-source libraries and supports major operating systems. The code is available at https://github.com/LAMDA-CL/C3Box.",
+    "authors": [
+      "Hao Sun",
+      "Da-Wei Zhou"
+    ],
+    "published": "2026-01-28",
+    "categories": [
+      "cs.LG",
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.20852v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.20852v1",
+    "fetched_at": "2026-01-29T08:47:21.468087"
+  },
+  {
+    "id": "2601.20784v1",
+    "title": "REASON: Accelerating Probabilistic Logical Reasoning for Scalable Neuro-Symbolic Intelligence",
+    "abstract": "Neuro-symbolic AI systems integrate neural perception with symbolic reasoning to enable data-efficient, interpretable, and robust intelligence beyond purely neural models. Although this compositional paradigm has shown superior performance in domains such as reasoning, planning, and verification, its deployment remains challenging due to severe inefficiencies in symbolic and probabilistic inference. Through systematic analysis of representative neuro-symbolic workloads, we identify probabilistic logical reasoning as the inefficiency bottleneck, characterized by irregular control flow, low arithmetic intensity, uncoalesced memory accesses, and poor hardware utilization on CPUs and GPUs.   This paper presents REASON, an integrated acceleration framework for probabilistic logical reasoning in neuro-symbolic AI. REASON introduces a unified directed acyclic graph representation that captures common structure across symbolic and probabilistic models, coupled with adaptive pruning and regularization. At the architecture level, REASON features a reconfigurable, tree-based processing fabric optimized for irregular traversal, symbolic deduction, and probabilistic aggregation. At the system level, REASON is tightly integrated with GPU streaming multiprocessors through a programmable interface and multi-level pipeline that efficiently orchestrates compositional execution. Evaluated across six neuro-symbolic workloads, REASON achieves 12-50x speedup and 310-681x energy efficiency over desktop and edge GPUs under TSMC 28 nm node. REASON enables real-time probabilistic logical reasoning, completing end-to-end tasks in 0.8 s with 6 mm2 area and 2.12 W power, demonstrating that targeted acceleration of probabilistic logical reasoning is critical for practical and scalable neuro-symbolic AI and positioning REASON as a foundational system architecture for next-generation cognitive intelligence.",
+    "authors": [
+      "Zishen Wan",
+      "Che-Kai Liu",
+      "Jiayi Qian",
+      "Hanchen Yang",
+      "Arijit Raychowdhury",
+      "Tushar Krishna"
+    ],
+    "published": "2026-01-28",
+    "categories": [
+      "cs.AI",
+      "cs.AR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.20784v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.20784v1",
+    "fetched_at": "2026-01-29T08:47:21.468123"
+  },
+  {
+    "id": "2601.20782v1",
+    "title": "Neural Quantum States in Mixed Precision",
+    "abstract": "Scientific computing has long relied on double precision (64-bit floating point) arithmetic to guarantee accuracy in simulations of real-world phenomena. However, the growing availability of hardware accelerators such as Graphics Processing Units (GPUs) has made low-precision formats attractive due to their superior performance, reduced memory footprint, and improved energy efficiency. In this work, we investigate the role of mixed-precision arithmetic in neural-network based Variational Monte Carlo (VMC), a widely used method for solving computationally otherwise intractable quantum many-body systems. We first derive general analytical bounds on the error introduced by reduced precision on Metropolis-Hastings MCMC, and then empirically validate these bounds on the use-case of VMC. We demonstrate that significant portions of the algorithm, in particular, sampling the quantum state, can be executed in half precision without loss of accuracy. More broadly, this work provides a theoretical framework to assess the applicability of mixed-precision arithmetic in machine-learning approaches that rely on MCMC sampling. In the context of VMC, we additionally demonstrate the practical effectiveness of mixed-precision strategies, enabling more scalable and energy-efficient simulations of quantum many-body systems.",
+    "authors": [
+      "Massimo Solinas",
+      "Agnes Valenti",
+      "Nawaf Bou-Rabee",
+      "Roeland Wiersema"
+    ],
+    "published": "2026-01-28",
+    "categories": [
+      "quant-ph",
+      "cond-mat.str-el",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.20782v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.20782v1",
+    "fetched_at": "2026-01-29T08:47:21.468148"
+  },
+  {
+    "id": "2601.20613v1",
+    "title": "AgentIF-OneDay: A Task-level Instruction-Following Benchmark for General AI Agents in Daily Scenarios",
+    "abstract": "The capacity of AI agents to effectively handle tasks of increasing duration and complexity continues to grow, demonstrating exceptional performance in coding, deep research, and complex problem-solving evaluations. However, in daily scenarios, the perception of these advanced AI capabilities among general users remains limited. We argue that current evaluations prioritize increasing task difficulty without sufficiently addressing the diversity of agentic tasks necessary to cover the daily work, life, and learning activities of a broad demographic. To address this, we propose AgentIF-OneDay, aimed at determining whether general users can utilize natural language instructions and AI agents to complete a diverse array of daily tasks. These tasks require not only solving problems through dialogue but also understanding various attachment types and delivering tangible file-based results. The benchmark is structured around three user-centric categories: Open Workflow Execution, which assesses adherence to explicit and complex workflows; Latent Instruction, which requires agents to infer implicit instructions from attachments; and Iterative Refinement, which involves modifying or expanding upon ongoing work. We employ instance-level rubrics and a refined evaluation pipeline that aligns LLM-based verification with human judgment, achieving an 80.1% agreement rate using Gemini-3-Pro. AgentIF-OneDay comprises 104 tasks covering 767 scoring points. We benchmarked four leading general AI agents and found that agent products built based on APIs and ChatGPT agents based on agent RL remain in the first tier simultaneously. Leading LLM APIs and open-source models have internalized agentic capabilities, enabling AI application teams to develop cutting-edge Agent products.",
+    "authors": [
+      "Kaiyuan Chen",
+      "Qimin Wu",
+      "Taiyu Hou",
+      "Tianhao Tang",
+      "Xueyu Hu",
+      "Yuchen Hou",
+      "Bikun Li",
+      "Chengming Qian",
+      "Guoyin Wang",
+      "Haolin Chen",
+      "Haotong Tian",
+      "Haoye Zhang",
+      "Haoyu Bian",
+      "Hongbing Pan",
+      "Hongkang Zhang",
+      "Hongyi Zhou",
+      "Jiaqi Cai",
+      "Jiewu Rao",
+      "Jiyuan Ren",
+      "Keduan Huang",
+      "Lucia Zhu Huang",
+      "Mingyu Yuan",
+      "Naixu Guo",
+      "Qicheng Tang",
+      "Qinyan Zhang",
+      "Shuai Chen",
+      "Siheng Chen",
+      "Ting Ting Li",
+      "Xiaoxing Guo",
+      "Yaocheng Zuo",
+      "Yaoqi Guo",
+      "Yinan Wang",
+      "Yinzhou Yu",
+      "Yize Wang",
+      "Yuan Jiang",
+      "Yuan Tian",
+      "Yuanshuo Zhang",
+      "Yuxuan Liu",
+      "Yvette Yan Zeng",
+      "Zenyu Shan",
+      "Zihan Yin",
+      "Xiaobo Hu",
+      "Yang Liu",
+      "Yixin Ren",
+      "Yuan Gong"
+    ],
+    "published": "2026-01-28",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.20613v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.20613v1",
+    "fetched_at": "2026-01-29T08:47:21.468244"
+  },
+  {
+    "id": "2601.20480v1",
+    "title": "An explainable framework for the relationship between dementia and glucose metabolism patterns",
+    "abstract": "High-dimensional neuroimaging data presents challenges for assessing neurodegenerative diseases due to complex non-linear relationships. Variational Autoencoders (VAEs) can encode scans into lower-dimensional latent spaces capturing disease-relevant features. We propose a semi-supervised VAE framework with a flexible similarity regularization term that aligns selected latent variables with clinical or biomarker measures of dementia progression. This allows adapting the similarity metric and supervised variables to specific goals or available data. We demonstrate the approach using PET scans from the Alzheimer's Disease Neuroimaging Initiative (ADNI), guiding the first latent dimension to align with a cognitive score. Using this supervised latent variable, we generate average reconstructions across levels of cognitive impairment. Voxel-wise GLM analysis reveals reduced metabolism in key regions, mainly the hippocampus, and within major Resting State Networks, particularly the Default Mode and Central Executive Networks. The remaining latent variables encode affine transformations and intensity variations, capturing confounds such as inter-subject variability and site effects. Our framework effectively extracts disease-related patterns aligned with established Alzheimer's biomarkers, offering an interpretable and adaptable tool for studying neurodegenerative progression.",
+    "authors": [
+      "C. Vázquez-García",
+      "F. J. Martínez-Murcia",
+      "F. Segovia Román",
+      "A. Forte",
+      "J. Ramírez",
+      "I. Illán",
+      "A. Hernández-Segura",
+      "C. Jiménez-Mesa",
+      "Juan M. Górriz"
+    ],
+    "published": "2026-01-28",
+    "categories": [
+      "cs.LG",
+      "q-bio.NC"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.20480v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.20480v1",
+    "fetched_at": "2026-01-29T08:47:21.468276"
+  },
+  {
+    "id": "2601.20439v1",
+    "title": "PEARL: Plan Exploration and Adaptive Reinforcement Learning for Multihop Tool Use",
+    "abstract": "Large Language Models show great potential with external tools, but face significant challenges in complex, multi-turn tool invocation. They often exhibit weak planning, tool hallucination, erroneous parameter generation, and struggle with robust interaction. To tackle these issues, we present PEARL, a novel framework to enhance LLM planning and execution for sophisticated tool use. PEARL adopts a two-stage approach: an offline phase where the agent explores tools to learn valid usage patterns and failure conditions, and an online reinforcement learning phase. In the online phase, a dedicated Planner is trained via group Relative Policy Optimization (GRPO) with a carefully designed reward function that provides distinct signals for planning quality. Experiments on the ToolHop and T-Eval benchmarks show PEARL significantly outperforms existing methods, achieving a new state-of-the-art success rate of \\textbf{56.5\\%} on ToolHop while maintaining a low invocation error rate. Our work marks a key advance in addressing the complex planning challenges of tool use, contributing to the development of more robust and reliable LLM-based agents.",
+    "authors": [
+      "Qihao Wang",
+      "Mingzhe Lu",
+      "Jiayue Wu",
+      "Yue Hu",
+      "Yanbing Liu"
+    ],
+    "published": "2026-01-28",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.20439v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.20439v1",
+    "fetched_at": "2026-01-29T08:47:21.468304"
+  },
+  {
+    "id": "2601.20408v1",
+    "title": "Meeting SLOs, Slashing Hours: Automated Enterprise LLM Optimization with OptiKIT",
+    "abstract": "Enterprise LLM deployment faces a critical scalability challenge: organizations must optimize models systematically to scale AI initiatives within constrained compute budgets, yet the specialized expertise required for manual optimization remains a niche and scarce skillset. This challenge is particularly evident in managing GPU utilization across heterogeneous infrastructure while enabling teams with diverse workloads and limited LLM optimization experience to deploy models efficiently.   We present OptiKIT, a distributed LLM optimization framework that democratizes model compression and tuning by automating complex optimization workflows for non-expert teams. OptiKIT provides dynamic resource allocation, staged pipeline execution with automatic cleanup, and seamless enterprise integration.   In production, it delivers more than 2x GPU throughput improvement while empowering application teams to achieve consistent performance improvements without deep LLM optimization expertise. We share both the platform design and key engineering insights into resource allocation algorithms, pipeline orchestration, and integration patterns that enable large-scale, production-grade democratization of model optimization. Finally, we open-source the system to enable external contributions and broader reproducibility.",
+    "authors": [
+      "Nicholas Santavas",
+      "Kareem Eissa",
+      "Patrycja Cieplicka",
+      "Piotr Florek",
+      "Matteo Nulli",
+      "Stefan Vasilev",
+      "Seyyed Hadi Hashemi",
+      "Antonios Gasteratos",
+      "Shahram Khadivi"
+    ],
+    "published": "2026-01-28",
+    "categories": [
+      "cs.DC",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.20408v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.20408v1",
+    "fetched_at": "2026-01-29T08:47:21.468336"
+  },
+  {
+    "id": "2601.20404v1",
+    "title": "On the Impact of AGENTS.md Files on the Efficiency of AI Coding Agents",
+    "abstract": "AI coding agents such as Codex and Claude Code are increasingly used to autonomously contribute to software repositories. However, little is known about how repository-level configuration artifacts affect operational efficiency of the agents. In this paper, we study the impact of AGENTS.md files on the runtime and token consumption of AI coding agents operating on GitHub pull requests. We analyze 10 repositories and 124 pull requests, executing agents under two conditions: with and without an AGENTS.md file. We measure wall-clock execution time and token usage during agent execution. Our results show that the presence of AGENTS.md is associated with a lower median runtime ($Δ28.64$%) and reduced output token consumption ($Δ16.58$%), while maintaining a comparable task completion behavior. Based on these results, we discuss immediate implications for the configuration and deployment of AI coding agents in practice, and outline a broader research agenda on the role of repository-level instructions in shaping the behavior, efficiency, and integration of AI coding agents in software development workflows.",
+    "authors": [
+      "Jai Lal Lulla",
+      "Seyedmoein Mohsenimofidi",
+      "Matthias Galster",
+      "Jie M. Zhang",
+      "Sebastian Baltes",
+      "Christoph Treude"
+    ],
+    "published": "2026-01-28",
+    "categories": [
+      "cs.SE",
+      "cs.AI",
+      "cs.ET",
+      "cs.HC"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.20404v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.20404v1",
+    "fetched_at": "2026-01-29T08:47:21.468363"
+  },
+  {
+    "id": "2601.20380v1",
+    "title": "OmegaUse: Building a General-Purpose GUI Agent for Autonomous Task Execution",
+    "abstract": "Graphical User Interface (GUI) agents show great potential for enabling foundation models to complete real-world tasks, revolutionizing human-computer interaction and improving human productivity. In this report, we present OmegaUse, a general-purpose GUI agent model for autonomous task execution on both mobile and desktop platforms, supporting computer-use and phone-use scenarios. Building an effective GUI agent model relies on two factors: (1) high-quality data and (2) effective training methods. To address these, we introduce a carefully engineered data-construction pipeline and a decoupled training paradigm. For data construction, we leverage rigorously curated open-source datasets and introduce a novel automated synthesis framework that integrates bottom-up autonomous exploration with top-down taxonomy-guided generation to create high-fidelity synthetic data. For training, to better leverage these data, we adopt a two-stage strategy: Supervised Fine-Tuning (SFT) to establish fundamental interaction syntax, followed by Group Relative Policy Optimization (GRPO) to improve spatial grounding and sequential planning. To balance computational efficiency with agentic reasoning capacity, OmegaUse is built on a Mixture-of-Experts (MoE) backbone. To evaluate cross-terminal capabilities in an offline setting, we introduce OS-Nav, a benchmark suite spanning multiple operating systems: ChiM-Nav, targeting Chinese Android mobile environments, and Ubu-Nav, focusing on routine desktop interactions on Ubuntu. Extensive experiments show that OmegaUse is highly competitive across established GUI benchmarks, achieving a state-of-the-art (SOTA) score of 96.3% on ScreenSpot-V2 and a leading 79.1% step success rate on AndroidControl. OmegaUse also performs strongly on OS-Nav, reaching 74.24% step success on ChiM-Nav and 55.9% average success on Ubu-Nav.",
+    "authors": [
+      "Le Zhang",
+      "Yixiong Xiao",
+      "Xinjiang Lu",
+      "Jingjia Cao",
+      "Yusai Zhao",
+      "Jingbo Zhou",
+      "Lang An",
+      "Zikan Feng",
+      "Wanxiang Sha",
+      "Yu Shi",
+      "Congxi Xiao",
+      "Jian Xiong",
+      "Yankai Zhang",
+      "Hua Wu",
+      "Haifeng Wang"
+    ],
+    "published": "2026-01-28",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.20380v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.20380v1",
+    "fetched_at": "2026-01-29T08:47:21.468403"
+  },
+  {
+    "id": "2601.20379v1",
+    "title": "Policy of Thoughts: Scaling LLM Reasoning via Test-time Policy Evolution",
+    "abstract": "Large language models (LLMs) struggle with complex, long-horizon reasoning due to instability caused by their frozen policy assumption. Current test-time scaling methods treat execution feedback merely as an external signal for filtering or rewriting trajectories, without internalizing it to improve the underlying reasoning strategy. Inspired by Popper's epistemology of \"conjectures and refutations,\" we argue that intelligence requires real-time evolution of the model's policy through learning from failed attempts. We introduce Policy of Thoughts (PoT), a framework that recasts reasoning as a within-instance online optimization process. PoT first generates diverse candidate solutions via an efficient exploration mechanism, then uses Group Relative Policy Optimization (GRPO) to update a transient LoRA adapter based on execution feedback. This closed-loop design enables dynamic, instance-specific refinement of the model's reasoning priors. Experiments show that PoT dramatically boosts performance: a 4B model achieves 49.71% accuracy on LiveCodeBench, outperforming GPT-4o and DeepSeek-V3 despite being over 50 smaller.",
+    "authors": [
+      "Zhengbo Jiao",
+      "Hongyu Xian",
+      "Qinglong Wang",
+      "Yunpu Ma",
+      "Zhebo Wang",
+      "Zifan Zhang",
+      "Dezhang Kong",
+      "Meng Han"
+    ],
+    "published": "2026-01-28",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.20379v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.20379v1",
+    "fetched_at": "2026-01-29T08:47:21.468432"
+  },
+  {
+    "id": "2601.20335v1",
+    "title": "MobileBench-OL: A Comprehensive Chinese Benchmark for Evaluating Mobile GUI Agents in Real-World Environment",
+    "abstract": "Recent advances in mobile Graphical User Interface (GUI) agents highlight the growing need for comprehensive evaluation benchmarks. While new online benchmarks offer more realistic testing than offline ones, they tend to focus on the agents' task instruction-following ability while neglecting their reasoning and exploration ability. Moreover, these benchmarks do not consider the random noise in real-world mobile environments. This leads to a gap between benchmarks and real-world environments. To addressing these limitations, we propose MobileBench-OL, an online benchmark with 1080 tasks from 80 Chinese apps. It measures task execution, complex reasoning, and noise robustness of agents by including 5 subsets, which set multiple evaluation dimensions. We also provide an auto-eval framework with a reset mechanism, enabling stable and repeatable real-world benchmarking. Evaluating 12 leading GUI agents on MobileBench-OL shows significant room for improvement to meet real-world requirements. Human evaluation further confirms that MobileBench-OL can reliably measure the performance of leading GUI agents in real environments. Our data and code will be released upon acceptance.",
+    "authors": [
+      "Qinzhuo Wu",
+      "Zhizhuo Yang",
+      "Hanhao Li",
+      "Pengzhi Gao",
+      "Wei Liu",
+      "Jian Luan"
+    ],
+    "published": "2026-01-28",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.20335v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.20335v1",
+    "fetched_at": "2026-01-29T08:47:21.468457"
+  },
+  {
+    "id": "2601.20162v1",
+    "title": "Me-Agent: A Personalized Mobile Agent with Two-Level User Habit Learning for Enhanced Interaction",
+    "abstract": "Large Language Model (LLM)-based mobile agents have made significant performance advancements. However, these agents often follow explicit user instructions while overlooking personalized needs, leading to significant limitations for real users, particularly without personalized context: (1) inability to interpret ambiguous instructions, (2) lack of learning from user interaction history, and (3) failure to handle personalized instructions. To alleviate the above challenges, we propose Me-Agent, a learnable and memorable personalized mobile agent. Specifically, Me-Agent incorporates a two-level user habit learning approach. At the prompt level, we design a user preference learning strategy enhanced with a Personal Reward Model to improve personalization performance. At the memory level, we design a Hierarchical Preference Memory, which stores users' long-term memory and app-specific memory in different level memory. To validate the personalization capabilities of mobile agents, we introduce User FingerTip, a new benchmark featuring numerous ambiguous instructions for daily life. Extensive experiments on User FingerTip and general benchmarks demonstrate that Me-Agent achieves state-of-the-art performance in personalization while maintaining competitive instruction execution performance.",
+    "authors": [
+      "Shuoxin Wang",
+      "Chang Liu",
+      "Gowen Loo",
+      "Lifan Zheng",
+      "Kaiwen Wei",
+      "Xinyi Zeng",
+      "Jingyuan Zhang",
+      "Yu Tian"
+    ],
+    "published": "2026-01-28",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.20162v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.20162v1",
+    "fetched_at": "2026-01-29T08:47:21.468485"
+  },
+  {
+    "id": "2601.20090v1",
+    "title": "Should I Have Expressed a Different Intent? Counterfactual Generation for LLM-Based Autonomous Control",
+    "abstract": "Large language model (LLM)-powered agents can translate high-level user intents into plans and actions in an environment. Yet after observing an outcome, users may wonder: What if I had phrased my intent differently? We introduce a framework that enables such counterfactual reasoning in agentic LLM-driven control scenarios, while providing formal reliability guarantees. Our approach models the closed-loop interaction between a user, an LLM-based agent, and an environment as a structural causal model (SCM), and leverages test-time scaling to generate multiple candidate counterfactual outcomes via probabilistic abduction. Through an offline calibration phase, the proposed conformal counterfactual generation (CCG) yields sets of counterfactual outcomes that are guaranteed to contain the true counterfactual outcome with high probability. We showcase the performance of CCG on a wireless network control use case, demonstrating significant advantages compared to naive re-execution baselines.",
+    "authors": [
+      "Amirmohammad Farzaneh",
+      "Salvatore D'Oro",
+      "Osvaldo Simeone"
+    ],
+    "published": "2026-01-27",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.20090v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.20090v1",
+    "fetched_at": "2026-01-29T08:47:21.468505"
+  },
+  {
+    "id": "2601.20048v1",
+    "title": "Insight Agents: An LLM-Based Multi-Agent System for Data Insights",
+    "abstract": "Today, E-commerce sellers face several key challenges, including difficulties in discovering and effectively utilizing available programs and tools, and struggling to understand and utilize rich data from various tools. We therefore aim to develop Insight Agents (IA), a conversational multi-agent Data Insight system, to provide E-commerce sellers with personalized data and business insights through automated information retrieval. Our hypothesis is that IA will serve as a force multiplier for sellers, thereby driving incremental seller adoption by reducing the effort required and increase speed at which sellers make good business decisions. In this paper, we introduce this novel LLM-backed end-to-end agentic system built on a plan-and-execute paradigm and designed for comprehensive coverage, high accuracy, and low latency. It features a hierarchical multi-agent structure, consisting of manager agent and two worker agents: data presentation and insight generation, for efficient information retrieval and problem-solving. We design a simple yet effective ML solution for manager agent that combines Out-of-Domain (OOD) detection using a lightweight encoder-decoder model and agent routing through a BERT-based classifier, optimizing both accuracy and latency. Within the two worker agents, a strategic planning is designed for API-based data model that breaks down queries into granular components to generate more accurate responses, and domain knowledge is dynamically injected to to enhance the insight generator. IA has been launched for Amazon sellers in US, which has achieved high accuracy of 90% based on human evaluation, with latency of P90 below 15s.",
+    "authors": [
+      "Jincheng Bai",
+      "Zhenyu Zhang",
+      "Jennifer Zhang",
+      "Zhihuai Zhu"
+    ],
+    "published": "2026-01-27",
+    "categories": [
+      "cs.AI",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.20048v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.20048v1",
+    "fetched_at": "2026-01-29T08:47:21.468527"
+  },
+  {
+    "id": "2601.20021v1",
+    "title": "Fuzzy Categorical Planning: Autonomous Goal Satisfaction with Graded Semantic Constraints",
+    "abstract": "Natural-language planning often involves vague predicates (e.g., suitable substitute, stable enough) whose satisfaction is inherently graded. Existing category-theoretic planners provide compositional structure and pullback-based hard-constraint verification, but treat applicability as crisp, forcing thresholding that collapses meaningful distinctions and cannot track quality degradation across multi-step plans. We propose Fuzzy Category-theoretic Planning (FCP), which annotates each action (morphism) with a degree in [0,1], composes plan quality via a t-norm Lukasiewicz, and retains crisp executability checks via pullback verification. FCP grounds graded applicability from language using an LLM with k-sample median aggregation and supports meeting-in-the-middle search using residuum-based backward requirements. We evaluate on (i) public PDDL3 preference/oversubscription benchmarks and (ii) RecipeNLG-Subs, a missing-substitute recipe-planning benchmark built from RecipeNLG with substitution candidates from Recipe1MSubs and FoodKG. FCP improves success and reduces hard-constraint violations on RecipeNLG-Subs compared to LLM-only and ReAct-style baselines, while remaining competitive with classical PDDL3 planners.",
+    "authors": [
+      "Shuhui Qu"
+    ],
+    "published": "2026-01-27",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.20021v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.20021v1",
+    "fetched_at": "2026-01-29T08:47:21.468544"
+  }
+]
