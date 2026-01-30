@@ -1,0 +1,493 @@
+[
+  {
+    "id": "2601.22119v1",
+    "title": "Alpha Discovery via Grammar-Guided Learning and Search",
+    "abstract": "Automatically discovering formulaic alpha factors is a central problem in quantitative finance. Existing methods often ignore syntactic and semantic constraints, relying on exhaustive search over unstructured and unbounded spaces. We present AlphaCFG, a grammar-based framework for defining and discovering alpha factors that are syntactically valid, financially interpretable, and computationally efficient. AlphaCFG uses an alpha-oriented context-free grammar to define a tree-structured, size-controlled search space, and formulates alpha discovery as a tree-structured linguistic Markov decision process, which is then solved using a grammar-aware Monte Carlo Tree Search guided by syntax-sensitive value and policy networks. Experiments on Chinese and U.S. stock market datasets show that AlphaCFG outperforms state-of-the-art baselines in both search efficiency and trading profitability. Beyond trading strategies, AlphaCFG serves as a general framework for symbolic factor discovery and refinement across quantitative finance, including asset pricing and portfolio construction.",
+    "authors": [
+      "Han Yang",
+      "Dong Hao",
+      "Zhuohan Wang",
+      "Qi Shi",
+      "Xingtong Li"
+    ],
+    "published": "2026-01-29",
+    "categories": [
+      "q-fin.CP",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.22119v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.22119v1",
+    "fetched_at": "2026-01-30T08:43:55.189949"
+  },
+  {
+    "id": "2601.22113v1",
+    "title": "Diverse Approaches to Optimal Execution Schedule Generation",
+    "abstract": "We present the first application of MAP-Elites, a quality-diversity algorithm, to trade execution. Rather than searching for a single optimal policy, MAP-Elites generates a diverse portfolio of regime-specialist strategies indexed by liquidity and volatility conditions. Individual specialists achieve 8-10% performance improvements within their behavioural niches, while other cells show degradation, suggesting opportunities for ensemble approaches that combine improved specialists with the baseline PPO policy. Results indicate that quality-diversity methods offer promise for regime-adaptive execution, though substantial computational resources per behavioural cell may be required for robust specialist development across all market conditions. To ensure experimental integrity, we develop a calibrated Gymnasium environment focused on order scheduling rather than tactical placement decisions. The simulator features a transient impact model with exponential decay and square-root volume scaling, fit to 400+ U.S. equities with R^2>0.02 out-of-sample. Within this environment, two Proximal Policy Optimization architectures - both MLP and CNN feature extractors - demonstrate substantial improvements over industry baselines, with the CNN variant achieving 2.13 bps arrival slippage versus 5.23 bps for VWAP on 4,900 out-of-sample orders ($21B notional). These results validate both the simulation realism and provide strong single-policy baselines for quality-diversity methods.",
+    "authors": [
+      "Robert de Witt",
+      "Mikko S. Pakkanen"
+    ],
+    "published": "2026-01-29",
+    "categories": [
+      "q-fin.TR",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.22113v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.22113v1",
+    "fetched_at": "2026-01-30T08:43:55.189981"
+  },
+  {
+    "id": "2601.21447v1",
+    "title": "Trade uncertainty impact on stock-bond correlations: Insights from conditional correlation models",
+    "abstract": "This paper investigates the impact of Trade Policy Uncertainty (TPU) on stock-bond correlation dynamics in the United States. Using daily data on major U.S. stock indices and the 10-year Treasury bond from 2015 to 2025, we estimate correlation within a two-step GARCH-based framework, relying on multivariate specifications, including Constant Conditional Correlation (CCC), Smooth Transition Conditional Correlation (STCC), and Dynamic Conditional Correlation (DCC) models. We extend these frameworks by incorporating TPU index and a presidential dummy to capture effects of trade uncertainty and government cycles. The findings show that constant correlation models are strongly rejected in favor of time-varying specifications. Both STCC and DCC models confirm TPU's central role in driving correlation dynamics, with significant differences across political regimes. DCC models augmented with TPU and political effects deliver the best in-sample fit and strongest forecasting performance, as measured by statistical and economic loss functions.",
+    "authors": [
+      "Demetrio Lacava",
+      "Edoardo Otranto"
+    ],
+    "published": "2026-01-29",
+    "categories": [
+      "q-fin.ST"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.21447v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.21447v1",
+    "fetched_at": "2026-01-30T08:43:55.190004"
+  },
+  {
+    "id": "2601.21272v1",
+    "title": "Finite-Sample Properties of Model Specification Tests for Multivariate Dynamic Regression Models",
+    "abstract": "This paper proposes a new multivariate model specification test that generalizes Durbin regression to a seemingly unrelated regression framework and reframes the Durbin approach as a GLS-class estimator. The proposed estimator explicitly models cross-equation dependence and the joint second-order dynamics of regressors and disturbances. It remains consistent under a comparatively weak dependence condition in which conventional OLS- and GLS-based estimators can be inconsistent, and it is asymptotically efficient under stronger conditions. Monte Carlo experiments indicate that the associated Wald test achieves improved size control and competitive power in finite samples, especially when combined with a bootstrap-based bias correction. An empirical application further illustrates that the proposed procedure delivers stable inference and is practically useful for multi-equation specification testing.",
+    "authors": [
+      "Koichiro Moriya",
+      "Akihiko Noda"
+    ],
+    "published": "2026-01-29",
+    "categories": [
+      "econ.EM",
+      "q-fin.PR",
+      "q-fin.ST"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.21272v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.21272v1",
+    "fetched_at": "2026-01-30T08:43:55.190025"
+  },
+  {
+    "id": "2601.20251v2",
+    "title": "Efficient Evaluation of LLM Performance with Statistical Guarantees",
+    "abstract": "Exhaustively evaluating many large language models (LLMs) on a large suite of benchmarks is expensive. We cast benchmarking as finite-population inference and, under a fixed query budget, seek tight confidence intervals (CIs) for model accuracy with valid frequentist coverage. We propose Factorized Active Querying (FAQ), which (a) leverages historical information through a Bayesian factor model; (b) adaptively selects questions using a hybrid variance-reduction/active-learning sampling policy; and (c) maintains validity through Proactive Active Inference -- a finite-population extension of active inference (Zrnic & Candès, 2024) that enables direct question selection while preserving coverage. With negligible overhead cost, FAQ delivers up to $5\\times$ effective sample size gains over strong baselines on two benchmark suites, across varying historical-data missingness levels: this means that it matches the CI width of uniform sampling while using up to $5\\times$ fewer queries. We release our source code and our curated datasets to support reproducible evaluation and future research.",
+    "authors": [
+      "Skyler Wu",
+      "Yash Nair",
+      "Emmanuel J. Candès"
+    ],
+    "published": "2026-01-28",
+    "categories": [
+      "stat.ML",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.20251v2",
+    "arxiv_url": "https://arxiv.org/abs/2601.20251v2",
+    "fetched_at": "2026-01-30T08:44:01.312973"
+  },
+  {
+    "id": "2601.21802v1",
+    "title": "A Unified XAI-LLM Approach for EndotrachealSuctioning Activity Recognition",
+    "abstract": "Endotracheal suctioning (ES) is an invasive yet essential clinical procedure that requires a high degree of skill to minimize patient risk - particularly in home care and educational settings, where consistent supervision may be limited. Despite its critical importance, automated recognition and feedback systems for ES training remain underexplored. To address this gap, this study proposes a unified, LLM-centered framework for video-based activity recognition benchmarked against conventional machine learning and deep learning approaches, and a pilot study on feedback generation. Within this framework, the Large Language Model (LLM) serves as the central reasoning module, performing both spatiotemporal activity recognition and explainable decision analysis from video data. Furthermore, the LLM is capable of verbalizing feedback in natural language, thereby translating complex technical insights into accessible, human-understandable guidance for trainees. Experimental results demonstrate that the proposed LLM-based approach outperforms baseline models, achieving an improvement of approximately 15-20\\% in both accuracy and F1 score. Beyond recognition, the framework incorporates a pilot student-support module built upon anomaly detection and explainable AI (XAI) principles, which provides automated, interpretable feedback highlighting correct actions and suggesting targeted improvements. Collectively, these contributions establish a scalable, interpretable, and data-driven foundation for advancing nursing education, enhancing training efficiency, and ultimately improving patient safety.",
+    "authors": [
+      "Hoang Khang Phan",
+      "Quang Vinh Dang",
+      "Noriyo Colley",
+      "Christina Garcia",
+      "Nhat Tan Le"
+    ],
+    "published": "2026-01-29",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.21802v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.21802v1",
+    "fetched_at": "2026-01-30T08:44:07.437308"
+  },
+  {
+    "id": "2601.21463v1",
+    "title": "Unifying Speech Editing Detection and Content Localization via Prior-Enhanced Audio LLMs",
+    "abstract": "Speech editing achieves semantic inversion by performing fine-grained segment-level manipulation on original utterances, while preserving global perceptual naturalness. Existing detection studies mainly focus on manually edited speech with explicit splicing artifacts, and therefore struggle to cope with emerging end-to-end neural speech editing techniques that generate seamless acoustic transitions. To address this challenge, we first construct a large-scale bilingual dataset, AiEdit, which leverages large language models to drive precise semantic tampering logic and employs multiple advanced neural speech editing methods for data synthesis, thereby filling the gap of high-quality speech editing datasets. Building upon this foundation, we propose PELM (Prior-Enhanced Audio Large Language Model), the first large-model framework that unifies speech editing detection and content localization by formulating them as an audio question answering task. To mitigate the inherent forgery bias and semantic-priority bias observed in existing audio large models, PELM incorporates word-level probability priors to provide explicit acoustic cues, and further designs a centroid-aggregation-based acoustic consistency perception loss to explicitly enforce the modeling of subtle local distribution anomalies. Extensive experimental results demonstrate that PELM significantly outperforms state-of-the-art methods on both the HumanEdit and AiEdit datasets, achieving equal error rates (EER) of 0.57\\% and 9.28\\% (localization), respectively.",
+    "authors": [
+      "Jun Xue",
+      "Yi Chai",
+      "Yanzhen Ren",
+      "Jinshen He",
+      "Zhiqiang Tang",
+      "Zhuolin Yi",
+      "Yihuan Huang",
+      "Yuankun Xie",
+      "Yujie Chen"
+    ],
+    "published": "2026-01-29",
+    "categories": [
+      "cs.SD",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.21463v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.21463v1",
+    "fetched_at": "2026-01-30T08:44:07.437348"
+  },
+  {
+    "id": "2601.21359v1",
+    "title": "Graph-Free Root Cause Analysis",
+    "abstract": "Failures in complex systems demand rapid Root Cause Analysis (RCA) to prevent cascading damage. Existing RCA methods that operate without dependency graph typically assume that the root cause having the highest anomaly score. This assumption fails when faults propagate, as a small delay at the root cause can accumulate into a much larger anomaly downstream. In this paper, we propose PRISM, a simple and efficient framework for RCA when the dependency graph is absent. We formulate a class of component-based systems under which PRISM performs RCA with theoretical guarantees. On 735 failures across 9 real-world datasets, PRISM achieves 68% Top-1 accuracy, a 258% improvement over the best baseline, while requiring only 8ms per diagnosis.",
+    "authors": [
+      "Luan Pham"
+    ],
+    "published": "2026-01-29",
+    "categories": [
+      "cs.LG",
+      "cs.SE"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.21359v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.21359v1",
+    "fetched_at": "2026-01-30T08:44:07.437367"
+  },
+  {
+    "id": "2601.21171v1",
+    "title": "AC2L-GAD: Active Counterfactual Contrastive Learning for Graph Anomaly Detection",
+    "abstract": "Graph anomaly detection aims to identify abnormal patterns in networks, but faces significant challenges from label scarcity and extreme class imbalance. While graph contrastive learning offers a promising unsupervised solution, existing methods suffer from two critical limitations: random augmentations break semantic consistency in positive pairs, while naive negative sampling produces trivial, uninformative contrasts. We propose AC2L-GAD, an Active Counterfactual Contrastive Learning framework that addresses both limitations through principled counterfactual reasoning. By combining information-theoretic active selection with counterfactual generation, our approach identifies structurally complex nodes and generates anomaly-preserving positive augmentations alongside normal negative counterparts that provide hard contrasts, while restricting expensive counterfactual generation to a strategically selected subset. This design reduces computational overhead by approximately 65% compared to full-graph counterfactual generation while maintaining detection quality. Experiments on nine benchmark datasets, including real-world financial transaction graphs from GADBench, show that AC2L-GAD achieves competitive or superior performance compared to state-of-the-art baselines, with notable gains in datasets where anomalies exhibit complex attribute-structure interactions.",
+    "authors": [
+      "Kamal Berahmand",
+      "Saman Forouzandeh",
+      "Mehrnoush Mohammadi",
+      "Parham Moradi",
+      "Mahdi Jalili"
+    ],
+    "published": "2026-01-29",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.21171v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.21171v1",
+    "fetched_at": "2026-01-30T08:44:07.437393"
+  },
+  {
+    "id": "2601.21050v1",
+    "title": "SMKC: Sketch Based Kernel Correlation Images for Variable Cardinality Time Series Anomaly Detection",
+    "abstract": "Conventional anomaly detection in multivariate time series relies on the assumption that the set of observed variables remains static. In operational environments, however, monitoring systems frequently experience sensor churn. Signals may appear, disappear, or be renamed, creating data windows where the cardinality varies and may include values unseen during training. To address this challenge, we propose SMKC, a framework that decouples the dynamic input structure from the anomaly detector. We first employ permutation-invariant feature hashing to sketch raw inputs into a fixed size state sequence. We then construct a hybrid kernel image to capture global temporal structure through pairwise comparisons of the sequence and its derivatives. The model learns normal patterns using masked reconstruction and a teacher-student prediction objective. Our evaluation reveals that robust log-distance channels provide the primary discriminative signal, whereas cosine representations often fail to capture sufficient contrast. Notably, we find that a detector using random projections and nearest neighbors on the SMKC representation performs competitively with fully trained baselines without requiring gradient updates. This highlights the effectiveness of the representation itself and offers a practical cold-start solution for resource-constrained deployments.",
+    "authors": [
+      "Haokun Zhou"
+    ],
+    "published": "2026-01-28",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.21050v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.21050v1",
+    "fetched_at": "2026-01-30T08:44:07.437410"
+  },
+  {
+    "id": "2601.22151v1",
+    "title": "Late Breaking Results: Conversion of Neural Networks into Logic Flows for Edge Computing",
+    "abstract": "Neural networks have been successfully applied in various resource-constrained edge devices, where usually central processing units (CPUs) instead of graphics processing units exist due to limited power availability. State-of-the-art research still focuses on efficiently executing enormous numbers of multiply-accumulate (MAC) operations. However, CPUs themselves are not good at executing such mathematical operations on a large scale, since they are more suited to execute control flow logic, i.e., computer algorithms. To enhance the computation efficiency of neural networks on CPUs, in this paper, we propose to convert them into logic flows for execution. Specifically, neural networks are first converted into equivalent decision trees, from which decision paths with constant leaves are then selected and compressed into logic flows. Such logic flows consist of if and else structures and a reduced number of MAC operations. Experimental results demonstrate that the latency can be reduced by up to 14.9 % on a simulated RISC-V CPU without any accuracy degradation.   The code is open source at https://github.com/TUDa-HWAI/NN2Logic",
+    "authors": [
+      "Daniel Stein",
+      "Shaoyi Huang",
+      "Rolf Drechsler",
+      "Bing Li",
+      "Grace Li Zhang"
+    ],
+    "published": "2026-01-29",
+    "categories": [
+      "cs.LG",
+      "eess.SY"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.22151v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.22151v1",
+    "fetched_at": "2026-01-30T08:44:35.038155"
+  },
+  {
+    "id": "2601.22037v1",
+    "title": "Optimizing Agentic Workflows using Meta-tools",
+    "abstract": "Agentic AI enables LLM to dynamically reason, plan, and interact with tools to solve complex tasks. However, agentic workflows often require many iterative reasoning steps and tool invocations, leading to significant operational expense, end-to-end latency and failures due to hallucinations. This work introduces Agent Workflow Optimization (AWO), a framework that identifies and optimizes redundant tool execution patterns to improve the efficiency and robustness of agentic workflows. AWO analyzes existing workflow traces to discover recurring sequences of tool calls and transforms them into meta-tools, which are deterministic, composite tools that bundle multiple agent actions into a single invocation. Meta-tools bypass unnecessary intermediate LLM reasoning steps and reduce operational cost while also shortening execution paths, leading to fewer failures. Experiments on two agentic AI benchmarks show that AWO reduces the number of LLM calls up to 11.9% while also increasing the task success rate by up to 4.2 percent points.",
+    "authors": [
+      "Sami Abuzakuk",
+      "Anne-Marie Kermarrec",
+      "Rishi Sharma",
+      "Rasmus Moorits Veski",
+      "Martijn de Vos"
+    ],
+    "published": "2026-01-29",
+    "categories": [
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.22037v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.22037v1",
+    "fetched_at": "2026-01-30T08:44:35.038210"
+  },
+  {
+    "id": "2601.21993v1",
+    "title": "Liquid Interfaces: A Dynamic Ontology for the Interoperability of Autonomous Systems",
+    "abstract": "Contemporary software architectures struggle to support autonomous agents whose reasoning is adaptive, probabilistic, and context-dependent, while system integration remains dominated by static interfaces and deterministic contracts. This paper introduces Liquid Interfaces, a coordination paradigm in which interfaces are not persistent technical artifacts, but ephemeral relational events that emerge through intention articulation and semantic negotiation at runtime.We formalize this model and present the Liquid Interface Protocol (LIP),which governs intention-driven interaction, negotiated execution, and enforce ephemerality under semantic uncertainty. We further discuss the governance implications of this approach and describe a reference architecture that demonstrates practical feasibility. Liquid Interfaces provide a principled foundation for adaptive coordination in agent-based systems",
+    "authors": [
+      "Dhiogo de Sá",
+      "Carlos Schmiedel",
+      "Carlos Pereira Lopes"
+    ],
+    "published": "2026-01-29",
+    "categories": [
+      "cs.AI",
+      "cs.SE"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.21993v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.21993v1",
+    "fetched_at": "2026-01-30T08:44:35.038231"
+  },
+  {
+    "id": "2601.21978v1",
+    "title": "Bridging Graph Structure and Knowledge-Guided Editing for Interpretable Temporal Knowledge Graph Reasoning",
+    "abstract": "Temporal knowledge graph reasoning (TKGR) aims to predict future events by inferring missing entities with dynamic knowledge structures. Existing LLM-based reasoning methods prioritize contextual over structural relations, struggling to extract relevant subgraphs from dynamic graphs. This limits structural information understanding, leading to unstructured, hallucination-prone inferences especially with temporal inconsistencies. To address this problem, we propose IGETR (Integration of Graph and Editing-enhanced Temporal Reasoning), a hybrid reasoning framework that combines the structured temporal modeling capabilities of Graph Neural Networks (GNNs) with the contextual understanding of LLMs. IGETR operates through a three-stage pipeline. The first stage aims to ground the reasoning process in the actual data by identifying structurally and temporally coherent candidate paths through a temporal GNN, ensuring that inference starts from reliable graph-based evidence. The second stage introduces LLM-guided path editing to address logical and semantic inconsistencies, leveraging external knowledge to refine and enhance the initial paths. The final stage focuses on integrating the refined reasoning paths to produce predictions that are both accurate and interpretable. Experiments on standard TKG benchmarks show that IGETR achieves state-of-the-art performance, outperforming strong baselines with relative improvements of up to 5.6% on Hits@1 and 8.1% on Hits@3 on the challenging ICEWS datasets. Additionally, we execute ablation studies and additional analyses confirm the effectiveness of each component.",
+    "authors": [
+      "Shiqi Fan",
+      "Quanming Yao",
+      "Hongyi Nie",
+      "Wentao Ma",
+      "Zhen Wang",
+      "Wen Hua"
+    ],
+    "published": "2026-01-29",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.21978v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.21978v1",
+    "fetched_at": "2026-01-30T08:44:35.038256"
+  },
+  {
+    "id": "2601.21972v1",
+    "title": "Learning Decentralized LLM Collaboration with Multi-Agent Actor Critic",
+    "abstract": "Recent work has explored optimizing LLM collaboration through Multi-Agent Reinforcement Learning (MARL). However, most MARL fine-tuning approaches rely on predefined execution protocols, which often require centralized execution. Decentralized LLM collaboration is more appealing in practice, as agents can run inference in parallel with flexible deployments. Also, current approaches use Monte Carlo methods for fine-tuning, which suffer from high variance and thus require more samples to train effectively. Actor-critic methods are prevalent in MARL for dealing with these issues, so we developed Multi-Agent Actor-Critic (MAAC) methods to optimize decentralized LLM collaboration. In this paper, we analyze when and why these MAAC methods are beneficial. We propose 2 MAAC approaches, \\textbf{CoLLM-CC} with a \\textbf{C}entralized \\textbf{C}ritic and \\textbf{CoLLM-DC} with \\textbf{D}ecentralized \\textbf{C}ritics. Our experiments across writing, coding, and game-playing domains show that Monte Carlo methods and CoLLM-DC can achieve performance comparable to CoLLM-CC in short-horizon and dense-reward settings. However, they both underperform CoLLM-CC on long-horizon or sparse-reward tasks, where Monte Carlo methods require substantially more samples and CoLLM-DC struggles to converge. Our code is available at https://github.com/OpenMLRL/CoMLRL/releases/tag/v1.3.2.",
+    "authors": [
+      "Shuo Liu",
+      "Tianle Chen",
+      "Ryan Amiri",
+      "Christopher Amato"
+    ],
+    "published": "2026-01-29",
+    "categories": [
+      "cs.AI",
+      "cs.DC",
+      "cs.MA"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.21972v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.21972v1",
+    "fetched_at": "2026-01-30T08:44:35.038280"
+  },
+  {
+    "id": "2601.21971v1",
+    "title": "MoE-ACT: Improving Surgical Imitation Learning Policies through Supervised Mixture-of-Experts",
+    "abstract": "Imitation learning has achieved remarkable success in robotic manipulation, yet its application to surgical robotics remains challenging due to data scarcity, constrained workspaces, and the need for an exceptional level of safety and predictability. We present a supervised Mixture-of-Experts (MoE) architecture designed for phase-structured surgical manipulation tasks, which can be added on top of any autonomous policy. Unlike prior surgical robot learning approaches that rely on multi-camera setups or thousands of demonstrations, we show that a lightweight action decoder policy like Action Chunking Transformer (ACT) can learn complex, long-horizon manipulation from less than 150 demonstrations using solely stereo endoscopic images, when equipped with our architecture. We evaluate our approach on the collaborative surgical task of bowel grasping and retraction, where a robot assistant interprets visual cues from a human surgeon, executes targeted grasping on deformable tissue, and performs sustained retraction. We benchmark our method against state-of-the-art Vision-Language-Action (VLA) models and the standard ACT baseline. Our results show that generalist VLAs fail to acquire the task entirely, even under standard in-distribution conditions. Furthermore, while standard ACT achieves moderate success in-distribution, adopting a supervised MoE architecture significantly boosts its performance, yielding higher success rates in-distribution and demonstrating superior robustness in out-of-distribution scenarios, including novel grasp locations, reduced illumination, and partial occlusions. Notably, it generalizes to unseen testing viewpoints and also transfers zero-shot to ex vivo porcine tissue without additional training, offering a promising pathway toward in vivo deployment. To support this, we present qualitative preliminary results of policy roll-outs during in vivo porcine surgery.",
+    "authors": [
+      "Lorenzo Mazza",
+      "Ariel Rodriguez",
+      "Rayan Younis",
+      "Martin Lelis",
+      "Ortrun Hellig",
+      "Chenpan Li",
+      "Sebastian Bodenstedt",
+      "Martin Wagner",
+      "Stefanie Speidel"
+    ],
+    "published": "2026-01-29",
+    "categories": [
+      "cs.RO",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.21971v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.21971v1",
+    "fetched_at": "2026-01-30T08:44:35.038313"
+  },
+  {
+    "id": "2601.21947v1",
+    "title": "ToolWeaver: Weaving Collaborative Semantics for Scalable Tool Use in Large Language Models",
+    "abstract": "Prevalent retrieval-based tool-use pipelines struggle with a dual semantic challenge: their retrievers often employ encoders that fail to capture complex semantics, while the Large Language Model (LLM) itself lacks intrinsic tool knowledge from its natural language pretraining. Generative methods offer a powerful alternative by unifying selection and execution, tasking the LLM to directly learn and generate tool identifiers. However, the common practice of mapping each tool to a unique new token introduces substantial limitations: it creates a scalability and generalization crisis, as the vocabulary size explodes and each tool is assigned a semantically isolated token. This approach also creates a semantic bottleneck that hinders the learning of collaborative tool relationships, as the model must infer them from sparse co-occurrences of monolithic tool IDs within a vast library. To address these limitations, we propose ToolWeaver, a novel generative tool learning framework that encodes tools into hierarchical sequences. This approach makes vocabulary expansion logarithmic to the number of tools. Crucially, it enables the model to learn collaborative patterns from the dense co-occurrence of shared codes, rather than the sparse co-occurrence of monolithic tool IDs. We generate these structured codes through a novel tokenization process designed to weave together a tool's intrinsic semantics with its extrinsic co-usage patterns. These structured codes are then integrated into the LLM through a generative alignment stage, where the model is fine-tuned to produce the hierarchical code sequences. Evaluation results with nearly 47,000 tools show that ToolWeaver significantly outperforms state-of-the-art methods, establishing a more scalable, generalizable, and semantically-aware foundation for advanced tool-augmented agents.",
+    "authors": [
+      "Bowen Fang",
+      "Wen Ye",
+      "Yunyue Su",
+      "Jinghao Zhang",
+      "Qiang Liu",
+      "Yesheng Liu",
+      "Xin Sun",
+      "Shu Wu",
+      "Jiabing Yang",
+      "Baole Wei",
+      "Liang Wang"
+    ],
+    "published": "2026-01-29",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.21947v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.21947v1",
+    "fetched_at": "2026-01-30T08:44:35.038353"
+  },
+  {
+    "id": "2601.21937v1",
+    "title": "Retrieval-Infused Reasoning Sandbox: A Benchmark for Decoupling Retrieval and Reasoning Capabilities",
+    "abstract": "Despite strong performance on existing benchmarks, it remains unclear whether large language models can reason over genuinely novel scientific information. Most evaluations score end-to-end RAG pipelines, where reasoning is confounded with retrieval and toolchain choices, and the signal is further contaminated by parametric memorization and open-web volatility. We introduce DeR2, a controlled deep-research sandbox that isolates document-grounded reasoning while preserving core difficulties of deep search: multi-step synthesis, denoising, and evidence-based conclusion making. DeR2 decouples evidence access from reasoning via four regimes--Instruction-only, Concepts (gold concepts without documents), Related-only (only relevant documents), and Full-set (relevant documents plus topically related distractors)--yielding interpretable regime gaps that operationalize retrieval loss vs. reasoning loss and enable fine-grained error attribution. To prevent parametric leakage, we apply a two-phase validation that requires parametric failure without evidence while ensuring oracle-concept solvability. To ensure reproducibility, each instance provides a frozen document library (drawn from 2023-2025 theoretical papers) with expert-annotated concepts and validated rationales. Experiments across a diverse set of state-of-the-art foundation models reveal substantial variation and significant headroom: some models exhibit mode-switch fragility, performing worse with the Full-set than with Instruction-only, while others show structural concept misuse, correctly naming concepts but failing to execute them as procedures.",
+    "authors": [
+      "Shuangshuang Ying",
+      "Zheyu Wang",
+      "Yunjian Peng",
+      "Jin Chen",
+      "Yuhao Wu",
+      "Hongbin Lin",
+      "Dingyu He",
+      "Siyi Liu",
+      "Gengchen Yu",
+      "YinZhu Piao",
+      "Yuchen Wu",
+      "Xin Gui",
+      "Zhongyuan Peng",
+      "Xin Li",
+      "Xeron Du",
+      "Libo Qin",
+      "YiXin Cao",
+      "Ge Zhang"
+    ],
+    "published": "2026-01-29",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.21937v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.21937v1",
+    "fetched_at": "2026-01-30T08:44:35.038408"
+  },
+  {
+    "id": "2601.21916v1",
+    "title": "JADE: Bridging the Strategic-Operational Gap in Dynamic Agentic RAG",
+    "abstract": "The evolution of Retrieval-Augmented Generation (RAG) has shifted from static retrieval pipelines to dynamic, agentic workflows where a central planner orchestrates multi-turn reasoning. However, existing paradigms face a critical dichotomy: they either optimize modules jointly within rigid, fixed-graph architectures, or empower dynamic planning while treating executors as frozen, black-box tools. We identify that this \\textit{decoupled optimization} creates a ``strategic-operational mismatch,'' where sophisticated planning strategies fail to materialize due to unadapted local executors, often leading to negative performance gains despite increased system complexity. In this paper, we propose \\textbf{JADE} (\\textbf{J}oint \\textbf{A}gentic \\textbf{D}ynamic \\textbf{E}xecution), a unified framework for the joint optimization of planning and execution within dynamic, multi-turn workflows. By modeling the system as a cooperative multi-agent team unified under a single shared backbone, JADE enables end-to-end learning driven by outcome-based rewards. This approach facilitates \\textit{co-adaptation}: the planner learns to operate within the capability boundaries of the executors, while the executors evolve to align with high-level strategic intent. Empirical results demonstrate that JADE transforms disjoint modules into a synergistic system, yielding remarkable performance improvements via joint optimization and enabling a flexible balance between efficiency and effectiveness through dynamic workflow orchestration.",
+    "authors": [
+      "Yiqun Chen",
+      "Erhan Zhang",
+      "Tianyi Hu",
+      "Shijie Wang",
+      "Zixuan Yang",
+      "Meizhi Zhong",
+      "Xiaochi Wei",
+      "Yan Gao",
+      "Yi Wu",
+      "Yao Hu",
+      "Jiaxin Mao"
+    ],
+    "published": "2026-01-29",
+    "categories": [
+      "cs.AI",
+      "cs.CL",
+      "cs.IR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.21916v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.21916v1",
+    "fetched_at": "2026-01-30T08:44:35.038443"
+  },
+  {
+    "id": "2601.21909v1",
+    "title": "From Meta-Thought to Execution: Cognitively Aligned Post-Training for Generalizable and Reliable LLM Reasoning",
+    "abstract": "Current LLM post-training methods optimize complete reasoning trajectories through Supervised Fine-Tuning (SFT) followed by outcome-based Reinforcement Learning (RL). While effective, a closer examination reveals a fundamental gap: this approach does not align with how humans actually solve problems. Human cognition naturally decomposes problem-solving into two distinct stages: first acquiring abstract strategies (i.e., meta-knowledge) that generalize across problems, then adapting them to specific instances. In contrast, by treating complete trajectories as basic units, current methods are inherently problem-centric, entangling abstract strategies with problem-specific execution. To address this misalignment, we propose a cognitively-inspired framework that explicitly mirrors the two-stage human cognitive process. Specifically, Chain-of-Meta-Thought (CoMT) focuses supervised learning on abstract reasoning patterns without specific executions, enabling acquisition of generalizable strategies. Confidence-Calibrated Reinforcement Learning (CCRL) then optimizes task adaptation via confidence-aware rewards on intermediate steps, preventing overconfident errors from cascading and improving execution reliability. Experiments across four models and eight benchmarks show 2.19\\% and 4.63\\% improvements in-distribution and out-of-distribution respectively over standard methods, while reducing training time by 65-70% and token consumption by 50%, demonstrating that aligning post-training with human cognitive principles yields not only superior generalization but also enhanced training efficiency.",
+    "authors": [
+      "Shaojie Wang",
+      "Liang Zhang"
+    ],
+    "published": "2026-01-29",
+    "categories": [
+      "cs.AI",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.21909v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.21909v1",
+    "fetched_at": "2026-01-30T08:44:35.038463"
+  },
+  {
+    "id": "2601.21902v1",
+    "title": "Hardware-Triggered Backdoors",
+    "abstract": "Machine learning models are routinely deployed on a wide range of computing hardware. Although such hardware is typically expected to produce identical results, differences in its design can lead to small numerical variations during inference. In this work, we show that these variations can be exploited to create backdoors in machine learning models. The core idea is to shape the model's decision function such that it yields different predictions for the same input when executed on different hardware. This effect is achieved by locally moving the decision boundary close to a target input and then refining numerical deviations to flip the prediction on selected hardware. We empirically demonstrate that these hardware-triggered backdoors can be created reliably across common GPU accelerators. Our findings reveal a novel attack vector affecting the use of third-party models, and we investigate different defenses to counter this threat.",
+    "authors": [
+      "Jonas Möller",
+      "Erik Imgrund",
+      "Thorsten Eisenhofer",
+      "Konrad Rieck"
+    ],
+    "published": "2026-01-29",
+    "categories": [
+      "cs.LG",
+      "cs.CR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.21902v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.21902v1",
+    "fetched_at": "2026-01-30T08:44:35.038486"
+  },
+  {
+    "id": "2601.21841v1",
+    "title": "Embodied Task Planning via Graph-Informed Action Generation with Large Lanaguage Model",
+    "abstract": "While Large Language Models (LLMs) have demonstrated strong zero-shot reasoning capabilities, their deployment as embodied agents still faces fundamental challenges in long-horizon planning. Unlike open-ended text generation, embodied agents must decompose high-level intent into actionable sub-goals while strictly adhering to the logic of a dynamic, observed environment. Standard LLM planners frequently fail to maintain strategy coherence over extended horizons due to context window limitation or hallucinate transitions that violate constraints. We propose GiG, a novel planning framework that structures embodied agents' memory using a Graph-in-Graph architecture. Our approach employs a Graph Neural Network (GNN) to encode environmental states into embeddings, organizing these embeddings into action-connected execution trace graphs within an experience memory bank. By clustering these graph embeddings, the framework enables retrieval of structure-aware priors, allowing agents to ground current decisions in relevant past structural patterns. Furthermore, we introduce a novel bounded lookahead module that leverages symbolic transition logic to enhance the agents' planning capabilities through the grounded action projection. We evaluate our framework on three embodied planning benchmarks-Robotouille Synchronous, Robotouille Asynchronous, and ALFWorld. Our method outperforms state-of-the-art baselines, achieving Pass@1 performance gains of up to 22% on Robotouille Synchronous, 37% on Asynchronous, and 15% on ALFWorld with comparable or lower computational cost.",
+    "authors": [
+      "Xiang Li",
+      "Ning Yan",
+      "Masood Mortazavi"
+    ],
+    "published": "2026-01-29",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.21841v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.21841v1",
+    "fetched_at": "2026-01-30T08:44:35.038506"
+  },
+  {
+    "id": "2601.21822v1",
+    "title": "CORE:Toward Ubiquitous 6G Intelligence Through Collaborative Orchestration of Large Language Model Agents Over Hierarchical Edge",
+    "abstract": "Rapid advancements in sixth-generation (6G) networks and large language models (LLMs) have paved the way for ubiquitous intelligence, wherein seamless connectivity and distributed artificial intelligence (AI) have revolutionized various aspects of our lives.However, realizing this vision faces significant challenges owing to the fragmented and heterogeneous computing resources across hierarchical networks, which are insufficient for individual LLM agents to perform complex reasoning tasks.To address this issue, we propose Collaborative Orchestration Role at Edge (CORE), an innovative framework that employs a collaborative learning system in which multiple LLMs, each assigned a distinct functional role, are distributed across mobile devices and tiered edge servers. The system integrates three optimization modules, encompassing real-time perception,dynamic role orchestration, and pipeline-parallel execution, to facilitate efficient and rapid collaboration among distributed agents. Furthermore, we introduce a novel role affinity scheduling algorithm for dynamically orchestrating LLM role assignments across the hierarchical edge infrastructure, intelligently matching computational demands with available dispersed resources.Finally, comprehensive case studies and performance evaluations across various 6G application scenarios demonstrated the efficacy of CORE, revealing significant enhancements in the system efficiency and task completion rates. Building on these promising outcomes, we further validated the practical applicability of CORE by deploying it on a real-world edge-computing platform,that exhibits robust performance in operational environments.",
+    "authors": [
+      "Zitong Yu",
+      "Boquan Sun",
+      "Yang Li",
+      "Zheyan Qu",
+      "Xing Zhang"
+    ],
+    "published": "2026-01-29",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.21822v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.21822v1",
+    "fetched_at": "2026-01-30T08:44:35.038530"
+  },
+  {
+    "id": "2601.21797v1",
+    "title": "Enhancing Conversational Agents via Task-Oriented Adversarial Memory Adaptation",
+    "abstract": "Conversational agents struggle to handle long conversations due to context window limitations. Therefore, memory systems are developed to leverage essential historical information. Existing memory systems typically follow a pipeline of offline memory construction and update, and online retrieval. Despite the flexible online phase, the offline phase remains fixed and task-independent. In this phase, memory construction operates under a predefined workflow and fails to emphasize task relevant information. Meanwhile, memory updates are guided by generic metrics rather than task specific supervision. This leads to a misalignment between offline memory preparation and task requirements, which undermines downstream task performance. To this end, we propose an Adversarial Memory Adaptation mechanism (AMA) that aligns memory construction and update with task objectives by simulating task execution. Specifically, first, a challenger agent generates question answer pairs based on the original dialogues. The constructed memory is then used to answer these questions, simulating downstream inference. Subsequently, an evaluator agent assesses the responses and performs error analysis. Finally, an adapter agent analyzes the error cases and performs dual level updates on both the construction strategy and the content. Through this process, the memory system receives task aware supervision signals in advance during the offline phase, enhancing its adaptability to downstream tasks. AMA can be integrated into various existing memory systems, and extensive experiments on long dialogue benchmark LoCoMo demonstrate its effectiveness.",
+    "authors": [
+      "Yimin Deng",
+      "Yuqing Fu",
+      "Derong Xu",
+      "Yejing Wang",
+      "Wei Ni",
+      "Jingtong Gao",
+      "Xiaopeng Li",
+      "Chengxu Liu",
+      "Xiao Han",
+      "Guoshuai Zhao",
+      "Xiangyu Zhao",
+      "Li Zhu",
+      "Xueming Qian"
+    ],
+    "published": "2026-01-29",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.21797v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.21797v1",
+    "fetched_at": "2026-01-30T08:44:35.038568"
+  }
+]
