@@ -1,0 +1,1004 @@
+[
+  {
+    "id": "2601.23172v1",
+    "title": "A unified theory of order flow, market impact, and volatility",
+    "abstract": "We propose a microstructural model for the order flow in financial markets that distinguishes between {\\it core orders} and {\\it reaction flow}, both modeled as Hawkes processes. This model has a natural scaling limit that reconciles a number of salient empirical properties: persistent signed order flow, rough trading volume and volatility, and power-law market impact. In our framework, all these quantities are pinned down by a single statistic $H_0$, which measures the persistence of the core flow. Specifically, the signed flow converges to the sum of a fractional process with Hurst index $H_0$ and a martingale, while the limiting traded volume is a rough process with Hurst index $H_0-1/2$. No-arbitrage constraints imply that volatility is rough, with Hurst parameter $2H_0-3/2$, and that the price impact of trades follows a power law with exponent $2-2H_0$. The analysis of signed order flow data yields an estimate $H_0 \\approx 3/4$. This is not only consistent with the square-root law of market impact, but also turns out to match estimates for the roughness of traded volumes and volatilities remarkably well.",
+    "authors": [
+      "Johannes Muhle-Karbe",
+      "Youssef Ouazzani Chahd",
+      "Mathieu Rosenbaum",
+      "Grégoire Szymanski"
+    ],
+    "published": "2026-01-30",
+    "categories": [
+      "q-fin.ST",
+      "math.PR",
+      "q-fin.MF",
+      "q-fin.TR",
+      "stat.AP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.23172v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.23172v1",
+    "fetched_at": "2026-02-02T08:50:43.975778",
+    "chinese_title": "订单流、市场冲击与波动率的统一理论",
+    "chinese_summary": "论文提出区分核心订单与反应流（均建模为霍克斯过程）的金融市场微观结构模型，其缩放极限统一解释了持续有符号订单流、粗糙交易量与波动率、幂律市场冲击等经验特性；这些特性由单个统计量H₀决定，实证估计H₀≈3/4与相关经验规律一致。",
+    "tags": [
+      "Market Microstructure",
+      "Volatility",
+      "High Frequency",
+      "Algorithmic Trading"
+    ],
+    "key_contributions": [
+      "构建区分核心订单与反应流（均为霍克斯过程）的微观结构模型，其缩放极限统一解释了持续有符号订单流、粗糙交易量/波动率、幂律市场冲击等关键经验特性",
+      "揭示所有特性由单一统计量H₀决定，实证H₀≈3/4与市场冲击平方根律及交易量、波动率粗糙性估计高度一致"
+    ],
+    "processed_at": "2026-02-02T08:53:52.534209"
+  },
+  {
+    "id": "2601.22113v2",
+    "title": "Diverse Approaches to Optimal Execution Schedule Generation",
+    "abstract": "We present the first application of MAP-Elites, a quality-diversity algorithm, to trade execution. Rather than searching for a single optimal policy, MAP-Elites generates a diverse portfolio of regime-specialist strategies indexed by liquidity and volatility conditions. Individual specialists achieve 8-10% performance improvements within their behavioural niches, while other cells show degradation, suggesting opportunities for ensemble approaches that combine improved specialists with the baseline PPO policy. Results indicate that quality-diversity methods offer promise for regime-adaptive execution, though substantial computational resources per behavioural cell may be required for robust specialist development across all market conditions.   To ensure experimental integrity, we develop a calibrated Gymnasium environment focused on order scheduling rather than tactical placement decisions. The simulator features a transient impact model with exponential decay and square-root volume scaling, fit to 400+ U.S. equities with $R^2>0.02$ out-of-sample. Within this environment, two Proximal Policy Optimization architectures - both MLP and CNN feature extractors - demonstrate substantial improvements over industry baselines, with the CNN variant achieving 2.13 bps arrival slippage versus 5.23 bps for VWAP on 4,900 out-of-sample orders ($21B notional). These results validate both the simulation realism and provide strong single-policy baselines for quality-diversity methods.",
+    "authors": [
+      "Robert de Witt",
+      "Mikko S. Pakkanen"
+    ],
+    "published": "2026-01-29",
+    "categories": [
+      "q-fin.TR",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.22113v2",
+    "arxiv_url": "https://arxiv.org/abs/2601.22113v2",
+    "fetched_at": "2026-02-02T08:50:43.975844",
+    "chinese_title": "最优执行调度生成的多样化方法",
+    "chinese_summary": "论文首次将MAP-Elites质量多样性算法应用于交易执行，生成适配不同流动性和波动条件的 regime-specialist策略组合， niche内性能提升8-10%；同时开发了校准的交易执行仿真环境，并用PPO（含CNN特征提取器）构建了优于行业基准VWAP的单策略基线，为质量多样性方法提供支撑。",
+    "tags": [
+      "Reinforcement Learning",
+      "Algorithmic Trading",
+      "Execution",
+      "Market Microstructure"
+    ],
+    "key_contributions": [
+      "首次将MAP-Elites质量多样性算法应用于交易执行，生成适配不同市场条件的 regime-specialist策略组合， niche内性能提升8-10%",
+      "开发了校准的交易执行仿真环境，并基于PPO构建了优于VWAP的单策略基线，验证了仿真真实性与方法有效性"
+    ],
+    "processed_at": "2026-02-02T08:54:08.360642"
+  },
+  {
+    "id": "2601.22200v1",
+    "title": "Adaptive Benign Overfitting (ABO): Overparameterized RLS for Online Learning in Non-stationary Time-series",
+    "abstract": "Overparameterized models have recently challenged conventional learning theory by exhibiting improved generalization beyond the interpolation limit, a phenomenon known as benign overfitting. This work introduces Adaptive Benign Overfitting (ABO), extending the recursive least-squares (RLS) framework to this regime through a numerically stable formulation based on orthogonal-triangular updates. A QR-based exponentially weighted RLS (QR-EWRLS) algorithm is introduced, combining random Fourier feature mappings with forgetting-factor regularization to enable online adaptation under non-stationary conditions. The orthogonal decomposition prevents the numerical divergence associated with covariance-form RLS while retaining adaptability to evolving data distributions. Experiments on nonlinear synthetic time series confirm that the proposed approach maintains bounded residuals and stable condition numbers while reproducing the double-descent behavior characteristic of overparameterized models. Applications to forecasting foreign exchange and electricity demand show that ABO is highly accurate (comparable to baseline kernel methods) while achieving speed improvements of between 20 and 40 percent. The results provide a unified view linking adaptive filtering, kernel approximation, and benign overfitting within a stable online learning framework.",
+    "authors": [
+      "Luis Ontaneda Mijares",
+      "Nick Firoozye"
+    ],
+    "published": "2026-01-29",
+    "categories": [
+      "q-fin.ST",
+      "cs.LG",
+      "cs.MS",
+      "math.NA",
+      "stat.ML"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.22200v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.22200v1",
+    "fetched_at": "2026-02-02T08:50:43.975866",
+    "chinese_title": "自适应良性过拟合（ABO）：非平稳时间序列在线学习的过参数化递归最小二乘",
+    "chinese_summary": "本文提出自适应良性过拟合（ABO）框架，基于正交三角更新的数值稳定形式将递归最小二乘（RLS）扩展至过参数化场景，引入QR基指数加权RLS算法结合随机傅里叶特征映射与遗忘因子正则化，实现非平稳时间序列的稳定在线学习；实验表明该方法残差有界、条件数稳定，在外汇和电力需求预测中准确率堪比核方法且速度提升20%-40%。",
+    "tags": [
+      "Time Series",
+      "Deep Learning",
+      "Algorithmic Trading"
+    ],
+    "key_contributions": [
+      "提出自适应良性过拟合（ABO）框架，通过正交三角更新解决非平稳时间序列在线学习中RLS的数值发散问题，扩展至过参数化场景",
+      "提出QR基指数加权RLS算法，结合随机傅里叶特征与遗忘因子正则化，实现预测准确率堪比核方法且速度提升20%-40%"
+    ],
+    "processed_at": "2026-02-02T08:54:34.967123"
+  },
+  {
+    "id": "2601.23220v1",
+    "title": "Med-Scout: Curing MLLMs' Geometric Blindness in Medical Perception via Geometry-Aware RL Post-Training",
+    "abstract": "Despite recent Multimodal Large Language Models (MLLMs)' linguistic prowess in medical diagnosis, we find even state-of-the-art MLLMs suffer from a critical perceptual deficit: geometric blindness. This failure to ground outputs in objective geometric constraints leads to plausible yet factually incorrect hallucinations, rooted in training paradigms that prioritize linguistic fluency over geometric fidelity. This paper introduces Med-Scout, a novel framework that \"cures\" this blindness via Reinforcement Learning (RL) that leverages the intrinsic geometric logic latent within unlabeled medical images. Instead of relying on costly expert annotations, Med-Scout derives verifiable supervision signals through three strategic proxy tasks: Hierarchical Scale Localization, Topological Jigsaw Reconstruction, and Anomaly Consistency Detection. To rigorously quantify this deficit, we present Med-Scout-Bench, a new benchmark specifically designed to evaluate geometric perception. Extensive evaluations show that Med-Scout significantly mitigates geometric blindness, outperforming leading proprietary and open-source MLLMs by over 40% on our benchmark. Furthermore, this enhanced geometric perception generalizes to broader medical understanding, achieving superior results on radiological and comprehensive medical VQA tasks.",
+    "authors": [
+      "Anglin Liu",
+      "Ruichao Chen",
+      "Yi Lu",
+      "Hongxia Xu",
+      "Jintai Chen"
+    ],
+    "published": "2026-01-30",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.23220v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.23220v1",
+    "fetched_at": "2026-02-02T08:50:56.634402",
+    "chinese_title": "Med-Scout：通过几何感知强化学习后训练治愈多模态大语言模型在医疗感知中的几何盲症",
+    "chinese_summary": "本文发现主流多模态大语言模型（MLLM）存在医疗感知中的几何盲问题，提出Med-Scout框架，通过基于无标注医疗图像内在几何逻辑的强化学习（RL）后训练，利用分层尺度定位、拓扑拼图重建和异常一致性检测三个代理任务生成可验证监督信号；同时构建Med-Scout-Bench基准评估几何感知，实验表明该框架显著缓解几何盲，在基准上领先主流模型超40%，且泛化到医学VQA任务表现更优。",
+    "tags": [
+      "LLM",
+      "Reinforcement Learning",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出Med-Scout框架，通过几何感知强化学习后训练缓解MLLM医疗感知中的几何盲问题，无需昂贵专家标注，利用无标注图像的三个代理任务生成监督信号",
+      "构建Med-Scout-Bench新基准用于评估几何感知，实验验证该框架的有效性及泛化性"
+    ],
+    "processed_at": "2026-02-02T08:54:51.650408"
+  },
+  {
+    "id": "2601.23204v1",
+    "title": "TSAQA: Time Series Analysis Question And Answering Benchmark",
+    "abstract": "Time series data are integral to critical applications across domains such as finance, healthcare, transportation, and environmental science. While recent work has begun to explore multi-task time series question answering (QA), current benchmarks remain limited to forecasting and anomaly detection tasks. We introduce TSAQA, a novel unified benchmark designed to broaden task coverage and evaluate diverse temporal analysis capabilities. TSAQA integrates six diverse tasks under a single framework ranging from conventional analysis, including anomaly detection and classification, to advanced analysis, such as characterization, comparison, data transformation, and temporal relationship analysis. Spanning 210k samples across 13 domains, the dataset employs diverse formats, including true-or-false (TF), multiple-choice (MC), and a novel puzzling (PZ), to comprehensively assess time series analysis. Zero-shot evaluation demonstrates that these tasks are challenging for current Large Language Models (LLMs): the best-performing commercial LLM, Gemini-2.5-Flash, achieves an average score of only 65.08. Although instruction tuning boosts open-source performance: the best-performing open-source model, LLaMA-3.1-8B, shows significant room for improvement, highlighting the complexity of temporal analysis for LLMs.",
+    "authors": [
+      "Baoyu Jing",
+      "Sanhorn Chen",
+      "Lecheng Zheng",
+      "Boyu Liu",
+      "Zihao Li",
+      "Jiaru Zou",
+      "Tianxin Wei",
+      "Zhining Liu",
+      "Zhichen Zeng",
+      "Ruizhong Qiu",
+      "Xiao Lin",
+      "Yuchen Yan",
+      "Dongqi Fu",
+      "Jingchao Ni",
+      "Jingrui He",
+      "Hanghang Tong"
+    ],
+    "published": "2026-01-30",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.23204v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.23204v1",
+    "fetched_at": "2026-02-02T08:50:56.634458",
+    "chinese_title": "TSAQA：时间序列分析问答基准",
+    "chinese_summary": "论文提出TSAQA这一统一的时间序列分析问答基准，覆盖异常检测、分类等传统任务及表征、比较等高级任务，包含21万跨13领域样本与TF、MC、PZ三种问答格式；零样本评估显示现有LLM（如Gemini-2.5-Flash平均得分65.08）面临挑战，指令微调提升开源模型但仍有改进空间。",
+    "tags": [
+      "LLM",
+      "Time Series",
+      "Benchmark",
+      "NLP"
+    ],
+    "key_contributions": [
+      "构建TSAQA统一基准，覆盖多类时间序列分析任务并包含多样化样本与问答格式",
+      "通过评估揭示现有LLM在时间序列分析问答任务上的挑战与改进需求"
+    ],
+    "processed_at": "2026-02-02T08:55:03.067568"
+  },
+  {
+    "id": "2601.23188v1",
+    "title": "Deep Search with Hierarchical Meta-Cognitive Monitoring Inspired by Cognitive Neuroscience",
+    "abstract": "Deep search agents powered by large language models have demonstrated strong capabilities in multi-step retrieval, reasoning, and long-horizon task execution. However, their practical failures often stem from the lack of mechanisms to monitor and regulate reasoning and retrieval states as tasks evolve under uncertainty. Insights from cognitive neuroscience suggest that human metacognition is hierarchically organized, integrating fast anomaly detection with selectively triggered, experience-driven reflection. In this work, we propose Deep Search with Meta-Cognitive Monitoring (DS-MCM), a deep search framework augmented with an explicit hierarchical metacognitive monitoring mechanism. DS-MCM integrates a Fast Consistency Monitor, which performs lightweight checks on the alignment between external evidence and internal reasoning confidence, and a Slow Experience-Driven Monitor, which is selectively activated to guide corrective intervention based on experience memory from historical agent trajectories. By embedding monitoring directly into the reasoning-retrieval loop, DS-MCM determines both when intervention is warranted and how corrective actions should be informed by prior experience. Experiments across multiple deep search benchmarks and backbone models demonstrate that DS-MCM consistently improves performance and robustness.",
+    "authors": [
+      "Zhongxiang Sun",
+      "Qipeng Wang",
+      "Weijie Yu",
+      "Jingxuan Yang",
+      "Haolang Lu",
+      "Jun Xu"
+    ],
+    "published": "2026-01-30",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.23188v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.23188v1",
+    "fetched_at": "2026-02-02T08:50:56.634485",
+    "chinese_title": "基于认知神经科学的分层元认知监控深度搜索",
+    "chinese_summary": "现有大语言模型驱动的深度搜索代理因缺乏监控调节推理与检索状态的机制易失败，受认知神经科学中人类分层元认知启发，论文提出DS-MCM框架，整合快速一致性监控（轻量检查外部证据与内部推理置信度对齐）和慢速经验驱动监控（选择性激活并基于历史轨迹经验指导纠正），嵌入推理-检索循环以确定干预时机与方式，实验验证其性能和鲁棒性提升。",
+    "tags": [
+      "LLM",
+      "Deep Learning",
+      "NLP",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "实验证明DS-MCM在多深度搜索基准和骨干模型上提升性能与鲁棒性"
+    ],
+    "processed_at": "2026-02-02T08:55:23.889812"
+  },
+  {
+    "id": "2601.23147v1",
+    "title": "Securing Time in Energy IoT: A Clock-Dynamics-Aware Spatio-Temporal Graph Attention Network for Clock Drift Attacks and Y2K38 Failures",
+    "abstract": "The integrity of time in distributed Internet of Things (IoT) devices is crucial for reliable operation in energy cyber-physical systems, such as smart grids and microgrids. However, IoT systems are vulnerable to clock drift, time-synchronization manipulation, and timestamp discontinuities, such as the Year 2038 (Y2K38) Unix overflow, all of which disrupt temporal ordering. Conventional anomaly-detection models, which assume reliable timestamps, fail to capture temporal inconsistencies. This paper introduces STGAT (Spatio-Temporal Graph Attention Network), a framework that models both temporal distortion and inter-device consistency in energy IoT systems. STGAT combines drift-aware temporal embeddings and temporal self-attention to capture corrupted time evolution at individual devices, and uses graph attention to model spatial propagation of timing errors. A curvature-regularized latent representation geometrically separates normal clock evolution from anomalies caused by drift, synchronization offsets, and overflow events. Experimental results on energy IoT telemetry with controlled timing perturbations show that STGAT achieves 95.7% accuracy, outperforming recurrent, transformer, and graph-based baselines with significant improvements (d > 1.8, p < 0.001). Additionally, STGAT reduces detection delay by 26%, achieving a 2.3-time-step delay while maintaining stable performance under overflow, drift, and physical inconsistencies.",
+    "authors": [
+      "Saeid Jamshidi",
+      "Omar Abdul Wahab",
+      "Rolando Herrero",
+      "Foutse Khomh"
+    ],
+    "published": "2026-01-30",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.23147v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.23147v1",
+    "fetched_at": "2026-02-02T08:50:56.634510",
+    "chinese_title": "能源物联网中的时间安全：时钟动态感知的时空图注意力网络用于时钟漂移攻击与Y2K38故障",
+    "chinese_summary": "针对能源物联网中时钟漂移、时间同步篡改及Y2K38溢出等时间完整性威胁，论文提出STGAT框架，结合漂移感知时间嵌入、自注意力与图注意力，建模单设备时间畸变及误差空间传播，通过曲率正则化隐表示区分正常与异常时钟演化；实验表明其准确率达95.7%优于基线，检测延迟降低26%。",
+    "tags": [
+      "Anomaly",
+      "Graph Neural Network",
+      "Deep Learning",
+      "Time Series"
+    ],
+    "key_contributions": [
+      "提出STGAT框架，融合漂移感知时间嵌入、自注意力与图注意力，同时捕捉单设备时间畸变和跨设备时间误差空间传播",
+      "通过曲率正则化隐表示几何分离正常与异常时钟演化，在时钟漂移、同步偏移及Y2K38溢出检测中性能优于现有基线"
+    ],
+    "processed_at": "2026-02-02T08:55:40.238672"
+  },
+  {
+    "id": "2601.23114v1",
+    "title": "To See Far, Look Close: Evolutionary Forecasting for Long-term Time Series",
+    "abstract": "The prevailing Direct Forecasting (DF) paradigm dominates Long-term Time Series Forecasting (LTSF) by forcing models to predict the entire future horizon in a single forward pass. While efficient, this rigid coupling of output and evaluation horizons necessitates computationally prohibitive re-training for every target horizon. In this work, we uncover a counter-intuitive optimization anomaly: models trained on short horizons-when coupled with our proposed Evolutionary Forecasting (EF) paradigm-significantly outperform those trained directly on long horizons. We attribute this success to the mitigation of a fundamental optimization pathology inherent in DF, where conflicting gradients from distant futures cripple the learning of local dynamics. We establish EF as a unified generative framework, proving that DF is merely a degenerate special case of EF. Extensive experiments demonstrate that a singular EF model surpasses task-specific DF ensembles across standard benchmarks and exhibits robust asymptotic stability in extreme extrapolation. This work propels a paradigm shift in LTSF: moving from passive Static Mapping to autonomous Evolutionary Reasoning.",
+    "authors": [
+      "Jiaming Ma",
+      "Siyuan Mu",
+      "Ruilin Tang",
+      "Haofeng Ma",
+      "Qihe Huang",
+      "Zhengyang Zhou",
+      "Pengkun Wang",
+      "Binwu Wang",
+      "Yang Wang"
+    ],
+    "published": "2026-01-30",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.23114v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.23114v1",
+    "fetched_at": "2026-02-02T08:50:56.634542",
+    "chinese_title": "远观需近察：面向长时序预测的进化预测范式",
+    "chinese_summary": "针对长时序预测（LTSF）中直接预测（DF）范式需为不同目标horizon重训的计算瓶颈问题，本文提出进化预测（EF）范式，发现短horizon训练的模型结合EF可显著优于直接长horizon训练的模型（因缓解DF中远期未来梯度冲突的优化病理）；EF是统一生成框架（DF为其特例），实验表明单EF模型超任务特定DF集成且具极端外推的渐近稳定性。",
+    "tags": [
+      "Time Series",
+      "Deep Learning",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "揭示直接预测（DF）范式中远期未来梯度冲突的优化病理，提出进化预测（EF）范式并证明短horizon训练模型结合EF优于直接长horizon训练模型",
+      "建立EF为统一生成框架（DF为其特例），实验验证单EF模型超任务特定DF集成且具极端外推渐近稳定性"
+    ],
+    "processed_at": "2026-02-02T08:56:04.495519"
+  },
+  {
+    "id": "2601.23066v1",
+    "title": "Towards Explicit Acoustic Evidence Perception in Audio LLMs for Speech Deepfake Detection",
+    "abstract": "Speech deepfake detection (SDD) focuses on identifying whether a given speech signal is genuine or has been synthetically generated. Existing audio large language model (LLM)-based methods excel in content understanding; however, their predictions are often biased toward semantically correlated cues, which results in fine-grained acoustic artifacts being overlooked during the decisionmaking process. Consequently, fake speech with natural semantics can bypass detectors despite harboring subtle acoustic anomalies; this suggests that the challenge stems not from the absence of acoustic data, but from its inadequate accessibility when semantic-dominant reasoning prevails. To address this issue, we investigate SDD within the audio LLM paradigm and introduce SDD with Auditory Perception-enhanced Audio Large Language Model (SDD-APALLM), an acoustically enhanced framework designed to explicitly expose fine-grained time-frequency evidence as accessible acoustic cues. By combining raw audio with structured spectrograms, the proposed framework empowers audio LLMs to more effectively capture subtle acoustic inconsistencies without compromising their semantic understanding. Experimental results indicate consistent gains in detection accuracy and robustness, especially in cases where semantic cues are misleading. Further analysis reveals that these improvements stem from a coordinated utilization of semantic and acoustic information, as opposed to simple modality aggregation.",
+    "authors": [
+      "Xiaoxuan Guo",
+      "Yuankun Xie",
+      "Haonan Cheng",
+      "Jiayi Zhou",
+      "Jian Liu",
+      "Hengyan Huang",
+      "Long Ye",
+      "Qin Zhang"
+    ],
+    "published": "2026-01-30",
+    "categories": [
+      "cs.SD",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.23066v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.23066v1",
+    "fetched_at": "2026-02-02T08:50:56.634572",
+    "chinese_title": "面向语音深度伪造检测的音频大语言模型中显式声学证据感知研究",
+    "chinese_summary": "针对现有音频大语言模型（LLM）在语音深度伪造检测中偏向语义线索、忽略细粒度声学伪影的问题，本文提出声学增强框架SDD-APALLM，通过结合原始音频与结构化频谱图，使音频LLM更有效捕捉细微声学不一致且不损失语义理解；实验表明该框架在检测准确率和鲁棒性上有提升，尤其是语义误导场景，且改进源于语义与声学信息的协同利用而非简单模态聚合。",
+    "tags": [
+      "LLM",
+      "Deep Learning",
+      "Anomaly"
+    ],
+    "key_contributions": [
+      "提出SDD-APALLM框架，显式增强音频LLM对细粒度声学证据的感知，结合原始音频与频谱图实现语义-声学信息协同利用",
+      "实验验证该框架在语音深度伪造检测中准确率和鲁棒性提升，尤其适用于语义误导场景"
+    ],
+    "processed_at": "2026-02-02T08:56:20.514544"
+  },
+  {
+    "id": "2601.23026v1",
+    "title": "Causal Characterization of Measurement and Mechanistic Anomalies",
+    "abstract": "Root cause analysis of anomalies aims to identify those features that cause the deviation from the normal process. Existing methods ignore, however, that anomalies can arise through two fundamentally different processes: measurement errors, where data was generated normally but one or more values were recorded incorrectly, and mechanism shifts, where the causal process generating the data changed. While measurement errors can often be safely corrected, mechanistic anomalies require careful consideration. We define a causal model that explicitly captures both types by treating outliers as latent interventions on latent (\"true\") and observed (\"measured\") variables. We show that they are identifiable, and propose a maximum likelihood estimation approach to put this to practice. Experiments show that our method matches state-of-the-art performance in root cause localization, while it additionally enables accurate classification of anomaly types, and remains robust even when the causal DAG is unknown.",
+    "authors": [
+      "Hendrik Suhr",
+      "David Kaltenpoth",
+      "Jilles Vreeken"
+    ],
+    "published": "2026-01-30",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.23026v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.23026v1",
+    "fetched_at": "2026-02-02T08:50:56.634593",
+    "chinese_title": "测量与机制异常的因果表征",
+    "chinese_summary": "现有异常根因分析方法忽略异常的两种根本类型（测量误差与机制变化），论文定义显式捕捉两者的因果模型（将异常视为对潜在真实变量和观测测量变量的潜在干预），证明模型可识别性并提出最大似然估计方法；实验表明该方法在根因定位上达SOTA，还能准确分类异常类型，且因果DAG未知时仍鲁棒。",
+    "tags": [
+      "Anomaly",
+      "Risk Management",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "明确区分异常的两种核心类型（测量误差与机制变化），构建显式捕捉两者的因果模型",
+      "证明模型可识别性，提出最大似然估计方法，实验实现根因定位SOTA、准确分类异常类型且因果DAG未知时鲁棒"
+    ],
+    "processed_at": "2026-02-02T08:56:46.238733"
+  },
+  {
+    "id": "2601.22997v1",
+    "title": "TriCEGAR: A Trace-Driven Abstraction Mechanism for Agentic AI",
+    "abstract": "Agentic AI systems act through tools and evolve their behavior over long, stochastic interaction traces. This setting complicates assurance, because behavior depends on nondeterministic environments and probabilistic model outputs. Prior work introduced runtime verification for agentic AI via Dynamic Probabilistic Assurance (DPA), learning an MDP online and model checking quantitative properties. A key limitation is that developers must manually define the state abstraction, which couples verification to application-specific heuristics and increases adoption friction. This paper proposes TriCEGAR, a trace-driven abstraction mechanism that automates state construction from execution logs and supports online construction of an agent behavioral MDP. TriCEGAR represents abstractions as predicate trees learned from traces and refined using counterexamples. We describe a framework-native implementation that (i) captures typed agent lifecycle events, (ii) builds abstractions from traces, (iii) constructs an MDP, and (iv) performs probabilistic model checking to compute bounds such as Pmax(success) and Pmin(failure). We also show how run likelihoods enable anomaly detection as a guardrailing signal.",
+    "authors": [
+      "Roham Koohestani",
+      "Ateş Görpelioğlu",
+      "Egor Klimov",
+      "Burcu Kulahcioglu Ozkan",
+      "Maliheh Izadi"
+    ],
+    "published": "2026-01-30",
+    "categories": [
+      "cs.AI",
+      "cs.SE"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.22997v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.22997v1",
+    "fetched_at": "2026-02-02T08:50:56.634617",
+    "chinese_title": "TriCEGAR：面向Agentic AI的跟踪驱动抽象机制",
+    "chinese_summary": "该论文针对Agentic AI系统因行为依赖非确定性环境和概率模型输出导致的保证问题，提出TriCEGAR——一种跟踪驱动的抽象机制，无需手动定义状态抽象，通过执行日志自动构建谓词树表示的抽象并经反例细化，支持在线构建代理行为MDP，进而实现概率模型检查（计算成功概率上界、失败概率下界等）与异常检测。",
+    "tags": [
+      "Financial Agent",
+      "Anomaly",
+      "Reinforcement Learning"
+    ],
+    "key_contributions": [
+      "实现框架原生流程，支持在线构建代理行为MDP，完成概率模型检查及异常检测"
+    ],
+    "processed_at": "2026-02-02T08:57:06.207296"
+  },
+  {
+    "id": "2601.22868v1",
+    "title": "When Anomalies Depend on Context: Learning Conditional Compatibility for Anomaly Detection",
+    "abstract": "Anomaly detection is often formulated under the assumption that abnormality is an intrinsic property of an observation, independent of context. This assumption breaks down in many real-world settings, where the same object or action may be normal or anomalous depending on latent contextual factors (e.g., running on a track versus on a highway). We revisit \\emph{contextual anomaly detection}, classically defined as context-dependent abnormality, and operationalize it in the visual domain, where anomaly labels depend on subject--context compatibility rather than intrinsic appearance. To enable systematic study of this setting, we introduce CAAD-3K, a benchmark that isolates contextual anomalies by controlling subject identity while varying context. We further propose a conditional compatibility learning framework that leverages vision--language representations to model subject--context relationships under limited supervision. Our method substantially outperforms existing approaches on CAAD-3K and achieves state-of-the-art performance on MVTec-AD and VisA, demonstrating that modeling context dependence complements traditional structural anomaly detection. Our code and dataset will be publicly released.",
+    "authors": [
+      "Shashank Mishra",
+      "Didier Stricker",
+      "Jason Rambach"
+    ],
+    "published": "2026-01-30",
+    "categories": [
+      "cs.CV",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.22868v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.22868v1",
+    "fetched_at": "2026-02-02T08:50:56.634638",
+    "chinese_title": "当异常依赖上下文时：学习条件兼容性用于异常检测",
+    "chinese_summary": "该论文指出传统异常检测假设异常为观测固有属性，但现实中异常常依赖主体-场景等上下文兼容性；提出CAAD-3K基准数据集（隔离上下文异常）及条件兼容性学习框架（基于视觉-语言表示建模主体-上下文关系，有限监督）；在多数据集上优于现有方法，证明上下文依赖建模补充传统结构异常检测。",
+    "tags": [
+      "Anomaly",
+      "Deep Learning",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "构建CAAD-3K基准数据集，通过控制主体身份并变化场景隔离上下文异常",
+      "提出条件兼容性学习框架，利用视觉-语言表示建模主体-上下文关系，有限监督下在多数据集上取得更优性能"
+    ],
+    "processed_at": "2026-02-02T08:57:28.801112"
+  },
+  {
+    "id": "2601.22806v1",
+    "title": "Aligning the Unseen in Attributed Graphs: Interplay between Graph Geometry and Node Attributes Manifold",
+    "abstract": "The standard approach to representation learning on attributed graphs -- i.e., simultaneously reconstructing node attributes and graph structure -- is geometrically flawed, as it merges two potentially incompatible metric spaces. This forces a destructive alignment that erodes information about the graph's underlying generative process. To recover this lost signal, we introduce a custom variational autoencoder that separates manifold learning from structural alignment. By quantifying the metric distortion needed to map the attribute manifold onto the graph's Heat Kernel, we transform geometric conflict into an interpretable structural descriptor. Experiments show our method uncovers connectivity patterns and anomalies undetectable by conventional approaches, proving both their theoretical inadequacy and practical limitations.",
+    "authors": [
+      "Aldric Labarthe",
+      "Roland Bouffanais",
+      "Julien Randon-Furling"
+    ],
+    "published": "2026-01-30",
+    "categories": [
+      "cs.AI",
+      "math.DG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.22806v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.22806v1",
+    "fetched_at": "2026-02-02T08:50:56.634660",
+    "chinese_title": "对齐属性图中的未观测部分：图几何与节点属性流形的相互作用",
+    "chinese_summary": "该论文指出属性图表示学习的标准方法因合并不兼容度量空间存在几何缺陷，导致丢失图生成过程信息；提出自定义变分自动编码器分离流形学习与结构对齐，通过量化属性流形到图热核的度量失真得到可解释结构描述符；实验表明其能发现传统方法无法检测的连接模式和异常，验证了传统方法的不足。",
+    "tags": [
+      "Graph Neural Network",
+      "Deep Learning",
+      "Anomaly"
+    ],
+    "key_contributions": [
+      "揭示属性图表示学习标准方法的几何缺陷（合并不兼容度量空间导致信息丢失）",
+      "提出自定义变分自动编码器，分离流形学习与结构对齐，量化度量失真得到可解释结构描述符，可检测传统方法无法发现的模式和异常"
+    ],
+    "processed_at": "2026-02-02T08:57:44.831520"
+  },
+  {
+    "id": "2601.22800v1",
+    "title": "Trackly: A Unified SaaS Platform for User Behavior Analytics and Real Time Rule Based Anomaly Detection",
+    "abstract": "Understanding user behavior is essential for improving digital experiences, optimizing business conversions, and mitigating threats like account takeovers, fraud, and bot attacks. Most platforms separate product analytics and security, creating fragmented visibility and delayed threat detection. Trackly, a scalable SaaS platform, unifies comprehensive user behavior analytics with real time, rule based anomaly detection. It tracks sessions, IP based geo location, device browser fingerprints, and granular events such as page views, add to cart, and checkouts. Suspicious activities logins from new devices or locations, impossible travel (Haversine formula), rapid bot like actions, VPN proxy usage, or multiple accounts per IP are flagged via configurable rules with weighted risk scoring, enabling transparent, explainable decisions. A real time dashboard provides global session maps, DAU MAU, bounce rates, and session durations. Integration is simplified with a lightweight JavaScript SDK and secure REST APIs. Implemented on a multi tenant microservices stack (ASP.NET Core, MongoDB, RabbitMQ, Next.js), Trackly achieved 98.1% accuracy, 97.7% precision, and 2.25% false positives on synthetic datasets, proving its efficiency for SMEs and ecommerce.",
+    "authors": [
+      "Md Zahurul Haque",
+      "Md. Hafizur Rahman",
+      "Yeahyea Sarker"
+    ],
+    "published": "2026-01-30",
+    "categories": [
+      "cs.CR",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.22800v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.22800v1",
+    "fetched_at": "2026-02-02T08:50:56.634681",
+    "chinese_title": "Trackly：用于用户行为分析和实时基于规则的异常检测的统一SaaS平台",
+    "chinese_summary": "论文提出Trackly——一款统一用户行为分析与实时规则异常检测的可扩展SaaS平台，整合会话、设备指纹、地理定位等多维度数据，通过可配置加权风险规则识别可疑活动（如异地登录、不可能旅行等），并提供实时仪表盘，以轻量SDK和API简化集成，在合成数据集上表现高效，适配中小企业与电商场景。",
+    "tags": [
+      "Anomaly",
+      "Risk Management",
+      "Behavioral Finance"
+    ],
+    "key_contributions": [
+      "构建统一用户行为分析与实时规则异常检测的SaaS平台，解决传统平台产品分析与安全功能碎片化问题",
+      "基于多维度用户数据设计可配置加权风险规则，实现高效、可解释的异常检测，适配中小企业与电商场景"
+    ],
+    "processed_at": "2026-02-02T08:58:04.767612"
+  },
+  {
+    "id": "2601.22742v1",
+    "title": "AR-BENCH: Benchmarking Legal Reasoning with Judgment Error Detection, Classification and Correction",
+    "abstract": "Legal judgments may contain errors due to the complexity of case circumstances and the abstract nature of legal concepts, while existing appellate review mechanisms face efficiency pressures from a surge in case volumes. Although current legal AI research focuses on tasks like judgment prediction and legal document generation, the task of judgment review differs fundamentally in its objectives and paradigm: it centers on detecting, classifying, and correcting errors after a judgment is issued, constituting anomaly detection rather than prediction or generation. To address this research gap, we introduce a novel task APPELLATE REVIEW, aiming to assess models' diagnostic reasoning and reliability in legal practice. We also construct a novel dataset benchmark AR-BENCH, which comprises 8,700 finely annotated decisions and 34,617 supplementary corpora. By evaluating 14 large language models, we reveal critical limitations in existing models' ability to identify legal application errors, providing empirical evidence for future improvements.",
+    "authors": [
+      "Yifei Li",
+      "Richong Zhang",
+      "Wanyu Tu",
+      "Zhijie Nie",
+      "Haokun Luo",
+      "Chuantao Yin",
+      "Pengchong Li"
+    ],
+    "published": "2026-01-30",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.22742v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.22742v1",
+    "fetched_at": "2026-02-02T08:50:56.634709",
+    "chinese_title": "AR-BENCH：基于判决错误检测、分类与修正的法律推理基准测试",
+    "chinese_summary": "现有法律AI多聚焦判决预测等任务，较少关注判决错误检测、分类与修正的审查任务；论文提出上诉审查新任务，构建包含8700条精细标注判决及34617条补充语料的AR-BENCH基准数据集，通过评估14个大模型揭示其识别法律适用错误的关键局限，为后续改进提供实证依据。",
+    "tags": [
+      "LLM",
+      "Anomaly",
+      "Benchmark",
+      "NLP"
+    ],
+    "key_contributions": [
+      "提出上诉审查新任务，填补现有法律AI在判决错误检测、分类与修正方面的研究空白",
+      "构建AR-BENCH基准数据集（含8700条精细标注判决及34617条补充语料），评估14个大模型揭示其识别法律适用错误的局限，为后续改进提供实证依据"
+    ],
+    "processed_at": "2026-02-02T08:58:25.519940"
+  },
+  {
+    "id": "2601.22675v1",
+    "title": "Fire on Motion: Optimizing Video Pass-bands for Efficient Spiking Action Recognition",
+    "abstract": "Spiking neural networks (SNNs) have gained traction in vision due to their energy efficiency, bio-plausibility, and inherent temporal processing. Yet, despite this temporal capacity, most progress concentrates on static image benchmarks, and SNNs still underperform on dynamic video tasks compared to artificial neural networks (ANNs). In this work, we diagnose a fundamental pass-band mismatch: Standard spiking dynamics behave as a temporal low pass that emphasizes static content while attenuating motion bearing bands, where task relevant information concentrates in dynamic tasks. This phenomenon explains why SNNs can approach ANNs on static tasks yet fall behind on tasks that demand richer temporal understanding.To remedy this, we propose the Pass-Bands Optimizer (PBO), a plug-and-play module that optimizes the temporal pass-band toward task-relevant motion bands. PBO introduces only two learnable parameters, and a lightweight consistency constraint that preserves semantics and boundaries, incurring negligible computational overhead and requires no architectural changes. PBO deliberately suppresses static components that contribute little to discrimination, effectively high passing the stream so that spiking activity concentrates on motion bearing content. On UCF101, PBO yields over ten percentage points improvement. On more complex multi-modal action recognition and weakly supervised video anomaly detection, PBO delivers consistent and significant gains, offering a new perspective for SNN based video processing and understanding.",
+    "authors": [
+      "Shuhan Ye",
+      "Yuanbin Qian",
+      "Yi Yu",
+      "Chong Wang",
+      "Yuqi Xie",
+      "Jiazhen Xu",
+      "Kun Wang",
+      "Xudong Jiang"
+    ],
+    "published": "2026-01-30",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.22675v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.22675v1",
+    "fetched_at": "2026-02-02T08:50:56.634738",
+    "chinese_title": "动态之火：优化视频通带以实现高效脉冲动作识别",
+    "chinese_summary": "该研究指出脉冲神经网络（SNN）在动态视频任务中落后于人工神经网络（ANN）的核心原因是通带不匹配（低通特性强调静态内容、衰减运动信息）；提出即插即用的通带优化器（PBO）模块，仅需两个可学习参数且计算开销极小，能将通带优化至任务相关运动带，显著提升动作识别和异常检测等任务性能。",
+    "tags": [
+      "Deep Learning",
+      "Anomaly",
+      "Time Series"
+    ],
+    "key_contributions": [
+      "诊断出SNN动态任务表现差的根本原因是通带不匹配（低通衰减运动信息）",
+      "提出轻量即插即用的PBO模块，优化通带至任务相关运动带，显著提升多类视频任务性能"
+    ],
+    "processed_at": "2026-02-02T08:58:47.636290"
+  },
+  {
+    "id": "2601.22399v1",
+    "title": "Score-based Integrated Gradient for Root Cause Explanations of Outliers",
+    "abstract": "Identifying the root causes of outliers is a fundamental problem in causal inference and anomaly detection. Traditional approaches based on heuristics or counterfactual reasoning often struggle under uncertainty and high-dimensional dependencies. We introduce SIREN, a novel and scalable method that attributes the root causes of outliers by estimating the score functions of the data likelihood. Attribution is computed via integrated gradients that accumulate score contributions along paths from the outlier toward the normal data distribution. Our method satisfies three of the four classic Shapley value axioms - dummy, efficiency, and linearity - as well as an asymmetry axiom derived from the underlying causal structure. Unlike prior work, SIREN operates directly on the score function, enabling tractable and uncertainty-aware root cause attribution in nonlinear, high-dimensional, and heteroscedastic causal models. Extensive experiments on synthetic random graphs and real-world cloud service and supply chain datasets show that SIREN outperforms state-of-the-art baselines in both attribution accuracy and computational efficiency.",
+    "authors": [
+      "Phuoc Nguyen",
+      "Truyen Tran",
+      "Sunil Gupta",
+      "Svetha Venkatesh"
+    ],
+    "published": "2026-01-29",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.22399v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.22399v1",
+    "fetched_at": "2026-02-02T08:50:56.634760",
+    "chinese_title": "基于分数的集成梯度用于异常值根因解释",
+    "chinese_summary": "论文提出可扩展方法SIREN，通过估计数据似然的分数函数，沿异常值到正常分布的路径累积分数贡献的集成梯度实现异常值根因归因；该方法满足3条经典Shapley公理及因果结构衍生的不对称公理，可处理非线性高维异方差因果模型，实验证明其归因精度和计算效率优于现有基线。",
+    "tags": [
+      "Anomaly",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出SIREN方法，基于分数函数与集成梯度实现异常值根因归因，满足部分Shapley公理及不对称公理",
+      "可处理非线性、高维异方差因果模型，实验验证其归因精度和计算效率优于现有方法"
+    ],
+    "processed_at": "2026-02-02T08:59:12.513064"
+  },
+  {
+    "id": "2601.23252v1",
+    "title": "Nested Slice Sampling: Vectorized Nested Sampling for GPU-Accelerated Inference",
+    "abstract": "Model comparison and calibrated uncertainty quantification often require integrating over parameters, but scalable inference can be challenging for complex, multimodal targets. Nested Sampling is a robust alternative to standard MCMC, yet its typically sequential structure and hard constraints make efficient accelerator implementations difficult. This paper introduces Nested Slice Sampling (NSS), a GPU-friendly, vectorized formulation of Nested Sampling that uses Hit-and-Run Slice Sampling for constrained updates. A tuning analysis yields a simple near-optimal rule for setting the slice width, improving high-dimensional behavior and making per-step compute more predictable for parallel execution. Experiments on challenging synthetic targets, high dimensional Bayesian inference, and Gaussian process hyperparameter marginalization show that NSS maintains accurate evidence estimates and high-quality posterior samples, and is particularly robust on difficult multimodal problems where current state-of-the-art methods such as tempered SMC baselines can struggle. An open-source implementation is released to facilitate adoption and reproducibility.",
+    "authors": [
+      "David Yallup",
+      "Namu Kroupa",
+      "Will Handley"
+    ],
+    "published": "2026-01-30",
+    "categories": [
+      "stat.CO",
+      "cs.LG",
+      "stat.ML"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.23252v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.23252v1",
+    "fetched_at": "2026-02-02T08:51:25.177410",
+    "chinese_title": "嵌套切片采样：面向GPU加速推理的向量化嵌套采样",
+    "chinese_summary": "本文针对传统嵌套采样因串行结构和硬约束难以GPU加速的问题，提出GPU友好的向量化嵌套采样方法NSS，采用Hit-and-Run切片采样实现约束更新，并推导得到近优切片宽度调优规则以提升高维性能与并行计算可预测性；实验表明NSS在多模态等复杂问题上比当前SOTA（如tempered SMC）更鲁棒，能准确估计证据并生成高质量后验样本，且发布了开源实现。",
+    "tags": [
+      "Risk Management",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出GPU友好的向量化嵌套采样方法NSS，采用Hit-and-Run切片采样实现约束更新，解决传统嵌套采样难以GPU加速的问题",
+      "推导得到简单的近优切片宽度调优规则，提升高维性能并增强并行计算可预测性，实验验证其在多模态问题上比SOTA更鲁棒，发布开源实现"
+    ],
+    "processed_at": "2026-02-02T08:59:41.304715"
+  },
+  {
+    "id": "2601.23207v1",
+    "title": "Learning to Execute Graph Algorithms Exactly with Graph Neural Networks",
+    "abstract": "Understanding what graph neural networks can learn, especially their ability to learn to execute algorithms, remains a central theoretical challenge. In this work, we prove exact learnability results for graph algorithms under bounded-degree and finite-precision constraints. Our approach follows a two-step process. First, we train an ensemble of multi-layer perceptrons (MLPs) to execute the local instructions of a single node. Second, during inference, we use the trained MLP ensemble as the update function within a graph neural network (GNN). Leveraging Neural Tangent Kernel (NTK) theory, we show that local instructions can be learned from a small training set, enabling the complete graph algorithm to be executed during inference without error and with high probability. To illustrate the learning power of our setting, we establish a rigorous learnability result for the LOCAL model of distributed computation. We further demonstrate positive learnability results for widely studied algorithms such as message flooding, breadth-first and depth-first search, and Bellman-Ford.",
+    "authors": [
+      "Muhammad Fetrat Qharabagh",
+      "Artur Back de Luca",
+      "George Giapitzakis",
+      "Kimon Fountoulakis"
+    ],
+    "published": "2026-01-30",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.23207v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.23207v1",
+    "fetched_at": "2026-02-02T08:51:25.177444",
+    "chinese_title": "用图神经网络精确学习执行图算法",
+    "chinese_summary": "本文针对图神经网络学习执行算法的理论挑战，提出两步方法：先训练MLP集成学习节点局部指令，推理时将其作为GNN的更新函数；利用神经切线核（NTK）理论证明小训练集可精确学习局部指令，使推理时无误差执行完整图算法，并针对LOCAL分布式计算模型及消息泛洪、BFS、DFS等经典算法给出可学习性结果。",
+    "tags": [
+      "Graph Neural Network",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出两步学习框架：先训练MLP集成学习节点局部指令，推理时作为GNN更新函数，证明有界度和有限精度下图算法的精确可学习性；",
+      "利用神经切线核理论证明小训练集可学局部指令，推理无误差，并针对LOCAL模型及BFS、DFS等经典算法给出可学习性结果。"
+    ],
+    "processed_at": "2026-02-02T09:00:08.978909"
+  },
+  {
+    "id": "2601.23132v1",
+    "title": "Secure Tool Manifest and Digital Signing Solution for Verifiable MCP and LLM Pipelines",
+    "abstract": "Large Language Models (LLMs) are increasingly adopted in sensitive domains such as healthcare and financial institutions' data analytics; however, their execution pipelines remain vulnerable to manipulation and unverifiable behavior. Existing control mechanisms, such as the Model Context Protocol (MCP), define compliance policies for tool invocation but lack verifiable enforcement and transparent validation of model actions. To address this gap, we propose a novel Secure Tool Manifest and Digital Signing Framework, a structured and security-aware extension of Model Context Protocols. The framework enforces cryptographically signed manifests, integrates transparent verification logs, and isolates model-internal execution metadata from user-visible components to ensure verifiable execution integrity. Furthermore, the evaluation demonstrates that the framework scales nearly linearly (R-squared = 0.998), achieves near-perfect acceptance of valid executions while consistently rejecting invalid ones, and maintains balanced model utilization across execution pipelines.",
+    "authors": [
+      "Saeid Jamshidi",
+      "Kawser Wazed Nafi",
+      "Arghavan Moradi Dakhel",
+      "Foutse Khomh",
+      "Amin Nikanjam",
+      "Mohammad Adnan Hamdaqa"
+    ],
+    "published": "2026-01-30",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.23132v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.23132v1",
+    "fetched_at": "2026-02-02T08:51:25.177501",
+    "chinese_title": "用于可验证MCP和LLM管道的安全工具清单及数字签名解决方案",
+    "chinese_summary": "针对LLM在金融等敏感领域执行管道易被操纵、行为不可验证的问题，现有MCP缺乏可验证执行机制，论文提出安全工具清单及数字签名框架（MCP的结构化安全扩展），通过加密签名清单、透明验证日志和元数据隔离确保执行完整性；评估表明框架线性扩展、有效执行接受度高且拒绝无效、模型利用率平衡。",
+    "tags": [
+      "LLM",
+      "Financial Agent",
+      "Execution"
+    ],
+    "key_contributions": [
+      "提出安全工具清单及数字签名框架，是MCP的结构化安全扩展，通过加密签名、透明日志和元数据隔离实现LLM管道的可验证执行",
+      "评估验证框架线性扩展、有效执行接受度高且拒绝无效、模型利用率平衡"
+    ],
+    "processed_at": "2026-02-02T09:00:26.429825"
+  },
+  {
+    "id": "2601.23092v1",
+    "title": "WiFiPenTester: Advancing Wireless Ethical Hacking with Governed GenAI",
+    "abstract": "Wireless ethical hacking relies heavily on skilled practitioners manually interpreting reconnaissance results and executing complex, time-sensitive sequences of commands to identify vulnerable targets, capture authentication handshakes, and assess password resilience; a process that is inherently labour-intensive, difficult to scale, and prone to subjective judgement and human error. To help address these limitations, we propose WiFiPenTester, an experimental, governed, and reproducible system for GenAI-enabled wireless ethical hacking. The system integrates large language models into the reconnaissance and decision-support phases of wireless security assessment, enabling intelligent target ranking, attack feasibility estimation, and strategy recommendation, while preserving strict human-in-the-loop control and budget-aware execution. We describe the system architecture, threat model, governance mechanisms, and prompt-engineering methodology, and empirical experiments conducted across multiple wireless environments. The results demonstrate that GenAI assistance improves target selection accuracy and overall assessment efficiency, while maintaining auditability and ethical safeguards. This indicates that WiFiPenTester is a meaningful step toward practical, safe, and scalable GenAI-assisted wireless penetration testing, while reinforcing the necessity of bounded autonomy, human oversight, and rigorous governance mechanisms when deploying GenAI in ethical hacking.",
+    "authors": [
+      "Haitham S. Al-Sinani",
+      "Chris J. Mitchell"
+    ],
+    "published": "2026-01-30",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.23092v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.23092v1",
+    "fetched_at": "2026-02-02T08:51:25.177522",
+    "chinese_title": "WiFiPenTester：通过受监管的生成式AI推进无线伦理黑客技术",
+    "chinese_summary": "论文针对无线伦理黑客中人工操作劳动密集、难扩展且易出错的问题，提出WiFiPenTester系统——将大语言模型集成到无线安全评估的侦察与决策支持阶段，实现智能目标排名、攻击可行性估计及策略推荐，同时保留严格的人在回路控制与预算感知执行；实验表明该系统提升了目标选择准确性与评估效率，且具备可审计性与伦理保障。",
+    "tags": [
+      "LLM",
+      "NLP"
+    ],
+    "key_contributions": [
+      "提出受监管的GenAI辅助无线伦理黑客系统WiFiPenTester，集成LLM于侦察与决策阶段，兼顾智能辅助与人类核心控制",
+      "实验验证系统提升目标选择准确性与评估效率，且具备可审计性与伦理保障，为安全可扩展的GenAI辅助渗透测试提供可行方案"
+    ],
+    "processed_at": "2026-02-02T09:00:43.746461"
+  },
+  {
+    "id": "2601.23027v1",
+    "title": "Divide-and-Conquer CoT: RL for Reducing Latency via Parallel Reasoning",
+    "abstract": "Long chain-of-thought reasoning (Long CoT) is now fundamental to state-of-the-art LLMs, especially in mathematical reasoning. However, LLM generation is highly sequential, and long CoTs lead to a high latency. We propose to train Divide-and-Conquer CoT (DC-CoT) to reduce the latency. With DC-CoT, the model can act as a director that identifies distinct subtasks that can be performed in parallel in its reasoning process, and then spawns workers to execute the subtasks. Our goal is to achieve high accuracy, with a low longest path length, which is a theoretical measure of the latency needed for the response. We start with a long CoT base model (DeepScaleR-1.5B-Preview), and first use SFT with a small curated demonstration set to initialize its ability to spawn workers in a certain format. Because SFT degrades the accuracy significantly, we design a multi-stage RL algorithm, with various data filtering strategies, to recover the accuracy while decreasing the longest path length. Across several benchmarks including AIME 2024 and HMMT 2025, DC-CoT achieves similar accuracy as DeepScaleR-1.5B-Preview while decreasing longest path length by 35-40%. Our code, SFT dataset and models are publicly available at https://github.com/amahankali10/DC_CoT_RL_for_Low_Latency_CoT_with_Parallel_Reasoning.",
+    "authors": [
+      "Arvind Mahankali",
+      "Kaiyue Wen",
+      "Tengyu Ma"
+    ],
+    "published": "2026-01-30",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.23027v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.23027v1",
+    "fetched_at": "2026-02-02T08:51:25.177544",
+    "chinese_title": "分而治之的思维链：基于强化学习的并行推理降低延迟方法",
+    "chinese_summary": "论文针对长思维链（CoT）推理的高延迟问题，提出分而治之CoT（DC-CoT）框架，使模型可识别并行子任务并调度执行；采用多阶段强化学习（结合数据过滤）恢复精度，在AIME等基准上实现与基线相当的准确率，同时最长路径长度降低35-40%。",
+    "tags": [
+      "LLM",
+      "Reinforcement Learning",
+      "Transformer",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出分而治之CoT框架，通过并行子任务调度降低长思维链推理延迟",
+      "设计多阶段强化学习算法，在保持准确率的同时减少延迟指标（最长路径长度）"
+    ],
+    "processed_at": "2026-02-02T09:01:00.510499"
+  },
+  {
+    "id": "2601.22948v1",
+    "title": "Alignment among Language, Vision and Action Representations",
+    "abstract": "A fundamental question in cognitive science and AI concerns whether different learning modalities: language, vision, and action, give rise to distinct or shared internal representations. Traditional views assume that models trained on different data types develop specialized, non-transferable representations. However, recent evidence suggests unexpected convergence: models optimized for distinct tasks may develop similar representational geometries. We investigate whether this convergence extends to embodied action learning by training a transformer-based agent to execute goal-directed behaviors in response to natural language instructions. Using behavioral cloning on the BabyAI platform, we generated action-grounded language embeddings shaped exclusively by sensorimotor control requirements. We then compared these representations with those extracted from state-of-the-art large language models (LLaMA, Qwen, DeepSeek, BERT) and vision-language models (CLIP, BLIP). Despite substantial differences in training data, modality, and objectives, we observed robust cross-modal alignment. Action representations aligned strongly with decoder-only language models and BLIP (precision@15: 0.70-0.73), approaching the alignment observed among language models themselves. Alignment with CLIP and BERT was significantly weaker. These findings indicate that linguistic, visual, and action representations converge toward partially shared semantic structures, supporting modality-independent semantic organization and highlighting potential for cross-domain transfer in embodied AI systems.",
+    "authors": [
+      "Nicola Milano",
+      "Stefano Nolfi"
+    ],
+    "published": "2026-01-30",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.22948v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.22948v1",
+    "fetched_at": "2026-02-02T08:51:25.177595",
+    "chinese_title": "语言、视觉与动作表征的对齐性",
+    "chinese_summary": "该研究训练基于Transformer的智能体在BabyAI平台通过行为克隆生成动作接地的语言嵌入，对比其与LLM（LLaMA等）、视觉语言模型（CLIP等）的表征；发现尽管训练数据、模态及目标差异显著，跨模态表征存在稳健对齐（动作与仅解码器LLM、BLIP对齐度达0.70-0.73），支持多模态表征共享部分语义结构。",
+    "tags": [
+      "Transformer",
+      "LLM",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出动作接地的语言嵌入训练方法，结合行为克隆与Transformer实现目标导向行为",
+      "揭示语言、视觉、动作表征存在跨模态稳健对齐，明确仅解码器LLM及BLIP与动作表征对齐性最强"
+    ],
+    "processed_at": "2026-02-02T09:01:17.652020"
+  },
+  {
+    "id": "2601.22859v1",
+    "title": "MEnvAgent: Scalable Polyglot Environment Construction for Verifiable Software Engineering",
+    "abstract": "The evolution of Large Language Model (LLM) agents for software engineering (SWE) is constrained by the scarcity of verifiable datasets, a bottleneck stemming from the complexity of constructing executable environments across diverse languages. To address this, we introduce MEnvAgent, a Multi-language framework for automated Environment construction that facilitates scalable generation of verifiable task instances. MEnvAgent employs a multi-agent Planning-Execution-Verification architecture to autonomously resolve construction failures and integrates a novel Environment Reuse Mechanism that reduces computational overhead by incrementally patching historical environments. Evaluations on MEnvBench, a new benchmark comprising 1,000 tasks across 10 languages, demonstrate that MEnvAgent outperforms baselines, improving Fail-to-Pass (F2P) rates by 8.6% while reducing time costs by 43%. Additionally, we demonstrate the utility of MEnvAgent by constructing MEnvData-SWE, the largest open-source polyglot dataset of realistic verifiable Docker environments to date, alongside solution trajectories that enable consistent performance gains on SWE tasks across a wide range of models. Our code, benchmark, and dataset are available at https://github.com/ernie-research/MEnvAgent.",
+    "authors": [
+      "Chuanzhe Guo",
+      "Jingjing Wu",
+      "Sijun He",
+      "Yang Chen",
+      "Zhaoqi Kuang",
+      "Shilong Fan",
+      "Bingjin Chen",
+      "Siqi Bao",
+      "Jing Liu",
+      "Hua Wu",
+      "Qingfu Zhu",
+      "Wanxiang Che",
+      "Haifeng Wang"
+    ],
+    "published": "2026-01-30",
+    "categories": [
+      "cs.SE",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.22859v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.22859v1",
+    "fetched_at": "2026-02-02T08:51:25.177638",
+    "chinese_title": "MEnvAgent：可验证软件工程的可扩展多语言环境构建框架",
+    "chinese_summary": "针对LLM在软件工程中因跨语言可执行环境构建复杂导致可验证数据集稀缺的问题，本文提出MEnvAgent多语言框架，采用规划-执行-验证多智能体架构自动解决构建失败，集成环境复用机制降低计算开销；同时构建MEnvBench基准（1000任务跨10语言）和MEnvData-SWE开源数据集，实验显示其F2P率比基线提升8.6%、时间成本降低43%，并助力多种模型在SWE任务上性能提升。",
+    "tags": [
+      "LLM",
+      "Transformer",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出MEnvAgent多语言环境构建框架，通过规划-执行-验证多智能体架构和环境复用机制，高效解决跨语言可验证环境构建难题",
+      "构建MEnvBench基准和MEnvData-SWE开源数据集，实验验证框架性能优势，并证明其对SWE任务性能提升的有效性"
+    ],
+    "processed_at": "2026-02-02T09:01:44.916755"
+  },
+  {
+    "id": "2601.22813v1",
+    "title": "Quartet II: Accurate LLM Pre-Training in NVFP4 by Improved Unbiased Gradient Estimation",
+    "abstract": "The NVFP4 lower-precision format, supported in hardware by NVIDIA Blackwell GPUs, promises to allow, for the first time, end-to-end fully-quantized pre-training of massive models such as LLMs. Yet, existing quantized training methods still sacrifice some of the representation capacity of this format in favor of more accurate unbiased quantized gradient estimation by stochastic rounding (SR), losing noticeable accuracy relative to standard FP16 and FP8 training. In this paper, improve the state of the art for quantized training in NVFP4 via a novel unbiased quantization routine for micro-scaled formats, called MS-EDEN, that has more than 2x lower quantization error than SR. We integrate it into a novel fully-NVFP4 quantization scheme for linear layers, called Quartet II. We show analytically that Quartet II achieves consistently better gradient estimation across all major matrix multiplications, both on the forward and on the backward passes. In addition, our proposal synergizes well with recent training improvements aimed specifically at NVFP4. We further validate Quartet II on end-to-end LLM training with up to 1.9B parameters on 38B tokens. We provide kernels for execution on NVIDIA Blackwell GPUs with up to 4.2x speedup over BF16. Our code is available at https://github.com/IST-DASLab/Quartet-II .",
+    "authors": [
+      "Andrei Panferov",
+      "Erik Schultheis",
+      "Soroush Tabesh",
+      "Dan Alistarh"
+    ],
+    "published": "2026-01-30",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.22813v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.22813v1",
+    "fetched_at": "2026-02-02T08:51:25.177662",
+    "chinese_title": "Quartet II：通过改进的无偏梯度估计实现NVFP4下的准确LLM预训练",
+    "chinese_summary": "本文针对NVIDIA Blackwell GPU支持的NVFP4低精度格式，现有量化训练因随机舍入（SR）量化误差损失精度；提出MS-EDEN无偏量化方法（误差比SR低超2倍），集成到全NVFP4量化方案Quartet II，在前后向矩阵乘法中梯度估计更优，验证1.9B参数LLM端到端训练，Blackwell GPU上比BF16快4.2x。",
+    "tags": [
+      "LLM",
+      "Deep Learning",
+      "Transformer"
+    ],
+    "key_contributions": [
+      "提出MS-EDEN无偏量化方法，量化误差比随机舍入（SR）低超2倍，改进NVFP4下的无偏梯度估计",
+      "设计全NVFP4量化方案Quartet II，在前后向传播矩阵乘法中梯度估计更优，验证1.9B参数LLM端到端训练，Blackwell GPU上比BF16快4.2x"
+    ],
+    "processed_at": "2026-02-02T09:02:08.736478"
+  },
+  {
+    "id": "2601.22803v1",
+    "title": "CVeDRL: An Efficient Code Verifier via Difficulty-aware Reinforcement Learning",
+    "abstract": "Code verifiers play a critical role in post-verification for LLM-based code generation, yet existing supervised fine-tuning methods suffer from data scarcity, high failure rates, and poor inference efficiency. While reinforcement learning (RL) offers a promising alternative by optimizing models through execution-driven rewards without labeled supervision, our preliminary results show that naive RL with only functionality rewards fails to generate effective unit tests for difficult branches and samples. We first theoretically analyze showing that branch coverage, sample difficulty, syntactic and functional correctness can be jointly modeled as RL rewards, where optimizing these signals can improve the reliability of unit-test-based verification. Guided by this analysis, we design syntax- and functionality-aware rewards and further propose branch- and sample-difficulty--aware RL using exponential reward shaping and static analysis metrics. With this formulation, CVeDRL achieves state-of-the-art performance with only 0.6B parameters, yielding up to 28.97% higher pass rate and 15.08% higher branch coverage than GPT-3.5, while delivering over $20\\times$ faster inference than competitive baselines. Code is available at https://github.com/LIGHTCHASER1/CVeDRL.git",
+    "authors": [
+      "Ji Shi",
+      "Peiming Guo",
+      "Meishan Zhang",
+      "Miao Zhang",
+      "Xuebo Liu",
+      "Min Zhang",
+      "Weili Guan"
+    ],
+    "published": "2026-01-30",
+    "categories": [
+      "cs.AI",
+      "cs.SE"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.22803v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.22803v1",
+    "fetched_at": "2026-02-02T08:51:25.177693",
+    "chinese_title": "CVeDRL：基于难度感知强化学习的高效代码验证器",
+    "chinese_summary": "针对LLM代码生成后验证中数据稀缺、失败率高及推理效率低的问题，论文提出CVeDRL框架，通过难度感知强化学习联合优化分支覆盖、样本难度、语法与功能正确性等多维度奖励；该框架仅用0.6B参数就实现了优于GPT-3.5的验证性能（通过率提升28.97%、分支覆盖提升15.08%），且推理速度快超20倍。",
+    "tags": [
+      "LLM",
+      "Reinforcement Learning",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出难度感知强化学习框架CVeDRL，联合建模多维度奖励以提升代码验证可靠性",
+      "仅用0.6B参数实现优于GPT-3.5的验证性能，且推理效率提升超20倍"
+    ],
+    "processed_at": "2026-02-02T09:02:24.472449"
+  },
+  {
+    "id": "2601.22760v1",
+    "title": "AscendCraft: Automatic Ascend NPU Kernel Generation via DSL-Guided Transcompilation",
+    "abstract": "The performance of deep learning models critically depends on efficient kernel implementations, yet developing high-performance kernels for specialized accelerators remains time-consuming and expertise-intensive. While recent work demonstrates that large language models (LLMs) can generate correct and performant GPU kernels, kernel generation for neural processing units (NPUs) remains largely underexplored due to domain-specific programming models, limited public examples, and sparse documentation. Consequently, directly generating AscendC kernels with LLMs yields extremely low correctness, highlighting a substantial gap between GPU and NPU kernel generation.   We present AscendCraft, a DSL-guided approach for automatic AscendC kernel generation. AscendCraft introduces a lightweight DSL that abstracts non-essential complexity while explicitly modeling Ascend-specific execution semantics. Kernels are first generated in the DSL using category-specific expert examples and then transcompiled into AscendC through structured, constraint-driven LLM lowering passes. Evaluated on MultiKernelBench across seven operator categories, AscendCraft achieves 98.1% compilation success and 90.4% functional correctness. Moreover, 46.2% of generated kernels match or exceed PyTorch eager execution performance, demonstrating that DSL-guided transcompilation can enable LLMs to generate both correct and competitive NPU kernels. Beyond benchmarks, AscendCraft further demonstrates its generality by successfully generating two correct kernels for newly proposed mHC architecture, achieving performance that substantially surpasses PyTorch eager execution.",
+    "authors": [
+      "Zhongzhen Wen",
+      "Shudi Shao",
+      "Zhong Li",
+      "Yu Ge",
+      "Tongtong Xu",
+      "Yuanyi Lin",
+      "Tian Zhang"
+    ],
+    "published": "2026-01-30",
+    "categories": [
+      "cs.DC",
+      "cs.LG",
+      "cs.PF",
+      "cs.SE"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.22760v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.22760v1",
+    "fetched_at": "2026-02-02T08:51:25.177725",
+    "chinese_title": "AscendCraft：基于DSL引导跨编译的昇腾NPU内核自动生成",
+    "chinese_summary": "针对昇腾NPU内核生成因领域特定编程模型、示例少等导致LLM直接生成正确率极低的问题，论文提出AscendCraft方法——通过轻量DSL抽象非必要复杂度并显式建模昇腾特定执行语义，先基于类别化专家示例生成DSL内核，再经约束驱动的LLM降低 pass 转译为AscendC；实验在MultiKernelBench上验证其98.1%编译成功率、90.4%功能正确性，且46.2%生成内核性能匹配或超越PyTorch eager执行。",
+    "tags": [
+      "LLM",
+      "Deep Learning",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出DSL引导的跨编译框架AscendCraft，解决昇腾NPU内核生成难题",
+      "实验证明AscendCraft具备高编译成功率、功能正确性及竞争力性能，部分内核超越PyTorch eager执行"
+    ],
+    "processed_at": "2026-02-02T09:02:44.538538"
+  },
+  {
+    "id": "2601.22758v1",
+    "title": "AutoRefine: From Trajectories to Reusable Expertise for Continual LLM Agent Refinement",
+    "abstract": "Large language model agents often fail to accumulate knowledge from experience, treating each task as an independent challenge. Recent methods extract experience as flattened textual knowledge, which cannot capture procedural logic of complex subtasks. They also lack maintenance mechanisms, causing repository degradation as experience accumulates. We introduce AutoRefine, a framework that extracts and maintains dual-form Experience Patterns from agent execution histories. For procedural subtasks, we extract specialized subagents with independent reasoning and memory. For static knowledge, we extract skill patterns as guidelines or code snippets. A continuous maintenance mechanism scores, prunes, and merges patterns to prevent repository degradation. Evaluated on ALFWorld, ScienceWorld, and TravelPlanner, AutoRefine achieves 98.4%, 70.4%, and 27.1% respectively, with 20-73% step reductions. On TravelPlanner, automatic extraction exceeds manually designed systems (27.1% vs 12.1%), demonstrating its ability to capture procedural coordination.",
+    "authors": [
+      "Libin Qiu",
+      "Zhirong Gao",
+      "Junfu Chen",
+      "Yuhang Ye",
+      "Weizhi Huang",
+      "Xiaobo Xue",
+      "Wenkai Qiu",
+      "Shuo Tang"
+    ],
+    "published": "2026-01-30",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.22758v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.22758v1",
+    "fetched_at": "2026-02-02T08:51:25.177757",
+    "chinese_title": "AutoRefine：从执行轨迹到可复用专业知识的持续大语言模型智能体优化",
+    "chinese_summary": "论文针对大语言模型智能体难以积累经验、无法捕捉复杂子任务过程逻辑及经验库易退化的问题，提出AutoRefine框架，从执行历史中提取包含过程性子智能体（独立推理与记忆）和静态技能模式（指南或代码片段）的双形式经验模式，并通过持续维护机制（评分、剪枝、合并）防止经验库退化；在ALFWorld等任务中验证了有效性，TravelPlanner任务上自动提取效果优于手动设计系统。",
+    "tags": [
+      "LLM",
+      "NLP",
+      "Transformer"
+    ],
+    "key_contributions": [
+      "提出双形式经验模式提取方法，同时捕获过程性子任务逻辑与静态知识",
+      "设计持续维护机制，有效防止经验库退化，提升智能体持续优化能力",
+      "在多任务中验证有效性，TravelPlanner任务自动提取效果优于手动设计系统"
+    ],
+    "processed_at": "2026-02-02T09:03:10.866655"
+  },
+  {
+    "id": "2601.22720v1",
+    "title": "AEGIS: White-Box Attack Path Generation using LLMs and Training Effectiveness Evaluation for Large-Scale Cyber Defence Exercises",
+    "abstract": "Creating attack paths for cyber defence exercises requires substantial expert effort. Existing automation requires vulnerability graphs or exploit sets curated in advance, limiting where it can be applied. We present AEGIS, a system that generates attack paths using LLMs, white-box access, and Monte Carlo Tree Search over real exploit execution. LLM-based search discovers exploits dynamically without pre-existing vulnerability graphs, while white-box access enables validating exploits in isolation before committing to attack paths. Evaluation at CIDeX 2025, a large-scale exercise spanning 46 IT hosts, showed that AEGIS-generated paths are comparable to human-authored scenarios across four dimensions of training experience (perceived learning, engagement, believability, challenge). Results were measured with a validated questionnaire extensible to general simulation-based training. By automating exploit chain discovery and validation, AEGIS reduces scenario development from months to days, shifting expert effort from technical validation to scenario design.",
+    "authors": [
+      "Ivan K. Tung",
+      "Yu Xiang Shi",
+      "Alex Chien",
+      "Wenkai Liu",
+      "Lawrence Zheng"
+    ],
+    "published": "2026-01-30",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.22720v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.22720v1",
+    "fetched_at": "2026-02-02T08:51:25.177783",
+    "chinese_title": "AEGIS：基于大语言模型和训练有效性评估的大规模网络防御演习白盒攻击路径生成",
+    "chinese_summary": "论文提出AEGIS系统，结合大语言模型（LLM）、白盒访问及蒙特卡洛树搜索（MCTS）生成攻击路径，无需预先构建漏洞图即可动态发现漏洞并验证；在CIDeX 2025大规模演习中验证，其生成路径与人类编写场景在训练体验四维度相当，且将场景开发时间从数月缩短至数天，转移专家工作重心至场景设计。",
+    "tags": [
+      "LLM",
+      "Deep Learning",
+      "Transformer"
+    ],
+    "key_contributions": [
+      "提出AEGIS系统，通过LLM动态发现漏洞、白盒验证及MCTS生成攻击路径，无需预先构建漏洞图",
+      "在大规模网络防御演习中验证，生成路径与人类场景效果相当，大幅缩短场景开发时间并优化专家工作"
+    ],
+    "processed_at": "2026-02-02T09:03:36.079750"
+  },
+  {
+    "id": "2601.22701v1",
+    "title": "Best-of-Q: Improving VLM agents with Q-function Action Ranking at Inference",
+    "abstract": "Vision-Language Models (VLMs) have become powerful backbones for agents to autonomously operate in digital environments like the web and operating systems. However, these models suffer from inadaptability to fast-changing environments like the web, which can be alleviated by fine-tuning requiring expansive model training and data collection. In this work, we introduce a novel paradigm for enhancing agentic VLM policies at inference without policy retraining. Fundamentally, our approach decouples the VLM's role as a high-capacity action proposer from the final action selection mechanism. We keep the VLM policy frozen and use it to generate a set of candidate actions for a given state. Then, a lightweight, offline-trained Q-function reranks these candidates, and the agent executes the action with the highest estimated value. The main contribution is to apply the Q-function directly during inference for immediate policy improvement, and not offline to relabel data for policy retraining. We demonstrate on the academic WebVoyager benchmark that our method significantly boosts agent success rates, improving a Qwen2.5-VL-7B agent from 38.8% to 55.7% and a proprietary GPT-4.1 agent from 82.4% to 88.8%.",
+    "authors": [
+      "Emilien Biré",
+      "María Santos",
+      "Kai Yuan"
+    ],
+    "published": "2026-01-30",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.22701v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.22701v1",
+    "fetched_at": "2026-02-02T08:51:25.177804",
+    "chinese_title": "Best-of-Q：通过推理时Q函数动作排序提升视觉-语言模型智能体",
+    "chinese_summary": "针对视觉-语言模型（VLM）智能体适应快速变化环境的问题，论文提出无需策略重训练的推理增强范式：保持VLM策略冻结，生成候选动作后用轻量离线训练的Q函数重排序选最优动作执行；核心是推理时直接用Q函数提升策略而非离线重标注数据，在WebVoyager基准上显著提升两个VLM智能体的成功率。",
+    "tags": [
+      "Reinforcement Learning",
+      "LLM",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "创新将Q函数直接用于推理时动作选择以提升策略，而非离线重标注数据，在WebVoyager基准上显著提升智能体成功率"
+    ],
+    "processed_at": "2026-02-02T09:03:53.484231"
+  },
+  {
+    "id": "2601.23088v1",
+    "title": "From Similarity to Vulnerability: Key Collision Attack on LLM Semantic Caching",
+    "abstract": "Semantic caching has emerged as a pivotal technique for scaling LLM applications, widely adopted by major providers including AWS and Microsoft. By utilizing semantic embedding vectors as cache keys, this mechanism effectively minimizes latency and redundant computation for semantically similar queries. In this work, we conceptualize semantic cache keys as a form of fuzzy hashes. We demonstrate that the locality required to maximize cache hit rates fundamentally conflicts with the cryptographic avalanche effect necessary for collision resistance. Our conceptual analysis formalizes this inherent trade-off between performance (locality) and security (collision resilience), revealing that semantic caching is naturally vulnerable to key collision attacks.   While prior research has focused on side-channel and privacy risks, we present the first systematic study of integrity risks arising from cache collisions. We introduce CacheAttack, an automated framework for launching black-box collision attacks. We evaluate CacheAttack in security-critical tasks and agentic workflows. It achieves a hit rate of 86\\% in LLM response hijacking and can induce malicious behaviors in LLM agent, while preserving strong transferability across different embedding models. A case study on a financial agent further illustrates the real-world impact of these vulnerabilities. Finally, we discuss mitigation strategies.",
+    "authors": [
+      "Zhixiang Zhang",
+      "Zesen Liu",
+      "Yuchong Xie",
+      "Quanfeng Huang",
+      "Dongdong She"
+    ],
+    "published": "2026-01-30",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.23088v1",
+    "arxiv_url": "https://arxiv.org/abs/2601.23088v1",
+    "fetched_at": "2026-02-02T08:52:03.439068",
+    "chinese_title": "从相似性到脆弱性：LLM语义缓存的密钥碰撞攻击",
+    "chinese_summary": "本文揭示LLM语义缓存中缓存命中率所需的局部性与密码学抗碰撞的雪崩效应存在固有冲突，首次系统研究缓存碰撞带来的完整性风险；开发自动化黑盒攻击框架CacheAttack，在安全任务中实现86%的LLM响应劫持命中率，能诱导LLM代理恶意行为，金融代理案例验证其现实影响并讨论缓解策略。",
+    "tags": [
+      "LLM",
+      "Financial Agent",
+      "NLP"
+    ],
+    "key_contributions": [
+      "揭示LLM语义缓存中局部性与抗碰撞性的固有冲突，首次系统研究缓存碰撞的完整性风险",
+      "开发黑盒攻击框架CacheAttack，验证其对LLM响应劫持及诱导恶意行为的有效性，含金融代理案例"
+    ],
+    "processed_at": "2026-02-02T09:04:16.993084"
+  }
+]
