@@ -1,0 +1,952 @@
+[
+  {
+    "id": "2602.03776v1",
+    "title": "DiffLOB: Diffusion Models for Counterfactual Generation in Limit Order Books",
+    "abstract": "Modern generative models for limit order books (LOBs) can reproduce realistic market dynamics, but remain fundamentally passive: they either model what typically happens without accounting for hypothetical future market conditions, or they require interaction with another agent to explore alternative outcomes. This limits their usefulness for stress testing, scenario analysis, and decision-making. We propose \\textbf{DiffLOB}, a regime-conditioned \\textbf{Diff}usion model for controllable and counterfactual generation of \\textbf{LOB} trajectories. DiffLOB explicitly conditions the generative process on future market regimes--including trend, volatility, liquidity, and order-flow imbalance, which enables the model to answer counterfactual queries of the form: ``If the future market regime were X instead of Y, how would the limit order book evolve?'' Our systematic evaluation framework for counterfactual LOB generation consists of three criteria: (1) \\textit{Controllable Realism}, measuring how well generated trajectories can reproduce marginal distributions, temporal dependence structure and regime variables; (2) \\textit{Counterfactual validity}, testing whether interventions on future regimes induce consistent changes in the generated LOB dynamics; (3) \\textit{Counterfactual usefulness}, assessing whether synthetic counterfactual trajectories improve downstream prediction of future market regimes.",
+    "authors": [
+      "Zhuohan Wang",
+      "Carmine Ventre"
+    ],
+    "published": "2026-02-03",
+    "categories": [
+      "q-fin.CP",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.03776v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.03776v1",
+    "fetched_at": "2026-02-04T08:49:38.929584",
+    "chinese_title": "DiffLOB：用于限价订单簿反事实生成的扩散模型",
+    "chinese_summary": "现有限价订单簿（LOB）生成模型多为被动，无法应对假设性未来市场条件；论文提出DiffLOB——一种基于未来市场机制（趋势、波动率、流动性等）条件的扩散模型，可实现LOB轨迹的可控反事实生成，能回答“若未来市场机制为X而非Y，LOB将如何演化”类问题；还构建了包含可控真实性、反事实有效性等三标准的评估框架验证模型。",
+    "tags": [
+      "Deep Learning",
+      "High Frequency",
+      "Market Microstructure",
+      "Algorithmic Trading"
+    ],
+    "key_contributions": [
+      "提出基于未来市场机制条件的扩散模型DiffLOB，实现LOB轨迹的可控反事实生成，解决现有模型被动性问题",
+      "构建包含可控真实性、反事实有效性、反事实有用性三标准的反事实LOB生成评估框架"
+    ],
+    "processed_at": "2026-02-04T08:52:40.255412"
+  },
+  {
+    "id": "2602.03725v1",
+    "title": "Quantum Speedups for Derivative Pricing Beyond Black-Scholes",
+    "abstract": "This paper explores advancements in quantum algorithms for derivative pricing of exotics, a computational pipeline of fundamental importance in quantitative finance. For such cases, the classical Monte Carlo integration procedure provides the state-of-the-art provable, asymptotic performance: polynomial in problem dimension and quadratic in inverse-precision. While quantum algorithms are known to offer quadratic speedups over classical Monte Carlo methods, end-to-end speedups have been proven only in the simplified setting over the Black-Scholes geometric Brownian motion (GBM) model. This paper extends existing frameworks to demonstrate novel quadratic speedups for more practical models, such as the Cox-Ingersoll-Ross (CIR) model and a variant of Heston's stochastic volatility model, utilizing a characteristic of the underlying SDEs which we term fast-forwardability. Additionally, for general models that do not possess the fast-forwardable property, we introduce a quantum Milstein sampler, based on a novel quantum algorithm for sampling Lévy areas, which enables quantum multi-level Monte Carlo to achieve quadratic speedups for multi-dimensional stochastic processes exhibiting certain correlation types.   We also present an improved analysis of numerical integration for derivative pricing, leading to substantial reductions in the resource requirements for pricing GBM and CIR models. Furthermore, we investigate the potential for additional reductions using arithmetic-free quantum procedures. Finally, we critique quantum partial differential equation (PDE) solvers as a method for derivative pricing based on amplitude estimation, identifying theoretical barriers that obstruct achieving a quantum speedup through this approach. Our findings significantly advance the understanding of quantum algorithms in derivative pricing, addressing key challenges and open questions in the field.",
+    "authors": [
+      "Dylan Herman",
+      "Yue Sun",
+      "Jin-Peng Liu",
+      "Marco Pistoia",
+      "Charlie Che",
+      "Rob Otter",
+      "Shouvanik Chakrabarti",
+      "Aram Harrow"
+    ],
+    "published": "2026-02-03",
+    "categories": [
+      "quant-ph",
+      "cs.DS",
+      "q-fin.CP",
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.03725v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.03725v1",
+    "fetched_at": "2026-02-04T08:49:38.929639",
+    "chinese_title": "超越布莱克-斯科尔斯的衍生品定价量子加速",
+    "chinese_summary": "本文将量子衍生品定价框架扩展至CIR、Heston等实用模型，利用“快进性”证明量子二次加速；对无该性质的模型，提出基于 Lévy面积量子采样的量子Milstein采样器，使量子多级蒙特卡洛实现二次加速；同时改进数值积分分析，降低GBM和CIR模型的定价资源需求。",
+    "tags": [
+      "Asset Pricing",
+      "Options",
+      "Volatility"
+    ],
+    "key_contributions": [
+      "将量子衍生品定价框架扩展至CIR、Heston等实用模型，利用“快进性”实现量子二次加速",
+      "提出基于 Lévy面积量子采样的量子Milstein采样器，支持无快进性模型的量子多级蒙特卡洛二次加速",
+      "改进数值积分分析，显著降低GBM和CIR模型的定价资源需求"
+    ],
+    "processed_at": "2026-02-04T08:53:03.953571"
+  },
+  {
+    "id": "2602.03461v1",
+    "title": "Soft-Radial Projection for Constrained End-to-End Learning",
+    "abstract": "Integrating hard constraints into deep learning is essential for safety-critical systems. Yet existing constructive layers that project predictions onto constraint boundaries face a fundamental bottleneck: gradient saturation. By collapsing exterior points onto lower-dimensional surfaces, standard orthogonal projections induce rank-deficient Jacobians, which nullify gradients orthogonal to active constraints and hinder optimization. We introduce Soft-Radial Projection, a differentiable reparameterization layer that circumvents this issue through a radial mapping from Euclidean space into the interior of the feasible set. This construction guarantees strict feasibility while preserving a full-rank Jacobian almost everywhere, thereby preventing the optimization stalls typical of boundary-based methods. We theoretically prove that the architecture retains the universal approximation property and empirically show improved convergence behavior and solution quality over state-of-the-art optimization- and projection-based baselines.",
+    "authors": [
+      "Philipp J. Schneider",
+      "Daniel Kuhn"
+    ],
+    "published": "2026-02-03",
+    "categories": [
+      "cs.LG",
+      "math.OC",
+      "q-fin.CP",
+      "stat.ML"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.03461v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.03461v1",
+    "fetched_at": "2026-02-04T08:49:38.929664",
+    "chinese_title": "用于约束端到端学习的软径向投影",
+    "chinese_summary": "现有将硬约束融入深度学习的投影层因梯度饱和阻碍优化，本文提出软径向投影层，通过径向映射到可行集内部保证严格可行与雅可比满秩，避免优化停滞；理论证明其通用近似性，实验优于基线方法。",
+    "tags": [
+      "Deep Learning",
+      "Portfolio Optimization",
+      "Risk Management"
+    ],
+    "key_contributions": [
+      "提出软径向投影层，解决现有投影层梯度饱和问题，保证严格可行与雅可比几乎处处满秩",
+      "理论证明架构具有通用近似性，实验验证收敛性与解质量优于基线方法"
+    ],
+    "processed_at": "2026-02-04T08:53:23.151446"
+  },
+  {
+    "id": "2602.03325v1",
+    "title": "A Novel approach to portfolio construction",
+    "abstract": "This paper proposes a machine learning-based framework for asset selection and portfolio construction, termed the Best-Path Algorithm Sparse Graphical Model (BPASGM). The method extends the Best-Path Algorithm (BPA) by mapping linear and non-linear dependencies among a large set of financial assets into a sparse graphical model satisfying a structural Markov property. Based on this representation, BPASGM performs a dependence-driven screening that removes positively or redundantly connected assets, isolating subsets that are conditionally independent or negatively correlated. This step is designed to enhance diversification and reduce estimation error in high-dimensional portfolio settings. Portfolio optimization is then conducted on the selected subset using standard mean-variance techniques. BPASGM does not aim to improve the theoretical mean-variance optimum under known population parameters, but rather to enhance realized performance in finite samples, where sample-based Markowitz portfolios are highly sensitive to estimation error. Monte Carlo simulations show that BPASGM-based portfolios achieve more stable risk-return profiles, lower realized volatility, and superior risk-adjusted performance compared to standard mean-variance portfolios. Empirical results for U.S. equities, global stock indices, and foreign exchange rates over 1990-2025 confirm these findings and demonstrate a substantial reduction in portfolio cardinality. Overall, BPASGM offers a statistically grounded and computationally efficient framework that integrates sparse graphical modeling with portfolio theory for dependence-aware asset selection.",
+    "authors": [
+      "T. Di Matteo",
+      "L. Riso",
+      "M. G. Zoia"
+    ],
+    "published": "2026-02-03",
+    "categories": [
+      "q-fin.PM",
+      "cs.LG",
+      "q-fin.CP",
+      "q-fin.RM",
+      "stat.ML"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.03325v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.03325v1",
+    "fetched_at": "2026-02-04T08:49:38.929688",
+    "chinese_title": "一种投资组合构建的新方法",
+    "chinese_summary": "本文提出基于机器学习的投资组合构建框架BPASGM，通过稀疏图模型映射资产间线性与非线性依赖，筛选条件独立或负相关资产以增强分散化、降低估计误差，再结合均值方差优化；模拟与美股、全球股指、外汇实证表明其风险收益更稳定、夏普比更优且组合基数更小。",
+    "tags": [
+      "Portfolio Optimization",
+      "Risk Management",
+      "Graph Neural Network",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出BPASGM框架，利用稀疏图模型刻画资产间线性与非线性依赖，实现依赖驱动的资产筛选以提升分散化并减少估计误差",
+      "实证与模拟验证该方法构建的投资组合在风险收益稳定性、夏普比及组合基数上优于标准均值方差组合"
+    ],
+    "processed_at": "2026-02-04T08:54:03.786908"
+  },
+  {
+    "id": "2602.02996v1",
+    "title": "Dual Attainment in Multi-Period Multi-Asset Martingale Optimal Transport and Its Computation",
+    "abstract": "We establish dual attainment for the multimarginal, multi-asset martingale optimal transport (MOT) problem, a fundamental question in the mathematical theory of model-independent pricing and hedging in quantitative finance. Our main result proves the existence of dual optimizers under mild regularity and irreducibility conditions, extending previous duality and attainment results from the classical and two-marginal settings to arbitrary numbers of assets and time periods. This theoretical advance provides a rigorous foundation for robust pricing and hedging of complex, path-dependent financial derivatives. To support our analysis, we present numerical experiments that demonstrate the practical solvability of large-scale discrete MOT problems using the state-of-the-art primal-dual linear programming (PDLP) algorithm. In particular, we solve multi-dimensional (or vectorial) MOT instances arising from the robust pricing of worst-of autocallable options, confirming the accuracy and feasibility of our theoretical results. Our work advances the mathematical understanding of MOT and highlights its relevance for robust financial engineering in high-dimensional and model-uncertain environments.",
+    "authors": [
+      "Charlie Che",
+      "Tongseok Lim",
+      "Yue Sun"
+    ],
+    "published": "2026-02-03",
+    "categories": [
+      "q-fin.MF",
+      "econ.TH",
+      "math.OC",
+      "math.PR",
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.02996v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.02996v1",
+    "fetched_at": "2026-02-04T08:49:38.929711",
+    "chinese_title": "多期多资产鞅最优输运中的对偶可达性及其计算",
+    "chinese_summary": "该论文建立了多期多资产鞅最优输运（MOT）问题的对偶可达性，在温和正则与不可约条件下证明对偶最优解存在，将经典及双边际设置的对偶结果扩展至任意资产和时间维度；并采用原对偶线性规划（PDLP）算法求解大规模离散MOT问题，通过worst-of autocallable期权的鲁棒定价实例验证了方法的可行性与准确性。",
+    "tags": [
+      "Asset Pricing",
+      "Options",
+      "Risk Management"
+    ],
+    "key_contributions": [
+      "建立多期多资产鞅最优输运（MOT）的对偶可达性，证明对偶最优解存在，将经典及双边际MOT的对偶结果扩展至任意资产数量和时间周期",
+      "采用原对偶线性规划（PDLP）算法实现大规模离散MOT问题的数值求解，验证worst-of autocallable期权鲁棒定价的可行性与准确性"
+    ],
+    "processed_at": "2026-02-04T08:54:23.437137"
+  },
+  {
+    "id": "2602.02816v1",
+    "title": "Habit Formation, Labor Supply, and the Dynamics of Retirement and Annuitization",
+    "abstract": "The decision to annuitize wealth in retirement planning has become increasingly complex due to rising longevity risk and changing retirement patterns, including increased labor force participation at older ages. While an extensive literature studies consumption, labor, and annuitization decisions, these elements are typically examined in isolation. This paper develops a unified stochastic control and optimal stopping framework in which habit formation and endogenous labor supply shape retirement and annuitization decisions under age-dependent mortality. We derive optimal consumption, labor, portfolio, and annuitization policies in a continuous-time lifecycle model. The solution is characterized via dynamic programming and a Hamilton-Jacobi-Bellman variational inequality. Our results reveal a rich sequence of retirement dynamics. When wealth is low relative to habit, labor is supplied defensively to protect consumption standards. As wealth increases, agents enter a work-to-retire phase in which labor is supplied at its maximum level to accelerate access to retirement. Human capital acts as a stabilizing asset, justifying a more aggressive pre-retirement investment portfolio, followed by abrupt de-risking upon annuitization. Subjective mortality beliefs are a key determinant in shaping retirement dynamics. Agents with pessimistic longevity beliefs rationally perceive annuities as unattractive, leading them to avoid or delay annuitization. This framework provides a behavior-based explanation for low annuity demand and offers guidance for retirement planning jointly linking labor supply, portfolio choice, and the timing of annuitization.",
+    "authors": [
+      "Crisent Birungi",
+      "Cody Hyndman"
+    ],
+    "published": "2026-02-02",
+    "categories": [
+      "q-fin.MF",
+      "math.OC",
+      "math.PR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.02816v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.02816v1",
+    "fetched_at": "2026-02-04T08:49:38.929733",
+    "chinese_title": "习惯形成、劳动供给与退休及年金化动态",
+    "chinese_summary": "论文构建纳入习惯形成与内生劳动供给的统一随机控制-最优停止框架，考虑年龄依赖死亡率，推导连续时间生命周期模型中的最优消费、劳动、投资组合及年金化政策（用动态规划与HJB变分不等式刻画）；揭示退休动态的丰富序列（低财富时防御性劳动保护消费，财富增加后最大化劳动加速退休），并指出人力资本稳定作用、主观长寿信念对年金化决策的关键影响。",
+    "tags": [
+      "Behavioral Finance",
+      "Portfolio Optimization",
+      "Risk Management"
+    ],
+    "key_contributions": [
+      "构建整合习惯形成、内生劳动供给及年龄依赖死亡率的统一随机控制-最优停止框架，推导生命周期模型中的最优消费、劳动、投资组合与年金化政策",
+      "揭示退休动态序列特征、人力资本的资产稳定作用，以及主观长寿信念对年金化决策的关键影响"
+    ],
+    "processed_at": "2026-02-04T08:54:48.045138"
+  },
+  {
+    "id": "2602.02607v1",
+    "title": "The Innovation Tax: Generative AI Adoption, Productivity Paradox, and Systemic Risk in the U.S. Banking Sector",
+    "abstract": "This paper evaluates the causal impact of Generative Artificial Intelligence (GenAI) adoption on productivity and systemic risk in the U.S. banking sector. Using a novel dataset linking SEC 10-Q filings to Federal Reserve regulatory data for 809 financial institutions over 2018--2025, we employ two complementary identification strategies: Dynamic Spatial Durbin Models (DSDM) to capture network spillovers and Synthetic Difference-in-Differences (SDID) for causal inference using the November 2022 ChatGPT release as an exogenous shock. Our findings reveal a striking ``Productivity Paradox'': while DSDM estimates show that AI-adopting banks are high performers ($β> 0$), the causal SDID analysis documents a significant ``Implementation Tax'' -- adopting banks experience a 428-basis-point decline in ROE as they absorb GenAI integration costs. This tax falls disproportionately on smaller institutions, with bottom-quartile banks suffering a 517-basis-point ROE decline compared to 129 basis points for larger banks, suggesting that economies of scale provide significant advantages in AI implementation. Most critically, our DSDM analysis reveals significant positive spillovers ($θ= 0.161$ for ROA, $p < 0.01$; $θ= 0.679$ for ROE, $p < 0.05$), with spillovers among large banks reaching $θ= 3.13$ for ROE, indicating that the U.S. banking system is becoming ``algorithmically coupled.'' This synchronization of AI-driven decision-making creates a new channel for systemic contagion: a technical failure in widely-adopted AI models could trigger correlated shocks across the entire financial network.",
+    "authors": [
+      "Tatsuru Kikuchi"
+    ],
+    "published": "2026-02-02",
+    "categories": [
+      "econ.EM",
+      "econ.TH",
+      "q-fin.CP",
+      "q-fin.GN",
+      "q-fin.RM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.02607v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.02607v1",
+    "fetched_at": "2026-02-04T08:49:38.929779",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "Risk Management"
+    ],
+    "key_contributions": [],
+    "processed_at": "2026-02-04T08:54:50.627060"
+  },
+  {
+    "id": "2602.03678v1",
+    "title": "ContraLog: Log File Anomaly Detection with Contrastive Learning and Masked Language Modeling",
+    "abstract": "Log files record computational events that reflect system state and behavior, making them a primary source of operational insights in modern computer systems. Automated anomaly detection on logs is therefore critical, yet most established methods rely on log parsers that collapse messages into discrete templates, discarding variable values and semantic content. We propose ContraLog, a parser-free and self-supervised method that reframes log anomaly detection as predicting continuous message embeddings rather than discrete template IDs. ContraLog combines a message encoder that produces rich embeddings for individual log messages with a sequence encoder to model temporal dependencies within sequences. The model is trained with a combination of masked language modeling and contrastive learning to predict masked message embeddings based on the surrounding context. Experiments on the HDFS, BGL, and Thunderbird benchmark datasets empirically demonstrate effectiveness on complex datasets with diverse log messages. Additionally, we find that message embeddings generated by ContraLog carry meaningful information and are predictive of anomalies even without sequence context. These results highlight embedding-level prediction as an approach for log anomaly detection, with potential applicability to other event sequences.",
+    "authors": [
+      "Simon Dietz",
+      "Kai Klede",
+      "An Nguyen",
+      "Bjoern M Eskofier"
+    ],
+    "published": "2026-02-03",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.03678v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.03678v1",
+    "fetched_at": "2026-02-04T08:49:51.350299",
+    "chinese_title": "ContraLog：基于对比学习与掩码语言建模的日志文件异常检测",
+    "chinese_summary": "论文提出无解析器自监督方法ContraLog，将日志异常检测从离散模板ID预测重构为连续消息嵌入预测，结合消息编码器、序列编码器，通过掩码语言建模与对比学习训练；在HDFS、BGL等基准数据集验证有效性，且发现消息嵌入本身携带异常预测信息无需序列上下文。",
+    "tags": [
+      "Anomaly",
+      "Deep Learning",
+      "NLP",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出无解析器自监督方法ContraLog，以连续消息嵌入预测替代离散模板ID预测，结合对比学习与掩码语言建模实现日志异常检测",
+      "实验证明方法在多基准数据集有效，且消息嵌入本身携带异常预测信息无需序列上下文"
+    ],
+    "processed_at": "2026-02-04T08:55:03.476302"
+  },
+  {
+    "id": "2602.03596v1",
+    "title": "SAGE-5GC: Security-Aware Guidelines for Evaluating Anomaly Detection in the 5G Core Network",
+    "abstract": "Machine learning-based anomaly detection systems are increasingly being adopted in 5G Core networks to monitor complex, high-volume traffic. However, most existing approaches are evaluated under strong assumptions that rarely hold in operational environments, notably the availability of independent and identically distributed (IID) data and the absence of adaptive attackers.In this work, we study the problem of detecting 5G attacks \\textit{in the wild}, focusing on realistic deployment settings. We propose a set of Security-Aware Guidelines for Evaluating anomaly detectors in 5G Core Network (SAGE-5GC), driven by domain knowledge and consideration of potential adversarial threats. Using a realistic 5G Core dataset, we first train several anomaly detectors and assess their baseline performance against standard 5GC control-plane cyberattacks targeting PFCP-based network services.We then extend the evaluation to adversarial settings, where an attacker tries to manipulate the observable features of the network traffic to evade detection, under the constraint that the intended functionality of the malicious traffic is preserved. Starting from a selected set of controllable features, we analyze model sensitivity and adversarial robustness through randomized perturbations. Finally, we introduce a practical optimization strategy based on genetic algorithms that operates exclusively on attacker-controllable features and does not require prior knowledge of the underlying detection model. Our experimental results show that adversarially crafted attacks can substantially degrade detection performance, underscoring the need for robust, security-aware evaluation methodologies for anomaly detection in 5G networks deployed in the wild.",
+    "authors": [
+      "Cristian Manca",
+      "Christian Scano",
+      "Giorgio Piras",
+      "Fabio Brau",
+      "Maura Pintor",
+      "Battista Biggio"
+    ],
+    "published": "2026-02-03",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.03596v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.03596v1",
+    "fetched_at": "2026-02-04T08:49:51.350337",
+    "chinese_title": "SAGE-5GC：5G核心网络异常检测评估的安全感知指南",
+    "chinese_summary": "现有5G核心网络异常检测评估多基于IID数据、无自适应攻击者等不切实际假设，本文提出SAGE-5GC安全感知评估指南，结合真实5G数据集训练并评估异常检测器，分析对抗设置下的鲁棒性，还提出基于遗传算法的攻击者特征扰动优化策略。",
+    "tags": [
+      "Anomaly",
+      "Deep Learning",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出针对真实部署环境（含自适应攻击者）的5G核心网络异常检测评估指南SAGE-5GC",
+      "基于真实5G数据集评估异常检测器的对抗鲁棒性，并提出无需检测模型先验知识的遗传算法攻击优化策略"
+    ],
+    "processed_at": "2026-02-04T08:55:19.572200"
+  },
+  {
+    "id": "2602.03293v1",
+    "title": "Anomaly Detection via Mean Shift Density Enhancement",
+    "abstract": "Unsupervised anomaly detection stands as an important problem in machine learning, with applications in financial fraud prevention, network security and medical diagnostics. Existing unsupervised anomaly detection algorithms rarely perform well across different anomaly types, often excelling only under specific structural assumptions. This lack of robustness also becomes particularly evident under noisy settings. We propose Mean Shift Density Enhancement (MSDE), a fully unsupervised framework that detects anomalies through their geometric response to density-driven manifold evolution. MSDE is based on the principle that normal samples, being well supported by local density, remain stable under iterative density enhancement, whereas anomalous samples undergo large cumulative displacements as they are attracted toward nearby density modes. To operationalize this idea, MSDE employs a weighted mean-shift procedure with adaptive, sample-specific density weights derived from a UMAP-based fuzzy neighborhood graph. Anomaly scores are defined by the total displacement accumulated across a small number of mean-shift iterations. We evaluate MSDE on the ADBench benchmark, comprising forty six real-world tabular datasets, four realistic anomaly generation mechanisms, and six noise levels. Compared to 13 established unsupervised baselines, MSDE achieves consistently strong, balanced and robust performance for AUC-ROC, AUC-PR, and Precision@n, at several noise levels and on average over several types of anomalies. These results demonstrate that displacement-based scoring provides a robust alternative to the existing state-of-the-art for unsupervised anomaly detection.",
+    "authors": [
+      "Pritam Kar",
+      "Rahul Bordoloi",
+      "Olaf Wolkenhauer",
+      "Saptarshi Bej"
+    ],
+    "published": "2026-02-03",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.03293v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.03293v1",
+    "fetched_at": "2026-02-04T08:49:51.350362",
+    "chinese_title": "基于均值漂移密度增强的异常检测",
+    "chinese_summary": "论文提出无监督异常检测框架MSDE，基于均值漂移与UMAP模糊邻域图的自适应密度权重，通过异常样本在密度增强迭代中的累计位移定义异常分数；在ADBench基准上，相比13个基线，MSDE在不同噪声水平下的AUC-ROC、AUC-PR等指标表现更稳健均衡。",
+    "tags": [
+      "Anomaly",
+      "Benchmark",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出无监督异常检测框架MSDE，利用密度驱动流形演化中样本累计位移识别异常，采用UMAP模糊邻域图的自适应密度权重优化均值漂移过程",
+      "在ADBench基准（含46个真实表格数据集、4种异常生成机制及6种噪声水平）上，相比13个基线，MSDE在多指标下表现更稳健、均衡且优异"
+    ],
+    "processed_at": "2026-02-04T08:55:51.389304"
+  },
+  {
+    "id": "2602.02980v1",
+    "title": "WST-X Series: Wavelet Scattering Transform for Interpretable Speech Deepfake Detection",
+    "abstract": "Designing front-ends for speech deepfake detectors primarily focuses on two categories. Hand-crafted filterbank features are transparent but are limited in capturing high-level semantic details, often resulting in performance gaps compared to self-supervised (SSL) features. SSL features, in turn, lack interpretability and may overlook fine-grained spectral anomalies. We propose the WST-X series, a novel family of feature extractors that combines the best of both worlds via the wavelet scattering transform (WST), integrating wavelets with nonlinearities analogous to deep convolutional networks. We investigate 1D and 2D WSTs to extract acoustic details and higher-order structural anomalies, respectively. Experimental results on the recent and challenging Deepfake-Eval-2024 dataset indicate that WST-X outperforms existing front-ends by a wide margin. Our analysis reveals that a small averaging scale ($J$), combined with high-frequency and directional resolutions ($Q, L$), is critical for capturing subtle artifacts. This underscores the value of translation-invariant and deformation-stable features for robust and interpretable speech deepfake detection.",
+    "authors": [
+      "Xi Xuan",
+      "Davide Carbone",
+      "Ruchi Pandey",
+      "Wenxin Zhang",
+      "Tomi H. Kinnunen"
+    ],
+    "published": "2026-02-03",
+    "categories": [
+      "eess.AS",
+      "cs.CL",
+      "eess.SP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.02980v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.02980v1",
+    "fetched_at": "2026-02-04T08:49:51.350388",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "NLP"
+    ],
+    "key_contributions": [],
+    "processed_at": "2026-02-04T08:55:53.992754"
+  },
+  {
+    "id": "2602.02929v1",
+    "title": "RPG-AE: Neuro-Symbolic Graph Autoencoders with Rare Pattern Mining for Provenance-Based Anomaly Detection",
+    "abstract": "Advanced Persistent Threats (APTs) are sophisticated, long-term cyberattacks that are difficult to detect because they operate stealthily and often blend into normal system behavior. This paper presents a neuro-symbolic anomaly detection framework that combines a Graph Autoencoder (GAE) with rare pattern mining to identify APT-like activities in system-level provenance data. Our approach first constructs a process behavioral graph using k-Nearest Neighbors based on feature similarity, then learns normal relational structure using a Graph Autoencoder. Anomaly candidates are identified through deviations between observed and reconstructed graph structure. To further improve detection, we integrate an rare pattern mining module that discovers infrequent behavioral co-occurrences and uses them to boost anomaly scores for processes exhibiting rare signatures. We evaluate the proposed method on the DARPA Transparent Computing datasets and show that rare-pattern boosting yields substantial gains in anomaly ranking quality over the baseline GAE. Compared with existing unsupervised approaches on the same benchmark, our single unified model consistently outperforms individual context-based detectors and achieves performance competitive with ensemble aggregation methods that require multiple separate detectors. These results highlight the value of coupling graph-based representation learning with classical pattern mining to improve both effectiveness and interpretability in provenance-based security anomaly detection.",
+    "authors": [
+      "Asif Tauhid",
+      "Sidahmed Benabderrahmane",
+      "Mohamad Altrabulsi",
+      "Ahamed Foisal",
+      "Talal Rahwan"
+    ],
+    "published": "2026-02-03",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CR",
+      "cs.NE"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.02929v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.02929v1",
+    "fetched_at": "2026-02-04T08:49:51.350413",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "Deep Learning"
+    ],
+    "key_contributions": [],
+    "processed_at": "2026-02-04T08:55:57.344705"
+  },
+  {
+    "id": "2602.02925v1",
+    "title": "Refining Decision Boundaries In Anomaly Detection Using Similarity Search Within the Feature Space",
+    "abstract": "Detecting rare and diverse anomalies in highly imbalanced datasets-such as Advanced Persistent Threats (APTs) in cybersecurity-remains a fundamental challenge for machine learning systems. Active learning offers a promising direction by strategically querying an oracle to minimize labeling effort, yet conventional approaches often fail to exploit the intrinsic geometric structure of the feature space for model refinement. In this paper, we introduce SDA2E, a Sparse Dual Adversarial Attention-based AutoEncoder designed to learn compact and discriminative latent representations from imbalanced, high-dimensional data. We further propose a similarity-guided active learning framework that integrates three novel strategies to refine decision boundaries efficiently: mormal-like expansion, which enriches the training set with points similar to labeled normals to improve reconstruction fidelity; anomaly-like prioritization, which boosts ranking accuracy by focusing on points resembling known anomalies; and a hybrid strategy that combines both for balanced model refinement and ranking. A key component of our framework is a new similarity measure, Normalized Matching 1s (SIM_NM1), tailored for sparse binary embeddings. We evaluate SDA2E extensively across 52 imbalanced datasets, including multiple DARPA Transparent Computing scenarios, and benchmark it against 15 state-of-the-art anomaly detection methods. Results demonstrate that SDA2E consistently achieves superior ranking performance (nDCG up to 1.0 in several cases) while reducing the required labeled data by up to 80% compared to passive training. Statistical tests confirm the significance of these improvements. Our work establishes a robust, efficient, and statistically validated framework for anomaly detection that is particularly suited to cybersecurity applications such as APT detection.",
+    "authors": [
+      "Sidahmed Benabderrahmane",
+      "Petko Valtchev",
+      "James Cheney",
+      "Talal Rahwan"
+    ],
+    "published": "2026-02-02",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CR",
+      "cs.NE"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.02925v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.02925v1",
+    "fetched_at": "2026-02-04T08:49:51.350437",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "Deep Learning"
+    ],
+    "key_contributions": [],
+    "processed_at": "2026-02-04T08:56:00.234644"
+  },
+  {
+    "id": "2602.01635v2",
+    "title": "COMET: Codebook-based Online-adaptive Multi-scale Embedding for Time-series Anomaly Detection",
+    "abstract": "Time series anomaly detection is a critical task across various industrial domains. However, capturing temporal dependencies and multivariate correlations within patch-level representation learning remains underexplored, and reliance on single-scale patterns limits the detection of anomalies across different temporal ranges. Furthermore, focusing on normal data representations makes models vulnerable to distribution shifts at inference time. To address these limitations, we propose Codebook-based Online-adaptive Multi-scale Embedding for Time-series anomaly detection (COMET), which consists of three key components: (1) Multi-scale Patch Encoding captures temporal dependencies and inter-variable correlations across multiple patch scales. (2) Vector-Quantized Coreset learns representative normal patterns via codebook and detects anomalies with a dual-score combining quantization error and memory distance. (3) Online Codebook Adaptation generates pseudo-labels based on codebook entries and dynamically adapts the model at inference through contrastive learning. Experiments on five benchmark datasets demonstrate that COMET achieves the best performance in 36 out of 45 evaluation metrics, validating its effectiveness across diverse environments.",
+    "authors": [
+      "Jinwoo Park",
+      "Hyeongwon Kang",
+      "Seung Hun Han",
+      "Pilsung Kang"
+    ],
+    "published": "2026-02-02",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.01635v2",
+    "arxiv_url": "https://arxiv.org/abs/2602.01635v2",
+    "fetched_at": "2026-02-04T08:49:51.350507",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "Deep Learning"
+    ],
+    "key_contributions": [],
+    "processed_at": "2026-02-04T08:56:02.950765"
+  },
+  {
+    "id": "2602.03837v1",
+    "title": "Accelerating Scientific Research with Gemini: Case Studies and Common Techniques",
+    "abstract": "Recent advances in large language models (LLMs) have opened new avenues for accelerating scientific research. While models are increasingly capable of assisting with routine tasks, their ability to contribute to novel, expert-level mathematical discovery is less understood. We present a collection of case studies demonstrating how researchers have successfully collaborated with advanced AI models, specifically Google's Gemini-based models (in particular Gemini Deep Think and its advanced variants), to solve open problems, refute conjectures, and generate new proofs across diverse areas in theoretical computer science, as well as other areas such as economics, optimization, and physics. Based on these experiences, we extract common techniques for effective human-AI collaboration in theoretical research, such as iterative refinement, problem decomposition, and cross-disciplinary knowledge transfer. While the majority of our results stem from this interactive, conversational methodology, we also highlight specific instances that push beyond standard chat interfaces. These include deploying the model as a rigorous adversarial reviewer to detect subtle flaws in existing proofs, and embedding it within a \"neuro-symbolic\" loop that autonomously writes and executes code to verify complex derivations. Together, these examples highlight the potential of AI not just as a tool for automation, but as a versatile, genuine partner in the creative process of scientific discovery.",
+    "authors": [
+      "David P. Woodruff",
+      "Vincent Cohen-Addad",
+      "Lalit Jain",
+      "Jieming Mao",
+      "Song Zuo",
+      "MohammadHossein Bateni",
+      "Simina Branzei",
+      "Michael P. Brenner",
+      "Lin Chen",
+      "Ying Feng",
+      "Lance Fortnow",
+      "Gang Fu",
+      "Ziyi Guan",
+      "Zahra Hadizadeh",
+      "Mohammad T. Hajiaghayi",
+      "Mahdi JafariRaviz",
+      "Adel Javanmard",
+      "Karthik C. S.",
+      "Ken-ichi Kawarabayashi",
+      "Ravi Kumar",
+      "Silvio Lattanzi",
+      "Euiwoong Lee",
+      "Yi Li",
+      "Ioannis Panageas",
+      "Dimitris Paparas",
+      "Benjamin Przybocki",
+      "Bernardo Subercaseaux",
+      "Ola Svensson",
+      "Shayan Taherijam",
+      "Xuan Wu",
+      "Eylon Yogev",
+      "Morteza Zadimoghaddam",
+      "Samson Zhou",
+      "Vahab Mirrokni"
+    ],
+    "published": "2026-02-03",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.03837v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.03837v1",
+    "fetched_at": "2026-02-04T08:50:19.294452",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "NLP"
+    ],
+    "key_contributions": [],
+    "processed_at": "2026-02-04T08:56:05.498118"
+  },
+  {
+    "id": "2602.03792v1",
+    "title": "WebSentinel: Detecting and Localizing Prompt Injection Attacks for Web Agents",
+    "abstract": "Prompt injection attacks manipulate webpage content to cause web agents to execute attacker-specified tasks instead of the user's intended ones. Existing methods for detecting and localizing such attacks achieve limited effectiveness, as their underlying assumptions often do not hold in the web-agent setting. In this work, we propose WebSentinel, a two-step approach for detecting and localizing prompt injection attacks in webpages. Given a webpage, Step I extracts \\emph{segments of interest} that may be contaminated, and Step II evaluates each segment by checking its consistency with the webpage content as context. We show that WebSentinel is highly effective, substantially outperforming baseline methods across multiple datasets of both contaminated and clean webpages that we collected. Our code is available at: https://github.com/wxl-lxw/WebSentinel.",
+    "authors": [
+      "Xilong Wang",
+      "Yinuo Liu",
+      "Zhun Wang",
+      "Dawn Song",
+      "Neil Gong"
+    ],
+    "published": "2026-02-03",
+    "categories": [
+      "cs.CR",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.03792v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.03792v1",
+    "fetched_at": "2026-02-04T08:50:19.294488",
+    "chinese_title": "WebSentinel：检测并定位面向Web智能体的提示注入攻击",
+    "chinese_summary": "该论文针对Web智能体中提示注入攻击的检测定位问题，提出WebSentinel两步法——先提取网页中可能被污染的感兴趣片段，再通过片段与网页上下文的一致性评估判断攻击；实验表明其效果显著优于现有基线方法。",
+    "tags": [
+      "LLM",
+      "NLP",
+      "Anomaly",
+      "Financial Agent"
+    ],
+    "key_contributions": [
+      "提出WebSentinel两步检测定位框架，克服现有方法在Web智能体场景下假设不成立的局限",
+      "在自建的污染与清洁网页数据集上，效果显著优于基线方法"
+    ],
+    "processed_at": "2026-02-04T08:56:23.165775"
+  },
+  {
+    "id": "2602.03786v1",
+    "title": "AOrchestra: Automating Sub-Agent Creation for Agentic Orchestration",
+    "abstract": "Language agents have shown strong promise for task automation. Realizing this promise for increasingly complex, long-horizon tasks has driven the rise of a sub-agent-as-tools paradigm for multi-turn task solving. However, existing designs still lack a dynamic abstraction view of sub-agents, thereby hurting adaptability. We address this challenge with a unified, framework-agnostic agent abstraction that models any agent as a tuple Instruction, Context, Tools, Model. This tuple acts as a compositional recipe for capabilities, enabling the system to spawn specialized executors for each task on demand. Building on this abstraction, we introduce an agentic system AOrchestra, where the central orchestrator concretizes the tuple at each step: it curates task-relevant context, selects tools and models, and delegates execution via on-the-fly automatic agent creation. Such designs enable reducing human engineering efforts, and remain framework-agnostic with plug-and-play support for diverse agents as task executors. It also enables a controllable performance-cost trade-off, allowing the system to approach Pareto-efficient. Across three challenging benchmarks (GAIA, SWE-Bench, Terminal-Bench), AOrchestra achieves 16.28% relative improvement against the strongest baseline when paired with Gemini-3-Flash. The code is available at: https://github.com/FoundationAgents/AOrchestra",
+    "authors": [
+      "Jianhao Ruan",
+      "Zhihao Xu",
+      "Yiran Peng",
+      "Fashen Ren",
+      "Zhaoyang Yu",
+      "Xinbing Liang",
+      "Jinyu Xiang",
+      "Bang Liu",
+      "Chenglin Wu",
+      "Yuyu Luo",
+      "Jiayi Zhang"
+    ],
+    "published": "2026-02-03",
+    "categories": [
+      "cs.AI",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.03786v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.03786v1",
+    "fetched_at": "2026-02-04T08:50:19.294529",
+    "chinese_title": "AOrchestra：面向智能体编排的子智能体自动化创建",
+    "chinese_summary": "该文针对现有子智能体设计缺乏动态抽象导致适应性不足的问题，提出统一的智能体抽象四元组（指令、上下文、工具、模型）作为能力组合配方；基于此构建AOrchestra系统，中央编排器按需生成专用子智能体，实现框架无关的即插即用与性能-成本权衡，在GAIA等三个基准上较最强基线提升16.28%相对性能。",
+    "tags": [
+      "LLM",
+      "NLP",
+      "Financial Agent",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出统一的、框架无关的智能体抽象四元组（指令、上下文、工具、模型），作为能力组合的可组合配方",
+      "构建AOrchestra智能体系统，实现按需自动创建子智能体，减少人工工程成本，支持即插即用与可控的性能-成本权衡，在多基准上显著提升任务性能"
+    ],
+    "processed_at": "2026-02-04T08:56:47.269127"
+  },
+  {
+    "id": "2602.03732v1",
+    "title": "Fast-MWEM: Private Data Release in Sublinear Time",
+    "abstract": "The Multiplicative Weights Exponential Mechanism (MWEM) is a fundamental iterative framework for private data analysis, with broad applications such as answering $m$ linear queries, or privately solving systems of $m$ linear constraints. However, a critical bottleneck hindering its scalability is the $Θ(m)$ time complexity required to execute the exponential mechanism in each iteration. We introduce a modification to the MWEM framework that improves the per-iteration runtime dependency to $Θ(\\sqrt{m})$ in expectation. This is done via a lazy sampling approach to the Report-Noisy-Max mechanism, which we implement efficiently using Gumbel noise and a $k$-Nearest Neighbor data structure. This allows for the rapid selection of the approximate score in the exponential mechanism without an exhaustive linear scan. We apply our accelerated framework to the problems of private linear query release and solving Linear Programs (LPs) under neighboring constraint conditions and low-sensitivity assumptions. Experimental evaluation confirms that our method provides a substantial runtime improvement over classic MWEM.",
+    "authors": [
+      "Themistoklis Haris",
+      "Steve Choi",
+      "Mutiraj Laksanawisit"
+    ],
+    "published": "2026-02-03",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.03732v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.03732v1",
+    "fetched_at": "2026-02-04T08:50:19.294552",
+    "chinese_title": "Fast-MWEM：亚线性时间内的私有数据发布",
+    "chinese_summary": "针对乘法权重指数机制（MWEM）每次迭代需Θ(m)时间的可扩展性瓶颈，论文提出Fast-MWEM框架，通过lazy采样的Report-Noisy-Max机制（结合Gumbel噪声与k近邻结构）将单轮迭代时间复杂度降至期望Θ(√m)，并应用于私有线性查询发布与带邻接约束的线性规划求解，实验证实其显著提速。",
+    "tags": [
+      "Portfolio Optimization",
+      "Algorithmic Trading",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出Fast-MWEM框架，将MWEM单轮迭代时间复杂度从Θ(m)优化至期望Θ(√m)",
+      "设计基于lazy采样的Report-Noisy-Max机制（结合Gumbel噪声与k近邻结构），高效实现指数机制的近似评分选择"
+    ],
+    "processed_at": "2026-02-04T08:57:21.790248"
+  },
+  {
+    "id": "2602.03695v1",
+    "title": "Agent Primitives: Reusable Latent Building Blocks for Multi-Agent Systems",
+    "abstract": "While existing multi-agent systems (MAS) can handle complex problems by enabling collaboration among multiple agents, they are often highly task-specific, relying on manually crafted agent roles and interaction prompts, which leads to increased architectural complexity and limited reusability across tasks. Moreover, most MAS communicate primarily through natural language, making them vulnerable to error accumulation and instability in long-context, multi-stage interactions within internal agent histories.   In this work, we propose \\textbf{Agent Primitives}, a set of reusable latent building blocks for LLM-based MAS. Inspired by neural network design, where complex models are built from reusable components, we observe that many existing MAS architectures can be decomposed into a small number of recurring internal computation patterns. Based on this observation, we instantiate three primitives: Review, Voting and Selection, and Planning and Execution. All primitives communicate internally via key-value (KV) cache, which improves both robustness and efficiency by mitigating information degradation across multi-stage interactions. To enable automatic system construction, an Organizer agent selects and composes primitives for each query, guided by a lightweight knowledge pool of previously successful configurations, forming a primitive-based MAS.   Experiments show that primitives-based MAS improve average accuracy by 12.0-16.5\\% over single-agent baselines, reduce token usage and inference latency by approximately 3$\\times$-4$\\times$ compared to text-based MAS, while incurring only 1.3$\\times$-1.6$\\times$ overhead relative to single-agent inference and providing more stable performance across model backbones.",
+    "authors": [
+      "Haibo Jin",
+      "Kuang Peng",
+      "Ye Yu",
+      "Xiaopeng Yuan",
+      "Haohan Wang"
+    ],
+    "published": "2026-02-03",
+    "categories": [
+      "cs.MA",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.03695v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.03695v1",
+    "fetched_at": "2026-02-04T08:50:19.294580",
+    "chinese_title": "Agent基元：多智能体系统的可复用潜在构建块",
+    "chinese_summary": "现有多智能体系统（MAS）多任务特定、复用性差且自然语言交互易出错；论文提出基于大语言模型（LLM）的Agent基元（含Review等三类），内部用键值缓存通信提升鲁棒性效率，还引入Organizer智能体自动组合基元，实验显示其比单智能体基线准确率提升12.0-16.5%并减少token使用。",
+    "tags": [
+      "LLM",
+      "Financial Agent",
+      "NLP"
+    ],
+    "key_contributions": [
+      "提出Agent基元作为基于LLM的MAS可复用潜在构建块，含三类具体基元，内部用KV cache通信提升鲁棒性与效率；",
+      "引入Organizer智能体自动组合基元构建primitive-based MAS，实验验证其性能优于单智能体基线。"
+    ],
+    "processed_at": "2026-02-04T08:57:48.378425"
+  },
+  {
+    "id": "2602.03633v1",
+    "title": "BIRDTurk: Adaptation of the BIRD Text-to-SQL Dataset to Turkish",
+    "abstract": "Text-to-SQL systems have achieved strong performance on English benchmarks, yet their behavior in morphologically rich, low-resource languages remains largely unexplored. We introduce BIRDTurk, the first Turkish adaptation of the BIRD benchmark, constructed through a controlled translation pipeline that adapts schema identifiers to Turkish while strictly preserving the logical structure and execution semantics of SQL queries and databases. Translation quality is validated on a sample size determined by the Central Limit Theorem to ensure 95% confidence, achieving 98.15% accuracy on human-evaluated samples. Using BIRDTurk, we evaluate inference-based prompting, agentic multi-stage reasoning, and supervised fine-tuning. Our results reveal that Turkish introduces consistent performance degradation, driven by both structural linguistic divergence and underrepresentation in LLM pretraining, while agentic reasoning demonstrates stronger cross-lingual robustness. Supervised fine-tuning remains challenging for standard multilingual baselines but scales effectively with modern instruction-tuned models. BIRDTurk provides a controlled testbed for cross-lingual Text-to-SQL evaluation under realistic database conditions. We release the training and development splits to support future research.",
+    "authors": [
+      "Burak Aktaş",
+      "Mehmet Can Baytekin",
+      "Süha Kağan Köse",
+      "Ömer İlbilgi",
+      "Elif Özge Yılmaz",
+      "Çağrı Toraman",
+      "Bilge Kaan Görür"
+    ],
+    "published": "2026-02-03",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.DB"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.03633v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.03633v1",
+    "fetched_at": "2026-02-04T08:50:19.294609",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "NLP"
+    ],
+    "key_contributions": [],
+    "processed_at": "2026-02-04T08:57:50.863644"
+  },
+  {
+    "id": "2602.03630v1",
+    "title": "Can LLMs Do Rocket Science? Exploring the Limits of Complex Reasoning with GTOC 12",
+    "abstract": "Large Language Models (LLMs) have demonstrated remarkable proficiency in code generation and general reasoning, yet their capacity for autonomous multi-stage planning in high-dimensional, physically constrained environments remains an open research question. This study investigates the limits of current AI agents by evaluating them against the 12th Global Trajectory Optimization Competition (GTOC 12), a complex astrodynamics challenge requiring the design of a large-scale asteroid mining campaign. We adapt the MLE-Bench framework to the domain of orbital mechanics and deploy an AIDE-based agent architecture to autonomously generate and refine mission solutions. To assess performance beyond binary validity, we employ an \"LLM-as-a-Judge\" methodology, utilizing a rubric developed by domain experts to evaluate strategic viability across five structural categories. A comparative analysis of models, ranging from GPT-4-Turbo to reasoning-enhanced architectures like Gemini 2.5 Pro, and o3, reveals a significant trend: the average strategic viability score has nearly doubled in the last two years (rising from 9.3 to 17.2 out of 26). However, we identify a critical capability gap between strategy and execution. While advanced models demonstrate sophisticated conceptual understanding, correctly framing objective functions and mission architectures, they consistently fail at implementation due to physical unit inconsistencies, boundary condition errors, and inefficient debugging loops. We conclude that, while current LLMs often demonstrate sufficient knowledge and intelligence to tackle space science tasks, they remain limited by an implementation barrier, functioning as powerful domain facilitators rather than fully autonomous engineers.",
+    "authors": [
+      "Iñaki del Campo",
+      "Pablo Cuervo",
+      "Victor Rodriguez-Fernandez",
+      "Roberto Armellin",
+      "Jack Yarndley"
+    ],
+    "published": "2026-02-03",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.03630v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.03630v1",
+    "fetched_at": "2026-02-04T08:50:19.294634",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "LLM"
+    ],
+    "key_contributions": [],
+    "processed_at": "2026-02-04T08:57:53.285389"
+  },
+  {
+    "id": "2602.03580v1",
+    "title": "Don't believe everything you read: Understanding and Measuring MCP Behavior under Misleading Tool Descriptions",
+    "abstract": "The Model Context Protocol (MCP) enables large language models to invoke external tools through natural-language descriptions, forming the foundation of many AI agent applications. However, MCP does not enforce consistency between documented tool behavior and actual code execution, even though MCP Servers often run with broad system privileges. This gap introduces a largely unexplored security risk. We study how mismatches between externally presented tool descriptions and underlying implementations systematically shape the mental models and decision-making behavior of intelligent agents. Specifically, we present the first large-scale study of description-code inconsistency in the MCP ecosystem. We design an automated static analysis framework and apply it to 10,240 real-world MCP Servers across 36 categories. Our results show that while most servers are highly consistent, approximately 13% exhibit substantial mismatches that can enable undocumented privileged operations, hidden state mutations, or unauthorized financial actions. We further observe systematic differences across application categories, popularity levels, and MCP marketplaces. Our findings demonstrate that description-code inconsistency is a concrete and prevalent attack surface in MCP-based AI agents, and motivate the need for systematic auditing and stronger transparency guarantees in future agent ecosystems.",
+    "authors": [
+      "Zhihao Li",
+      "Boyang Ma",
+      "Xuelong Dai",
+      "Minghui Xu",
+      "Yue Zhang",
+      "Biwei Yan",
+      "Kun Li"
+    ],
+    "published": "2026-02-03",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.03580v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.03580v1",
+    "fetched_at": "2026-02-04T08:50:19.294662",
+    "chinese_title": "不要全信你读的内容：理解并衡量误导性工具描述下的MCP行为",
+    "chinese_summary": "该论文针对模型上下文协议（MCP）中工具描述与代码实现不一致的安全风险，设计自动化静态分析框架，对36类共10240个真实MCP服务器开展大规模研究；发现约13%的服务器存在重大不匹配，可引发未授权特权操作等问题，指出这是MCP-based AI代理的具体普遍攻击面，需加强审计与透明度保障。",
+    "tags": [
+      "LLM",
+      "Financial Agent",
+      "Anomaly"
+    ],
+    "key_contributions": [
+      "首次大规模量化研究MCP生态中工具描述与代码实现的不一致问题，设计自动化静态分析框架分析10240个真实MCP服务器",
+      "揭示约13%的MCP服务器存在重大不匹配风险，指出这是MCP-based AI代理的具体普遍攻击面，需加强系统性审计与透明度保障"
+    ],
+    "processed_at": "2026-02-04T08:58:19.316091"
+  },
+  {
+    "id": "2602.03567v1",
+    "title": "EVE: Efficient Verification of Data Erasure through Customized Perturbation in Approximate Unlearning",
+    "abstract": "Verifying whether the machine unlearning process has been properly executed is critical but remains underexplored. Some existing approaches propose unlearning verification methods based on backdooring techniques. However, these methods typically require participation in the model's initial training phase to backdoor the model for later verification, which is inefficient and impractical. In this paper, we propose an efficient verification of erasure method (EVE) for verifying machine unlearning without requiring involvement in the model's initial training process. The core idea is to perturb the unlearning data to ensure the model prediction of the specified samples will change before and after unlearning with perturbed data. The unlearning users can leverage the observation of the changes as a verification signal. Specifically, the perturbations are designed with two key objectives: ensuring the unlearning effect and altering the unlearned model's prediction of target samples. We formalize the perturbation generation as an adversarial optimization problem, solving it by aligning the unlearning gradient with the gradient of boundary change for target samples. We conducted extensive experiments, and the results show that EVE can verify machine unlearning without involving the model's initial training process, unlike backdoor-based methods. Moreover, EVE significantly outperforms state-of-the-art unlearning verification methods, offering significant speedup in efficiency while enhancing verification accuracy. The source code of EVE is released at \\uline{https://anonymous.4open.science/r/EVE-C143}, providing a novel tool for verification of machine unlearning.",
+    "authors": [
+      "Weiqi Wang",
+      "Zhiyi Tian",
+      "Chenhan Zhang",
+      "Luoyu Chen",
+      "Shui Yu"
+    ],
+    "published": "2026-02-03",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.03567v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.03567v1",
+    "fetched_at": "2026-02-04T08:50:19.294686",
+    "chinese_title": "EVE：基于定制扰动的近似遗忘数据擦除高效验证方法",
+    "chinese_summary": "针对现有机器学习遗忘验证方法需参与模型初始训练（后门技术）的低效问题，本文提出无需初始训练的高效擦除验证方法EVE；核心是通过定制扰动未学习数据使目标样本预测变化作为验证信号，形式化为对抗优化并对齐遗忘梯度与边界变化梯度，实验证明其性能优于现有方法且效率显著提升。",
+    "tags": [
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出无需参与模型初始训练的机器学习遗忘验证方法EVE，解决现有后门方法的低效缺陷",
+      "设计定制扰动策略，通过对齐遗忘梯度与目标样本边界变化梯度实现高效验证，性能优于现有方法"
+    ],
+    "processed_at": "2026-02-04T08:58:36.034862"
+  },
+  {
+    "id": "2602.03537v1",
+    "title": "MatGPTQ: Accurate and Efficient Post-Training Matryoshka Quantization",
+    "abstract": "Matryoshka Quantization (MatQuant) is a recent quantization approach showing that a single integer-quantized model can be served across multiple precisions, by slicing the most significant bits (MSB) at inference time. This enables a single checkpoint to cover a wide range of memory and latency budgets, but renders quantization much more challenging. In particular, the initial MatQuant relies on expensive quantization-aware training (QAT) variants, rather than fast one-shot post training quantization (PTQ), and lacks open-source and kernel support. We address all of these limitations by introducing Post-Training Matryoshka Quantization (MatGPTQ), a new PTQ pipeline that produces a single parent model jointly optimized for multiple target precisions in one-shot, based on a small calibration set. MatGPTQ casts Matryoshka quantization as a multi-precision objective with bit-slicing and cross-bit error compensation, resulting in an algorithm that produces a multi-bit-width, \"sliceable\" model in a single pass. We also incorporate a new budget-aware search for heterogeneous per-layer bit-witdhs and provide efficient kernels that implement slicing and mixed-precision execution. Across standard LLMs and benchmarks, MatGPTQ preserves high-bit accuracy while substantially improving performance at low-bit-witdh settings. Overall, we establish a new state of the art for Matryoshka-style post-training quantization and make single-checkpoint, multi-precision deployment open and practical. Code is available at https://github.com/IST-DASLab/MatGPTQ.",
+    "authors": [
+      "Maximilian Kleinegger",
+      "Elvir Crnčević",
+      "Dan Alistarh"
+    ],
+    "published": "2026-02-03",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.03537v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.03537v1",
+    "fetched_at": "2026-02-04T08:50:19.294706",
+    "chinese_title": "MatGPTQ：准确高效的训练后嵌套量化",
+    "chinese_summary": "本文提出训练后嵌套量化方法MatGPTQ，基于小校准集一次优化多目标精度，通过多精度目标、位切片及跨位误差补偿生成可切片模型，还加入异构每层位宽的预算感知搜索与高效内核，在LLM上保持高精度且低精度下提升性能，建立训练后嵌套量化新SOTA并让单检查点多精度部署实用。",
+    "tags": [
+      "LLM",
+      "Deep Learning",
+      "Transformer"
+    ],
+    "key_contributions": [
+      "提出Post-Training Matryoshka Quantization（MatGPTQ），基于小校准集一次优化多目标精度，解决原MatQuant依赖昂贵QAT的问题",
+      "实现异构每层位宽的预算感知搜索，提供高效内核，建立训练后嵌套量化新SOTA，使单检查点多精度部署实用"
+    ],
+    "processed_at": "2026-02-04T08:58:50.187982"
+  },
+  {
+    "id": "2602.03515v1",
+    "title": "Mitigating Staleness in Asynchronous Pipeline Parallelism via Basis Rotation",
+    "abstract": "Asynchronous pipeline parallelism maximizes hardware utilization by eliminating the pipeline bubbles inherent in synchronous execution, offering a path toward efficient large-scale distributed training. However, this efficiency gain can be compromised by gradient staleness, where the immediate model updates with delayed gradients introduce noise into the optimization process. Crucially, we identify a critical, yet often overlooked, pathology: this delay scales linearly with pipeline depth, fundamentally undermining the very scalability that the method originally intends to provide. In this work, we investigate this inconsistency and bridge the gap by rectifying delayed gradients through basis rotation, restoring scalable asynchronous training while maintaining performance. Specifically, we observe that the deleterious effects of delayed gradients are exacerbated when the Hessian eigenbasis is misaligned with the standard coordinate basis. We demonstrate that this misalignment prevents coordinate-wise adaptive schemes, such as Adam, from effectively leveraging curvature-aware adaptivity. This failure leads to significant oscillations in the optimization trajectory and, consequently, slower convergence. We substantiate these findings through both rigorous theoretical analysis and empirical evaluation. To address this challenge, we propose the use of basis rotation, demonstrating that it effectively mitigates the alignment issue and significantly accelerates convergence in asynchronous settings. For example, our training of a 1B-parameter LLM with basis rotation achieves the same training loss in 76.8% fewer iterations compared to the best-performing asynchronous pipeline parallel training baseline.",
+    "authors": [
+      "Hyunji Jung",
+      "Sungbin Shin",
+      "Namhoon Lee"
+    ],
+    "published": "2026-02-03",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.DC"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.03515v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.03515v1",
+    "fetched_at": "2026-02-04T08:50:19.294728",
+    "chinese_title": "通过基旋转缓解异步流水线并行中的陈旧性问题",
+    "chinese_summary": "本文指出异步流水线并行的梯度陈旧性问题（延迟随流水线深度线性增长），根源是Hessian特征基与标准坐标基不匹配导致Adam等自适应优化方法失效；提出基旋转方法缓解对齐问题，恢复异步训练可扩展性并加速收敛。",
+    "tags": [
+      "Deep Learning",
+      "LLM"
+    ],
+    "key_contributions": [
+      "揭示异步流水线并行中梯度陈旧性的核心病理：延迟随深度线性增长且源于Hessian特征基与坐标基的不匹配",
+      "提出基旋转方法有效缓解对齐问题，显著提升异步训练的收敛速度与可扩展性"
+    ],
+    "processed_at": "2026-02-04T08:59:06.461227"
+  },
+  {
+    "id": "2602.03468v1",
+    "title": "IntentRL: Training Proactive User-intent Agents for Open-ended Deep Research via Reinforcement Learning",
+    "abstract": "Deep Research (DR) agents extend Large Language Models (LLMs) beyond parametric knowledge by autonomously retrieving and synthesizing evidence from large web corpora into long-form reports, enabling a long-horizon agentic paradigm. However, unlike real-time conversational assistants, DR is computationally expensive and time-consuming, creating an autonomy-interaction dilemma: high autonomy on ambiguous user queries often leads to prolonged execution with unsatisfactory outcomes. To address this, we propose IntentRL, a framework that trains proactive agents to clarify latent user intents before starting long-horizon research. To overcome the scarcity of open-ended research data, we introduce a scalable pipeline that expands a few seed samples into high-quality dialogue turns via a shallow-to-deep intent refinement graph. We further adopt a two-stage reinforcement learning (RL) strategy: Stage I applies RL on offline dialogues to efficiently learn general user-interaction behavior, while Stage II uses the trained agent and a user simulator for online rollouts to strengthen adaptation to diverse user feedback. Extensive experiments show that IntentRL significantly improves both intent hit rate and downstream task performance, outperforming the built-in clarify modules of closed-source DR agents and proactive LLM baselines.",
+    "authors": [
+      "Haohao Luo",
+      "Zexi Li",
+      "Yuexiang Xie",
+      "Wenhao Zhang",
+      "Yaliang Li",
+      "Ying Shen"
+    ],
+    "published": "2026-02-03",
+    "categories": [
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.03468v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.03468v1",
+    "fetched_at": "2026-02-04T08:50:19.294754",
+    "chinese_title": "IntentRL：通过强化学习训练面向开放式深度研究的主动用户意图代理",
+    "chinese_summary": "论文针对深度研究（DR）代理在模糊用户查询下自主性与交互的矛盾，提出IntentRL框架，通过可扩展 pipeline 扩展少量种子样本构建高质量对话数据，采用两阶段强化学习（离线学习用户交互行为+在线适应反馈）训练主动意图澄清代理，实验证明其显著提升意图命中率和下游任务性能，优于闭源DR代理澄清模块及主动LLM基线。",
+    "tags": [
+      "LLM",
+      "NLP",
+      "Reinforcement Learning"
+    ],
+    "key_contributions": [
+      "提出IntentRL框架，解决DR代理在模糊查询下的自主性-交互矛盾，训练主动澄清用户意图的代理",
+      "设计可扩展对话数据生成 pipeline 及两阶段RL策略，有效提升意图命中率和下游任务性能"
+    ],
+    "processed_at": "2026-02-04T08:59:18.194709"
+  },
+  {
+    "id": "2602.03442v1",
+    "title": "A-RAG: Scaling Agentic Retrieval-Augmented Generation via Hierarchical Retrieval Interfaces",
+    "abstract": "Frontier language models have demonstrated strong reasoning and long-horizon tool-use capabilities. However, existing RAG systems fail to leverage these capabilities. They still rely on two paradigms: (1) designing an algorithm that retrieves passages in a single shot and concatenates them into the model's input, or (2) predefining a workflow and prompting the model to execute it step-by-step. Neither paradigm allows the model to participate in retrieval decisions, preventing efficient scaling with model improvements. In this paper, we introduce A-RAG, an Agentic RAG framework that exposes hierarchical retrieval interfaces directly to the model. A-RAG provides three retrieval tools: keyword search, semantic search, and chunk read, enabling the agent to adaptively search and retrieve information across multiple granularities. Experiments on multiple open-domain QA benchmarks show that A-RAG consistently outperforms existing approaches with comparable or lower retrieved tokens, demonstrating that A-RAG effectively leverages model capabilities and dynamically adapts to different RAG tasks. We further systematically study how A-RAG scales with model size and test-time compute. We will release our code and evaluation suite to facilitate future research. Code and evaluation suite are available at https://github.com/Ayanami0730/arag.",
+    "authors": [
+      "Mingxuan Du",
+      "Benfeng Xu",
+      "Chiwei Zhu",
+      "Shaohan Wang",
+      "Pengyu Wang",
+      "Xiaorui Wang",
+      "Zhendong Mao"
+    ],
+    "published": "2026-02-03",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.03442v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.03442v1",
+    "fetched_at": "2026-02-04T08:50:19.294782",
+    "chinese_title": "A-RAG：通过分层检索接口扩展智能体增强检索生成",
+    "chinese_summary": "针对现有检索增强生成（RAG）系统未充分利用大模型推理与工具使用能力的问题，论文提出A-RAG智能体增强RAG框架，通过暴露关键词、语义、块读取三种分层检索接口让模型参与检索决策；实验表明其在多开放域QA基准上表现更优且检索token相当/更少，还研究了模型大小与测试计算的缩放性并开源代码。",
+    "tags": [
+      "LLM",
+      "NLP",
+      "Transformer",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出A-RAG智能体增强检索生成框架，通过分层检索接口使大模型参与检索决策，突破现有RAG单次检索或预定义工作流的范式限制；",
+      "实验验证A-RAG在多开放域QA基准上的性能优势，系统研究其随模型大小和测试计算的缩放性，并开源代码与评估套件。"
+    ],
+    "processed_at": "2026-02-04T08:59:51.391241"
+  },
+  {
+    "id": "2602.03439v1",
+    "title": "Ontology-to-tools compilation for executable semantic constraint enforcement in LLM agents",
+    "abstract": "We introduce ontology-to-tools compilation as a proof-of-principle mechanism for coupling large language models (LLMs) with formal domain knowledge. Within The World Avatar (TWA), ontological specifications are compiled into executable tool interfaces that LLM-based agents must use to create and modify knowledge graph instances, enforcing semantic constraints during generation rather than through post-hoc validation. Extending TWA's semantic agent composition framework, the Model Context Protocol (MCP) and associated agents are integral components of the knowledge graph ecosystem, enabling structured interaction between generative models, symbolic constraints, and external resources. An agent-based workflow translates ontologies into ontology-aware tools and iteratively applies them to extract, validate, and repair structured knowledge from unstructured scientific text. Using metal-organic polyhedra synthesis literature as an illustrative case, we show how executable ontological semantics can guide LLM behaviour and reduce manual schema and prompt engineering, establishing a general paradigm for embedding formal knowledge into generative systems.",
+    "authors": [
+      "Xiaochi Zhou",
+      "Patrick Bulter",
+      "Changxuan Yang",
+      "Simon D. Rihm",
+      "Thitikarn Angkanaporn",
+      "Jethro Akroyd",
+      "Sebastian Mosbach",
+      "Markus Kraft"
+    ],
+    "published": "2026-02-03",
+    "categories": [
+      "cs.AI",
+      "cs.IR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.03439v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.03439v1",
+    "fetched_at": "2026-02-04T08:50:19.294811",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "LLM",
+      "Financial Agent"
+    ],
+    "key_contributions": [],
+    "processed_at": "2026-02-04T08:59:54.102977"
+  },
+  {
+    "id": "2602.03429v1",
+    "title": "DiscoverLLM: From Executing Intents to Discovering Them",
+    "abstract": "To handle ambiguous and open-ended requests, Large Language Models (LLMs) are increasingly trained to interact with users to surface intents they have not yet expressed (e.g., ask clarification questions). However, users are often ambiguous because they have not yet formed their intents: they must observe and explore outcomes to discover what they want. Simply asking \"what kind of tone do you want?\" fails when users themselves do not know. We introduce DiscoverLLM, a novel and generalizable framework that trains LLMs to help users form and discover their intents. Central to our approach is a novel user simulator that models cognitive state with a hierarchy of intents that progressively concretize as the model surfaces relevant options -- where the degree of concretization serves as a reward signal that models can be trained to optimize. Resulting models learn to collaborate with users by adaptively diverging (i.e., explore options) when intents are unclear, and converging (i.e., refine and implement) when intents concretize. Across proposed interactive benchmarks in creative writing, technical writing, and SVG drawing, DiscoverLLM achieves over 10% higher task performance while reducing conversation length by up to 40%. In a user study with 75 human participants, DiscoverLLM improved conversation satisfaction and efficiency compared to baselines.",
+    "authors": [
+      "Tae Soo Kim",
+      "Yoonjoo Lee",
+      "Jaesang Yu",
+      "John Joon Young Chung",
+      "Juho Kim"
+    ],
+    "published": "2026-02-03",
+    "categories": [
+      "cs.AI",
+      "cs.CL",
+      "cs.HC",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.03429v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.03429v1",
+    "fetched_at": "2026-02-04T08:50:19.294849",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "Deep Learning",
+      "NLP",
+      "Reinforcement Learning",
+      "LLM"
+    ],
+    "key_contributions": [],
+    "processed_at": "2026-02-04T08:59:57.119279"
+  },
+  {
+    "id": "2602.03395v1",
+    "title": "The Label Horizon Paradox: Rethinking Supervision Targets in Financial Forecasting",
+    "abstract": "While deep learning has revolutionized financial forecasting through sophisticated architectures, the design of the supervision signal itself is rarely scrutinized. We challenge the canonical assumption that training labels must strictly mirror inference targets, uncovering the Label Horizon Paradox: the optimal supervision signal often deviates from the prediction goal, shifting across intermediate horizons governed by market dynamics. We theoretically ground this phenomenon in a dynamic signal-noise trade-off, demonstrating that generalization hinges on the competition between marginal signal realization and noise accumulation. To operationalize this insight, we propose a bi-level optimization framework that autonomously identifies the optimal proxy label within a single training run. Extensive experiments on large-scale financial datasets demonstrate consistent improvements over conventional baselines, thereby opening new avenues for label-centric research in financial forecasting.",
+    "authors": [
+      "Chen-Hui Song",
+      "Shuoling Liu",
+      "Liyuan Chen"
+    ],
+    "published": "2026-02-03",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.03395v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.03395v1",
+    "fetched_at": "2026-02-04T08:52:06.307123",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "Deep Learning"
+    ],
+    "key_contributions": [],
+    "processed_at": "2026-02-04T08:59:59.583128"
+  }
+]
