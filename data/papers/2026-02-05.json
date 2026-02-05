@@ -1,0 +1,521 @@
+[
+  {
+    "id": "2602.04791v1",
+    "title": "Fair Pricing in Long-Term Insurance: A Unified Framework",
+    "abstract": "Extant literature on fair pricing methods for actuarial contexts has primarily focused on the regression setting. While such approaches are well-suited to short-term products, it is unclear how they generalize to long-term products, whose pricing essentially relies on estimating transition rates in multi-state models. To address this gap, we propose a unified framework that recasts the estimation of any given multi-state transition model as a set of Poisson regression problems. This reformulation enables the direct application of existing fair pricing methods, which together constitute our proposed methodology. As an illustration, we apply the framework to a fair pricing exercise for a stylized long-term care insurance product using data from the University of Michigan Health and Retirement Study (HRS), focusing on a post-processing approach. We further explain how the framework readily accommodates pre-processing and in-processing fairness methods.",
+    "authors": [
+      "Hong Beng Lim",
+      "Mengyi Xu",
+      "Kenneth Q. Zhou"
+    ],
+    "published": "2026-02-04",
+    "categories": [
+      "q-fin.PR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.04791v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.04791v1",
+    "fetched_at": "2026-02-05T08:50:00.313671"
+  },
+  {
+    "id": "2602.04219v1",
+    "title": "Sampled-Data Wasserstein Distributionally Robust Control of Multiplicative Systems: A Convex Relaxation with Performance Guarantees",
+    "abstract": "This paper investigates the robust optimal control of sampled-data stochastic systems with multiplicative noise and distributional ambiguity. We consider a class of discrete-time optimal control problems where the controller \\emph{jointly} selects a feedback policy and a sampling period to maximize the worst-case expected concave utility of the inter-sample growth factor. Modeling uncertainty via a Wasserstein ambiguity set, we confront the structural obstacle of~``concave-max'' geometry arising from maximizing a concave utility against an adversarial distribution. Unlike standard convex loss minimization, the dual reformulation here requires a minimax interchange within the semi-infinite constraints, where the utility's concavity precludes exact strong duality. To address this, we utilize a general minimax inequality to derive a tractable convex relaxation. Our approach yields a rigorous lower bound that functions as a probabilistic performance guarantee. We establish an explicit, non-asymptotic bound on the resulting duality gap, proving that the approximation error is uniformly controlled by the Lipschitz-smoothness of the stage reward and the diameter of the disturbance support. Furthermore, we introduce necessary and sufficient conditions for \\emph{robust viability}, ensuring state positivity invariance across the entire ambiguity set. Finally, we bridge the gap between static optimization and dynamic performance, proving that the optimal value of the relaxation serves as a rigorous deterministic floor for the asymptotic average utility rate almost surely. The framework is illustrated on a log-optimal portfolio control problem, which serves as a canonical instance of multiplicative stochastic control.",
+    "authors": [
+      "Chung-Han Hsieh"
+    ],
+    "published": "2026-02-04",
+    "categories": [
+      "math.OC",
+      "eess.SY",
+      "q-fin.PM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.04219v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.04219v1",
+    "fetched_at": "2026-02-05T08:50:00.313706"
+  },
+  {
+    "id": "2602.03903v1",
+    "title": "Taming Tail Risk in Financial Markets: Conformal Risk Control for Nonstationary Portfolio VaR",
+    "abstract": "Risk forecasts drive trading constraints and capital allocation, yet losses are nonstationary and regime-dependent. This paper studies sequential one-sided VaR control via conformal calibration. I propose regime-weighted conformal risk control (RWC), which calibrates a safety buffer from past forecast errors using exponential time decay and regime-similarity weights from regime features. RWC is model-agnostic and wraps any conditional quantile forecaster to target a desired exceedance rate. Finite-sample coverage is established under weighted exchangeability, and approximation bounds are derived under smoothly drifting regimes. On the CRSP U.S.\\ equity portfolio, time-weighted conformal calibration is a strong default under drift, while regime weighting can improve regime-conditional stability in some settings with modest conservativeness changes.",
+    "authors": [
+      "Marc Schmitt"
+    ],
+    "published": "2026-02-03",
+    "categories": [
+      "q-fin.RM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.03903v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.03903v1",
+    "fetched_at": "2026-02-05T08:50:00.313777"
+  },
+  {
+    "id": "2602.02816v2",
+    "title": "Habit Formation, Labor Supply, and the Dynamics of Retirement and Annuitization",
+    "abstract": "The decision to annuitize wealth in retirement planning has become increasingly complex due to rising longevity risk and changing retirement patterns, including increased labor force participation at older ages. While an extensive literature studies consumption, labor, and annuitization decisions, these elements are typically examined in isolation. This paper develops a unified stochastic control and optimal stopping framework in which habit formation and endogenous labor supply shape retirement and annuitization decisions under age-dependent mortality. We derive optimal consumption, labor, portfolio, and annuitization policies in a continuous-time lifecycle model. The solution is characterized via dynamic programming and a Hamilton-Jacobi-Bellman variational inequality. Our results reveal a rich sequence of retirement dynamics. When wealth is low relative to habit, labor is supplied defensively to protect consumption standards. As wealth increases, agents enter a work-to-retire phase in which labor is supplied at its maximum level to accelerate access to retirement. Human capital acts as a stabilizing asset, justifying a more aggressive pre-retirement investment portfolio, followed by abrupt de-risking upon annuitization. Subjective mortality beliefs are a key determinant in shaping retirement dynamics. Agents with pessimistic longevity beliefs rationally perceive annuities as unattractive, leading them to avoid or delay annuitization. This framework provides a behavior-based explanation for low annuity demand and offers guidance for retirement planning jointly linking labor supply, portfolio choice, and the timing of annuitization.",
+    "authors": [
+      "Criscent Birungi",
+      "Cody Hyndman"
+    ],
+    "published": "2026-02-02",
+    "categories": [
+      "q-fin.MF",
+      "math.OC",
+      "math.PR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.02816v2",
+    "arxiv_url": "https://arxiv.org/abs/2602.02816v2",
+    "fetched_at": "2026-02-05T08:50:00.313858"
+  },
+  {
+    "id": "2602.03874v1",
+    "title": "ASRI: An Aggregated Systemic Risk Index for Cryptocurrency Markets",
+    "abstract": "Cryptocurrency markets have grown to represent over $3 trillion in capitalization, yet no unified index exists to monitor the systemic risks arising from the interconnection between decentralized finance (DeFi) protocols and traditional financial institutions. This paper introduces the Aggregated Systemic Risk Index (ASRI), a composite measure comprising four weighted sub-indices: Stablecoin Concentration Risk (30%), DeFi Liquidity Risk (25%), Contagion Risk (25%), and Regulatory Opacity Risk (20%). We derive theoretical foundations for each component, specify quantitative formulas incorporating data from DeFi Llama, Federal Reserve FRED, and on-chain analytics, and validate the framework against historical crisis events including the Terra/Luna collapse (May 2022), the Celsius/3AC contagion (June 2022), the FTX bankruptcy (November 2022), and the SVB banking crisis (March 2023). Event study analysis detects statistically significant abnormal signals for all four crises (t-statistics 5.47-32.64, all p < 0.01), though threshold-based operational detection identifies three of four events with an average lead time of 18 days. A three-regime Hidden Markov Model identifies distinct Low Risk, Moderate, and Elevated states with regime persistence exceeding 94%. Out-of-sample specificity testing on 2024-2025 data confirms zero false positives. The ASRI framework addresses a critical gap in existing risk monitoring by capturing DeFi-specific vulnerabilities -- composability risk, flash loan exposure, and tokenized real-world asset linkages -- that traditional systemic risk measures cannot accommodate.",
+    "authors": [
+      "Murad Farzulla",
+      "Andrew Maksakov"
+    ],
+    "published": "2026-02-01",
+    "categories": [
+      "q-fin.RM",
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.03874v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.03874v1",
+    "fetched_at": "2026-02-05T08:50:00.313972"
+  },
+  {
+    "id": "2602.04872v1",
+    "title": "Multi-layer Cross-Attention is Provably Optimal for Multi-modal In-context Learning",
+    "abstract": "Recent progress has rapidly advanced our understanding of the mechanisms underlying in-context learning in modern attention-based neural networks. However, existing results focus exclusively on unimodal data; in contrast, the theoretical underpinnings of in-context learning for multi-modal data remain poorly understood. We introduce a mathematically tractable framework for studying multi-modal learning and explore when transformer-like architectures can recover Bayes-optimal performance in-context. To model multi-modal problems, we assume the observed data arises from a latent factor model. Our first result comprises a negative take on expressibility: we prove that single-layer, linear self-attention fails to recover the Bayes-optimal predictor uniformly over the task distribution. To address this limitation, we introduce a novel, linearized cross-attention mechanism, which we study in the regime where both the number of cross-attention layers and the context length are large. We show that this cross-attention mechanism is provably Bayes optimal when optimized using gradient flow. Our results underscore the benefits of depth for in-context learning and establish the provable utility of cross-attention for multi-modal distributions.",
+    "authors": [
+      "Nicholas Barnfield",
+      "Subhabrata Sen",
+      "Pragya Sur"
+    ],
+    "published": "2026-02-04",
+    "categories": [
+      "stat.ML",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.04872v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.04872v1",
+    "fetched_at": "2026-02-05T08:50:06.693898"
+  },
+  {
+    "id": "2602.04821v1",
+    "title": "Safe Urban Traffic Control via Uncertainty-Aware Conformal Prediction and World-Model Reinforcement Learning",
+    "abstract": "Urban traffic management demands systems that simultaneously predict future conditions, detect anomalies, and take safe corrective actions -- all while providing reliability guarantees. We present STREAM-RL, a unified framework that introduces three novel algorithmic contributions: (1) PU-GAT+, an Uncertainty-Guided Adaptive Conformal Forecaster that uses prediction uncertainty to dynamically reweight graph attention via confidence-monotonic attention, achieving distribution-free coverage guarantees; (2) CRFN-BY, a Conformal Residual Flow Network that models uncertainty-normalized residuals via normalizing flows with Benjamini-Yekutieli FDR control under arbitrary dependence; and (3) LyCon-WRL+, an Uncertainty-Guided Safe World-Model RL agent with Lyapunov stability certificates, certified Lipschitz bounds, and uncertainty-propagated imagination rollouts. To our knowledge, this is the first framework to propagate calibrated uncertainty from forecasting through anomaly detection to safe policy learning with end-to-end theoretical guarantees. Experiments on multiple real-world traffic trajectory data demonstrate that STREAM-RL achieves 91.4\\% coverage efficiency, controls FDR at 4.1\\% under verified dependence, and improves safety rate to 95.2\\% compared to 69\\% for standard PPO while achieving higher reward, with 23ms end-to-end inference latency.",
+    "authors": [
+      "Joydeep Chandra",
+      "Satyam Kumar Navneet",
+      "Aleksandr Algazinov",
+      "Yong Zhang"
+    ],
+    "published": "2026-02-04",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.04821v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.04821v1",
+    "fetched_at": "2026-02-05T08:50:13.102926"
+  },
+  {
+    "id": "2602.04643v1",
+    "title": "MTS-JEPA: Multi-Resolution Joint-Embedding Predictive Architecture for Time-Series Anomaly Prediction",
+    "abstract": "Multivariate time series underpin modern critical infrastructure, making the prediction of anomalies a vital necessity for proactive risk mitigation. While Joint-Embedding Predictive Architectures (JEPA) offer a promising framework for modeling the latent evolution of these systems, their application is hindered by representation collapse and an inability to capture precursor signals across varying temporal scales. To address these limitations, we propose MTS-JEPA, a specialized architecture that integrates a multi-resolution predictive objective with a soft codebook bottleneck. This design explicitly decouples transient shocks from long-term trends, and utilizes the codebook to capture discrete regime transitions. Notably, we find this constraint also acts as an intrinsic regularizer to ensure optimization stability. Empirical evaluations on standard benchmarks confirm that our approach effectively prevents degenerate solutions and achieves state-of-the-art performance under the early-warning protocol.",
+    "authors": [
+      "Yanan He",
+      "Yunshi Wen",
+      "Xin Wang",
+      "Tengfei Ma"
+    ],
+    "published": "2026-02-04",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.04643v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.04643v1",
+    "fetched_at": "2026-02-05T08:50:13.102958"
+  },
+  {
+    "id": "2602.04102v1",
+    "title": "DMS2F-HAD: A Dual-branch Mamba-based Spatial-Spectral Fusion Network for Hyperspectral Anomaly Detection",
+    "abstract": "Hyperspectral anomaly detection (HAD) aims to identify rare and irregular targets in high-dimensional hyperspectral images (HSIs), which are often noisy and unlabelled data. Existing deep learning methods either fail to capture long-range spectral dependencies (e.g., convolutional neural networks) or suffer from high computational cost (e.g., Transformers). To address these challenges, we propose DMS2F-HAD, a novel dual-branch Mamba-based model. Our architecture utilizes Mamba's linear-time modeling to efficiently learn distinct spatial and spectral features in specialized branches, which are then integrated by a dynamic gated fusion mechanism to enhance anomaly localization. Across fourteen benchmark HSI datasets, our proposed DMS2F-HAD not only achieves a state-of-the-art average AUC of 98.78%, but also demonstrates superior efficiency with an inference speed 4.6 times faster than comparable deep learning methods. The results highlight DMS2FHAD's strong generalization and scalability, positioning it as a strong candidate for practical HAD applications.",
+    "authors": [
+      "Aayushma Pant",
+      "Lakpa Tamang",
+      "Tsz-Kwan Lee",
+      "Sunil Aryal"
+    ],
+    "published": "2026-02-04",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.04102v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.04102v1",
+    "fetched_at": "2026-02-05T08:50:13.102980"
+  },
+  {
+    "id": "2602.04027v1",
+    "title": "A Consensus-Bayesian Framework for Detecting Malicious Activity in Enterprise Directory Access Graphs",
+    "abstract": "This work presents a consensus-based Bayesian framework to detect malicious user behavior in enterprise directory access graphs. By modeling directories as topics and users as agents within a multi-level interaction graph, we simulate access evolution using influence-weighted opinion dynamics. Logical dependencies between users are encoded in dynamic matrices Ci, and directory similarity is captured via a shared influence matrix W. Malicious behavior is injected as cross-component logical perturbations that violate structural norms of strongly connected components(SCCs). We apply theoretical guarantees from opinion dynamics literature to determine topic convergence and detect anomaly via scaled opinion variance. To quantify uncertainty, we introduce a Bayesian anomaly scoring mechanism that evolves over time, using both static and online priors. Simulations over synthetic access graphs validate our method, demonstrating its sensitivity to logical inconsistencies and robustness under dynamic perturbation.",
+    "authors": [
+      "Pratyush Uppuluri",
+      "Shilpa Noushad",
+      "Sajan Kumar"
+    ],
+    "published": "2026-02-03",
+    "categories": [
+      "cs.LG",
+      "cs.CR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.04027v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.04027v1",
+    "fetched_at": "2026-02-05T08:50:13.102999"
+  },
+  {
+    "id": "2602.04850v1",
+    "title": "El Agente Quntur: A research collaborator agent for quantum chemistry",
+    "abstract": "Quantum chemistry is a foundational enabling tool for the fields of chemistry, materials science, computational biology and others. Despite of its power, the practical application of quantum chemistry simulations remains in the hands of qualified experts due to methodological complexity, software heterogeneity, and the need for informed interpretation of results. To bridge the accessibility gap for these tools and expand their reach to chemists with broader backgrounds, we introduce El Agente Quntur, a hierarchical, multi-agent AI system designed to operate not merely as an automation tool but as a research collaborator for computational quantum chemistry. Quntur was designed following three main strategies: i) elimination of hard-coded procedural policies in favour of reasoning-driven decisions, ii) construction of general and composable actions that facilitate generalization and efficiency, and iii) implementation of guided deep research to integrate abstract quantum-chemical reasoning across subdisciplines and a detailed understanding of the software's internal logic and syntax. Although instantiated in ORCA, these design principles are applicable to research agents more generally and easily expandable to additional quantum chemistry packages and beyond. Quntur supports the full range of calculations available in ORCA 6.0 and reasons over software documentation and scientific literature to plan, execute, adapt, and analyze in silico chemistry experiments following best practices. We discuss the advances and current bottlenecks in agentic systems operating at the research level in computational chemistry, and outline a roadmap toward a fully autonomous end-to-end computational chemistry research agent.",
+    "authors": [
+      "Juan B. Pérez-Sánchez",
+      "Yunheng Zou",
+      "Jorge A. Campos-Gonzalez-Angulo",
+      "Marcel Müller",
+      "Ignacio Gustin",
+      "Andrew Wang",
+      "Han Hao",
+      "Tsz Wai Ko",
+      "Changhyeok Choi",
+      "Eric S. Isbrandt",
+      "Mohammad Ghazi Vakili",
+      "Hanyong Xu",
+      "Chris Crebolder",
+      "Varinia Bernales",
+      "Alán Aspuru-Guzik"
+    ],
+    "published": "2026-02-04",
+    "categories": [
+      "physics.chem-ph",
+      "cs.AI",
+      "cs.MA"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.04850v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.04850v1",
+    "fetched_at": "2026-02-05T08:50:41.751470"
+  },
+  {
+    "id": "2602.04816v1",
+    "title": "Horizon-LM: A RAM-Centric Architecture for LLM Training",
+    "abstract": "The rapid growth of large language models (LLMs) has outpaced the evolution of single-GPU hardware, making model scale increasingly constrained by memory capacity rather than computation. While modern training systems extend GPU memory through distributed parallelism and offloading across CPU and storage tiers, they fundamentally retain a GPU-centric execution paradigm in which GPUs host persistent model replicas and full autograd graphs. As a result, scaling large models remains tightly coupled to multi-GPU clusters, complex distributed runtimes, and unpredictable host memory consumption, creating substantial barriers for node-scale post-training workloads such as instruction tuning, alignment, and domain adaptation. We present Horizon-LM, a memory-centric training system that redefines the roles of CPU and GPU for large-model optimization. Horizon-LM treats host memory as the authoritative parameter store and uses GPUs solely as transient compute engines through a CPU-master, GPU-template execution model. By eliminating persistent GPU-resident modules and autograd graphs, employing explicit recomputation with manual gradient propagation, and introducing a pipelined double-buffered execution engine, Horizon-LM decouples model scale from GPU count and bounds memory usage to the theoretical parameter footprint. On a single H200 GPU with 1.5\\,TB host RAM, Horizon-LM reliably trains models up to 120B parameters. On a standard single A100 machine, Horizon-LM achieves up to 12.2$\\times$ higher training throughput than DeepSpeed ZeRO-3 with CPU offloading while preserving numerical correctness. Across platforms and scales, Horizon-LM sustains high device utilization and predictable memory growth, demonstrating that host memory, not GPU memory, defines the true feasibility boundary for node-scale large-model training.",
+    "authors": [
+      "Zhengqing Yuan",
+      "Lichao Sun",
+      " Yanfang",
+      " Ye"
+    ],
+    "published": "2026-02-04",
+    "categories": [
+      "cs.OS",
+      "cs.CL",
+      "cs.DC"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.04816v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.04816v1",
+    "fetched_at": "2026-02-05T08:50:41.751502"
+  },
+  {
+    "id": "2602.04675v1",
+    "title": "Generalized Schrödinger Bridge on Graphs",
+    "abstract": "Transportation on graphs is a fundamental challenge across many domains, where decisions must respect topological and operational constraints. Despite the need for actionable policies, existing graph-transport methods lack this expressivity. They rely on restrictive assumptions, fail to generalize across sparse topologies, and scale poorly with graph size and time horizon. To address these issues, we introduce Generalized Schrödinger Bridge on Graphs (GSBoG), a novel scalable data-driven framework for learning executable controlled continuous-time Markov chain (CTMC) policies on arbitrary graphs under state cost augmented dynamics. Notably, GSBoG learns trajectory-level policies, avoiding dense global solvers and thereby enhancing scalability. This is achieved via a likelihood optimization approach, satisfying the endpoint marginals, while simultaneously optimizing intermediate behavior under state-dependent running costs. Extensive experimentation on challenging real-world graph topologies shows that GSBoG reliably learns accurate, topology-respecting policies while optimizing application-specific intermediate state costs, highlighting its broad applicability and paving new avenues for cost-aware dynamical transport on general graphs.",
+    "authors": [
+      "Panagiotis Theodoropoulos",
+      "Juno Nam",
+      "Evangelos Theodorou",
+      "Jaemoo Choi"
+    ],
+    "published": "2026-02-04",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.04675v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.04675v1",
+    "fetched_at": "2026-02-05T08:50:41.751523"
+  },
+  {
+    "id": "2602.04653v1",
+    "title": "Inference-Time Backdoors via Hidden Instructions in LLM Chat Templates",
+    "abstract": "Open-weight language models are increasingly used in production settings, raising new security challenges. One prominent threat in this context is backdoor attacks, in which adversaries embed hidden behaviors in language models that activate under specific conditions. Previous work has assumed that adversaries have access to training pipelines or deployment infrastructure. We propose a novel attack surface requiring neither, which utilizes the chat template. Chat templates are executable Jinja2 programs invoked at every inference call, occupying a privileged position between user input and model processing. We show that an adversary who distributes a model with a maliciously modified template can implant an inference-time backdoor without modifying model weights, poisoning training data, or controlling runtime infrastructure. We evaluated this attack vector by constructing template backdoors targeting two objectives: degrading factual accuracy and inducing emission of attacker-controlled URLs, and applied them across eighteen models spanning seven families and four inference engines. Under triggered conditions, factual accuracy drops from 90% to 15% on average while attacker-controlled URLs are emitted with success rates exceeding 80%; benign inputs show no measurable degradation. Backdoors generalize across inference runtimes and evade all automated security scans applied by the largest open-weight distribution platform. These results establish chat templates as a reliable and currently undefended attack surface in the LLM supply chain.",
+    "authors": [
+      "Ariel Fogel",
+      "Omer Hofman",
+      "Eilon Cohen",
+      "Roman Vainshtein"
+    ],
+    "published": "2026-02-04",
+    "categories": [
+      "cs.CR",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.04653v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.04653v1",
+    "fetched_at": "2026-02-05T08:50:41.751544"
+  },
+  {
+    "id": "2602.04640v1",
+    "title": "Towards Structured, State-Aware, and Execution-Grounded Reasoning for Software Engineering Agents",
+    "abstract": "Software Engineering (SE) agents have shown promising abilities in supporting various SE tasks. Current SE agents remain fundamentally reactive, making decisions mainly based on conversation history and the most recent response. However, this reactive design provides no explicit structure or persistent state within the agent's memory, making long-horizon reasoning challenging. As a result, SE agents struggle to maintain a coherent understanding across reasoning steps, adapt their hypotheses as new evidence emerges, or incorporate execution feedback into the mental reasoning model of the system state.   In this position paper, we argue that, to further advance SE agents, we need to move beyond reactive behavior toward a structured, state-aware, and execution-grounded reasoning. We outline how explicit structure, persistent and evolving state, and the integration of execution-grounded feedback can help SE agents perform more coherent and reliable reasoning in long-horizon tasks. We also provide an initial roadmap for developing next-generation SE agents that can more effectively perform real-world tasks.",
+    "authors": [
+      " Tse-Hsun",
+      " Chen"
+    ],
+    "published": "2026-02-04",
+    "categories": [
+      "cs.SE",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.04640v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.04640v1",
+    "fetched_at": "2026-02-05T08:50:41.751564"
+  },
+  {
+    "id": "2602.04634v1",
+    "title": "WideSeek-R1: Exploring Width Scaling for Broad Information Seeking via Multi-Agent Reinforcement Learning",
+    "abstract": "Recent advancements in Large Language Models (LLMs) have largely focused on depth scaling, where a single agent solves long-horizon problems with multi-turn reasoning and tool use. However, as tasks grow broader, the key bottleneck shifts from individual competence to organizational capability. In this work, we explore a complementary dimension of width scaling with multi-agent systems to address broad information seeking. Existing multi-agent systems often rely on hand-crafted workflows and turn-taking interactions that fail to parallelize work effectively. To bridge this gap, we propose WideSeek-R1, a lead-agent-subagent framework trained via multi-agent reinforcement learning (MARL) to synergize scalable orchestration and parallel execution. By utilizing a shared LLM with isolated contexts and specialized tools, WideSeek-R1 jointly optimizes the lead agent and parallel subagents on a curated dataset of 20k broad information-seeking tasks. Extensive experiments show that WideSeek-R1-4B achieves an item F1 score of 40.0% on the WideSearch benchmark, which is comparable to the performance of single-agent DeepSeek-R1-671B. Furthermore, WideSeek-R1-4B exhibits consistent performance gains as the number of parallel subagents increases, highlighting the effectiveness of width scaling.",
+    "authors": [
+      "Zelai Xu",
+      "Zhexuan Xu",
+      "Ruize Zhang",
+      "Chunyang Zhu",
+      "Shi Yu",
+      "Weilin Liu",
+      "Quanlu Zhang",
+      "Wenbo Ding",
+      "Chao Yu",
+      "Yu Wang"
+    ],
+    "published": "2026-02-04",
+    "categories": [
+      "cs.AI",
+      "cs.LG",
+      "cs.MA"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.04634v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.04634v1",
+    "fetched_at": "2026-02-05T08:50:41.751597"
+  },
+  {
+    "id": "2602.04575v1",
+    "title": "Vibe AIGC: A New Paradigm for Content Generation via Agentic Orchestration",
+    "abstract": "For the past decade, the trajectory of generative artificial intelligence (AI) has been dominated by a model-centric paradigm driven by scaling laws. Despite significant leaps in visual fidelity, this approach has encountered a ``usability ceiling'' manifested as the Intent-Execution Gap (i.e., the fundamental disparity between a creator's high-level intent and the stochastic, black-box nature of current single-shot models). In this paper, inspired by the Vibe Coding, we introduce the \\textbf{Vibe AIGC}, a new paradigm for content generation via agentic orchestration, which represents the autonomous synthesis of hierarchical multi-agent workflows.   Under this paradigm, the user's role transcends traditional prompt engineering, evolving into a Commander who provides a Vibe, a high-level representation encompassing aesthetic preferences, functional logic, and etc. A centralized Meta-Planner then functions as a system architect, deconstructing this ``Vibe'' into executable, verifiable, and adaptive agentic pipelines. By transitioning from stochastic inference to logical orchestration, Vibe AIGC bridges the gap between human imagination and machine execution. We contend that this shift will redefine the human-AI collaborative economy, transforming AI from a fragile inference engine into a robust system-level engineering partner that democratizes the creation of complex, long-horizon digital assets.",
+    "authors": [
+      "Jiaheng Liu",
+      "Yuanxing Zhang",
+      "Shihao Li",
+      "Xinping Lei"
+    ],
+    "published": "2026-02-04",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.04575v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.04575v1",
+    "fetched_at": "2026-02-05T08:50:41.751620"
+  },
+  {
+    "id": "2602.04486v1",
+    "title": "Beyond Unimodal Shortcuts: MLLMs as Cross-Modal Reasoners for Grounded Named Entity Recognition",
+    "abstract": "Grounded Multimodal Named Entity Recognition (GMNER) aims to extract text-based entities, assign them semantic categories, and ground them to corresponding visual regions. In this work, we explore the potential of Multimodal Large Language Models (MLLMs) to perform GMNER in an end-to-end manner, moving beyond their typical role as auxiliary tools within cascaded pipelines. Crucially, our investigation reveals a fundamental challenge: MLLMs exhibit $\\textbf{modality bias}$, including visual bias and textual bias, which stems from their tendency to take unimodal shortcuts rather than rigorous cross-modal verification. To address this, we propose Modality-aware Consistency Reasoning ($\\textbf{MCR}$), which enforces structured cross-modal reasoning through Multi-style Reasoning Schema Injection (MRSI) and Constraint-guided Verifiable Optimization (CVO). MRSI transforms abstract constraints into executable reasoning chains, while CVO empowers the model to dynamically align its reasoning trajectories with Group Relative Policy Optimization (GRPO). Experiments on GMNER and visual grounding tasks demonstrate that MCR effectively mitigates modality bias and achieves superior performance compared to existing baselines.",
+    "authors": [
+      "Jinlong Ma",
+      "Yu Zhang",
+      "Xuefeng Bai",
+      "Kehai Chen",
+      "Yuwei Wang",
+      "Zeming Liu",
+      "Jun Yu",
+      "Min Zhang"
+    ],
+    "published": "2026-02-04",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.04486v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.04486v1",
+    "fetched_at": "2026-02-05T08:50:41.751662"
+  },
+  {
+    "id": "2602.04418v1",
+    "title": "SPEAR: An Engineering Case Study of Multi-Agent Coordination for Smart Contract Auditing",
+    "abstract": "We present SPEAR, a multi-agent coordination framework for smart contract auditing that applies established MAS patterns in a realistic security analysis workflow. SPEAR models auditing as a coordinated mission carried out by specialized agents: a Planning Agent prioritizes contracts using risk-aware heuristics, an Execution Agent allocates tasks via the Contract Net protocol, and a Repair Agent autonomously recovers from brittle generated artifacts using a programmatic-first repair policy. Agents maintain local beliefs updated through AGM-compliant revision, coordinate via negotiation and auction protocols, and revise plans as new information becomes available. An empirical study compares the multi-agent design with centralized and pipeline-based alternatives under controlled failure scenarios, focusing on coordination, recovery behavior, and resource use.",
+    "authors": [
+      "Arnab Mallick",
+      "Indraveni Chebolu",
+      "Harmesh Rana"
+    ],
+    "published": "2026-02-04",
+    "categories": [
+      "cs.MA",
+      "cs.AI",
+      "cs.DC",
+      "cs.ET",
+      "cs.SE"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.04418v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.04418v1",
+    "fetched_at": "2026-02-05T08:50:41.751682"
+  },
+  {
+    "id": "2602.04326v1",
+    "title": "From Assumptions to Actions: Turning LLM Reasoning into Uncertainty-Aware Planning for Embodied Agents",
+    "abstract": "Embodied agents operating in multi-agent, partially observable, and decentralized environments must plan and act despite pervasive uncertainty about hidden objects and collaborators' intentions. Recent advances in applying Large Language Models (LLMs) to embodied agents have addressed many long-standing challenges, such as high-level goal decomposition and online adaptation. Yet, uncertainty is still primarily mitigated through frequent inter-agent communication. This incurs substantial token and time costs, and can disrupt established workflows, when human partners are involved. We introduce PCE, a Planner-Composer-Evaluator framework that converts the fragmented assumptions latent in LLM reasoning traces into a structured decision tree. Internal nodes encode environment assumptions and leaves map to actions; each path is then scored by scenario likelihood, goal-directed gain, and execution cost to guide rational action selection without heavy communication. Across two challenging multi-agent benchmarks (C-WAH and TDW-MAT) and three diverse LLM backbones, PCE consistently outperforms communication-centric baselines in success rate and task efficiency while showing comparable token usage. Ablation results indicate that the performance gains obtained by scaling model capacity or reasoning depth persist even when PCE is applied, while PCE consistently raises the baseline across both capacity and reasoning-depth scales, confirming that structured uncertainty handling complements both forms of scaling. A user study further demonstrates that PCE produces communication patterns that human partners perceive as more efficient and trustworthy. Together, these results establish a principled route for turning latent LLM assumptions into reliable strategies for uncertainty-aware planning.",
+    "authors": [
+      "SeungWon Seo",
+      "SooBin Lim",
+      "SeongRae Noh",
+      "Haneul Kim",
+      "HyeongYeop Kang"
+    ],
+    "published": "2026-02-04",
+    "categories": [
+      "cs.AI",
+      "cs.CL",
+      "cs.MA"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.04326v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.04326v1",
+    "fetched_at": "2026-02-05T08:50:41.751705"
+  },
+  {
+    "id": "2602.04291v1",
+    "title": "Disentangling Causal Importance from Emergent Structure in Multi-Expert Orchestration",
+    "abstract": "Multi-expert systems, where multiple Large Language Models (LLMs) collaborate to solve complex tasks, are increasingly adopted for high-performance reasoning and generation. However, the orchestration policies governing expert interaction and sequencing remain largely opaque. We introduce INFORM, an interpretability analysis that treats orchestration as an explicit, analyzable computation, enabling the decoupling of expert interaction structure, execution order, and causal attribution. We use INFORM to evaluate an orchestrator on GSM8K, HumanEval, and MMLU using a homogeneous consortium of ten instruction-tuned experts drawn from LLaMA-3.1 8B, Qwen-3 8B, and DeepSeek-R1 8B, with controlled decoding-temperature variation, and a secondary heterogeneous consortium spanning 1B-7B parameter models. Across tasks, routing dominance is a poor proxy for functional necessity. We reveal a divergence between relational importance, captured by routing mass and interaction topology, and intrinsic importance, measured via gradient-based causal attribution: frequently selected experts often act as interaction hubs with limited causal influence, while sparsely routed experts can be structurally critical. Orchestration behaviors emerge asynchronously, with expert centralization preceding stable routing confidence and expert ordering remaining non-deterministic. Targeted ablations show that masking intrinsically important experts induces disproportionate collapse in interaction structure compared to masking frequent peers, confirming that INFORM exposes causal and structural dependencies beyond accuracy metrics alone.",
+    "authors": [
+      "Sudipto Ghosh",
+      "Sujoy Nath",
+      "Sunny Manchanda",
+      "Tanmoy Chakraborty"
+    ],
+    "published": "2026-02-04",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.MA"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.04291v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.04291v1",
+    "fetched_at": "2026-02-05T08:50:41.751726"
+  },
+  {
+    "id": "2602.04254v1",
+    "title": "Scaling Agentic Verifier for Competitive Coding",
+    "abstract": "Large language models (LLMs) have demonstrated strong coding capabilities but still struggle to solve competitive programming problems correctly in a single attempt. Execution-based re-ranking offers a promising test-time scaling strategy, yet existing methods are constrained by either difficult test case generation or inefficient random input sampling. To address this limitation, we propose Agentic Verifier, an execution-based agent that actively reasons about program behaviors and searches for highly discriminative test inputs that expose behavioral discrepancies among candidate solutions. Through multi-turn interaction with code execution environments, the verifier iteratively refines the candidate input generator and produces targeted counterexamples rather than blindly sampling inputs. We train the verifier to acquire this discriminative input generation capability via a scalable pipeline combining large-scale data synthesis, rejection fine-tuning, and agentic reinforcement learning. Extensive experiments across five competitive programming benchmarks demonstrate consistent improvements over strong execution-based baselines, achieving up to +10-15% absolute gains in Best@K accuracy. Further analysis reveals clear test-time scaling behavior and highlights the verifier's broader potential beyond reranking.",
+    "authors": [
+      "Zeyao Ma",
+      "Jing Zhang",
+      "Xiaokang Zhang",
+      "Jiaxi Yang",
+      "Zongmeng Zhang",
+      "Jiajun Zhang",
+      "Yuheng Jing",
+      "Lei Zhang",
+      "Hao Zheng",
+      "Wenting Zhao",
+      "Junyang Lin",
+      "Binyuan Hui"
+    ],
+    "published": "2026-02-04",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.04254v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.04254v1",
+    "fetched_at": "2026-02-05T08:50:41.751759"
+  },
+  {
+    "id": "2602.04210v1",
+    "title": "Steering LLMs via Scalable Interactive Oversight",
+    "abstract": "As Large Language Models increasingly automate complex, long-horizon tasks such as \\emph{vibe coding}, a supervision gap has emerged. While models excel at execution, users often struggle to guide them effectively due to insufficient domain expertise, the difficulty of articulating precise intent, and the inability to reliably validate complex outputs. It presents a critical challenge in scalable oversight: enabling humans to responsibly steer AI systems on tasks that surpass their own ability to specify or verify. To tackle this, we propose Scalable Interactive Oversight, a framework that decomposes complex intent into a recursive tree of manageable decisions to amplify human supervision. Rather than relying on open-ended prompting, our system elicits low-burden feedback at each node and recursively aggregates these signals into precise global guidance. Validated in web development task, our framework enables non-experts to produce expert-level Product Requirement Documents, achieving a 54\\% improvement in alignment. Crucially, we demonstrate that this framework can be optimized via Reinforcement Learning using only online user feedback, offering a practical pathway for maintaining human control as AI scales.",
+    "authors": [
+      "Enyu Zhou",
+      "Zhiheng Xi",
+      "Long Ma",
+      "Zhihao Zhang",
+      "Shihan Dou",
+      "Zhikai Lei",
+      "Guoteng Wang",
+      "Rui Zheng",
+      "Hang Yan",
+      "Tao Gui",
+      "Qi Zhang",
+      "Xuanjing Huang"
+    ],
+    "published": "2026-02-04",
+    "categories": [
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.04210v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.04210v1",
+    "fetched_at": "2026-02-05T08:50:41.751792"
+  },
+  {
+    "id": "2602.04208v1",
+    "title": "SCALE: Self-uncertainty Conditioned Adaptive Looking and Execution for Vision-Language-Action Models",
+    "abstract": "Vision-Language-Action (VLA) models have emerged as a promising paradigm for general-purpose robotic control, with test-time scaling (TTS) gaining attention to enhance robustness beyond training. However, existing TTS methods for VLAs require additional training, verifiers, and multiple forward passes, making them impractical for deployment. Moreover, they intervene only at action decoding while keeping visual representations fixed-insufficient under perceptual ambiguity, where reconsidering how to perceive is as important as deciding what to do. To address these limitations, we propose SCALE, a simple inference strategy that jointly modulates visual perception and action based on 'self-uncertainty', inspired by uncertainty-driven exploration in Active Inference theory-requiring no additional training, no verifier, and only a single forward pass. SCALE broadens exploration in both perception and action under high uncertainty, while focusing on exploitation when confident-enabling adaptive execution across varying conditions. Experiments on simulated and real-world benchmarks demonstrate that SCALE improves state-of-the-art VLAs and outperforms existing TTS methods while maintaining single-pass efficiency.",
+    "authors": [
+      "Hyeonbeom Choi",
+      "Daechul Ahn",
+      "Youhan Lee",
+      "Taewook Kang",
+      "Seongwon Cho",
+      "Jonghyun Choi"
+    ],
+    "published": "2026-02-04",
+    "categories": [
+      "cs.RO",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.04208v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.04208v1",
+    "fetched_at": "2026-02-05T08:50:41.751816"
+  },
+  {
+    "id": "2602.04181v1",
+    "title": "Piece of CAKE: Adaptive Execution Engines via Microsecond-Scale Learning",
+    "abstract": "Low-level database operators often admit multiple physical implementations (\"kernels\") that are semantically equivalent but have vastly different performance characteristics depending on the input data distribution. Existing database systems typically rely on static heuristics or worst-case optimal defaults to select these kernels, often missing significant performance opportunities. In this work, we propose CAKE (Counterfactual Adaptive Kernel Execution), a system that learns to select the optimal kernel for each data \"morsel\" using a microsecond-scale contextual multi-armed bandit. CAKE circumvents the high latency of traditional reinforcement learning by exploiting the cheapness of counterfactuals -- selectively running multiple kernels to obtain full feedback -- and compiling policies into low-latency regret trees. Experimentally, we show that CAKE can reduce end-to-end workload latency by up to 2x compared to state-of-the-art static heuristics.",
+    "authors": [
+      "Zijie Zhao",
+      "Ryan Marcus"
+    ],
+    "published": "2026-02-04",
+    "categories": [
+      "cs.DB",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.04181v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.04181v1",
+    "fetched_at": "2026-02-05T08:50:41.751833"
+  },
+  {
+    "id": "2602.03395v2",
+    "title": "The Label Horizon Paradox: Rethinking Supervision Targets in Financial Forecasting",
+    "abstract": "While deep learning has revolutionized financial forecasting through sophisticated architectures, the design of the supervision signal itself is rarely scrutinized. We challenge the canonical assumption that training labels must strictly mirror inference targets, uncovering the Label Horizon Paradox: the optimal supervision signal often deviates from the prediction goal, shifting across intermediate horizons governed by market dynamics. We theoretically ground this phenomenon in a dynamic signal-noise trade-off, demonstrating that generalization hinges on the competition between marginal signal realization and noise accumulation. To operationalize this insight, we propose a bi-level optimization framework that autonomously identifies the optimal proxy label within a single training run. Extensive experiments on large-scale financial datasets demonstrate consistent improvements over conventional baselines, thereby opening new avenues for label-centric research in financial forecasting.",
+    "authors": [
+      "Chen-Hui Song",
+      "Shuoling Liu",
+      "Liyuan Chen"
+    ],
+    "published": "2026-02-03",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.03395v2",
+    "arxiv_url": "https://arxiv.org/abs/2602.03395v2",
+    "fetched_at": "2026-02-05T08:52:29.997435"
+  }
+]
