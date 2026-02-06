@@ -1,0 +1,822 @@
+[
+  {
+    "id": "2602.05898v1",
+    "title": "Universal approximation with signatures of non-geometric rough paths",
+    "abstract": "We establish a universal approximation theorem for signatures of rough paths that are not necessarily weakly geometric. By extending the path with time and its rough path bracket terms, we prove that linear functionals of the signature of the resulting rough paths approximate continuous functionals on rough path spaces uniformly on compact sets. Moreover, we construct the signature of a path extended by its pathwise quadratic variation terms based on general pathwise stochastic integration à la Föllmer, in particular, allowing for pathwise Itô, Stratonovich, and backward Itô integration. In a probabilistic setting, we obtain a universal approximation result for linear functionals of the signature of continuous semimartingales extended by the quadratic variation terms, defined via stochastic Itô integration. Numerical examples illustrate the use of signatures when the path is extended by time and quadratic variation in the context of model calibration and option pricing in mathematical finance.",
+    "authors": [
+      "Mihriban Ceylan",
+      "Anna P. Kwossek",
+      "David J. Prömel"
+    ],
+    "published": "2026-02-05",
+    "categories": [
+      "math.PR",
+      "cs.LG",
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.05898v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.05898v1",
+    "fetched_at": "2026-02-06T08:50:14.864349",
+    "chinese_title": "非几何粗糙路径签名的通用逼近",
+    "chinese_summary": "本文建立非几何粗糙路径签名的通用逼近定理，通过扩展路径（含时间及粗糙路径括号/二次变差项）证明线性泛函可一致逼近粗糙路径空间紧集上的连续泛函；概率场景下对伊藤积分定义的连续半鞅扩展签名的线性泛函也成立该逼近，数值例展示其在金融模型校准与期权定价中的应用。",
+    "tags": [
+      "Options",
+      "Asset Pricing"
+    ],
+    "key_contributions": [
+      "建立非几何粗糙路径签名的通用逼近定理，通过扩展路径（含时间及粗糙路径括号项）证明线性泛函一致逼近紧集上连续泛函",
+      "构造基于Föllmer路径wise积分的路径扩展（含二次变差项），并在概率场景下证明连续半鞅扩展签名的线性泛函有通用逼近，数值例展示金融应用"
+    ],
+    "processed_at": "2026-02-06T08:53:18.773025"
+  },
+  {
+    "id": "2602.05241v1",
+    "title": "On the Skew Stickiness Ratio",
+    "abstract": "The skew stickiness ratio is a statistic that captures the joint dynamics of an asset price and its volatility. We derive a representation formula for this quantity using the Itô-Wentzell and Clark-Ocone formulae, and we apply it to analyze its asymptotics under Bergomi-type stochastic volatility models.",
+    "authors": [
+      "Masaaki Fukasawa"
+    ],
+    "published": "2026-02-05",
+    "categories": [
+      "q-fin.MF",
+      "math.PR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.05241v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.05241v1",
+    "fetched_at": "2026-02-06T08:50:14.864389",
+    "chinese_title": "论偏度粘性比率",
+    "chinese_summary": "本文提出偏度粘性比率这一统计量以刻画资产价格与波动率的联合动态，利用Itô-Wentzell和Clark-Ocone公式推导其表示公式，并分析了Bergomi型随机波动率模型下该比率的渐近性质。",
+    "tags": [
+      "Volatility",
+      "Options",
+      "Asset Pricing"
+    ],
+    "key_contributions": [
+      "推导了偏度粘性比率的表示公式（基于Itô-Wentzell和Clark-Ocone公式）",
+      "分析了Bergomi型随机波动率模型下偏度粘性比率的渐近性质"
+    ],
+    "processed_at": "2026-02-06T08:53:30.910106"
+  },
+  {
+    "id": "2602.05155v1",
+    "title": "Optimal Risk-Sharing Rules in Network-based Decentralized Insurance",
+    "abstract": "This paper studies decentralized risk-sharing on networks. In particular, we consider a model where agents are nodes in a given network structure. Agents directly connected by edges in the network are referred to as friends. We study actuarially fair risk-sharing under the assumption that only friends can share risk, and we characterize the optimal signed linear risk-sharing rule in this network setting. Subsequently, we consider a special case of this model where all the friends of an agent take on an equal share of the agent's risk, and establish a connection to the graph Laplacian. Our results are illustrated with several examples.",
+    "authors": [
+      "Heather N. Fogarty",
+      "Sooie-Hoe Loke",
+      "Nicholas F. Marshall",
+      "Enrique A. Thomann"
+    ],
+    "published": "2026-02-05",
+    "categories": [
+      "math.OC",
+      "math.PR",
+      "q-fin.RM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.05155v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.05155v1",
+    "fetched_at": "2026-02-06T08:50:14.864418",
+    "chinese_title": "基于网络的去中心化保险中的最优风险分担规则",
+    "chinese_summary": "本文研究网络结构下的去中心化风险分担问题，假设仅网络中直接相连的节点（朋友）可分担风险，刻画了最优符号线性风险分担规则；进一步分析朋友均等分担的特殊情形，建立其与图拉普拉斯算子的关联，并通过实例验证结果。",
+    "tags": [
+      "Financial Agent",
+      "Risk Management",
+      "Graph Neural Network"
+    ],
+    "key_contributions": [
+      "刻画了网络环境下仅朋友可分担风险时的最优符号线性风险分担规则",
+      "建立朋友均等分担情形与图拉普拉斯算子的关联"
+    ],
+    "processed_at": "2026-02-06T08:53:53.244316"
+  },
+  {
+    "id": "2602.05007v1",
+    "title": "Music as an Asset Class",
+    "abstract": "In the streaming era, music revenues distributed to rights holders have become more transparent. However, it is not yet clear how to quantify the risk and return characteristics of music royalty assets, as is done with equities. In this paper, we fit three discounted cashflow models to transactions on the Royalty Exchange platform. We use our best model to backtest the one year and five year performance of music royalty assets, after transaction costs. We find that Life of Rights (LOR) music assets had risk and return characteristics comparable to stocks in the S\\&P500, when held over 5 years. Since the performance of stocks and music assets are likely to be uncorrelated, this result may help investors assess this asset class within the context of a more traditional stock and bond portfolio.",
+    "authors": [
+      "Sasha Stoikov",
+      "Aadityaa Singla",
+      "Umu Cetin",
+      "Luis Alonso Cendra Villalobos"
+    ],
+    "published": "2026-02-04",
+    "categories": [
+      "q-fin.PR",
+      "q-fin.PM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.05007v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.05007v1",
+    "fetched_at": "2026-02-06T08:50:14.864444",
+    "chinese_title": "音乐作为一类资产",
+    "chinese_summary": "作者针对音乐版权资产风险收益量化不足的问题，采用三个折现现金流模型拟合Royalty Exchange平台交易数据，回测发现永久版权（LOR）音乐资产5年期风险收益与标普500股票相当且相关性低，为投资者评估该资产类别提供了实证依据。",
+    "tags": [
+      "Asset Pricing",
+      "Risk Management",
+      "Portfolio Optimization",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "通过折现现金流模型拟合交易数据，量化了音乐版权资产的风险收益特征并完成回测",
+      "发现永久版权音乐资产与标普500股票相关性低且5年期表现相当，为组合配置提供依据"
+    ],
+    "processed_at": "2026-02-06T08:54:14.943775"
+  },
+  {
+    "id": "2602.05646v1",
+    "title": "Empowering Time Series Analysis with Large-Scale Multimodal Pretraining",
+    "abstract": "While existing time series foundation models primarily rely on large-scale unimodal pretraining, they lack complementary modalities to enhance time series understanding. Building multimodal foundation models is a natural next step, but it faces key challenges: 1) lack of a unified multimodal pretraining paradigm and large-scale multimodal corpora for time series analysis; 2) how to effectively integrate heterogeneous modalities and enhance model generalization. To address these challenges, we take an early step toward multimodal foundation models for time series analysis. We first propose a multimodal pretraining paradigm that leverages time series with endogenous modalities (derived images and text) and exogenous knowledge (real-world news), providing a comprehensive multi-view perspective for time series analysis. To support this, we develop an automated data construction pipeline to curate MM-TS, the first large-scale multimodal time series dataset spanning six domains, with up to one billion points. Then we propose HORAI, a frequency-enhanced multimodal foundation model. It integrates two core components: the Frequency-enhanced Cross-Modality Encoder and the Time-Frequency Decoder, designed to effectively fuse multimodal features and enhance model generalization across modalities and domains. After pretraining on MM-TS, HORAI achieves state-of-the-art zero-shot performance on time series forecasting and anomaly detection tasks, demonstrating strong generalization.",
+    "authors": [
+      "Peng Chen",
+      "Siyuan Wang",
+      "Shiyan Hu",
+      "Xingjian Wu",
+      "Yang Shu",
+      "Zhongwen Rao",
+      "Meng Wang",
+      "Yijie Li",
+      "Bin Yang",
+      "Chenjuan Guo"
+    ],
+    "published": "2026-02-05",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.05646v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.05646v1",
+    "fetched_at": "2026-02-06T08:50:27.194709",
+    "chinese_title": "大规模多模态预训练赋能时间序列分析",
+    "chinese_summary": "针对现有时间序列基础模型缺乏多模态互补的问题，论文提出多模态预训练范式并构建首个大规模多模态时间序列数据集MM-TS；设计频率增强的多模态基础模型HORAI，通过跨模态编码器和解码器融合多模态特征，在零样本预测和异常检测任务上达到SOTA。",
+    "tags": [
+      "Time Series",
+      "Deep Learning",
+      "Anomaly",
+      "Transformer"
+    ],
+    "key_contributions": [
+      "提出多模态预训练范式并构建首个大规模多模态时间序列数据集MM-TS",
+      "设计频率增强的多模态基础模型HORAI，实现跨模态特征融合与强泛化能力"
+    ],
+    "processed_at": "2026-02-06T08:54:28.385015"
+  },
+  {
+    "id": "2602.05639v1",
+    "title": "Joint Embedding Variational Bayes",
+    "abstract": "We introduce Variational Joint Embedding (VJE), a framework that synthesizes joint embedding and variational inference to enable self-supervised learning of probabilistic representations in a reconstruction-free, non-contrastive setting. Compared to energy-based predictive objectives that optimize pointwise discrepancies, VJE maximizes a symmetric conditional evidence lower bound (ELBO) for a latent-variable model defined directly on encoder embeddings. We instantiate the conditional likelihood with a heavy-tailed Student-$t$ model using a polar decomposition that explicitly decouples directional and radial factors to prevent norm-induced instabilities during training. VJE employs an amortized inference network to parameterize a diagonal Gaussian variational posterior whose feature-wise variances are shared with the likelihood scale to capture anisotropic uncertainty without auxiliary projection heads. Across ImageNet-1K, CIFAR-10/100, and STL-10, VJE achieves performance comparable to standard non-contrastive baselines under linear and k-NN evaluation. We further validate these probabilistic semantics through one-class CIFAR-10 anomaly detection, where likelihood-based scoring under the proposed model outperforms comparable self-supervised baselines.",
+    "authors": [
+      "Amin Oji",
+      "Paul Fieguth"
+    ],
+    "published": "2026-02-05",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.05639v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.05639v1",
+    "fetched_at": "2026-02-06T08:50:27.194735",
+    "chinese_title": "联合嵌入变分贝叶斯",
+    "chinese_summary": "论文提出变分联合嵌入（VJE）框架，融合联合嵌入与变分推断实现无重建、非对比的自监督概率表示学习；方法采用对称条件ELBO优化，条件似然基于带极分解的重尾Student-t模型（解耦方向与径向因子），变分后验为对角高斯且方差与似然尺度共享；实验在ImageNet-1K等数据集上线性/k-NN评估媲美非对比基线，异常检测中似然评分优于同类自监督方法。",
+    "tags": [
+      "Deep Learning",
+      "Anomaly"
+    ],
+    "key_contributions": [
+      "提出变分联合嵌入（VJE）框架，融合联合嵌入与变分推断，实现无重建、非对比的自监督概率表示学习",
+      "设计带极分解的重尾Student-t条件似然及方差共享的对角高斯变分后验，提升训练稳定性与概率语义表达，在异常检测任务中表现更优"
+    ],
+    "processed_at": "2026-02-06T08:55:00.888408"
+  },
+  {
+    "id": "2602.05238v1",
+    "title": "PatchFlow: Leveraging a Flow-Based Model with Patch Features",
+    "abstract": "Die casting plays a crucial role across various industries due to its ability to craft intricate shapes with high precision and smooth surfaces. However, surface defects remain a major issue that impedes die casting quality control. Recently, computer vision techniques have been explored to automate and improve defect detection. In this work, we combine local neighbor-aware patch features with a normalizing flow model and bridge the gap between the generic pretrained feature extractor and industrial product images by introducing an adapter module to increase the efficiency and accuracy of automated anomaly detection. Compared to state-of-the-art methods, our approach reduces the error rate by 20\\% on the MVTec AD dataset, achieving an image-level AUROC of 99.28\\%. Our approach has also enhanced performance on the VisA dataset , achieving an image-level AUROC of 96.48\\%. Compared to the state-of-the-art models, this represents a 28.2\\% reduction in error. Additionally, experiments on a proprietary die casting dataset yield an accuracy of 95.77\\% for anomaly detection, without requiring any anomalous samples for training. Our method illustrates the potential of leveraging computer vision and deep learning techniques to advance inspection capabilities for the die casting industry",
+    "authors": [
+      "Boxiang Zhang",
+      "Baijian Yang",
+      "Xiaoming Wang",
+      "Corey Vian"
+    ],
+    "published": "2026-02-05",
+    "categories": [
+      "cs.CV",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.05238v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.05238v1",
+    "fetched_at": "2026-02-06T08:50:27.194759",
+    "chinese_title": "PatchFlow：利用基于流模型与补丁特征",
+    "chinese_summary": "论文针对压铸行业表面缺陷检测难题，结合局部邻域感知补丁特征与归一化流模型，引入适配器模块弥合预训练特征提取器与工业产品图像的差距，提升异常检测效率与准确率；在MVTec AD、VisA及专有压铸数据集上均优于现有方法，无需异常样本训练即可实现高精度检测。",
+    "tags": [
+      "Anomaly",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出PatchFlow方法，融合局部补丁特征、归一化流模型与适配器模块，增强工业图像异常检测性能",
+      "在公开及专有数据集上显著优于现有方法，且无需异常样本训练即可实现高精度检测"
+    ],
+    "processed_at": "2026-02-06T08:55:12.232597"
+  },
+  {
+    "id": "2602.05232v1",
+    "title": "Balanced Anomaly-guided Ego-graph Diffusion Model for Inductive Graph Anomaly Detection",
+    "abstract": "Graph anomaly detection (GAD) is crucial in applications like fraud detection and cybersecurity. Despite recent advancements using graph neural networks (GNNs), two major challenges persist. At the model level, most methods adopt a transductive learning paradigm, which assumes static graph structures, making them unsuitable for dynamic, evolving networks. At the data level, the extreme class imbalance, where anomalous nodes are rare, leads to biased models that fail to generalize to unseen anomalies. These challenges are interdependent: static transductive frameworks limit effective data augmentation, while imbalance exacerbates model distortion in inductive learning settings. To address these challenges, we propose a novel data-centric framework that integrates dynamic graph modeling with balanced anomaly synthesis. Our framework features: (1) a discrete ego-graph diffusion model, which captures the local topology of anomalies to generate ego-graphs aligned with anomalous structural distribution, and (2) a curriculum anomaly augmentation mechanism, which dynamically adjusts synthetic data generation during training, focusing on underrepresented anomaly patterns to improve detection and generalization. Experiments on five datasets demonstrate that the effectiveness of our framework.",
+    "authors": [
+      "Chunyu Wei",
+      "Siyuan He",
+      "Yu Wang",
+      "Yueguo Chen",
+      "Yunhai Wang",
+      "Bing Bai",
+      "Yidong Zhang",
+      "Yong Xie",
+      "Shunming Zhang",
+      "Fei Wang"
+    ],
+    "published": "2026-02-05",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.05232v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.05232v1",
+    "fetched_at": "2026-02-06T08:50:27.194835",
+    "chinese_title": "用于归纳式图异常检测的平衡异常引导自图扩散模型",
+    "chinese_summary": "针对图异常检测中静态传导学习不适应动态网络、极端类不平衡导致模型泛化差的问题，本文提出平衡异常引导自图扩散模型框架，包含离散自图扩散模型（生成符合异常结构分布的自图）和课程异常增强机制（动态优化合成数据），在五个数据集上验证了有效性。",
+    "tags": [
+      "Anomaly",
+      "Graph Neural Network",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出离散自图扩散模型，捕捉异常局部拓扑生成符合异常结构分布的自图，支持归纳式动态图建模",
+      "设计课程异常增强机制，动态调整合成数据生成以缓解极端类不平衡，提升异常检测泛化能力"
+    ],
+    "processed_at": "2026-02-06T08:55:36.890749"
+  },
+  {
+    "id": "2602.04917v1",
+    "title": "Multi-Aspect Mining and Anomaly Detection for Heterogeneous Tensor Streams",
+    "abstract": "Analysis and anomaly detection in event tensor streams consisting of timestamps and multiple attributes - such as communication logs(time, IP address, packet length)- are essential tasks in data mining. While existing tensor decomposition and anomaly detection methods provide useful insights, they face the following two limitations. (i) They cannot handle heterogeneous tensor streams, which comprises both categorical attributes(e.g., IP address) and continuous attributes(e.g., packet length). They typically require either discretizing continuous attributes or treating categorical attributes as continuous, both of which distort the underlying statistical properties of the data.Furthermore, incorrect assumptions about the distribution family of continuous attributes often degrade the model's performance. (ii) They discretize timestamps, failing to track the temporal dynamics of streams(e.g., trends, abnormal events), which makes them ineffective for detecting anomalies at the group level, referred to as 'group anomalies' (e.g, DoS attacks). To address these challenges, we propose HeteroComp, a method for continuously summarizing heterogeneous tensor streams into 'components' representing latent groups in each attribute and their temporal dynamics, and detecting group anomalies. Our method employs Gaussian process priors to model unknown distributions of continuous attributes, and temporal dynamics, which directly estimate probability densities from data. Extracted components give concise but effective summarization, enabling accurate group anomaly detection. Extensive experiments on real datasets demonstrate that HeteroComp outperforms the state-of-the-art algorithms for group anomaly detection accuracy, and its computational time does not depend on the data stream length.",
+    "authors": [
+      "Soshi Kakio",
+      "Yasuko Matsubara",
+      "Ren Fujiwara",
+      "Yasushi Sakurai"
+    ],
+    "published": "2026-02-04",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.04917v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.04917v1",
+    "fetched_at": "2026-02-06T08:50:27.194905",
+    "chinese_title": "异构张量流的多方面挖掘与异常检测",
+    "chinese_summary": "针对现有异常检测方法无法处理含分类与连续属性的异构张量流、离散化时间戳丢失时序动态的问题，提出HeteroComp方法，通过高斯过程先验建模连续属性未知分布及时序动态，将异构张量流连续总结为含潜在组及时序信息的组件，实现组异常检测。",
+    "tags": [
+      "Anomaly",
+      "Time Series",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出HeteroComp方法，解决异构张量流（分类+连续属性）无法被现有方法有效处理的问题，无需离散化连续属性或假设其分布"
+    ],
+    "processed_at": "2026-02-06T08:56:07.899534"
+  },
+  {
+    "id": "2602.05965v1",
+    "title": "Learning to Share: Selective Memory for Efficient Parallel Agentic Systems",
+    "abstract": "Agentic systems solve complex tasks by coordinating multiple agents that iteratively reason, invoke tools, and exchange intermediate results. To improve robustness and solution quality, recent approaches deploy multiple agent teams running in parallel to explore diverse reasoning trajectories. However, parallel execution comes at a significant computational cost: when different teams independently reason about similar sub-problems or execute analogous steps, they repeatedly perform substantial overlapping computation. To address these limitations, in this paper, we propose Learning to Share (LTS), a learned shared-memory mechanism for parallel agentic frameworks that enables selective cross-team information reuse while controlling context growth. LTS introduces a global memory bank accessible to all teams and a lightweight controller that decides whether intermediate agent steps should be added to memory or not. The controller is trained using stepwise reinforcement learning with usage-aware credit assignment, allowing it to identify information that is globally useful across parallel executions. Experiments on the AssistantBench and GAIA benchmarks show that LTS significantly reduces overall runtime while matching or improving task performance compared to memory-free parallel baselines, demonstrating that learned memory admission is an effective strategy for improving the efficiency of parallel agentic systems. Project page: https://joefioresi718.github.io/LTS_webpage/",
+    "authors": [
+      "Joseph Fioresi",
+      "Parth Parag Kulkarni",
+      "Ashmal Vayani",
+      "Song Wang",
+      "Mubarak Shah"
+    ],
+    "published": "2026-02-05",
+    "categories": [
+      "cs.MA",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.05965v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.05965v1",
+    "fetched_at": "2026-02-06T08:50:54.911632",
+    "chinese_title": "学习共享：面向高效并行智能体系统的选择性记忆机制",
+    "chinese_summary": "针对并行智能体系统因重复计算相似子问题导致的高计算成本问题，本文提出Learning to Share（LTS）机制，包含全局记忆库和轻量控制器，通过带使用感知信用分配的分步强化学习训练控制器实现选择性跨团队信息复用；实验在AssistantBench和GAIA基准上验证，LTS可显著减少运行时间且匹配或提升任务性能。",
+    "tags": [
+      "LLM",
+      "Reinforcement Learning",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出面向并行智能体系统的选择性记忆机制LTS，通过全局记忆库和学习型控制器解决重复计算问题",
+      "采用带使用感知信用分配的分步强化学习训练控制器，实现高效跨团队信息复用并验证效率与性能的平衡"
+    ],
+    "processed_at": "2026-02-06T08:56:30.435464"
+  },
+  {
+    "id": "2602.05843v1",
+    "title": "OdysseyArena: Benchmarking Large Language Models For Long-Horizon, Active and Inductive Interactions",
+    "abstract": "The rapid advancement of Large Language Models (LLMs) has catalyzed the development of autonomous agents capable of navigating complex environments. However, existing evaluations primarily adopt a deductive paradigm, where agents execute tasks based on explicitly provided rules and static goals, often within limited planning horizons. Crucially, this neglects the inductive necessity for agents to discover latent transition laws from experience autonomously, which is the cornerstone for enabling agentic foresight and sustaining strategic coherence. To bridge this gap, we introduce OdysseyArena, which re-centers agent evaluation on long-horizon, active, and inductive interactions. We formalize and instantiate four primitives, translating abstract transition dynamics into concrete interactive environments. Building upon this, we establish OdysseyArena-Lite for standardized benchmarking, providing a set of 120 tasks to measure an agent's inductive efficiency and long-horizon discovery. Pushing further, we introduce OdysseyArena-Challenge to stress-test agent stability across extreme interaction horizons (e.g., > 200 steps). Extensive experiments on 15+ leading LLMs reveal that even frontier models exhibit a deficiency in inductive scenarios, identifying a critical bottleneck in the pursuit of autonomous discovery in complex environments. Our code and data are available at https://github.com/xufangzhi/Odyssey-Arena",
+    "authors": [
+      "Fangzhi Xu",
+      "Hang Yan",
+      "Qiushi Sun",
+      "Jinyang Wu",
+      "Zixian Huang",
+      "Muye Huang",
+      "Jingyang Gong",
+      "Zichen Ding",
+      "Kanzhi Cheng",
+      "Yian Wang",
+      "Xinyu Che",
+      "Zeyi Sun",
+      "Jian Zhang",
+      "Zhangyue Yin",
+      "Haoran Luo",
+      "Xuanjing Huang",
+      "Ben Kao",
+      "Jun Liu",
+      "Qika Lin"
+    ],
+    "published": "2026-02-05",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.05843v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.05843v1",
+    "fetched_at": "2026-02-06T08:50:54.911694",
+    "chinese_title": "OdysseyArena：面向长视野、主动与归纳交互的大语言模型基准测试",
+    "chinese_summary": "现有大语言模型（LLM）评估多采用演绎范式，忽略自主发现潜在转移规律的归纳能力；论文提出OdysseyArena基准，含标准化测试集（120任务）和极限测试集，评估LLM长视野、主动与归纳交互能力；实验发现前沿模型在归纳场景存在不足，揭示复杂环境下自主发现的关键瓶颈。",
+    "tags": [
+      "LLM",
+      "Benchmark",
+      "Financial Agent"
+    ],
+    "key_contributions": [
+      "提出OdysseyArena基准，聚焦长视野、主动与归纳交互，弥补现有LLM评估仅侧重演绎范式的缺陷",
+      "构建标准化测试集（120任务）与极限测试集，实验揭示前沿LLM在归纳场景下的能力不足"
+    ],
+    "processed_at": "2026-02-06T08:57:02.874483"
+  },
+  {
+    "id": "2602.05765v1",
+    "title": "RL-VLA$^3$: Reinforcement Learning VLA Accelerating via Full Asynchronism",
+    "abstract": "In recent years, Vision-Language-Action (VLA) models have emerged as a crucial pathway towards general embodied intelligence, yet their training efficiency has become a key bottleneck. Although existing reinforcement learning (RL)-based training frameworks like RLinf can enhance model generalization, they still rely on synchronous execution, leading to severe resource underutilization and throughput limitations during environment interaction, policy generation (rollout), and model update phases (actor). To overcome this challenge, this paper, for the first time, proposes and implements a fully-asynchronous policy training framework encompassing the entire pipeline from environment interaction, rollout generation, to actor policy updates. Systematically drawing inspiration from asynchronous optimization ideas in large model RL, our framework designs a multi-level decoupled architecture. This includes asynchronous parallelization of environment interaction and trajectory collection, streaming execution for policy generation, and decoupled scheduling for training updates. We validated the effectiveness of our method across diverse VLA models and environments. On the LIBERO benchmark, the framework achieves throughput improvements of up to 59.25\\% compared to existing synchronous strategies. When deeply optimizing separation strategies, throughput can be increased by as much as 126.67\\%. We verified the effectiveness of each asynchronous component via ablation studies. Scaling law validation across 8 to 256 GPUs demonstrates our method's excellent scalability under most conditions.",
+    "authors": [
+      "Zhong Guan",
+      "Haoran Sun",
+      "Yongjian Guo",
+      "Shuai Di",
+      "Xiaodong Bai",
+      "Jing Long",
+      "Tianyun Zhao",
+      "Mingxi Luo",
+      "Chen Zhou",
+      "Yucheng Guo",
+      "Qiming Yang",
+      "Wanting Xu",
+      "Wen Huang",
+      "Yunxuan Ma",
+      "Hongke Zhao",
+      "Likang Wu",
+      "Xiaotie Deng",
+      "Xi Xiao",
+      "Sheng Wen",
+      "Yicheng Gong",
+      "Junwu Xiong"
+    ],
+    "published": "2026-02-05",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.05765v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.05765v1",
+    "fetched_at": "2026-02-06T08:50:54.911747",
+    "chinese_title": "RL-VLA³：基于全异步的强化学习VLA加速",
+    "chinese_summary": "针对现有VLA模型训练依赖同步执行导致资源利用率低、吞吐量受限的问题，首次提出涵盖环境交互、轨迹收集、策略生成流式执行及训练更新解耦调度的全异步策略训练框架，在LIBERO基准上吞吐量最多提升126.67%， ablation验证各异步组件有效性。",
+    "tags": [
+      "Reinforcement Learning",
+      "Deep Learning",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "首次提出涵盖环境交互、轨迹收集到策略更新全流程的异步VLA强化学习训练框架",
+      "该框架在LIBERO基准上实现显著吞吐量提升（最高126.67%）， ablation验证各异步组件有效性"
+    ],
+    "processed_at": "2026-02-06T08:57:16.197954"
+  },
+  {
+    "id": "2602.05754v1",
+    "title": "TimelyFreeze: Adaptive Parameter Freezing Mechanism for Pipeline Parallelism",
+    "abstract": "Pipeline parallelism enables training models that exceed single-device memory, but practical throughput remains limited by pipeline bubbles. Although parameter freezing can improve training throughput by adaptively skipping backward computation, existing methods often over-freeze parameters, resulting in unnecessary accuracy degradation. To address this issue, we propose TimelyFreeze, which models the pipeline schedule as a directed acyclic graph and solves a linear program to compute optimal freeze ratios that minimize batch execution time under accuracy constraints. Experiments show that TimelyFreeze achieves up to 40% training throughput improvement on LLaMA-8B with comparable accuracy. Overall, it enables faster large-scale model training without compromising convergence and generalizes across diverse pipeline-parallel settings.",
+    "authors": [
+      "Seonghye Cho",
+      "Jaemin Han",
+      "Hyunjin Kim",
+      "Euisoo Jung",
+      "Jae-Gil Lee"
+    ],
+    "published": "2026-02-05",
+    "categories": [
+      "cs.DC",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.05754v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.05754v1",
+    "fetched_at": "2026-02-06T08:50:54.911772",
+    "chinese_title": "TimelyFreeze：管道并行的自适应参数冻结机制",
+    "chinese_summary": "针对管道并行训练中气泡限制吞吐量及现有参数冻结过度降精度的问题，提出TimelyFreeze方法，将管道调度建模为有向无环图并通过线性规划求解最优冻结比，在精度约束下最小化批次执行时间，实验在LLaMA-8B上实现最高40%的训练吞吐量提升且保持精度。",
+    "tags": [
+      "LLM",
+      "Deep Learning",
+      "Transformer"
+    ],
+    "key_contributions": [
+      "提出自适应参数冻结机制TimelyFreeze，解决管道并行中过度冻结导致精度下降的问题",
+      "通过DAG建模与线性规划求解最优冻结比，在精度约束下优化训练执行时间，实验验证LLaMA-8B上显著提升吞吐量且保持精度"
+    ],
+    "processed_at": "2026-02-06T08:57:32.083384"
+  },
+  {
+    "id": "2602.05711v1",
+    "title": "OmniMoE: An Efficient MoE by Orchestrating Atomic Experts at Scale",
+    "abstract": "Mixture-of-Experts (MoE) architectures are evolving towards finer granularity to improve parameter efficiency. However, existing MoE designs face an inherent trade-off between the granularity of expert specialization and hardware execution efficiency. We propose OmniMoE, a system-algorithm co-designed framework that pushes expert granularity to its logical extreme. OmniMoE introduces vector-level Atomic Experts, enabling scalable routing and execution within a single MoE layer, while retaining a shared dense MLP branch for general-purpose processing. Although this atomic design maximizes capacity, it poses severe challenges for routing complexity and memory access. To address these, OmniMoE adopts a system-algorithm co-design: (i) a Cartesian Product Router that decomposes the massive index space to reduce routing complexity from O(N) to O(sqrt(N)); and (ii) Expert-Centric Scheduling that inverts the execution order to turn scattered, memory-bound lookups into efficient dense matrix operations. Validated on seven benchmarks, OmniMoE (with 1.7B active parameters) achieves 50.9% zero-shot accuracy across seven benchmarks, outperforming coarse-grained (e.g., DeepSeekMoE) and fine-grained (e.g., PEER) baselines. Crucially, OmniMoE reduces inference latency from 73ms to 6.7ms (a 10.9-fold speedup) compared to PEER, demonstrating that massive-scale fine-grained MoE can be fast and accurate. Our code is open-sourced at https://github.com/flash-algo/omni-moe.",
+    "authors": [
+      "Jingze Shi",
+      "Zhangyang Peng",
+      "Yizhang Zhu",
+      "Yifan Wu",
+      "Guang Liu",
+      "Yuyu Luo"
+    ],
+    "published": "2026-02-05",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.05711v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.05711v1",
+    "fetched_at": "2026-02-06T08:50:54.911798",
+    "chinese_title": "OmniMoE：通过大规模编排原子专家实现高效混合专家模型",
+    "chinese_summary": "论文提出系统-算法协同设计的OmniMoE框架，将混合专家（MoE）的专家粒度推至向量级原子专家，同时保留共享密集MLP分支；针对原子设计带来的路由复杂度与内存访问挑战，提出笛卡尔积路由器（将路由复杂度从O(N)降至O(sqrt(N))）和专家中心调度（优化内存访问为高效密集矩阵操作）；在7个基准测试中，1.7B激活参数的OmniMoE零样本准确率达50.9%，推理 latency较PEER降低10.9倍，实现高效准确的大规模细粒度MoE。",
+    "tags": [
+      "Transformer",
+      "Deep Learning",
+      "LLM"
+    ],
+    "key_contributions": [
+      "提出系统-算法协同设计的OmniMoE框架，将MoE专家粒度推至向量级原子专家，平衡专家专业化粒度与硬件执行效率",
+      "设计笛卡尔积路由器和专家中心调度，解决原子专家带来的路由复杂度与内存访问问题，实现高效推理与高准确率"
+    ],
+    "processed_at": "2026-02-06T08:58:02.179113"
+  },
+  {
+    "id": "2602.05636v1",
+    "title": "Generative Ontology: When Structured Knowledge Learns to Create",
+    "abstract": "Traditional ontologies excel at describing domain structure but cannot generate novel artifacts. Large language models generate fluently but produce outputs that lack structural validity, hallucinating mechanisms without components, goals without end conditions. We introduce Generative Ontology, a framework that synthesizes these complementary strengths: ontology provides the grammar; the LLM provides the creativity.   Generative Ontology encodes domain knowledge as executable Pydantic schemas that constrain LLM generation via DSPy signatures. A multi-agent pipeline assigns specialized roles to different ontology domains: a Mechanics Architect designs game systems, a Theme Weaver integrates narrative, a Balance Critic identifies exploits. Each agent carrying a professional \"anxiety\" that prevents shallow, agreeable outputs. Retrieval-augmented generation grounds novel designs in precedents from existing exemplars, while iterative validation ensures coherence between mechanisms and components.   We demonstrate the framework through GameGrammar, a system for generating complete tabletop game designs. Given a thematic prompt (\"bioluminescent fungi competing in a cave ecosystem\"), the pipeline produces structurally complete, playable game specifications with mechanisms, components, victory conditions, and setup instructions. These outputs satisfy ontological constraints while remaining genuinely creative.   The pattern generalizes beyond games. Any domain with expert vocabulary, validity constraints, and accumulated exemplars (music composition, software architecture, culinary arts) is a candidate for Generative Ontology. We argue that constraints do not limit creativity but enable it: just as grammar makes poetry possible, ontology makes structured generation possible.",
+    "authors": [
+      "Benny Cheung"
+    ],
+    "published": "2026-02-05",
+    "categories": [
+      "cs.AI",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.05636v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.05636v1",
+    "fetched_at": "2026-02-06T08:50:54.911818",
+    "chinese_title": "生成式本体：当结构化知识学会创造时",
+    "chinese_summary": "论文提出生成式本体框架，结合本体（提供语法约束）与LLM（提供创造力），解决传统本体无法生成新人工制品、LLM生成缺乏结构有效性的问题；通过可执行Pydantic schema约束、多智能体角色分配、检索增强生成及迭代验证，实现结构完整且具创意的输出（如GameGrammar生成桌游设计），并可推广至其他领域。",
+    "tags": [
+      "LLM",
+      "Deep Learning",
+      "NLP"
+    ],
+    "key_contributions": [
+      "提出生成式本体框架，整合本体的结构约束与LLM的创造力，弥补两者短板",
+      "设计多智能体 pipeline 及检索增强等机制，实现结构完整且具创意的领域输出并可泛化"
+    ],
+    "processed_at": "2026-02-06T08:58:28.297633"
+  },
+  {
+    "id": "2602.05467v1",
+    "title": "MerNav: A Highly Generalizable Memory-Execute-Review Framework for Zero-Shot Object Goal Navigation",
+    "abstract": "Visual Language Navigation (VLN) is one of the fundamental capabilities for embodied intelligence and a critical challenge that urgently needs to be addressed. However, existing methods are still unsatisfactory in terms of both success rate (SR) and generalization: Supervised Fine-Tuning (SFT) approaches typically achieve higher SR, while Training-Free (TF) approaches often generalize better, but it is difficult to obtain both simultaneously. To this end, we propose a Memory-Execute-Review framework. It consists of three parts: a hierarchical memory module for providing information support, an execute module for routine decision-making and actions, and a review module for handling abnormal situations and correcting behavior. We validated the effectiveness of this framework on the Object Goal Navigation task. Across 4 datasets, our average SR achieved absolute improvements of 7% and 5% compared to all baseline methods under TF and Zero-Shot (ZS) settings, respectively. On the most commonly used HM3D_v0.1 and the more challenging open vocabulary dataset HM3D_OVON, the SR improved by 8% and 6%, under ZS settings. Furthermore, on the MP3D and HM3D_OVON datasets, our method not only outperformed all TF methods but also surpassed all SFT methods, achieving comprehensive leadership in both SR (5% and 2%) and generalization.",
+    "authors": [
+      "Dekang Qi",
+      "Shuang Zeng",
+      "Xinyuan Chang",
+      "Feng Xiong",
+      "Shichao Xie",
+      "Xiaolong Wu",
+      "Mu Xu"
+    ],
+    "published": "2026-02-05",
+    "categories": [
+      "cs.CV",
+      "cs.CL",
+      "cs.RO"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.05467v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.05467v1",
+    "fetched_at": "2026-02-06T08:50:54.911847",
+    "chinese_title": "MerNav：一种高度可泛化的记忆-执行-回顾框架用于零样本物体目标导航",
+    "chinese_summary": "针对视觉语言导航中现有方法难以同时兼顾成功率与泛化性的问题，本文提出记忆-执行-回顾（MER）框架，包含分层记忆、执行决策及异常回顾模块；在4个物体目标导航数据集上验证，零样本和无训练设置下成功率显著超越基线，实现成功率与泛化性的综合领先。",
+    "tags": [
+      "Financial Agent",
+      "Deep Learning",
+      "Reinforcement Learning"
+    ],
+    "key_contributions": [
+      "提出MER框架，通过记忆-执行-回顾三模块解决视觉语言导航中成功率与泛化性难以兼顾的问题",
+      "在零样本/无训练设置下，跨4个数据集的成功率显著超越所有基线方法，实现综合领先"
+    ],
+    "processed_at": "2026-02-06T08:59:04.876931"
+  },
+  {
+    "id": "2602.05456v1",
+    "title": "Ontology-Driven Robotic Specification Synthesis",
+    "abstract": "This paper addresses robotic system engineering for safety- and mission-critical applications by bridging the gap between high-level objectives and formal, executable specifications. The proposed method, Robotic System Task to Model Transformation Methodology (RSTM2) is an ontology-driven, hierarchical approach using stochastic timed Petri nets with resources, enabling Monte Carlo simulations at mission, system, and subsystem levels. A hypothetical case study demonstrates how the RSTM2 method supports architectural trades, resource allocation, and performance analysis under uncertainty. Ontological concepts further enable explainable AI-based assistants, facilitating fully autonomous specification synthesis. The methodology offers particular benefits to complex multi-robot systems, such as the NASA CADRE mission, representing decentralized, resource-aware, and adaptive autonomous systems of the future.",
+    "authors": [
+      "Maksym Figat",
+      "Ryan M. Mackey",
+      "Michel D. Ingham"
+    ],
+    "published": "2026-02-05",
+    "categories": [
+      "cs.RO",
+      "cs.AI",
+      "eess.SY"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.05456v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.05456v1",
+    "fetched_at": "2026-02-06T08:50:54.911868",
+    "chinese_title": "本体驱动的机器人规范综合",
+    "chinese_summary": "本文提出本体驱动的分层方法RSTM2，采用带资源的随机定时Petri网实现多级别蒙特卡洛模拟，支持架构权衡、资源分配及不确定性下的性能分析；该方法结合本体概念助力可解释AI助手，实现全自主规范综合，适用于复杂多机器人系统（如NASA CADRE任务）。",
+    "tags": [
+      "Deep Learning",
+      "Reinforcement Learning"
+    ],
+    "key_contributions": [
+      "提出本体驱动的分层方法RSTM2，基于带资源的随机定时Petri网实现任务到模型的转化，支持多级别蒙特卡洛模拟",
+      "利用本体概念赋能可解释AI助手，实现全自主规范综合，适用于复杂多机器人系统的架构权衡与不确定性分析"
+    ],
+    "processed_at": "2026-02-06T08:59:31.945306"
+  },
+  {
+    "id": "2602.05386v1",
+    "title": "Spider-Sense: Intrinsic Risk Sensing for Efficient Agent Defense with Hierarchical Adaptive Screening",
+    "abstract": "As large language models (LLMs) evolve into autonomous agents, their real-world applicability has expanded significantly, accompanied by new security challenges. Most existing agent defense mechanisms adopt a mandatory checking paradigm, in which security validation is forcibly triggered at predefined stages of the agent lifecycle. In this work, we argue that effective agent security should be intrinsic and selective rather than architecturally decoupled and mandatory. We propose Spider-Sense framework, an event-driven defense framework based on Intrinsic Risk Sensing (IRS), which allows agents to maintain latent vigilance and trigger defenses only upon risk perception. Once triggered, the Spider-Sense invokes a hierarchical defence mechanism that trades off efficiency and precision: it resolves known patterns via lightweight similarity matching while escalating ambiguous cases to deep internal reasoning, thereby eliminating reliance on external models. To facilitate rigorous evaluation, we introduce S$^2$Bench, a lifecycle-aware benchmark featuring realistic tool execution and multi-stage attacks. Extensive experiments demonstrate that Spider-Sense achieves competitive or superior defense performance, attaining the lowest Attack Success Rate (ASR) and False Positive Rate (FPR), with only a marginal latency overhead of 8.3\\%.",
+    "authors": [
+      "Zhenxiong Yu",
+      "Zhi Yang",
+      "Zhiheng Jin",
+      "Shuhe Wang",
+      "Heng Zhang",
+      "Yanlin Fei",
+      "Lingfeng Zeng",
+      "Fangqi Lou",
+      "Shuo Zhang",
+      "Tu Hu",
+      "Jingping Liu",
+      "Rongze Chen",
+      "Xingyu Zhu",
+      "Kunyi Wang",
+      "Chaofa Yuan",
+      "Xin Guo",
+      "Zhaowei Liu",
+      "Feipeng Zhang",
+      "Jie Huang",
+      "Huacan Wang",
+      "Ronghao Chen",
+      "Liwen Zhang"
+    ],
+    "published": "2026-02-05",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.05386v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.05386v1",
+    "fetched_at": "2026-02-06T08:50:54.911926",
+    "chinese_title": "Spider-Sense：基于分层自适应筛选的高效智能体防御内在风险感知",
+    "chinese_summary": "针对LLM智能体的安全挑战，论文提出Spider-Sense事件驱动防御框架，基于内在风险感知实现选择性触发防御（非强制检查）；触发后通过分层防御（轻量相似匹配已知模式+深度推理模糊案例）平衡效率与精度，无需依赖外部模型；还构建S²Bench基准，实验验证其防御性能优异（ASR和FPR最低，延迟仅增8.3%）",
+    "tags": [
+      "LLM",
+      "Risk Management",
+      "Benchmark",
+      "Financial Agent"
+    ],
+    "key_contributions": [
+      "提出基于内在风险感知的Spider-Sense事件驱动防御框架，实现LLM智能体选择性、高效且不依赖外部模型的防御",
+      "构建S²Bench生命周期感知基准，支持真实工具执行与多阶段攻击的严格防御评估"
+    ],
+    "processed_at": "2026-02-06T08:59:58.998568"
+  },
+  {
+    "id": "2602.05249v1",
+    "title": "Automatic Cognitive Task Generation for In-Situ Evaluation of Embodied Agents",
+    "abstract": "As general intelligent agents are poised for widespread deployment in diverse households, evaluation tailored to each unique unseen 3D environment has become a critical prerequisite. However, existing benchmarks suffer from severe data contamination and a lack of scene specificity, inadequate for assessing agent capabilities in unseen settings. To address this, we propose a dynamic in-situ task generation method for unseen environments inspired by human cognition. We define tasks through a structured graph representation and construct a two-stage interaction-evolution task generation system for embodied agents (TEA). In the interaction stage, the agent actively interacts with the environment, creating a loop between task execution and generation that allows for continuous task generation. In the evolution stage, task graph modeling allows us to recombine and reuse existing tasks to generate new ones without external data. Experiments across 10 unseen scenes demonstrate that TEA automatically generated 87,876 tasks in two cycles, which human verification confirmed to be physically reasonable and encompassing essential daily cognitive capabilities. Benchmarking SOTA models against humans on our in-situ tasks reveals that models, despite excelling on public benchmarks, perform surprisingly poorly on basic perception tasks, severely lack 3D interaction awareness and show high sensitivity to task types in reasoning. These sobering findings highlight the necessity of in-situ evaluation before deploying agents into real-world human environments.",
+    "authors": [
+      "Xinyi He",
+      "Ying Yang",
+      "Chuanjian Fu",
+      "Sihan Guo",
+      "Songchun Zhu",
+      "Lifeng Fan",
+      "Zhenliang Zhang",
+      "Yujia Peng"
+    ],
+    "published": "2026-02-05",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.05249v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.05249v1",
+    "fetched_at": "2026-02-06T08:50:54.911956",
+    "chinese_title": "面向具身智能体原位评估的自动认知任务生成方法",
+    "chinese_summary": "论文针对现有智能体评估基准的数据污染与场景特异性不足问题，提出受人类认知启发的原位任务生成系统TEA，通过交互-进化两阶段（交互阶段实现任务执行与生成闭环，进化阶段基于任务图重组复用）在未知场景自动生成合理任务；实验揭示SOTA模型在未知环境中感知、交互等能力的显著短板。",
+    "tags": [
+      "Benchmark",
+      "Graph Neural Network",
+      "Reinforcement Learning"
+    ],
+    "key_contributions": [
+      "提出交互-进化两阶段的原位任务生成系统TEA，通过任务图建模解决未知环境下智能体评估的基准缺陷",
+      "实验验证TEA生成任务的合理性及覆盖性，揭示SOTA模型在未知场景中感知、交互等能力的不足"
+    ],
+    "processed_at": "2026-02-06T09:00:18.703701"
+  },
+  {
+    "id": "2602.05220v1",
+    "title": "Bagpiper: Solving Open-Ended Audio Tasks via Rich Captions",
+    "abstract": "Current audio foundation models typically rely on rigid, task-specific supervision, addressing isolated factors of audio rather than the whole. In contrast, human intelligence processes audio holistically, seamlessly bridging physical signals with abstract cognitive concepts to execute complex tasks. Grounded in this philosophy, we introduce Bagpiper, an 8B audio foundation model that interprets physical audio via rich captions, i.e., comprehensive natural language descriptions that encapsulate the critical cognitive concepts inherent in the signal (e.g., transcription, audio events). By pre-training on a massive corpus of 600B tokens, the model establishes a robust bidirectional mapping between raw audio and this high-level conceptual space. During fine-tuning, Bagpiper adopts a caption-then-process workflow, simulating an intermediate cognitive reasoning step to solve diverse tasks without task-specific priors. Experimentally, Bagpiper outperforms Qwen-2.5-Omni on MMAU and AIRBench for audio understanding and surpasses CosyVoice3 and TangoFlux in generation quality, capable of synthesizing arbitrary compositions of speech, music, and sound effects. To the best of our knowledge, Bagpiper is among the first works that achieve unified understanding generation for general audio. Model, data, and code are available at Bagpiper Home Page.",
+    "authors": [
+      "Jinchuan Tian",
+      "Haoran Wang",
+      "Bo-Hao Su",
+      "Chien-yu Huang",
+      "Qingzheng Wang",
+      "Jiatong Shi",
+      "William Chen",
+      "Xun Gong",
+      "Siddhant Arora",
+      "Chin-Jou Li",
+      "Masao Someki",
+      "Takashi Maekaku",
+      "Yusuke Shinohara",
+      "Jin Sakuma",
+      "Chao-Han Huck Yang",
+      "Shinji Watanabe"
+    ],
+    "published": "2026-02-05",
+    "categories": [
+      "cs.CL",
+      "cs.SD"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.05220v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.05220v1",
+    "fetched_at": "2026-02-06T08:50:54.912000",
+    "chinese_title": "Bagpiper：通过丰富字幕解决开放式音频任务",
+    "chinese_summary": "论文提出音频基础模型Bagpiper，通过包含转录、音频事件等认知概念的丰富字幕建立原始音频与高级概念空间的双向映射，采用“字幕生成后处理”工作流无需任务特定先验即可解决多样音频任务，在理解和生成任务上均优于现有模型，是通用音频统一理解生成的前沿工作之一。",
+    "tags": [
+      "LLM",
+      "Deep Learning",
+      "Transformer"
+    ],
+    "key_contributions": [
+      "提出基于丰富字幕的音频基础模型Bagpiper，实现原始音频与高级认知概念空间的双向映射",
+      "无需任务特定先验即可解决多样音频任务，在理解和生成任务上优于现有模型，是通用音频统一理解生成的前沿工作之一"
+    ],
+    "processed_at": "2026-02-06T09:00:34.830889"
+  },
+  {
+    "id": "2602.05134v1",
+    "title": "SemPipes -- Optimizable Semantic Data Operators for Tabular Machine Learning Pipelines",
+    "abstract": "Real-world machine learning on tabular data relies on complex data preparation pipelines for prediction, data integration, augmentation, and debugging. Designing these pipelines requires substantial domain expertise and engineering effort, motivating the question of how large language models (LLMs) can support tabular ML through code synthesis. We introduce SemPipes, a novel declarative programming model that integrates LLM-powered semantic data operators into tabular ML pipelines. Semantic operators specify data transformations in natural language while delegating execution to a runtime system. During training, SemPipes synthesizes custom operator implementations based on data characteristics, operator instructions, and pipeline context. This design enables the automatic optimization of data operations in a pipeline via LLM-based code synthesis guided by evolutionary search. We evaluate SemPipes across diverse tabular ML tasks and show that semantic operators substantially improve end-to-end predictive performance for both expert-designed and agent-generated pipelines, while reducing pipeline complexity. We implement SemPipes in Python and release it at https://github.com/deem-data/sempipes/tree/v1.",
+    "authors": [
+      "Olga Ovcharenko",
+      "Matthias Boehm",
+      "Sebastian Schelter"
+    ],
+    "published": "2026-02-04",
+    "categories": [
+      "cs.LG",
+      "cs.DB"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.05134v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.05134v1",
+    "fetched_at": "2026-02-06T08:50:54.912021",
+    "chinese_title": "SemPipes——面向表格机器学习管道的可优化语义数据算子",
+    "chinese_summary": "本文提出SemPipes，一种整合LLM驱动语义数据算子的表格机器学习管道声明式编程模型，语义算子以自然语言指定数据变换并由运行时执行，训练时基于数据特征、算子指令及管道上下文合成自定义实现；该模型通过LLM代码合成结合进化搜索自动优化管道，实验表明其显著提升端到端预测性能并降低管道复杂度。",
+    "tags": [
+      "LLM",
+      "NLP",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出SemPipes声明式编程模型，整合LLM驱动的语义数据算子到表格机器学习管道，支持自然语言指定数据变换并自动合成算子实现",
+      "设计基于LLM代码合成与进化搜索的管道自动优化方法，实验验证其提升预测性能并降低管道复杂度"
+    ],
+    "processed_at": "2026-02-06T09:01:00.690885"
+  },
+  {
+    "id": "2602.05004v1",
+    "title": "CoWork-X: Experience-Optimized Co-Evolution for Multi-Agent Collaboration System",
+    "abstract": "Large language models are enabling language-conditioned agents in interactive environments, but highly cooperative tasks often impose two simultaneous constraints: sub-second real-time coordination and sustained multi-episode adaptation under a strict online token budget. Existing approaches either rely on frequent in-episode reasoning that induces latency and timing jitter, or deliver post-episode improvements through unstructured text that is difficult to compile into reliable low-cost execution. We propose CoWork-X, an active co-evolution framework that casts peer collaboration as a closed-loop optimization problem across episodes, inspired by fast--slow memory separation. CoWork-X instantiates a Skill-Agent that executes via HTN (hierarchical task network)-based skill retrieval from a structured, interpretable, and compositional skill library, and a post-episode Co-Optimizer that performs patch-style skill consolidation with explicit budget constraints and drift regularization. Experiments in challenging Overcooked-AI-like realtime collaboration benchmarks demonstrate that CoWork-X achieves stable, cumulative performance gains while steadily reducing online latency and token usage.",
+    "authors": [
+      "Zexin Lin",
+      "Jiachen Yu",
+      "Haoyang Zhang",
+      "Yuzhao Li",
+      "Zhonghang Li",
+      "Yujiu Yang",
+      "Junjie Wang",
+      "Xiaoqiang Ji"
+    ],
+    "published": "2026-02-04",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.05004v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.05004v1",
+    "fetched_at": "2026-02-06T08:50:54.912050",
+    "chinese_title": "CoWork-X：面向多智能体协作系统的经验优化协同演化框架",
+    "chinese_summary": "现有大语言模型驱动的智能体在实时协作任务中存在延迟高、令牌预算超支或事后改进难的问题；论文提出CoWork-X框架，基于快慢记忆分离，包含执行HTN技能检索的Skill-Agent和带预算约束的事后协同优化器；实验在实时协作基准中证明其稳定性能提升且降低在线延迟与令牌使用。",
+    "tags": [
+      "LLM",
+      "Reinforcement Learning",
+      "Transformer"
+    ],
+    "key_contributions": [
+      "提出CoWork-X协同演化框架，解决多智能体实时协作中延迟与令牌预算的双重约束",
+      "设计Skill-Agent（HTN技能库执行）和带预算约束的事后协同优化器，实现稳定性能提升并降低在线成本"
+    ],
+    "processed_at": "2026-02-06T09:01:27.903038"
+  },
+  {
+    "id": "2602.04816v2",
+    "title": "Horizon-LM: A RAM-Centric Architecture for LLM Training",
+    "abstract": "The rapid growth of large language models (LLMs) has outpaced the evolution of single-GPU hardware, making model scale increasingly constrained by memory capacity rather than computation. While modern training systems extend GPU memory through distributed parallelism and offloading across CPU and storage tiers, they fundamentally retain a GPU-centric execution paradigm in which GPUs host persistent model replicas and full autograd graphs. As a result, scaling large models remains tightly coupled to multi-GPU clusters, complex distributed runtimes, and unpredictable host memory consumption, creating substantial barriers for node-scale post-training workloads such as instruction tuning, alignment, and domain adaptation. We present Horizon-LM, a memory-centric training system that redefines the roles of CPU and GPU for large-model optimization. Horizon-LM treats host memory as the authoritative parameter store and uses GPUs solely as transient compute engines through a CPU-master, GPU-template execution model. By eliminating persistent GPU-resident modules and autograd graphs, employing explicit recomputation with manual gradient propagation, and introducing a pipelined double-buffered execution engine, Horizon-LM decouples model scale from GPU count and bounds memory usage to the theoretical parameter footprint. On a single H200 GPU with 1.5\\,TB host RAM, Horizon-LM reliably trains models up to 120B parameters. On a standard single A100 machine, Horizon-LM achieves up to 12.2$\\times$ higher training throughput than DeepSpeed ZeRO-3 with CPU offloading while preserving numerical correctness. Across platforms and scales, Horizon-LM sustains high device utilization and predictable memory growth, demonstrating that host memory, not GPU memory, defines the true feasibility boundary for node-scale large-model training.",
+    "authors": [
+      "Zhengqing Yuan",
+      "Lichao Sun",
+      "Yanfang Ye"
+    ],
+    "published": "2026-02-04",
+    "categories": [
+      "cs.OS",
+      "cs.CL",
+      "cs.DC"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.04816v2",
+    "arxiv_url": "https://arxiv.org/abs/2602.04816v2",
+    "fetched_at": "2026-02-06T08:50:54.912127",
+    "chinese_title": "Horizon-LM：面向大语言模型训练的以RAM为中心的架构",
+    "chinese_summary": "针对大语言模型（LLM）训练受内存容量约束的问题，现有系统多依赖多GPU集群的GPU-centric范式，论文提出Horizon-LM——一种以RAM为中心的训练系统，通过CPU为主、GPU为临时计算引擎的执行模型，消除GPU常驻模块与自动微分图，结合显式重计算、手动梯度传播及流水线双缓冲引擎，解耦模型规模与GPU数量，单H200 GPU搭配1.5TB主机内存可可靠训练120B参数模型，降低节点级后训练的硬件门槛。",
+    "tags": [
+      "LLM",
+      "Deep Learning",
+      "Transformer"
+    ],
+    "key_contributions": [
+      "提出以RAM为中心的Horizon-LM架构，采用CPU为主、GPU为临时计算引擎的执行模型，解耦模型规模与GPU数量",
+      "通过消除GPU常驻模块、显式重计算与手动梯度传播、流水线双缓冲引擎，实现单GPU搭配大内存即可训练超大规模LLM（如120B参数），降低节点级后训练的硬件门槛"
+    ],
+    "processed_at": "2026-02-06T09:01:56.250095"
+  },
+  {
+    "id": "2602.01388v2",
+    "title": "The Enhanced Physics-Informed Kolmogorov-Arnold Networks: Applications of Newton's Laws in Financial Deep Reinforcement Learning (RL) Algorithms",
+    "abstract": "Deep Reinforcement Learning (DRL), a subset of machine learning focused on sequential decision-making, has emerged as a powerful approach for tackling financial trading problems. In finance, DRL is commonly used either to generate discrete trade signals or to determine continuous portfolio allocations. In this work, we propose a novel reinforcement learning framework for portfolio optimization that incorporates Physics-Informed Kolmogorov-Arnold Networks (PIKANs) into several DRL algorithms. The approach replaces conventional multilayer perceptrons with Kolmogorov-Arnold Networks (KANs) in both actor and critic components-utilizing learnable B-spline univariate functions to achieve parameter-efficient and more interpretable function approximation. During actor updates, we introduce a physics-informed regularization loss that promotes second-order temporal consistency between observed return dynamics and the action-induced portfolio adjustments. The proposed framework is evaluated across three equity markets-China, Vietnam, and the United States, covering both emerging and developed economies. Across all three markets, PIKAN-based agents consistently deliver higher cumulative and annualized returns, superior Sharpe and Calmar ratios, and more favorable drawdown characteristics compared to both standard DRL baselines and classical online portfolio-selection methods. This yields more stable training, higher Sharpe ratios, and superior performance compared to traditional DRL counterparts. The approach is particularly valuable in highly dynamic and noisy financial markets, where conventional DRL often suffers from instability and poor generalization.",
+    "authors": [
+      "Trang Thoi",
+      "Hung Tran",
+      "Tram Thoi",
+      "Huaiyang Zhong"
+    ],
+    "published": "2026-02-01",
+    "categories": [
+      "cs.CE",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.01388v2",
+    "arxiv_url": "https://arxiv.org/abs/2602.01388v2",
+    "fetched_at": "2026-02-06T08:52:42.589157",
+    "chinese_title": "增强型物理知情柯尔莫哥洛夫-阿诺德网络：牛顿定律在金融深度强化学习算法中的应用",
+    "chinese_summary": "论文提出将物理知情柯尔莫哥洛夫-阿诺德网络（PIKAN）融入深度强化学习框架用于投资组合优化，用可学习B样条单变量函数的KAN替代传统多层感知器，引入物理知情正则化损失促进回报动态与投资组合调整的二阶时间一致性；在中、越、美三国市场验证，PIKAN-based智能体在收益、夏普比等指标上优于传统DRL基线和经典在线投资组合选择方法。",
+    "tags": [
+      "Reinforcement Learning",
+      "Portfolio Optimization",
+      "Deep Learning",
+      "Algorithmic Trading"
+    ],
+    "key_contributions": [
+      "提出融入物理知情柯尔莫哥洛夫-阿诺德网络（PIKAN）的深度强化学习框架，用KAN替代传统MLP实现参数高效且可解释的函数近似",
+      "引入物理知情正则化损失提升回报动态与投资组合调整的二阶时间一致性，在三国市场验证性能优于传统方法"
+    ],
+    "processed_at": "2026-02-06T09:02:11.601567"
+  }
+]
