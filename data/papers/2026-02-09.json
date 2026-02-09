@@ -1,0 +1,536 @@
+[
+  {
+    "id": "2602.06424v1",
+    "title": "Single- and Multi-Level Fourier-RQMC Methods for Multivariate Shortfall Risk",
+    "abstract": "Multivariate shortfall risk measures provide a principled framework for quantifying systemic risk and determining capital allocations prior to aggregation in interconnected financial systems. Despite their well established theoretical properties, the numerical estimation of multivariate shortfall risk and the corresponding optimal allocations remains computationally challenging, as existing Monte Carlo based approaches can be numerically expensive due to slow convergence.   In this work, we develop a new class of single and multilevel numerical algorithms for estimating multivariate shortfall risk and the associated optimal allocations, based on a combination of Fourier inversion techniques and randomized quasi Monte Carlo (RQMC) sampling. Rather than operating in physical space, our approach evaluates the relevant expectations appearing in the risk constraint and its optimization in the frequency domain, where the integrands exhibit enhanced smoothness properties that are well suited for RQMC integration. We establish a rigorous mathematical framework for the resulting Fourier RQMC estimators, including convergence analysis and computational complexity bounds. Beyond the single level method, we introduce a multilevel RQMC scheme that exploits the geometric convergence of the underlying deterministic optimization algorithm to reduce computational cost while preserving accuracy.   Numerical experiments demonstrate that the proposed Fourier RQMC methods outperform sample average approximation and stochastic optimization benchmarks in terms of accuracy and computational cost across a range of models for the risk factors and loss structures. Consistent with the theoretical analysis, these results demonstrate improved asymptotic convergence and complexity rates relative to the benchmark methods, with additional savings achieved through the proposed multilevel RQMC construction.",
+    "authors": [
+      "Chiheb Ben Hammouda",
+      "Truong Ngoc Nguyen"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "q-fin.CP",
+      "math.NA",
+      "q-fin.MF",
+      "q-fin.RM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06424v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06424v1",
+    "fetched_at": "2026-02-09T08:58:46.346645"
+  },
+  {
+    "id": "2602.06415v1",
+    "title": "Joint survival annuity derivative valuation in the linear-rational Wishart mortality model",
+    "abstract": "This study proposes a linear-rational joint survival mortality model based on the Wishart process. The Wishart process, which is a stochastic continuous matrix affine process, allows for a general dependency between the mortality intensities that are constructed to be positive. Using the linear-rational framework along with the Wishart process as state variable, we derive a closed-form expression for the joint survival annuity, as well as the guaranteed joint survival annuity option. Exploiting our parameterisation of the Wishart process, we explicit the distribution of the mortality intensities and their dependency. We provide the distribution (density and cumulative distribution) of the joint survival annuity. We also develop some polynomial expansions for the underlying state variable that lead to fast and accurate approximations for the guaranteed joint survival annuity option. These polynomial expansions also significantly simplify the implementation of the model. Overall, the linear-rational Wishart mortality model provides a flexible and unified framework for modelling and managing joint mortality risk.",
+    "authors": [
+      "Jose Da Fonseca",
+      "Patrick Wong"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "q-fin.MF",
+      "q-fin.PR",
+      "stat.ME"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06415v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06415v1",
+    "fetched_at": "2026-02-09T08:58:46.346682"
+  },
+  {
+    "id": "2602.06401v1",
+    "title": "Wishart conditional tail risk measures: An analytic approach",
+    "abstract": "This study introduces a new analytical framework for quantifying multivariate risk measures. Using the Wishart process, which is a stochastic process with values in the space of positive definite matrices, we derive several conditional tail risk measures which, thanks to the remarkable analytical properties of the Wishart process, can be explicitly computed up to a one- or two-dimensional integration. These quantities can also be used to solve analytically a capital allocation problem based on conditional moments. Exploiting the stochastic differential equation property of the Wishart process, we show how an intertemporal (i.e., time-lagged) view of these risk measures can be embedded in the proposed framework. Several numerical examples show that the framework is versatile and operational, thus providing a useful tool for risk management.",
+    "authors": [
+      "Jose Da Fonseca",
+      "Patrick Wong"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "q-fin.RM",
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06401v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06401v1",
+    "fetched_at": "2026-02-09T08:58:46.346705"
+  },
+  {
+    "id": "2602.06394v1",
+    "title": "Unlocking Noisy Real-World Corpora for Foundation Model Pre-Training via Quality-Aware Tokenization",
+    "abstract": "Current tokenization methods process sequential data without accounting for signal quality, limiting their effectiveness on noisy real-world corpora. We present QA-Token (Quality-Aware Tokenization), which incorporates data reliability directly into vocabulary construction. We make three key contributions: (i) a bilevel optimization formulation that jointly optimizes vocabulary construction and downstream performance, (ii) a reinforcement learning approach that learns merge policies through quality-aware rewards with convergence guarantees, and (iii) an adaptive parameter learning mechanism via Gumbel-Softmax relaxation for end-to-end optimization. Our experimental evaluation demonstrates consistent improvements: genomics (6.7 percentage point F1 gain in variant calling over BPE), finance (30% Sharpe ratio improvement). At foundation scale, we tokenize a pretraining corpus comprising 1.7 trillion base-pairs and achieve state-of-the-art pathogen detection (94.53 MCC) while reducing token count by 15%. We unlock noisy real-world corpora, spanning petabases of genomic sequences and terabytes of financial time series, for foundation model training with zero inference overhead.",
+    "authors": [
+      "Arvid E. Gollwitzer",
+      "Paridhi Latawa",
+      "David de Gruijl",
+      "Deepak A. Subramanian",
+      "Adrián Noriega de la Colina"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "cs.AI",
+      "cs.CE",
+      "q-bio.GN",
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06394v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06394v1",
+    "fetched_at": "2026-02-09T08:58:46.346732"
+  },
+  {
+    "id": "2602.06198v1",
+    "title": "Insider Purchase Signals in Microcap Equities: Gradient Boosting Detection of Abnormal Returns",
+    "abstract": "This paper examines whether SEC Form 4 insider purchase filings predict abnormal returns in U.S. microcap stocks. The analysis covers 17,237 open-market purchases across 1,343 issuers from 2018 through 2024, restricted to market capitalizations between \\$30M and \\$500M. A gradient boosting classifier trained on insider identity, transaction history, and market conditions at disclosure achieves AUC of 0.70 on out-of-sample 2024 data. At an optimized threshold of 0.20, precision is 0.38 and recall is 0.69. The distance from the 52-week high dominates feature importance, accounting for 36% of predictive signal. A momentum pattern emerges in the data: transactions disclosed after price appreciation exceeding 10% yield the highest mean cumulative abnormal return (6.3%) and the highest probability of outperformance (36.7%). This contrasts with the simple mean-reversion intuition often applied to post-run-up entries. The result is robust to winsorization and holds across subsamples. These patterns are consistent with slower information incorporation in illiquid markets, where trend confirmation may filter for higher-conviction insider signals.",
+    "authors": [
+      "Hangyi Zhao"
+    ],
+    "published": "2026-02-05",
+    "categories": [
+      "q-fin.ST",
+      "q-fin.TR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06198v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06198v1",
+    "fetched_at": "2026-02-09T08:58:46.346750"
+  },
+  {
+    "id": "2602.06938v1",
+    "title": "Reliable Mislabel Detection for Video Capsule Endoscopy Data",
+    "abstract": "The classification performance of deep neural networks relies strongly on access to large, accurately annotated datasets. In medical imaging, however, obtaining such datasets is particularly challenging since annotations must be provided by specialized physicians, which severely limits the pool of annotators. Furthermore, class boundaries can often be ambiguous or difficult to define which further complicates machine learning-based classification. In this paper, we want to address this problem and introduce a framework for mislabel detection in medical datasets. This is validated on the two largest, publicly available datasets for Video Capsule Endoscopy, an important imaging procedure for examining the gastrointestinal tract based on a video stream of lowresolution images. In addition, potentially mislabeled samples identified by our pipeline were reviewed and re-annotated by three experienced gastroenterologists. Our results show that the proposed framework successfully detects incorrectly labeled data and results in an improved anomaly detection performance after cleaning the datasets compared to current baselines.",
+    "authors": [
+      "Julia Werner",
+      "Julius Oexle",
+      "Oliver Bause",
+      "Maxime Le Floch",
+      "Franz Brinkmann",
+      "Hannah Tolle",
+      "Jochen Hampe",
+      "Oliver Bringmann"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "cs.CV",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06938v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06938v1",
+    "fetched_at": "2026-02-09T08:58:59.294499"
+  },
+  {
+    "id": "2602.06859v1",
+    "title": "Zero-shot Generalizable Graph Anomaly Detection with Mixture of Riemannian Experts",
+    "abstract": "Graph Anomaly Detection (GAD) aims to identify irregular patterns in graph data, and recent works have explored zero-shot generalist GAD to enable generalization to unseen graph datasets. However, existing zero-shot GAD methods largely ignore intrinsic geometric differences across diverse anomaly patterns, substantially limiting their cross-domain generalization. In this work, we reveal that anomaly detectability is highly dependent on the underlying geometric properties and that embedding graphs from different domains into a single static curvature space can distort the structural signatures of anomalies. To address the challenge that a single curvature space cannot capture geometry-dependent graph anomaly patterns, we propose GAD-MoRE, a novel framework for zero-shot Generalizable Graph Anomaly Detection with a Mixture of Riemannian Experts architecture. Specifically, to ensure that each anomaly pattern is modeled in the Riemannian space where it is most detectable, GAD-MoRE employs a set of specialized Riemannian expert networks, each operating in a distinct curvature space. To align raw node features with curvature-specific anomaly characteristics, we introduce an anomaly-aware multi-curvature feature alignment module that projects inputs into parallel Riemannian spaces, enabling the capture of diverse geometric characteristics. Finally, to facilitate better generalization beyond seen patterns, we design a memory-based dynamic router that adaptively assigns each input to the most compatible expert based on historical reconstruction performance on similar anomalies. Extensive experiments in the zero-shot setting demonstrate that GAD-MoRE significantly outperforms state-of-the-art generalist GAD baselines, and even surpasses strong competitors that are few-shot fine-tuned with labeled data from the target domain.",
+    "authors": [
+      "Xinyu Zhao",
+      "Qingyun Sun",
+      "Jiayi Luo",
+      "Xingcheng Fu",
+      "Jianxin Li"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06859v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06859v1",
+    "fetched_at": "2026-02-09T08:58:59.294535"
+  },
+  {
+    "id": "2602.06810v1",
+    "title": "Calibrating Tabular Anomaly Detection via Optimal Transport",
+    "abstract": "Tabular anomaly detection (TAD) remains challenging due to the heterogeneity of tabular data: features lack natural relationships, vary widely in distribution and scale, and exhibit diverse types. Consequently, each TAD method makes implicit assumptions about anomaly patterns that work well on some datasets but fail on others, and no method consistently outperforms across diverse scenarios. We present CTAD (Calibrating Tabular Anomaly Detection), a model-agnostic post-processing framework that enhances any existing TAD detector through sample-specific calibration. Our approach characterizes normal data via two complementary distributions, i.e., an empirical distribution from random sampling and a structural distribution from K-means centroids, and measures how adding a test sample disrupts their compatibility using Optimal Transport (OT) distance. Normal samples maintain low disruption while anomalies cause high disruption, providing a calibration signal to amplify detection. We prove that OT distance has a lower bound proportional to the test sample's distance from centroids, and establish that anomalies systematically receive higher calibration scores than normals in expectation, explaining why the method generalizes across datasets. Extensive experiments on 34 diverse tabular datasets with 7 representative detectors spanning all major TAD categories (density estimation, classification, reconstruction, and isolation-based methods) demonstrate that CTAD consistently improves performance with statistical significance. Remarkably, CTAD enhances even state-of-the-art deep learning methods and shows robust performance across diverse hyperparameter settings, requiring no additional tuning for practical deployment.",
+    "authors": [
+      "Hangting Ye",
+      "He Zhao. Wei Fan",
+      "Xiaozhuang Song",
+      "Dandan Guo",
+      "Yi Chang",
+      "Hongyuan Zha"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06810v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06810v1",
+    "fetched_at": "2026-02-09T08:58:59.294561"
+  },
+  {
+    "id": "2602.06777v1",
+    "title": "Next-generation cyberattack detection with large language models: anomaly analysis across heterogeneous logs",
+    "abstract": "This project explores large language models (LLMs) for anomaly detection across heterogeneous log sources. Traditional intrusion detection systems suffer from high false positive rates, semantic blindness, and data scarcity, as logs are inherently sensitive, making clean datasets rare. We address these challenges through three contributions: (1) LogAtlas-Foundation-Sessions and LogAtlas-Defense-Set, balanced and heterogeneous log datasets with explicit attack annotations and privacy preservation; (2) empirical benchmarking revealing why standard metrics such as F1 and accuracy are misleading for security applications; and (3) a two phase training framework combining log understanding (Base-AMAN, 3B parameters) with real time detection (AMAN, 0.5B parameters via knowledge distillation). Results demonstrate practical feasibility, with inference times of 0.3-0.5 seconds per session and operational costs below 50 USD per day.",
+    "authors": [
+      "Yassine Chagna",
+      "Antal Goldschmidt"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06777v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06777v1",
+    "fetched_at": "2026-02-09T08:58:59.294580"
+  },
+  {
+    "id": "2602.06448v1",
+    "title": "Principle-Evolvable Scientific Discovery via Uncertainty Minimization",
+    "abstract": "Large Language Model (LLM)-based scientific agents have accelerated scientific discovery, yet they often suffer from significant inefficiencies due to adherence to fixed initial priors. Existing approaches predominantly operate within a static hypothesis space, which restricts the discovery of novel phenomena, resulting in computational waste when baseline theories fail. To address this, we propose shifting the focus from searching hypotheses to evolving the underlying scientific principles. We present PiEvo, a principle-evolvable framework that treats scientific discovery as Bayesian optimization over an expanding principle space. By integrating Information-Directed Hypothesis Selection via Gaussian Process and an anomaly-driven augmentation mechanism, PiEvo enables agents to autonomously refine their theoretical worldview. Evaluation across four benchmarks demonstrates that PiEvo (1) achieves an average solution quality of up to 90.81%~93.15%, representing a 29.7%~31.1% improvement over the state-of-the-art, (2) attains an 83.3% speedup in convergence step via significantly reduced sample complexity by optimizing the compact principle space, and (3) maintains robust performance across diverse scientific domains and LLM backbones.",
+    "authors": [
+      "Yingming Pu",
+      "Tao Lin",
+      "Hongyu Chen"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06448v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06448v1",
+    "fetched_at": "2026-02-09T08:58:59.294601"
+  },
+  {
+    "id": "2602.06443v1",
+    "title": "TrajAD: Trajectory Anomaly Detection for Trustworthy LLM Agents",
+    "abstract": "We address the problem of runtime trajectory anomaly detection, a critical capability for enabling trustworthy LLM agents. Current safety measures predominantly focus on static input/output filtering. However, we argue that ensuring LLM agents reliability requires auditing the intermediate execution process. In this work, we formulate the task of Trajectory Anomaly Detection. The goal is not merely detection, but precise error localization. This capability is essential for enabling efficient rollback-and-retry. To achieve this, we construct TrajBench, a dataset synthesized via a perturb-and-complete strategy to cover diverse procedural anomalies. Using this benchmark, we investigate the capability of models in process supervision. We observe that general-purpose LLMs, even with zero-shot prompting, struggle to identify and localize these anomalies. This reveals that generalized capabilities do not automatically translate to process reliability. To address this, we propose TrajAD, a specialized verifier trained with fine-grained process supervision. Our approach outperforms baselines, demonstrating that specialized supervision is essential for building trustworthy agents.",
+    "authors": [
+      "Yibing Liu",
+      "Chong Zhang",
+      "Zhongyi Han",
+      "Hansong Liu",
+      "Yong Wang",
+      "Yang Yu",
+      "Xiaoyan Wang",
+      "Yilong Yin"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06443v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06443v1",
+    "fetched_at": "2026-02-09T08:58:59.294630"
+  },
+  {
+    "id": "2602.06331v1",
+    "title": "Don't Break the Boundary: Continual Unlearning for OOD Detection Based on Free Energy Repulsion",
+    "abstract": "Deploying trustworthy AI in open-world environments faces a dual challenge: the necessity for robust Out-of-Distribution (OOD) detection to ensure system safety, and the demand for flexible machine unlearning to satisfy privacy compliance and model rectification. However, this objective encounters a fundamental geometric contradiction: current OOD detectors rely on a static and compact data manifold, whereas traditional classification-oriented unlearning methods disrupt this delicate structure, leading to a catastrophic loss of the model's capability to discriminate anomalies while erasing target classes. To resolve this dilemma, we first define the problem of boundary-preserving class unlearning and propose a pivotal conceptual shift: in the context of OOD detection, effective unlearning is mathematically equivalent to transforming the target class into OOD samples. Based on this, we propose the TFER (Total Free Energy Repulsion) framework. Inspired by the free energy principle, TFER constructs a novel Push-Pull game mechanism: it anchors retained classes within a low-energy ID manifold through a pull mechanism, while actively expelling forgotten classes to high-energy OOD regions using a free energy repulsion force. This approach is implemented via parameter-efficient fine-tuning, circumventing the prohibitive cost of full retraining. Extensive experiments demonstrate that TFER achieves precise unlearning while maximally preserving the model's discriminative performance on remaining classes and external OOD data. More importantly, our study reveals that the unique Push-Pull equilibrium of TFER endows the model with inherent structural stability, allowing it to effectively resist catastrophic forgetting without complex additional constraints, thereby demonstrating exceptional potential in continual unlearning tasks.",
+    "authors": [
+      "Ningkang Peng",
+      "Kun Shao",
+      "Jingyang Mao",
+      "Linjing Qian",
+      "Xiaoqian Peng",
+      "Xichen Yang",
+      "Yanhui Gu"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06331v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06331v1",
+    "fetched_at": "2026-02-09T08:58:59.294657"
+  },
+  {
+    "id": "2602.06172v1",
+    "title": "Know Your Scientist: KYC as Biosecurity Infrastructure",
+    "abstract": "Biological AI tools for protein design and structure prediction are advancing rapidly, creating dual-use risks that existing safeguards cannot adequately address. Current model-level restrictions, including keyword filtering, output screening, and content-based access denials, are fundamentally ill-suited to biology, where reliable function prediction remains beyond reach and novel threats evade detection by design. We propose a three-tier Know Your Customer (KYC) framework, inspired by anti-money laundering (AML) practices in the financial sector, that shifts governance from content inspection to user verification and monitoring. Tier I leverages research institutions as trust anchors to vouch for affiliated researchers and assume responsibility for vetting. Tier II applies output screening through sequence homology searches and functional annotation. Tier III monitors behavioral patterns to detect anomalies inconsistent with declared research purposes. This layered approach preserves access for legitimate researchers while raising the cost of misuse through institutional accountability and traceability. The framework can be implemented immediately using existing institutional infrastructure, requiring no new legislation or regulatory mandates.",
+    "authors": [
+      "Jonathan Feldman",
+      "Tal Feldman",
+      "Annie I Anton"
+    ],
+    "published": "2026-02-05",
+    "categories": [
+      "cs.CR",
+      "cs.CY",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06172v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06172v1",
+    "fetched_at": "2026-02-09T08:58:59.294678"
+  },
+  {
+    "id": "2602.06948v1",
+    "title": "Agentic Uncertainty Reveals Agentic Overconfidence",
+    "abstract": "Can AI agents predict whether they will succeed at a task? We study agentic uncertainty by eliciting success probability estimates before, during, and after task execution. All results exhibit agentic overconfidence: some agents that succeed only 22% of the time predict 77% success. Counterintuitively, pre-execution assessment with strictly less information tends to yield better discrimination than standard post-execution review, though differences are not always significant. Adversarial prompting reframing assessment as bug-finding achieves the best calibration.",
+    "authors": [
+      "Jean Kaddour",
+      "Srijan Patel",
+      "Gbètondji Dovonon",
+      "Leo Richter",
+      "Pasquale Minervini",
+      "Matt J. Kusner"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06948v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06948v1",
+    "fetched_at": "2026-02-09T08:59:27.786817"
+  },
+  {
+    "id": "2602.06875v1",
+    "title": "TraceCoder: A Trace-Driven Multi-Agent Framework for Automated Debugging of LLM-Generated Code",
+    "abstract": "Large Language Models (LLMs) often generate code with subtle but critical bugs, especially for complex tasks. Existing automated repair methods typically rely on superficial pass/fail signals, offering limited visibility into program behavior and hindering precise error localization. In addition, without a way to learn from prior failures, repair processes often fall into repetitive and inefficient cycles. To overcome these challenges, we present TraceCoder, a collaborative multi-agent framework that emulates the observe-analyze-repair process of human experts. The framework first instruments the code with diagnostic probes to capture fine-grained runtime traces, enabling deep insight into its internal execution. It then conducts causal analysis on these traces to accurately identify the root cause of the failure. This process is further enhanced by a novel Historical Lesson Learning Mechanism (HLLM), which distills insights from prior failed repair attempts to inform subsequent correction strategies and prevent recurrence of similar mistakes. To ensure stable convergence, a Rollback Mechanism enforces that each repair iteration constitutes a strict improvement toward the correct solution. Comprehensive experiments across multiple benchmarks show that TraceCoder achieves up to a 34.43\\% relative improvement in Pass@1 accuracy over existing advanced baselines. Ablation studies verify the significance of each system component, with the iterative repair process alone contributing a 65.61\\% relative gain in accuracy. Furthermore, TraceCoder significantly outperforms leading iterative methods in terms of both accuracy and cost-efficiency.",
+    "authors": [
+      "Jiangping Huang",
+      "Wenguang Ye",
+      "Weisong Sun",
+      "Jian Zhang",
+      "Mingyue Zhang",
+      "Yang Liu"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "cs.SE",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06875v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06875v1",
+    "fetched_at": "2026-02-09T08:59:27.786855"
+  },
+  {
+    "id": "2602.06841v1",
+    "title": "From Features to Actions: Explainability in Traditional and Agentic AI Systems",
+    "abstract": "Over the last decade, explainable AI has primarily focused on interpreting individual model predictions, producing post-hoc explanations that relate inputs to outputs under a fixed decision structure. Recent advances in large language models (LLMs) have enabled agentic AI systems whose behaviour unfolds over multi-step trajectories. In these settings, success and failure are determined by sequences of decisions rather than a single output. While useful, it remains unclear how explanation approaches designed for static predictions translate to agentic settings where behaviour emerges over time. In this work, we bridge the gap between static and agentic explainability by comparing attribution-based explanations with trace-based diagnostics across both settings. To make this distinction explicit, we empirically compare attribution-based explanations used in static classification tasks with trace-based diagnostics used in agentic benchmarks (TAU-bench Airline and AssistantBench). Our results show that while attribution methods achieve stable feature rankings in static settings (Spearman $ρ= 0.86$), they cannot be applied reliably to diagnose execution-level failures in agentic trajectories. In contrast, trace-grounded rubric evaluation for agentic settings consistently localizes behaviour breakdowns and reveals that state tracking inconsistency is 2.7$\\times$ more prevalent in failed runs and reduces success probability by 49\\%. These findings motivate a shift towards trajectory-level explainability for agentic systems when evaluating and diagnosing autonomous AI behaviour.   Resources:   https://github.com/VectorInstitute/unified-xai-evaluation-framework https://vectorinstitute.github.io/unified-xai-evaluation-framework",
+    "authors": [
+      "Sindhuja Chaduvula",
+      "Jessee Ho",
+      "Kina Kim",
+      "Aravind Narayanan",
+      "Mahshid Alinoori",
+      "Muskan Garg",
+      "Dhanesh Ramachandram",
+      "Shaina Raza"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06841v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06841v1",
+    "fetched_at": "2026-02-09T08:59:27.786889"
+  },
+  {
+    "id": "2602.06820v1",
+    "title": "ScaleEnv: Scaling Environment Synthesis from Scratch for Generalist Interactive Tool-Use Agent Training",
+    "abstract": "Training generalist agents capable of adapting to diverse scenarios requires interactive environments for self-exploration. However, interactive environments remain critically scarce, and existing synthesis methods suffer from significant limitations regarding environmental diversity and scalability. To address these challenges, we introduce ScaleEnv, a framework that constructs fully interactive environments and verifiable tasks entirely from scratch. Specifically, ScaleEnv ensures environment reliability through procedural testing, and guarantees task completeness and solvability via tool dependency graph expansion and executable action verification. By enabling agents to learn through exploration within ScaleEnv, we demonstrate significant performance improvements on unseen, multi-turn tool-use benchmarks such as $τ^2$-Bench and VitaBench, highlighting strong generalization capabilities. Furthermore, we investigate the relationship between increasing number of domains and model generalization performance, providing empirical evidence that scaling environmental diversity is critical for robust agent learning.",
+    "authors": [
+      "Dunwei Tu",
+      "Hongyan Hao",
+      "Hansi Yang",
+      "Yihao Chen",
+      "Yi-Kai Zhang",
+      "Zhikang Xia",
+      "Yu Yang",
+      "Yueqing Sun",
+      "Xingchen Liu",
+      "Furao Shen",
+      "Qi Gu",
+      "Hui Su",
+      "Xunliang Cai"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06820v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06820v1",
+    "fetched_at": "2026-02-09T08:59:27.786928"
+  },
+  {
+    "id": "2602.06818v1",
+    "title": "Wild Guesses and Mild Guesses in Active Concept Learning",
+    "abstract": "Human concept learning is typically active: learners choose which instances to query or test in order to reduce uncertainty about an underlying rule or category. Active concept learning must balance informativeness of queries against the stability of the learner that generates and scores hypotheses. We study this trade-off in a neuro-symbolic Bayesian learner whose hypotheses are executable programs proposed by a large language model (LLM) and reweighted by Bayesian updating. We compare a Rational Active Learner that selects queries to maximize approximate expected information gain (EIG) and the human-like Positive Test Strategy (PTS) that queries instances predicted to be positive under the current best hypothesis. Across concept-learning tasks in the classic Number Game, EIG is effective when falsification is necessary (e.g., compound or exception-laden rules), but underperforms on simple concepts. We trace this failure to a support mismatch between the EIG policy and the LLM proposal distribution: highly diagnostic boundary queries drive the posterior toward regions where the generator produces invalid or overly specific programs, yielding a support-mismatch trap in the particle approximation. PTS is information-suboptimal but tends to maintain proposal validity by selecting \"safe\" queries, leading to faster convergence on simple rules. Our results suggest that \"confirmation bias\" may not be a cognitive error, but rather a rational adaptation for maintaining tractable inference in the sparse, open-ended hypothesis spaces characteristic of human thought.",
+    "authors": [
+      "Anirudh Chari",
+      "Neil Pattanaik"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06818v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06818v1",
+    "fetched_at": "2026-02-09T08:59:27.786947"
+  },
+  {
+    "id": "2602.06807v1",
+    "title": "SuReNav: Superpixel Graph-based Constraint Relaxation for Navigation in Over-constrained Environments",
+    "abstract": "We address the over-constrained planning problem in semi-static environments. The planning objective is to find a best-effort solution that avoids all hard constraint regions while minimally traversing the least risky areas. Conventional methods often rely on pre-defined area costs, limiting generalizations. Further, the spatial continuity of navigation spaces makes it difficult to identify regions that are passable without overestimation. To overcome these challenges, we propose SuReNav, a superpixel graph-based constraint relaxation and navigation method that imitates human-like safe and efficient navigation. Our framework consists of three components: 1) superpixel graph map generation with regional constraints, 2) regional-constraint relaxation using graph neural network trained on human demonstrations for safe and efficient navigation, and 3) interleaving relaxation, planning, and execution for complete navigation. We evaluate our method against state-of-the-art baselines on 2D semantic maps and 3D maps from OpenStreetMap, achieving the highest human-likeness score of complete navigation while maintaining a balanced trade-off between efficiency and safety. We finally demonstrate its scalability and generalization performance in real-world urban navigation with a quadruped robot, Spot.",
+    "authors": [
+      "Keonyoung Koh",
+      "Moonkyeong Jung",
+      "Samuel Seungsup Lee",
+      "Daehyung Park"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "cs.RO",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06807v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06807v1",
+    "fetched_at": "2026-02-09T08:59:27.786975"
+  },
+  {
+    "id": "2602.06653v1",
+    "title": "RAPID: Reconfigurable, Adaptive Platform for Iterative Design",
+    "abstract": "Developing robotic manipulation policies is iterative and hypothesis-driven: researchers test tactile sensing, gripper geometries, and sensor placements through real-world data collection and training. Yet even minor end-effector changes often require mechanical refitting and system re-integration, slowing iteration. We present RAPID, a full-stack reconfigurable platform designed to reduce this friction. RAPID is built around a tool-free, modular hardware architecture that unifies handheld data collection and robot deployment, and a matching software stack that maintains real-time awareness of the underlying hardware configuration through a driver-level Physical Mask derived from USB events. This modular hardware architecture reduces reconfiguration to seconds and makes systematic multi-modal ablation studies practical, allowing researchers to sweep diverse gripper and sensing configurations without repeated system bring-up. The Physical Mask exposes modality presence as an explicit runtime signal, enabling auto-configuration and graceful degradation under sensor hot-plug events, so policies can continue executing when sensors are physically added or removed. System-centric experiments show that RAPID reduces the setup time for multi-modal configurations by two orders of magnitude compared to traditional workflows and preserves policy execution under runtime sensor hot-unplug events. The hardware designs, drivers, and software stack are open-sourced at https://rapid-kit.github.io/ .",
+    "authors": [
+      "Zi Yin",
+      "Fanhong Li",
+      "Shurui Zheng",
+      "Jia Liu"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "cs.RO",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06653v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06653v1",
+    "fetched_at": "2026-02-09T08:59:27.786997"
+  },
+  {
+    "id": "2602.06593v1",
+    "title": "AgentStepper: Interactive Debugging of Software Development Agents",
+    "abstract": "Software development agents powered by large language models (LLMs) have shown great promise in automating tasks like environment setup, issue solving, and program repair. Unfortunately, understanding and debugging such agents remain challenging due to their complex and dynamic nature. Developers must reason about trajectories of LLM queries, tool calls, and code modifications, but current techniques reveal little of this intermediate process in a comprehensible format. The key insight of this paper is that debugging software development agents shares many similarities with conventional debugging of software programs, yet requires a higher level of abstraction that raises the level from low-level implementation details to high-level agent actions. Drawing on this insight, we introduce AgentStepper, the first interactive debugger for LLM-based software engineering agents. AgentStepper enables developers to inspect, control, and interactively manipulate agent trajectories. AgentStepper represents trajectories as structured conversations among an LLM, the agent program, and tools. It supports breakpoints, stepwise execution, and live editing of prompts and tool invocations, while capturing and displaying intermediate repository-level code changes. Our evaluation applies AgentStepper to three state-of-the-art software development agents, ExecutionAgent, SWE-Agent, and RepairAgent, showing that integrating the approach into existing agents requires minor code changes (39-42 edited lines). Moreover, we report on a user study with twelve participants, indicating that AgentStepper improves the ability of participants to interpret trajectories (64% vs. 67% mean performance) and identify bugs in the agent's implementation (17% vs. 60% success rate), while reducing perceived workload (e.g., frustration reduced from 5.4/7.0 to 2.4/7.0) compared to conventional tools.",
+    "authors": [
+      "Robert Hutter",
+      "Michael Pradel"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "cs.SE",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06593v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06593v1",
+    "fetched_at": "2026-02-09T08:59:27.787016"
+  },
+  {
+    "id": "2602.06554v1",
+    "title": "SeeUPO: Sequence-Level Agentic-RL with Convergence Guarantees",
+    "abstract": "Reinforcement learning (RL) has emerged as the predominant paradigm for training large language model (LLM)-based AI agents. However, existing backbone RL algorithms lack verified convergence guarantees in agentic scenarios, especially in multi-turn settings, which can lead to training instability and failure to converge to optimal policies.   In this paper, we systematically analyze how different combinations of policy update mechanisms and advantage estimation methods affect convergence properties in single/multi-turn scenarios. We find that REINFORCE with Group Relative Advantage Estimation (GRAE) can converge to the globally optimal under undiscounted conditions, but the combination of PPO & GRAE breaks PPO's original monotonic improvement property. Furthermore, we demonstrate that mainstream backbone RL algorithms cannot simultaneously achieve both critic-free and convergence guarantees in multi-turn scenarios.   To address this, we propose SeeUPO (Sequence-level Sequential Update Policy Optimization), a critic-free approach with convergence guarantees for multi-turn interactions. SeeUPO models multi-turn interaction as sequentially executed multi-agent bandit problems. Through turn-by-turn sequential policy updates in reverse execution order, it ensures monotonic improvement and convergence to global optimal solution via backward induction.   Experiments on AppWorld and BFCL v4 demonstrate SeeUPO's substantial improvements over existing backbone algorithms: relative gains of 43.3%-54.6% on Qwen3-14B and 24.1%-41.9% on Qwen2.5-14B (averaged across benchmarks), along with superior training stability.",
+    "authors": [
+      "Tianyi Hu",
+      "Qingxu Fu",
+      "Yanxi Chen",
+      "Zhaoyang Liu",
+      "Bolin Ding"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06554v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06554v1",
+    "fetched_at": "2026-02-09T08:59:27.787044"
+  },
+  {
+    "id": "2602.06547v1",
+    "title": "Malicious Agent Skills in the Wild: A Large-Scale Security Empirical Study",
+    "abstract": "Third-party agent skills extend LLM-based agents with instruction files and executable code that run on users' machines. Skills execute with user privileges and are distributed through community registries with minimal vetting, but no ground-truth dataset exists to characterize the resulting threats. We construct the first labeled dataset of malicious agent skills by behaviorally verifying 98,380 skills from two community registries, confirming 157 malicious skills with 632 vulnerabilities. These attacks are not incidental. Malicious skills average 4.03 vulnerabilities across a median of three kill chain phases, and the ecosystem has split into two archetypes: Data Thieves that exfiltrate credentials through supply chain techniques, and Agent Hijackers that subvert agent decision-making through instruction manipulation. A single actor accounts for 54.1\\% of confirmed cases through templated brand impersonation. Shadow features, capabilities absent from public documentation, appear in 0\\% of basic attacks but 100\\% of advanced ones; several skills go further by exploiting the AI platform's own hook system and permission flags. Responsible disclosure led to 93.6\\% removal within 30 days. We release the dataset and analysis pipeline to support future work on agent skill security.",
+    "authors": [
+      "Yi Liu",
+      "Zhihao Chen",
+      "Yanjun Zhang",
+      "Gelei Deng",
+      "Yuekang Li",
+      "Jianting Ning",
+      "Leo Yu Zhang"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "cs.CR",
+      "cs.AI",
+      "cs.CL",
+      "cs.ET"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06547v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06547v1",
+    "fetched_at": "2026-02-09T08:59:27.787073"
+  },
+  {
+    "id": "2602.06518v1",
+    "title": "Sequential Auditing for f-Differential Privacy",
+    "abstract": "We present new auditors to assess Differential Privacy (DP) of an algorithm based on output samples. Such empirical auditors are common to check for algorithmic correctness and implementation bugs. Most existing auditors are batch-based or targeted toward the traditional notion of $(\\varepsilon,δ)$-DP; typically both. In this work, we shift the focus to the highly expressive privacy concept of $f$-DP, in which the entire privacy behavior is captured by a single tradeoff curve. Our auditors detect violations across the full privacy spectrum with statistical significance guarantees, which are supported by theory and simulations. Most importantly, and in contrast to prior work, our auditors do not require a user-specified sample size as an input. Rather, they adaptively determine a near-optimal number of samples needed to reach a decision, thereby avoiding the excessively large sample sizes common in many auditing studies. This reduction in sampling cost becomes especially beneficial for expensive training procedures such as DP-SGD. Our method supports both whitebox and blackbox settings and can also be executed in single-run frameworks.",
+    "authors": [
+      "Tim Kutta",
+      "Martin Dunsche",
+      "Yu Wei",
+      "Vassilis Zikas"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "cs.CR",
+      "stat.ME",
+      "stat.ML"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06518v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06518v1",
+    "fetched_at": "2026-02-09T08:59:27.787096"
+  },
+  {
+    "id": "2602.06511v1",
+    "title": "Evolutionary Generation of Multi-Agent Systems",
+    "abstract": "Large language model (LLM)-based multi-agent systems (MAS) show strong promise for complex reasoning, planning, and tool-augmented tasks, but designing effective MAS architectures remains labor-intensive, brittle, and hard to generalize. Existing automatic MAS generation methods either rely on code generation, which often leads to executability and robustness failures, or impose rigid architectural templates that limit expressiveness and adaptability. We propose Evolutionary Generation of Multi-Agent Systems (EvoMAS), which formulates MAS generation as structured configuration generation. EvoMAS performs evolutionary generation in configuration space. Specifically, EvoMAS selects initial configurations from a pool, applies feedback-conditioned mutation and crossover guided by execution traces, and iteratively refines both the candidate pool and an experience memory. We evaluate EvoMAS on diverse benchmarks, including BBEH, SWE-Bench, and WorkBench, covering reasoning, software engineering, and tool-use tasks. EvoMAS consistently improves task performance over both human-designed MAS and prior automatic MAS generation methods, while producing generated systems with higher executability and runtime robustness. EvoMAS outperforms the agent evolution method EvoAgent by +10.5 points on BBEH reasoning and +7.1 points on WorkBench. With Claude-4.5-Sonnet, EvoMAS also reaches 79.1% on SWE-Bench-Verified, matching the top of the leaderboard.",
+    "authors": [
+      "Yuntong Hu",
+      "Matthew Trager",
+      "Yuting Zhang",
+      "Yi Zhang",
+      "Shuo Yang",
+      "Wei Xia",
+      "Stefano Soatto"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06511v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06511v1",
+    "fetched_at": "2026-02-09T08:59:27.787123"
+  },
+  {
+    "id": "2602.06413v1",
+    "title": "Intrinsic Stability Limits of Autoregressive Reasoning: Structural Consequences for Long-Horizon Execution",
+    "abstract": "Large language models (LLMs) demonstrate remarkable reasoning capabilities, yet their performance often deteriorates sharply in long-horizon tasks, exhibiting systematic breakdown beyond certain scales. Conventional explanations primarily attribute this phenomenon to task complexity, such as combinatorial search explosion or long-term credit assignment challenges. In this work, we argue that these explanations are incomplete: even in linear, unbranched tasks without semantic ambiguity, autoregressive execution is subject to an intrinsic stability limit.   We propose that the fundamental constraint on long-horizon reasoning arises from process-level instability in autoregressive generation rather than solely from search or task complexity, reframing long-horizon reasoning as a problem of structural governance. We derive Theorem~A, showing that decision advantage in single-path autoregressive reasoning decays exponentially with execution length, imposing a fundamental bound on maintainable reasoning chains. This result implies a structural consequence: stable long-horizon reasoning requires discrete segmentation, naturally inducing graph-like execution structures such as directed acyclic graphs (DAGs).   Empirical studies in both synthetic environments and real TextWorld tasks reveal observable performance cliffs consistent with theoretical predictions. Our findings provide a dynamical perspective on long-horizon reasoning failure and suggest new limitations on maintaining long-term coherence under purely autoregressive architectures. Furthermore, we highlight that short-horizon evaluation protocols may obscure structural instability, indicating a potential shift from scaling toward structured governance in future reasoning systems.",
+    "authors": [
+      "Hsien-Jyh Liao"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06413v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06413v1",
+    "fetched_at": "2026-02-09T08:59:27.787171"
+  },
+  {
+    "id": "2602.06345v1",
+    "title": "Zero-Trust Runtime Verification for Agentic Payment Protocols: Mitigating Replay and Context-Binding Failures in AP2",
+    "abstract": "The deployment of autonomous AI agents capable of executing commercial transactions has motivated the adoption of mandate-based payment authorization protocols, including the Universal Commerce Protocol (UCP) and the Agent Payments Protocol (AP2). These protocols replace interactive, session-based authorization with cryptographically issued mandates, enabling asynchronous and autonomous execution. While AP2 provides specification-level guarantees through signature verification, explicit binding, and expiration semantics, real-world agentic execution introduces runtime behaviors such as retries, concurrency, and orchestration that challenge implicit assumptions about mandate usage.   In this work, we present a security analysis of the AP2 mandate lifecycle and identify enforcement gaps that arise during runtime in agent-based payment systems. We propose a zero-trust runtime verification framework that enforces explicit context binding and consume-once mandate semantics using dynamically generated, time-bound nonces, ensuring that authorization decisions are evaluated at execution time rather than assumed from static issuance properties.   Through simulation-based evaluation under high concurrency, we show that context-aware binding and consume-once enforcement address distinct and complementary attack classes, and that both are required to prevent replay and context-redirect attacks. The proposed framework mitigates all evaluated attacks while maintaining stable verification latency of approximately 3.8~ms at throughput levels up to 10{,}000 transactions per second. We further demonstrate that the required runtime state is bounded by peak concurrency rather than cumulative transaction history, indicating that robust runtime security for agentic payment execution can be achieved with minimal and predictable overhead.",
+    "authors": [
+      "Qianlong Lan",
+      "Anuj Kaul",
+      "Shaun Jones",
+      "Stephanie Westrum"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06345v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06345v1",
+    "fetched_at": "2026-02-09T08:59:27.787194"
+  }
+]

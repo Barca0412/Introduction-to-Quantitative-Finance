@@ -1,0 +1,854 @@
+[
+  {
+    "id": "2602.06424v1",
+    "title": "Single- and Multi-Level Fourier-RQMC Methods for Multivariate Shortfall Risk",
+    "abstract": "Multivariate shortfall risk measures provide a principled framework for quantifying systemic risk and determining capital allocations prior to aggregation in interconnected financial systems. Despite their well established theoretical properties, the numerical estimation of multivariate shortfall risk and the corresponding optimal allocations remains computationally challenging, as existing Monte Carlo based approaches can be numerically expensive due to slow convergence.   In this work, we develop a new class of single and multilevel numerical algorithms for estimating multivariate shortfall risk and the associated optimal allocations, based on a combination of Fourier inversion techniques and randomized quasi Monte Carlo (RQMC) sampling. Rather than operating in physical space, our approach evaluates the relevant expectations appearing in the risk constraint and its optimization in the frequency domain, where the integrands exhibit enhanced smoothness properties that are well suited for RQMC integration. We establish a rigorous mathematical framework for the resulting Fourier RQMC estimators, including convergence analysis and computational complexity bounds. Beyond the single level method, we introduce a multilevel RQMC scheme that exploits the geometric convergence of the underlying deterministic optimization algorithm to reduce computational cost while preserving accuracy.   Numerical experiments demonstrate that the proposed Fourier RQMC methods outperform sample average approximation and stochastic optimization benchmarks in terms of accuracy and computational cost across a range of models for the risk factors and loss structures. Consistent with the theoretical analysis, these results demonstrate improved asymptotic convergence and complexity rates relative to the benchmark methods, with additional savings achieved through the proposed multilevel RQMC construction.",
+    "authors": [
+      "Chiheb Ben Hammouda",
+      "Truong Ngoc Nguyen"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "q-fin.CP",
+      "math.NA",
+      "q-fin.MF",
+      "q-fin.RM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06424v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06424v1",
+    "fetched_at": "2026-02-09T08:58:46.346645",
+    "chinese_title": "单级和多级傅里叶-RQMC方法用于多元短缺风险",
+    "chinese_summary": "针对多元短缺风险（用于系统风险量化与资本配置）数值估计的计算挑战（现有蒙特卡洛方法收敛慢），提出结合傅里叶反演与随机准蒙特卡洛（RQMC）的单级和多级算法，在频域计算期望（积分光滑适配RQMC），建立理论框架并通过多级方案降低成本，数值实验验证其优势。",
+    "tags": [
+      "Risk Management",
+      "Portfolio Optimization"
+    ],
+    "key_contributions": [
+      "提出傅里叶-RQMC单级与多级算法，利用频域积分光滑性提升多元短缺风险及最优资本配置的数值估计效率",
+      "建立算法的严格收敛性与复杂度分析，多级方案通过优化几何收敛降低计算成本，数值实验验证优于现有方法"
+    ],
+    "processed_at": "2026-02-09T09:01:53.310833"
+  },
+  {
+    "id": "2602.06415v1",
+    "title": "Joint survival annuity derivative valuation in the linear-rational Wishart mortality model",
+    "abstract": "This study proposes a linear-rational joint survival mortality model based on the Wishart process. The Wishart process, which is a stochastic continuous matrix affine process, allows for a general dependency between the mortality intensities that are constructed to be positive. Using the linear-rational framework along with the Wishart process as state variable, we derive a closed-form expression for the joint survival annuity, as well as the guaranteed joint survival annuity option. Exploiting our parameterisation of the Wishart process, we explicit the distribution of the mortality intensities and their dependency. We provide the distribution (density and cumulative distribution) of the joint survival annuity. We also develop some polynomial expansions for the underlying state variable that lead to fast and accurate approximations for the guaranteed joint survival annuity option. These polynomial expansions also significantly simplify the implementation of the model. Overall, the linear-rational Wishart mortality model provides a flexible and unified framework for modelling and managing joint mortality risk.",
+    "authors": [
+      "Jose Da Fonseca",
+      "Patrick Wong"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "q-fin.MF",
+      "q-fin.PR",
+      "stat.ME"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06415v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06415v1",
+    "fetched_at": "2026-02-09T08:58:46.346682",
+    "chinese_title": "线性-理性Wishart死亡率模型下的联合生存年金衍生品估值",
+    "chinese_summary": "本文提出基于Wishart过程的线性-理性联合生存死亡率模型，利用Wishart过程刻画死亡率强度间的一般依赖且保持正性；推导联合生存年金及保证型联合生存年金期权的闭式表达式，明确死亡率强度分布与依赖，开发多项式展开实现快速近似并简化实施，为联合死亡率风险建模管理提供灵活统一框架。",
+    "tags": [
+      "Asset Pricing",
+      "Risk Management",
+      "Options"
+    ],
+    "key_contributions": [
+      "提出基于Wishart过程的线性-理性联合生存死亡率模型，刻画死亡率强度间一般依赖且保持正性",
+      "推导联合生存年金及保证型期权的闭式表达式，开发多项式展开实现快速近似并简化实施，明确相关分布"
+    ],
+    "processed_at": "2026-02-09T09:02:09.540869"
+  },
+  {
+    "id": "2602.06401v1",
+    "title": "Wishart conditional tail risk measures: An analytic approach",
+    "abstract": "This study introduces a new analytical framework for quantifying multivariate risk measures. Using the Wishart process, which is a stochastic process with values in the space of positive definite matrices, we derive several conditional tail risk measures which, thanks to the remarkable analytical properties of the Wishart process, can be explicitly computed up to a one- or two-dimensional integration. These quantities can also be used to solve analytically a capital allocation problem based on conditional moments. Exploiting the stochastic differential equation property of the Wishart process, we show how an intertemporal (i.e., time-lagged) view of these risk measures can be embedded in the proposed framework. Several numerical examples show that the framework is versatile and operational, thus providing a useful tool for risk management.",
+    "authors": [
+      "Jose Da Fonseca",
+      "Patrick Wong"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "q-fin.RM",
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06401v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06401v1",
+    "fetched_at": "2026-02-09T08:58:46.346705",
+    "chinese_title": "Wishart条件尾部风险测度：一种解析方法",
+    "chinese_summary": "本研究引入基于Wishart过程（正定矩阵值随机过程）的多变量风险测度解析框架，推导出仅需1-2维积分即可显式计算的条件尾部风险测度；该框架可解析解决基于条件矩的资本配置问题，并利用Wishart过程的随机微分方程性质嵌入跨期视角，数值例子验证其通用性与可操作性。",
+    "tags": [
+      "Risk Management",
+      "Volatility",
+      "Portfolio Optimization"
+    ],
+    "key_contributions": [
+      "提出基于Wishart过程的多变量条件尾部风险测度解析框架，相关测度可通过1-2维积分显式计算；",
+      "可解析解决基于条件矩的资本配置问题，并嵌入跨期（时滞）风险测度视角；",
+      "数值例子验证框架的通用性与可操作性，为风险管理提供实用工具。"
+    ],
+    "processed_at": "2026-02-09T09:02:28.563423"
+  },
+  {
+    "id": "2602.06394v1",
+    "title": "Unlocking Noisy Real-World Corpora for Foundation Model Pre-Training via Quality-Aware Tokenization",
+    "abstract": "Current tokenization methods process sequential data without accounting for signal quality, limiting their effectiveness on noisy real-world corpora. We present QA-Token (Quality-Aware Tokenization), which incorporates data reliability directly into vocabulary construction. We make three key contributions: (i) a bilevel optimization formulation that jointly optimizes vocabulary construction and downstream performance, (ii) a reinforcement learning approach that learns merge policies through quality-aware rewards with convergence guarantees, and (iii) an adaptive parameter learning mechanism via Gumbel-Softmax relaxation for end-to-end optimization. Our experimental evaluation demonstrates consistent improvements: genomics (6.7 percentage point F1 gain in variant calling over BPE), finance (30% Sharpe ratio improvement). At foundation scale, we tokenize a pretraining corpus comprising 1.7 trillion base-pairs and achieve state-of-the-art pathogen detection (94.53 MCC) while reducing token count by 15%. We unlock noisy real-world corpora, spanning petabases of genomic sequences and terabytes of financial time series, for foundation model training with zero inference overhead.",
+    "authors": [
+      "Arvid E. Gollwitzer",
+      "Paridhi Latawa",
+      "David de Gruijl",
+      "Deepak A. Subramanian",
+      "Adrián Noriega de la Colina"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "cs.AI",
+      "cs.CE",
+      "q-bio.GN",
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06394v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06394v1",
+    "fetched_at": "2026-02-09T08:58:46.346732",
+    "chinese_title": "通过质量感知分词解锁嘈杂真实世界语料库用于基础模型预训练",
+    "chinese_summary": "论文提出质量感知分词方法QA-Token，将数据可靠性直接融入词汇构建；通过双层优化、带质量感知奖励的强化学习及Gumbel-Softmax松弛的参数学习实现端到端优化，在基因组和金融任务上显著提升性能，且能处理大规模嘈杂语料用于基础模型预训练无推理 overhead。",
+    "tags": [
+      "Deep Learning",
+      "Reinforcement Learning",
+      "Time Series",
+      "LLM"
+    ],
+    "key_contributions": [
+      "提出QA-Token方法，将数据可靠性融入词汇构建，解决现有分词忽略信号质量的问题",
+      "设计双层优化、强化学习及自适应参数学习机制，实现端到端优化，在多任务中提升性能并解锁大规模嘈杂语料"
+    ],
+    "processed_at": "2026-02-09T09:02:48.608733"
+  },
+  {
+    "id": "2602.06198v1",
+    "title": "Insider Purchase Signals in Microcap Equities: Gradient Boosting Detection of Abnormal Returns",
+    "abstract": "This paper examines whether SEC Form 4 insider purchase filings predict abnormal returns in U.S. microcap stocks. The analysis covers 17,237 open-market purchases across 1,343 issuers from 2018 through 2024, restricted to market capitalizations between \\$30M and \\$500M. A gradient boosting classifier trained on insider identity, transaction history, and market conditions at disclosure achieves AUC of 0.70 on out-of-sample 2024 data. At an optimized threshold of 0.20, precision is 0.38 and recall is 0.69. The distance from the 52-week high dominates feature importance, accounting for 36% of predictive signal. A momentum pattern emerges in the data: transactions disclosed after price appreciation exceeding 10% yield the highest mean cumulative abnormal return (6.3%) and the highest probability of outperformance (36.7%). This contrasts with the simple mean-reversion intuition often applied to post-run-up entries. The result is robust to winsorization and holds across subsamples. These patterns are consistent with slower information incorporation in illiquid markets, where trend confirmation may filter for higher-conviction insider signals.",
+    "authors": [
+      "Hangyi Zhao"
+    ],
+    "published": "2026-02-05",
+    "categories": [
+      "q-fin.ST",
+      "q-fin.TR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06198v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06198v1",
+    "fetched_at": "2026-02-09T08:58:46.346750",
+    "chinese_title": "微型股中的内幕买入信号：异常收益的梯度提升检测",
+    "chinese_summary": "本文使用梯度提升分类器，基于内幕身份、交易历史及披露时市场条件，分析2018-2024年美国微型股（3000万-5亿美元市值）的SEC Form4内幕买入数据，发现模型能有效预测异常收益（2024样本AUC0.70）；核心特征为距离52周高点的距离，且存在动量模式（价格上涨超10%后披露的交易异常收益更高），结果稳健。",
+    "tags": [
+      "Asset Pricing",
+      "Market Microstructure",
+      "Deep Learning",
+      "Behavioral Finance"
+    ],
+    "key_contributions": [
+      "构建梯度提升分类器，结合内幕交易特征与市场条件，有效预测美国微型股内幕买入后的异常收益，2024年样本AUC达0.70",
+      "揭示微型股内幕买入存在动量模式（价格上涨超10%后披露的交易异常收益更高），且距离52周高点为核心预测特征，结果经稳健性检验成立"
+    ],
+    "processed_at": "2026-02-09T09:03:10.404935"
+  },
+  {
+    "id": "2602.06938v1",
+    "title": "Reliable Mislabel Detection for Video Capsule Endoscopy Data",
+    "abstract": "The classification performance of deep neural networks relies strongly on access to large, accurately annotated datasets. In medical imaging, however, obtaining such datasets is particularly challenging since annotations must be provided by specialized physicians, which severely limits the pool of annotators. Furthermore, class boundaries can often be ambiguous or difficult to define which further complicates machine learning-based classification. In this paper, we want to address this problem and introduce a framework for mislabel detection in medical datasets. This is validated on the two largest, publicly available datasets for Video Capsule Endoscopy, an important imaging procedure for examining the gastrointestinal tract based on a video stream of lowresolution images. In addition, potentially mislabeled samples identified by our pipeline were reviewed and re-annotated by three experienced gastroenterologists. Our results show that the proposed framework successfully detects incorrectly labeled data and results in an improved anomaly detection performance after cleaning the datasets compared to current baselines.",
+    "authors": [
+      "Julia Werner",
+      "Julius Oexle",
+      "Oliver Bause",
+      "Maxime Le Floch",
+      "Franz Brinkmann",
+      "Hannah Tolle",
+      "Jochen Hampe",
+      "Oliver Bringmann"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "cs.CV",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06938v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06938v1",
+    "fetched_at": "2026-02-09T08:58:59.294499",
+    "chinese_title": "视频胶囊内镜数据的可靠错误标签检测",
+    "chinese_summary": "论文针对医疗影像（视频胶囊内镜）中准确标注数据集稀缺、类边界模糊的问题，提出错误标签检测框架；该框架在两大公开最大的视频胶囊内镜数据集上验证，经三位胃肠病专家复核，能有效检测错误标签，且清洗后数据集的异常检测性能优于现有基线。",
+    "tags": [
+      "Deep Learning",
+      "Anomaly"
+    ],
+    "key_contributions": [
+      "提出针对视频胶囊内镜医疗影像数据集的错误标签检测框架",
+      "验证框架可有效检测错误标签，提升清洗后数据集的异常检测性能，结果经专家复核确认"
+    ],
+    "processed_at": "2026-02-09T09:03:22.533266"
+  },
+  {
+    "id": "2602.06859v1",
+    "title": "Zero-shot Generalizable Graph Anomaly Detection with Mixture of Riemannian Experts",
+    "abstract": "Graph Anomaly Detection (GAD) aims to identify irregular patterns in graph data, and recent works have explored zero-shot generalist GAD to enable generalization to unseen graph datasets. However, existing zero-shot GAD methods largely ignore intrinsic geometric differences across diverse anomaly patterns, substantially limiting their cross-domain generalization. In this work, we reveal that anomaly detectability is highly dependent on the underlying geometric properties and that embedding graphs from different domains into a single static curvature space can distort the structural signatures of anomalies. To address the challenge that a single curvature space cannot capture geometry-dependent graph anomaly patterns, we propose GAD-MoRE, a novel framework for zero-shot Generalizable Graph Anomaly Detection with a Mixture of Riemannian Experts architecture. Specifically, to ensure that each anomaly pattern is modeled in the Riemannian space where it is most detectable, GAD-MoRE employs a set of specialized Riemannian expert networks, each operating in a distinct curvature space. To align raw node features with curvature-specific anomaly characteristics, we introduce an anomaly-aware multi-curvature feature alignment module that projects inputs into parallel Riemannian spaces, enabling the capture of diverse geometric characteristics. Finally, to facilitate better generalization beyond seen patterns, we design a memory-based dynamic router that adaptively assigns each input to the most compatible expert based on historical reconstruction performance on similar anomalies. Extensive experiments in the zero-shot setting demonstrate that GAD-MoRE significantly outperforms state-of-the-art generalist GAD baselines, and even surpasses strong competitors that are few-shot fine-tuned with labeled data from the target domain.",
+    "authors": [
+      "Xinyu Zhao",
+      "Qingyun Sun",
+      "Jiayi Luo",
+      "Xingcheng Fu",
+      "Jianxin Li"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06859v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06859v1",
+    "fetched_at": "2026-02-09T08:58:59.294535",
+    "chinese_title": "基于黎曼专家混合的零样本泛化图异常检测",
+    "chinese_summary": "现有零样本图异常检测方法忽略不同异常模式的内在几何差异，限制跨域泛化；论文提出GAD-MoRE框架，采用黎曼专家混合架构（各专家在不同曲率空间建模），结合异常感知多曲率特征对齐模块与记忆动态路由，解决单曲率空间无法捕捉几何依赖异常模式的问题，提升零样本泛化能力。",
+    "tags": [
+      "Anomaly",
+      "Graph Neural Network",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "揭示图异常可检测性高度依赖底层几何属性，单静态曲率空间会扭曲异常结构特征；",
+      "提出GAD-MoRE框架，通过黎曼专家混合（不同曲率空间）、异常感知多曲率特征对齐模块及记忆动态路由，实现零样本泛化的图异常检测。"
+    ],
+    "processed_at": "2026-02-09T09:03:37.972126"
+  },
+  {
+    "id": "2602.06810v1",
+    "title": "Calibrating Tabular Anomaly Detection via Optimal Transport",
+    "abstract": "Tabular anomaly detection (TAD) remains challenging due to the heterogeneity of tabular data: features lack natural relationships, vary widely in distribution and scale, and exhibit diverse types. Consequently, each TAD method makes implicit assumptions about anomaly patterns that work well on some datasets but fail on others, and no method consistently outperforms across diverse scenarios. We present CTAD (Calibrating Tabular Anomaly Detection), a model-agnostic post-processing framework that enhances any existing TAD detector through sample-specific calibration. Our approach characterizes normal data via two complementary distributions, i.e., an empirical distribution from random sampling and a structural distribution from K-means centroids, and measures how adding a test sample disrupts their compatibility using Optimal Transport (OT) distance. Normal samples maintain low disruption while anomalies cause high disruption, providing a calibration signal to amplify detection. We prove that OT distance has a lower bound proportional to the test sample's distance from centroids, and establish that anomalies systematically receive higher calibration scores than normals in expectation, explaining why the method generalizes across datasets. Extensive experiments on 34 diverse tabular datasets with 7 representative detectors spanning all major TAD categories (density estimation, classification, reconstruction, and isolation-based methods) demonstrate that CTAD consistently improves performance with statistical significance. Remarkably, CTAD enhances even state-of-the-art deep learning methods and shows robust performance across diverse hyperparameter settings, requiring no additional tuning for practical deployment.",
+    "authors": [
+      "Hangting Ye",
+      "He Zhao. Wei Fan",
+      "Xiaozhuang Song",
+      "Dandan Guo",
+      "Yi Chang",
+      "Hongyuan Zha"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06810v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06810v1",
+    "fetched_at": "2026-02-09T08:58:59.294561",
+    "chinese_title": "基于最优传输的表格异常检测校准方法",
+    "chinese_summary": "论文提出模型无关的后处理框架CTAD，通过构建正常数据的随机采样经验分布与K-means质心结构分布，利用最优传输距离衡量测试样本加入后的干扰程度以校准异常检测分数；理论证明该方法的有效性，且在34个多样化表格数据集上显著提升7种代表性异常检测方法的性能。",
+    "tags": [
+      "Anomaly",
+      "Risk Management"
+    ],
+    "key_contributions": [
+      "提出模型无关的表格异常检测后处理框架CTAD，通过最优传输衡量测试样本对正常数据互补分布的干扰校准异常分数",
+      "理论证明CTAD的有效性并通过34个数据集实验验证其对7种代表性方法的性能提升"
+    ],
+    "processed_at": "2026-02-09T09:03:53.004202"
+  },
+  {
+    "id": "2602.06777v1",
+    "title": "Next-generation cyberattack detection with large language models: anomaly analysis across heterogeneous logs",
+    "abstract": "This project explores large language models (LLMs) for anomaly detection across heterogeneous log sources. Traditional intrusion detection systems suffer from high false positive rates, semantic blindness, and data scarcity, as logs are inherently sensitive, making clean datasets rare. We address these challenges through three contributions: (1) LogAtlas-Foundation-Sessions and LogAtlas-Defense-Set, balanced and heterogeneous log datasets with explicit attack annotations and privacy preservation; (2) empirical benchmarking revealing why standard metrics such as F1 and accuracy are misleading for security applications; and (3) a two phase training framework combining log understanding (Base-AMAN, 3B parameters) with real time detection (AMAN, 0.5B parameters via knowledge distillation). Results demonstrate practical feasibility, with inference times of 0.3-0.5 seconds per session and operational costs below 50 USD per day.",
+    "authors": [
+      "Yassine Chagna",
+      "Antal Goldschmidt"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06777v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06777v1",
+    "fetched_at": "2026-02-09T08:58:59.294580",
+    "chinese_title": "基于大语言模型的下一代网络攻击检测：异构日志的异常分析",
+    "chinese_summary": "该论文针对传统入侵检测系统的高误报率、语义盲性及数据稀缺问题，探索大语言模型（LLM）在异构日志异常检测中的应用；提出带攻击标注与隐私保护的平衡异构日志数据集，揭示标准指标对安全应用的误导性，并构建结合日志理解与实时检测的两阶段训练框架，验证实际可行性。",
+    "tags": [
+      "LLM",
+      "Anomaly",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出两个平衡异构日志数据集（LogAtlas-Foundation-Sessions和LogAtlas-Defense-Set），包含明确攻击标注与隐私保护",
+      "通过实证基准揭示F1、准确率等标准指标对网络安全应用具有误导性",
+      "构建两阶段训练框架（Base-AMAN+AMAN），实现日志理解与实时检测结合，验证实际可行性（推理时间0.3-0.5秒/会话，日成本低于50美元）"
+    ],
+    "processed_at": "2026-02-09T09:04:12.404957"
+  },
+  {
+    "id": "2602.06448v1",
+    "title": "Principle-Evolvable Scientific Discovery via Uncertainty Minimization",
+    "abstract": "Large Language Model (LLM)-based scientific agents have accelerated scientific discovery, yet they often suffer from significant inefficiencies due to adherence to fixed initial priors. Existing approaches predominantly operate within a static hypothesis space, which restricts the discovery of novel phenomena, resulting in computational waste when baseline theories fail. To address this, we propose shifting the focus from searching hypotheses to evolving the underlying scientific principles. We present PiEvo, a principle-evolvable framework that treats scientific discovery as Bayesian optimization over an expanding principle space. By integrating Information-Directed Hypothesis Selection via Gaussian Process and an anomaly-driven augmentation mechanism, PiEvo enables agents to autonomously refine their theoretical worldview. Evaluation across four benchmarks demonstrates that PiEvo (1) achieves an average solution quality of up to 90.81%~93.15%, representing a 29.7%~31.1% improvement over the state-of-the-art, (2) attains an 83.3% speedup in convergence step via significantly reduced sample complexity by optimizing the compact principle space, and (3) maintains robust performance across diverse scientific domains and LLM backbones.",
+    "authors": [
+      "Yingming Pu",
+      "Tao Lin",
+      "Hongyu Chen"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06448v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06448v1",
+    "fetched_at": "2026-02-09T08:58:59.294601",
+    "chinese_title": "基于不确定性最小化的原理可演化科学发现",
+    "chinese_summary": "针对现有基于LLM的科学智能体因固定先验和静态假设空间导致效率低、难发现新现象的问题，本文提出原理可演化框架PiEvo，将科学发现建模为扩展原理空间上的贝叶斯优化，结合高斯过程的信息导向假设选择与异常驱动增强机制，实现理论世界观的自主细化；在四个基准上的实验表明，PiEvo在解质量、收敛速度和跨领域鲁棒性上均显著优于现有方法。",
+    "tags": [
+      "LLM",
+      "Anomaly",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出原理可演化框架PiEvo，将科学发现建模为扩展原理空间的贝叶斯优化，结合信息导向假设选择与异常驱动增强机制，解决现有方法固定先验和静态假设空间的局限",
+      "实验验证PiEvo在解质量、收敛速度和跨领域鲁棒性上显著优于现有方法"
+    ],
+    "processed_at": "2026-02-09T09:04:31.976772"
+  },
+  {
+    "id": "2602.06443v1",
+    "title": "TrajAD: Trajectory Anomaly Detection for Trustworthy LLM Agents",
+    "abstract": "We address the problem of runtime trajectory anomaly detection, a critical capability for enabling trustworthy LLM agents. Current safety measures predominantly focus on static input/output filtering. However, we argue that ensuring LLM agents reliability requires auditing the intermediate execution process. In this work, we formulate the task of Trajectory Anomaly Detection. The goal is not merely detection, but precise error localization. This capability is essential for enabling efficient rollback-and-retry. To achieve this, we construct TrajBench, a dataset synthesized via a perturb-and-complete strategy to cover diverse procedural anomalies. Using this benchmark, we investigate the capability of models in process supervision. We observe that general-purpose LLMs, even with zero-shot prompting, struggle to identify and localize these anomalies. This reveals that generalized capabilities do not automatically translate to process reliability. To address this, we propose TrajAD, a specialized verifier trained with fine-grained process supervision. Our approach outperforms baselines, demonstrating that specialized supervision is essential for building trustworthy agents.",
+    "authors": [
+      "Yibing Liu",
+      "Chong Zhang",
+      "Zhongyi Han",
+      "Hansong Liu",
+      "Yong Wang",
+      "Yang Yu",
+      "Xiaoyan Wang",
+      "Yilong Yin"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06443v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06443v1",
+    "fetched_at": "2026-02-09T08:58:59.294630",
+    "chinese_title": "TrajAD：可信大语言模型智能体的轨迹异常检测",
+    "chinese_summary": "该论文聚焦可信LLM智能体的运行时轨迹异常检测，指出现有安全措施多侧重静态输入输出过滤，需审计中间执行过程；构建TrajBench数据集（通过扰动-补全策略合成覆盖多样过程异常），提出经细粒度过程监督训练的TrajAD专用验证器，解决通用LLM难精准识别定位异常的问题，优于基线方法。",
+    "tags": [
+      "LLM",
+      "Anomaly",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "构建TrajBench数据集（扰动-补全策略覆盖多样LLM执行过程异常）",
+      "提出TrajAD专用验证器（细粒度过程监督训练，精准识别定位异常，优于通用LLM基线）"
+    ],
+    "processed_at": "2026-02-09T09:04:46.110817"
+  },
+  {
+    "id": "2602.06331v1",
+    "title": "Don't Break the Boundary: Continual Unlearning for OOD Detection Based on Free Energy Repulsion",
+    "abstract": "Deploying trustworthy AI in open-world environments faces a dual challenge: the necessity for robust Out-of-Distribution (OOD) detection to ensure system safety, and the demand for flexible machine unlearning to satisfy privacy compliance and model rectification. However, this objective encounters a fundamental geometric contradiction: current OOD detectors rely on a static and compact data manifold, whereas traditional classification-oriented unlearning methods disrupt this delicate structure, leading to a catastrophic loss of the model's capability to discriminate anomalies while erasing target classes. To resolve this dilemma, we first define the problem of boundary-preserving class unlearning and propose a pivotal conceptual shift: in the context of OOD detection, effective unlearning is mathematically equivalent to transforming the target class into OOD samples. Based on this, we propose the TFER (Total Free Energy Repulsion) framework. Inspired by the free energy principle, TFER constructs a novel Push-Pull game mechanism: it anchors retained classes within a low-energy ID manifold through a pull mechanism, while actively expelling forgotten classes to high-energy OOD regions using a free energy repulsion force. This approach is implemented via parameter-efficient fine-tuning, circumventing the prohibitive cost of full retraining. Extensive experiments demonstrate that TFER achieves precise unlearning while maximally preserving the model's discriminative performance on remaining classes and external OOD data. More importantly, our study reveals that the unique Push-Pull equilibrium of TFER endows the model with inherent structural stability, allowing it to effectively resist catastrophic forgetting without complex additional constraints, thereby demonstrating exceptional potential in continual unlearning tasks.",
+    "authors": [
+      "Ningkang Peng",
+      "Kun Shao",
+      "Jingyang Mao",
+      "Linjing Qian",
+      "Xiaoqian Peng",
+      "Xichen Yang",
+      "Yanhui Gu"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06331v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06331v1",
+    "fetched_at": "2026-02-09T08:58:59.294657",
+    "chinese_title": "不破边界：基于自由能排斥的OOD检测持续遗忘方法",
+    "chinese_summary": "该论文针对开放世界AI中OOD检测与机器遗忘的矛盾，定义边界保留类遗忘问题，提出基于自由能原理的TFER框架，通过推拉机制锚定保留类、排斥遗忘类，实现参数高效的精准遗忘并保留OOD判别能力。",
+    "tags": [
+      "Anomaly",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "定义边界保留类遗忘问题，解决OOD检测与机器遗忘的几何矛盾",
+      "提出TFER框架，基于自由能推拉机制实现参数高效的精准遗忘并保留OOD判别能力"
+    ],
+    "processed_at": "2026-02-09T09:04:59.142170"
+  },
+  {
+    "id": "2602.06172v1",
+    "title": "Know Your Scientist: KYC as Biosecurity Infrastructure",
+    "abstract": "Biological AI tools for protein design and structure prediction are advancing rapidly, creating dual-use risks that existing safeguards cannot adequately address. Current model-level restrictions, including keyword filtering, output screening, and content-based access denials, are fundamentally ill-suited to biology, where reliable function prediction remains beyond reach and novel threats evade detection by design. We propose a three-tier Know Your Customer (KYC) framework, inspired by anti-money laundering (AML) practices in the financial sector, that shifts governance from content inspection to user verification and monitoring. Tier I leverages research institutions as trust anchors to vouch for affiliated researchers and assume responsibility for vetting. Tier II applies output screening through sequence homology searches and functional annotation. Tier III monitors behavioral patterns to detect anomalies inconsistent with declared research purposes. This layered approach preserves access for legitimate researchers while raising the cost of misuse through institutional accountability and traceability. The framework can be implemented immediately using existing institutional infrastructure, requiring no new legislation or regulatory mandates.",
+    "authors": [
+      "Jonathan Feldman",
+      "Tal Feldman",
+      "Annie I Anton"
+    ],
+    "published": "2026-02-05",
+    "categories": [
+      "cs.CR",
+      "cs.CY",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06172v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06172v1",
+    "fetched_at": "2026-02-09T08:58:59.294678",
+    "chinese_title": "了解你的科学家：将KYC作为生物安全基础设施",
+    "chinese_summary": "论文指出生物AI工具（蛋白设计与结构预测）的两用风险现有 safeguards 不足，借鉴金融反洗钱实践提出三层KYC框架——从内容检查转向用户验证与监控，三层分别为机构信任锚、序列同源性等输出筛查、行为模式异常监测，可利用现有机构基础设施立即实施，无需新立法。",
+    "tags": [
+      "Anomaly",
+      "Risk Management",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "揭示现有生物AI两用风险的内容检查类 safeguards 因生物领域功能预测难等问题失效",
+      "提出三层KYC框架（借鉴金融AML），平衡合法研究访问与 misuse 成本且可立即实施无需新立法"
+    ],
+    "processed_at": "2026-02-09T09:05:14.485451"
+  },
+  {
+    "id": "2602.06948v1",
+    "title": "Agentic Uncertainty Reveals Agentic Overconfidence",
+    "abstract": "Can AI agents predict whether they will succeed at a task? We study agentic uncertainty by eliciting success probability estimates before, during, and after task execution. All results exhibit agentic overconfidence: some agents that succeed only 22% of the time predict 77% success. Counterintuitively, pre-execution assessment with strictly less information tends to yield better discrimination than standard post-execution review, though differences are not always significant. Adversarial prompting reframing assessment as bug-finding achieves the best calibration.",
+    "authors": [
+      "Jean Kaddour",
+      "Srijan Patel",
+      "Gbètondji Dovonon",
+      "Leo Richter",
+      "Pasquale Minervini",
+      "Matt J. Kusner"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06948v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06948v1",
+    "fetched_at": "2026-02-09T08:59:27.786817",
+    "chinese_title": "智能体不确定性揭示智能体过度自信",
+    "chinese_summary": "该论文研究AI智能体对任务成功的预测能力，通过收集任务执行前、中、后的成功概率估计，发现普遍存在主体过度自信（如部分智能体实际成功22%却预测77%）；反直觉的是，信息更少的执行前评估区分度优于标准执行后回顾，而将评估重构为找bug的对抗性提示校准效果最佳。",
+    "tags": [
+      "LLM",
+      "Behavioral Finance",
+      "Financial Agent"
+    ],
+    "key_contributions": [
+      "验证AI智能体普遍存在主体过度自信现象，通过执行前中后成功概率估计量化该特征；",
+      "揭示执行前低信息评估的区分度优势，及对抗性提示（重构为bug查找）对校准的最优效果。"
+    ],
+    "processed_at": "2026-02-09T09:05:32.946559"
+  },
+  {
+    "id": "2602.06875v1",
+    "title": "TraceCoder: A Trace-Driven Multi-Agent Framework for Automated Debugging of LLM-Generated Code",
+    "abstract": "Large Language Models (LLMs) often generate code with subtle but critical bugs, especially for complex tasks. Existing automated repair methods typically rely on superficial pass/fail signals, offering limited visibility into program behavior and hindering precise error localization. In addition, without a way to learn from prior failures, repair processes often fall into repetitive and inefficient cycles. To overcome these challenges, we present TraceCoder, a collaborative multi-agent framework that emulates the observe-analyze-repair process of human experts. The framework first instruments the code with diagnostic probes to capture fine-grained runtime traces, enabling deep insight into its internal execution. It then conducts causal analysis on these traces to accurately identify the root cause of the failure. This process is further enhanced by a novel Historical Lesson Learning Mechanism (HLLM), which distills insights from prior failed repair attempts to inform subsequent correction strategies and prevent recurrence of similar mistakes. To ensure stable convergence, a Rollback Mechanism enforces that each repair iteration constitutes a strict improvement toward the correct solution. Comprehensive experiments across multiple benchmarks show that TraceCoder achieves up to a 34.43\\% relative improvement in Pass@1 accuracy over existing advanced baselines. Ablation studies verify the significance of each system component, with the iterative repair process alone contributing a 65.61\\% relative gain in accuracy. Furthermore, TraceCoder significantly outperforms leading iterative methods in terms of both accuracy and cost-efficiency.",
+    "authors": [
+      "Jiangping Huang",
+      "Wenguang Ye",
+      "Weisong Sun",
+      "Jian Zhang",
+      "Mingyue Zhang",
+      "Yang Liu"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "cs.SE",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06875v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06875v1",
+    "fetched_at": "2026-02-09T08:59:27.786855",
+    "chinese_title": "TraceCoder：用于LLM生成代码自动调试的追踪驱动多智能体框架",
+    "chinese_summary": "针对LLM生成代码常含关键bug且现有修复方法依赖表面信号的问题，提出TraceCoder协作多智能体框架：通过插桩捕获细粒度运行时追踪、因果分析定位根因，结合历史教训学习机制避免重复错误、回滚机制保证迭代改进；实验显示其Pass@1准确率较基线提升34.43%。",
+    "tags": [
+      "LLM",
+      "Transformer",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出追踪驱动的多智能体框架，结合运行时追踪与因果分析精准定位LLM生成代码的bug根因",
+      "引入历史教训学习机制避免重复错误，回滚机制保证迭代严格改进，显著提升修复准确率"
+    ],
+    "processed_at": "2026-02-09T09:05:46.854966"
+  },
+  {
+    "id": "2602.06841v1",
+    "title": "From Features to Actions: Explainability in Traditional and Agentic AI Systems",
+    "abstract": "Over the last decade, explainable AI has primarily focused on interpreting individual model predictions, producing post-hoc explanations that relate inputs to outputs under a fixed decision structure. Recent advances in large language models (LLMs) have enabled agentic AI systems whose behaviour unfolds over multi-step trajectories. In these settings, success and failure are determined by sequences of decisions rather than a single output. While useful, it remains unclear how explanation approaches designed for static predictions translate to agentic settings where behaviour emerges over time. In this work, we bridge the gap between static and agentic explainability by comparing attribution-based explanations with trace-based diagnostics across both settings. To make this distinction explicit, we empirically compare attribution-based explanations used in static classification tasks with trace-based diagnostics used in agentic benchmarks (TAU-bench Airline and AssistantBench). Our results show that while attribution methods achieve stable feature rankings in static settings (Spearman $ρ= 0.86$), they cannot be applied reliably to diagnose execution-level failures in agentic trajectories. In contrast, trace-grounded rubric evaluation for agentic settings consistently localizes behaviour breakdowns and reveals that state tracking inconsistency is 2.7$\\times$ more prevalent in failed runs and reduces success probability by 49\\%. These findings motivate a shift towards trajectory-level explainability for agentic systems when evaluating and diagnosing autonomous AI behaviour.   Resources:   https://github.com/VectorInstitute/unified-xai-evaluation-framework https://vectorinstitute.github.io/unified-xai-evaluation-framework",
+    "authors": [
+      "Sindhuja Chaduvula",
+      "Jessee Ho",
+      "Kina Kim",
+      "Aravind Narayanan",
+      "Mahshid Alinoori",
+      "Muskan Garg",
+      "Dhanesh Ramachandram",
+      "Shaina Raza"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06841v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06841v1",
+    "fetched_at": "2026-02-09T08:59:27.786889",
+    "chinese_title": "从特征到行动：传统与智能体AI系统的可解释性",
+    "chinese_summary": "论文对比传统静态预测的归因解释与LLM驱动的智能体AI多步轨迹的轨迹诊断方法，发现归因方法在静态场景下特征排序稳定但无法可靠诊断智能体轨迹故障；轨迹导向的rubric评估能精准定位行为 breakdown，揭示状态跟踪不一致是智能体失败的关键因素（失败场景中占比高2.7倍，降低成功概率49%），推动可解释性研究从静态向轨迹导向转变。",
+    "tags": [
+      "LLM",
+      "Benchmark",
+      "Transformer"
+    ],
+    "key_contributions": [
+      "系统对比传统静态归因解释与智能体轨迹诊断，明确两类场景下解释方法的适用性差异：归因方法适用于静态但无法可靠诊断智能体轨迹故障",
+      "提出轨迹导向的rubric评估方法，实证发现状态跟踪不一致是智能体失败的核心诱因，为智能体AI的可解释性提供新方向"
+    ],
+    "processed_at": "2026-02-09T09:06:17.219859"
+  },
+  {
+    "id": "2602.06820v1",
+    "title": "ScaleEnv: Scaling Environment Synthesis from Scratch for Generalist Interactive Tool-Use Agent Training",
+    "abstract": "Training generalist agents capable of adapting to diverse scenarios requires interactive environments for self-exploration. However, interactive environments remain critically scarce, and existing synthesis methods suffer from significant limitations regarding environmental diversity and scalability. To address these challenges, we introduce ScaleEnv, a framework that constructs fully interactive environments and verifiable tasks entirely from scratch. Specifically, ScaleEnv ensures environment reliability through procedural testing, and guarantees task completeness and solvability via tool dependency graph expansion and executable action verification. By enabling agents to learn through exploration within ScaleEnv, we demonstrate significant performance improvements on unseen, multi-turn tool-use benchmarks such as $τ^2$-Bench and VitaBench, highlighting strong generalization capabilities. Furthermore, we investigate the relationship between increasing number of domains and model generalization performance, providing empirical evidence that scaling environmental diversity is critical for robust agent learning.",
+    "authors": [
+      "Dunwei Tu",
+      "Hongyan Hao",
+      "Hansi Yang",
+      "Yihao Chen",
+      "Yi-Kai Zhang",
+      "Zhikang Xia",
+      "Yu Yang",
+      "Yueqing Sun",
+      "Xingchen Liu",
+      "Furao Shen",
+      "Qi Gu",
+      "Hui Su",
+      "Xunliang Cai"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06820v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06820v1",
+    "fetched_at": "2026-02-09T08:59:27.786928",
+    "chinese_title": "ScaleEnv：从零开始构建可扩展环境以训练通用交互式工具使用智能体",
+    "chinese_summary": "针对交互式环境稀缺及现有合成方法在多样性、可扩展性上的局限，论文提出ScaleEnv框架，通过过程测试保证环境可靠性，工具依赖图扩展与可执行动作验证保证任务完整性和可解性；智能体在ScaleEnv中学习后，于未见过的多轮工具使用基准（τ²-Bench和VitaBench）性能显著提升，且验证了环境多样性缩放对智能体泛化能力的关键作用。",
+    "tags": [
+      "Reinforcement Learning",
+      "Benchmark",
+      "Financial Agent"
+    ],
+    "key_contributions": [
+      "提出ScaleEnv框架，实现从零开始构建完全交互式环境与可验证任务，通过过程测试、工具依赖图扩展及可执行动作验证，保障环境可靠性与任务完整性、可解性",
+      "证明智能体在ScaleEnv中学习后泛化能力显著提升（于未见过的多轮工具使用基准性能提升），并实证环境多样性缩放对智能体鲁棒学习的关键作用"
+    ],
+    "processed_at": "2026-02-09T09:06:48.620277"
+  },
+  {
+    "id": "2602.06818v1",
+    "title": "Wild Guesses and Mild Guesses in Active Concept Learning",
+    "abstract": "Human concept learning is typically active: learners choose which instances to query or test in order to reduce uncertainty about an underlying rule or category. Active concept learning must balance informativeness of queries against the stability of the learner that generates and scores hypotheses. We study this trade-off in a neuro-symbolic Bayesian learner whose hypotheses are executable programs proposed by a large language model (LLM) and reweighted by Bayesian updating. We compare a Rational Active Learner that selects queries to maximize approximate expected information gain (EIG) and the human-like Positive Test Strategy (PTS) that queries instances predicted to be positive under the current best hypothesis. Across concept-learning tasks in the classic Number Game, EIG is effective when falsification is necessary (e.g., compound or exception-laden rules), but underperforms on simple concepts. We trace this failure to a support mismatch between the EIG policy and the LLM proposal distribution: highly diagnostic boundary queries drive the posterior toward regions where the generator produces invalid or overly specific programs, yielding a support-mismatch trap in the particle approximation. PTS is information-suboptimal but tends to maintain proposal validity by selecting \"safe\" queries, leading to faster convergence on simple rules. Our results suggest that \"confirmation bias\" may not be a cognitive error, but rather a rational adaptation for maintaining tractable inference in the sparse, open-ended hypothesis spaces characteristic of human thought.",
+    "authors": [
+      "Anirudh Chari",
+      "Neil Pattanaik"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06818v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06818v1",
+    "fetched_at": "2026-02-09T08:59:27.786947",
+    "chinese_title": "主动概念学习中的激进猜测与温和猜测",
+    "chinese_summary": "论文采用神经符号贝叶斯学习器（LLM生成可执行程序结合贝叶斯更新），研究主动概念学习中查询信息性与假设稳定性的权衡，对比理性主动学习者（最大化近似期望信息增益EIG）和类人积极测试策略（PTS），发现EIG在需证伪的复合/含例外规则中有效但简单概念下因支持不匹配表现差，PTS虽信息次优却能维持假设有效性更快收敛简单规则，指出确认偏误或为维持易处理推理的理性适应。",
+    "tags": [
+      "LLM",
+      "Behavioral Finance"
+    ],
+    "key_contributions": [
+      "揭示主动概念学习中查询策略在不同规则类型下的表现差异及支持不匹配机制",
+      "提出类人积极测试策略在简单概念学习中更优，指出确认偏误可能是理性适应而非认知错误"
+    ],
+    "processed_at": "2026-02-09T09:07:00.487792"
+  },
+  {
+    "id": "2602.06807v1",
+    "title": "SuReNav: Superpixel Graph-based Constraint Relaxation for Navigation in Over-constrained Environments",
+    "abstract": "We address the over-constrained planning problem in semi-static environments. The planning objective is to find a best-effort solution that avoids all hard constraint regions while minimally traversing the least risky areas. Conventional methods often rely on pre-defined area costs, limiting generalizations. Further, the spatial continuity of navigation spaces makes it difficult to identify regions that are passable without overestimation. To overcome these challenges, we propose SuReNav, a superpixel graph-based constraint relaxation and navigation method that imitates human-like safe and efficient navigation. Our framework consists of three components: 1) superpixel graph map generation with regional constraints, 2) regional-constraint relaxation using graph neural network trained on human demonstrations for safe and efficient navigation, and 3) interleaving relaxation, planning, and execution for complete navigation. We evaluate our method against state-of-the-art baselines on 2D semantic maps and 3D maps from OpenStreetMap, achieving the highest human-likeness score of complete navigation while maintaining a balanced trade-off between efficiency and safety. We finally demonstrate its scalability and generalization performance in real-world urban navigation with a quadruped robot, Spot.",
+    "authors": [
+      "Keonyoung Koh",
+      "Moonkyeong Jung",
+      "Samuel Seungsup Lee",
+      "Daehyung Park"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "cs.RO",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06807v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06807v1",
+    "fetched_at": "2026-02-09T08:59:27.786975",
+    "chinese_title": "SuReNav：超约束环境下基于超像素图的约束松弛导航方法",
+    "chinese_summary": "本文针对半静态环境下的超约束规划问题，提出SuReNav方法，通过超像素图生成（含区域约束）、基于人类演示的图神经网络约束松弛、松弛-规划-执行交替流程实现安全高效导航；在2D/3D地图和四足机器人Spot上验证了其类人性、效率安全平衡及可扩展性泛化性。",
+    "tags": [
+      "Graph Neural Network",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出整合超像素图构建、人类演示驱动的图神经网络约束松弛及交替执行流程的SuReNav框架，解决超约束环境下的规划问题",
+      "实验验证方法在2D/3D地图上的类人性与效率安全平衡，及四足机器人Spot真实场景下的泛化性与可扩展性"
+    ],
+    "processed_at": "2026-02-09T09:07:22.018849"
+  },
+  {
+    "id": "2602.06653v1",
+    "title": "RAPID: Reconfigurable, Adaptive Platform for Iterative Design",
+    "abstract": "Developing robotic manipulation policies is iterative and hypothesis-driven: researchers test tactile sensing, gripper geometries, and sensor placements through real-world data collection and training. Yet even minor end-effector changes often require mechanical refitting and system re-integration, slowing iteration. We present RAPID, a full-stack reconfigurable platform designed to reduce this friction. RAPID is built around a tool-free, modular hardware architecture that unifies handheld data collection and robot deployment, and a matching software stack that maintains real-time awareness of the underlying hardware configuration through a driver-level Physical Mask derived from USB events. This modular hardware architecture reduces reconfiguration to seconds and makes systematic multi-modal ablation studies practical, allowing researchers to sweep diverse gripper and sensing configurations without repeated system bring-up. The Physical Mask exposes modality presence as an explicit runtime signal, enabling auto-configuration and graceful degradation under sensor hot-plug events, so policies can continue executing when sensors are physically added or removed. System-centric experiments show that RAPID reduces the setup time for multi-modal configurations by two orders of magnitude compared to traditional workflows and preserves policy execution under runtime sensor hot-unplug events. The hardware designs, drivers, and software stack are open-sourced at https://rapid-kit.github.io/ .",
+    "authors": [
+      "Zi Yin",
+      "Fanhong Li",
+      "Shurui Zheng",
+      "Jia Liu"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "cs.RO",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06653v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06653v1",
+    "fetched_at": "2026-02-09T08:59:27.786997",
+    "chinese_title": "RAPID：迭代设计的可重构自适应平台",
+    "chinese_summary": "针对机器人操作策略迭代中硬件变更需重复集成导致效率低的问题，论文提出RAPID平台——硬件采用免工具模块化架构，软件通过USB事件生成的Physical Mask实时感知配置，实现快速重构（比传统快两个数量级）与传感器热插拔下的策略持续执行；该平台开源硬件设计、驱动及软件栈，支持多模态消融研究。",
+    "tags": [
+      "Deep Learning",
+      "Reinforcement Learning"
+    ],
+    "key_contributions": [
+      "提出免工具模块化硬件架构与基于USB事件的Physical Mask软件栈，将多模态配置 setup 时间降低两个数量级",
+      "支持传感器热插拔下策略持续执行，开源硬件/驱动/软件栈促进多模态消融研究"
+    ],
+    "processed_at": "2026-02-09T09:07:38.541458"
+  },
+  {
+    "id": "2602.06593v1",
+    "title": "AgentStepper: Interactive Debugging of Software Development Agents",
+    "abstract": "Software development agents powered by large language models (LLMs) have shown great promise in automating tasks like environment setup, issue solving, and program repair. Unfortunately, understanding and debugging such agents remain challenging due to their complex and dynamic nature. Developers must reason about trajectories of LLM queries, tool calls, and code modifications, but current techniques reveal little of this intermediate process in a comprehensible format. The key insight of this paper is that debugging software development agents shares many similarities with conventional debugging of software programs, yet requires a higher level of abstraction that raises the level from low-level implementation details to high-level agent actions. Drawing on this insight, we introduce AgentStepper, the first interactive debugger for LLM-based software engineering agents. AgentStepper enables developers to inspect, control, and interactively manipulate agent trajectories. AgentStepper represents trajectories as structured conversations among an LLM, the agent program, and tools. It supports breakpoints, stepwise execution, and live editing of prompts and tool invocations, while capturing and displaying intermediate repository-level code changes. Our evaluation applies AgentStepper to three state-of-the-art software development agents, ExecutionAgent, SWE-Agent, and RepairAgent, showing that integrating the approach into existing agents requires minor code changes (39-42 edited lines). Moreover, we report on a user study with twelve participants, indicating that AgentStepper improves the ability of participants to interpret trajectories (64% vs. 67% mean performance) and identify bugs in the agent's implementation (17% vs. 60% success rate), while reducing perceived workload (e.g., frustration reduced from 5.4/7.0 to 2.4/7.0) compared to conventional tools.",
+    "authors": [
+      "Robert Hutter",
+      "Michael Pradel"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "cs.SE",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06593v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06593v1",
+    "fetched_at": "2026-02-09T08:59:27.787016",
+    "chinese_title": "AgentStepper：软件开发代理的交互式调试",
+    "chinese_summary": "论文针对LLM驱动的软件开发代理调试困难的问题，提出首个交互式调试工具AgentStepper，支持轨迹结构化展示、断点设置、分步执行及prompt/工具调用实时编辑；评估显示其集成现有代理仅需少量代码修改，能有效提升代理调试效率。",
+    "tags": [
+      "LLM"
+    ],
+    "key_contributions": [
+      "提出AgentStepper，首个针对LLM驱动软件工程代理的交互式调试工具",
+      "实现轨迹结构化呈现、多维度交互调试功能，且集成现有代理成本低（仅需少量代码修改）"
+    ],
+    "processed_at": "2026-02-09T09:07:51.164539"
+  },
+  {
+    "id": "2602.06554v1",
+    "title": "SeeUPO: Sequence-Level Agentic-RL with Convergence Guarantees",
+    "abstract": "Reinforcement learning (RL) has emerged as the predominant paradigm for training large language model (LLM)-based AI agents. However, existing backbone RL algorithms lack verified convergence guarantees in agentic scenarios, especially in multi-turn settings, which can lead to training instability and failure to converge to optimal policies.   In this paper, we systematically analyze how different combinations of policy update mechanisms and advantage estimation methods affect convergence properties in single/multi-turn scenarios. We find that REINFORCE with Group Relative Advantage Estimation (GRAE) can converge to the globally optimal under undiscounted conditions, but the combination of PPO & GRAE breaks PPO's original monotonic improvement property. Furthermore, we demonstrate that mainstream backbone RL algorithms cannot simultaneously achieve both critic-free and convergence guarantees in multi-turn scenarios.   To address this, we propose SeeUPO (Sequence-level Sequential Update Policy Optimization), a critic-free approach with convergence guarantees for multi-turn interactions. SeeUPO models multi-turn interaction as sequentially executed multi-agent bandit problems. Through turn-by-turn sequential policy updates in reverse execution order, it ensures monotonic improvement and convergence to global optimal solution via backward induction.   Experiments on AppWorld and BFCL v4 demonstrate SeeUPO's substantial improvements over existing backbone algorithms: relative gains of 43.3%-54.6% on Qwen3-14B and 24.1%-41.9% on Qwen2.5-14B (averaged across benchmarks), along with superior training stability.",
+    "authors": [
+      "Tianyi Hu",
+      "Qingxu Fu",
+      "Yanxi Chen",
+      "Zhaoyang Liu",
+      "Bolin Ding"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06554v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06554v1",
+    "fetched_at": "2026-02-09T08:59:27.787044",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "Reinforcement Learning",
+      "Financial Agent"
+    ],
+    "key_contributions": [],
+    "processed_at": "2026-02-09T09:08:10.346090"
+  },
+  {
+    "id": "2602.06547v1",
+    "title": "Malicious Agent Skills in the Wild: A Large-Scale Security Empirical Study",
+    "abstract": "Third-party agent skills extend LLM-based agents with instruction files and executable code that run on users' machines. Skills execute with user privileges and are distributed through community registries with minimal vetting, but no ground-truth dataset exists to characterize the resulting threats. We construct the first labeled dataset of malicious agent skills by behaviorally verifying 98,380 skills from two community registries, confirming 157 malicious skills with 632 vulnerabilities. These attacks are not incidental. Malicious skills average 4.03 vulnerabilities across a median of three kill chain phases, and the ecosystem has split into two archetypes: Data Thieves that exfiltrate credentials through supply chain techniques, and Agent Hijackers that subvert agent decision-making through instruction manipulation. A single actor accounts for 54.1\\% of confirmed cases through templated brand impersonation. Shadow features, capabilities absent from public documentation, appear in 0\\% of basic attacks but 100\\% of advanced ones; several skills go further by exploiting the AI platform's own hook system and permission flags. Responsible disclosure led to 93.6\\% removal within 30 days. We release the dataset and analysis pipeline to support future work on agent skill security.",
+    "authors": [
+      "Yi Liu",
+      "Zhihao Chen",
+      "Yanjun Zhang",
+      "Gelei Deng",
+      "Yuekang Li",
+      "Jianting Ning",
+      "Leo Yu Zhang"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "cs.CR",
+      "cs.AI",
+      "cs.CL",
+      "cs.ET"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06547v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06547v1",
+    "fetched_at": "2026-02-09T08:59:27.787073",
+    "chinese_title": "野外恶意Agent技能：大规模安全实证研究",
+    "chinese_summary": "该研究构建了首个标注的恶意Agent技能数据集，通过行为验证两个社区注册表的98380个技能，确认157个恶意技能含632个漏洞；分析发现恶意技能分为数据窃取者与Agent劫持者两类，高级攻击含未公开的影子功能，研究还发布数据集与分析流程支持后续安全工作。",
+    "tags": [
+      "LLM",
+      "Anomaly",
+      "Risk Management",
+      "Financial Agent"
+    ],
+    "key_contributions": [
+      "构建首个标注的恶意Agent技能数据集，行为验证98380个技能并确认157个恶意技能及632个漏洞",
+      "揭示恶意Agent技能的两类攻击原型（数据窃取者、Agent劫持者）及攻击特征，发布数据集与分析流程支持后续安全研究"
+    ],
+    "processed_at": "2026-02-09T09:08:32.926549"
+  },
+  {
+    "id": "2602.06518v1",
+    "title": "Sequential Auditing for f-Differential Privacy",
+    "abstract": "We present new auditors to assess Differential Privacy (DP) of an algorithm based on output samples. Such empirical auditors are common to check for algorithmic correctness and implementation bugs. Most existing auditors are batch-based or targeted toward the traditional notion of $(\\varepsilon,δ)$-DP; typically both. In this work, we shift the focus to the highly expressive privacy concept of $f$-DP, in which the entire privacy behavior is captured by a single tradeoff curve. Our auditors detect violations across the full privacy spectrum with statistical significance guarantees, which are supported by theory and simulations. Most importantly, and in contrast to prior work, our auditors do not require a user-specified sample size as an input. Rather, they adaptively determine a near-optimal number of samples needed to reach a decision, thereby avoiding the excessively large sample sizes common in many auditing studies. This reduction in sampling cost becomes especially beneficial for expensive training procedures such as DP-SGD. Our method supports both whitebox and blackbox settings and can also be executed in single-run frameworks.",
+    "authors": [
+      "Tim Kutta",
+      "Martin Dunsche",
+      "Yu Wei",
+      "Vassilis Zikas"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "cs.CR",
+      "stat.ME",
+      "stat.ML"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06518v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06518v1",
+    "fetched_at": "2026-02-09T08:59:27.787096",
+    "chinese_title": "面向f-差分隐私的序贯审计方法",
+    "chinese_summary": "该论文提出针对f-差分隐私（f-DP）的新型审计器，无需用户指定样本量，自适应确定近优采样数以降低成本（适配DP-SGD等昂贵训练）；支持白盒/黑盒及单运行框架，能统计显著检测全隐私谱的违规情况。",
+    "tags": [
+      "Deep Learning",
+      "Risk Management",
+      "Anomaly"
+    ],
+    "key_contributions": [
+      "提出无需用户指定样本量的f-DP序贯审计方法，自适应确定近优采样数，降低DP-SGD等昂贵训练的采样成本",
+      "支持白盒/黑盒及单运行框架，实现全隐私谱违规的统计显著检测"
+    ],
+    "processed_at": "2026-02-09T09:08:49.772408"
+  },
+  {
+    "id": "2602.06511v1",
+    "title": "Evolutionary Generation of Multi-Agent Systems",
+    "abstract": "Large language model (LLM)-based multi-agent systems (MAS) show strong promise for complex reasoning, planning, and tool-augmented tasks, but designing effective MAS architectures remains labor-intensive, brittle, and hard to generalize. Existing automatic MAS generation methods either rely on code generation, which often leads to executability and robustness failures, or impose rigid architectural templates that limit expressiveness and adaptability. We propose Evolutionary Generation of Multi-Agent Systems (EvoMAS), which formulates MAS generation as structured configuration generation. EvoMAS performs evolutionary generation in configuration space. Specifically, EvoMAS selects initial configurations from a pool, applies feedback-conditioned mutation and crossover guided by execution traces, and iteratively refines both the candidate pool and an experience memory. We evaluate EvoMAS on diverse benchmarks, including BBEH, SWE-Bench, and WorkBench, covering reasoning, software engineering, and tool-use tasks. EvoMAS consistently improves task performance over both human-designed MAS and prior automatic MAS generation methods, while producing generated systems with higher executability and runtime robustness. EvoMAS outperforms the agent evolution method EvoAgent by +10.5 points on BBEH reasoning and +7.1 points on WorkBench. With Claude-4.5-Sonnet, EvoMAS also reaches 79.1% on SWE-Bench-Verified, matching the top of the leaderboard.",
+    "authors": [
+      "Yuntong Hu",
+      "Matthew Trager",
+      "Yuting Zhang",
+      "Yi Zhang",
+      "Shuo Yang",
+      "Wei Xia",
+      "Stefano Soatto"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06511v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06511v1",
+    "fetched_at": "2026-02-09T08:59:27.787123",
+    "chinese_title": "多智能体系统的进化生成",
+    "chinese_summary": "针对现有多智能体系统（MAS）设计劳动密集、脆弱难泛化及自动生成方法的不足，论文提出EvoMAS，将MAS生成建模为结构化配置空间的进化生成，通过反馈引导的变异交叉等迭代优化候选池与经验记忆；在BBEH、SWE-Bench等多基准任务上，EvoMAS显著优于人类设计和现有自动方法，提升可执行性与鲁棒性，达到SWE-Bench-Verified顶尖水平。",
+    "tags": [
+      "LLM",
+      "Benchmark",
+      "Deep Learning",
+      "Financial Agent"
+    ],
+    "key_contributions": [
+      "提出EvoMAS方法，将多智能体系统生成建模为结构化配置空间的进化生成，通过反馈引导的变异交叉与经验记忆迭代优化，解决现有自动生成方法可执行性差、模板僵化问题",
+      "在多任务基准上显著优于人类设计MAS及现有自动方法，提升可执行性与鲁棒性，SWE-Bench-Verified达79.1%顶尖水平"
+    ],
+    "processed_at": "2026-02-09T09:09:11.018098"
+  },
+  {
+    "id": "2602.06413v1",
+    "title": "Intrinsic Stability Limits of Autoregressive Reasoning: Structural Consequences for Long-Horizon Execution",
+    "abstract": "Large language models (LLMs) demonstrate remarkable reasoning capabilities, yet their performance often deteriorates sharply in long-horizon tasks, exhibiting systematic breakdown beyond certain scales. Conventional explanations primarily attribute this phenomenon to task complexity, such as combinatorial search explosion or long-term credit assignment challenges. In this work, we argue that these explanations are incomplete: even in linear, unbranched tasks without semantic ambiguity, autoregressive execution is subject to an intrinsic stability limit.   We propose that the fundamental constraint on long-horizon reasoning arises from process-level instability in autoregressive generation rather than solely from search or task complexity, reframing long-horizon reasoning as a problem of structural governance. We derive Theorem~A, showing that decision advantage in single-path autoregressive reasoning decays exponentially with execution length, imposing a fundamental bound on maintainable reasoning chains. This result implies a structural consequence: stable long-horizon reasoning requires discrete segmentation, naturally inducing graph-like execution structures such as directed acyclic graphs (DAGs).   Empirical studies in both synthetic environments and real TextWorld tasks reveal observable performance cliffs consistent with theoretical predictions. Our findings provide a dynamical perspective on long-horizon reasoning failure and suggest new limitations on maintaining long-term coherence under purely autoregressive architectures. Furthermore, we highlight that short-horizon evaluation protocols may obscure structural instability, indicating a potential shift from scaling toward structured governance in future reasoning systems.",
+    "authors": [
+      "Hsien-Jyh Liao"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06413v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06413v1",
+    "fetched_at": "2026-02-09T08:59:27.787171",
+    "chinese_title": "自回归推理的内在稳定性限制：长周期执行的结构后果",
+    "chinese_summary": "论文指出自回归推理的长周期性能下降不仅源于任务复杂度，更因自回归生成的过程级不稳定性；推导定理证明单路径自回归推理的决策优势随执行长度指数衰减，提出稳定长周期推理需离散分段（诱导图结构）；实证在合成环境与TextWorld任务中验证了理论预测的性能悬崖。",
+    "tags": [
+      "LLM",
+      "Execution",
+      "Deep Learning",
+      "Transformer"
+    ],
+    "key_contributions": [
+      "揭示自回归推理长周期性能下降的内在稳定性限制，推导定理证明单路径决策优势随执行长度指数衰减",
+      "提出稳定长周期推理需离散分段（诱导图结构），实证验证理论预测的性能悬崖"
+    ],
+    "processed_at": "2026-02-09T09:09:29.554059"
+  },
+  {
+    "id": "2602.06345v1",
+    "title": "Zero-Trust Runtime Verification for Agentic Payment Protocols: Mitigating Replay and Context-Binding Failures in AP2",
+    "abstract": "The deployment of autonomous AI agents capable of executing commercial transactions has motivated the adoption of mandate-based payment authorization protocols, including the Universal Commerce Protocol (UCP) and the Agent Payments Protocol (AP2). These protocols replace interactive, session-based authorization with cryptographically issued mandates, enabling asynchronous and autonomous execution. While AP2 provides specification-level guarantees through signature verification, explicit binding, and expiration semantics, real-world agentic execution introduces runtime behaviors such as retries, concurrency, and orchestration that challenge implicit assumptions about mandate usage.   In this work, we present a security analysis of the AP2 mandate lifecycle and identify enforcement gaps that arise during runtime in agent-based payment systems. We propose a zero-trust runtime verification framework that enforces explicit context binding and consume-once mandate semantics using dynamically generated, time-bound nonces, ensuring that authorization decisions are evaluated at execution time rather than assumed from static issuance properties.   Through simulation-based evaluation under high concurrency, we show that context-aware binding and consume-once enforcement address distinct and complementary attack classes, and that both are required to prevent replay and context-redirect attacks. The proposed framework mitigates all evaluated attacks while maintaining stable verification latency of approximately 3.8~ms at throughput levels up to 10{,}000 transactions per second. We further demonstrate that the required runtime state is bounded by peak concurrency rather than cumulative transaction history, indicating that robust runtime security for agentic payment execution can be achieved with minimal and predictable overhead.",
+    "authors": [
+      "Qianlong Lan",
+      "Anuj Kaul",
+      "Shaun Jones",
+      "Stephanie Westrum"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06345v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.06345v1",
+    "fetched_at": "2026-02-09T08:59:27.787194",
+    "chinese_title": "面向智能体支付协议的零信任运行时验证：缓解AP2中的重放和上下文绑定失败问题",
+    "chinese_summary": "论文针对AP2支付协议在智能体执行中因重试、并发等运行时行为引发的重放与上下文绑定失败问题，提出零信任运行时验证框架，通过动态生成的时界nonce实现显式上下文绑定和“一次消费” mandate语义；仿真评估表明该框架可缓解所有评估攻击且保持稳定验证性能。",
+    "tags": [
+      "Financial Agent",
+      "Risk Management",
+      "Execution"
+    ],
+    "key_contributions": [
+      "识别AP2 mandate生命周期在智能体支付系统运行时的安全漏洞（重放、上下文绑定失败等）",
+      "提出零信任运行时验证框架，通过动态时界nonce实现显式上下文绑定与一次消费语义，缓解攻击并保持稳定性能"
+    ],
+    "processed_at": "2026-02-09T09:09:46.073509"
+  }
+]
