@@ -1,0 +1,525 @@
+[
+  {
+    "id": "2602.08888v1",
+    "title": "Almost sure null bankruptcy of testing-by-betting strategies",
+    "abstract": "The bounded mean betting procedure serves as a crucial interface between the domains of (1) sequential, anytime-valid statistical inference, and (2) online learning and portfolio selection algorithms. While recent work in both domains has established the exponential wealth growth of numerous betting strategies under any alternative distribution, the tightness of the inverted confidence sets, and the pathwise minimax regret bounds, little has been studied regarding the asymptotics of these strategies under the null hypothesis. Under the null, a strategy induces a wealth martingale converging to some random variable that can be zero (bankrupt) or non-zero (non-bankrupt, e.g. when it eventually stops betting). In this paper, we show the conceptually intuitive but technically nontrivial fact that these strategies (universal portfolio, Krichevsky-Trofimov, GRAPA, hedging, etc.) all go bankrupt with probability one, under any non-degenerate null distribution. Part of our analysis is based on the subtle almost sure divergence of various sums of $\\sum O_p(n^{-1})$ type, a result of independent interest. We also demonstrate the necessity of null bankruptcy by showing that non-bankrupt strategies are all improvable in some sense. Our results significantly deepen our understanding of these betting strategies as they qualify their behavior on \"almost all paths\", whereas previous results are usually on \"all paths\" (e.g. regret bounds) or \"most paths\" (e.g. concentration inequalities and confidence sets).",
+    "authors": [
+      "Hongjian Wang",
+      "Shubhada Agrawal",
+      "Aaditya Ramdas"
+    ],
+    "published": "2026-02-09",
+    "categories": [
+      "math.PR",
+      "math.ST",
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.08888v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.08888v1",
+    "fetched_at": "2026-02-10T08:59:53.635137"
+  },
+  {
+    "id": "2602.08527v1",
+    "title": "Consumption-Investment with anticipative noise",
+    "abstract": "We revisit the classical Merton consumption--investment problem when risky-asset returns are modeled by stochastic differential equations interpreted through a general $α$-integral, interpolating between Itô, Stratonovich, and related conventions. Holding preferences and the investment opportunity set fixed, changing the noise interpretation modifies the effective drift of asset returns in a systematic way.   For logarithmic utility and constant volatilities, we derive closed-form optimal policies in a market with $n$ risky assets: optimal consumption remains a fixed fraction of wealth, while optimal portfolio weights are shifted according to $θ_α^\\ast = V^{-1}(μ-r\\mathbf{1})+α\\,V^{-1}\\operatorname{diag}(V)\\mathbf{1}$, where $V$ is the return covariance matrix and $\\operatorname{diag}(V)$ denotes the diagonal matrix with the same diagonal as $V$. In the single-asset case this reduces to $θ_α^\\ast=(μ-r)/σ^{2}+α$.   We then show that genuinely state-dependent effects arise when asset volatility is driven by a stochastic factor correlated with returns. In this setting, the $α$-interpretation generates an additional drift correction proportional to the instantaneous covariation between factor and return noise. As a canonical example, we analyze a Heston stochastic volatility model, where the resulting optimal risky exposure depends inversely on the current variance level.",
+    "authors": [
+      "Mario Ayala",
+      "Benjamin Vallejo Jiménez"
+    ],
+    "published": "2026-02-09",
+    "categories": [
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.08527v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.08527v1",
+    "fetched_at": "2026-02-10T08:59:53.635176"
+  },
+  {
+    "id": "2602.08228v1",
+    "title": "Comparing Mixture, Box, and Wasserstein Ambiguity Sets in Distributionally Robust Asset Liability Management",
+    "abstract": "Asset Liability Management (ALM) represents a fundamental challenge for financial institutions, particularly pension funds, which must navigate the tension between generating competitive investment returns and ensuring the solvency of long-term obligations. To address the limitations of traditional frameworks under uncertainty, this paper implements Distributionally Robust Optimization (DRO), an emergent paradigm that accounts for a broad spectrum of potential probability distributions. We propose and evaluate three distinct DRO formulations: mixture ambiguity sets with discrete scenarios, box ambiguity sets of discrete distribution functions, and Wasserstein metric ambiguity sets. Utilizing empirical data from the Canada Pension Plan (CPP), we conduct a comparative analysis of these models against traditional stochastic programming approaches. Our results demonstrate that DRO formulations, specifically those utilizing Wasserstein and box ambiguity sets, consistently outperform both mixture-based DRO and stochastic programming in terms of funding ratios and overall fund returns. These findings suggest that incorporating distributional robustness significantly enhances the resilience and performance of pension fund management strategies.",
+    "authors": [
+      "Alireza Ghahtarani",
+      "Ahmed Saif",
+      "Alireza Ghasemi"
+    ],
+    "published": "2026-02-09",
+    "categories": [
+      "q-fin.PM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.08228v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.08228v1",
+    "fetched_at": "2026-02-10T08:59:53.635202"
+  },
+  {
+    "id": "2602.08182v1",
+    "title": "Nansde-net: A neural sde framework for generating time series with memory",
+    "abstract": "Modeling time series with long- or short-memory characteristics is a fundamental challenge in many scientific and engineering domains. While fractional Brownian motion has been widely used as a noise source to capture such memory effects, its incompatibility with Itô calculus limits its applicability in neural stochastic differential equation~(SDE) frameworks. In this paper, we propose a novel class of noise, termed Neural Network-kernel ARMA-type noise~(NA-noise), which is an Itô-process-based alternative capable of capturing both long- and short-memory behaviors. The kernel function defining the noise structure is parameterized via neural networks and decomposed into a product form to preserve the Markov property. Based on this noise process, we develop NANSDE-Net, a generative model that extends Neural SDEs by incorporating NA-noise. We prove the theoretical existence and uniqueness of the solution under mild conditions and derive an efficient backpropagation scheme for training. Empirical results on both synthetic and real-world datasets demonstrate that NANSDE-Net matches or outperforms existing models, including fractional SDE-Net, in reproducing long- and short-memory features of the data, while maintaining computational tractability within the Itô calculus framework.",
+    "authors": [
+      "Hiromu Ozai",
+      "Kei Nakagawa"
+    ],
+    "published": "2026-02-09",
+    "categories": [
+      "cs.LG",
+      "q-fin.CP",
+      "q-fin.ST"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.08182v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.08182v1",
+    "fetched_at": "2026-02-10T08:59:53.635223"
+  },
+  {
+    "id": "2602.08120v1",
+    "title": "Optimal Quantum Speedups for Repeatedly Nested Expectation Estimation",
+    "abstract": "We study the estimation of repeatedly nested expectations (RNEs) with a constant horizon (number of nestings) using quantum computing. We propose a quantum algorithm that achieves $\\varepsilon$-error with cost $\\tilde O(\\varepsilon^{-1})$, up to logarithmic factors. Standard lower bounds show this scaling is essentially optimal, yielding an almost quadratic speedup over the best classical algorithm. Our results extend prior quantum speedups for single nested expectations to repeated nesting, and therefore cover a broader range of applications, including optimal stopping. This extension requires a new derandomized variant of the classical randomized Multilevel Monte Carlo (rMLMC) algorithm. Careful de-randomization is key to overcoming a variable-time issue that typically increases quantized versions of classical randomized algorithms.",
+    "authors": [
+      "Yihang Sun",
+      "Guanyang Wang",
+      "Jose Blanchet"
+    ],
+    "published": "2026-02-08",
+    "categories": [
+      "quant-ph",
+      "math.NA",
+      "q-fin.MF",
+      "stat.CO"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.08120v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.08120v1",
+    "fetched_at": "2026-02-10T08:59:53.635246"
+  },
+  {
+    "id": "2602.08039v1",
+    "title": "Perfectly Fitting CDO Prices Across Tranches: A Theoretical Framework with Efficient Algorithms",
+    "abstract": "This paper addresses a key challenge in CDO modeling: achieving a perfect fit to market prices across all tranches using a single, consistent model. The existence of such a perfect-fit model implies the absence of arbitrage among CDO tranches and is thus essential for unified risk management and the pricing of nonstandard credit derivatives. To address this central challenge, we face three primary difficulties: standard parametric models typically fail to achieve a perfect fit; the calibration of standard parametric models inherently relies on computationally intensive simulation-based optimization; and there is a lack of formal theory to determine when a perfect-fit model exists and, if it exists, how to construct it. We propose a theoretical framework to overcome these difficulties. We first introduce and define two compatibility levels of market prices: weak compatibility and strong compatibility. Specifically, market prices across all tranches are said to be weakly (resp. strongly) compatible if there exists a single model (resp. a single conditionally i.i.d. model) that perfectly fits these market prices. We then derive sufficient and necessary conditions for both levels of compatibility by establishing a relationship between compatibility and LP problems. Furthermore, under either condition, we construct a corresponding concrete copula model that achieves a perfect fit. Notably, our framework not only allows for efficient verification of weak compatibility and strong compatibility through LP problems but also facilitates the construction of the corresponding copula models that achieve a perfect fit, eliminating the need for simulation-based optimization. The practical applications of our framework are demonstrated in risk management and the pricing of nonstandard credit derivatives.",
+    "authors": [
+      "Lan Bu",
+      "Ning Cai",
+      "Chenxi Xia",
+      "Jingping Yang"
+    ],
+    "published": "2026-02-08",
+    "categories": [
+      "q-fin.RM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.08039v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.08039v1",
+    "fetched_at": "2026-02-10T08:59:53.635270"
+  },
+  {
+    "id": "2602.07841v1",
+    "title": "A Quadratic Link between Out-of-Sample $R^2$ and Directional Accuracy",
+    "abstract": "This study provides a novel perspective on the metric disconnect phenomenon in financial time series forecasting through an analytical link that reconciles the out-of-sample $R^2$ ($R^2_{OOS}$) and directional accuracy (DA). In particular, using the random walk model as a baseline and assuming that sign correctness is independent of realized magnitude, we show that these two metrics exhibit a quadratic relationship for MSE-optimal point forecasts. For point forecasts with modest DA, the theoretical value of $R^2_{OOS}$ is intrinsically negligible. Thus, a negative empirical $R^2_{OOS}$ is expected if the model is suboptimal or affected by finite sample noise.",
+    "authors": [
+      "Cheng Zhang"
+    ],
+    "published": "2026-02-08",
+    "categories": [
+      "econ.EM",
+      "q-fin.ST",
+      "stat.AP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.07841v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.07841v1",
+    "fetched_at": "2026-02-10T08:59:53.635292"
+  },
+  {
+    "id": "2602.07659v1",
+    "title": "Continuous Program Search",
+    "abstract": "Genetic Programming yields interpretable programs, but small syntactic mutations can induce large, unpredictable behavioral shifts, degrading locality and sample efficiency. We frame this as an operator-design problem: learn a continuous program space where latent distance has behavioral meaning, then design mutation operators that exploit this structure without changing the evolutionary optimizer.   We make locality measurable by tracking action-level divergence under controlled latent perturbations, identifying an empirical trust region for behavior-local continuous variation. Using a compact trading-strategy DSL with four semantic components (long/short entry and exit), we learn a matching block-factorized embedding and compare isotropic Gaussian mutation over the full latent space to geometry-compiled mutation that restricts updates to semantically paired entry--exit subspaces and proposes directions using a learned flow-based model trained on logged mutation outcomes.   Under identical $(μ+λ)$ evolution strategies and fixed evaluation budgets across five assets, the learned mutation operator discovers strong strategies using an order of magnitude fewer evaluations and achieves the highest median out-of-sample Sharpe ratio. Although isotropic mutation occasionally attains higher peak performance, geometry-compiled mutation yields faster, more reliable progress, demonstrating that semantically aligned mutation can substantially improve search efficiency without modifying the underlying evolutionary algorithm.",
+    "authors": [
+      "Matthew Siper",
+      "Muhammad Umair Nasir",
+      "Ahmed Khalifa",
+      "Lisa Soros",
+      "Jay Azhang",
+      "Julian Togelius"
+    ],
+    "published": "2026-02-07",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "q-fin.ST"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.07659v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.07659v1",
+    "fetched_at": "2026-02-10T08:59:53.635321"
+  },
+  {
+    "id": "2602.07096v1",
+    "title": "RealFin: How Well Do LLMs Reason About Finance When Users Leave Things Unsaid?",
+    "abstract": "Reliable financial reasoning requires knowing not only how to answer, but also when an answer cannot be justified. In real financial practice, problems often rely on implicit assumptions that are taken for granted rather than stated explicitly, causing problems to appear solvable while lacking enough information for a definite answer. We introduce REALFIN, a bilingual benchmark that evaluates financial reasoning by systematically removing essential premises from exam-style questions while keeping them linguistically plausible. Based on this, we evaluate models under three formulations that test answering, recognizing missing information, and rejecting unjustified options, and find consistent performance drops when key conditions are absent. General-purpose models tend to over-commit and guess, while most finance-specialized models fail to clearly identify missing premises. These results highlight a critical gap in current evaluations and show that reliable financial models must know when a question should not be answered.",
+    "authors": [
+      "Yuyang Dai",
+      "Yan Lin",
+      "Zhuohan Xie",
+      "Yuxia Wang"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "q-fin.ST",
+      "cs.AI",
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.07096v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.07096v1",
+    "fetched_at": "2026-02-10T08:59:53.635346"
+  },
+  {
+    "id": "2602.07085v1",
+    "title": "QuantaAlpha: An Evolutionary Framework for LLM-Driven Alpha Mining",
+    "abstract": "Financial markets are noisy and non-stationary, making alpha mining highly sensitive to noise in backtesting results and sudden market regime shifts. While recent agentic frameworks improve alpha mining automation, they often lack controllable multi-round search and reliable reuse of validated experience. To address these challenges, we propose QuantaAlpha, an evolutionary alpha mining framework that treats each end-to-end mining run as a trajectory and improves factors through trajectory-level mutation and crossover operations. QuantaAlpha localizes suboptimal steps in each trajectory for targeted revision and recombines complementary high-reward segments to reuse effective patterns, enabling structured exploration and refinement across mining iterations. During factor generation, QuantaAlpha enforces semantic consistency across the hypothesis, factor expression, and executable code, while constraining the complexity and redundancy of the generated factor to mitigate crowding. Extensive experiments on the China Securities Index 300 (CSI 300) demonstrate consistent gains over strong baseline models and prior agentic systems. When utilizing GPT-5.2, QuantaAlpha achieves an Information Coefficient (IC) of 0.1501, with an Annualized Rate of Return (ARR) of 27.75% and a Maximum Drawdown (MDD) of 7.98%. Moreover, factors mined on CSI 300 transfer effectively to the China Securities Index 500 (CSI 500) and the Standard & Poor's 500 Index (S&P 500), delivering 160% and 137% cumulative excess return over four years, respectively, which indicates strong robustness of QuantaAlpha under market distribution shifts.",
+    "authors": [
+      "Jun Han",
+      "Shuo Zhang",
+      "Wei Li",
+      "Zhi Yang",
+      "Yifan Dong",
+      "Tu Hu",
+      "Jialuo Yuan",
+      "Xiaomin Yu",
+      "Yumo Zhu",
+      "Fangqi Lou",
+      "Xin Guo",
+      "Zhaowei Liu",
+      "Tianyi Jiang",
+      "Ruichuan An",
+      "Jingping Liu",
+      "Biao Wu",
+      "Rongze Chen",
+      "Kunyi Wang",
+      "Yifan Wang",
+      "Sen Hu",
+      "Xinbing Kong",
+      "Liwen Zhang",
+      "Ronghao Chen",
+      "Huacan Wang"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "q-fin.ST",
+      "cs.AI",
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.07085v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.07085v1",
+    "fetched_at": "2026-02-10T08:59:53.635407"
+  },
+  {
+    "id": "2602.07066v1",
+    "title": "Algorithmic Monitoring: Measuring Market Stress with Machine Learning",
+    "abstract": "I construct a Market Stress Probability Index (MSPI) that estimates the probability of high stress in the U.S. equity market one month ahead using information from the cross-section of individual stocks. Using CRSP daily data, each month is summarized by a set of interpretable cross-sectional fragility signals and mapped into a forward-looking stress probability via an L1-regularized logistic regression in a real-time expanding-window design. Out of sample, MSPI tracks major stress episodes and improves discrimination and accuracy relative to a parsimonious benchmark based on lagged market return and realized volatility, delivering calibrated stress probabilities on an economically meaningful scale. Further, I illustrate how MSPI can be used as a probability-based measurement object in financial econometrics. The resulting index provides a transparent and easily updated measure of near-term equity-market stress risk.",
+    "authors": [
+      "Marc Schmitt"
+    ],
+    "published": "2026-02-05",
+    "categories": [
+      "q-fin.RM",
+      "q-fin.ST"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.07066v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.07066v1",
+    "fetched_at": "2026-02-10T08:59:53.635550"
+  },
+  {
+    "id": "2602.07048v1",
+    "title": "LLM as a Risk Manager: LLM Semantic Filtering for Lead-Lag Trading in Prediction Markets",
+    "abstract": "Prediction markets provide a unique setting where event-level time series are directly tied to natural-language descriptions, yet discovering robust lead-lag relationships remains challenging due to spurious statistical correlations. We propose a hybrid two-stage causal screener to address this challenge: (i) a statistical stage that uses Granger causality to identify candidate leader-follower pairs from market-implied probability time series, and (ii) an LLM-based semantic stage that re-ranks these candidates by assessing whether the proposed direction admits a plausible economic transmission mechanism based on event descriptions. Because causal ground truth is unobserved, we evaluate the ranked pairs using a fixed, signal-triggered trading protocol that maps relationship quality into realized profit and loss (PnL). On Kalshi Economics markets, our hybrid approach consistently outperforms the statistical baseline. Across rolling evaluations, the win rate increases from 51.4% to 54.5%. Crucially, the average magnitude of losing trades decreases substantially from 649 USD to 347 USD. This reduction is driven by the LLM's ability to filter out statistically fragile links that are prone to large losses, rather than relying on rare gains. These improvements remain stable across different trading configurations, indicating that the gains are not driven by specific parameter choices. Overall, the results suggest that LLMs function as semantic risk managers on top of statistical discovery, prioritizing lead-lag relationships that generalize under changing market conditions.",
+    "authors": [
+      "Sumin Kim",
+      "Minjae Kim",
+      "Jihoon Kwon",
+      "Yoon Kim",
+      "Nicole Kagan",
+      "Joo Won Lee",
+      "Oscar Levy",
+      "Alejandro Lopez-Lira",
+      "Yongjae Lee",
+      "Chanyeol Choi"
+    ],
+    "published": "2026-02-04",
+    "categories": [
+      "q-fin.RM",
+      "q-fin.ST"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.07048v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.07048v1",
+    "fetched_at": "2026-02-10T08:59:53.635673"
+  },
+  {
+    "id": "2602.07046v1",
+    "title": "Sentiment Without Structure: Differential Market Responses to Infrastructure vs Regulatory Events in Cryptocurrency Markets",
+    "abstract": "We investigate differential market responses to infrastructure versus regulatory events in cryptocurrency markets using event study methodology with 4-category event classification. From 50 candidate events (2019-2025), 31 meet our impact and estimation-data criteria across 4 cryptocurrencies: Bitcoin (BTC), Ethereum (ETH), Solana (SOL), and Cardano (ADA). We employ constant mean and market-adjusted models with event-level block bootstrap confidence intervals (CIs) that properly account for cross-sectional correlation.   Our primary comparison focuses on negative-valence events: infrastructure failures (10 events identified; 8 with sufficient estimation data for analysis) versus regulatory enforcement (7 events). We find infrastructure failures produce mean Cumulative Abnormal Return (CAR) of -7.6% (bootstrap 95% CI: [-25.8%, +11.3%]) and regulatory enforcement produces mean CAR of -11.1% (CI: [-31.0%, +10.7%]). The difference in mean CARs of +3.6 percentage points (pp) has CI [-25.3%, +30.9%], p = 0.81. This is a null finding: markets respond similarly to both shock types when controlling for event valence.   Robustness checks confirm: (1) consistent negative sign across all window specifications ([0, +1] to [-5, +30]), (2) results survive leave-one-out exclusion of FTX and Terra, (3) market model with BTC/equal-weighted (EW) proxy attenuates but does not flip results. The 4-category classification addresses prior conflation of upgrades with failures.   Interpretation note: This exploratory analysis should be treated as hypothesis-generating; any post-hoc theoretical framing requires prospective testing with larger samples.",
+    "authors": [
+      "Murad Farzulla"
+    ],
+    "published": "2026-02-04",
+    "categories": [
+      "q-fin.ST",
+      "q-fin.CP",
+      "stat.AP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.07046v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.07046v1",
+    "fetched_at": "2026-02-10T08:59:53.635692"
+  },
+  {
+    "id": "2602.08868v1",
+    "title": "AnomSeer: Reinforcing Multimodal LLMs to Reason for Time-Series Anomaly Detection",
+    "abstract": "Time-series anomaly detection (TSAD) with multimodal large language models (MLLMs) is an emerging area, yet a persistent challenge remains: MLLMs rely on coarse time-series heuristics but struggle with multi-dimensional, detailed reasoning, which is vital for understanding complex time-series data. We present AnomSeer to address this by reinforcing the model to ground its reasoning in precise, structural details of time series, unifying anomaly classification, localization, and explanation. At its core, an expert chain-of-thought trace is generated to provide a verifiable, fine-grained reasoning from classical analyses (e.g., statistical measures, frequency transforms). Building on this, we propose a novel time-series grounded policy optimization (TimerPO) that incorporates two additional components beyond standard reinforcement learning: a time-series grounded advantage based on optimal transport and an orthogonal projection to ensure this auxiliary granular signal does not interfere with the primary detection objective. Across diverse anomaly scenarios, AnomSeer, with Qwen2.5-VL-3B/7B-Instruct, outperforms larger commercial baselines (e.g., GPT-4o) in classification and localization accuracy, particularly on point- and frequency-driven exceptions. Moreover, it produces plausible time-series reasoning traces that support its conclusions.",
+    "authors": [
+      "Junru Zhang",
+      "Lang Feng",
+      "Haoran Shi",
+      "Xu Guo",
+      "Han Yu",
+      "Yabo Dong",
+      "Duanqing Xu"
+    ],
+    "published": "2026-02-09",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.08868v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.08868v1",
+    "fetched_at": "2026-02-10T09:00:15.130963"
+  },
+  {
+    "id": "2602.08792v1",
+    "title": "Multimodal Learning for Arcing Detection in Pantograph-Catenary Systems",
+    "abstract": "The pantograph-catenary interface is essential for ensuring uninterrupted and reliable power delivery in electrified rail systems. However, electrical arcing at this interface poses serious risks, including accelerated wear of contact components, degraded system performance, and potential service disruptions. Detecting arcing events at the pantograph-catenary interface is challenging due to their transient nature, noisy operating environment, data scarcity, and the difficulty of distinguishing arcs from other similar transient phenomena. To address these challenges, we propose a novel multimodal framework that combines high-resolution image data with force measurements to more accurately and robustly detect arcing events. First, we construct two arcing detection datasets comprising synchronized visual and force measurements. One dataset is built from data provided by the Swiss Federal Railways (SBB), and the other is derived from publicly available videos of arcing events in different railway systems and synthetic force data that mimic the characteristics observed in the real dataset. Leveraging these datasets, we propose MultiDeepSAD, an extension of the DeepSAD algorithm for multiple modalities with a new loss formulation. Additionally, we introduce tailored pseudo-anomaly generation techniques specific to each data type, such as synthetic arc-like artifacts in images and simulated force irregularities, to augment training data and improve the discriminative ability of the model. Through extensive experiments and ablation studies, we demonstrate that our framework significantly outperforms baseline approaches, exhibiting enhanced sensitivity to real arcing events even under domain shifts and limited availability of real arcing observations.",
+    "authors": [
+      "Hao Dong",
+      "Eleni Chatzi",
+      "Olga Fink"
+    ],
+    "published": "2026-02-09",
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.08792v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.08792v1",
+    "fetched_at": "2026-02-10T09:00:15.130998"
+  },
+  {
+    "id": "2602.08638v1",
+    "title": "LEFT: Learnable Fusion of Tri-view Tokens for Unsupervised Time Series Anomaly Detection",
+    "abstract": "As a fundamental data mining task, unsupervised time series anomaly detection (TSAD) aims to build a model for identifying abnormal timestamps without assuming the availability of annotations. A key challenge in unsupervised TSAD is that many anomalies are too subtle to exhibit detectable deviation in any single view (e.g., time domain), and instead manifest as inconsistencies across multiple views like time, frequency, and a mixture of resolutions. However, most cross-view methods rely on feature or score fusion and do not enforce analysis-synthesis consistency, meaning the frequency branch is not required to reconstruct the time signal through an inverse transform, and vice versa. In this paper, we present Learnable Fusion of Tri-view Tokens (LEFT), a unified unsupervised TSAD framework that models anomalies as inconsistencies across complementary representations. LEFT learns feature tokens from three views of the same input time series: frequency-domain tokens that embed periodicity information, time-domain tokens that capture local dynamics, and multi-scale tokens that learns abnormal patterns at varying time series granularities. By learning a set of adaptive Nyquist-constrained spectral filters, the original time series is rescaled into multiple resolutions and then encoded, allowing these multi-scale tokens to complement the extracted frequency- and time-domain information. When generating the fused representation, we introduce a novel objective that reconstructs fine-grained targets from coarser multi-scale structure, and put forward an innovative time-frequency cycle consistency constraint to explicitly regularize cross-view agreement. Experiments on real-world benchmarks show that LEFT yields the best detection accuracy against SOTA baselines, while achieving a 5x reduction on FLOPs and 8x speed-up for training.",
+    "authors": [
+      "Dezheng Wang",
+      "Tong Chen",
+      "Guansong Pang",
+      "Congyan Chen",
+      "Shihua Li",
+      "Hongzhi Yin"
+    ],
+    "published": "2026-02-09",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.08638v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.08638v1",
+    "fetched_at": "2026-02-10T09:00:15.131026"
+  },
+  {
+    "id": "2602.08467v1",
+    "title": "Low Rank Transformer for Multivariate Time Series Anomaly Detection and Localization",
+    "abstract": "Multivariate time series (MTS) anomaly diagnosis, which encompasses both anomaly detection and localization, is critical for the safety and reliability of complex, large-scale real-world systems. The vast majority of existing anomaly diagnosis methods offer limited theoretical insights, especially for anomaly localization, which is a vital but largely unexplored area. The aim of this contribution is to study the learning process of a Transformer when applied to MTS by revealing connections to statistical time series methods. Based on these theoretical insights, we propose the Attention Low-Rank Transformer (ALoRa-T) model, which applies low-rank regularization to self-attention, and we introduce the Attention Low-Rank score, effectively capturing the temporal characteristics of anomalies. Finally, to enable anomaly localization, we propose the ALoRa-Loc method, a novel approach that associates anomalies to specific variables by quantifying interrelationships among time series. Extensive experiments and real data analysis, show that the proposed methodology significantly outperforms state-of-the-art methods in both detection and localization tasks.",
+    "authors": [
+      "Charalampos Shimillas",
+      "Kleanthis Malialis",
+      "Konstantinos Fokianos",
+      "Marios M. Polycarpou"
+    ],
+    "published": "2026-02-09",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.08467v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.08467v1",
+    "fetched_at": "2026-02-10T09:00:15.131049"
+  },
+  {
+    "id": "2602.08170v1",
+    "title": "Evasion of IoT Malware Detection via Dummy Code Injection",
+    "abstract": "The Internet of Things (IoT) has revolutionized connectivity by linking billions of devices worldwide. However, this rapid expansion has also introduced severe security vulnerabilities, making IoT devices attractive targets for malware such as the Mirai botnet. Power side-channel analysis has recently emerged as a promising technique for detecting malware activity based on device power consumption patterns. However, the resilience of such detection systems under adversarial manipulation remains underexplored.   This work presents a novel adversarial strategy against power side-channel-based malware detection. By injecting structured dummy code into the scanning phase of the Mirai botnet, we dynamically perturb power signatures to evade AI/ML-based anomaly detection without disrupting core functionality. Our approach systematically analyzes the trade-offs between stealthiness, execution overhead, and evasion effectiveness across multiple state-of-the-art models for side-channel analysis, using a custom dataset collected from smartphones of diverse manufacturers. Experimental results show that our adversarial modifications achieve an average attack success rate of 75.2\\%, revealing practical vulnerabilities in power-based intrusion detection frameworks.",
+    "authors": [
+      "Sahar Zargarzadeh",
+      "Mohammad Islam"
+    ],
+    "published": "2026-02-09",
+    "categories": [
+      "cs.CR",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.08170v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.08170v1",
+    "fetched_at": "2026-02-10T09:00:15.131071"
+  },
+  {
+    "id": "2602.08128v1",
+    "title": "Online Bayesian Imbalanced Learning with Bregman-Calibrated Deep Networks",
+    "abstract": "Class imbalance remains a fundamental challenge in machine learning, where standard classifiers exhibit severe performance degradation in minority classes. Although existing approaches address imbalance through resampling or cost-sensitive learning during training, they require retraining or access to labeled target data when class distributions shift at deployment time, a common occurrence in real-world applications such as fraud detection, medical diagnosis, and anomaly detection. We present \\textit{Online Bayesian Imbalanced Learning} (OBIL), a principled framework that decouples likelihood-ratio estimation from class-prior assumptions, enabling real-time adaptation to distribution shifts without model retraining. Our approach builds on the established connection between Bregman divergences and proper scoring rules to show that deep networks trained with such losses produce posterior probability estimates from which prior-invariant likelihood ratios can be extracted. We prove that these likelihood-ratio estimates remain valid under arbitrary changes in class priors and cost structures, requiring only a threshold adjustment for optimal Bayes decisions. We derive finite-sample regret bounds demonstrating that OBIL achieves $O(\\sqrt{T \\log T})$ regret against an oracle with perfect prior knowledge. Extensive experiments on benchmark datasets and medical diagnosis benchmarks under simulated deployment shifts demonstrate that OBIL maintains robust performance under severe distribution shifts, outperforming state-of-the-art methods in F1 Score when test distributions deviate significantly from the training conditions.",
+    "authors": [
+      "Zahir Alsulaimawi"
+    ],
+    "published": "2026-02-08",
+    "categories": [
+      "cs.LG",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.08128v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.08128v1",
+    "fetched_at": "2026-02-10T09:00:15.131090"
+  },
+  {
+    "id": "2602.08104v1",
+    "title": "Interpretable Failure Analysis in Multi-Agent Reinforcement Learning Systems",
+    "abstract": "Multi-Agent Reinforcement Learning (MARL) is increasingly deployed in safety-critical domains, yet methods for interpretable failure detection and attribution remain underdeveloped. We introduce a two-stage gradient-based framework that provides interpretable diagnostics for three critical failure analysis tasks: (1) detecting the true initial failure source (Patient-0); (2) validating why non-attacked agents may be flagged first due to domino effects; and (3) tracing how failures propagate through learned coordination pathways. Stage 1 performs interpretable per-agent failure detection via Taylor-remainder analysis of policy-gradient costs, declaring an initial Patient-0 candidate at the first threshold crossing. Stage 2 provides validation through geometric analysis of critic derivatives-first-order sensitivity and directional second-order curvature aggregated over causal windows to construct interpretable contagion graphs. This approach explains \"downstream-first\" detection anomalies by revealing pathways that amplify upstream deviations. Evaluated across 500 episodes in Simple Spread (3 and 5 agents) and 100 episodes in StarCraft II using MADDPG and HATRPO, our method achieves 88.2-99.4% Patient-0 detection accuracy while providing interpretable geometric evidence for detection decisions. By moving beyond black-box detection to interpretable gradient-level forensics, this framework offers practical tools for diagnosing cascading failures in safety-critical MARL systems.",
+    "authors": [
+      "Risal Shahriar Shefin",
+      "Debashis Gupta",
+      "Thai Le",
+      "Sarra Alqahtani"
+    ],
+    "published": "2026-02-08",
+    "categories": [
+      "cs.AI",
+      "cs.LG",
+      "cs.MA"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.08104v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.08104v1",
+    "fetched_at": "2026-02-10T09:00:15.131115"
+  },
+  {
+    "id": "2602.08014v1",
+    "title": "ICBAC: an Intelligent Contract-Based Access Control framework for supply chain management by integrating blockchain and federated learning",
+    "abstract": "This paper addresses the critical challenge of access control in modern supply chains, which operate across multiple independent and competing organizations. Existing access control is static and centralized, unable to adapt to insider threats or evolving contexts. Blockchain improves decentralization but lacks behavioral intelligence, while centralized machine learning for anomaly detection requires aggregating sensitive data, violating privacy.   The proposed solution is ICBAC, an intelligent contract-based access control framework. It integrates permissioned blockchain (Hyperledger Fabric) with federated learning (FL). Built on Fabric, ICBAC uses a multi-channel architecture and three smart contracts for asset management, baseline access control, and dynamic revocation. To counter insider misuse, each channel deploys an AI agent that monitors activity and dynamically restricts access for anomalies. Federated learning allows these agents to collaboratively improve detection models without sharing raw data.   For heterogeneous, competitive environments, ICBAC introduces a game-theoretic client selection mechanism using hedonic coalition formation. This enables supply chains to form stable, strategy-proof FL coalitions via preference-based selection without disclosing sensitive criteria. Extensive experiments on a Fabric testbed with a real-world dataset show ICBAC achieves blockchain performance comparable to static frameworks and provides effective anomaly detection under IID and non-IID data with zero raw-data sharing. ICBAC thus offers a practical, scalable solution for dynamic, privacy-preserving access control in decentralized supply chains.",
+    "authors": [
+      "Sadegh Sohani",
+      "Salar Ghazi",
+      "Farnaz Kamranfar",
+      "Sahar Pilehvar Moakhar",
+      "Mohammad Allahbakhsh",
+      "Haleh Amintoosi",
+      "Kaiwen Zhang"
+    ],
+    "published": "2026-02-08",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.08014v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.08014v1",
+    "fetched_at": "2026-02-10T09:00:15.131146"
+  },
+  {
+    "id": "2602.07798v1",
+    "title": "CausalTAD: Injecting Causal Knowledge into Large Language Models for Tabular Anomaly Detection",
+    "abstract": "Detecting anomalies in tabular data is critical for many real-world applications, such as credit card fraud detection. With the rapid advancements in large language models (LLMs), state-of-the-art performance in tabular anomaly detection has been achieved by converting tabular data into text and fine-tuning LLMs. However, these methods randomly order columns during conversion, without considering the causal relationships between them, which is crucial for accurately detecting anomalies. In this paper, we present CausalTaD, a method that injects causal knowledge into LLMs for tabular anomaly detection. We first identify the causal relationships between columns and reorder them to align with these causal relationships. This reordering can be modeled as a linear ordering problem. Since each column contributes differently to the causal relationships, we further propose a reweighting strategy to assign different weights to different columns to enhance this effect. Experiments across more than 30 datasets demonstrate that our method consistently outperforms the current state-of-the-art methods. The code for CausalTAD is available at https://github.com/350234/CausalTAD.",
+    "authors": [
+      "Ruiqi Wang",
+      "Ruikang Liu",
+      "Runyu Chen",
+      "Haoxiang Suo",
+      "Zhiyi Peng",
+      "Zhuo Tang",
+      "Changjian Chen"
+    ],
+    "published": "2026-02-08",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.07798v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.07798v1",
+    "fetched_at": "2026-02-10T09:00:15.131175"
+  },
+  {
+    "id": "2602.07698v1",
+    "title": "On Sequence-to-Sequence Models for Automated Log Parsing",
+    "abstract": "Log parsing is a critical standard operating procedure in software systems, enabling monitoring, anomaly detection, and failure diagnosis. However, automated log parsing remains challenging due to heterogeneous log formats, distribution shifts between training and deployment data, and the brittleness of rule-based approaches. This study aims to systematically evaluate how sequence modelling architecture, representation choice, sequence length, and training data availability influence automated log parsing performance and computational cost. We conduct a controlled empirical study comparing four sequence modelling architectures: Transformer, Mamba state-space, monodirectional LSTM, and bidirectional LSTM models. In total, 396 models are trained across multiple dataset configurations and evaluated using relative Levenshtein edit distance with statistical significance testing. Transformer achieves the lowest mean relative edit distance (0.111), followed by Mamba (0.145), mono-LSTM (0.186), and bi-LSTM (0.265), where lower values are better. Mamba provides competitive accuracy with substantially lower computational cost. Character-level tokenization generally improves performance, sequence length has negligible practical impact on Transformer accuracy, and both Mamba and Transformer demonstrate stronger sample efficiency than recurrent models. Overall, Transformers reduce parsing error by 23.4%, while Mamba is a strong alternative under data or compute constraints. These results also clarify the roles of representation choice, sequence length, and sample efficiency, providing practical guidance for researchers and practitioners.",
+    "authors": [
+      "Adam Sorrenti",
+      "Andriy Miranskyy"
+    ],
+    "published": "2026-02-07",
+    "categories": [
+      "cs.SE",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.07698v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.07698v1",
+    "fetched_at": "2026-02-10T09:00:15.131194"
+  },
+  {
+    "id": "2602.07303v1",
+    "title": "KRONE: Hierarchical and Modular Log Anomaly Detection",
+    "abstract": "Log anomaly detection is crucial for uncovering system failures and security risks. Although logs originate from nested component executions with clear boundaries, this structure is lost when they are stored as flat sequences. As a result, state-of-the-art methods risk missing true dependencies within executions while learning spurious ones across unrelated events. We propose KRONE, the first hierarchical anomaly detection framework that automatically derives execution hierarchies from flat logs for modular multi-level anomaly detection. At its core, the KRONE Log Abstraction Model captures application-specific semantic hierarchies from log data. This hierarchy is then leveraged to recursively decompose log sequences into multiple levels of coherent execution chunks, referred to as KRONE Seqs, transforming sequence-level anomaly detection into a set of modular KRONE Seq-level detection tasks. For each test KRONE Seq, KRONE employs a hybrid modular detection mechanism that dynamically routes between an efficient level-independent Local-Context detector, which rapidly filters normal sequences, and a Nested-Aware detector that incorporates cross-level semantic dependencies and supports LLM-based anomaly detection and explanation. KRONE further optimizes hierarchical detection through cached result reuse and early-exit strategies. Experiments on three public benchmarks and one industrial dataset from ByteDance Cloud demonstrate that KRONE achieves consistent improvements in detection accuracy, F1-score, data efficiency, resource efficiency, and interpretability. KRONE improves the F1-score by more than 10 percentage points over prior methods while reducing LLM usage to only a small fraction of the test data.",
+    "authors": [
+      "Lei Ma",
+      "Jinyang Liu",
+      "Tieying Zhang",
+      "Peter M. VanNostrand",
+      "Dennis M. Hofmann",
+      "Lei Cao",
+      "Elke A. Rundensteiner",
+      "Jianjun Chen"
+    ],
+    "published": "2026-02-07",
+    "categories": [
+      "cs.DB",
+      "cs.AI",
+      "cs.SE"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.07303v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.07303v1",
+    "fetched_at": "2026-02-10T09:00:15.131225"
+  },
+  {
+    "id": "2602.07154v1",
+    "title": "Beyond Pooling: Matching for Robust Generalization under Data Heterogeneity",
+    "abstract": "Pooling heterogeneous datasets across domains is a common strategy in representation learning, but naive pooling can amplify distributional asymmetries and yield biased estimators, especially in settings where zero-shot generalization is required. We propose a matching framework that selects samples relative to an adaptive centroid and iteratively refines the representation distribution. The double robustness and the propensity score matching for the inclusion of data domains make matching more robust than naive pooling and uniform subsampling by filtering out the confounding domains (the main cause of heterogeneity). Theoretical and empirical analyses show that, unlike naive pooling or uniform subsampling, matching achieves better results under asymmetric meta-distributions, which are also extended to non-Gaussian and multimodal real-world settings. Most importantly, we show that these improvements translate to zero-shot medical anomaly detection, one of the extreme forms of data heterogeneity and asymmetry. The code is available on https://github.com/AyushRoy2001/Beyond-Pooling.",
+    "authors": [
+      "Ayush Roy",
+      "Rudrasis Chakraborty",
+      "Lav Varshney",
+      "Vishnu Suresh Lokhande"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.07154v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.07154v1",
+    "fetched_at": "2026-02-10T09:00:15.131247"
+  },
+  {
+    "id": "2602.06859v2",
+    "title": "Zero-shot Generalizable Graph Anomaly Detection with Mixture of Riemannian Experts",
+    "abstract": "Graph Anomaly Detection (GAD) aims to identify irregular patterns in graph data, and recent works have explored zero-shot generalist GAD to enable generalization to unseen graph datasets. However, existing zero-shot GAD methods largely ignore intrinsic geometric differences across diverse anomaly patterns, substantially limiting their cross-domain generalization. In this work, we reveal that anomaly detectability is highly dependent on the underlying geometric properties and that embedding graphs from different domains into a single static curvature space can distort the structural signatures of anomalies. To address the challenge that a single curvature space cannot capture geometry-dependent graph anomaly patterns, we propose GAD-MoRE, a novel framework for zero-shot Generalizable Graph Anomaly Detection with a Mixture of Riemannian Experts architecture. Specifically, to ensure that each anomaly pattern is modeled in the Riemannian space where it is most detectable, GAD-MoRE employs a set of specialized Riemannian expert networks, each operating in a distinct curvature space. To align raw node features with curvature-specific anomaly characteristics, we introduce an anomaly-aware multi-curvature feature alignment module that projects inputs into parallel Riemannian spaces, enabling the capture of diverse geometric characteristics. Finally, to facilitate better generalization beyond seen patterns, we design a memory-based dynamic router that adaptively assigns each input to the most compatible expert based on historical reconstruction performance on similar anomalies. Extensive experiments in the zero-shot setting demonstrate that GAD-MoRE significantly outperforms state-of-the-art generalist GAD baselines, and even surpasses strong competitors that are few-shot fine-tuned with labeled data from the target domain.",
+    "authors": [
+      "Xinyu Zhao",
+      "Qingyun Sun",
+      "Jiayi Luo",
+      "Xingcheng Fu",
+      "Jianxin Li"
+    ],
+    "published": "2026-02-06",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.06859v2",
+    "arxiv_url": "https://arxiv.org/abs/2602.06859v2",
+    "fetched_at": "2026-02-10T09:00:15.131301"
+  }
+]
