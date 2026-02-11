@@ -1,0 +1,900 @@
+[
+  {
+    "id": "2602.10071v1",
+    "title": "Deep Learning for Electricity Price Forecasting: A Review of Day-Ahead, Intraday, and Balancing Electricity Markets",
+    "abstract": "Electricity price forecasting (EPF) plays a critical role in power system operation and market decision making. While existing review studies have provided valuable insights into forecasting horizons, market mechanisms, and evaluation practices, the rapid adoption of deep learning has introduced increasingly diverse model architectures, output structures, and training objectives that remain insufficiently analyzed in depth. This paper presents a structured review of deep learning methods for EPF in day-ahead, intraday, and balancing markets. Specifically, We introduce a unified taxonomy that decomposes deep learning models into backbone, head, and loss components, providing a consistent evaluation perspective across studies. Using this framework, we analyze recent trends in deep learning components across markets. Our study highlights the shift toward probabilistic, microstructure-centric, and market-aware designs. We further identify key gaps in the literature, including limited attention to intraday and balancing markets and the need for market-specific modeling strategies, thereby helping to consolidate and advance existing review studies.",
+    "authors": [
+      "Runyao Yu",
+      "Derek W. Bunn",
+      "Julia Lin",
+      "Jochen Stiasny",
+      "Fabian Leimgruber",
+      "Tara Esterl",
+      "Yuchen Tao",
+      "Lianlian Qi",
+      "Yujie Chen",
+      "Wentao Wang",
+      "Jochen L. Cremer"
+    ],
+    "published": "2026-02-10",
+    "categories": [
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.10071v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.10071v1",
+    "fetched_at": "2026-02-11T08:54:59.252623",
+    "chinese_title": "",
+    "chinese_summary": "",
+    "tags": [
+      "Deep Learning"
+    ],
+    "key_contributions": [],
+    "processed_at": "2026-02-11T08:57:58.645623"
+  },
+  {
+    "id": "2602.09967v1",
+    "title": "Incentive Pareto Efficiency in Monopoly Insurance Markets with Adverse Selection",
+    "abstract": "We study a monopolistic insurance market with hidden information, where the agent's type $θ$ is private information that is unobservable to the insurer, and it is drawn from a continuum of types. The hidden type affects both the loss distribution and the risk attitude of the agent. Within this framework, we show that a menu of contracts is incentive efficient if and only if it maximizes social welfare, subject to incentive compatibility and individual rationality constraints. This equivalence holds for general concave utility functionals. In the special case of Yaari Dual Utility, we provide a semi-explicit characterization of optimal incentive-efficient menus of contracts. We do this under two different settings: (i) the first assumes that types are ordered in a way such that larger values of $θ$ correspond to more risk-averse types who face stochastically larger losses; whereas (ii) the second assumes that larger values of $θ$ correspond to less risk-averse types who face stochastically larger losses. In both settings, the structure of optimal incentive-efficient menus of contracts depends on the level of the social welfare weight. Moreover, at the optimum, higher types receive greater coverage in exchange for higher premia. Additionally, optimal menus leave the lowest type indifferent, with the insurer absorbing all surplus from the lowest type; and they exhibit efficiency at the top, that is, the highest type receives full coverage.",
+    "authors": [
+      "Maria Andraos",
+      "Mario Ghossoub"
+    ],
+    "published": "2026-02-10",
+    "categories": [
+      "econ.TH",
+      "q-fin.RM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.09967v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.09967v1",
+    "fetched_at": "2026-02-11T08:54:59.252671",
+    "chinese_title": "存在逆向选择的垄断保险市场中的激励帕累托效率",
+    "chinese_summary": "论文研究隐藏信息下的垄断保险市场（代理人类型为私人信息，影响损失分布与风险态度），证明合同菜单激励有效等价于在激励相容和个体理性约束下最大化社会福利（适用于一般凹效用泛函）；针对Yaari对偶效用，分两种类型排序场景给出最优激励有效合同菜单的半显式刻画，并指出最优菜单的特征（最低类型无剩余、最高类型全额覆盖等）。",
+    "tags": [
+      "Risk Management",
+      "Behavioral Finance"
+    ],
+    "key_contributions": [
+      "证明存在隐藏信息的垄断保险市场中，合同菜单激励有效等价于在激励相容与个体理性约束下最大化社会福利，该结论适用于一般凹效用泛函；",
+      "针对Yaari对偶效用，分两种类型排序场景给出最优激励有效合同菜单的半显式刻画，并揭示最优菜单的关键特征（最低类型无剩余、最高类型全额覆盖等）。"
+    ],
+    "processed_at": "2026-02-11T08:58:20.576513"
+  },
+  {
+    "id": "2602.09950v1",
+    "title": "How can the dual martingale help solving the primal optimal stopping problem?",
+    "abstract": "Motivated by recent results on the dual formulation of optimal stopping problems, we investigate in this short paper how the knowledge of an approximating dual martingale can improve the efficiency of primal methods. In particular, we show on numerical examples that accurate approximations of a dual martingale efficiently reduce the variance for the primal optimal stopping problem.",
+    "authors": [
+      "Aurélien Alfonsi",
+      "Ahmed Kebaier",
+      "Jérôme Lelong"
+    ],
+    "published": "2026-02-10",
+    "categories": [
+      "q-fin.CP",
+      "math.PR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.09950v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.09950v1",
+    "fetched_at": "2026-02-11T08:54:59.252715",
+    "chinese_title": "对偶鞅如何帮助解决原最优停止问题？",
+    "chinese_summary": "本文受对偶最优停止问题最新成果启发，研究对偶鞅近似对原最优停止方法效率的提升作用；通过数值例子验证，对偶鞅的准确近似可有效降低原最优停止问题的方差。",
+    "tags": [
+      "Options",
+      "Asset Pricing"
+    ],
+    "key_contributions": [
+      "揭示对偶鞅近似可提升原最优停止方法的效率",
+      "通过数值例子证明对偶鞅准确近似能降低原最优停止问题的方差"
+    ],
+    "processed_at": "2026-02-11T08:58:34.345292"
+  },
+  {
+    "id": "2602.09887v1",
+    "title": "Partially Active Automated Market Makers",
+    "abstract": "We introduce a new class of automated market maker (AMM), the \\emph{partially active automated market maker} (PA-AMM). PA-AMM divides its reserves into two parts, the active and the passive parts, and uses only the active part for trading. At the top of every block, such a division is done again to keep the active reserves always being \\(λ\\)-portion of total reserves, where \\(λ\\in (0, 1]\\) is an activeness parameter. We show that this simple mechanism reduces adverse selection costs, measured by loss-versus-rebalancing (LVR), and thereby improves the wealth of liquidity providers (LPs) relative to plain constant-function market makers (CFMMs). As a trade-off, the asset weights within a PA-AMM pool may deviate from their target weights implied by its invariant curve. Motivated by the optimal index-tracking problem literature, we also propose and solve an optimization problem that balances such deviation and the reduction of LVR.",
+    "authors": [
+      "Sunghun Ko"
+    ],
+    "published": "2026-02-10",
+    "categories": [
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.09887v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.09887v1",
+    "fetched_at": "2026-02-11T08:54:59.252751",
+    "chinese_title": "部分主动型自动做市商",
+    "chinese_summary": "论文提出部分主动型自动做市商（PA-AMM），将储备金分为主动与被动部分，主动部分占总储备λ比例且每区块重新划分；证明该机制降低逆向选择成本（以损失再平衡LVR衡量），提升流动性提供者（LP）财富；还基于最优指数跟踪问题，构建并求解平衡储备权重偏差与LVR减少的优化问题。",
+    "tags": [
+      "Market Making",
+      "Market Microstructure",
+      "Portfolio Optimization"
+    ],
+    "key_contributions": [
+      "提出部分主动型自动做市商（PA-AMM），通过储备金分拆机制降低逆向选择成本，提升LP财富",
+      "基于最优指数跟踪问题，构建并求解平衡储备权重偏差与LVR减少的优化问题"
+    ],
+    "processed_at": "2026-02-11T08:58:45.520528"
+  },
+  {
+    "id": "2602.09504v1",
+    "title": "Seeing the Goal, Missing the Truth: Human Accountability for AI Bias",
+    "abstract": "This research explores how human-defined goals influence the behavior of Large Language Models (LLMs) through purpose-conditioned cognition. Using financial prediction tasks, we show that revealing the downstream use (e.g., predicting stock returns or earnings) of LLM outputs leads the LLM to generate biased sentiment and competition measures, even though these measures are intended to be downstream task-independent. Goal-aware prompting shifts intermediate measures toward the disclosed downstream objective. This purpose leakage improves performance before the LLM's knowledge cutoff, but with no advantage post-cutoff. AI bias due to \"seeing the goal\" is not an algorithmic flaw, but stems from human accountability in research design to ensure the statistical validity and reliability of AI-generated measurements.",
+    "authors": [
+      "Sean Cao",
+      "Wei Jiang",
+      "Hui Xu"
+    ],
+    "published": "2026-02-10",
+    "categories": [
+      "q-fin.GN",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.09504v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.09504v1",
+    "fetched_at": "2026-02-11T08:54:59.252808",
+    "chinese_title": "只见目标，不见真相：AI偏见中的人类问责",
+    "chinese_summary": "本研究以金融预测任务为对象，探索人类定义的目标如何通过目的条件认知影响大语言模型（LLM）；发现揭示下游用途会使LLM生成本应下游任务独立但实际有偏见的情绪和竞争度量，且该目的泄露仅在LLM知识截止前提升性能；指出此类AI偏见源于人类研究设计中的问责问题，而非算法缺陷。",
+    "tags": [
+      "LLM",
+      "Sentiment Analysis",
+      "Asset Pricing",
+      "Behavioral Finance"
+    ],
+    "key_contributions": [
+      "揭示人类定义的下游目标会通过目的条件认知导致LLM生成本应下游任务独立但实际有偏见的中间度量（情绪、竞争），且该目的泄露仅在LLM知识截止前提升下游任务性能",
+      "指出“见目标”导致的AI偏见源于人类研究设计中的问责问题，而非算法缺陷，强调人类需确保AI生成度量的统计有效性和可靠性"
+    ],
+    "processed_at": "2026-02-11T08:59:09.106148"
+  },
+  {
+    "id": "2602.09113v1",
+    "title": "Benchmarking the Energy Savings with Speculative Decoding Strategies",
+    "abstract": "Speculative decoding has emerged as an effective method to reduce latency and inference cost of LLM inferences. However, there has been inadequate attention towards the energy requirements of these models. To address this gap, this paper presents a comprehensive survey of energy requirements of speculative decoding strategies, with detailed analysis on how various factors -- model size and family, speculative decoding strategies, and dataset characteristics -- influence the energy optimizations.",
+    "authors": [
+      "Rohit Dutta",
+      "Paramita Koley",
+      "Soham Poddar",
+      "Janardan Misra",
+      "Sanjay Podder",
+      "Naveen Balani",
+      "Saptarshi Ghosh",
+      "Niloy Ganguly"
+    ],
+    "published": "2026-02-09",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.09113v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.09113v1",
+    "fetched_at": "2026-02-11T08:55:05.603945",
+    "chinese_title": "基于推测解码策略的节能基准测试",
+    "chinese_summary": "推测解码虽能降低大语言模型（LLM）推理延迟与成本，但能耗研究不足；本文开展其能耗需求的全面调查，分析模型、策略、数据集等因素对节能优化的影响。",
+    "tags": [
+      "LLM",
+      "Transformer",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "填补了推测解码策略能耗研究的空白，开展全面的能耗需求调查",
+      "分析模型大小与家族、推测解码策略、数据集特征等因素对节能优化的影响"
+    ],
+    "processed_at": "2026-02-11T08:59:17.089579"
+  },
+  {
+    "id": "2602.09985v1",
+    "title": "Online Monitoring Framework for Automotive Time Series Data using JEPA Embeddings",
+    "abstract": "As autonomous vehicles are rolled out, measures must be taken to ensure their safe operation. In order to supervise a system that is already in operation, monitoring frameworks are frequently employed. These run continuously online in the background, supervising the system status and recording anomalies. This work proposes an online monitoring framework to detect anomalies in object state representations. Thereby, a key challenge is creating a framework for anomaly detection without anomaly labels, which are usually unavailable for unknown anomalies. To address this issue, this work applies a self-supervised embedding method to translate object data into a latent representation space. For this, a JEPA-based self-supervised prediction task is constructed, allowing training without anomaly labels and the creation of rich object embeddings. The resulting expressive JEPA embeddings serve as input for established anomaly detection methods, in order to identify anomalies within object state representations. This framework is particularly useful for applications in real-world environments, where new or unknown anomalies may occur during operation for which there are no labels available. Experiments performed on the publicly available, real-world nuScenes dataset illustrate the framework's capabilities.",
+    "authors": [
+      "Alexander Fertig",
+      "Karthikeyan Chandra Sekaran",
+      "Lakshman Balasubramanian",
+      "Michael Botsch"
+    ],
+    "published": "2026-02-10",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.09985v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.09985v1",
+    "fetched_at": "2026-02-11T08:55:11.809567",
+    "chinese_title": "基于JEPA嵌入的汽车时间序列数据在线监测框架",
+    "chinese_summary": "论文针对自动驾驶中无异常标签的未知异常检测问题，提出基于JEPA自监督嵌入的在线监测框架——通过JEPA自监督预测任务将目标数据转化为潜在表示，无需异常标签即可生成丰富嵌入，再结合现有异常检测方法识别异常；该框架适用于真实环境中可能出现无标签新异常的场景，在nuScenes数据集上验证了有效性。",
+    "tags": [
+      "Anomaly",
+      "Time Series",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出无异常标签的汽车时间序列数据在线异常监测框架，基于JEPA自监督嵌入实现无需标签的特征学习",
+      "验证了该框架在真实nuScenes数据集上对未知/无标签异常的检测能力，适用于实际自动驾驶场景"
+    ],
+    "processed_at": "2026-02-11T08:59:27.049936"
+  },
+  {
+    "id": "2602.09704v1",
+    "title": "Extended Isolation Forest with feature sensitivities",
+    "abstract": "Compared to theoretical frameworks that assume equal sensitivity to deviations in all features of data, the theory of anomaly detection allowing for variable sensitivity across features is less developed. To the best of our knowledge, this issue has not yet been addressed in the context of isolation-based methods, and this paper represents the first attempt to do so. This paper introduces an Extended Isolation Forest with feature sensitivities, which we refer to as the Anisotropic Isolation Forest (AIF). In contrast to the standard EIF, the AIF enables anomaly detection with controllable sensitivity to deviations in different features or directions in the feature space. The paper also introduces novel measures of directional sensitivity, which allow quantification of AIF's sensitivity in different directions in the feature space. These measures enable adjustment of the AIF's sensitivity to task-specific requirements. We demonstrate the performance of the algorithm by applying it to synthetic and real-world datasets. The results show that the AIF enables anomaly detection that focuses on directions in the feature space where deviations from typical behavior are more important.",
+    "authors": [
+      "Illia Donhauzer"
+    ],
+    "published": "2026-02-10",
+    "categories": [
+      "stat.ME",
+      "stat.ML"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.09704v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.09704v1",
+    "fetched_at": "2026-02-11T08:55:11.809594",
+    "chinese_title": "带特征敏感性的扩展隔离森林",
+    "chinese_summary": "本文针对隔离基异常检测未考虑特征间敏感性差异的问题，提出各向异性隔离森林（AIF），支持控制不同特征或特征空间方向的异常检测敏感性；引入方向敏感性度量量化该特性以适配任务需求，经合成与真实数据集验证其聚焦重要偏差方向的有效性。",
+    "tags": [
+      "Anomaly",
+      "Risk Management"
+    ],
+    "key_contributions": [
+      "提出各向异性隔离森林（AIF），首次在隔离基异常检测方法中实现对不同特征/方向的可变敏感性控制",
+      "引入方向敏感性度量，可量化并调整AIF的敏感性以适配任务需求"
+    ],
+    "processed_at": "2026-02-11T08:59:47.774601"
+  },
+  {
+    "id": "2602.09690v1",
+    "title": "Contextual and Seasonal LSTMs for Time Series Anomaly Detection",
+    "abstract": "Univariate time series (UTS), where each timestamp records a single variable, serve as crucial indicators in web systems and cloud servers. Anomaly detection in UTS plays an essential role in both data mining and system reliability management. However, existing reconstruction-based and prediction-based methods struggle to capture certain subtle anomalies, particularly small point anomalies and slowly rising anomalies. To address these challenges, we propose a novel prediction-based framework named Contextual and Seasonal LSTMs (CS-LSTMs). CS-LSTMs are built upon a noise decomposition strategy and jointly leverage contextual dependencies and seasonal patterns, thereby strengthening the detection of subtle anomalies. By integrating both time-domain and frequency-domain representations, CS-LSTMs achieve more accurate modeling of periodic trends and anomaly localization. Extensive evaluations on public benchmark datasets demonstrate that CS-LSTMs consistently outperform state-of-the-art methods, highlighting their effectiveness and practical value in robust time series anomaly detection.",
+    "authors": [
+      "Lingpei Zhang",
+      "Qingming Li",
+      "Yong Yang",
+      "Jiahao Chen",
+      "Rui Zeng",
+      "Chenyang Lyu",
+      "Shouling Ji"
+    ],
+    "published": "2026-02-10",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.09690v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.09690v1",
+    "fetched_at": "2026-02-11T08:55:11.809623",
+    "chinese_title": "用于时间序列异常检测的上下文与季节性长短期记忆网络",
+    "chinese_summary": "论文针对现有单变量时间序列异常检测方法难以捕捉细微异常（如小值点异常、缓慢上升异常）的问题，提出基于噪声分解策略的上下文与季节性LSTM（CS-LSTMs）框架，联合利用上下文依赖和季节模式并结合时域与频域表示建模周期趋势，在公开基准数据集上优于现有方法。",
+    "tags": [
+      "Anomaly",
+      "Deep Learning",
+      "Time Series",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出CS-LSTMs框架，通过噪声分解联合上下文依赖与季节模式，增强细微异常检测能力",
+      "结合时域与频域表示，更准确建模周期趋势并定位异常，在基准数据集上验证了有效性"
+    ],
+    "processed_at": "2026-02-11T08:59:55.150569"
+  },
+  {
+    "id": "2602.09593v1",
+    "title": "Why the Counterintuitive Phenomenon of Likelihood Rarely Appears in Tabular Anomaly Detection with Deep Generative Models?",
+    "abstract": "Deep generative models with tractable and analytically computable likelihoods, exemplified by normalizing flows, offer an effective basis for anomaly detection through likelihood-based scoring. We demonstrate that, unlike in the image domain where deep generative models frequently assign higher likelihoods to anomalous data, such counterintuitive behavior occurs far less often in tabular settings. We first introduce a domain-agnostic formulation that enables consistent detection and evaluation of the counterintuitive phenomenon, addressing the absence of precise definition. Through extensive experiments on 47 tabular datasets and 10 CV/NLP embedding datasets in ADBench, benchmarked against 13 baseline models, we demonstrate that the phenomenon, as defined, is consistently rare in general tabular data. We further investigate this phenomenon from both theoretical and empirical perspectives, focusing on the roles of data dimensionality and difference in feature correlation. Our results suggest that likelihood-only detection with normalizing flows offers a practical and reliable approach for anomaly detection in tabular domains.",
+    "authors": [
+      "Donghwan Kim",
+      "Junghun Phee",
+      "Hyunsoo Yoon"
+    ],
+    "published": "2026-02-10",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.09593v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.09593v1",
+    "fetched_at": "2026-02-11T08:55:11.809644",
+    "chinese_title": "为何深度生成模型在表格异常检测中极少出现似然值的反直觉现象？",
+    "chinese_summary": "该论文针对深度生成模型异常检测中“异常数据似然更高”的反直觉现象展开研究，首先提出领域无关的公式明确其定义与检测方法；通过47个表格数据集及ADBench中10个CV/NLP嵌入数据集的实验（对比13个基线模型），证实表格域中该现象极少出现；进一步分析数据维度与特征相关性的影响，指出归一化流仅用似然值的检测在表格异常检测中实用可靠。",
+    "tags": [
+      "Anomaly",
+      "Deep Learning",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出领域无关的公式，明确并可检测异常检测中似然值的反直觉现象，填补定义空白",
+      "通过大规模实验证实表格域中该反直觉现象极少出现，证明归一化流似然检测在表格异常中的实用性"
+    ],
+    "processed_at": "2026-02-11T09:00:11.247655"
+  },
+  {
+    "id": "2602.09329v1",
+    "title": "MacrOData: New Benchmarks of Thousands of Datasets for Tabular Outlier Detection",
+    "abstract": "Quality benchmarks are essential for fairly and accurately tracking scientific progress and enabling practitioners to make informed methodological choices. Outlier detection (OD) on tabular data underpins numerous real-world applications, yet existing OD benchmarks remain limited. The prominent OD benchmark AdBench is the de facto standard in the literature, yet comprises only 57 datasets. In addition to other shortcomings discussed in this work, its small scale severely restricts diversity and statistical power. We introduce MacrOData, a large-scale benchmark suite for tabular OD comprising three carefully curated components: OddBench, with 790 datasets containing real-world semantic anomalies; OvrBench, with 856 datasets featuring real-world statistical outliers; and SynBench, with 800 synthetically generated datasets spanning diverse data priors and outlier archetypes. Owing to its scale and diversity, MacrOData enables comprehensive and statistically robust evaluation of tabular OD methods. Our benchmarks further satisfy several key desiderata: We provide standardized train/test splits for all datasets, public/private benchmark partitions with held-out test labels for the latter reserved toward an online leaderboard, and annotate our datasets with semantic metadata. We conduct extensive experiments across all benchmarks, evaluating a broad range of OD methods comprising classical, deep, and foundation models, over diverse hyperparameter configurations. We report detailed empirical findings, practical guidelines, as well as individual performances as references for future research. All benchmarks containing 2,446 datasets combined are open-sourced, along with a publicly accessible leaderboard hosted at https://huggingface.co/MacrOData-CMU.",
+    "authors": [
+      "Xueying Ding",
+      "Simon Klüttermann",
+      "Haomin Wen",
+      "Yilong Chen",
+      "Leman Akoglu"
+    ],
+    "published": "2026-02-10",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.09329v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.09329v1",
+    "fetched_at": "2026-02-11T08:55:11.809668",
+    "chinese_title": "MacrOData：面向表格异常检测的数千数据集新基准",
+    "chinese_summary": "现有表格异常检测基准（如AdBench）规模有限（仅57个数据集），限制评估多样性与统计能力；论文提出大规模基准MacrOData，包含三类共超2400个数据集（含真实语义/统计异常及合成数据），满足标准化拆分、元数据注释等需求，可支持对经典、深度及基础模型等各类异常检测方法的全面鲁棒评估。",
+    "tags": [
+      "Anomaly",
+      "Benchmark",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出大规模表格异常检测基准MacrOData，包含OddBench（790个真实语义异常）、OvrBench（856个真实统计异常）、SynBench（800个合成数据集）三类共超2400个数据集",
+      "基准满足标准化训练测试拆分、公开/私有分区（私有分区用于在线排行榜）及语义元数据注释等关键需求，支持对各类异常检测方法的全面统计鲁棒评估"
+    ],
+    "processed_at": "2026-02-11T09:00:33.070522"
+  },
+  {
+    "id": "2602.09116v1",
+    "title": "Importance inversion transfer identifies shared principles for cross-domain learning",
+    "abstract": "The capacity to transfer knowledge across scientific domains relies on shared organizational principles. However, existing transfer-learning methodologies often fail to bridge radically heterogeneous systems, particularly under severe data scarcity or stochastic noise. This study formalizes Explainable Cross-Domain Transfer Learning (X-CDTL), a framework unifying network science and explainable artificial intelligence to identify structural invariants that generalize across biological, linguistic, molecular, and social networks. By introducing the Importance Inversion Transfer (IIT) mechanism, the framework prioritizes domain-invariant structural anchors over idiosyncratic, highly discriminative features. In anomaly detection tasks, models guided by these principles achieve significant performance gains - exhibiting a 56\\% relative improvement in decision stability under extreme noise - over traditional baselines. These results provide evidence for a shared organizational signature across heterogeneous domains, establishing a principled paradigm for cross-disciplinary knowledge propagation. By shifting from opaque latent representations to explicit structural laws, this work advances machine learning as a robust engine for scientific discovery.",
+    "authors": [
+      "Daniele Caligiore"
+    ],
+    "published": "2026-02-09",
+    "categories": [
+      "cs.LG",
+      "physics.soc-ph",
+      "q-bio.QM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.09116v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.09116v1",
+    "fetched_at": "2026-02-11T08:55:11.809687",
+    "chinese_title": "重要性反转迁移识别跨域学习的共享原则",
+    "chinese_summary": "本文提出可解释跨域迁移学习（X-CDTL）框架，结合网络科学与可解释AI，引入重要性反转迁移（IIT）机制优先关注域不变结构锚点；在异常检测任务中，该模型极端噪声下决策稳定性相对提升56%，证明异构领域存在共享组织特征，为跨学科知识传播建立原则性范式。",
+    "tags": [
+      "Anomaly",
+      "Deep Learning",
+      "Graph Neural Network"
+    ],
+    "key_contributions": [
+      "提出可解释跨域迁移学习（X-CDTL）框架及重要性反转迁移（IIT）机制，识别异构领域的结构不变量",
+      "在异常检测任务中显著提升极端噪声下的决策稳定性，为跨学科知识传播建立原则性范式"
+    ],
+    "processed_at": "2026-02-11T09:00:50.873040"
+  },
+  {
+    "id": "2602.10090v1",
+    "title": "Agent World Model: Infinity Synthetic Environments for Agentic Reinforcement Learning",
+    "abstract": "Recent advances in large language model (LLM) have empowered autonomous agents to perform complex tasks that require multi-turn interactions with tools and environments. However, scaling such agent training is limited by the lack of diverse and reliable environments. In this paper, we propose Agent World Model (AWM), a fully synthetic environment generation pipeline. Using this pipeline, we scale to 1,000 environments covering everyday scenarios, in which agents can interact with rich toolsets (35 tools per environment on average) and obtain high-quality observations. Notably, these environments are code-driven and backed by databases, providing more reliable and consistent state transitions than environments simulated by LLMs. Moreover, they enable more efficient agent interaction compared with collecting trajectories from realistic environments. To demonstrate the effectiveness of this resource, we perform large-scale reinforcement learning for multi-turn tool-use agents. Thanks to the fully executable environments and accessible database states, we can also design reliable reward functions. Experiments on three benchmarks show that training exclusively in synthetic environments, rather than benchmark-specific ones, yields strong out-of-distribution generalization. The code is available at https://github.com/Snowflake-Labs/agent-world-model.",
+    "authors": [
+      "Zhaoyang Wang",
+      "Canwen Xu",
+      "Boyi Liu",
+      "Yite Wang",
+      "Siwei Han",
+      "Zhewei Yao",
+      "Huaxiu Yao",
+      "Yuxiong He"
+    ],
+    "published": "2026-02-10",
+    "categories": [
+      "cs.AI",
+      "cs.CL",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.10090v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.10090v1",
+    "fetched_at": "2026-02-11T08:55:39.893647",
+    "chinese_title": "Agent World Model：面向智能体强化学习的无限合成环境",
+    "chinese_summary": "本文针对智能体训练缺乏多样可靠环境的问题，提出全合成环境生成 pipeline Agent World Model（AWM），生成1000个日常场景环境（平均每环境35个工具），状态转移更可靠且交互效率更高；实验表明仅在合成环境训练的多轮工具使用智能体具有强分布外泛化能力。",
+    "tags": [
+      "LLM",
+      "Reinforcement Learning",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出Agent World Model（AWM）全合成环境生成 pipeline，生成多样可靠的日常场景环境，支持高效智能体交互与可靠奖励设计",
+      "实验验证仅在合成环境训练的多轮工具使用智能体具有强分布外泛化能力"
+    ],
+    "processed_at": "2026-02-11T09:01:08.491394"
+  },
+  {
+    "id": "2602.10085v1",
+    "title": "CODE-SHARP: Continuous Open-ended Discovery and Evolution of Skills as Hierarchical Reward Programs",
+    "abstract": "Developing agents capable of open-endedly discovering and learning novel skills is a grand challenge in Artificial Intelligence. While reinforcement learning offers a powerful framework for training agents to master complex skills, it typically relies on hand-designed reward functions. This is infeasible for open-ended skill discovery, where the set of meaningful skills is not known a priori. While recent methods have shown promising results towards automating reward function design, they remain limited to refining rewards for pre-defined tasks. To address this limitation, we introduce Continuous Open-ended Discovery and Evolution of Skills as Hierarchical Reward Programs (CODE-SHARP), a novel framework leveraging Foundation Models (FM) to open-endedly expand and refine a hierarchical skill archive, structured as a directed graph of executable reward functions in code. We show that a goal-conditioned agent trained exclusively on the rewards generated by the discovered SHARP skills learns to solve increasingly long-horizon goals in the Craftax environment. When composed by a high-level FM-based planner, the discovered skills enable a single goal-conditioned agent to solve complex, long-horizon tasks, outperforming both pretrained agents and task-specific expert policies by over $134$% on average. We will open-source our code and provide additional videos $\\href{https://sites.google.com/view/code-sharp/homepage}{here}$.",
+    "authors": [
+      "Richard Bornemann",
+      "Pierluigi Vito Amadori",
+      "Antoine Cully"
+    ],
+    "published": "2026-02-10",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.10085v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.10085v1",
+    "fetched_at": "2026-02-11T08:55:39.893676",
+    "chinese_title": "CODE-SHARP：基于分层奖励程序的技能连续开放式发现与演化",
+    "chinese_summary": "该论文针对强化学习依赖手工设计奖励函数无法支持开放式技能发现的问题，提出CODE-SHARP框架，利用基础模型构建分层技能档案（代码形式的可执行奖励函数有向图），实现技能的连续开放式发现与演化；实验表明，基于该框架发现的技能训练的目标条件agent，结合高层基础模型 planner后，在Craftax环境中解决复杂长horizon任务的性能比预训练agent和任务特定专家策略平均超134%。",
+    "tags": [
+      "LLM",
+      "Reinforcement Learning",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出CODE-SHARP框架，利用基础模型实现技能的连续开放式发现与演化，突破强化学习依赖手工奖励函数的局限",
+      "实验验证该框架下的目标条件agent结合高层基础模型 planner，在Craftax环境中复杂长horizon任务性能显著优于基准方法（平均超134%）"
+    ],
+    "processed_at": "2026-02-11T09:01:23.375228"
+  },
+  {
+    "id": "2602.10081v1",
+    "title": "Anagent For Enhancing Scientific Table & Figure Analysis",
+    "abstract": "In scientific research, analysis requires accurately interpreting complex multimodal knowledge, integrating evidence from different sources, and drawing inferences grounded in domain-specific knowledge. However, current artificial intelligence (AI) systems struggle to consistently demonstrate such capabilities. The complexity and variability of scientific tables and figures, combined with heterogeneous structures and long-context requirements, pose fundamental obstacles to scientific table \\& figure analysis. To quantify these challenges, we introduce AnaBench, a large-scale benchmark featuring $63,178$ instances from nine scientific domains, systematically categorized along seven complexity dimensions. To tackle these challenges, we propose Anagent, a multi-agent framework for enhanced scientific table \\& figure analysis through four specialized agents: Planner decomposes tasks into actionable subtasks, Expert retrieves task-specific information through targeted tool execution, Solver synthesizes information to generate coherent analysis, and Critic performs iterative refinement through five-dimensional quality assessment. We further develop modular training strategies that leverage supervised finetuning and specialized reinforcement learning to optimize individual capabilities while maintaining effective collaboration. Comprehensive evaluation across 170 subdomains demonstrates that Anagent achieves substantial improvements, up to $\\uparrow 13.43\\%$ in training-free settings and $\\uparrow 42.12\\%$ with finetuning, while revealing that task-oriented reasoning and context-aware problem-solving are essential for high-quality scientific table \\& figure analysis. Our project page: https://xhguo7.github.io/Anagent/.",
+    "authors": [
+      "Xuehang Guo",
+      "Zhiyong Lu",
+      "Tom Hope",
+      "Qingyun Wang"
+    ],
+    "published": "2026-02-10",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.10081v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.10081v1",
+    "fetched_at": "2026-02-11T08:55:39.893702",
+    "chinese_title": "Anagent：增强科学表格与图表分析的多智能体框架",
+    "chinese_summary": "论文针对科学表格与图表分析的多模态、异质结构等挑战，构建含9个领域63178个实例的基准AnaBench；提出四代理协作的Anagent框架（规划、专家、求解、批评），结合监督微调与强化学习优化；实验显示其无训练设置下性能提升达13.43%。",
+    "tags": [
+      "LLM",
+      "Benchmark",
+      "Reinforcement Learning"
+    ],
+    "key_contributions": [
+      "构建包含9个科学领域63178个实例、按7个复杂度维度分类的大规模基准AnaBench",
+      "提出四代理协作的Anagent框架，通过模块化训练（监督微调+强化学习）优化科学表格与图表分析能力，实验验证其显著性能提升"
+    ],
+    "processed_at": "2026-02-11T09:01:37.661746"
+  },
+  {
+    "id": "2602.10015v1",
+    "title": "RoboSubtaskNet: Temporal Sub-task Segmentation for Human-to-Robot Skill Transfer in Real-World Environments",
+    "abstract": "Temporally locating and classifying fine-grained sub-task segments in long, untrimmed videos is crucial to safe human-robot collaboration. Unlike generic activity recognition, collaborative manipulation requires sub-task labels that are directly robot-executable. We present RoboSubtaskNet, a multi-stage human-to-robot sub-task segmentation framework that couples attention-enhanced I3D features (RGB plus optical flow) with a modified MS-TCN employing a Fibonacci dilation schedule to capture better short-horizon transitions such as reach-pick-place. The network is trained with a composite objective comprising cross-entropy and temporal regularizers (truncated MSE and a transition-aware term) to reduce over-segmentation and to encourage valid sub-task progressions. To close the gap between vision benchmarks and control, we introduce RoboSubtask, a dataset of healthcare and industrial demonstrations annotated at the sub-task level and designed for deterministic mapping to manipulator primitives. Empirically, RoboSubtaskNet outperforms MS-TCN and MS-TCN++ on GTEA and our RoboSubtask benchmark (boundary-sensitive and sequence metrics), while remaining competitive on the long-horizon Breakfast benchmark. Specifically, RoboSubtaskNet attains F1 @ 50 = 79.5%, Edit = 88.6%, Acc = 78.9% on GTEA; F1 @ 50 = 30.4%, Edit = 52.0%, Acc = 53.5% on Breakfast; and F1 @ 50 = 94.2%, Edit = 95.6%, Acc = 92.2% on RoboSubtask. We further validate the full perception-to-execution pipeline on a 7-DoF Kinova Gen3 manipulator, achieving reliable end-to-end behavior in physical trials (overall task success approx 91.25%). These results demonstrate a practical path from sub-task level video understanding to deployed robotic manipulation in real-world settings.",
+    "authors": [
+      "Dharmendra Sharma",
+      "Archit Sharma",
+      "John Reberio",
+      "Vaibhav Kesharwani",
+      "Peeyush Thakur",
+      "Narendra Kumar Dhar",
+      "Laxmidhar Behera"
+    ],
+    "published": "2026-02-10",
+    "categories": [
+      "cs.RO",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.10015v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.10015v1",
+    "fetched_at": "2026-02-11T08:55:39.893730",
+    "chinese_title": "RoboSubtaskNet：真实环境下人机技能转移的时间子任务分割方法",
+    "chinese_summary": "论文提出RoboSubtaskNet多阶段框架，结合注意力增强I3D特征与改进的MS-TCN（采用斐波那契膨胀调度）实现长视频细粒度子任务分割；构建RoboSubtask数据集（医疗/工业演示，可映射机械臂原语）填补视觉与控制的 gap，且在多个基准上性能优于对比方法并验证感知-执行 pipeline。",
+    "tags": [
+      "Deep Learning",
+      "Time Series",
+      "Execution"
+    ],
+    "key_contributions": [
+      "提出RoboSubtaskNet多阶段子任务分割框架，通过注意力增强I3D特征与改进MS-TCN提升短 horizon 过渡（如reach-pick-place）的捕捉能力",
+      "构建RoboSubtask数据集（医疗/工业场景演示，标注子任务并可映射机械臂原语）",
+      "验证感知到执行的完整 pipeline 在7自由度机械臂上的有效性，且在多个基准上性能优于MS-TCN等方法"
+    ],
+    "processed_at": "2026-02-11T09:01:57.447420"
+  },
+  {
+    "id": "2602.09940v1",
+    "title": "Instruct2Act: From Human Instruction to Actions Sequencing and Execution via Robot Action Network for Robotic Manipulation",
+    "abstract": "Robots often struggle to follow free-form human instructions in real-world settings due to computational and sensing limitations. We address this gap with a lightweight, fully on-device pipeline that converts natural-language commands into reliable manipulation. Our approach has two stages: (i) the instruction to actions module (Instruct2Act), a compact BiLSTM with a multi-head-attention autoencoder that parses an instruction into an ordered sequence of atomic actions (e.g., reach, grasp, move, place); and (ii) the robot action network (RAN), which uses the dynamic adaptive trajectory radial network (DATRN) together with a vision-based environment analyzer (YOLOv8) to generate precise control trajectories for each sub-action. The entire system runs on a modest system with no cloud services. On our custom proprietary dataset, Instruct2Act attains 91.5% sub-actions prediction accuracy while retaining a small footprint. Real-robot evaluations across four tasks (pick-place, pick-pour, wipe, and pick-give) yield an overall 90% success; sub-action inference completes in < 3.8s, with end-to-end executions in 30-60s depending on task complexity. These results demonstrate that fine-grained instruction-to-action parsing, coupled with DATRN-based trajectory generation and vision-guided grounding, provides a practical path to deterministic, real-time manipulation in resource-constrained, single-camera settings.",
+    "authors": [
+      "Archit Sharma",
+      "Dharmendra Sharma",
+      "John Rebeiro",
+      "Peeyush Thakur",
+      "Narendra Dhar",
+      "Laxmidhar Behera"
+    ],
+    "published": "2026-02-10",
+    "categories": [
+      "cs.RO",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.09940v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.09940v1",
+    "fetched_at": "2026-02-11T08:55:39.893757",
+    "chinese_title": "Instruct2Act：基于机器人动作网络实现从人类指令到动作序列及执行的机器人操作",
+    "chinese_summary": "论文提出轻量全端侧管道Instruct2Act，通过带多头注意力自编码器的紧凑BiLSTM将自然语言指令解析为原子动作序列，再结合含动态自适应轨迹径向网络（DATRN）和YOLOv8视觉分析器的机器人动作网络（RAN）生成精确控制轨迹，无需云端服务，在自定义数据集和四任务真实机器人评估中表现优异。",
+    "tags": [
+      "Deep Learning",
+      "NLP",
+      "Execution"
+    ],
+    "key_contributions": [
+      "提出轻量全端侧Instruct2Act管道，无需云端即可实现自然语言指令到可靠机器人操作的转换",
+      "结合动作序列解析与视觉引导轨迹生成，在资源受限单相机场景实现高效准确的机器人操作"
+    ],
+    "processed_at": "2026-02-11T09:02:10.205426"
+  },
+  {
+    "id": "2602.09937v1",
+    "title": "Why Do AI Agents Systematically Fail at Cloud Root Cause Analysis?",
+    "abstract": "Failures in large-scale cloud systems incur substantial financial losses, making automated Root Cause Analysis (RCA) essential for operational stability. Recent efforts leverage Large Language Model (LLM) agents to automate this task, yet existing systems exhibit low detection accuracy even with capable models, and current evaluation frameworks assess only final answer correctness without revealing why the agent's reasoning failed. This paper presents a process level failure analysis of LLM-based RCA agents. We execute the full OpenRCA benchmark across five LLM models, producing 1,675 agent runs, and classify observed failures into 12 pitfall types across intra-agent reasoning, inter-agent communication, and agent-environment interaction. Our analysis reveals that the most prevalent pitfalls, notably hallucinated data interpretation and incomplete exploration, persist across all models regardless of capability tier, indicating that these failures originate from the shared agent architecture rather than from individual model limitations. Controlled mitigation experiments further show that prompt engineering alone cannot resolve the dominant pitfalls, whereas enriching the inter-agent communication protocol reduces communication-related failures by up to 15 percentage points. The pitfall taxonomy and diagnostic methodology developed in this work provide a foundation for designing more reliable autonomous agents for cloud RCA.",
+    "authors": [
+      "Taeyoon Kim",
+      "Woohyeok Park",
+      "Hoyeong Yun",
+      "Kyungyong Lee"
+    ],
+    "published": "2026-02-10",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.09937v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.09937v1",
+    "fetched_at": "2026-02-11T08:55:39.893785",
+    "chinese_title": "为何AI智能体在云根因分析中系统性失败？",
+    "chinese_summary": "本文针对LLM智能体在云根因分析（RCA）中的系统性失败问题，通过在OpenRCA基准上运行5个LLM模型共1675次实验，将失败分为12类（覆盖智能体内推理、跨智能体通信及智能体-环境交互）；发现主导缺陷（如幻觉数据解读、探索不完整）源于共享架构而非模型能力，提示工程无法解决但丰富跨智能体通信协议可降低通信类失败15个百分点；并提出缺陷分类法与诊断方法，为可靠云RCA智能体设计奠定基础。",
+    "tags": [
+      "LLM",
+      "Anomaly",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "系统分析LLM智能体在云根因分析中的失败，提出12类缺陷分类法及诊断方法",
+      "揭示主导缺陷源于共享架构而非模型能力，验证丰富跨智能体通信协议可有效降低通信类失败"
+    ],
+    "processed_at": "2026-02-11T09:02:31.263481"
+  },
+  {
+    "id": "2602.09856v1",
+    "title": "Code2World: A GUI World Model via Renderable Code Generation",
+    "abstract": "Autonomous GUI agents interact with environments by perceiving interfaces and executing actions. As a virtual sandbox, the GUI World model empowers agents with human-like foresight by enabling action-conditioned prediction. However, existing text- and pixel-based approaches struggle to simultaneously achieve high visual fidelity and fine-grained structural controllability. To this end, we propose Code2World, a vision-language coder that simulates the next visual state via renderable code generation. Specifically, to address the data scarcity problem, we construct AndroidCode by translating GUI trajectories into high-fidelity HTML and refining synthesized code through a visual-feedback revision mechanism, yielding a corpus of over 80K high-quality screen-action pairs. To adapt existing VLMs into code prediction, we first perform SFT as a cold start for format layout following, then further apply Render-Aware Reinforcement Learning which uses rendered outcome as the reward signal by enforcing visual semantic fidelity and action consistency. Extensive experiments demonstrate that Code2World-8B achieves the top-performing next UI prediction, rivaling the competitive GPT-5 and Gemini-3-Pro-Image. Notably, Code2World significantly enhances downstream navigation success rates in a flexible manner, boosting Gemini-2.5-Flash by +9.5% on AndroidWorld navigation. The code is available at https://github.com/AMAP-ML/Code2World.",
+    "authors": [
+      "Yuhao Zheng",
+      "Li'an Zhong",
+      "Yi Wang",
+      "Rui Dai",
+      "Kaikui Liu",
+      "Xiangxiang Chu",
+      "Linyuan Lv",
+      "Philip Torr",
+      "Kevin Qinghong Lin"
+    ],
+    "published": "2026-02-10",
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.CL",
+      "cs.HC"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.09856v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.09856v1",
+    "fetched_at": "2026-02-11T08:55:39.893849",
+    "chinese_title": "Code2World：基于可渲染代码生成的GUI世界模型",
+    "chinese_summary": "针对现有GUI世界模型难以同时兼顾高视觉保真与细粒度结构可控的问题，提出Code2World——通过可渲染代码生成模拟下一视觉状态的视觉语言编码器；构建含80K+高质量屏幕-动作对的AndroidCode数据集，采用SFT冷启动+渲染感知强化学习（以渲染结果为奖励）的方法；实验显示其UI预测性能顶尖，且显著提升下游导航成功率（如Gemini-2.5-Flash的Android导航成功率提升9.5%）。",
+    "tags": [
+      "LLM",
+      "Reinforcement Learning",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "构建了包含80K+高质量屏幕-动作对的AndroidCode数据集，通过HTML转化与视觉反馈修正缓解GUI世界模型的数据稀缺问题",
+      "提出Code2World模型，基于可渲染代码生成实现高视觉保真与细粒度结构可控的GUI状态预测，结合SFT冷启动与渲染感知强化学习，显著提升UI预测性能与下游导航成功率"
+    ],
+    "processed_at": "2026-02-11T09:02:51.081634"
+  },
+  {
+    "id": "2602.09798v1",
+    "title": "Symbolic Pattern Temporal Numeric Planning with Intermediate Conditions and Effects",
+    "abstract": "Recently, a Symbolic Pattern Planning (SPP) approach was proposed for numeric planning where a pattern (i.e., a finite sequence of actions) suggests a causal order between actions. The pattern is then encoded in a SMT formula whose models correspond to valid plans. If the suggestion by the pattern is inaccurate and no valid plan can be found, the pattern is extended until it contains the causal order of actions in a valid plan, making the approach complete. In this paper, we extend the SPP approach to the temporal planning with Intermediate Conditions and Effects (ICEs) fragment, where $(i)$ actions are durative (and thus can overlap over time) and have conditions/effects which can be checked/applied at any time during an action's execution, and $(ii)$ one can specify plan's conditions/effects that must be checked/applied at specific times during the plan execution. Experimental results show that our SPP planner Patty $(i)$ outperforms all other planners in the literature in the majority of temporal domains without ICEs, $(ii)$ obtains comparable results with the SoTA search planner for ICS in literature domains with ICEs, and $(iii)$ outperforms the same planner in a novel domain based on a real-world application.",
+    "authors": [
+      "Matteo Cardellini",
+      "Enrico Giunchiglia"
+    ],
+    "published": "2026-02-10",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.09798v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.09798v1",
+    "fetched_at": "2026-02-11T08:55:39.893869",
+    "chinese_title": "带中间条件和效果的符号模式时态数值规划",
+    "chinese_summary": "论文将符号模式规划（SPP）方法扩展到带中间条件和效果（ICEs）的时态规划场景，支持持续动作（可重叠）及执行中任意时间的条件/效果检查应用，还能指定计划在特定时间的条件/效果；实验表明其规划器Patty在无ICEs的多数时态领域优于现有方法，与ICEs领域的SoTA搜索规划器结果相当，且在真实应用衍生的新领域中更优。",
+    "tags": [
+      "Algorithmic Trading",
+      "Execution",
+      "Portfolio Optimization"
+    ],
+    "key_contributions": [
+      "扩展符号模式规划（SPP）至带中间条件和效果（ICEs）的时态规划，支持持续动作重叠、执行中条件/效果检查及计划特定时间条件/效果指定",
+      "提出的规划器Patty在多数无ICEs时态领域优于现有方法，ICEs领域与SoTA相当，真实应用衍生领域表现更优"
+    ],
+    "processed_at": "2026-02-11T09:03:10.224162"
+  },
+  {
+    "id": "2602.09598v1",
+    "title": "Learning from the Irrecoverable: Error-Localized Policy Optimization for Tool-Integrated LLM Reasoning",
+    "abstract": "Tool-integrated reasoning (TIR) enables LLM agents to solve tasks through planning, tool use, and iterative revision, but outcome-only reinforcement learning in this setting suffers from sparse, delayed rewards and weak step-level credit assignment. In long-horizon TIR trajectories, an early irrecoverable mistake can determine success or failure, making it crucial to localize the first irrecoverable step and leverage it for fine-grained credit assignment. We propose Error-Localized Policy Optimization (ELPO), which localizes the first irrecoverable step via binary-search rollout trees under a fixed rollout budget, converts the resulting tree into stable learning signals through hierarchical advantage attribution, and applies error-localized adaptive clipping to strengthen corrective updates on the critical step and its suffix. Across TIR benchmarks in math, science QA, and code execution, ELPO consistently outperforms strong Agentic RL baselines under comparable sampling budgets, with additional gains in Pass@K and Major@K scaling, rollout ranking quality, and tool-call efficiency. Our code will be publicly released soon.",
+    "authors": [
+      "Qiao Liang",
+      "Yuke Zhu",
+      "Chao Ge",
+      "Lei Yang",
+      "Ying Shen",
+      "Bo Zheng",
+      "Sheng Guo"
+    ],
+    "published": "2026-02-10",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.09598v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.09598v1",
+    "fetched_at": "2026-02-11T08:55:39.893898",
+    "chinese_title": "从不可恢复错误中学习：面向工具集成LLM推理的错误定位策略优化",
+    "chinese_summary": "论文针对工具集成LLM推理（TIR）中结果-only强化学习的稀疏延迟奖励与弱步骤信用分配问题，提出错误定位策略优化（ELPO）方法：通过固定预算下的二分搜索滚动树定位首个不可恢复步骤，利用分层优势归因转化稳定学习信号，结合错误定位自适应裁剪强化关键步骤及其后续的修正更新；在数学、科学问答和代码执行等TIR基准上优于强Agentic RL基线，提升Pass@K等指标。",
+    "tags": [
+      "LLM",
+      "Reinforcement Learning",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出ELPO方法，通过二分搜索滚动树定位首个不可恢复步骤，解决TIR中稀疏奖励与弱步骤信用分配问题",
+      "在多类TIR基准上优于现有Agentic RL基线，提升Pass@K等关键指标及工具调用效率"
+    ],
+    "processed_at": "2026-02-11T09:03:27.419275"
+  },
+  {
+    "id": "2602.09580v1",
+    "title": "Sample-Efficient Real-World Dexterous Policy Fine-Tuning via Action-Chunked Critics and Normalizing Flows",
+    "abstract": "Real-world fine-tuning of dexterous manipulation policies remains challenging due to limited real-world interaction budgets and highly multimodal action distributions. Diffusion-based policies, while expressive, do not permit conservative likelihood-based updates during fine-tuning because action probabilities are intractable. In contrast, conventional Gaussian policies collapse under multimodality, particularly when actions are executed in chunks, and standard per-step critics fail to align with chunked execution, leading to poor credit assignment. We present SOFT-FLOW, a sample-efficient off-policy fine-tuning framework with normalizing flow (NF) to address these challenges. The normalizing flow policy yields exact likelihoods for multimodal action chunks, allowing conservative, stable policy updates through likelihood regularization and thereby improving sample efficiency. An action-chunked critic evaluates entire action sequences, aligning value estimation with the policy's temporal structure and improving long-horizon credit assignment. To our knowledge, this is the first demonstration of a likelihood-based, multimodal generative policy combined with chunk-level value learning on real robotic hardware. We evaluate SOFT-FLOW on two challenging dexterous manipulation tasks in the real world: cutting tape with scissors retrieved from a case, and in-hand cube rotation with a palm-down grasp -- both of which require precise, dexterous control over long horizons. On these tasks, SOFT-FLOW achieves stable, sample-efficient adaptation where standard methods struggle.",
+    "authors": [
+      "Chenyu Yang",
+      "Denis Tarasov",
+      "Davide Liconti",
+      "Hehui Zheng",
+      "Robert K. Katzschmann"
+    ],
+    "published": "2026-02-10",
+    "categories": [
+      "cs.RO",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.09580v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.09580v1",
+    "fetched_at": "2026-02-11T08:55:39.893923",
+    "chinese_title": "基于动作分块评论家与归一化流的样本高效真实世界灵巧策略微调",
+    "chinese_summary": "针对真实世界灵巧操作策略微调中样本有限、动作分布多模态的挑战，论文提出SOFT-FLOW框架：用归一化流策略获得多模态动作分块的精确似然以支持保守稳定更新，用动作分块评论家评估完整动作序列提升长期信用分配；该框架首次在真实机器人硬件上实现基于似然的多模态生成策略与分块级价值学习的结合，在剪刀取物切割、掌心立方体旋转两个复杂任务中验证有效。",
+    "tags": [
+      "Reinforcement Learning",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出SOFT-FLOW样本高效离线微调框架，结合归一化流与动作分块评论家，解决真实灵巧操作的样本效率与多模态动作分布问题",
+      "首次在真实机器人硬件上演示基于似然的多模态生成策略与分块级价值学习的结合，验证复杂长 horizon 灵巧任务的有效性"
+    ],
+    "processed_at": "2026-02-11T09:03:39.619540"
+  },
+  {
+    "id": "2602.09569v1",
+    "title": "Training deep physical neural networks with local physical information bottleneck",
+    "abstract": "Deep learning has revolutionized modern society but faces growing energy and latency constraints. Deep physical neural networks (PNNs) are interconnected computing systems that directly exploit analog dynamics for energy-efficient, ultrafast AI execution. Realizing this potential, however, requires universal training methods tailored to physical intricacies. Here, we present the Physical Information Bottleneck (PIB), a general and efficient framework that integrates information theory and local learning, enabling deep PNNs to learn under arbitrary physical dynamics. By allocating matrix-based information bottlenecks to each unit, we demonstrate supervised, unsupervised, and reinforcement learning across electronic memristive chips and optical computing platforms. PIB also adapts to severe hardware faults and allows for parallel training via geographically distributed resources. Bypassing auxiliary digital models and contrastive measurements, PIB recasts PNN training as an intrinsic, scalable information-theoretic process compatible with diverse physical substrates.",
+    "authors": [
+      "Hao Wang",
+      "Ziao Wang",
+      "Xiangpeng Liang",
+      "Han Zhao",
+      "Jianqi Hu",
+      "Junjie Jiang",
+      "Xing Fu",
+      "Jianshi Tang",
+      "Huaqiang Wu",
+      "Sylvain Gigan",
+      "Qiang Liu"
+    ],
+    "published": "2026-02-10",
+    "categories": [
+      "cs.LG",
+      "physics.app-ph"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.09569v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.09569v1",
+    "fetched_at": "2026-02-11T08:55:39.893958",
+    "chinese_title": "基于局部物理信息瓶颈的深度物理神经网络训练",
+    "chinese_summary": "论文提出物理信息瓶颈（PIB）框架，整合信息论与局部学习适配任意物理动力学，支持电子忆阻器芯片和光学计算平台的多任务学习（监督、无监督、强化学习）；PIB无需辅助数字模型，可适应硬件故障并支持分布式并行训练，是可扩展的内在信息论训练方法。",
+    "tags": [
+      "Deep Learning",
+      "Reinforcement Learning"
+    ],
+    "key_contributions": [
+      "提出通用高效的PIB框架，整合信息论与局部学习实现任意物理动力学下的深度物理神经网络训练",
+      "PIB支持多硬件平台多任务学习，适应硬件故障且可分布式并行训练，无需辅助数字模型"
+    ],
+    "processed_at": "2026-02-11T09:03:48.772885"
+  },
+  {
+    "id": "2602.09566v1",
+    "title": "ECG-IMN: Interpretable Mesomorphic Neural Networks for 12-Lead Electrocardiogram Interpretation",
+    "abstract": "Deep learning has achieved expert-level performance in automated electrocardiogram (ECG) diagnosis, yet the \"black-box\" nature of these models hinders their clinical deployment. Trust in medical AI requires not just high accuracy but also transparency regarding the specific physiological features driving predictions. Existing explainability methods for ECGs typically rely on post-hoc approximations (e.g., Grad-CAM and SHAP), which can be unstable, computationally expensive, and unfaithful to the model's actual decision-making process. In this work, we propose the ECG-IMN, an Interpretable Mesomorphic Neural Network tailored for high-resolution 12-lead ECG classification. Unlike standard classifiers, the ECG-IMN functions as a hypernetwork: a deep convolutional backbone generates the parameters of a strictly linear model specific to each input sample. This architecture enforces intrinsic interpretability, as the decision logic is mathematically transparent and the generated weights (W) serve as exact, high-resolution feature attribution maps. We introduce a transition decoder that effectively maps latent features to sample-wise weights, enabling precise localization of pathological evidence (e.g., ST-elevation, T-wave inversion) in both time and lead dimensions. We evaluate our approach on the PTB-XL dataset for classification tasks, demonstrating that the ECG-IMN achieves competitive predictive performance (AUROC comparable to black-box baselines) while providing faithful, instance-specific explanations. By explicitly decoupling parameter generation from prediction execution, our framework bridges the gap between deep learning capability and clinical trustworthiness, offering a principled path toward \"white-box\" cardiac diagnostics.",
+    "authors": [
+      "Vajira Thambawita",
+      "Jonas L. Isaksen",
+      "Jørgen K. Kanters",
+      "Hugo L. Hammer",
+      "Pål Halvorsen"
+    ],
+    "published": "2026-02-10",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CV",
+      "stat.ME"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.09566v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.09566v1",
+    "fetched_at": "2026-02-11T08:55:39.893983",
+    "chinese_title": "ECG-IMN：用于12导联心电图解读的可解释中观神经网络",
+    "chinese_summary": "针对心电图诊断中深度学习模型“黑箱”问题，提出ECG-IMN可解释中观神经网络，通过超网络架构生成样本特定线性模型参数实现内在可解释，引入过渡解码器定位时间和导联维度的病理证据，且在PTB-XL数据集上预测性能（AUROC）与黑箱基线相当。",
+    "tags": [
+      "Deep Learning",
+      "Time Series"
+    ],
+    "key_contributions": [
+      "提出ECG-IMN可解释中观神经网络，采用超网络架构生成样本特定线性模型参数，实现决策逻辑透明的内在可解释性，生成的权重为精确高分辨率特征归因图。",
+      "引入过渡解码器映射潜在特征到样本权重，实现病理证据在时间和导联维度的精确定位，且在PTB-XL数据集上达到与黑箱模型相当的预测性能（AUROC）。"
+    ],
+    "processed_at": "2026-02-11T09:04:06.150044"
+  },
+  {
+    "id": "2602.09530v1",
+    "title": "Learning to Discover Iterative Spectral Algorithms",
+    "abstract": "We introduce AutoSpec, a neural network framework for discovering iterative spectral algorithms for large-scale numerical linear algebra and numerical optimization. Our self-supervised models adapt to input operators using coarse spectral information (e.g., eigenvalue estimates and residual norms), and they predict recurrence coefficients for computing or applying a matrix polynomial tailored to a downstream task. The effectiveness of AutoSpec relies on three ingredients: an architecture whose inference pass implements short, executable numerical linear algebra recurrences; efficient training on small synthetic problems with transfer to large-scale real-world operators; and task-defined objectives that enforce the desired approximation or preconditioning behavior across the range of spectral profiles represented in the training set. We apply AutoSpec to discovering algorithms for representative numerical linear algebra tasks: accelerating matrix-function approximation; accelerating sparse linear solvers; and spectral filtering/preconditioning for eigenvalue computations. On real-world matrices, the learned procedures deliver orders-of-magnitude improvements in accuracy and/or reductions in iteration count, relative to basic baselines. We also find clear connections to classical theory: the induced polynomials often exhibit near-equiripple, near-minimax behavior characteristic of Chebyshev polynomials.",
+    "authors": [
+      "Zihang Liu",
+      "Oleg Balabanov",
+      "Yaoqing Yang",
+      "Michael W. Mahoney"
+    ],
+    "published": "2026-02-10",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "math.NA"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.09530v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.09530v1",
+    "fetched_at": "2026-02-11T08:55:39.894005",
+    "chinese_title": "学习发现迭代谱算法",
+    "chinese_summary": "论文提出AutoSpec神经网络框架，通过自监督学习利用粗谱信息（如特征值估计、残差范数）预测递推系数，自动发现大规模数值线性代数与优化的迭代谱算法；该框架在矩阵函数近似加速、稀疏线性求解等任务中，学习算法比基准方法实现数量级精度提升或迭代次数减少，且诱导多项式接近经典切比雪夫多项式的极小极大特性。",
+    "tags": [
+      "Deep Learning",
+      "Portfolio Optimization"
+    ],
+    "key_contributions": [
+      "提出AutoSpec自监督神经网络框架，可适配输入算子并自动发现迭代谱算法，适用于大规模数值线性代数与优化任务",
+      "学习算法在真实矩阵任务中性能显著优于基准方法，且诱导多项式连接AI方法与经典极小极大理论"
+    ],
+    "processed_at": "2026-02-11T09:04:32.979289"
+  },
+  {
+    "id": "2602.09514v1",
+    "title": "EcoGym: Evaluating LLMs for Long-Horizon Plan-and-Execute in Interactive Economies",
+    "abstract": "Long-horizon planning is widely recognized as a core capability of autonomous LLM-based agents; however, current evaluation frameworks suffer from being largely episodic, domain-specific, or insufficiently grounded in persistent economic dynamics. We introduce EcoGym, a generalizable benchmark for continuous plan-and-execute decision making in interactive economies. EcoGym comprises three diverse environments: Vending, Freelance, and Operation, implemented in a unified decision-making process with standardized interfaces, and budgeted actions over an effectively unbounded horizon (1000+ steps if 365 day-loops for evaluation). The evaluation of EcoGym is based on business-relevant outcomes (e.g., net worth, income, and DAU), targeting long-term strategic coherence and robustness under partial observability and stochasticity. Experiments across eleven leading LLMs expose a systematic tension: no single model dominates across all three scenarios. Critically, we find that models exhibit significant suboptimality in either high-level strategies or efficient actions executions. EcoGym is released as an open, extensible testbed for transparent long-horizon agent evaluation and for studying controllability-utility trade-offs in realistic economic settings.",
+    "authors": [
+      "Xavier Hu",
+      "Jinxiang Xia",
+      "Shengze Xu",
+      "Kangqi Song",
+      "Yishuo Yuan",
+      "Guibin Zhang",
+      "Jincheng Ren",
+      "Boyu Feng",
+      "Li Lu",
+      "Tieyong Zeng",
+      "Jiaheng Liu",
+      "Minghao Liu",
+      "Yuchen Elenor Jiang",
+      "Wei Wang",
+      "He Zhu",
+      "Wangchunshu Zhou"
+    ],
+    "published": "2026-02-10",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.09514v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.09514v1",
+    "fetched_at": "2026-02-11T08:55:39.894048",
+    "chinese_title": "EcoGym：评估LLM在交互式经济中的长周期规划与执行能力",
+    "chinese_summary": "本文针对现有LLM长周期规划评估框架的不足，提出EcoGym基准——包含三个交互式经济环境、统一决策流程及长horizon设置，基于业务结果评估代理表现；实验表明领先LLM无通吃场景表现，且在策略或执行上存在显著次优性，该基准开源用于透明评估与研究。",
+    "tags": [
+      "LLM",
+      "Financial Agent",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出EcoGym通用基准，包含三个多样化交互式经济环境、统一决策流程及长horizon设置，基于业务结果评估LLM代理的长期战略一致性与鲁棒性",
+      "通过十一个领先LLM的实验揭示模型在长周期规划与执行中的系统性张力（无通吃表现、策略/执行次优），并开源该基准供透明评估与研究"
+    ],
+    "processed_at": "2026-02-11T09:04:53.487469"
+  },
+  {
+    "id": "2602.09433v1",
+    "title": "Autonomous Action Runtime Management(AARM):A System Specification for Securing AI-Driven Actions at Runtime",
+    "abstract": "As artificial intelligence systems evolve from passive assistants into autonomous agents capable of executing consequential actions, the security boundary shifts from model outputs to tool execution. Traditional security paradigms - log aggregation, perimeter defense, and post-hoc forensics - cannot protect systems where AI-driven actions are irreversible, execute at machine speed, and originate from potentially compromised orchestration layers. This paper introduces Autonomous Action Runtime Management (AARM), an open specification for securing AI-driven actions at runtime. AARM defines a runtime security system that intercepts actions before execution, accumulates session context, evaluates against policy and intent alignment, enforces authorization decisions, and records tamper-evident receipts for forensic reconstruction. We formalize a threat model addressing prompt injection, confused deputy attacks, data exfiltration, and intent drift. We introduce an action classification framework distinguishing forbidden, context-dependent deny, and context-dependent allow actions. We propose four implementation architectures - protocol gateway, SDK instrumentation, kernel eBPF, and vendor integration - with distinct trust properties, and specify minimum conformance requirements for AARM-compliant systems. AARM is model-agnostic, framework-agnostic, and vendor-neutral, treating action execution as the stable security boundary. This specification aims to establish industry-wide requirements before proprietary fragmentation forecloses interoperability.",
+    "authors": [
+      "Herman Errico"
+    ],
+    "published": "2026-02-10",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.09433v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.09433v1",
+    "fetched_at": "2026-02-11T08:55:39.894066",
+    "chinese_title": "自主行动运行时管理(AARM)：一种保障AI驱动行动运行时安全的系统规范",
+    "chinese_summary": "针对AI自主行动的不可逆、机器速度执行等特性导致传统安全范式失效的问题，本文提出自主行动运行时管理(AARM)规范，定义了拦截执行前行动、积累会话上下文、评估策略与意图对齐、授权决策及记录防篡改收据的运行时安全系统；同时形式化威胁模型，提出行动分类框架及四种实现架构，旨在建立行业安全要求。",
+    "tags": [
+      "Financial Agent",
+      "Risk Management",
+      "Algorithmic Trading"
+    ],
+    "key_contributions": [
+      "提出AARM规范，定义运行时安全系统（拦截执行前行动、上下文积累、策略/意图对齐评估、授权及防篡改记录），弥补传统安全范式对AI自主行动的防护不足",
+      "形式化AI自主行动的威胁模型，提出行动分类框架及四种实现架构，且规范具有模型/框架/厂商无关性"
+    ],
+    "processed_at": "2026-02-11T09:05:15.962161"
+  },
+  {
+    "id": "2602.10042v1",
+    "title": "Fake-HR1: Rethinking reasoning of vision language model for synthetic image detection",
+    "abstract": "Recent studies have demonstrated that incorporating Chain-of-Thought (CoT) reasoning into the detection process can enhance a model's ability to detect synthetic images. However, excessively lengthy reasoning incurs substantial resource overhead, including token consumption and latency, which is particularly redundant when handling obviously generated forgeries. To address this issue, we propose Fake-HR1, a large-scale hybrid-reasoning model that, to the best of our knowledge, is the first to adaptively determine whether reasoning is necessary based on the characteristics of the generative detection task. To achieve this, we design a two-stage training framework: we first perform Hybrid Fine-Tuning (HFT) for cold-start initialization, followed by online reinforcement learning with Hybrid-Reasoning Grouped Policy Optimization (HGRPO) to implicitly learn when to select an appropriate reasoning mode. Experimental results show that Fake-HR1 adaptively performs reasoning across different types of queries, surpassing existing LLMs in both reasoning ability and generative detection performance, while significantly improving response efficiency.",
+    "authors": [
+      "Changjiang Jiang",
+      "Xinkuan Sha",
+      "Fengchang Yu",
+      "Jingjing Liu",
+      "Jian Liu",
+      "Mingqi Fang",
+      "Chenfeng Zhang",
+      "Wei Lu"
+    ],
+    "published": "2026-02-10",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.10042v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.10042v1",
+    "fetched_at": "2026-02-11T08:55:58.656292",
+    "chinese_title": "Fake-HR1：重新思考视觉语言模型的推理以用于合成图像检测",
+    "chinese_summary": "针对传统Chain-of-Thought（CoT）推理在合成图像检测中过长导致资源冗余的问题，本文提出Fake-HR1混合推理模型，首次自适应判断是否需要推理；该模型通过混合微调冷启动与HGRPO在线强化学习的两阶段训练，实验证明其在推理能力、检测性能上超越现有LLM且显著提升响应效率。",
+    "tags": [
+      "LLM",
+      "Deep Learning",
+      "Reinforcement Learning"
+    ],
+    "key_contributions": [
+      "提出首个自适应判断合成图像检测中是否需要推理的混合推理模型Fake-HR1，解决长推理的资源冗余问题",
+      "设计混合微调+HGRPO在线强化学习的两阶段训练框架，隐式学习推理模式选择，平衡性能与响应效率",
+      "实验验证模型在推理能力、检测性能上超越现有LLM，同时显著提升响应效率"
+    ],
+    "processed_at": "2026-02-11T09:05:39.435222"
+  }
+]
