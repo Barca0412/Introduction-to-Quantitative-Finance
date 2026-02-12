@@ -1,0 +1,739 @@
+[
+  {
+    "id": "2602.11020v1",
+    "title": "When Fusion Helps and When It Breaks: View-Aligned Robustness in Same-Source Financial Imaging",
+    "abstract": "We study same-source multi-view learning and adversarial robustness for next-day direction prediction with financial image representations. On Shanghai Gold Exchange (SGE) spot gold data (2005-2025), we construct two window-aligned views from each rolling window: an OHLCV-rendered price/volume chart and a technical-indicator matrix. To ensure reliable evaluation, we adopt leakage-resistant time-block splits with embargo and use Matthews correlation coefficient (MCC). We find that results depend strongly on the label-noise regime: we apply an ex-post minimum-movement filter that discards samples with realized next-day absolute return below tau to define evaluation subsets with reduced near-zero label ambiguity. This induces a non-monotonic data-noise trade-off that can reveal predictive signal but eventually increases variance as sample size shrinks; the filter is used for offline benchmark construction rather than an inference-time decision rule. In the stabilized subsets, fusion is regime dependent: early fusion by channel stacking can exhibit negative transfer, whereas late fusion with dual encoders and a fusion head provides the dominant clean-performance gains; cross-view consistency regularization has secondary, backbone-dependent effects. We further evaluate test-time L-infinity perturbations using FGSM and PGD under two threat scenarios: view-constrained attacks that perturb one view and joint attacks that perturb both. We observe severe vulnerability at tiny budgets with strong view asymmetry. Late fusion consistently improves robustness under view-constrained attacks, but joint attacks remain challenging and can still cause substantial worst-case degradation.",
+    "authors": [
+      "Rui Ma"
+    ],
+    "published": "2026-02-11",
+    "categories": [
+      "cs.LG",
+      "q-fin.ST"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.11020v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.11020v1",
+    "fetched_at": "2026-02-12T08:53:12.267817"
+  },
+  {
+    "id": "2602.10960v1",
+    "title": "Integrating granular data into a multilayer network: an interbank model of the euro area for systemic risk assessment",
+    "abstract": "Micro-structural models of contagion and systemic risk emphasize that shock propagation is inherently multi-channel, spanning counterparty exposures, short-term funding and roll-over risk, securities cross-holdings, and common-asset (fire-sale) spillovers. Empirical implementations, however, often rely on stylized or simulated networks, or focus on a single exposure dimension, reflecting the practical difficulty of reconciling heterogeneous granular collections into a coherent representation with consistent identifiers and consolidation rules. We close part of this gap by constructing an empirically grounded multilayer network for euro area significant banking groups that integrates several supervisory and statistical datasets into layer-consistent exposure matrices defined on a common node set. Each layer corresponds to a distinct transmission channel, long- and short-term credit, securities cross-holdings, short-term secured funding, and overlapping external portfolios, and nodes are enriched with balance-sheet information to support model calibration. We document pronounced cross-layer heterogeneity in connectivity and centrality, and show that an aggregated (flattened) representation can mask economically relevant structure and misidentify the institutions that are systemically important in specific markets. We then illustrate how the resulting network disciplines standard systemic-risk analytics by implementing a centrality-based propagation measure and a micro-structural agent-based framework on real exposures. The approach provides a data-grounded basis for layer-aware systemic-risk assessment and stress testing across multiple dimensions of the banking network.",
+    "authors": [
+      "Ilias Aarab",
+      "Thomas Gottron",
+      "Andrea Colombo",
+      "Jörg Reddig",
+      "Annalauro Ianiro"
+    ],
+    "published": "2026-02-11",
+    "categories": [
+      "q-fin.ST",
+      "cs.CE",
+      "econ.EM",
+      "q-fin.RM",
+      "stat.CO"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.10960v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.10960v1",
+    "fetched_at": "2026-02-12T08:53:12.267866"
+  },
+  {
+    "id": "2602.10798v1",
+    "title": "Trading in CEXs and DEXs with Priority Fees and Stochastic Delays",
+    "abstract": "We develop a mixed control framework that combines absolutely continuous controls with impulse interventions subject to stochastic execution delays. The model extends current impulse control formulations by allowing (i) the controller to choose the mean of the stochastic delay of their impulses, and allowing (ii) for multiple pending orders, so that several impulses can be submitted and executed asynchronously at random times. The framework is motivated by an optimal trading problem between centralized (CEX) and decentralized (DEX) exchanges. In DEXs, traders control the distribution of the execution delay through the priority fee paid, introducing a fundamental trade-off between delays, uncertainty, and costs. We study the optimal trading problem of a trader exploiting trading signals in CEXs and DEXs. From a mathematical perspective, we derive the associated dynamic programming principle of this new class of impulse control problems, and establish the viscosity properties of the corresponding quasi-variational inequalities. From a financial perspective, our model provides insights on how to carry out execution across CEXs and DEXs, highlighting how traders manage latency risk optimally through priority fee selection. We show that employing the optimal priority fee has a significant outperformance over non-strategic fee selection.",
+    "authors": [
+      "Philippe Bergault",
+      "Yadh Hafsi",
+      "Leandro Sánchez-Betancourt"
+    ],
+    "published": "2026-02-11",
+    "categories": [
+      "q-fin.TR",
+      "math.OC"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.10798v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.10798v1",
+    "fetched_at": "2026-02-12T08:53:12.267893"
+  },
+  {
+    "id": "2602.10785v1",
+    "title": "A novel approach to trading strategy parameter optimization using double out-of-sample data and walk-forward techniques",
+    "abstract": "This study introduces a novel approach to walk-forward optimization by parameterizing the lengths of training and testing windows. We demonstrate that the performance of a trading strategy using the Exponential Moving Average (EMA) evaluated within a walk-forward procedure based on the Robust Sharpe Ratio is highly dependent on the chosen window size. We investigated the strategy on intraday Bitcoin data at six frequencies (1 minute to 60 minutes) using 81 combinations of walk-forward window lengths (1 day to 28 days) over a 19-month training period. The two best-performing parameter sets from the training data were applied to a 21-month out-of-sample testing period to ensure data independence. The strategy was only executed once during the testing period. To further validate the framework, strategy parameters estimated on Bitcoin were applied to Binance Coin and Ethereum. Our results suggest the robustness of our custom approach. In the training period for Bitcoin, all combinations of walk-forward windows outperformed a Buy-and-Hold strategy. During the testing period, the strategy performed similarly to Buy-and-Hold but with lower drawdown and a higher Information Ratio. Similar results were observed for Binance Coin and Ethereum. The real strength was demonstrated when a portfolio combining Buy-and-Hold with our strategies outperformed all individual strategies and Buy-and-Hold alone, achieving the highest overall performance and a 50 percent reduction in drawdown. A conservative fee of 0.1 percent per transaction was included in all calculations. A cost sensitivity analysis was performed as a sanity check, revealing that the strategy's break-even point was around 0.4 percent per transaction. This research highlights the importance of optimizing walk-forward window lengths and emphasizing the value of single-time out-of-sample testing for reliable strategy evaluation.",
+    "authors": [
+      "Tomasz Mroziewicz",
+      "Robert Ślepaczuk"
+    ],
+    "published": "2026-02-11",
+    "categories": [
+      "q-fin.TR",
+      "q-fin.MF",
+      "q-fin.PM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.10785v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.10785v1",
+    "fetched_at": "2026-02-12T08:53:12.267916"
+  },
+  {
+    "id": "2602.10888v1",
+    "title": "Anomaly Detection with Machine Learning Algorithms in Large-Scale Power Grids",
+    "abstract": "We apply several machine learning algorithms to the problem of anomaly detection in operational data for large-scale, high-voltage electric power grids. We observe important differences in the performance of the algorithms. Neural networks typically outperform classical algorithms such as k-nearest neighbors and support vector machines, which we explain by the strong contextual nature of the anomalies. We show that unsupervised learning algorithm work remarkably well and that their predictions are robust against simultaneous, concurring anomalies.",
+    "authors": [
+      "Marc Gillioz",
+      "Guillaume Dubuis",
+      "Étienne Voutaz",
+      "Philippe Jacquod"
+    ],
+    "published": "2026-02-11",
+    "categories": [
+      "eess.SY",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.10888v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.10888v1",
+    "fetched_at": "2026-02-12T08:53:24.510864"
+  },
+  {
+    "id": "2602.10708v1",
+    "title": "Interpretable Graph-Level Anomaly Detection via Contrast with Normal Prototypes",
+    "abstract": "The task of graph-level anomaly detection (GLAD) is to identify anomalous graphs that deviate significantly from the majority of graphs in a dataset. While deep GLAD methods have shown promising performance, their black-box nature limits their reliability and deployment in real-world applications. Although some recent methods have made attempts to provide explanations for anomaly detection results, they either provide explanations without referencing normal graphs, or rely on abstract latent vectors as prototypes rather than concrete graphs from the dataset. To address these limitations, we propose Prototype-based Graph-Level Anomaly Detection (ProtoGLAD), an interpretable unsupervised framework that provides explanation for each detected anomaly by explicitly contrasting with its nearest normal prototype graph. It employs a point-set kernel to iteratively discover multiple normal prototype graphs and their associated clusters from the dataset, then identifying graphs distant from all discovered normal clusters as anomalies. Extensive experiments on multiple real-world datasets demonstrate that ProtoGLAD achieves competitive anomaly detection performance compared to state-of-the-art GLAD methods while providing better human-interpretable prototype-based explanations.",
+    "authors": [
+      "Qiuran Zhao",
+      "Kai Ming Ting",
+      "Xinpeng Li"
+    ],
+    "published": "2026-02-11",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.10708v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.10708v1",
+    "fetched_at": "2026-02-12T08:53:24.510894"
+  },
+  {
+    "id": "2602.10549v1",
+    "title": "Enhancing Weakly Supervised Multimodal Video Anomaly Detection through Text Guidance",
+    "abstract": "Weakly supervised multimodal video anomaly detection has gained significant attention, yet the potential of the text modality remains under-explored. Text provides explicit semantic information that can enhance anomaly characterization and reduce false alarms. However, extracting effective text features is challenging due to the inability of general-purpose language models to capture anomaly-specific nuances and the scarcity of relevant descriptions. Furthermore, multimodal fusion often suffers from redundancy and imbalance. To address these issues, we propose a novel text-guided framework. First, we introduce an in-context learning-based multi-stage text augmentation mechanism to generate high-quality anomaly text samples for fine-tuning the text feature extractor. Second, we design a multi-scale bottleneck Transformer fusion module that uses compressed bottleneck tokens to progressively integrate information across modalities, mitigating redundancy and imbalance. Experiments on UCF-Crime and XD-Violence demonstrate state-of-the-art performance.",
+    "authors": [
+      "Shengyang Sun",
+      "Jiashen Hua",
+      "Junyi Feng",
+      "Xiaojin Gong"
+    ],
+    "published": "2026-02-11",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.10549v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.10549v1",
+    "fetched_at": "2026-02-12T08:53:24.510919"
+  },
+  {
+    "id": "2602.10432v1",
+    "title": "A Dual-Stream Physics-Augmented Unsupervised Architecture for Runtime Embedded Vehicle Health Monitoring",
+    "abstract": "Runtime quantification of vehicle operational intensity is essential for predictive maintenance and condition monitoring in commercial and heavy-duty fleets. Traditional metrics like mileage fail to capture mechanical burden, while unsupervised deep learning models detect statistical anomalies, typically transient surface shocks, but often conflate statistical stability with mechanical rest. We identify this as a critical blind spot: high-load steady states, such as hill climbing with heavy payloads, appear statistically normal yet impose significant drivetrain fatigue. To resolve this, we propose a Dual-Stream Architecture that fuses unsupervised learning for surface anomaly detection with macroscopic physics proxies for cumulative load estimation. This approach leverages low-frequency sensor data to generate a multi-dimensional health vector, distinguishing between dynamic hazards and sustained mechanical effort. Validated on a RISC-V embedded platform, the architecture demonstrates low computational overhead, enabling comprehensive, edge-based health monitoring on resource-constrained ECUs without the latency or bandwidth costs of cloud-based monitoring.",
+    "authors": [
+      "Enzo Nicolas Spotorno",
+      "Antonio Augusto Medeiros Frohlich"
+    ],
+    "published": "2026-02-11",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.10432v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.10432v1",
+    "fetched_at": "2026-02-12T08:53:24.510939"
+  },
+  {
+    "id": "2602.09116v2",
+    "title": "Importance inversion transfer identifies shared principles for cross-domain learning",
+    "abstract": "The capacity to transfer knowledge across scientific domains relies on shared organizational principles. However, existing transfer-learning methodologies often fail to bridge radically heterogeneous systems, particularly under severe data scarcity or stochastic noise. This study formalizes Explainable Cross-Domain Transfer Learning (X-CDTL), a framework unifying network science and explainable artificial intelligence to identify structural invariants that generalize across biological, linguistic, molecular, and social networks. By introducing the Importance Inversion Transfer (IIT) mechanism, the framework prioritizes domain-invariant structural anchors over idiosyncratic, highly discriminative features. In anomaly detection tasks, models guided by these principles achieve significant performance gains - exhibiting a 56% relative improvement in decision stability under extreme noise - over traditional baselines. These results provide evidence for a shared organizational signature across heterogeneous domains, establishing a principled paradigm for cross-disciplinary knowledge propagation. By shifting from opaque latent representations to explicit structural laws, this work advances machine learning as a robust engine for scientific discovery.",
+    "authors": [
+      "Daniele Caligiore"
+    ],
+    "published": "2026-02-09",
+    "categories": [
+      "cs.LG",
+      "physics.soc-ph",
+      "q-bio.QM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.09116v2",
+    "arxiv_url": "https://arxiv.org/abs/2602.09116v2",
+    "fetched_at": "2026-02-12T08:53:24.511075"
+  },
+  {
+    "id": "2602.11144v1",
+    "title": "GENIUS: Generative Fluid Intelligence Evaluation Suite",
+    "abstract": "Unified Multimodal Models (UMMs) have shown remarkable progress in visual generation. Yet, existing benchmarks predominantly assess $\\textit{Crystallized Intelligence}$, which relies on recalling accumulated knowledge and learned schemas. This focus overlooks $\\textit{Generative Fluid Intelligence (GFI)}$: the capacity to induce patterns, reason through constraints, and adapt to novel scenarios on the fly. To rigorously assess this capability, we introduce $\\textbf{GENIUS}$ ($\\textbf{GEN}$ Fluid $\\textbf{I}$ntelligence Eval$\\textbf{U}$ation $\\textbf{S}$uite). We formalize $\\textit{GFI}$ as a synthesis of three primitives. These include $\\textit{Inducing Implicit Patterns}$ (e.g., inferring personalized visual preferences), $\\textit{Executing Ad-hoc Constraints}$ (e.g., visualizing abstract metaphors), and $\\textit{Adapting to Contextual Knowledge}$ (e.g., simulating counter-intuitive physics). Collectively, these primitives challenge models to solve problems grounded entirely in the immediate context. Our systematic evaluation of 12 representative models reveals significant performance deficits in these tasks. Crucially, our diagnostic analysis disentangles these failure modes. It demonstrates that deficits stem from limited context comprehension rather than insufficient intrinsic generative capability. To bridge this gap, we propose a training-free attention intervention strategy. Ultimately, $\\textbf{GENIUS}$ establishes a rigorous standard for $\\textit{GFI}$, guiding the field beyond knowledge utilization toward dynamic, general-purpose reasoning. Our dataset and code will be released at: $\\href{https://github.com/arctanxarc/GENIUS}{https://github.com/arctanxarc/GENIUS}$.",
+    "authors": [
+      "Ruichuan An",
+      "Sihan Yang",
+      "Ziyu Guo",
+      "Wei Dai",
+      "Zijun Shen",
+      "Haodong Li",
+      "Renrui Zhang",
+      "Xinyu Wei",
+      "Guopeng Li",
+      "Wenshan Wu",
+      "Wentao Zhang"
+    ],
+    "published": "2026-02-11",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.11144v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.11144v1",
+    "fetched_at": "2026-02-12T08:53:52.037350"
+  },
+  {
+    "id": "2602.11123v1",
+    "title": "From Natural Language to Materials Discovery:The Materials Knowledge Navigation Agent",
+    "abstract": "Accelerating the discovery of high-performance materials remains a central challenge across energy, electronics, and aerospace technologies, where traditional workflows depend heavily on expert intuition and computationally expensive simulations. Here we introduce the Materials Knowledge Navigation Agent (MKNA), a language-driven system that translates natural-language scientific intent into executable actions for database retrieval, property prediction, structure generation, and stability evaluation. Beyond automating tool invocation, MKNA autonomously extracts quantitative thresholds and chemically meaningful design motifs from literature and database evidence, enabling data-grounded hypothesis formation. Applied to the search for high-Debye-temperature ceramics, the agent identifies a literature-supported screening criterion (Theta_D > 800 K), rediscovers canonical ultra-stiff materials such as diamond, SiC, SiN, and BeO, and proposes thermodynamically stable, previously unreported Be-C-rich compounds that populate the sparsely explored 1500-1700 K regime. These results demonstrate that MKNA not only finds stable candidates but also reconstructs interpretable design heuristics, establishing a generalizable platform for autonomous, language-guided materials exploration.",
+    "authors": [
+      "Genmao Zhuang",
+      "Amir Barati Farimani"
+    ],
+    "published": "2026-02-11",
+    "categories": [
+      "cs.LG",
+      "cond-mat.mtrl-sci"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.11123v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.11123v1",
+    "fetched_at": "2026-02-12T08:53:52.037379"
+  },
+  {
+    "id": "2602.11114v1",
+    "title": "Learning to Compose for Cross-domain Agentic Workflow Generation",
+    "abstract": "Automatically generating agentic workflows -- executable operator graphs or codes that orchestrate reasoning, verification, and repair -- has become a practical way to solve complex tasks beyond what single-pass LLM generation can reliably handle. Yet what constitutes a good workflow depends heavily on the task distribution and the available operators. Under domain shift, current systems typically rely on iterative workflow refinement to discover a feasible workflow from a large workflow space, incurring high iteration costs and yielding unstable, domain-specific behavior. In response, we internalize a decompose-recompose-decide mechanism into an open-source LLM for cross-domain workflow generation. To decompose, we learn a compact set of reusable workflow capabilities across diverse domains. To recompose, we map each input task to a sparse composition over these bases to generate a task-specific workflow in a single pass. To decide, we attribute the success or failure of workflow generation to counterfactual contributions from learned capabilities, thereby capturing which capabilities actually drive success by their marginal effects. Across stringent multi-domain, cross-domain, and unseen-domain evaluations, our 1-pass generator surpasses SOTA refinement baselines that consume 20 iterations, while substantially reducing generation latency and cost.",
+    "authors": [
+      "Jialiang Wang",
+      "Shengxiang Xu",
+      "Hanmo Liu",
+      "Jiachuan Wang",
+      "Yuyu Luo",
+      "Shimin Di",
+      "Min-Ling Zhang",
+      "Lei Chen"
+    ],
+    "published": "2026-02-11",
+    "categories": [
+      "cs.MA",
+      "cs.AI",
+      "cs.LG",
+      "cs.SE"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.11114v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.11114v1",
+    "fetched_at": "2026-02-12T08:53:52.037412"
+  },
+  {
+    "id": "2602.11052v1",
+    "title": "GraphSeek: Next-Generation Graph Analytics with LLMs",
+    "abstract": "Graphs are foundational across domains but remain hard to use without deep expertise. LLMs promise accessible natural language (NL) graph analytics, yet they fail to process industry-scale property graphs effectively and efficiently: such datasets are large, highly heterogeneous, structurally complex, and evolve dynamically. To address this, we devise a novel abstraction for complex multi-query analytics over such graphs. Its key idea is to replace brittle generation of graph queries directly from NL with planning over a Semantic Catalog that describes both the graph schema and the graph operations. Concretely, this induces a clean separation between a Semantic Plane for LLM planning and broader reasoning, and an Execution Plane for deterministic, database-grade query execution over the full dataset and tool implementations. This design yields substantial gains in both token efficiency and task effectiveness even with small-context LLMs. We use this abstraction as the basis of the first LLM-enhanced graph analytics framework called GraphSeek. GraphSeek achieves substantially higher success rates (e.g., 86% over enhanced LangChain) and points toward the next generation of affordable and accessible graph analytics that unify LLM reasoning with database-grade execution over large and complex property graphs.",
+    "authors": [
+      "Maciej Besta",
+      "Łukasz Jarmocik",
+      "Orest Hrycyna",
+      "Shachar Klaiman",
+      "Konrad Mączka",
+      "Robert Gerstenberger",
+      "Jürgen Müller",
+      "Piotr Nyczyk",
+      "Hubert Niewiadomski",
+      "Torsten Hoefler"
+    ],
+    "published": "2026-02-11",
+    "categories": [
+      "cs.DB",
+      "cs.AI",
+      "cs.CL",
+      "cs.HC",
+      "cs.IR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.11052v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.11052v1",
+    "fetched_at": "2026-02-12T08:53:52.037465"
+  },
+  {
+    "id": "2602.10999v1",
+    "title": "CLI-Gym: Scalable CLI Task Generation via Agentic Environment Inversion",
+    "abstract": "Agentic coding requires agents to effectively interact with runtime environments, e.g., command line interfaces (CLI), so as to complete tasks like resolving dependency issues, fixing system problems, etc. But it remains underexplored how such environment-intensive tasks can be obtained at scale to enhance agents' capabilities. To address this, based on an analogy between the Dockerfile and the agentic task, we propose to employ agents to simulate and explore environment histories, guided by execution feedback. By tracing histories of a healthy environment, its state can be inverted to an earlier one with runtime failures, from which a task can be derived by packing the buggy state and the corresponding error messages. With our method, named CLI-Gym, a total of 1,655 environment-intensive tasks are derived, being the largest collection of its kind. Moreover, with curated successful trajectories, our fine-tuned model, named LiberCoder, achieves substantial absolute improvements of +21.1% (to 46.1%) on Terminal-Bench, outperforming various strong baselines. To our knowledge, this is the first public pipeline for scalable derivation of environment-intensive tasks.",
+    "authors": [
+      "Yusong Lin",
+      "Haiyang Wang",
+      "Shuzhe Wu",
+      "Lue Fan",
+      "Feiyang Pan",
+      "Sanyuan Zhao",
+      "Dandan Tu"
+    ],
+    "published": "2026-02-11",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.10999v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.10999v1",
+    "fetched_at": "2026-02-12T08:53:52.037496"
+  },
+  {
+    "id": "2602.10986v1",
+    "title": "TVCACHE: A Stateful Tool-Value Cache for Post-Training LLM Agents",
+    "abstract": "In RL post-training of LLM agents, calls to external tools take several seconds or even minutes, leaving allocated GPUs idle and inflating post-training time and cost. While many tool invocations repeat across parallel rollouts and could in principle be cached, naively caching their outputs for reuse is incorrect since tool outputs depend on the environment state induced by prior agent interactions. We present TVCACHE, a stateful tool-value cache for LLM agent post-training. TVCACHE maintains a tree of observed tool-call sequences and performs longest-prefix matching for cache lookups: a hit occurs only when the agent's full tool history matches a previously executed sequence, guaranteeing identical environment state. On three diverse workloads-terminal-based tasks, SQL generation, and video understanding. TVCACHE achieves cache hit rates of up to 70% and reduces median tool call execution time by up to 6.9X, with no degradation in post-training reward accumulation.",
+    "authors": [
+      "Abhishek Vijaya Kumar",
+      "Bhaskar Kataria",
+      "Byungsoo Oh",
+      "Emaad Manzoor",
+      "Rachee Singh"
+    ],
+    "published": "2026-02-11",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.10986v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.10986v1",
+    "fetched_at": "2026-02-12T08:53:52.037520"
+  },
+  {
+    "id": "2602.10975v1",
+    "title": "FeatureBench: Benchmarking Agentic Coding for Complex Feature Development",
+    "abstract": "Agents powered by large language models (LLMs) are increasingly adopted in the software industry, contributing code as collaborators or even autonomous developers. As their presence grows, it becomes important to assess the current boundaries of their coding abilities. Existing agentic coding benchmarks, however, cover a limited task scope, e.g., bug fixing within a single pull request (PR), and often rely on non-executable evaluations or lack an automated approach for continually updating the evaluation coverage. To address such issues, we propose FeatureBench, a benchmark designed to evaluate agentic coding performance in end-to-end, feature-oriented software development. FeatureBench incorporates an execution-based evaluation protocol and a scalable test-driven method that automatically derives tasks from code repositories with minimal human effort. By tracing from unit tests along a dependency graph, our approach can identify feature-level coding tasks spanning multiple commits and PRs scattered across the development timeline, while ensuring the proper functioning of other features after the separation. Using this framework, we curated 200 challenging evaluation tasks and 3825 executable environments from 24 open-source repositories in the first version of our benchmark. Empirical evaluation reveals that the state-of-the-art agentic model, such as Claude 4.5 Opus, which achieves a 74.4% resolved rate on SWE-bench, succeeds on only 11.0% of tasks, opening new opportunities for advancing agentic coding. Moreover, benefiting from our automated task collection toolkit, FeatureBench can be easily scaled and updated over time to mitigate data leakage. The inherent verifiability of constructed environments also makes our method potentially valuable for agent training.",
+    "authors": [
+      "Qixing Zhou",
+      "Jiacheng Zhang",
+      "Haiyang Wang",
+      "Rui Hao",
+      "Jiahe Wang",
+      "Minghao Han",
+      "Yuxue Yang",
+      "Shuzhe Wu",
+      "Feiyang Pan",
+      "Lue Fan",
+      "Dandan Tu",
+      "Zhaoxiang Zhang"
+    ],
+    "published": "2026-02-11",
+    "categories": [
+      "cs.SE",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.10975v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.10975v1",
+    "fetched_at": "2026-02-12T08:53:52.037557"
+  },
+  {
+    "id": "2602.10915v1",
+    "title": "Blind Gods and Broken Screens: Architecting a Secure, Intent-Centric Mobile Agent Operating System",
+    "abstract": "The evolution of Large Language Models (LLMs) has shifted mobile computing from App-centric interactions to system-level autonomous agents. Current implementations predominantly rely on a \"Screen-as-Interface\" paradigm, which inherits structural vulnerabilities and conflicts with the mobile ecosystem's economic foundations. In this paper, we conduct a systematic security analysis of state-of-the-art mobile agents using Doubao Mobile Assistant as a representative case. We decompose the threat landscape into four dimensions - Agent Identity, External Interface, Internal Reasoning, and Action Execution - revealing critical flaws such as fake App identity, visual spoofing, indirect prompt injection, and unauthorized privilege escalation stemming from a reliance on unstructured visual data.   To address these challenges, we propose Aura, an Agent Universal Runtime Architecture for a clean-slate secure agent OS. Aura replaces brittle GUI scraping with a structured, agent-native interaction model. It adopts a Hub-and-Spoke topology where a privileged System Agent orchestrates intent, sandboxed App Agents execute domain-specific tasks, and the Agent Kernel mediates all communication. The Agent Kernel enforces four defense pillars: (i) cryptographic identity binding via a Global Agent Registry; (ii) semantic input sanitization through a multilayer Semantic Firewall; (iii) cognitive integrity via taint-aware memory and plan-trajectory alignment; and (iv) granular access control with non-deniable auditing. Evaluation on MobileSafetyBench shows that, compared to Doubao, Aura improves low-risk Task Success Rate from roughly 75% to 94.3%, reduces high-risk Attack Success Rate from roughly 40% to 4.4%, and achieves near-order-of-magnitude latency gains. These results demonstrate Aura as a viable, secure alternative to the \"Screen-as-Interface\" paradigm.",
+    "authors": [
+      "Zhenhua Zou",
+      "Sheng Guo",
+      "Qiuyang Zhan",
+      "Lepeng Zhao",
+      "Shuo Li",
+      "Qi Li",
+      "Ke Xu",
+      "Mingwei Xu",
+      "Zhuotao Liu"
+    ],
+    "published": "2026-02-11",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.10915v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.10915v1",
+    "fetched_at": "2026-02-12T08:53:52.037590"
+  },
+  {
+    "id": "2602.10814v1",
+    "title": "See, Plan, Snap: Evaluating Multimodal GUI Agents in Scratch",
+    "abstract": "Block-based programming environments such as Scratch play a central role in low-code education, yet evaluating the capabilities of AI agents to construct programs through Graphical User Interfaces (GUIs) remains underexplored. We introduce ScratchWorld, a benchmark for evaluating multimodal GUI agents on program-by-construction tasks in Scratch. Grounded in the Use-Modify-Create pedagogical framework, ScratchWorld comprises 83 curated tasks spanning four distinct problem categories: Create, Debug, Extend, and Compute. To rigorously diagnose the source of agent failures, the benchmark employs two complementary interaction modes: primitive mode requires fine-grained drag-and-drop manipulation to directly assess visuomotor control, while composite mode uses high-level semantic APIs to disentangle program reasoning from GUI execution. To ensure reliable assessment, we propose an execution-based evaluation protocol that validates the functional correctness of the constructed Scratch programs through runtime tests within the browser environment. Extensive experiments across state-of-the-art multimodal language models and GUI agents reveal a substantial reasoning--acting gap, highlighting persistent challenges in fine-grained GUI manipulation despite strong planning capabilities.",
+    "authors": [
+      "Xingyi Zhang",
+      "Yulei Ye",
+      "Kaifeng Huang",
+      "Wenhao Li",
+      "Xiangfeng Wang"
+    ],
+    "published": "2026-02-11",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.10814v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.10814v1",
+    "fetched_at": "2026-02-12T08:53:52.037615"
+  },
+  {
+    "id": "2602.10702v1",
+    "title": "A Unified Experimental Architecture for Informative Path Planning: from Simulation to Deployment with GuadalPlanner",
+    "abstract": "The evaluation of informative path planning algorithms for autonomous vehicles is often hindered by fragmented execution pipelines and limited transferability between simulation and real-world deployment. This paper introduces a unified architecture that decouples high-level decision-making from vehicle-specific control, enabling algorithms to be evaluated consistently across different abstraction levels without modification. The proposed architecture is realized through GuadalPlanner, which defines standardized interfaces between planning, sensing, and vehicle execution. It is an open and extensible research tool that supports discrete graph-based environments and interchangeable planning strategies, and is built upon widely adopted robotics technologies, including ROS2, MAVLink, and MQTT. Its design allows the same algorithmic logic to be deployed in fully simulated environments, software-in-the-loop configurations, and physical autonomous vehicles using an identical execution pipeline. The approach is validated through a set of experiments, including real-world deployment on an autonomous surface vehicle performing water quality monitoring with real-time sensor feedback.",
+    "authors": [
+      "Alejandro Mendoza Barrionuevo",
+      "Dame Seck Diop",
+      "Alejandro Casado Pérez",
+      "Daniel Gutiérrez Reina",
+      "Sergio L. Toral Marín",
+      "Samuel Yanes Luis"
+    ],
+    "published": "2026-02-11",
+    "categories": [
+      "cs.RO",
+      "cs.LG",
+      "cs.SE"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.10702v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.10702v1",
+    "fetched_at": "2026-02-12T08:53:52.037642"
+  },
+  {
+    "id": "2602.10693v1",
+    "title": "VESPO: Variational Sequence-Level Soft Policy Optimization for Stable Off-Policy LLM Training",
+    "abstract": "Training stability remains a central challenge in reinforcement learning (RL) for large language models (LLMs). Policy staleness, asynchronous training, and mismatches between training and inference engines all cause the behavior policy to diverge from the current policy, risking training collapse. Importance sampling provides a principled correction for this distribution shift but suffers from high variance; existing remedies such as token-level clipping and sequence-level normalization lack a unified theoretical foundation. We propose Variational sEquence-level Soft Policy Optimization (VESPO). By incorporating variance reduction into a variational formulation over proposal distributions, VESPO derives a closed-form reshaping kernel that operates directly on sequence-level importance weights without length normalization. Experiments on mathematical reasoning benchmarks show that VESPO maintains stable training under staleness ratios up to 64x and fully asynchronous execution, and delivers consistent gains across both dense and Mixture-of-Experts models. Code is available at https://github.com/FloyedShen/VESPO",
+    "authors": [
+      "Guobin Shen",
+      "Chenxiao Zhao",
+      "Xiang Cheng",
+      "Lei Huang",
+      "Xing Yu"
+    ],
+    "published": "2026-02-11",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.10693v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.10693v1",
+    "fetched_at": "2026-02-12T08:53:52.037666"
+  },
+  {
+    "id": "2602.10604v1",
+    "title": "Step 3.5 Flash: Open Frontier-Level Intelligence with 11B Active Parameters",
+    "abstract": "We introduce Step 3.5 Flash, a sparse Mixture-of-Experts (MoE) model that bridges frontier-level agentic intelligence and computational efficiency. We focus on what matters most when building agents: sharp reasoning and fast, reliable execution. Step 3.5 Flash pairs a 196B-parameter foundation with 11B active parameters for efficient inference. It is optimized with interleaved 3:1 sliding-window/full attention and Multi-Token Prediction (MTP-3) to reduce the latency and cost of multi-round agentic interactions. To reach frontier-level intelligence, we design a scalable reinforcement learning framework that combines verifiable signals with preference feedback, while remaining stable under large-scale off-policy training, enabling consistent self-improvement across mathematics, code, and tool use. Step 3.5 Flash demonstrates strong performance across agent, coding, and math tasks, achieving 85.4% on IMO-AnswerBench, 86.4% on LiveCodeBench-v6 (2024.08-2025.05), 88.2% on tau2-Bench, 69.0% on BrowseComp (with context management), and 51.0% on Terminal-Bench 2.0, comparable to frontier models such as GPT-5.2 xHigh and Gemini 3.0 Pro. By redefining the efficiency frontier, Step 3.5 Flash provides a high-density foundation for deploying sophisticated agents in real-world industrial environments.",
+    "authors": [
+      "Ailin Huang",
+      "Ang Li",
+      "Aobo Kong",
+      "Bin Wang",
+      "Binxing Jiao",
+      "Bo Dong",
+      "Bojun Wang",
+      "Boyu Chen",
+      "Brian Li",
+      "Buyun Ma",
+      "Chang Su",
+      "Changxin Miao",
+      "Changyi Wan",
+      "Chao Lou",
+      "Chen Hu",
+      "Chen Xu",
+      "Chenfeng Yu",
+      "Chengting Feng",
+      "Chengyuan Yao",
+      "Chunrui Han",
+      "Dan Ma",
+      "Dapeng Shi",
+      "Daxin Jiang",
+      "Dehua Ma",
+      "Deshan Sun",
+      "Di Qi",
+      "Enle Liu",
+      "Fajie Zhang",
+      "Fanqi Wan",
+      "Guanzhe Huang",
+      "Gulin Yan",
+      "Guoliang Cao",
+      "Guopeng Li",
+      "Han Cheng",
+      "Hangyu Guo",
+      "Hanshan Zhang",
+      "Hao Nie",
+      "Haonan Jia",
+      "Haoran Lv",
+      "Hebin Zhou",
+      "Hekun Lv",
+      "Heng Wang",
+      "Heung-Yeung Shum",
+      "Hongbo Huang",
+      "Hongbo Peng",
+      "Hongyu Zhou",
+      "Hongyuan Wang",
+      "Houyong Chen",
+      "Huangxi Zhu",
+      "Huimin Wu",
+      "Huiyong Guo",
+      "Jia Wang",
+      "Jian Zhou",
+      "Jianjian Sun",
+      "Jiaoren Wu",
+      "Jiaran Zhang",
+      "Jiashu Lv",
+      "Jiashuo Liu",
+      "Jiayi Fu",
+      "Jiayu Liu",
+      "Jie Cheng",
+      "Jie Luo",
+      "Jie Yang",
+      "Jie Zhou",
+      "Jieyi Hou",
+      "Jing Bai",
+      "Jingcheng Hu",
+      "Jingjing Xie",
+      "Jingwei Wu",
+      "Jingyang Zhang",
+      "Jishi Zhou",
+      "Junfeng Liu",
+      "Junzhe Lin",
+      "Ka Man Lo",
+      "Kai Liang",
+      "Kaibo Liu",
+      "Kaijun Tan",
+      "Kaiwen Yan",
+      "Kaixiang Li",
+      "Kang An",
+      "Kangheng Lin",
+      "Lei Yang",
+      "Liang Lv",
+      "Liang Zhao",
+      "Liangyu Chen",
+      "Lieyu Shi",
+      "Liguo Tan",
+      "Lin Lin",
+      "Lina Chen",
+      "Luck Ma",
+      "Mengqiang Ren",
+      "Michael Li",
+      "Ming Li",
+      "Mingliang Li",
+      "Mingming Zhang",
+      "Mingrui Chen",
+      "Mitt Huang",
+      "Na Wang",
+      "Peng Liu",
+      "Qi Han",
+      "Qian Zhao",
+      "Qinglin He",
+      "Qinxin Du",
+      "Qiuping Wu",
+      "Quan Sun",
+      "Rongqiu Yang",
+      "Ruihang Miao",
+      "Ruixin Han",
+      "Ruosi Wan",
+      "Ruyan Guo",
+      "Shan Wang",
+      "Shaoliang Pang",
+      "Shaowen Yang",
+      "Shengjie Fan",
+      "Shijie Shang",
+      "Shiliang Yang",
+      "Shiwei Li",
+      "Shuangshuang Tian",
+      "Siqi Liu",
+      "Siye Wu",
+      "Siyu Chen",
+      "Song Yuan",
+      "Tiancheng Cao",
+      "Tianchi Yue",
+      "Tianhao Cheng",
+      "Tianning Li",
+      "Tingdan Luo",
+      "Wang You",
+      "Wei Ji",
+      "Wei Yuan",
+      "Wei Zhang",
+      "Weibo Wu",
+      "Weihao Xie",
+      "Wen Sun",
+      "Wenjin Deng",
+      "Wenzhen Zheng",
+      "Wuxun Xie",
+      "Xiangfeng Wang",
+      "Xiangwen Kong",
+      "Xiangyu Liu",
+      "Xiangyu Zhang",
+      "Xiaobo Yang",
+      "Xiaojia Liu",
+      "Xiaolan Yuan",
+      "Xiaoran Jiao",
+      "Xiaoxiao Ren",
+      "Xiaoyun Zhang",
+      "Xin Li",
+      "Xin Liu",
+      "Xin Wu",
+      "Xing Chen",
+      "Xingping Yang",
+      "Xinran Wang",
+      "Xu Zhao",
+      "Xuan He",
+      "Xuanti Feng",
+      "Xuedan Cai",
+      "Xuqiang Zhou",
+      "Yanbo Yu",
+      "Yang Li",
+      "Yang Xu",
+      "Yanlin Lai",
+      "Yanming Xu",
+      "Yaoyu Wang",
+      "Yeqing Shen",
+      "Yibo Zhu",
+      "Yichen Lv",
+      "Yicheng Cao",
+      "Yifeng Gong",
+      "Yijing Yang",
+      "Yikun Yang",
+      "Yin Zhao",
+      "Yingxiu Zhao",
+      "Yinmin Zhang",
+      "Yitong Zhang",
+      "Yixuan Zhang",
+      "Yiyang Chen",
+      "Yongchi Zhao",
+      "Yongshen Long",
+      "Yongyao Wang",
+      "Yousong Guan",
+      "Yu Zhou",
+      "Yuang Peng",
+      "Yuanhao Ding",
+      "Yuantao Fan",
+      "Yuanzhen Yang",
+      "Yuchu Luo",
+      "Yudi Zhao",
+      "Yue Peng",
+      "Yueqiang Lin",
+      "Yufan Lu",
+      "Yuling Zhao",
+      "Yunzhou Ju",
+      "Yurong Zhang",
+      "Yusheng Li",
+      "Yuxiang Yang",
+      "Yuyang Chen",
+      "Yuzhu Cai",
+      "Zejia Weng",
+      "Zetao Hong",
+      "Zexi Li",
+      "Zhe Xie",
+      "Zheng Ge",
+      "Zheng Gong",
+      "Zheng Zeng",
+      "Zhenyi Lu",
+      "Zhewei Huang",
+      "Zhichao Chang",
+      "Zhiguo Huang",
+      "Zhiheng Hu",
+      "Zidong Yang",
+      "Zili Wang",
+      "Ziqi Ren",
+      "Zixin Zhang",
+      "Zixuan Wang"
+    ],
+    "published": "2026-02-11",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.10604v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.10604v1",
+    "fetched_at": "2026-02-12T08:53:52.038059"
+  },
+  {
+    "id": "2602.10598v1",
+    "title": "Neuro-symbolic Action Masking for Deep Reinforcement Learning",
+    "abstract": "Deep reinforcement learning (DRL) may explore infeasible actions during training and execution. Existing approaches assume a symbol grounding function that maps high-dimensional states to consistent symbolic representations and a manually specified action masking techniques to constrain actions. In this paper, we propose Neuro-symbolic Action Masking (NSAM), a novel framework that automatically learn symbolic models, which are consistent with given domain constraints of high-dimensional states, in a minimally supervised manner during the DRL process. Based on the learned symbolic model of states, NSAM learns action masks that rules out infeasible actions. NSAM enables end-to-end integration of symbolic reasoning and deep policy optimization, where improvements in symbolic grounding and policy learning mutually reinforce each other. We evaluate NSAM on multiple domains with constraints, and experimental results demonstrate that NSAM significantly improves sample efficiency of DRL agent while substantially reducing constraint violations.",
+    "authors": [
+      "Shuai Han",
+      "Mehdi Dastani",
+      "Shihan Wang"
+    ],
+    "published": "2026-02-11",
+    "categories": [
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.10598v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.10598v1",
+    "fetched_at": "2026-02-12T08:53:52.038081"
+  },
+  {
+    "id": "2602.10525v1",
+    "title": "LHAW: Controllable Underspecification for Long-Horizon Tasks",
+    "abstract": "Long-horizon workflow agents that operate effectively over extended periods are essential for truly autonomous systems. Their reliable execution critically depends on the ability to reason through ambiguous situations in which clarification seeking is necessary to ensure correct task execution. However, progress is limited by the lack of scalable, task-agnostic frameworks for systematically curating and measuring the impact of ambiguity across custom workflows. We address this gap by introducing LHAW (Long-Horizon Augmented Workflows), a modular, dataset-agnostic synthetic pipeline that transforms any well-specified task into controllable underspecified variants by systematically removing information across four dimensions - Goals, Constraints, Inputs, and Context - at configurable severity levels. Unlike approaches that rely on LLM predictions of ambiguity, LHAW validates variants through empirical agent trials, classifying them as outcome-critical, divergent, or benign based on observed terminal state divergence. We release 285 task variants from TheAgentCompany, SWE-Bench Pro and MCP-Atlas according to our taxonomy alongside formal analysis measuring how current agents detect, reason about, and resolve underspecification across ambiguous settings. LHAW provides the first systematic framework for cost-sensitive evaluation of agent clarification behavior in long-horizon settings, enabling development of reliable autonomous systems.",
+    "authors": [
+      "George Pu",
+      "Michael S. Lee",
+      "Udari Madhushani Sehwag",
+      "David J. Lee",
+      "Bryan Zhu",
+      "Yash Maurya",
+      "Mohit Raghavendra",
+      "Yuan Xue",
+      "Samuel Marc Denton"
+    ],
+    "published": "2026-02-11",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.10525v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.10525v1",
+    "fetched_at": "2026-02-12T08:53:52.038113"
+  },
+  {
+    "id": "2602.10514v1",
+    "title": "Co-jump: Cooperative Jumping with Quadrupedal Robots via Multi-Agent Reinforcement Learning",
+    "abstract": "While single-agent legged locomotion has witnessed remarkable progress, individual robots remain fundamentally constrained by physical actuation limits. To transcend these boundaries, we introduce Co-jump, a cooperative task where two quadrupedal robots synchronize to execute jumps far beyond their solo capabilities. We tackle the high-impulse contact dynamics of this task under a decentralized setting, achieving synchronization without explicit communication or pre-specified motion primitives. Our framework leverages Multi-Agent Proximal Policy Optimization (MAPPO) enhanced by a progressive curriculum strategy, which effectively overcomes the sparse-reward exploration challenges inherent in mechanically coupled systems. We demonstrate robust performance in simulation and successful transfer to physical hardware, executing multi-directional jumps onto platforms up to 1.5 m in height. Specifically, one of the robots achieves a foot-end elevation of 1.1 m, which represents a 144% improvement over the 0.45 m jump height of a standalone quadrupedal robot, demonstrating superior vertical performance. Notably, this precise coordination is achieved solely through proprioceptive feedback, establishing a foundation for communication-free collaborative locomotion in constrained environments.",
+    "authors": [
+      "Shihao Dong",
+      "Yeke Chen",
+      "Zeren Luo",
+      "Jiahui Zhang",
+      "Bowen Xu",
+      "Jinghan Lin",
+      "Yimin Han",
+      "Ji Ma",
+      "Zhiyou Yu",
+      "Yudong Zhao",
+      "Peng Lu"
+    ],
+    "published": "2026-02-11",
+    "categories": [
+      "cs.RO",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.10514v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.10514v1",
+    "fetched_at": "2026-02-12T08:53:52.038148"
+  },
+  {
+    "id": "2602.10042v2",
+    "title": "Fake-HR1: Rethinking Reasoning of Vision Language Model for Synthetic Image Detection",
+    "abstract": "Recent studies have demonstrated that incorporating Chain-of-Thought (CoT) reasoning into the detection process can enhance a model's ability to detect synthetic images. However, excessively lengthy reasoning incurs substantial resource overhead, including token consumption and latency, which is particularly redundant when handling obviously generated forgeries. To address this issue, we propose Fake-HR1, a large-scale hybrid-reasoning model that, to the best of our knowledge, is the first to adaptively determine whether reasoning is necessary based on the characteristics of the generative detection task. To achieve this, we design a two-stage training framework: we first perform Hybrid Fine-Tuning (HFT) for cold-start initialization, followed by online reinforcement learning with Hybrid-Reasoning Grouped Policy Optimization (HGRPO) to implicitly learn when to select an appropriate reasoning mode. Experimental results show that Fake-HR1 adaptively performs reasoning across different types of queries, surpassing existing LLMs in both reasoning ability and generative detection performance, while significantly improving response efficiency.",
+    "authors": [
+      "Changjiang Jiang",
+      "Xinkuan Sha",
+      "Fengchang Yu",
+      "Jingjing Liu",
+      "Jian Liu",
+      "Mingqi Fang",
+      "Chenfeng Zhang",
+      "Wei Lu"
+    ],
+    "published": "2026-02-10",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.10042v2",
+    "arxiv_url": "https://arxiv.org/abs/2602.10042v2",
+    "fetched_at": "2026-02-12T08:54:10.372814"
+  }
+]
