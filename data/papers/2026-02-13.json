@@ -1,0 +1,525 @@
+[
+  {
+    "id": "2602.12104v1",
+    "title": "Liquidation Dynamics in DeFi and the Role of Transaction Fees",
+    "abstract": "Liquidation of collateral are the primary safeguard for solvency of lending protocols in decentralized finance. However, the mechanics of liquidations expose these protocols to predatory price manipulations and other forms of Maximal Extractable Value (MEV). In this paper, we characterize the optimal liquidation strategy, via a dynamic program, from the perspective of a profit-maximizing liquidator when the spot oracle is given by a Constant Product Market Maker (CPMM). We explicitly model Oracle Extractable Value (OEV) where liquidators manipulate the CPMM with sandwich attacks to trigger profitable liquidation events. We derive closed-form liquidation bounds and prove that CPMM transaction fees act as a critical security parameter. Crucially, we demonstrate that fees do not merely reduce attacker profits, but can make such manipulations unprofitable for an attacker. Our findings suggest that CPMM transaction fees serve a dual purpose: compensating liquidity providers and endogenously hardening CPMM oracles against manipulation without the latency of time-weighted averages or medianization.",
+    "authors": [
+      "Agathe Sadeghi",
+      "Zachary Feinstein"
+    ],
+    "published": "2026-02-12",
+    "categories": [
+      "q-fin.MF",
+      "math.DS",
+      "q-fin.TR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.12104v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.12104v1",
+    "fetched_at": "2026-02-13T08:50:22.721460"
+  },
+  {
+    "id": "2602.12030v1",
+    "title": "Time-Inhomogeneous Volatility Aversion for Financial Applications of Reinforcement Learning",
+    "abstract": "In finance, sequential decision problems are often faced, for which reinforcement learning (RL) emerges as a promising tool for optimisation without the need of analytical tractability. However, the objective of classical RL is the expected cumulated reward, while financial applications typically require a trade-off between return and risk. In this work, we focus on settings where one cares about the time split of the total return, ruling out most risk-aware generalisations of RL which optimise a risk measure defined on the latter. We notice that a preference for homogeneous splits, which we found satisfactory for hedging, can be unfit for other problems, and therefore propose a new risk metric which still penalises uncertainty of the single rewards, but allows for an arbitrary planning of their target levels. We study the properties of the resulting objective and the generalisation of learning algorithms to optimise it. Finally, we show numerical results on toy examples.",
+    "authors": [
+      "Federico Cacciamani",
+      "Roberto Daluiso",
+      "Marco Pinciroli",
+      "Michele Trapletti",
+      "Edoardo Vittori"
+    ],
+    "published": "2026-02-12",
+    "categories": [
+      "q-fin.CP",
+      "q-fin.TR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.12030v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.12030v1",
+    "fetched_at": "2026-02-13T08:50:22.721503"
+  },
+  {
+    "id": "2602.11687v1",
+    "title": "Exact Value Solution to the Equity Premium Puzzle",
+    "abstract": "The aim of this article is to provide the solution to the equity premium puzzle without using calibrated values. Calibrated values of subjective time discount factor were used in the prior derived models because 4 variables were determined from 3 different equations. Furthermore, calculated values and risk behavior determination of prior models were compatible with empirical literature. 4 unknown variables are now calculated from 4 different equations in the new derived model in this article. Subjective time discount factor and coefficient of relative risk aversion are found 0.9581 and 1.0319, respectively from the system of equations which are compatible with empirical studies. Micro and macro studies about CRRA value affirm each other for the first time in the literature. Furthermore, equity and risk-free asset investors are pinned down to be insufficient risk-loving, which can be considered a type of risk-averse behavior. Hence it can be said that calculated values and risk attitude determination align with empirical literature. This shows that derived model is valid and make CCAPM work under the same assumptions with those of prior derived models.",
+    "authors": [
+      "Atilla Aras"
+    ],
+    "published": "2026-02-12",
+    "categories": [
+      "q-fin.GN",
+      "econ.GN"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.11687v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.11687v1",
+    "fetched_at": "2026-02-13T08:50:22.721526"
+  },
+  {
+    "id": "2602.12129v1",
+    "title": "Towards Personalized Bangla Book Recommendation: A Large-Scale Multi-Entity Book Graph Dataset",
+    "abstract": "Personalized book recommendation in Bangla literature has been constrained by the lack of structured, large-scale, and publicly available datasets. This work introduces RokomariBG, a large-scale, multi-entity heterogeneous book graph dataset designed to support research on personalized recommendation in a low-resource language setting. The dataset comprises 127,302 books, 63,723 users, 16,601 authors, 1,515 categories, 2,757 publishers, and 209,602 reviews, connected through eight relation types and organized as a comprehensive knowledge graph.   To demonstrate the utility of the dataset, we provide a systematic benchmarking study on the Top-N recommendation task, evaluating a diverse set of representative recommendation models, including classical collaborative filtering methods, matrix factorization models, content-based approaches, graph neural networks, a hybrid matrix factorization model with side information, and a neural two-tower retrieval architecture. The benchmarking results highlight the importance of leveraging multi-relational structure and textual side information, with neural retrieval models achieving the strongest performance (NDCG@10 = 0.204). Overall, this work establishes a foundational benchmark and a publicly available resource for Bangla book recommendation research, enabling reproducible evaluation and future studies on recommendation in low-resource cultural domains. The dataset and code are publicly available at https://github.com/backlashblitz/Bangla-Book-Recommendation-Dataset",
+    "authors": [
+      "Rahin Arefin Ahmed",
+      "Md. Anik Chowdhury",
+      "Sakil Ahmed Sheikh Reza",
+      "Devnil Bhattacharjee",
+      "Muhammad Abdullah Adnan",
+      "Nafis Sadeq"
+    ],
+    "published": "2026-02-12",
+    "categories": [
+      "cs.IR",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.12129v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.12129v1",
+    "fetched_at": "2026-02-13T08:50:29.166520"
+  },
+  {
+    "id": "2602.11918v1",
+    "title": "MEME: Modeling the Evolutionary Modes of Financial Markets",
+    "abstract": "LLMs have demonstrated significant potential in quantitative finance by processing vast unstructured data to emulate human-like analytical workflows. However, current LLM-based methods primarily follow either an Asset-Centric paradigm focused on individual stock prediction or a Market-Centric approach for portfolio allocation, often remaining agnostic to the underlying reasoning that drives market movements. In this paper, we propose a Logic-Oriented perspective, modeling the financial market as a dynamic, evolutionary ecosystem of competing investment narratives, termed Modes of Thought. To operationalize this view, we introduce MEME (Modeling the Evolutionary Modes of Financial Markets), designed to reconstruct market dynamics through the lens of evolving logics. MEME employs a multi-agent extraction module to transform noisy data into high-fidelity Investment Arguments and utilizes Gaussian Mixture Modeling to uncover latent consensus within a semantic space. To model semantic drift among different market conditions, we also implement a temporal evaluation and alignment mechanism to track the lifecycle and historical profitability of these modes. By prioritizing enduring market wisdom over transient anomalies, MEME ensures that portfolio construction is guided by robust reasoning. Extensive experiments on three heterogeneous Chinese stock pools from 2023 to 2025 demonstrate that MEME consistently outperforms seven SOTA baselines. Further ablation studies, sensitivity analysis, lifecycle case study and cost analysis validate MEME's capacity to identify and adapt to the evolving consensus of financial markets. Our implementation can be found at https://github.com/gta0804/MEME.",
+    "authors": [
+      "Taian Guo",
+      "Haiyang Shen",
+      "Junyu Luo",
+      "Zhongshi Xing",
+      "Hanchun Lian",
+      "Jinsheng Huang",
+      "Binqi Chen",
+      "Luchen Liu",
+      "Yun Ma",
+      "Ming Zhang"
+    ],
+    "published": "2026-02-12",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.11918v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.11918v1",
+    "fetched_at": "2026-02-13T08:50:35.443654"
+  },
+  {
+    "id": "2602.11539v1",
+    "title": "Real-Time Proactive Anomaly Detection via Forward and Backward Forecast Modeling",
+    "abstract": "Reactive anomaly detection methods, which are commonly deployed to identify anomalies after they occur based on observed deviations, often fall short in applications that demand timely intervention, such as industrial monitoring, finance, and cybersecurity. Proactive anomaly detection, by contrast, aims to detect early warning signals before failures fully manifest, but existing methods struggle with handling heterogeneous multivariate data and maintaining precision under noisy or unpredictable conditions. In this work, we introduce two proactive anomaly detection frameworks: the Forward Forecasting Model (FFM) and the Backward Reconstruction Model (BRM). Both models leverage a hybrid architecture combining Temporal Convolutional Networks (TCNs), Gated Recurrent Units (GRUs), and Transformer encoders to model directional temporal dynamics. FFM forecasts future sequences to anticipate disruptions, while BRM reconstructs recent history from future context to uncover early precursors. Anomalies are flagged based on forecasting error magnitudes and directional embedding discrepancies. Our models support both continuous and discrete multivariate features, enabling robust performance in real-world settings. Extensive experiments on four benchmark datasets, MSL, SMAP, SMD, and PSM, demonstrate that FFM and BRM outperform state-of-the-art baselines across detection metrics and significantly improve the timeliness of anomaly anticipation. These properties make our approach well-suited for deployment in time-sensitive domains requiring proactive monitoring.",
+    "authors": [
+      "Luis Olmos",
+      "Rashida Hasan"
+    ],
+    "published": "2026-02-12",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.11539v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.11539v1",
+    "fetched_at": "2026-02-13T08:50:35.443681"
+  },
+  {
+    "id": "2602.11409v1",
+    "title": "TRACER: Trajectory Risk Aggregation for Critical Episodes in Agentic Reasoning",
+    "abstract": "Estimating uncertainty for AI agents in real-world multi-turn tool-using interaction with humans is difficult because failures are often triggered by sparse critical episodes (e.g., looping, incoherent tool use, or user-agent miscoordination) even when local generation appears confident. Existing uncertainty proxies focus on single-shot text generation and therefore miss these trajectory-level breakdown signals. We introduce TRACER, a trajectory-level uncertainty metric for dual-control Tool-Agent-User interaction. TRACER combines content-aware surprisal with situational-awareness signals, semantic and lexical repetition, and tool-grounded coherence gaps, and aggregates them using a tail-focused risk functional with a MAX-composite step risk to surface decisive anomalies. We evaluate TRACER on $τ^2$-bench by predicting task failure and selective task execution. To this end, TRACER improves AUROC by up to 37.1% and AUARC by up to 55% over baselines, enabling earlier and more accurate detection of uncertainty in complex conversational tool-use settings. Our code and benchmark are available at https://github.com/sinatayebati/agent-tracer.",
+    "authors": [
+      "Sina Tayebati",
+      "Divake Kumar",
+      "Nastaran Darabi",
+      "Davide Ettori",
+      "Ranganath Krishnan",
+      "Amit Ranjan Trivedi"
+    ],
+    "published": "2026-02-11",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.11409v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.11409v1",
+    "fetched_at": "2026-02-13T08:50:35.443708"
+  },
+  {
+    "id": "2602.11313v1",
+    "title": "Hierarchical Testing of a Hybrid Machine Learning-Physics Global Atmosphere Model",
+    "abstract": "Machine learning (ML)-based models have demonstrated high skill and computational efficiency, often outperforming conventional physics-based models in weather and subseasonal predictions. While prior studies have assessed their fidelity in capturing synoptic-scale atmospheric dynamics, their performance across timescales and under out-of-distribution forcing, such as +3K or +4K uniform-warming forcings, and the sources of biases remain elusive, to establish the model reliability for Earth science. Here, we design three sets of experiments targeting synoptic-scale phenomena, interannual variability, and out-of-distribution uniform-warming forcings. We evaluate the Neural General Circulation Model (NeuralGCM), a hybrid model integrating a dynamical core with ML-based component, against observations and physics-based Earth system models (ESMs). At the synoptic scale, NeuralGCM captures the evolution and propagation of extratropical cyclones with performance comparable to ESMs. At the interannual scale, when forced by El Niño-Southern Oscillation sea surface temperature (SST) anomalies, NeuralGCM successfully reproduces associated teleconnection patterns but exhibits deficiencies in capturing nonlinear response. Under out-of-distribution uniform-warming forcings, NeuralGCM simulates similar responses in global-average temperature and precipitation and reproduces large-scale tropospheric circulation features similar to those in ESMs. Notable weaknesses include overestimating the tracks and spatial extent of extratropical cyclones, biases in the teleconnected wave train triggered by tropical SST anomalies, and differences in upper-level warming and stratospheric circulation responses to SST warming compared to physics-based ESMs. The causes of these weaknesses were explored.",
+    "authors": [
+      "Ziming Chen",
+      "L. Ruby Leung",
+      "Wenyu Zhou",
+      "Jian Lu",
+      "Sandro W. Lubis",
+      "Ye Liu",
+      "Chuan-Chieh Chang",
+      "Bryce E. Harrop",
+      "Ya Wang",
+      "Mingshi Yang",
+      "Gan Zhang",
+      "Yun Qian"
+    ],
+    "published": "2026-02-11",
+    "categories": [
+      "physics.ao-ph",
+      "cs.LG",
+      "physics.geo-ph"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.11313v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.11313v1",
+    "fetched_at": "2026-02-13T08:50:35.443746"
+  },
+  {
+    "id": "2602.12268v1",
+    "title": "CM2: Reinforcement Learning with Checklist Rewards for Multi-Turn and Multi-Step Agentic Tool Use",
+    "abstract": "AI agents are increasingly used to solve real-world tasks by reasoning over multi-turn user interactions and invoking external tools. However, applying reinforcement learning to such settings remains difficult: realistic objectives often lack verifiable rewards and instead emphasize open-ended behaviors; moreover, RL for multi-turn, multi-step agentic tool use is still underexplored; and building and maintaining executable tool environments is costly, limiting scale and coverage. We propose CM2, an RL framework that replaces verifiable outcome rewards with checklist rewards. CM2 decomposes each turn's intended behavior into fine-grained binary criteria with explicit evidence grounding and structured metadata, turning open-ended judging into more stable classification-style decisions. To balance stability and informativeness, our method adopts a strategy of sparse reward assignment but dense evaluation criteria. Training is performed in a scalable LLM-simulated tool environment, avoiding heavy engineering for large tool sets. Experiments show that CM2 consistently improves over supervised fine-tuning. Starting from an 8B Base model and training on an 8k-example RL dataset, CM2 improves over the SFT counterpart by 8 points on tau^-Bench, by 10 points on BFCL-V4, and by 12 points on ToolSandbox. The results match or even outperform similarly sized open-source baselines, including the judging model. CM2 thus provides a scalable recipe for optimizing multi-turn, multi-step tool-using agents without relying on verifiable rewards. Code provided by the open-source community: https://github.com/namezhenzhang/CM2-RLCR-Tool-Agent.",
+    "authors": [
+      "Zhen Zhang",
+      "Kaiqiang Song",
+      "Xun Wang",
+      "Yebowen Hu",
+      "Weixiang Yan",
+      "Chenyang Zhao",
+      "Henry Peng Zou",
+      "Haoyun Deng",
+      "Sathish Reddy Indurthi",
+      "Shujian Liu",
+      "Simin Ma",
+      "Xiaoyang Wang",
+      "Xin Eric Wang",
+      "Song Wang"
+    ],
+    "published": "2026-02-12",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.12268v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.12268v1",
+    "fetched_at": "2026-02-13T08:51:03.620066"
+  },
+  {
+    "id": "2602.12247v1",
+    "title": "ExtractBench: A Benchmark and Evaluation Methodology for Complex Structured Extraction",
+    "abstract": "Unstructured documents like PDFs contain valuable structured information, but downstream systems require this data in reliable, standardized formats. LLMs are increasingly deployed to automate this extraction, making accuracy and reliability paramount. However, progress is bottlenecked by two gaps. First, no end-to-end benchmark evaluates PDF-to-JSON extraction under enterprise-scale schema breadth. Second, no principled methodology captures the semantics of nested extraction, where fields demand different notions of correctness (exact match for identifiers, tolerance for quantities, semantic equivalence for names), arrays require alignment, and omission must be distinguished from hallucination. We address both gaps with ExtractBench, an open-source benchmark and evaluation framework for PDF-to-JSON structured extraction. The benchmark pairs 35 PDF documents with JSON Schemas and human-annotated gold labels across economically valuable domains, yielding 12,867 evaluatable fields spanning schema complexities from tens to hundreds of fields. The evaluation framework treats the schema as an executable specification: each field declares its scoring metric. Baseline evaluations reveal that frontier models (GPT-5/5.2, Gemini-3 Flash/Pro, Claude 4.5 Opus/Sonnet) remain unreliable on realistic schemas. Performance degrades sharply with schema breadth, culminating in 0% valid output on a 369-field financial reporting schema across all tested models. We release ExtractBench at https://github.com/ContextualAI/extract-bench.",
+    "authors": [
+      "Nick Ferguson",
+      "Josh Pennington",
+      "Narek Beghian",
+      "Aravind Mohan",
+      "Douwe Kiela",
+      "Sheshansh Agrawal",
+      "Thien Hang Nguyen"
+    ],
+    "published": "2026-02-12",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.12247v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.12247v1",
+    "fetched_at": "2026-02-13T08:51:03.620122"
+  },
+  {
+    "id": "2602.12089v1",
+    "title": "Choose Your Agent: Tradeoffs in Adopting AI Advisors, Coaches, and Delegates in Multi-Party Negotiation",
+    "abstract": "As AI usage becomes more prevalent in social contexts, understanding agent-user interaction is critical to designing systems that improve both individual and group outcomes. We present an online behavioral experiment (N = 243) in which participants play three multi-turn bargaining games in groups of three. Each game, presented in randomized order, grants \\textit{access to} a single LLM assistance modality: proactive recommendations from an \\textit{Advisor}, reactive feedback from a \\textit{Coach}, or autonomous execution by a \\textit{Delegate}; all modalities are powered by an underlying LLM that achieves superhuman performance in an all-agent environment. On each turn, participants privately decide whether to act manually or use the AI modality available in that game. Despite preferring the \\textit{Advisor} modality, participants achieve the highest mean individual gains with the \\textit{Delegate}, demonstrating a preference-performance misalignment. Moreover, delegation generates positive externalities; even non-adopting users in \\textit{access-to-delegate} treatment groups benefit by receiving higher-quality offers. Mechanism analysis reveals that the \\textit{Delegate} agent acts as a market maker, injecting rational, Pareto-improving proposals that restructure the trading environment. Our research reveals a gap between agent capabilities and realized group welfare. While autonomous agents can exhibit super-human strategic performance, their impact on realized welfare gains can be constrained by interfaces, user perceptions, and adoption barriers. Assistance modalities should be designed as mechanisms with endogenous participation; adoption-compatible interaction rules are a prerequisite to improving human welfare with automated assistance.",
+    "authors": [
+      "Kehang Zhu",
+      "Lithium Thain",
+      "Vivian Tsai",
+      "James Wexler",
+      "Crystal Qian"
+    ],
+    "published": "2026-02-12",
+    "categories": [
+      "cs.GT",
+      "cs.AI",
+      "cs.HC"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.12089v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.12089v1",
+    "fetched_at": "2026-02-13T08:51:03.620153"
+  },
+  {
+    "id": "2602.12083v1",
+    "title": "Differentiable Modal Logic for Multi-Agent Diagnosis, Orchestration and Communication",
+    "abstract": "As multi-agent AI systems evolve from simple chatbots to autonomous swarms, debugging semantic failures requires reasoning about knowledge, belief, causality, and obligation, precisely what modal logic was designed to formalize. However, traditional modal logic requires manual specification of relationship structures that are unknown or dynamic in real systems. This tutorial demonstrates differentiable modal logic (DML), implemented via Modal Logical Neural Networks (MLNNs), enabling systems to learn trust networks, causal chains, and regulatory boundaries from behavioral data alone.   We present a unified neurosymbolic debugging framework through four modalities: epistemic (who to trust), temporal (when events cause failures), deontic (what actions are permitted), and doxastic (how to interpret agent confidence). Each modality is demonstrated on concrete multi-agent scenarios, from discovering deceptive alliances in diplomacy games to detecting LLM hallucinations, with complete implementations showing how logical contradictions become learnable optimization objectives. Key contributions for the neurosymbolic community: (1) interpretable learned structures where trust and causality are explicit parameters, not opaque embeddings; (2) knowledge injection via differentiable axioms that guide learning with sparse data (3) compositional multi-modal reasoning that combines epistemic, temporal, and deontic constraints; and (4) practical deployment patterns for monitoring, active control and communication of multi-agent systems. All code provided as executable Jupyter notebooks.",
+    "authors": [
+      "Antonin Sulc"
+    ],
+    "published": "2026-02-12",
+    "categories": [
+      "cs.AI",
+      "cs.LO"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.12083v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.12083v1",
+    "fetched_at": "2026-02-13T08:51:03.620173"
+  },
+  {
+    "id": "2602.12049v1",
+    "title": "Improving HPC Code Generation Capability of LLMs via Online Reinforcement Learning with Real-Machine Benchmark Rewards",
+    "abstract": "Large language models (LLMs) have demonstrated strong code generation capabilities, yet the runtime performance of generated code is not guaranteed, and there have been few attempts to train LLMs using runtime performance as a reward in the HPC domain. We propose an online reinforcement learning approach that executes LLM-generated code on a supercomputer and directly feeds back the measured runtime performance (GFLOPS) as a reward. We further introduce a Staged Quality-Diversity (SQD) algorithm that progressively varies the permitted optimization techniques on a per-problem basis, enabling the model to learn code optimization from diverse perspectives. We build a distributed system connecting a GPU training cluster with a CPU benchmarking cluster, and train Qwen2.5 Coder 14B on a double-precision matrix multiplication task using Group Relative Policy Optimization (GRPO). Through two experiments, we show that reinforcement learning combining runtime performance feedback with staged optimization can improve the HPC code generation capability of LLMs.",
+    "authors": [
+      "Ryo Mikasa",
+      "Shun-ichiro Hayashi",
+      "Daichi Mukunoki",
+      "Tetsuya Hoshino",
+      "Takahiro Katagiri"
+    ],
+    "published": "2026-02-12",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.12049v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.12049v1",
+    "fetched_at": "2026-02-13T08:51:03.620198"
+  },
+  {
+    "id": "2602.12029v1",
+    "title": "PrefillShare: A Shared Prefill Module for KV Reuse in Multi-LLM Disaggregated Serving",
+    "abstract": "Multi-agent systems increasingly orchestrate multiple specialized language models to solve complex real-world problems, often invoking them over a shared context. This execution pattern repeatedly processes the same prompt prefix across models. Consequently, each model redundantly executes the prefill stage and maintains its own key-value (KV) cache, increasing aggregate prefill load and worsening tail latency by intensifying prefill-decode interference in existing LLM serving stacks. Disaggregated serving reduces such interference by placing prefill and decode on separate GPUs, but disaggregation does not fundamentally eliminate inter-model redundancy in computation and KV storage for the same prompt. To address this issue, we propose PrefillShare, a novel algorithm that enables sharing the prefill stage across multiple models in a disaggregated setting. PrefillShare factorizes the model into prefill and decode modules, freezes the prefill module, and fine-tunes only the decode module. This design allows multiple task-specific models to share a prefill module and the KV cache generated for the same prompt. We further introduce a routing mechanism that enables effective prefill sharing across heterogeneous models in a vLLM-based disaggregated system. PrefillShare not only matches full fine-tuning accuracy on a broad range of tasks and models, but also delivers 4.5x lower p95 latency and 3.9x higher throughput in multi-model agent workloads.",
+    "authors": [
+      "Sunghyeon Woo",
+      "Hoseung Kim",
+      "Sunghwan Shim",
+      "Minjung Jo",
+      "Hyunjoon Jeong",
+      "Jeongtae Lee",
+      "Joonghoon Kim",
+      "Sungjae Lee",
+      "Baeseong Park",
+      "Se Jung Kwon",
+      "Dongsoo Lee"
+    ],
+    "published": "2026-02-12",
+    "categories": [
+      "cs.LG",
+      "cs.DC"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.12029v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.12029v1",
+    "fetched_at": "2026-02-13T08:51:03.620235"
+  },
+  {
+    "id": "2602.11978v1",
+    "title": "Accelerating Robotic Reinforcement Learning with Agent Guidance",
+    "abstract": "Reinforcement Learning (RL) offers a powerful paradigm for autonomous robots to master generalist manipulation skills through trial-and-error. However, its real-world application is stifled by severe sample inefficiency. Recent Human-in-the-Loop (HIL) methods accelerate training by using human corrections, yet this approach faces a scalability barrier. Reliance on human supervisors imposes a 1:1 supervision ratio that limits fleet expansion, suffers from operator fatigue over extended sessions, and introduces high variance due to inconsistent human proficiency. We present Agent-guided Policy Search (AGPS), a framework that automates the training pipeline by replacing human supervisors with a multimodal agent. Our key insight is that the agent can be viewed as a semantic world model, injecting intrinsic value priors to structure physical exploration. By using executable tools, the agent provides precise guidance via corrective waypoints and spatial constraints for exploration pruning. We validate our approach on two tasks, ranging from precision insertion to deformable object manipulation. Results demonstrate that AGPS outperforms HIL methods in sample efficiency. This automates the supervision pipeline, unlocking the path to labor-free and scalable robot learning. Project website: https://agps-rl.github.io/agps.",
+    "authors": [
+      "Haojun Chen",
+      "Zili Zou",
+      "Chengdong Ma",
+      "Yaoxiang Pu",
+      "Haotong Zhang",
+      "Yuanpei Chen",
+      "Yaodong Yang"
+    ],
+    "published": "2026-02-12",
+    "categories": [
+      "cs.RO",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.11978v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.11978v1",
+    "fetched_at": "2026-02-13T08:51:03.620263"
+  },
+  {
+    "id": "2602.11790v1",
+    "title": "Beyond End-to-End Video Models: An LLM-Based Multi-Agent System for Educational Video Generation",
+    "abstract": "Although recent end-to-end video generation models demonstrate impressive performance in visually oriented content creation, they remain limited in scenarios that require strict logical rigor and precise knowledge representation, such as instructional and educational media. To address this problem, we propose LAVES, a hierarchical LLM-based multi-agent system for generating high-quality instructional videos from educational problems. The LAVES formulates educational video generation as a multi-objective task that simultaneously demands correct step-by-step reasoning, pedagogically coherent narration, semantically faithful visual demonstrations, and precise audio--visual alignment. To address the limitations of prior approaches--including low procedural fidelity, high production cost, and limited controllability--LAVES decomposes the generation workflow into specialized agents coordinated by a central Orchestrating Agent with explicit quality gates and iterative critique mechanisms. Specifically, the Orchestrating Agent supervises a Solution Agent for rigorous problem solving, an Illustration Agent that produces executable visualization codes, and a Narration Agent for learner-oriented instructional scripts. In addition, all outputs from the working agents are subject to semantic critique, rule-based constraints, and tool-based compilation checks. Rather than directly synthesizing pixels, the system constructs a structured executable video script that is deterministically compiled into synchronized visuals and narration using template-driven assembly rules, enabling fully automated end-to-end production without manual editing. In large-scale deployments, LAVES achieves a throughput exceeding one million videos per day, delivering over a 95% reduction in cost compared to current industry-standard approaches while maintaining a high acceptance rate.",
+    "authors": [
+      "Lingyong Yan",
+      "Jiulong Wu",
+      "Dong Xie",
+      "Weixian Shi",
+      "Deguo Xia",
+      "Jizhou Huang"
+    ],
+    "published": "2026-02-12",
+    "categories": [
+      "cs.AI",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.11790v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.11790v1",
+    "fetched_at": "2026-02-13T08:51:03.620289"
+  },
+  {
+    "id": "2602.11782v1",
+    "title": "FlowMind: Execute-Summarize for Structured Workflow Generation from LLM Reasoning",
+    "abstract": "LLMs can solve complex tasks through reasoning and tool use, but accurately translating these solutions into structured workflows remains challenging. We model workflows as sequences of tool use and reformulate the problem as designing a mechanism that can both solve tasks and reliably construct workflows. Prior approaches that build workflows during execution often suffer from inaccuracies due to interference between the two processes. We propose an Execute-Summarize(ES) framework that decouples task execution from workflow construction: the model first completes the task using available tools, then independently reconstructs a structured workflow from execution traces. This separation improves workflow accuracy and robustness. We introduce FlowBench and show through extensive experiments that our approach outperforms existing methods, providing a reliable paradigm for grounding free-form LLM reasoning into structured workflows.",
+    "authors": [
+      "Yihao Liu",
+      "Ziyun Zhang",
+      "Zile He",
+      "Huaqian Cai"
+    ],
+    "published": "2026-02-12",
+    "categories": [
+      "cs.AI",
+      "cs.SE"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.11782v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.11782v1",
+    "fetched_at": "2026-02-13T08:51:03.620312"
+  },
+  {
+    "id": "2602.11750v1",
+    "title": "AmbiBench: Benchmarking Mobile GUI Agents Beyond One-Shot Instructions in the Wild",
+    "abstract": "Benchmarks are paramount for gauging progress in the domain of Mobile GUI Agents. In practical scenarios, users frequently fail to articulate precise directives containing full task details at the onset, and their expressions are typically ambiguous. Consequently, agents are required to converge on the user's true intent via active clarification and interaction during execution. However, existing benchmarks predominantly operate under the idealized assumption that user-issued instructions are complete and unequivocal. This paradigm focuses exclusively on assessing single-turn execution while overlooking the alignment capability of the agent. To address this limitation, we introduce AmbiBench, the first benchmark incorporating a taxonomy of instruction clarity to shift evaluation from unidirectional instruction following to bidirectional intent alignment. Grounded in Cognitive Gap theory, we propose a taxonomy of four clarity levels: Detailed, Standard, Incomplete, and Ambiguous. We construct a rigorous dataset of 240 ecologically valid tasks across 25 applications, subject to strict review protocols. Furthermore, targeting evaluation in dynamic environments, we develop MUSE (Mobile User Satisfaction Evaluator), an automated framework utilizing an MLLM-as-a-judge multi-agent architecture. MUSE performs fine-grained auditing across three dimensions: Outcome Effectiveness, Execution Quality, and Interaction Quality. Empirical results on AmbiBench reveal the performance boundaries of SoTA agents across different clarity levels, quantify the gains derived from active interaction, and validate the strong correlation between MUSE and human judgment. This work redefines evaluation standards, laying the foundation for next-generation agents capable of truly understanding user intent.",
+    "authors": [
+      "Jiazheng Sun",
+      "Mingxuan Li",
+      "Yingying Zhang",
+      "Jiayang Niu",
+      "Yachen Wu",
+      "Ruihan Jin",
+      "Shuyu Lei",
+      "Pengrongrui Tan",
+      "Zongyu Zhang",
+      "Ruoyi Wang",
+      "Jiachen Yang",
+      "Boyu Yang",
+      "Jiacheng Liu",
+      "Xin Peng"
+    ],
+    "published": "2026-02-12",
+    "categories": [
+      "cs.SE",
+      "cs.AI",
+      "cs.HC"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.11750v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.11750v1",
+    "fetched_at": "2026-02-13T08:51:03.620353"
+  },
+  {
+    "id": "2602.11749v1",
+    "title": "AIR: Improving Agent Safety through Incident Response",
+    "abstract": "Large Language Model (LLM) agents are increasingly deployed in practice across a wide range of autonomous applications. Yet current safety mechanisms for LLM agents focus almost exclusively on preventing failures in advance, providing limited capabilities for responding to, containing, or recovering from incidents after they inevitably arise. In this work, we introduce AIR, the first incident response framework for LLM agent systems. AIR defines a domain-specific language for managing the incident response lifecycle autonomously in LLM agent systems, and integrates it into the agent's execution loop to (1) detect incidents via semantic checks grounded in the current environment state and recent context, (2) guide the agent to execute containment and recovery actions via its tools, and (3) synthesize guardrail rules during eradication to block similar incidents in future executions. We evaluate AIR on three representative agent types. Results show that AIR achieves detection, remediation, and eradication success rates all exceeding 90%. Extensive experiments further confirm the necessity of AIR's key design components, show the timeliness and moderate overhead of AIR, and demonstrate that LLM-generated rules can approach the effectiveness of developer-authored rules across domains. These results show that incident response is both feasible and essential as a first-class mechanism for improving agent safety.",
+    "authors": [
+      "Zibo Xiao",
+      "Jun Sun",
+      "Junjie Chen"
+    ],
+    "published": "2026-02-12",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.11749v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.11749v1",
+    "fetched_at": "2026-02-13T08:51:03.620374"
+  },
+  {
+    "id": "2602.11745v1",
+    "title": "Text2GQL-Bench: A Text to Graph Query Language Benchmark [Experiment, Analysis & Benchmark]",
+    "abstract": "Graph models are fundamental to data analysis in domains rich with complex relationships. Text-to-Graph-Query-Language (Text-to-GQL) systems act as a translator, converting natural language into executable graph queries. This capability allows Large Language Models (LLMs) to directly analyze and manipulate graph data, posi-tioning them as powerful agent infrastructures for Graph Database Management System (GDBMS). Despite recent progress, existing datasets are often limited in domain coverage, supported graph query languages, or evaluation scope. The advancement of Text-to-GQL systems is hindered by the lack of high-quality benchmark datasets and evaluation methods to systematically compare model capabilities across different graph query languages and domains. In this work, we present Text2GQL-Bench, a unified Text-to-GQL benchmark designed to address these limitations. Text2GQL-Bench couples a multi-GQL dataset that has 178,184 (Question, Query) pairs spanning 13 domains, with a scalable construction framework that generates datasets in different domains, question abstraction levels, and GQLs with heterogeneous resources. To support compre-hensive assessment, we introduce an evaluation method that goes beyond a single end-to-end metric by jointly reporting grammatical validity, similarity, semantic alignment, and execution accuracy. Our evaluation uncovers a stark dialect gap in ISO-GQL generation: even strong LLMs achieve only at most 4% execution accuracy (EX) in zero-shot settings, though a fixed 3-shot prompt raises accuracy to around 50%, the grammatical validity remains lower than 70%. Moreover, a fine-tuned 8B open-weight model reaches 45.1% EX, and 90.8% grammatical validity, demonstrating that most of the performance jump is unlocked by exposure to sufficient ISO-GQL examples.",
+    "authors": [
+      "Songlin Lyu",
+      "Lujie Ban",
+      "Zihang Wu",
+      "Tianqi Luo",
+      "Jirong Liu",
+      "Chenhao Ma",
+      "Yuyu Luo",
+      "Nan Tang",
+      "Shipeng Qi",
+      "Heng Lin",
+      "Yongchao Liu",
+      "Chuntao Hong"
+    ],
+    "published": "2026-02-12",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.11745v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.11745v1",
+    "fetched_at": "2026-02-13T08:51:03.620412"
+  },
+  {
+    "id": "2602.11731v1",
+    "title": "Thinking with Drafting: Optical Decompression via Logical Reconstruction",
+    "abstract": "Existing multimodal large language models have achieved high-fidelity visual perception and exploratory visual generation. However, a precision paradox persists in complex reasoning tasks: optical perception systems transcribe symbols without capturing logical topology, while pixel-based generative models produce visual artifacts lacking mathematical exactness. To bridge this gap, we propose that reasoning over visual inputs be reconceptualized as optical decompression-the process of reconstructing latent logical structures from compressed visual tokens. Guided by the axiom that Parsing is Reasoning, we introduce Thinking with Drafting (TwD), which utilizes a minimalist Domain-Specific Language (DSL) as a grounding intermediate representation. Unlike standard approaches that hallucinate answers directly, TwD forces the model to draft its mental model into executable code, rendering deterministic visual proofs for self-verification. To validate this, we present VisAlg, a visual algebra benchmark. Experiments demonstrate that TwD serve as a superior cognitive scaffold. Our work establishes a closed-loop system where visual generation acts not as a creative output but as a logical verifier, offering a generalizable path for visual reasoning.",
+    "authors": [
+      "Jingxuan Wei",
+      "Honghao He",
+      "Caijun Jia",
+      "Siyuan Li",
+      "Zheng Sun",
+      "Yuhang Xu",
+      "Yuanyuan Lin",
+      "Linzhuang Sun",
+      "Yuchen Wu",
+      "Bihui Yu",
+      "Xiangxiang Zhang",
+      "Cheng Tan"
+    ],
+    "published": "2026-02-12",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.11731v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.11731v1",
+    "fetched_at": "2026-02-13T08:51:03.620450"
+  },
+  {
+    "id": "2602.11698v1",
+    "title": "SpiralFormer: Looped Transformers Can Learn Hierarchical Dependencies via Multi-Resolution Recursion",
+    "abstract": "Recursive (looped) Transformers decouple computational depth from parameter depth by repeatedly applying shared layers, providing an explicit architectural primitive for iterative refinement and latent reasoning. However, early looped Transformers often underperform non-recursive baselines of equal compute. While recent literature has introduced more effective recursion mechanisms to mitigate this gap, existing architectures still operate at a fixed, full-token resolution, neglecting the potential efficiency of computing over compressed latent representations. In this paper, we propose SpiralFormer, a looped Transformer that executes recurrence under a multi-resolution recursion schedule. We provide probing evidence that multi-resolution recursion enables the model to learn hierarchical dependencies by inducing iteration-wise functional specialization across different scales. Empirically, SpiralFormer achieves better parameter and compute efficiency than both looped and non-looped baselines across model scales from 160M to 1.4B, establishing sequence resolution as a potential axis for scaling recursive architectures.",
+    "authors": [
+      "Chengting Yu",
+      "Xiaobo Shu",
+      "Yadao Wang",
+      "Yizhen Zhang",
+      "Haoyi Wu",
+      "You Wu",
+      "Rujiao Long",
+      "Ziheng Chen",
+      "Yuchi Xu",
+      "Wenbo Su",
+      "Bo Zheng"
+    ],
+    "published": "2026-02-12",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.11698v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.11698v1",
+    "fetched_at": "2026-02-13T08:51:03.620485"
+  },
+  {
+    "id": "2602.11651v1",
+    "title": "DMind-3: A Sovereign Edge--Local--Cloud AI System with Controlled Deliberation and Correction-Based Tuning for Safe, Low-Latency Transaction Execution",
+    "abstract": "This paper introduces DMind-3, a sovereign Edge-Local-Cloud intelligence stack designed to secure irreversible financial execution in Web3 environments against adversarial risks and strict latency constraints. While existing cloud-centric assistants compromise privacy and fail under network congestion, and purely local solutions lack global ecosystem context, DMind-3 resolves these tensions by decomposing capability into three cooperating layers: a deterministic signing-time intent firewall at the edge, a private high-fidelity reasoning engine on user hardware, and a policy-governed global context synthesizer in the cloud. We propose policy-driven selective offloading to route computation based on privacy sensitivity and uncertainty, supported by two novel training objectives: Hierarchical Predictive Synthesis (HPS) for fusing time-varying macro signals, and Contrastive Chain-of-Correction Supervised Fine-Tuning (C$^3$-SFT) to enhance local verification reliability. Extensive evaluations demonstrate that DMind-3 achieves a 93.7% multi-turn success rate in protocol-constrained tasks and superior domain reasoning compared to general-purpose baselines, providing a scalable framework where safety is bound to the edge execution primitive while maintaining sovereignty over sensitive user intent.",
+    "authors": [
+      "Enhao Huang",
+      "Frank Li",
+      "Tony Lin",
+      "Lowes Yang"
+    ],
+    "published": "2026-02-12",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.11651v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.11651v1",
+    "fetched_at": "2026-02-13T08:51:03.620508"
+  },
+  {
+    "id": "2602.11917v1",
+    "title": "AlphaPROBE: Alpha Mining via Principled Retrieval and On-graph biased evolution",
+    "abstract": "Extracting signals through alpha factor mining is a fundamental challenge in quantitative finance. Existing automated methods primarily follow two paradigms: Decoupled Factor Generation, which treats factor discovery as isolated events, and Iterative Factor Evolution, which focuses on local parent-child refinements. However, both paradigms lack a global structural view, often treating factor pools as unstructured collections or fragmented chains, which leads to redundant search and limited diversity. To address these limitations, we introduce AlphaPROBE (Alpha Mining via Principled Retrieval and On-graph Biased Evolution), a framework that reframes alpha mining as the strategic navigation of a Directed Acyclic Graph (DAG). By modeling factors as nodes and evolutionary links as edges, AlphaPROBE treats the factor pool as a dynamic, interconnected ecosystem. The framework consists of two core components: a Bayesian Factor Retriever that identifies high-potential seeds by balancing exploitation and exploration through a posterior probability model, and a DAG-aware Factor Generator that leverages the full ancestral trace of factors to produce context-aware, nonredundant optimizations. Extensive experiments on three major Chinese stock market datasets against 8 competitive baselines demonstrate that AlphaPROBE significantly gains enhanced performance in predictive accuracy, return stability and training efficiency. Our results confirm that leveraging global evolutionary topology is essential for efficient and robust automated alpha discovery. We have open-sourced our implementation at https://github.com/gta0804/AlphaPROBE.",
+    "authors": [
+      "Taian Guo",
+      "Haiyang Shen",
+      "Junyu Luo",
+      "Binqi Chen",
+      "Hongjun Ding",
+      "Jinsheng Huang",
+      "Luchen Liu",
+      "Yun Ma",
+      "Ming Zhang"
+    ],
+    "published": "2026-02-12",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.11917v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.11917v1",
+    "fetched_at": "2026-02-13T08:52:57.705321"
+  }
+]
