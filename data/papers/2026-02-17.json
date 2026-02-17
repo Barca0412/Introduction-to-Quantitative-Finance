@@ -1,0 +1,693 @@
+[
+  {
+    "id": "2602.14860v1",
+    "title": "Predicting the success of new crypto-tokens: the Pump.fun case",
+    "abstract": "We study the dynamics of token launched on Pump.fun, a Solana-based launchpad platform, to identify the determinants of the token success. Pump.fun employs a bonding curve mechanism to bootstrap initial liquidity possibly leading to graduation to the on-chain market, which can be seen as a token success. We build predictive models of the probability of graduation conditional on the current amount of Solana locked in the bonding curve and a set of explanatory variables that capture structural and behavioral aspects of the launch process. Conditioning the graduation probability on these variables significantly improves its predictive power, providing insights into early-stage market behavior, speculative and manipulative dynamics, and the informational efficiency of bonding-curve-based token launches.",
+    "authors": [
+      "Giulio Marino",
+      "Manuel Naviglio",
+      "Francesco Tarantelli",
+      "Fabrizio Lillo"
+    ],
+    "published": "2026-02-16",
+    "categories": [
+      "q-fin.ST"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.14860v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.14860v1",
+    "fetched_at": "2026-02-17T08:52:23.418291"
+  },
+  {
+    "id": "2602.14827v1",
+    "title": "Constrained Portfolio Optimization via Quantum Approximate Optimization Algorithm (QAOA) with XY-Mixers and Trotterized Initialization: A Hybrid Approach for Direct Indexing",
+    "abstract": "Portfolio optimization under strict cardinality constraints is a combinatorial challenge that defies classical convex optimization techniques, particularly in the context of \"Direct Indexing\" and ESG-constrained mandates. In the Noisy Intermediate-Scale Quantum (NISQ) era, the Quantum Approximate Optimization Algorithm (QAOA) offers a promising hybrid approach. However, standard QAOA implementations utilizing transverse field mixers often fail to strictly enforce hard constraints, necessitating soft penalties that distort the energy landscape. This paper presents a comprehensive analysis of a constraint-preserving QAOA formulation against Simulated Annealing (SA) and Hierarchical Risk Parity (HRP). We implement a specific QAOA ansatz utilizing a Dicke state initialization and an XY-mixer Hamiltonian that strictly preserves the Hamming weight of the solution, ensuring only valid portfolios of size K are explored. Furthermore, we introduce a Trotterized parameter initialization schedule inspired by adiabatic quantum computing to mitigate the \"Barren Plateau\" problem. Backtesting on a basket of 10 US equities over 2025 reveals that our QAOA approach achieves a Sharpe Ratio of 1.81, significantly outperforming Simulated Annealing (1.31) and HRP (0.98). We further analyze the operational implications of the algorithm's high turnover (76.8%), discussing the trade-offs between theoretical optimality and implementation costs in institutional settings.",
+    "authors": [
+      "Javier Mancilla",
+      "Theodoros D. Bouloumis",
+      "Frederic Goguikian"
+    ],
+    "published": "2026-02-16",
+    "categories": [
+      "quant-ph",
+      "q-fin.CP",
+      "q-fin.PM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.14827v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.14827v1",
+    "fetched_at": "2026-02-17T08:52:23.418330"
+  },
+  {
+    "id": "2602.14754v1",
+    "title": "A-H Premium and the Shanghai-Hong Kong Stock Connect",
+    "abstract": "This paper examines how the Shanghai-Hong Kong Stock Connect (SHHK) affects the A-H share price premium and whether the policy impact depends on market efficiency. Using monthly data for 67 Shanghai-listed A-H dual-listed firms from January 2011 to May 2019, we estimate a dynamic panel model with two-step system GMM to account for premium persistence and potential endogeneity. Market efficiency is proxied by trading-friction measures derived from daily high-low price ranges. We find that the implementation of SHHK is associated with an average 18.4% increase in the A-H premium. However, this effect is heterogeneous. The marginal policy impact is stronger for firms operating in less efficient markets and weaker for those with higher efficiency, indicating that pre-existing trading frictions condition the policy outcome. We find no significant response at the announcement stage. Placebo tests and alternative efficiency measures confirm the robustness of the efficiency-dependent effect. Overall, the results highlight the role of the information environment in shaping liberalization outcomes.",
+    "authors": [
+      "Chen Tang",
+      "Jiaqi Liu"
+    ],
+    "published": "2026-02-16",
+    "categories": [
+      "q-fin.GN"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.14754v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.14754v1",
+    "fetched_at": "2026-02-17T08:52:23.418353"
+  },
+  {
+    "id": "2602.14670v1",
+    "title": "FactorMiner: A Self-Evolving Agent with Skills and Experience Memory for Financial Alpha Discovery",
+    "abstract": "Formulaic alpha factor mining is a critical yet challenging task in quantitative investment, characterized by a vast search space and the need for domain-informed, interpretable signals. However, finding novel signals becomes increasingly difficult as the library grows due to high redundancy. We propose FactorMiner, a lightweight and flexible self-evolving agent framework designed to navigate this complex landscape through continuous knowledge accumulation. FactorMiner combines a Modular Skill Architecture that encapsulates systematic financial evaluation into executable tools with a structured Experience Memory that distills historical mining trials into actionable insights (successful patterns and failure constraints). By instantiating the Ralph Loop paradigm -- retrieve, generate, evaluate, and distill -- FactorMiner iteratively uses memory priors to guide exploration, reducing redundant search while focusing on promising directions. Experiments on multiple datasets across different assets and Markets show that FactorMiner constructs a diverse library of high-quality factors with competitive performance, while maintaining low redundancy among factors as the library scales. Overall, FactorMiner provides a practical approach to scalable discovery of interpretable formulaic alpha factors under the \"Correlation Red Sea\" constraint.",
+    "authors": [
+      "Yanlong Wang",
+      "Jian Xu",
+      "Hongkang Zhang",
+      "Shao-Lun Huang",
+      "Danny Dongning Sun",
+      "Xiao-Ping Zhang"
+    ],
+    "published": "2026-02-16",
+    "categories": [
+      "q-fin.TR",
+      "cs.MA"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.14670v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.14670v1",
+    "fetched_at": "2026-02-17T08:52:23.418381"
+  },
+  {
+    "id": "2602.14575v1",
+    "title": "Information-Theoretic Approach to Financial Market Modelling",
+    "abstract": "The paper treats the financial market as a communication system, using four information-theoretic assumptions to derive an idealized model with only one parameter. State variables are scalar stationary diffusions. The model minimizes the surprisal of the market and the Kullback-Leibler divergence between the benchmark-neutral pricing measure and the real-world probability measure. The state variables, their sums, and the growth optimal portfolio of the stocks evolve as squared radial Ornstein-Uhlenbeck processes in respective activity times.",
+    "authors": [
+      "Eckhard Platen"
+    ],
+    "published": "2026-02-16",
+    "categories": [
+      "q-fin.MF",
+      "cs.IT"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.14575v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.14575v1",
+    "fetched_at": "2026-02-17T08:52:23.418400"
+  },
+  {
+    "id": "2602.14439v1",
+    "title": "Sustainable Investment: ESG Impacts on Large Portfolio",
+    "abstract": "This paper investigates the impact of environmental, social, and governance (ESG) constraint on a regularized mean-variance (MV) portfolio optimization problem in a large-dimensional setting, in which a positive definite regularization matrix is imposed on the sample covariance matrix. We first derive the asymptotic results for the out-of-sample (OOS) Sharpe ratio (SR) of the proposed portfolio, which help quantify the impact of imposing an ESG-level constraint as well as the effect of estimation error arising from the sample mean estimation of the assets' ESG score. Furthermore, to study the influence of the choices of the regularization matrix, we develop an estimator for the OOS Sharpe ratio. The corresponding asymptotic properties of the Sharpe ratio estimator are established based on random matrix theory. Simulation results show that the proposed estimators perform close to the corresponding oracle level. Moreover, we numerically investigate the impact of various forms of regularization matrices on the OOS SR, which provides useful guidance for practical implementation. Finally, based on OOS SR estimator, we propose an adaptive regularized portfolio which uses the best regularization matrix yielding the highest estimated SR (among a set of candidates) at each decision node. Empirical evidence based on the S\\&P 500 index demonstrates that the proposed adaptive ESG-constrained portfolio achieves a high OOS SR while satisfying the required ESG level, offering a practically effective approach for sustainable investment.",
+    "authors": [
+      "Ruike Wu",
+      "Yonghe Lu",
+      "Yanrong Yang"
+    ],
+    "published": "2026-02-16",
+    "categories": [
+      "q-fin.PM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.14439v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.14439v1",
+    "fetched_at": "2026-02-17T08:52:23.418428"
+  },
+  {
+    "id": "2602.14378v1",
+    "title": "A Computational Framework for Financial Structures",
+    "abstract": "Financial structures such as securitisations, insurance contracts, and other hierarchical claims systems can be interpreted as deterministic allocation mechanisms acting on stochastic inflow processes. This paper develops a general computational representation of such structures by separating the stochastic generation of inflows from the deterministic rules governing their distribution across positions. Allocation rules, trigger conditions, and priority relations are expressed as explicit, state-dependent operators mapping realised inflows to payments under each scenario. This representation enables financial structures to be analysed as computable economic systems whose performance and risk characteristics can be evaluated consistently across alternative configurations within a unified stochastic environment. While motivated by applications in structured finance, the framework applies more broadly to contractual and institutional arrangements in which uncertain resources are allocated across ordered claims. By providing a unified computational architecture for representing and comparing such mechanisms, the approach supports systematic analysis of structural design, risk distribution, and contractual transparency under uncertainty.",
+    "authors": [
+      "Antonio Scala"
+    ],
+    "published": "2026-02-16",
+    "categories": [
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.14378v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.14378v1",
+    "fetched_at": "2026-02-17T08:52:23.418446"
+  },
+  {
+    "id": "2602.14354v1",
+    "title": "Application of Quasi Monte Carlo and Global Sensitivity Analysis to Option Pricing and Greeks",
+    "abstract": "Quasi Monte Carlo (QMC) and Global Sensitivity Analysis (GSA) techniques are applied for pricing and hedging representative financial instruments of increasing complexity. We compare standard Monte Carlo (MC) vs QMC results using Sobol' low discrepancy sequences, different sampling strategies, and various analyses of performance. We find that QMC outperforms MC in most cases, including the highest-dimensional simulations, showing faster and more stable convergence. Regarding greeks computation, we compare standard approaches, based on finite differences (FD) approximations, with adjoint methods (AAD) providing evidences that, when the number of greeks is small, the FD approach combined with QMC can lead to the same accuracy as AAD, thanks to increased convergence rate and stability, thus saving a lot of implementation effort while keeping low computational cost. Using GSA, we are able to fully explain our findings in terms of reduced effective dimension of QMC simulation, allowed in most cases, but not always, by Brownian Bridge discretization or PCA construction. We conclude that, beyond pricing, QMC is a very effcient technique also for computing risk measures, greeks in particular, as it allows to reduce the computational effort of high dimensional Monte Carlo simulations typical of modern risk management.",
+    "authors": [
+      "Stefano Scoleri",
+      "Marco Bianchetti",
+      "Sergei Kucherenko"
+    ],
+    "published": "2026-02-16",
+    "categories": [
+      "q-fin.CP",
+      "q-fin.PR",
+      "q-fin.RM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.14354v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.14354v1",
+    "fetched_at": "2026-02-17T08:52:23.418469"
+  },
+  {
+    "id": "2602.14350v1",
+    "title": "Hidden Risks and Optionalities in American Options",
+    "abstract": "We develop a practical framework for identifying and quantifying the hidden layers of risks and optionality embedded in American options by introducing stochasticity into one or more of their underlying determinants. The heuristic approach remedies the problems of conventional pricing systems, which treat some key inputs deterministically, hence systematically underestimate the flexibility and convexity inherent in early-exercise features.",
+    "authors": [
+      "Noura El Hassan",
+      "Bacel Maddah",
+      "Nassim N. Taleb"
+    ],
+    "published": "2026-02-15",
+    "categories": [
+      "q-fin.RM",
+      "q-fin.PR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.14350v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.14350v1",
+    "fetched_at": "2026-02-17T08:52:23.418489"
+  },
+  {
+    "id": "2602.14233v1",
+    "title": "Evaluating LLMs in Finance Requires Explicit Bias Consideration",
+    "abstract": "Large Language Models (LLMs) are increasingly integrated into financial workflows, but evaluation practice has not kept up. Finance-specific biases can inflate performance, contaminate backtests, and make reported results useless for any deployment claim. We identify five recurring biases in financial LLM applications. They include look-ahead bias, survivorship bias, narrative bias, objective bias, and cost bias. These biases break financial tasks in distinct ways and they often compound to create an illusion of validity. We reviewed 164 papers from 2023 to 2025 and found that no single bias is discussed in more than 28 percent of studies. This position paper argues that bias in financial LLM systems requires explicit attention and that structural validity should be enforced before any result is used to support a deployment claim. We propose a Structural Validity Framework and an evaluation checklist with minimal requirements for bias diagnosis and future system design. The material is available at https://github.com/Eleanorkong/Awesome-Financial-LLM-Bias-Mitigation.",
+    "authors": [
+      "Yaxuan Kong",
+      "Hoyoung Lee",
+      "Yoontae Hwang",
+      "Alejandro Lopez-Lira",
+      "Bradford Levy",
+      "Dhagash Mehta",
+      "Qingsong Wen",
+      "Chanyeol Choi",
+      "Yongjae Lee",
+      "Stefan Zohren"
+    ],
+    "published": "2026-02-15",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.14233v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.14233v1",
+    "fetched_at": "2026-02-17T08:52:23.418523"
+  },
+  {
+    "id": "2602.14223v1",
+    "title": "Pareto and Bowley Reinsurance Games in Peer-to-Peer Insurance",
+    "abstract": "We propose a peer-to-peer (P2P) insurance scheme comprising a risk-sharing pool and a reinsurer. A plan manager determines how risks are allocated among members and ceded to the reinsurer, while the reinsurer sets the reinsurance loading. Our work focuses on the strategic interaction between the plan manager and the reinsurer, and this focus leads to two game-theoretic contract designs: a Pareto design and a Bowley design, for which we derive closed-form optimal contracts. In the Pareto design, cooperation between the reinsurer and the plan manager leads to multiple Pareto-optimal contracts, which are further refined by introducing the notion of coalitional stability. In contrast, the Bowley design yields a unique optimal contract through a leader-follower framework, and we provide a rigorous verification of the individual rationality constraints via pointwise comparisons of payoff vectors. Comparing the two designs, we prove that the Bowley-optimal contract is never Pareto optimal and typically yields lower total welfare. In our numerical examples, the presence of reinsurance improves welfare, especially with Pareto designs and a less risk-averse reinsurer. We further analyze the impact of the single-loading restriction, which disproportionately favors members with riskier losses.",
+    "authors": [
+      "Tim J. Boonen",
+      "Kenneth Tsz Hin Ng",
+      "Tak Wa Ng",
+      "Thai Nguyen"
+    ],
+    "published": "2026-02-15",
+    "categories": [
+      "cs.GT",
+      "q-fin.RM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.14223v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.14223v1",
+    "fetched_at": "2026-02-17T08:52:23.418545"
+  },
+  {
+    "id": "2602.14138v1",
+    "title": "Factor Engine: A Python Library for Systematic Financial Factor Computation and Analysis",
+    "abstract": "Factor Engine is a high-performance, open-source Python library designed for the systematic computation and analysis of financial factors. Built around a modular and extensible API that leverages Python decorators, Factor Engine enables users to define custom factors with ease and integrates seamlessly with the modern data science ecosystem. To assess its practical effectiveness, we compare the mispricing factors computed by Factor Engine to those generated using a reference Stata implementation, finding that both approaches yield highly similar results and comparable performance in backtesting analyses. Furthermore, we experimentally apply these factors within machine learning workflows for trading strategy development, illustrating their practical utility and potential for quantitative finance research.",
+    "authors": [
+      "Ata Keskin"
+    ],
+    "published": "2026-02-15",
+    "categories": [
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.14138v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.14138v1",
+    "fetched_at": "2026-02-17T08:52:23.418563"
+  },
+  {
+    "id": "2602.13544v1",
+    "title": "Merton's Problem with Recursive Perturbed Utility",
+    "abstract": "The classical Merton investment problem predicts deterministic, state-dependent portfolio rules; however, laboratory and field evidence suggests that individuals often prefer randomized decisions leading to stochastic and noisy choices. Fudenberg et al. (2015) develop the additive perturbed utility theory to explain the preference for randomization in the static setting, which, however, becomes ill-posed or intractable in the dynamic setting. We introduce the recursive perturbed utility (RPU), a special stochastic differential utility that incorporates an entropy-based preference for randomization into a recursive aggregator. RPU endogenizes the intertemporal trade-off between utilities from randomization and bequest via a discounting term dependent on past accumulated randomization, thereby avoiding excessive randomization and yielding a well-posed problem. In a general Markovian incomplete market with CRRA preferences, we prove that the RPU-optimal portfolio policy (in terms of the risk exposure ratio) is Gaussian and can be expressed in closed form, independent of wealth. Its variance is inversely proportional to risk aversion and stock volatility, while its mean is based on the solution to a partial differential equation. Moreover, the mean is the sum of a myopic term and an intertemporal hedging term (against market incompleteness) that intertwines with policy randomization. Finally, we carry out an asymptotic expansion in terms of the perturbed utility weight to show that the optimal mean policy deviates from the classical Merton policy at first order, while the associated relative wealth loss is of a higher order, quantifying the financial cost of the preference for randomization.",
+    "authors": [
+      "Min Dai",
+      "Yuchao Dong",
+      "Yanwei Jia",
+      "Xun Yu Zhou"
+    ],
+    "published": "2026-02-14",
+    "categories": [
+      "q-fin.MF",
+      "q-fin.PM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.13544v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.13544v1",
+    "fetched_at": "2026-02-17T08:52:23.418586"
+  },
+  {
+    "id": "2602.14939v1",
+    "title": "Fault Detection in Electrical Distribution System using Autoencoders",
+    "abstract": "In recent times, there has been considerable interest in fault detection within electrical power systems, garnering attention from both academic researchers and industry professionals. Despite the development of numerous fault detection methods and their adaptations over the past decade, their practical application remains highly challenging. Given the probabilistic nature of fault occurrences and parameters, certain decision-making tasks could be approached from a probabilistic standpoint. Protective systems are tasked with the detection, classification, and localization of faulty voltage and current line magnitudes, culminating in the activation of circuit breakers to isolate the faulty line. An essential aspect of designing effective fault detection systems lies in obtaining reliable data for training and testing, which is often scarce. Leveraging deep learning techniques, particularly the powerful capabilities of pattern classifiers in learning, generalizing, and parallel processing, offers promising avenues for intelligent fault detection. To address this, our paper proposes an anomaly-based approach for fault detection in electrical power systems, employing deep autoencoders. Additionally, we utilize Convolutional Autoencoders (CAE) for dimensionality reduction, which, due to its fewer parameters, requires less training time compared to conventional autoencoders. The proposed method demonstrates superior performance and accuracy compared to alternative detection approaches by achieving an accuracy of 97.62% and 99.92% on simulated and publicly available datasets.",
+    "authors": [
+      "Sidharthenee Nayak",
+      "Victor Sam Moses Babu",
+      "Chandrashekhar Narayan Bhende",
+      "Pratyush Chakraborty",
+      "Mayukha Pal"
+    ],
+    "published": "2026-02-16",
+    "categories": [
+      "eess.SY",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.14939v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.14939v1",
+    "fetched_at": "2026-02-17T08:52:35.908536"
+  },
+  {
+    "id": "2602.14251v1",
+    "title": "Multi-Agent Debate: A Unified Agentic Framework for Tabular Anomaly Detection",
+    "abstract": "Tabular anomaly detection is often handled by single detectors or static ensembles, even though strong performance on tabular data typically comes from heterogeneous model families (e.g., tree ensembles, deep tabular networks, and tabular foundation models) that frequently disagree under distribution shift, missingness, and rare-anomaly regimes. We propose MAD, a Multi-Agent Debating framework that treats this disagreement as a first-class signal and resolves it through a mathematically grounded coordination layer. Each agent is a machine learning (ML)-based detector that produces a normalized anomaly score, confidence, and structured evidence, augmented by a large language model (LLM)-based critic. A coordinator converts these messages into bounded per-agent losses and updates agent influence via an exponentiated-gradient rule, yielding both a final debated anomaly score and an auditable debate trace. MAD is a unified agentic framework that can recover existing approaches, such as mixture-of-experts gating and learning-with-expert-advice aggregation, by restricting the message space and synthesis operator. We establish regret guarantees for the synthesized losses and show how conformal calibration can wrap the debated score to control false positives under exchangeability. Experiments on diverse tabular anomaly benchmarks show improved robustness over baselines and clearer traces of model disagreement",
+    "authors": [
+      "Pinqiao Wang",
+      "Sheng Li"
+    ],
+    "published": "2026-02-15",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.14251v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.14251v1",
+    "fetched_at": "2026-02-17T08:52:35.908563"
+  },
+  {
+    "id": "2602.14200v1",
+    "title": "TS-Haystack: A Multi-Scale Retrieval Benchmark for Time Series Language Models",
+    "abstract": "Time Series Language Models (TSLMs) are emerging as unified models for reasoning over continuous signals in natural language. However, long-context retrieval remains a major limitation: existing models are typically trained and evaluated on short sequences, while real-world time-series sensor streams can span millions of datapoints. This mismatch requires precise temporal localization under strict computational constraints, a regime that is not captured by current benchmarks. We introduce TS-Haystack, a long-context temporal retrieval benchmark comprising ten task types across four categories: direct retrieval, temporal reasoning, multi-step reasoning and contextual anomaly. The benchmark uses controlled needle insertion by embedding short activity bouts into longer longitudinal accelerometer recordings, enabling systematic evaluation across context lengths ranging from seconds to 2 hours per sample. We hypothesize that existing TSLM time series encoders overlook temporal granularity as context length increases, creating a task-dependent effect: compression aids classification but impairs retrieval of localized events. Across multiple model and encoding strategies, we observe a consistent divergence between classification and retrieval behavior. Learned latent compression preserves or improves classification accuracy at compression ratios up to 176$\\times$, but retrieval performance degrades with context length, incurring in the loss of temporally localized information. These results highlight the importance of architectural designs that decouple sequence length from computational complexity while preserving temporal fidelity.",
+    "authors": [
+      "Nicolas Zumarraga",
+      "Thomas Kaar",
+      "Ning Wang",
+      "Maxwell A. Xu",
+      "Max Rosenblattl",
+      "Markus Kreft",
+      "Kevin O'Sullivan",
+      "Paul Schmiedmayer",
+      "Patrick Langer",
+      "Robert Jakob"
+    ],
+    "published": "2026-02-15",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.14200v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.14200v1",
+    "fetched_at": "2026-02-17T08:52:35.908598"
+  },
+  {
+    "id": "2602.13807v1",
+    "title": "AnomaMind: Agentic Time Series Anomaly Detection with Tool-Augmented Reasoning",
+    "abstract": "Time series anomaly detection is critical in many real-world applications, where effective solutions must localize anomalous regions and support reliable decision-making under complex settings. However, most existing methods frame anomaly detection as a purely discriminative prediction task with fixed feature inputs, rather than an evidence-driven diagnostic process. As a result, they often struggle when anomalies exhibit strong context dependence or diverse patterns. We argue that these limitations stem from the lack of adaptive feature preparation, reasoning-aware detection, and iterative refinement during inference. To address these challenges, we propose AnomaMind, an agentic time series anomaly detection framework that reformulates anomaly detection as a sequential decision-making process. AnomaMind operates through a structured workflow that progressively localizes anomalous intervals in a coarse-to-fine manner, augments detection through multi-turn tool interactions for adaptive feature preparation, and refines anomaly decisions via self-reflection. The workflow is supported by a set of reusable tool engines, enabling context-aware diagnostic analysis. A key design of AnomaMind is an explicitly designed hybrid inference mechanism for tool-augmented anomaly detection. In this mechanism, general-purpose models are responsible for autonomous tool interaction and self-reflective refinement, while core anomaly detection decisions are learned through reinforcement learning under verifiable workflow-level feedback, enabling task-specific optimization within a flexible reasoning framework. Extensive experiments across diverse settings demonstrate that AnomaMind consistently improves anomaly detection performance. The code is available at https://anonymous.4open.science/r/AnomaMind.",
+    "authors": [
+      "Xiaoyu Tao",
+      "Yuchong Wu",
+      "Mingyue Cheng",
+      "Ze Guo",
+      "Tian Gao"
+    ],
+    "published": "2026-02-14",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.13807v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.13807v1",
+    "fetched_at": "2026-02-17T08:52:35.908622"
+  },
+  {
+    "id": "2602.13690v1",
+    "title": "Physics Aware Neural Networks: Denoising for Magnetic Navigation",
+    "abstract": "Magnetic-anomaly navigation, leveraging small-scale variations in the Earth's magnetic field, is a promising alternative when GPS is unavailable or compromised. Airborne systems face a key challenge in extracting geomagnetic field data: the aircraft itself induces magnetic noise. Although the classical Tolles-Lawson model addresses this, it inadequately handles stochastically corrupted magnetic data required for navigation. To address stochastic noise, we propose a framework based on two physics-based constraints: divergence-free vector field and E(3)-equivariance. These ensure the learned magnetic field obeys Maxwell's equations and that outputs transform correctly with sensor position/orientation. The divergence-free constraint is implemented by training a neural network to output a vector potential $A$, with the magnetic field defined as its curl. For E(3)-equivariance, we use tensor products of geometric tensors representable via spherical harmonics with known rotational transformations. Enforcing physical consistency and restricting the admissible function space acts as an implicit regularizer that improves spatio-temporal performance. We present ablation studies evaluating each constraint alone and jointly across CNNs, MLPs, Liquid Time Constant models, and Contiformers. Continuous-time dynamics and long-term memory are critical for modelling magnetic time series; the Contiformer architecture, which provides both, outperforms state-of-the-art methods. To mitigate data scarcity, we generate synthetic datasets using the World Magnetic Model (WMM) with time-series conditional GANs, producing realistic, temporally consistent magnetic sequences across varied trajectories and environments. Experiments show that embedding these constraints significantly improves predictive accuracy and physical plausibility, outperforming classical and unconstrained deep learning approaches.",
+    "authors": [
+      "Aritra Das",
+      "Yashas Shende",
+      "Muskaan Chugh",
+      "Reva Laxmi Chauhan",
+      "Arghya Pathak",
+      "Debayan Gupta"
+    ],
+    "published": "2026-02-14",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.13690v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.13690v1",
+    "fetched_at": "2026-02-17T08:52:35.908648"
+  },
+  {
+    "id": "2602.14955v1",
+    "title": "Tool-Aware Planning in Contact Center AI: Evaluating LLMs through Lineage-Guided Query Decomposition",
+    "abstract": "We present a domain-grounded framework and benchmark for tool-aware plan generation in contact centers, where answering a query for business insights, our target use case, requires decomposing it into executable steps over structured tools (Text2SQL (T2S)/Snowflake) and unstructured tools (RAG/transcripts) with explicit depends_on for parallelism. Our contributions are threefold: (i) a reference-based plan evaluation framework operating in two modes - a metric-wise evaluator spanning seven dimensions (e.g., tool-prompt alignment, query adherence) and a one-shot evaluator; (ii) a data curation methodology that iteratively refines plans via an evaluator->optimizer loop to produce high-quality plan lineages (ordered plan revisions) while reducing manual effort; and (iii) a large-scale study of 14 LLMs across sizes and families for their ability to decompose queries into step-by-step, executable, and tool-assigned plans, evaluated under prompts with and without lineage. Empirically, LLMs struggle on compound queries and on plans exceeding 4 steps (typically 5-15); the best total metric score reaches 84.8% (Claude-3-7-Sonnet), while the strongest one-shot match rate at the \"A+\" tier (Extremely Good, Very Good) is only 49.75% (o3-mini). Plan lineage yields mixed gains overall but benefits several top models and improves step executability for many. Our results highlight persistent gaps in tool-understanding, especially in tool-prompt alignment and tool-usage completeness, and show that shorter, simpler plans are markedly easier. The framework and findings provide a reproducible path for assessing and improving agentic planning with tools for answering data-analysis queries in contact-center settings.",
+    "authors": [
+      "Varun Nathan",
+      "Shreyas Guha",
+      "Ayush Kumar"
+    ],
+    "published": "2026-02-16",
+    "categories": [
+      "cs.CL",
+      "cs.SE"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.14955v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.14955v1",
+    "fetched_at": "2026-02-17T08:53:03.984383"
+  },
+  {
+    "id": "2602.14726v1",
+    "title": "ManeuverNet: A Soft Actor-Critic Framework for Precise Maneuvering of Double-Ackermann-Steering Robots with Optimized Reward Functions",
+    "abstract": "Autonomous control of double-Ackermann-steering robots is essential in agricultural applications, where robots must execute precise and complex maneuvers within a limited space. Classical methods, such as the Timed Elastic Band (TEB) planner, can address this problem, but they rely on parameter tuning, making them highly sensitive to changes in robot configuration or environment and impractical to deploy without constant recalibration. At the same time, end-to-end deep reinforcement learning (DRL) methods often fail due to unsuitable reward functions for non-holonomic constraints, resulting in sub-optimal policies and poor generalization. To address these challenges, this paper presents ManeuverNet, a DRL framework tailored for double-Ackermann systems, combining Soft Actor-Critic with CrossQ. Furthermore, ManeuverNet introduces four specifically designed reward functions to support maneuver learning. Unlike prior work, ManeuverNet does not depend on expert data or handcrafted guidance. We extensively evaluate ManeuverNet against both state-of-the-art DRL baselines and the TEB planner. Experimental results demonstrate that our framework substantially improves maneuverability and success rates, achieving more than a 40% gain over DRL baselines. Moreover, ManeuverNet effectively mitigates the strong parameter sensitivity observed in the TEB planner. In real-world trials, ManeuverNet achieved up to a 90% increase in maneuvering trajectory efficiency, highlighting its robustness and practical applicability.",
+    "authors": [
+      "Kohio Deflesselle",
+      "Mélodie Daniel",
+      "Aly Magassouba",
+      "Miguel Aranda",
+      "Olivier Ly"
+    ],
+    "published": "2026-02-16",
+    "categories": [
+      "cs.RO",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.14726v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.14726v1",
+    "fetched_at": "2026-02-17T08:53:03.984418"
+  },
+  {
+    "id": "2602.14710v1",
+    "title": "Orcheo: A Modular Full-Stack Platform for Conversational Search",
+    "abstract": "Conversational search (CS) requires a complex software engineering pipeline that integrates query reformulation, ranking, and response generation. CS researchers currently face two barriers: the lack of a unified framework for efficiently sharing contributions with the community, and the difficulty of deploying end-to-end prototypes needed for user evaluation. We introduce Orcheo, an open-source platform designed to bridge this gap. Orcheo offers three key advantages: (i) A modular architecture promotes component reuse through single-file node modules, facilitating sharing and reproducibility in CS research; (ii) Production-ready infrastructure bridges the prototype-to-system gap via dual execution modes, secure credential management, and execution telemetry, with built-in AI coding support that lowers the learning curve; (iii) Starter-kit assets include 50+ off-the-shelf components for query understanding, ranking, and response generation, enabling the rapid bootstrapping of complete CS pipelines. We describe the framework architecture and validate Orcheo's utility through case studies that highlight modularity and ease of use. Orcheo is released as open source under the MIT License at https://github.com/ShaojieJiang/orcheo.",
+    "authors": [
+      "Shaojie Jiang",
+      "Svitlana Vakulenko",
+      "Maarten de Rijke"
+    ],
+    "published": "2026-02-16",
+    "categories": [
+      "cs.IR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.14710v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.14710v1",
+    "fetched_at": "2026-02-17T08:53:03.984441"
+  },
+  {
+    "id": "2602.14699v1",
+    "title": "Qute: Towards Quantum-Native Database",
+    "abstract": "This paper envisions a quantum database (Qute) that treats quantum computation as a first-class execution option. Unlike prior simulation-based methods that either run quantum algorithms on classical machines or adapt existing databases for quantum simulation, Qute instead (i) compiles an extended form of SQL into gate-efficient quantum circuits, (ii) employs a hybrid optimizer to dynamically select between quantum and classical execution plans, (iii) introduces selective quantum indexing, and (iv) designs fidelity-preserving storage to mitigate current qubit constraints. We also present a three-stage evolution roadmap toward quantum-native database. Finally, by deploying Qute on a real quantum processor (origin_wukong), we show that it outperforms a classical baseline at scale, and we release an open-source prototype at https://github.com/weAIDB/Qute.",
+    "authors": [
+      "Muzhi Chen",
+      "Xuanhe Zhou",
+      "Wei Zhou",
+      "Bangrui Xu",
+      "Surui Tang",
+      "Guoliang Li",
+      "Bingsheng He",
+      "Yeye He",
+      "Yitong Song",
+      "Fan Wu"
+    ],
+    "published": "2026-02-16",
+    "categories": [
+      "cs.DB",
+      "cs.AI",
+      "cs.AR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.14699v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.14699v1",
+    "fetched_at": "2026-02-17T08:53:03.984474"
+  },
+  {
+    "id": "2602.14641v1",
+    "title": "Quantum Reservoir Computing with Neutral Atoms on a Small, Complex, Medical Dataset",
+    "abstract": "Biomarker-based prediction of clinical outcomes is challenging due to nonlinear relationships, correlated features, and the limited size of many medical datasets. Classical machine-learning methods can struggle under these conditions, motivating the search for alternatives. In this work, we investigate quantum reservoir computing (QRC), using both noiseless emulation and hardware execution on the neutral-atom Rydberg processor \\textit{Aquila}. We evaluate performance with six classical machine-learning models and use SHAP to generate feature subsets. We find that models trained on emulated quantum features achieve mean test accuracies comparable to those trained on classical features, but have higher training accuracies and greater variability over data splits, consistent with overfitting. When comparing hardware execution of QRC to noiseless emulation, the models are more robust over different data splits and often exhibit statistically significant improvements in mean test accuracy. This combination of improved accuracy and increased stability is suggestive of a regularising effect induced by hardware execution. To investigate the origin of this behaviour, we examine the statistical differences between hardware and emulated quantum feature distributions. We find that hardware execution applies a structured, time-dependent transformation characterised by compression toward the mean and a progressive reduction in mutual information relative to emulation.",
+    "authors": [
+      "Luke Antoncich",
+      "Yuben Moodley",
+      "Ugo Varetto",
+      "Jingbo Wang",
+      "Jonathan Wurtz",
+      "Jing Chen",
+      "Pascal Jahan Elahi",
+      "Casey R. Myers"
+    ],
+    "published": "2026-02-16",
+    "categories": [
+      "quant-ph",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.14641v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.14641v1",
+    "fetched_at": "2026-02-17T08:53:03.984504"
+  },
+  {
+    "id": "2602.14589v1",
+    "title": "MATEO: A Multimodal Benchmark for Temporal Reasoning and Planning in LVLMs",
+    "abstract": "AI agents need to plan to achieve complex goals that involve orchestrating perception, sub-goal decomposition, and execution. These plans consist of ordered steps structured according to a Temporal Execution Order (TEO, a directed acyclic graph that ensures each step executes only after its preconditions are satisfied. Existing research on foundational models' understanding of temporal execution is limited to automatically derived annotations, approximations of the TEO as a linear chain, or text-only inputs. To address this gap, we introduce MATEO (MultimodAl Temporal Execution Order), a benchmark designed to assess and improve the temporal reasoning abilities of Large Vision Language Models (LVLMs) required for real-world planning. We acquire a high-quality professional multimodal recipe corpus, authored through a standardized editorial process that decomposes instructions into discrete steps, each paired with corresponding images. We collect TEO annotations as graphs by designing and using a scalable crowdsourcing pipeline. Using MATEO, we evaluate six state-of-the-art LVLMs across model scales, varying language context, multimodal input structure, and fine-tuning strategies.",
+    "authors": [
+      "Gabriel Roccabruna",
+      "Olha Khomyn",
+      "Giuseppe Riccardi"
+    ],
+    "published": "2026-02-16",
+    "categories": [
+      "cs.AI",
+      "cs.CL",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.14589v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.14589v1",
+    "fetched_at": "2026-02-17T08:53:03.984535"
+  },
+  {
+    "id": "2602.14580v1",
+    "title": "Replicable Constrained Bandits",
+    "abstract": "Algorithmic \\emph{replicability} has recently been introduced to address the need for reproducible experiments in machine learning. A \\emph{replicable online learning} algorithm is one that takes the same sequence of decisions across different executions in the same environment, with high probability. We initiate the study of algorithmic replicability in \\emph{constrained} MAB problems, where a learner interacts with an unknown stochastic environment for $T$ rounds, seeking not only to maximize reward but also to satisfy multiple constraints. Our main result is that replicability can be achieved in constrained MABs. Specifically, we design replicable algorithms whose regret and constraint violation match those of non-replicable ones in terms of $T$. As a key step toward these guarantees, we develop the first replicable UCB-like algorithm for \\emph{unconstrained} MABs, showing that algorithms that employ the optimism in-the-face-of-uncertainty principle can be replicable, a result that we believe is of independent interest.",
+    "authors": [
+      "Matteo Bollini",
+      "Gianmarco Genalti",
+      "Francesco Emanuele Stradi",
+      "Matteo Castiglioni",
+      "Alberto Marchesi"
+    ],
+    "published": "2026-02-16",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.14580v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.14580v1",
+    "fetched_at": "2026-02-17T08:53:03.984560"
+  },
+  {
+    "id": "2602.14433v1",
+    "title": "Synthetic Reader Panels: Tournament-Based Ideation with LLM Personas for Autonomous Publishing",
+    "abstract": "We present a system for autonomous book ideation that replaces human focus groups with synthetic reader panels -- diverse collections of LLM-instantiated reader personas that evaluate book concepts through structured tournament competitions. Each persona is defined by demographic attributes (age group, gender, income, education, reading level), behavioral patterns (books per year, genre preferences, discovery methods, price sensitivity), and consistency parameters. Panels are composed per imprint to reflect target demographics, with diversity constraints ensuring representation across age, reading level, and genre affinity. Book concepts compete in single-elimination, double-elimination, round-robin, or Swiss-system tournaments, judged against weighted criteria including market appeal, originality, and execution potential. To reject low-quality LLM evaluations, we implement five automated anti-slop checks (repetitive phrasing, generic framing, circular reasoning, score clustering, audience mismatch). We report results from deployment within a multi-imprint publishing operation managing 6 active imprints and 609 titles in distribution. Three case studies -- a 270-evaluator panel for a children's literacy novel, and two 5-person expert panels for a military memoir and a naval strategy monograph -- demonstrate that synthetic panels produce actionable demographic segmentation, identify structural content issues invisible to homogeneous reviewers, and enable tournament filtering that eliminates low-quality concepts while enriching high-quality survivors from 15% to 62% of the evaluated pool.",
+    "authors": [
+      "Fred Zimmerman"
+    ],
+    "published": "2026-02-16",
+    "categories": [
+      "cs.CY",
+      "cs.AI",
+      "cs.CL",
+      "cs.HC"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.14433v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.14433v1",
+    "fetched_at": "2026-02-17T08:53:03.984579"
+  },
+  {
+    "id": "2602.14364v1",
+    "title": "A Trajectory-Based Safety Audit of Clawdbot (OpenClaw)",
+    "abstract": "Clawdbot is a self-hosted, tool-using personal AI agent with a broad action space spanning local execution and web-mediated workflows, which raises heightened safety and security concerns under ambiguity and adversarial steering. We present a trajectory-centric evaluation of Clawdbot across six risk dimensions. Our test suite samples and lightly adapts scenarios from prior agent-safety benchmarks (including ATBench and LPS-Bench) and supplements them with hand-designed cases tailored to Clawdbot's tool surface. We log complete interaction trajectories (messages, actions, tool-call arguments/outputs) and assess safety using both an automated trajectory judge (AgentDoG-Qwen3-4B) and human review. Across 34 canonical cases, we find a non-uniform safety profile: performance is generally consistent on reliability-focused tasks, while most failures arise under underspecified intent, open-ended goals, or benign-seeming jailbreak prompts, where minor misinterpretations can escalate into higher-impact tool actions. We supplemented the overall results with representative case studies and summarized the commonalities of these cases, analyzing the security vulnerabilities and typical failure modes that Clawdbot is prone to trigger in practice.",
+    "authors": [
+      "Tianyu Chen",
+      "Dongrui Liu",
+      "Xia Hu",
+      "Jingyi Yu",
+      "Wenjie Wang"
+    ],
+    "published": "2026-02-16",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.14364v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.14364v1",
+    "fetched_at": "2026-02-17T08:53:03.984604"
+  },
+  {
+    "id": "2602.14345v1",
+    "title": "AXE: An Agentic eXploit Engine for Confirming Zero-Day Vulnerability Reports",
+    "abstract": "Vulnerability detection tools are widely adopted in software projects, yet they often overwhelm maintainers with false positives and non-actionable reports. Automated exploitation systems can help validate these reports; however, existing approaches typically operate in isolation from detection pipelines, failing to leverage readily available metadata such as vulnerability type and source-code location. In this paper, we investigate how reported security vulnerabilities can be assessed in a realistic grey-box exploitation setting that leverages minimal vulnerability metadata, specifically a CWE classification and a vulnerable code location. We introduce Agentic eXploit Engine (AXE), a multi-agent framework for Web application exploitation that maps lightweight detection metadata to concrete exploits through decoupled planning, code exploration, and dynamic execution feedback. Evaluated on the CVE-Bench dataset, AXE achieves a 30% exploitation success rate, a 3x improvement over state-of-the-art black-box baselines. Even in a single-agent configuration, grey-box metadata yields a 1.75x performance gain. Systematic error analysis shows that most failed attempts arise from specific reasoning gaps, including misinterpreted vulnerability semantics and unmet execution preconditions. For successful exploits, AXE produces actionable, reproducible proof-of-concept artifacts, demonstrating its utility in streamlining Web vulnerability triage and remediation. We further evaluate AXE's generalizability through a case study on a recent real-world vulnerability not included in CVE-Bench.",
+    "authors": [
+      "Amirali Sajadi",
+      "Tu Nguyen",
+      "Kostadin Damevski",
+      "Preetha Chatterjee"
+    ],
+    "published": "2026-02-15",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.14345v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.14345v1",
+    "fetched_at": "2026-02-17T08:53:03.984627"
+  },
+  {
+    "id": "2602.14344v1",
+    "title": "Zero-Shot Instruction Following in RL via Structured LTL Representations",
+    "abstract": "We study instruction following in multi-task reinforcement learning, where an agent must zero-shot execute novel tasks not seen during training. In this setting, linear temporal logic (LTL) has recently been adopted as a powerful framework for specifying structured, temporally extended tasks. While existing approaches successfully train generalist policies, they often struggle to effectively capture the rich logical and temporal structure inherent in LTL specifications. In this work, we address these concerns with a novel approach to learn structured task representations that facilitate training and generalisation. Our method conditions the policy on sequences of Boolean formulae constructed from a finite automaton of the task. We propose a hierarchical neural architecture to encode the logical structure of these formulae, and introduce an attention mechanism that enables the policy to reason about future subgoals. Experiments in a variety of complex environments demonstrate the strong generalisation capabilities and superior performance of our approach.",
+    "authors": [
+      "Mathias Jackermeier",
+      "Mattia Giuri",
+      "Jacques Cloete",
+      "Alessandro Abate"
+    ],
+    "published": "2026-02-15",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.14344v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.14344v1",
+    "fetched_at": "2026-02-17T08:53:03.984649"
+  },
+  {
+    "id": "2602.14281v1",
+    "title": "MCPShield: A Security Cognition Layer for Adaptive Trust Calibration in Model Context Protocol Agents",
+    "abstract": "The Model Context Protocol (MCP) standardizes tool use for LLM-based agents and enable third-party servers. This openness introduces a security misalignment: agents implicitly trust tools exposed by potentially untrusted MCP servers. However, despite its excellent utility, existing agents typically offer limited validation for third-party MCP servers. As a result, agents remain vulnerable to MCP-based attacks that exploit the misalignment between agents and servers throughout the tool invocation lifecycle. In this paper, we propose MCPShield as a plug-in security cognition layer that mitigates this misalignment and ensures agent security when invoking MCP-based tools. Drawing inspiration from human experience-driven tool validation, MCPShield assists agent forms security cognition with metadata-guided probing before invocation. Our method constrains execution within controlled boundaries while cognizing runtime events, and subsequently updates security cognition by reasoning over historical traces after invocation, building on human post-use reflection on tool behavior. Experiments demonstrate that MCPShield exhibits strong generalization in defending against six novel MCP-based attack scenarios across six widely used agentic LLMs, while avoiding false positives on benign servers and incurring low deployment overhead. Overall, our work provides a practical and robust security safeguard for MCP-based tool invocation in open agent ecosystems.",
+    "authors": [
+      "Zhenhong Zhou",
+      "Yuanhe Zhang",
+      "Hongwei Cai",
+      "Moayad Aloqaily",
+      "Ouns Bouachir",
+      "Linsey Pang",
+      "Prakhar Mehrotra",
+      "Kun Wang",
+      "Qingsong Wen"
+    ],
+    "published": "2026-02-15",
+    "categories": [
+      "cs.CR",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.14281v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.14281v1",
+    "fetched_at": "2026-02-17T08:53:03.984680"
+  },
+  {
+    "id": "2602.14229v1",
+    "title": "CORPGEN: Simulating Corporate Environments with Autonomous Digital Employees in Multi-Horizon Task Environments",
+    "abstract": "Long-horizon reasoning is a key challenge for autonomous agents, yet existing benchmarks evaluate agents on single tasks in isolation. Real organizational work requires managing many concurrent long-horizon tasks with interleaving, dependencies, and reprioritization. We introduce Multi-Horizon Task Environments (MHTEs): a distinct problem class requiring coherent execution across dozens of interleaved tasks (45+, 500-1500+ steps) within persistent execution contexts spanning hours. We identify four failure modes that cause baseline CUAs to degrade from 16.7% to 8.7% completion as load scales 25% to 100%, a pattern consistent across three independent implementations. These failure modes are context saturation (O(N) vs O(1) growth), memory interference, dependency complexity (DAGs vs. chains), and reprioritization overhead. We present CorpGen, an architecture-agnostic framework addressing these failures via hierarchical planning for multi-horizon goal alignment, sub-agent isolation preventing cross-task contamination, tiered memory (working, structured, semantic), and adaptive summarization. CorpGen simulates corporate environments through digital employees with persistent identities and realistic schedules. Across three CUA backends (UFO2, OpenAI CUA, hierarchical) on OSWorld Office, CorpGen achieves up to 3.5x improvement over baselines (15.2% vs 4.3%) with stable performance under increasing load, confirming that gains stem from architectural mechanisms rather than specific CUA implementations. Ablation studies show experiential learning provides the largest gains.",
+    "authors": [
+      "Abubakarr Jaye",
+      "Nigel Boachie Kumankumah",
+      "Chidera Biringa",
+      "Anjel Shaileshbhai Patel",
+      "Sulaiman Vesal",
+      "Dayquan Julienne",
+      "Charlotte Siska",
+      "Manuel Raúl Meléndez Luján",
+      "Anthony Twum-Barimah",
+      "Mauricio Velazco",
+      "Tianwei Chen"
+    ],
+    "published": "2026-02-15",
+    "categories": [
+      "cs.AI",
+      "cs.ET",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.14229v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.14229v1",
+    "fetched_at": "2026-02-17T08:53:03.984715"
+  },
+  {
+    "id": "2602.14211v1",
+    "title": "SkillJect: Automating Stealthy Skill-Based Prompt Injection for Coding Agents with Trace-Driven Closed-Loop Refinement",
+    "abstract": "Agent skills are becoming a core abstraction in coding agents, packaging long-form instructions and auxiliary scripts to extend tool-augmented behaviors. This abstraction introduces an under-measured attack surface: skill-based prompt injection, where poisoned skills can steer agents away from user intent and safety policies. In practice, naive injections often fail because the malicious intent is too explicit or drifts too far from the original skill, leading agents to ignore or refuse them; existing attacks are also largely hand-crafted. We propose the first automated framework for stealthy prompt injection tailored to agent skills. The framework forms a closed loop with three agents: an Attack Agent that synthesizes injection skills under explicit stealth constraints, a Code Agent that executes tasks using the injected skills in a realistic tool environment, and an Evaluate Agent that logs action traces (e.g., tool calls and file operations) and verifies whether targeted malicious behaviors occurred. We also propose a malicious payload hiding strategy that conceals adversarial operations in auxiliary scripts while injecting optimized inducement prompts to trigger tool execution. Extensive experiments across diverse coding-agent settings and real-world software engineering tasks show that our method consistently achieves high attack success rates under realistic settings.",
+    "authors": [
+      "Xiaojun Jia",
+      "Jie Liao",
+      "Simeng Qin",
+      "Jindong Gu",
+      "Wenqi Ren",
+      "Xiaochun Cao",
+      "Yang Liu",
+      "Philip Torr"
+    ],
+    "published": "2026-02-15",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.14211v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.14211v1",
+    "fetched_at": "2026-02-17T08:53:03.984744"
+  },
+  {
+    "id": "2602.14117v1",
+    "title": "Toward Autonomous O-RAN: A Multi-Scale Agentic AI Framework for Real-Time Network Control and Management",
+    "abstract": "Open Radio Access Networks (O-RAN) promise flexible 6G network access through disaggregated, software-driven components and open interfaces, but this programmability also increases operational complexity. Multiple control loops coexist across the service management layer and RAN Intelligent Controller (RIC), while independently developed control applications can interact in unintended ways. In parallel, recent advances in generative Artificial Intelligence (AI) are enabling a shift from isolated AI models toward agentic AI systems that can interpret goals, coordinate multiple models and control functions, and adapt their behavior over time. This article proposes a multi-scale agentic AI framework for O-RAN that organizes RAN intelligence as a coordinated hierarchy across the Non-Real-Time (Non-RT), Near-Real-Time (Near-RT), and Real-Time (RT) control loops: (i) A Large Language Model (LLM) agent in the Non-RT RIC translates operator intent into policies and governs model lifecycles. (ii) Small Language Model (SLM) agents in the Near-RT RIC execute low-latency optimization and can activate, tune, or disable existing control applications; and (iii) Wireless Physical-layer Foundation Model (WPFM) agents near the distributed unit provide fast inference close to the air interface. We describe how these agents cooperate through standardized O-RAN interfaces and telemetry. Using a proof-of-concept implementation built on open-source models, software, and datasets, we demonstrate the proposed agentic approach in two representative scenarios: robust operation under non-stationary conditions and intent-driven slice resource control.",
+    "authors": [
+      "Hojjat Navidan",
+      "Mohammad Cheraghinia",
+      "Jaron Fontaine",
+      "Mohamed Seif",
+      "Eli De Poorter",
+      "H. Vincent Poor",
+      "Ingrid Moerman",
+      "Adnan Shahid"
+    ],
+    "published": "2026-02-15",
+    "categories": [
+      "cs.NI",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.14117v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.14117v1",
+    "fetched_at": "2026-02-17T08:53:03.984774"
+  },
+  {
+    "id": "2602.14506v1",
+    "title": "Covariance-Aware Transformers for Quadratic Programming and Decision Making",
+    "abstract": "We explore the use of transformers for solving quadratic programs and how this capability benefits decision-making problems that involve covariance matrices. We first show that the linear attention mechanism can provably solve unconstrained QPs by tokenizing the matrix variables (e.g.~$A$ of the objective $\\frac{1}{2}x^\\top Ax+b^\\top x$) row-by-row and emulating gradient descent iterations. Furthermore, by incorporating MLPs, a transformer block can solve (i) $\\ell_1$-penalized QPs by emulating iterative soft-thresholding and (ii) $\\ell_1$-constrained QPs when equipped with an additional feedback loop. Our theory motivates us to introduce Time2Decide: a generic method that enhances a time series foundation model (TSFM) by explicitly feeding the covariance matrix between the variates. We empirically find that Time2Decide uniformly outperforms the base TSFM model for the classical portfolio optimization problem that admits an $\\ell_1$-constrained QP formulation. Remarkably, Time2Decide also outperforms the classical \"Predict-then-Optimize (PtO)\" procedure, where we first forecast the returns and then explicitly solve a constrained QP, in suitable settings. Our results demonstrate that transformers benefit from explicit use of second-order statistics, and this can enable them to effectively solve complex decision-making problems, like portfolio construction, in one forward pass.",
+    "authors": [
+      "Kutay Tire",
+      "Yufan Zhang",
+      "Ege Onur Taga",
+      "Samet Oymak"
+    ],
+    "published": "2026-02-16",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.14506v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.14506v1",
+    "fetched_at": "2026-02-17T08:54:53.431352"
+  },
+  {
+    "id": "2602.14154v1",
+    "title": "A Penalty Approach for Differentiation Through Black-Box Quadratic Programming Solvers",
+    "abstract": "Differentiating through the solution of a quadratic program (QP) is a central problem in differentiable optimization. Most existing approaches differentiate through the Karush--Kuhn--Tucker (KKT) system, but their computational cost and numerical robustness can degrade at scale. To address these limitations, we propose dXPP, a penalty-based differentiation framework that decouples QP solving from differentiation. In the solving step (forward pass), dXPP is solver-agnostic and can leverage any black-box QP solver. In the differentiation step (backward pass), we map the solution to a smooth approximate penalty problem and implicitly differentiate through it, requiring only the solution of a much smaller linear system in the primal variables. This approach bypasses the difficulties inherent in explicit KKT differentiation and significantly improves computational efficiency and robustness. We evaluate dXPP on various tasks, including randomly generated QPs, large-scale sparse projection problems, and a real-world multi-period portfolio optimization task. Empirical results demonstrate that dXPP is competitive with KKT-based differentiation methods and achieves substantial speedups on large-scale problems.",
+    "authors": [
+      "Yuxuan Linghu",
+      "Zhiyuan Liu",
+      "Qi Deng"
+    ],
+    "published": "2026-02-15",
+    "categories": [
+      "cs.LG",
+      "math.OC"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.14154v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.14154v1",
+    "fetched_at": "2026-02-17T08:54:53.431385"
+  }
+]
