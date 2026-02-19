@@ -1,0 +1,479 @@
+[
+  {
+    "id": "2602.16539v1",
+    "title": "Caratheodory, Finite Resources and the Geometry of Arbitrage",
+    "abstract": "Caratheodory's axiom of adiabatic inaccessibility states that, in any neighborhood of a thermodynamic state, certain states remain unreachable via adiabatic processes. Non-arbitrage mirrors this topological restriction in finance. Preserving this constraint in resource-limited systems identifies the exponential family not as a modeling convenience but as the requisite geometric structure unifying both domains.",
+    "authors": [
+      "B. K. Meister"
+    ],
+    "published": "2026-02-18",
+    "categories": [
+      "q-fin.PM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.16539v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.16539v1",
+    "fetched_at": "2026-02-19T08:51:27.117844"
+  },
+  {
+    "id": "2602.16401v1",
+    "title": "Stackelberg Equilibria in Monopoly Insurance Markets with Probability Weighting",
+    "abstract": "We study Stackelberg Equilibria (Bowley optima) in a monopolistic centralized sequential-move insurance market, with a profit-maximizing insurer who sets premia using a distortion premium principle, and a single policyholder who seeks to minimize a distortion risk measure. We show that equilibria are characterized as follows: In equilibrium, the optimal indemnity function exhibits a layer-type structure, providing full insurance over any loss layer on which the policyholder is more pessimistic than the insurer's pricing functional about tail losses; and no insurance coverage over loss layers on which the policyholder is less pessimistic than the insurer's pricing functional about tail losses. In equilibrium, the optimal pricing distortion function is determined by the policyholder's degree of risk aversion, whereby prices never exceed the policyholder's marginal willingness to insure tail losses. Moreover, we show that both the insurance coverage and the insurer's expected profit increase with the policyholder's degree of risk aversion. Additionally, and echoing recent work in the literature, we show that equilibrium contracts are Pareto efficient, but they do not induce a welfare gain to the policyholder. Conversely, any Pareto-optimal contract that leaves no welfare gain to the policyholder can be obtained as an equilibrium contract. Finally, we consider a few examples of interest that recover some existing results in the literature as special cases of our analysis.",
+    "authors": [
+      "Maria Andraos",
+      "Mario Ghossoub",
+      "Bin Li",
+      "Benxuan Shi"
+    ],
+    "published": "2026-02-18",
+    "categories": [
+      "q-fin.RM",
+      "econ.TH",
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.16401v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.16401v1",
+    "fetched_at": "2026-02-19T08:51:27.117887"
+  },
+  {
+    "id": "2602.16387v1",
+    "title": "Computing Tarski Fixed Points in Financial Networks",
+    "abstract": "Modern financial networks are highly connected and result in complex interdependencies of the involved institutions. In the prominent Eisenberg-Noe model, a fundamental aspect is clearing -- to determine the amount of assets available to each financial institution in the presence of potential defaults and bankruptcy. A clearing state represents a fixed point that satisfies a set of natural axioms. Existence can be established (even in broad generalizations of the model) using Tarski's theorem.   While a maximal fixed point can be computed in polynomial time, the complexity of computing other fixed points is open. In this paper, we provide an efficient algorithm to compute a minimal fixed point that runs in strongly polynomial time. It applies in a broad generalization of the Eisenberg-Noe model with any monotone, piecewise-linear payment functions and default costs. Moreover, in this scenario we provide a polynomial-time algorithm to compute a maximal fixed point. For networks without default costs, we can efficiently decide the existence of fixed points in a given range.   We also study claims trading, a local network adjustment to improve clearing, when networks are evaluated with minimal clearing. We provide an efficient algorithm to decide existence of Pareto-improving trades and compute optimal ones if they exist.",
+    "authors": [
+      "Leander Besting",
+      "Martin Hoefer",
+      "Lars Huth"
+    ],
+    "published": "2026-02-18",
+    "categories": [
+      "cs.DS",
+      "cs.GT",
+      "q-fin.RM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.16387v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.16387v1",
+    "fetched_at": "2026-02-19T08:51:27.117915"
+  },
+  {
+    "id": "2602.16232v1",
+    "title": "A Wiener Chaos Approach to Martingale Modelling and Implied Volatility Calibration",
+    "abstract": "Calibration to a surface of option prices requires specifying a suitably flexible martingale model for the discounted asset price under a risk-neutral measure. Assuming Brownian noise and mean-square integrability, we construct an over-parameterized model based on the martingale representation theorem. In particular, we approximate the terminal value of the martingale via a truncated Wiener--chaos expansion and recover the intermediate dynamics by computing the corresponding conditional expectations. Using the Hermite-polynomial formulation of the Wiener chaos, we obtain easily implementable expressions that enable fast calibration to a target implied-volatility surface. We illustrate the flexibility and expressive power of the resulting model through numerical experiments on both simulated and real market data.",
+    "authors": [
+      "Pere Diaz-Lozano",
+      "Thomas K. Kloster"
+    ],
+    "published": "2026-02-18",
+    "categories": [
+      "q-fin.MF",
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.16232v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.16232v1",
+    "fetched_at": "2026-02-19T08:51:27.117937"
+  },
+  {
+    "id": "2602.16212v1",
+    "title": "Money-Back Tontines for Retirement Decumulation: Neural-Network Optimization under Systematic Longevity Risk",
+    "abstract": "Money-back guarantees (MBGs) are features of pooled retirement income products that address bequest concerns by ensuring the initial premium is returned through lifetime payments or, upon early death, as a death benefit to the estate. This paper studies optimal retirement decumulation in an individual tontine account with an MBG overlay under international diversification and systematic longevity risk. The retiree chooses withdrawals and asset allocation dynamically to trade off expected total withdrawals (EW) against the Conditional Value-at-Risk (CVaR) of terminal wealth, subject to realistic investment constraints. The optimization is solved under a plan-to-live convention, while stochastic mortality affects outcomes through its impact on mortality credits at the pool level. We develop a neural-network based computational approach for the resulting high-dimensional, constrained control problem. The MBG is priced ex post under the induced EW--CVaR optimal policy via a simulation-based actuarial rule that combines expected guarantee costs with a prudential tail buffer. Using long-horizon historical return data expressed in real domestic-currency terms, we find that international diversification and longevity pooling jointly deliver the largest improvements in the EW--CVaR trade-off, while stochastic mortality shifts the frontier modestly in the expected direction. The optimal controls use foreign equity primarily as a state-dependent catch-up instrument, and implied MBG loads are driven mainly by tail outcomes (and the chosen prudential buffer) rather than by mean payouts.",
+    "authors": [
+      "German Nova Orozco",
+      "Duy-Minh Dang",
+      "Peter A. Forsyth"
+    ],
+    "published": "2026-02-18",
+    "categories": [
+      "q-fin.PM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.16212v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.16212v1",
+    "fetched_at": "2026-02-19T08:51:27.117963"
+  },
+  {
+    "id": "2602.15385v2",
+    "title": "From Chain-Ladder to Individual Claims Reserving",
+    "abstract": "The chain-ladder (CL) method is the most widely used claims reserving technique in non-life insurance. This manuscript introduces a novel approach to computing the CL reserves based on a fundamental restructuring of the data utilization for the CL prediction procedure. Instead of rolling forward the cumulative claims with estimated CL factors, we estimate multi-period factors that project the latest observations directly to the ultimate claims. This alternative perspective on CL reserving creates a natural pathway for the application of machine learning techniques to individual claims reserving. As a proof of concept, we present a small-scale real data application employing neural networks for individual claims reserving.",
+    "authors": [
+      "Ronald Richman",
+      "Mario V. Wüthrich"
+    ],
+    "published": "2026-02-17",
+    "categories": [
+      "stat.AP",
+      "q-fin.RM",
+      "stat.ML"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.15385v2",
+    "arxiv_url": "https://arxiv.org/abs/2602.15385v2",
+    "fetched_at": "2026-02-19T08:51:27.118006"
+  },
+  {
+    "id": "2602.16101v1",
+    "title": "Axle Sensor Fusion for Online Continual Wheel Fault Detection in Wayside Railway Monitoring",
+    "abstract": "Reliable and cost-effective maintenance is essential for railway safety, particularly at the wheel-rail interface, which is prone to wear and failure. Predictive maintenance frameworks increasingly leverage sensor-generated time-series data, yet traditional methods require manual feature engineering, and deep learning models often degrade in online settings with evolving operational patterns. This work presents a semantic-aware, label-efficient continual learning framework for railway fault diagnostics. Accelerometer signals are encoded via a Variational AutoEncoder into latent representations capturing the normal operational structure in a fully unsupervised manner. Importantly, semantic metadata, including axle counts, wheel indexes, and strain-based deformations, is extracted via AI-driven peak detection on fiber Bragg grating sensors (resistant to electromagnetic interference) and fused with the VAE embeddings, enhancing anomaly detection under unknown operational conditions. A lightweight gradient boosting supervised classifier stabilizes anomaly scoring with minimal labels, while a replay-based continual learning strategy enables adaptation to evolving domains without catastrophic forgetting. Experiments show the model detects minor imperfections due to flats and polygonization, while adapting to evolving operational conditions, such as changes in train type, speed, load, and track profiles, captured using a single accelerometer and strain gauge in wayside monitoring.",
+    "authors": [
+      "Afonso Lourenço",
+      "Francisca Osório",
+      "Diogo Risca",
+      "Goreti Marreiros"
+    ],
+    "published": "2026-02-18",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.16101v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.16101v1",
+    "fetched_at": "2026-02-19T08:51:39.338283"
+  },
+  {
+    "id": "2602.16098v1",
+    "title": "Collaborative Zone-Adaptive Zero-Day Intrusion Detection for IoBT",
+    "abstract": "The Internet of Battlefield Things (IoBT) relies on heterogeneous, bandwidth-constrained, and intermittently connected tactical networks that face rapidly evolving cyber threats. In this setting, intrusion detection cannot depend on continuous central collection of raw traffic due to disrupted links, latency, operational security limits, and non-IID traffic across zones. We present Zone-Adaptive Intrusion Detection (ZAID), a collaborative detection and model-improvement framework for unseen attack types, where \"zero-day\" refers to previously unobserved attack families and behaviours (not vulnerability disclosure timing). ZAID combines a universal convolutional model for generalisable traffic representations, an autoencoder-based reconstruction signal as an auxiliary anomaly score, and lightweight adapter modules for parameter-efficient zone adaptation. To support cross-zone generalisation under constrained connectivity, ZAID uses federated aggregation and pseudo-labelling to leverage locally observed, weakly labelled behaviours. We evaluate ZAID on ToN_IoT using a zero-day protocol that excludes MITM, DDoS, and DoS from supervised training and introduces them during zone-level deployment and adaptation. ZAID achieves up to 83.16% accuracy on unseen attack traffic and transfers to UNSW-NB15 under the same procedure, with a best accuracy of 71.64%. These results indicate that parameter-efficient, zone-personalised collaboration can improve the detection of previously unseen attacks in contested IoBT environments.",
+    "authors": [
+      "Amirmohammad Pasdar",
+      "Shabnam Kasra Kermanshahi",
+      "Nour Moustafa",
+      "Van-Thuan Pham"
+    ],
+    "published": "2026-02-18",
+    "categories": [
+      "cs.CR",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.16098v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.16098v1",
+    "fetched_at": "2026-02-19T08:51:39.338317"
+  },
+  {
+    "id": "2602.16063v1",
+    "title": "MARLEM: A Multi-Agent Reinforcement Learning Simulation Framework for Implicit Cooperation in Decentralized Local Energy Markets",
+    "abstract": "This paper introduces a novel, open-source MARL simulation framework for studying implicit cooperation in LEMs, modeled as a decentralized partially observable Markov decision process and implemented as a Gymnasium environment for MARL. Our framework features a modular market platform with plug-and-play clearing mechanisms, physically constrained agent models (including battery storage), a realistic grid network, and a comprehensive analytics suite to evaluate emergent coordination. The main contribution is a novel method to foster implicit cooperation, where agents' observations and rewards are enhanced with system-level key performance indicators to enable them to independently learn strategies that benefit the entire system and aim for collectively beneficial outcomes without explicit communication. Through representative case studies (available in a dedicated GitHub repository in https://github.com/salazarna/marlem, we show the framework's ability to analyze how different market configurations (such as varying storage deployment) impact system performance. This illustrates its potential to facilitate emergent coordination, improve market efficiency, and strengthen grid stability. The proposed simulation framework is a flexible, extensible, and reproducible tool for researchers and practitioners to design, test, and validate strategies for future intelligent, decentralized energy systems.",
+    "authors": [
+      "Nelson Salazar-Pena",
+      "Alejandra Tabares",
+      "Andres Gonzalez-Mancera"
+    ],
+    "published": "2026-02-17",
+    "categories": [
+      "eess.SY",
+      "cs.CE",
+      "cs.ET",
+      "cs.LG",
+      "stat.CO"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.16063v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.16063v1",
+    "fetched_at": "2026-02-19T08:51:48.498452"
+  },
+  {
+    "id": "2602.16708v1",
+    "title": "Policy Compiler for Secure Agentic Systems",
+    "abstract": "LLM-based agents are increasingly being deployed in contexts requiring complex authorization policies: customer service protocols, approval workflows, data access restrictions, and regulatory compliance. Embedding these policies in prompts provides no enforcement guarantees. We present PCAS, a Policy Compiler for Agentic Systems that provides deterministic policy enforcement.   Enforcing such policies requires tracking information flow across agents, which linear message histories cannot capture. Instead, PCAS models the agentic system state as a dependency graph capturing causal relationships among events such as tool calls, tool results, and messages. Policies are expressed in a Datalog-derived language, as declarative rules that account for transitive information flow and cross-agent provenance. A reference monitor intercepts all actions and blocks violations before execution, providing deterministic enforcement independent of model reasoning.   PCAS takes an existing agent implementation and a policy specification, and compiles them into an instrumented system that is policy-compliant by construction, with no security-specific restructuring required. We evaluate PCAS on three case studies: information flow policies for prompt injection defense, approval workflows in a multi-agent pharmacovigilance system, and organizational policies for customer service. On customer service tasks, PCAS improves policy compliance from 48% to 93% across frontier models, with zero policy violations in instrumented runs.",
+    "authors": [
+      "Nils Palumbo",
+      "Sarthak Choudhary",
+      "Jihye Choi",
+      "Prasad Chalasani",
+      "Mihai Christodorescu",
+      "Somesh Jha"
+    ],
+    "published": "2026-02-18",
+    "categories": [
+      "cs.CR",
+      "cs.AI",
+      "cs.MA"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.16708v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.16708v1",
+    "fetched_at": "2026-02-19T08:52:06.836659"
+  },
+  {
+    "id": "2602.16671v1",
+    "title": "SPARC: Scenario Planning and Reasoning for Automated C Unit Test Generation",
+    "abstract": "Automated unit test generation for C remains a formidable challenge due to the semantic gap between high-level program intent and the rigid syntactic constraints of pointer arithmetic and manual memory management. While Large Language Models (LLMs) exhibit strong generative capabilities, direct intent-to-code synthesis frequently suffers from the leap-to-code failure mode, where models prematurely emit code without grounding in program structure, constraints, and semantics. This will result in non-compilable tests, hallucinated function signatures, low branch coverage, and semantically irrelevant assertions that cannot properly capture bugs. We introduce SPARC, a neuro-symbolic, scenario-based framework that bridges this gap through four stages: (1) Control Flow Graph (CFG) analysis, (2) an Operation Map that grounds LLM reasoning in validated utility helpers, (3) Path-targeted test synthesis, and (4) an iterative, self-correction validation loop using compiler and runtime feedback. We evaluate SPARC on 59 real-world and algorithmic subjects, where it outperforms the vanilla prompt generation baseline by 31.36% in line coverage, 26.01% in branch coverage, and 20.78% in mutation score, matching or exceeding the symbolic execution tool KLEE on complex subjects. SPARC retains 94.3% of tests through iterative repair and produces code with significantly higher developer-rated readability and maintainability. By aligning LLM reasoning with program structure, SPARC provides a scalable path for industrial-grade testing of legacy C codebases.",
+    "authors": [
+      "Jaid Monwar Chowdhury",
+      "Chi-An Fu",
+      "Reyhaneh Jabbarvand"
+    ],
+    "published": "2026-02-18",
+    "categories": [
+      "cs.SE",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.16671v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.16671v1",
+    "fetched_at": "2026-02-19T08:52:06.836706"
+  },
+  {
+    "id": "2602.16666v1",
+    "title": "Towards a Science of AI Agent Reliability",
+    "abstract": "AI agents are increasingly deployed to execute important tasks. While rising accuracy scores on standard benchmarks suggest rapid progress, many agents still continue to fail in practice. This discrepancy highlights a fundamental limitation of current evaluations: compressing agent behavior into a single success metric obscures critical operational flaws. Notably, it ignores whether agents behave consistently across runs, withstand perturbations, fail predictably, or have bounded error severity. Grounded in safety-critical engineering, we provide a holistic performance profile by proposing twelve concrete metrics that decompose agent reliability along four key dimensions: consistency, robustness, predictability, and safety. Evaluating 14 agentic models across two complementary benchmarks, we find that recent capability gains have only yielded small improvements in reliability. By exposing these persistent limitations, our metrics complement traditional evaluations while offering tools for reasoning about how agents perform, degrade, and fail.",
+    "authors": [
+      "Stephan Rabanser",
+      "Sayash Kapoor",
+      "Peter Kirgis",
+      "Kangheng Liu",
+      "Saiteja Utpala",
+      "Arvind Narayanan"
+    ],
+    "published": "2026-02-18",
+    "categories": [
+      "cs.AI",
+      "cs.CY",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.16666v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.16666v1",
+    "fetched_at": "2026-02-19T08:52:06.836734"
+  },
+  {
+    "id": "2602.16603v1",
+    "title": "FlowPrefill: Decoupling Preemption from Prefill Scheduling Granularity to Mitigate Head-of-Line Blocking in LLM Serving",
+    "abstract": "The growing demand for large language models (LLMs) requires serving systems to handle many concurrent requests with diverse service level objectives (SLOs). This exacerbates head-of-line (HoL) blocking during the compute-intensive prefill phase, where long-running requests monopolize resources and delay higher-priority ones, leading to widespread time-to-first-token (TTFT) SLO violations. While chunked prefill enables interruptibility, it introduces an inherent trade-off between responsiveness and throughput: reducing chunk size improves response latency but degrades computational efficiency, whereas increasing chunk size maximizes throughput but exacerbates blocking. This necessitates an adaptive preemption mechanism. However, dynamically balancing execution granularity against scheduling overheads remains a key challenge.   In this paper, we propose FlowPrefill, a TTFT-goodput-optimized serving system that resolves this conflict by decoupling preemption granularity from scheduling frequency. To achieve adaptive prefill scheduling, FlowPrefill introduces two key innovations: 1) Operator-Level Preemption, which leverages operator boundaries to enable fine-grained execution interruption without the efficiency loss associated with fixed small chunking; and 2) Event-Driven Scheduling, which triggers scheduling decisions only upon request arrival or completion events, thereby supporting efficient preemption responsiveness while minimizing control-plane overhead. Evaluation on real-world production traces shows that FlowPrefill improves maximum goodput by up to 5.6$\\times$ compared to state-of-the-art systems while satisfying heterogeneous SLOs.",
+    "authors": [
+      "Chia-chi Hsieh",
+      "Zan Zong",
+      "Xinyang Chen",
+      "Jianjiang Li",
+      "Jidong Zhai",
+      "Lijie Wen"
+    ],
+    "published": "2026-02-18",
+    "categories": [
+      "cs.DC",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.16603v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.16603v1",
+    "fetched_at": "2026-02-19T08:52:06.836762"
+  },
+  {
+    "id": "2602.16585v1",
+    "title": "DataJoint 2.0: A Computational Substrate for Agentic Scientific Workflows",
+    "abstract": "Operational rigor determines whether human-agent collaboration succeeds or fails. Scientific data pipelines need the equivalent of DevOps -- SciOps -- yet common approaches fragment provenance across disconnected systems without transactional guarantees. DataJoint 2.0 addresses this gap through the relational workflow model: tables represent workflow steps, rows represent artifacts, foreign keys prescribe execution order. The schema specifies not only what data exists but how it is derived -- a single formal system where data structure, computational dependencies, and integrity constraints are all queryable, enforceable, and machine-readable. Four technical innovations extend this foundation: object-augmented schemas integrating relational metadata with scalable object storage, semantic matching using attribute lineage to prevent erroneous joins, an extensible type system for domain-specific formats, and distributed job coordination designed for composability with external orchestration. By unifying data structure, data, and computational transformations, DataJoint creates a substrate for SciOps where agents can participate in scientific workflows without risking data corruption.",
+    "authors": [
+      "Dimitri Yatsenko",
+      "Thinh T. Nguyen"
+    ],
+    "published": "2026-02-18",
+    "categories": [
+      "cs.DB",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.16585v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.16585v1",
+    "fetched_at": "2026-02-19T08:52:06.836781"
+  },
+  {
+    "id": "2602.16520v1",
+    "title": "Recursive language models for jailbreak detection: a procedural defense for tool-augmented agents",
+    "abstract": "Jailbreak prompts are a practical and evolving threat to large language models (LLMs), particularly in agentic systems that execute tools over untrusted content. Many attacks exploit long-context hiding, semantic camouflage, and lightweight obfuscations that can evade single-pass guardrails. We present RLM-JB, an end-to-end jailbreak detection framework built on Recursive Language Models (RLMs), in which a root model orchestrates a bounded analysis program that transforms the input, queries worker models over covered segments, and aggregates evidence into an auditable decision. RLM-JB treats detection as a procedure rather than a one-shot classification: it normalizes and de-obfuscates suspicious inputs, chunks text to reduce context dilution and guarantee coverage, performs parallel chunk screening, and composes cross-chunk signals to recover split-payload attacks. On AutoDAN-style adversarial inputs, RLM-JB achieves high detection effectiveness across three LLM backends (ASR/Recall 92.5-98.0%) while maintaining very high precision (98.99-100%) and low false positive rates (0.0-2.0%), highlighting a practical sensitivity-specificity trade-off as the screening backend changes.",
+    "authors": [
+      "Doron Shavit"
+    ],
+    "published": "2026-02-18",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.16520v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.16520v1",
+    "fetched_at": "2026-02-19T08:52:06.836800"
+  },
+  {
+    "id": "2602.16512v1",
+    "title": "Framework of Thoughts: A Foundation Framework for Dynamic and Optimized Reasoning based on Chains, Trees, and Graphs",
+    "abstract": "Prompting schemes such as Chain of Thought, Tree of Thoughts, and Graph of Thoughts can significantly enhance the reasoning capabilities of large language models. However, most existing schemes require users to define static, problem-specific reasoning structures that lack adaptability to dynamic or unseen problem types. Additionally, these schemes are often under-optimized in terms of hyperparameters, prompts, runtime, and prompting cost. To address these limitations, we introduce Framework of Thoughts (FoT)--a general-purpose foundation framework for building and optimizing dynamic reasoning schemes. FoT comes with built-in features for hyperparameter tuning, prompt optimization, parallel execution, and intelligent caching, unlocking the latent performance potential of reasoning schemes. We demonstrate FoT's capabilities by implementing three popular schemes--Tree of Thoughts, Graph of Thoughts, and ProbTree--within FoT. We empirically show that FoT enables significantly faster execution, reduces costs, and achieves better task scores through optimization. We release our codebase to facilitate the development of future dynamic and efficient reasoning schemes.",
+    "authors": [
+      "Felix Fricke",
+      "Simon Malberg",
+      "Georg Groh"
+    ],
+    "published": "2026-02-18",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.16512v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.16512v1",
+    "fetched_at": "2026-02-19T08:52:06.836824"
+  },
+  {
+    "id": "2602.16429v1",
+    "title": "TabAgent: A Framework for Replacing Agentic Generative Components with Tabular-Textual Classifiers",
+    "abstract": "Agentic systems, AI architectures that autonomously execute multi-step workflows to achieve complex goals, are often built using repeated large language model (LLM) calls for closed-set decision tasks such as routing, shortlisting, gating, and verification. While convenient, this design makes deployments slow and expensive due to cumulative latency and token usage. We propose TabAgent, a framework for replacing generative decision components in closed-set selection tasks with a compact textual-tabular classifier trained on execution traces. TabAgent (i) extracts structured schema, state, and dependency features from trajectories (TabSchema), (ii) augments coverage with schema-aligned synthetic supervision (TabSynth), and (iii) scores candidates with a lightweight classifier (TabHead). On the long-horizon AppWorld benchmark, TabAgent maintains task-level success while eliminating shortlist-time LLM calls, reducing latency by approximately 95% and inference cost by 85-91%. Beyond tool shortlisting, TabAgent generalizes to other agentic decision heads, establishing a paradigm for learned discriminative replacements of generative bottlenecks in production agent architectures.",
+    "authors": [
+      "Ido Levy",
+      "Eilam Shapira",
+      "Yinon Goldshtein",
+      "Avi Yaeli",
+      "Nir Mashkif",
+      "Segev Shlomov"
+    ],
+    "published": "2026-02-18",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.16429v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.16429v1",
+    "fetched_at": "2026-02-19T08:52:06.836851"
+  },
+  {
+    "id": "2602.16346v1",
+    "title": "Helpful to a Fault: Measuring Illicit Assistance in Multi-Turn, Multilingual LLM Agents",
+    "abstract": "LLM-based agents execute real-world workflows via tools and memory. These affordances enable ill-intended adversaries to also use these agents to carry out complex misuse scenarios. Existing agent misuse benchmarks largely test single-prompt instructions, leaving a gap in measuring how agents end up helping with harmful or illegal tasks over multiple turns. We introduce STING (Sequential Testing of Illicit N-step Goal execution), an automated red-teaming framework that constructs a step-by-step illicit plan grounded in a benign persona and iteratively probes a target agent with adaptive follow-ups, using judge agents to track phase completion. We further introduce an analysis framework that models multi-turn red-teaming as a time-to-first-jailbreak random variable, enabling analysis tools like discovery curves, hazard-ratio attribution by attack language, and a new metric: Restricted Mean Jailbreak Discovery. Across AgentHarm scenarios, STING yields substantially higher illicit-task completion than single-turn prompting and chat-oriented multi-turn baselines adapted to tool-using agents. In multilingual evaluations across six non-English settings, we find that attack success and illicit-task completion do not consistently increase in lower-resource languages, diverging from common chatbot findings. Overall, STING provides a practical way to evaluate and stress-test agent misuse in realistic deployment settings, where interactions are inherently multi-turn and often multilingual.",
+    "authors": [
+      "Nivya Talokar",
+      "Ayush K Tarun",
+      "Murari Mandal",
+      "Maksym Andriushchenko",
+      "Antoine Bosselut"
+    ],
+    "published": "2026-02-18",
+    "categories": [
+      "cs.CL",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.16346v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.16346v1",
+    "fetched_at": "2026-02-19T08:52:06.836875"
+  },
+  {
+    "id": "2602.16233v1",
+    "title": "DistributedEstimator: Distributed Training of Quantum Neural Networks via Circuit Cutting",
+    "abstract": "Circuit cutting decomposes a large quantum circuit into a collection of smaller subcircuits. The outputs of these subcircuits are then classically reconstructed to recover the original expectation values. While prior work characterises cutting overhead largely in terms of subcircuit counts and sampling complexity, its end-to-end impact on iterative, estimator-driven training pipelines remains insufficiently measured from a systems perspective. In this paper, we propose a cut-aware estimator execution pipeline that treats circuit cutting as a staged distributed workload and instruments each estimator query into partitioning, subexperiment generation, parallel execution, and classical reconstruction phases. Using logged runtime traces and learning outcomes on two binary classification workloads (Iris and MNIST), we quantify cutting overheads, scaling limits, and sensitivity to injected stragglers, and we evaluate whether accuracy and robustness are preserved under matched training budgets. Our measurements show that cutting introduces substantial end-to-end overheads that grow with the number of cuts, and that reconstruction constitutes a dominant fraction of per-query time, bounding achievable speed-up under increased parallelism. Despite these systems costs, test accuracy and robustness are preserved in the measured regimes, with configuration-dependent improvements observed in some cut settings. These results indicate that practical scaling of circuit cutting for learning workloads hinges on reducing and overlapping reconstruction and on scheduling policies that account for barrier-dominated critical paths.",
+    "authors": [
+      "Prabhjot Singh",
+      "Adel N. Toosi",
+      "Rajkumar Buyya"
+    ],
+    "published": "2026-02-18",
+    "categories": [
+      "cs.DC",
+      "cs.LG",
+      "quant-ph"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.16233v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.16233v1",
+    "fetched_at": "2026-02-19T08:52:06.836896"
+  },
+  {
+    "id": "2602.16187v1",
+    "title": "SIT-LMPC: Safe Information-Theoretic Learning Model Predictive Control for Iterative Tasks",
+    "abstract": "Robots executing iterative tasks in complex, uncertain environments require control strategies that balance robustness, safety, and high performance. This paper introduces a safe information-theoretic learning model predictive control (SIT-LMPC) algorithm for iterative tasks. Specifically, we design an iterative control framework based on an information-theoretic model predictive control algorithm to address a constrained infinite-horizon optimal control problem for discrete-time nonlinear stochastic systems. An adaptive penalty method is developed to ensure safety while balancing optimality. Trajectories from previous iterations are utilized to learn a value function using normalizing flows, which enables richer uncertainty modeling compared to Gaussian priors. SIT-LMPC is designed for highly parallel execution on graphics processing units, allowing efficient real-time optimization. Benchmark simulations and hardware experiments demonstrate that SIT-LMPC iteratively improves system performance while robustly satisfying system constraints.",
+    "authors": [
+      "Zirui Zang",
+      "Ahmad Amine",
+      "Nick-Marios T. Kokolakis",
+      "Truong X. Nghiem",
+      "Ugo Rosolia",
+      "Rahul Mangharam"
+    ],
+    "published": "2026-02-18",
+    "categories": [
+      "cs.RO",
+      "cs.AI",
+      "eess.SY"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.16187v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.16187v1",
+    "fetched_at": "2026-02-19T08:52:06.836923"
+  },
+  {
+    "id": "2602.16165v1",
+    "title": "HiPER: Hierarchical Reinforcement Learning with Explicit Credit Assignment for Large Language Model Agents",
+    "abstract": "Training LLMs as interactive agents for multi-turn decision-making remains challenging, particularly in long-horizon tasks with sparse and delayed rewards, where agents must execute extended sequences of actions before receiving meaningful feedback. Most existing reinforcement learning (RL) approaches model LLM agents as flat policies operating at a single time scale, selecting one action at each turn. In sparse-reward settings, such flat policies must propagate credit across the entire trajectory without explicit temporal abstraction, which often leads to unstable optimization and inefficient credit assignment.   We propose HiPER, a novel Hierarchical Plan-Execute RL framework that explicitly separates high-level planning from low-level execution. HiPER factorizes the policy into a high-level planner that proposes subgoals and a low-level executor that carries them out over multiple action steps. To align optimization with this structure, we introduce a key technique called hierarchical advantage estimation (HAE), which carefully assigns credit at both the planning and execution levels. By aggregating returns over the execution of each subgoal and coordinating updates across the two levels, HAE provides an unbiased gradient estimator and provably reduces variance compared to flat generalized advantage estimation.   Empirically, HiPER achieves state-of-the-art performance on challenging interactive benchmarks, reaching 97.4\\% success on ALFWorld and 83.3\\% on WebShop with Qwen2.5-7B-Instruct (+6.6\\% and +8.3\\% over the best prior method), with especially large gains on long-horizon tasks requiring multiple dependent subtasks. These results highlight the importance of explicit hierarchical decomposition for scalable RL training of multi-turn LLM agents.",
+    "authors": [
+      "Jiangweizhi Peng",
+      "Yuanxin Liu",
+      "Ruida Zhou",
+      "Charles Fleming",
+      "Zhaoran Wang",
+      "Alfredo Garcia",
+      "Mingyi Hong"
+    ],
+    "published": "2026-02-18",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.16165v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.16165v1",
+    "fetched_at": "2026-02-19T08:52:06.836952"
+  },
+  {
+    "id": "2602.16154v1",
+    "title": "Balancing Faithfulness and Performance in Reasoning via Multi-Listener Soft Execution",
+    "abstract": "Chain-of-thought (CoT) reasoning sometimes fails to faithfully reflect the true computation of a large language model (LLM), hampering its utility in explaining how LLMs arrive at their answers. Moreover, optimizing for faithfulness and interpretability in reasoning often degrades task performance. To address this tradeoff and improve CoT faithfulness, we propose Reasoning Execution by Multiple Listeners (REMUL), a multi-party reinforcement learning approach. REMUL builds on the hypothesis that reasoning traces which other parties can follow will be more faithful. A speaker model generates a reasoning trace, which is truncated and passed to a pool of listener models who \"execute\" the trace, continuing the trace to an answer. Speakers are rewarded for producing reasoning that is clear to listeners, with additional correctness regularization via masked supervised finetuning to counter the tradeoff between faithfulness and performance. On multiple reasoning benchmarks (BIG-Bench Extra Hard, MuSR, ZebraLogicBench, and FOLIO), REMUL consistently and substantially improves three measures of faithfulness -- hint attribution, early answering area over the curve (AOC), and mistake injection AOC -- while also improving accuracy. Our analysis finds that these gains are robust across training domains, translate to legibility gains, and are associated with shorter and more direct CoTs.",
+    "authors": [
+      "Nithin Sivakumaran",
+      "Shoubin Yu",
+      "Hyunji Lee",
+      "Yue Zhang",
+      "Ali Payani",
+      "Mohit Bansal",
+      "Elias Stengel-Eskin"
+    ],
+    "published": "2026-02-18",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.16154v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.16154v1",
+    "fetched_at": "2026-02-19T08:52:06.836980"
+  },
+  {
+    "id": "2602.16124v1",
+    "title": "Rethinking ANN-based Retrieval: Multifaceted Learnable Index for Large-scale Recommendation System",
+    "abstract": "Approximate nearest neighbor (ANN) search is widely used in the retrieval stage of large-scale recommendation systems. In this stage, candidate items are indexed using their learned embedding vectors, and ANN search is executed for each user (or item) query to retrieve a set of relevant items. However, ANN-based retrieval has two key limitations. First, item embeddings and their indices are typically learned in separate stages: indexing is often performed offline after embeddings are trained, which can yield suboptimal retrieval quality-especially for newly created items. Second, although ANN offers sublinear query time, it must still be run for every request, incurring substantial computation cost at industry scale. In this paper, we propose MultiFaceted Learnable Index (MFLI), a scalable, real-time retrieval paradigm that learns multifaceted item embeddings and indices within a unified framework and eliminates ANN search at serving time. Specifically, we construct a multifaceted hierarchical codebook via residual quantization of item embeddings and co-train the codebook with the embeddings. We further introduce an efficient multifaceted indexing structure and mechanisms that support real-time updates. At serving time, the learned hierarchical indices are used directly to identify relevant items, avoiding ANN search altogether. Extensive experiments on real-world data with billions of users show that MFLI improves recall on engagement tasks by up to 11.8\\%, cold-content delivery by up to 57.29\\%, and semantic relevance by 13.5\\% compared with prior state-of-the-art methods. We also deploy MFLI in the system and report online experimental results demonstrating improved engagement, less popularity bias, and higher serving efficiency.",
+    "authors": [
+      "Jiang Zhang",
+      "Yubo Wang",
+      "Wei Chang",
+      "Lu Han",
+      "Xingying Cheng",
+      "Feng Zhang",
+      "Min Li",
+      "Songhao Jiang",
+      "Wei Zheng",
+      "Harry Tran",
+      "Zhen Wang",
+      "Lei Chen",
+      "Yueming Wang",
+      "Benyu Zhang",
+      "Xiangjun Fan",
+      "Bi Xue",
+      "Qifan Wang"
+    ],
+    "published": "2026-02-18",
+    "categories": [
+      "cs.IR",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.16124v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.16124v1",
+    "fetched_at": "2026-02-19T08:52:06.837027"
+  },
+  {
+    "id": "2602.15983v1",
+    "title": "ReLoop: Structured Modeling and Behavioral Verification for Reliable LLM-Based Optimization",
+    "abstract": "Large language models (LLMs) can translate natural language into optimization code, but silent failures pose a critical risk: code that executes and returns solver-feasible solutions may encode semantically incorrect formulations, creating a feasibility-correctness gap of up to 90 percentage points on compositional problems. We introduce ReLoop, addressing silent failures from two complementary directions. Structured generation decomposes code production into a four-stage reasoning chain (understand, formalize, synthesize, verify) that mirrors expert modeling practice, with explicit variable-type reasoning and self-verification to prevent formulation errors at their source. Behavioral verification detects errors that survive generation by testing whether the formulation responds correctly to solver-based parameter perturbation, without requiring ground truth -- an external semantic signal that bypasses the self-consistency problem inherent in LLM-based code review. The two mechanisms are complementary: structured generation dominates on complex compositional problems, while behavioral verification becomes the largest single contributor on problems with localized formulation defects. Together with execution recovery via IIS-enhanced diagnostics, ReLoop raises correctness from 22.6% to 31.1% and execution from 72.1% to 100.0% on the strongest model, with consistent gains across five models spanning three paradigms (foundation, SFT, RL) and three benchmarks. We additionally release RetailOpt-190, 190 compositional retail optimization scenarios targeting the multi-constraint interactions where LLMs most frequently fail.",
+    "authors": [
+      "Junbo Jacob Lian",
+      "Yujun Sun",
+      "Huiling Chen",
+      "Chaoyu Zhang",
+      "Chung-Piaw Teo"
+    ],
+    "published": "2026-02-17",
+    "categories": [
+      "cs.SE",
+      "cs.AI",
+      "cs.LG",
+      "math.OC"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.15983v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.15983v1",
+    "fetched_at": "2026-02-19T08:52:06.837053"
+  }
+]

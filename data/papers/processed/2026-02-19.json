@@ -1,0 +1,758 @@
+[
+  {
+    "id": "2602.16539v1",
+    "title": "Caratheodory, Finite Resources and the Geometry of Arbitrage",
+    "abstract": "Caratheodory's axiom of adiabatic inaccessibility states that, in any neighborhood of a thermodynamic state, certain states remain unreachable via adiabatic processes. Non-arbitrage mirrors this topological restriction in finance. Preserving this constraint in resource-limited systems identifies the exponential family not as a modeling convenience but as the requisite geometric structure unifying both domains.",
+    "authors": [
+      "B. K. Meister"
+    ],
+    "published": "2026-02-18",
+    "categories": [
+      "q-fin.PM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.16539v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.16539v1",
+    "fetched_at": "2026-02-19T08:51:27.117844",
+    "chinese_title": "卡拉西奥多里原理、有限资源与套利几何",
+    "chinese_summary": "该论文将热力学中卡拉西奥多里绝热不可达公理与金融无套利约束建立拓扑对应；研究发现资源有限系统中保留该约束时，指数族是统一两个领域的必要几何结构而非仅建模便利。",
+    "tags": [
+      "Asset Pricing",
+      "Risk Management"
+    ],
+    "key_contributions": [
+      "建立热力学卡拉西奥多里绝热不可达公理与金融无套利约束的拓扑对应关系",
+      "揭示资源有限系统中指数族是统一热力学与金融领域的必要几何结构（而非建模便利）"
+    ],
+    "processed_at": "2026-02-19T08:54:30.632396"
+  },
+  {
+    "id": "2602.16401v1",
+    "title": "Stackelberg Equilibria in Monopoly Insurance Markets with Probability Weighting",
+    "abstract": "We study Stackelberg Equilibria (Bowley optima) in a monopolistic centralized sequential-move insurance market, with a profit-maximizing insurer who sets premia using a distortion premium principle, and a single policyholder who seeks to minimize a distortion risk measure. We show that equilibria are characterized as follows: In equilibrium, the optimal indemnity function exhibits a layer-type structure, providing full insurance over any loss layer on which the policyholder is more pessimistic than the insurer's pricing functional about tail losses; and no insurance coverage over loss layers on which the policyholder is less pessimistic than the insurer's pricing functional about tail losses. In equilibrium, the optimal pricing distortion function is determined by the policyholder's degree of risk aversion, whereby prices never exceed the policyholder's marginal willingness to insure tail losses. Moreover, we show that both the insurance coverage and the insurer's expected profit increase with the policyholder's degree of risk aversion. Additionally, and echoing recent work in the literature, we show that equilibrium contracts are Pareto efficient, but they do not induce a welfare gain to the policyholder. Conversely, any Pareto-optimal contract that leaves no welfare gain to the policyholder can be obtained as an equilibrium contract. Finally, we consider a few examples of interest that recover some existing results in the literature as special cases of our analysis.",
+    "authors": [
+      "Maria Andraos",
+      "Mario Ghossoub",
+      "Bin Li",
+      "Benxuan Shi"
+    ],
+    "published": "2026-02-18",
+    "categories": [
+      "q-fin.RM",
+      "econ.TH",
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.16401v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.16401v1",
+    "fetched_at": "2026-02-19T08:51:27.117887",
+    "chinese_title": "带概率加权的垄断保险市场中的斯塔克伯格均衡",
+    "chinese_summary": "本文研究垄断集中式 sequential-move保险市场的斯塔克伯格均衡，保险公司以利润最大化为目标采用扭曲保费原则定价，投保人以最小化扭曲风险度量为目标；主要发现包括最优赔偿函数呈分层结构（投保人对尾部损失更悲观的层全保、反之不保），均衡契约帕累托有效但投保人无福利增益，且保险覆盖与保险公司预期利润随投保人风险厌恶程度提升而增加。",
+    "tags": [
+      "Behavioral Finance",
+      "Risk Management"
+    ],
+    "key_contributions": [
+      "揭示带概率加权的垄断保险市场斯塔克伯格均衡中最优赔偿函数的分层结构特征及定价规则",
+      "证明均衡契约的帕累托有效性与投保人福利增益特性，并建立无福利增益的帕累托最优契约与均衡契约的等价关系"
+    ],
+    "processed_at": "2026-02-19T08:54:48.361822"
+  },
+  {
+    "id": "2602.16387v1",
+    "title": "Computing Tarski Fixed Points in Financial Networks",
+    "abstract": "Modern financial networks are highly connected and result in complex interdependencies of the involved institutions. In the prominent Eisenberg-Noe model, a fundamental aspect is clearing -- to determine the amount of assets available to each financial institution in the presence of potential defaults and bankruptcy. A clearing state represents a fixed point that satisfies a set of natural axioms. Existence can be established (even in broad generalizations of the model) using Tarski's theorem.   While a maximal fixed point can be computed in polynomial time, the complexity of computing other fixed points is open. In this paper, we provide an efficient algorithm to compute a minimal fixed point that runs in strongly polynomial time. It applies in a broad generalization of the Eisenberg-Noe model with any monotone, piecewise-linear payment functions and default costs. Moreover, in this scenario we provide a polynomial-time algorithm to compute a maximal fixed point. For networks without default costs, we can efficiently decide the existence of fixed points in a given range.   We also study claims trading, a local network adjustment to improve clearing, when networks are evaluated with minimal clearing. We provide an efficient algorithm to decide existence of Pareto-improving trades and compute optimal ones if they exist.",
+    "authors": [
+      "Leander Besting",
+      "Martin Hoefer",
+      "Lars Huth"
+    ],
+    "published": "2026-02-18",
+    "categories": [
+      "cs.DS",
+      "cs.GT",
+      "q-fin.RM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.16387v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.16387v1",
+    "fetched_at": "2026-02-19T08:51:27.117915",
+    "chinese_title": "金融网络中Tarski不动点的计算",
+    "chinese_summary": "本文针对金融网络清算问题，提出强多项式时间算法计算极小不动点，适用于带单调分段线性支付函数和违约成本的Eisenberg-Noe模型推广；同时给出该场景下极大不动点的多项式时间算法，无违约成本时可高效判断给定范围是否存在不动点，并研究基于极小清算的债权交易，提供帕累托改进交易的存在性判断及最优交易计算方法。",
+    "tags": [
+      "Risk Management",
+      "Algorithmic Trading"
+    ],
+    "key_contributions": [
+      "提出强多项式时间算法计算极小不动点，适用于带单调分段线性支付函数和违约成本的Eisenberg-Noe模型推广",
+      "给出基于极小清算的债权交易中帕累托改进交易的存在性判断及最优交易计算的高效算法"
+    ],
+    "processed_at": "2026-02-19T08:55:12.161785"
+  },
+  {
+    "id": "2602.16232v1",
+    "title": "A Wiener Chaos Approach to Martingale Modelling and Implied Volatility Calibration",
+    "abstract": "Calibration to a surface of option prices requires specifying a suitably flexible martingale model for the discounted asset price under a risk-neutral measure. Assuming Brownian noise and mean-square integrability, we construct an over-parameterized model based on the martingale representation theorem. In particular, we approximate the terminal value of the martingale via a truncated Wiener--chaos expansion and recover the intermediate dynamics by computing the corresponding conditional expectations. Using the Hermite-polynomial formulation of the Wiener chaos, we obtain easily implementable expressions that enable fast calibration to a target implied-volatility surface. We illustrate the flexibility and expressive power of the resulting model through numerical experiments on both simulated and real market data.",
+    "authors": [
+      "Pere Diaz-Lozano",
+      "Thomas K. Kloster"
+    ],
+    "published": "2026-02-18",
+    "categories": [
+      "q-fin.MF",
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.16232v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.16232v1",
+    "fetched_at": "2026-02-19T08:51:27.117937",
+    "chinese_title": "维纳混沌方法在鞅建模与隐含波动率校准中的应用",
+    "chinese_summary": "本文基于布朗噪声与均方可积性假设，利用鞅表示定理构造过参数化鞅模型，通过截断维纳混沌展开近似鞅终端值并结合埃尔米特多项式形式得到易实现的表达式，实现快速的隐含波动率曲面校准，数值实验验证了模型的灵活性与表达能力。",
+    "tags": [
+      "Volatility",
+      "Options",
+      "Asset Pricing"
+    ],
+    "key_contributions": [
+      "基于鞅表示定理与截断维纳混沌展开，构造了灵活的过参数化鞅模型用于期权价格校准",
+      "结合埃尔米特多项式形式得到易实现的表达式，实现快速隐含波动率曲面校准，数值实验验证模型有效性"
+    ],
+    "processed_at": "2026-02-19T08:55:30.865722"
+  },
+  {
+    "id": "2602.16212v1",
+    "title": "Money-Back Tontines for Retirement Decumulation: Neural-Network Optimization under Systematic Longevity Risk",
+    "abstract": "Money-back guarantees (MBGs) are features of pooled retirement income products that address bequest concerns by ensuring the initial premium is returned through lifetime payments or, upon early death, as a death benefit to the estate. This paper studies optimal retirement decumulation in an individual tontine account with an MBG overlay under international diversification and systematic longevity risk. The retiree chooses withdrawals and asset allocation dynamically to trade off expected total withdrawals (EW) against the Conditional Value-at-Risk (CVaR) of terminal wealth, subject to realistic investment constraints. The optimization is solved under a plan-to-live convention, while stochastic mortality affects outcomes through its impact on mortality credits at the pool level. We develop a neural-network based computational approach for the resulting high-dimensional, constrained control problem. The MBG is priced ex post under the induced EW--CVaR optimal policy via a simulation-based actuarial rule that combines expected guarantee costs with a prudential tail buffer. Using long-horizon historical return data expressed in real domestic-currency terms, we find that international diversification and longevity pooling jointly deliver the largest improvements in the EW--CVaR trade-off, while stochastic mortality shifts the frontier modestly in the expected direction. The optimal controls use foreign equity primarily as a state-dependent catch-up instrument, and implied MBG loads are driven mainly by tail outcomes (and the chosen prudential buffer) rather than by mean payouts.",
+    "authors": [
+      "German Nova Orozco",
+      "Duy-Minh Dang",
+      "Peter A. Forsyth"
+    ],
+    "published": "2026-02-18",
+    "categories": [
+      "q-fin.PM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.16212v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.16212v1",
+    "fetched_at": "2026-02-19T08:51:27.117963",
+    "chinese_title": "具有退款保证的退休资产消耗年金：系统性长寿风险下的神经网络优化",
+    "chinese_summary": "本文研究带退款保证（MBG）的个人年金账户在国际多元化与系统性长寿风险下的最优退休资产消耗，退休者动态选择取款与资产配置以权衡预期总取款（EW）和终端财富的条件风险价值（CVaR）；开发神经网络方法求解高维约束控制问题，通过模拟精算规则事后定价MBG；发现国际多元化与长寿 pooling 联合优化EW-CVaR权衡，随机死亡率对前沿影响适度。",
+    "tags": [
+      "Portfolio Optimization",
+      "Risk Management",
+      "Deep Learning",
+      "Asset Pricing"
+    ],
+    "key_contributions": [
+      "开发基于神经网络的高维约束控制问题求解方法，用于带MBG的年金账户最优退休资产消耗（动态取款与资产配置）决策",
+      "揭示国际多元化与长寿 pooling 联合优化EW-CVaR权衡的规律，提出MBG事后定价的模拟精算规则"
+    ],
+    "processed_at": "2026-02-19T08:55:47.748094"
+  },
+  {
+    "id": "2602.15385v2",
+    "title": "From Chain-Ladder to Individual Claims Reserving",
+    "abstract": "The chain-ladder (CL) method is the most widely used claims reserving technique in non-life insurance. This manuscript introduces a novel approach to computing the CL reserves based on a fundamental restructuring of the data utilization for the CL prediction procedure. Instead of rolling forward the cumulative claims with estimated CL factors, we estimate multi-period factors that project the latest observations directly to the ultimate claims. This alternative perspective on CL reserving creates a natural pathway for the application of machine learning techniques to individual claims reserving. As a proof of concept, we present a small-scale real data application employing neural networks for individual claims reserving.",
+    "authors": [
+      "Ronald Richman",
+      "Mario V. Wüthrich"
+    ],
+    "published": "2026-02-17",
+    "categories": [
+      "stat.AP",
+      "q-fin.RM",
+      "stat.ML"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.15385v2",
+    "arxiv_url": "https://arxiv.org/abs/2602.15385v2",
+    "fetched_at": "2026-02-19T08:51:27.118006",
+    "chinese_title": "从链梯法到个体索赔准备金评估",
+    "chinese_summary": "该论文针对财产险常用的链梯法索赔准备金技术，提出通过估计多期因子直接将最新观测投影至最终索赔的新方法，替代传统滚动累计索赔的方式；此方法为机器学习（神经网络）应用于个体索赔准备金评估提供自然路径，并通过小规模真实数据验证可行性。",
+    "tags": [
+      "Risk Management",
+      "Deep Learning",
+      "Time Series"
+    ],
+    "key_contributions": [
+      "提出基于多期因子直接投影的链梯准备金计算新方法，替代传统滚动累计索赔模式",
+      "建立链梯法与机器学习（神经网络）应用于个体索赔准备金评估的自然路径并验证"
+    ],
+    "processed_at": "2026-02-19T08:55:59.828714"
+  },
+  {
+    "id": "2602.16101v1",
+    "title": "Axle Sensor Fusion for Online Continual Wheel Fault Detection in Wayside Railway Monitoring",
+    "abstract": "Reliable and cost-effective maintenance is essential for railway safety, particularly at the wheel-rail interface, which is prone to wear and failure. Predictive maintenance frameworks increasingly leverage sensor-generated time-series data, yet traditional methods require manual feature engineering, and deep learning models often degrade in online settings with evolving operational patterns. This work presents a semantic-aware, label-efficient continual learning framework for railway fault diagnostics. Accelerometer signals are encoded via a Variational AutoEncoder into latent representations capturing the normal operational structure in a fully unsupervised manner. Importantly, semantic metadata, including axle counts, wheel indexes, and strain-based deformations, is extracted via AI-driven peak detection on fiber Bragg grating sensors (resistant to electromagnetic interference) and fused with the VAE embeddings, enhancing anomaly detection under unknown operational conditions. A lightweight gradient boosting supervised classifier stabilizes anomaly scoring with minimal labels, while a replay-based continual learning strategy enables adaptation to evolving domains without catastrophic forgetting. Experiments show the model detects minor imperfections due to flats and polygonization, while adapting to evolving operational conditions, such as changes in train type, speed, load, and track profiles, captured using a single accelerometer and strain gauge in wayside monitoring.",
+    "authors": [
+      "Afonso Lourenço",
+      "Francisca Osório",
+      "Diogo Risca",
+      "Goreti Marreiros"
+    ],
+    "published": "2026-02-18",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.16101v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.16101v1",
+    "fetched_at": "2026-02-19T08:51:39.338283",
+    "chinese_title": "基于车轴传感器融合的路边铁路监测在线持续车轮故障检测",
+    "chinese_summary": "该论文提出语义感知、标签高效的持续学习框架用于铁路故障诊断：用变分自动编码器（VAE）无监督编码加速度计信号的潜在表示，结合AI驱动的光纤布拉格光栅传感器语义元数据（轴数、车轮索引等）融合增强异常检测；采用轻量梯度提升分类器和回放式持续学习策略，适应列车类型、速度等变化的运行条件，检测微小缺陷。",
+    "tags": [
+      "Anomaly",
+      "Time Series",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出语义感知的传感器融合框架，结合VAE潜在表示与光纤光栅元数据，提升未知工况下的车轮故障异常检测能力",
+      "采用回放式持续学习策略，在路边单传感器监测下适应运行条件演化，避免灾难性遗忘并检测微小缺陷"
+    ],
+    "processed_at": "2026-02-19T08:56:10.164147"
+  },
+  {
+    "id": "2602.16098v1",
+    "title": "Collaborative Zone-Adaptive Zero-Day Intrusion Detection for IoBT",
+    "abstract": "The Internet of Battlefield Things (IoBT) relies on heterogeneous, bandwidth-constrained, and intermittently connected tactical networks that face rapidly evolving cyber threats. In this setting, intrusion detection cannot depend on continuous central collection of raw traffic due to disrupted links, latency, operational security limits, and non-IID traffic across zones. We present Zone-Adaptive Intrusion Detection (ZAID), a collaborative detection and model-improvement framework for unseen attack types, where \"zero-day\" refers to previously unobserved attack families and behaviours (not vulnerability disclosure timing). ZAID combines a universal convolutional model for generalisable traffic representations, an autoencoder-based reconstruction signal as an auxiliary anomaly score, and lightweight adapter modules for parameter-efficient zone adaptation. To support cross-zone generalisation under constrained connectivity, ZAID uses federated aggregation and pseudo-labelling to leverage locally observed, weakly labelled behaviours. We evaluate ZAID on ToN_IoT using a zero-day protocol that excludes MITM, DDoS, and DoS from supervised training and introduces them during zone-level deployment and adaptation. ZAID achieves up to 83.16% accuracy on unseen attack traffic and transfers to UNSW-NB15 under the same procedure, with a best accuracy of 71.64%. These results indicate that parameter-efficient, zone-personalised collaboration can improve the detection of previously unseen attacks in contested IoBT environments.",
+    "authors": [
+      "Amirmohammad Pasdar",
+      "Shabnam Kasra Kermanshahi",
+      "Nour Moustafa",
+      "Van-Thuan Pham"
+    ],
+    "published": "2026-02-18",
+    "categories": [
+      "cs.CR",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.16098v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.16098v1",
+    "fetched_at": "2026-02-19T08:51:39.338317",
+    "chinese_title": "战场物联网的协作式区域自适应零日入侵检测",
+    "chinese_summary": "针对战场物联网（IoBT）异构、带宽受限等场景下的未知攻击检测问题，论文提出区域自适应入侵检测（ZAID）框架，结合通用卷积模型、自编码器辅助异常分数和轻量适配器模块，通过联邦聚合与伪标签实现跨区域协作泛化，能有效检测未观察到的攻击家族（零日攻击）。",
+    "tags": [
+      "Anomaly",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出适配战场物联网场景的区域自适应入侵检测（ZAID）框架，解决异构网络下未知攻击检测难题",
+      "结合参数高效的轻量适配器与联邦聚合、伪标签，实现跨区域协作泛化，提升零日攻击检测性能"
+    ],
+    "processed_at": "2026-02-19T08:56:20.597684"
+  },
+  {
+    "id": "2602.16063v1",
+    "title": "MARLEM: A Multi-Agent Reinforcement Learning Simulation Framework for Implicit Cooperation in Decentralized Local Energy Markets",
+    "abstract": "This paper introduces a novel, open-source MARL simulation framework for studying implicit cooperation in LEMs, modeled as a decentralized partially observable Markov decision process and implemented as a Gymnasium environment for MARL. Our framework features a modular market platform with plug-and-play clearing mechanisms, physically constrained agent models (including battery storage), a realistic grid network, and a comprehensive analytics suite to evaluate emergent coordination. The main contribution is a novel method to foster implicit cooperation, where agents' observations and rewards are enhanced with system-level key performance indicators to enable them to independently learn strategies that benefit the entire system and aim for collectively beneficial outcomes without explicit communication. Through representative case studies (available in a dedicated GitHub repository in https://github.com/salazarna/marlem, we show the framework's ability to analyze how different market configurations (such as varying storage deployment) impact system performance. This illustrates its potential to facilitate emergent coordination, improve market efficiency, and strengthen grid stability. The proposed simulation framework is a flexible, extensible, and reproducible tool for researchers and practitioners to design, test, and validate strategies for future intelligent, decentralized energy systems.",
+    "authors": [
+      "Nelson Salazar-Pena",
+      "Alejandra Tabares",
+      "Andres Gonzalez-Mancera"
+    ],
+    "published": "2026-02-17",
+    "categories": [
+      "eess.SY",
+      "cs.CE",
+      "cs.ET",
+      "cs.LG",
+      "stat.CO"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.16063v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.16063v1",
+    "fetched_at": "2026-02-19T08:51:48.498452",
+    "chinese_title": "MARLEM：用于去中心化本地能源市场隐式合作的多智能体强化学习仿真框架",
+    "chinese_summary": "论文提出开源多智能体强化学习（MARL）仿真框架MARLEM，建模为分散部分可观测马尔可夫决策过程，通过增强智能体观测与奖励（含系统级关键绩效指标）促进隐式合作（无需显式通信）；框架集成模块化市场、物理约束智能体（含储能）、真实电网及分析套件，可分析市场配置对系统性能的影响，助力未来智能去中心化能源系统设计。",
+    "tags": [
+      "Reinforcement Learning",
+      "Financial Agent",
+      "Market Microstructure"
+    ],
+    "key_contributions": [
+      "提出开源MARL仿真框架MARLEM，建模为Dec-POMDP，集成模块化市场、物理约束智能体、真实电网及分析套件，支持隐式合作研究",
+      "提出隐式合作促进方法，通过增强智能体观测与奖励（含系统级KPI）使智能体独立学习集体受益策略，无需显式通信",
+      "验证框架可分析市场配置（如储能部署）对系统性能的影响，助力智能去中心化能源系统设计"
+    ],
+    "processed_at": "2026-02-19T08:56:38.753913"
+  },
+  {
+    "id": "2602.16708v1",
+    "title": "Policy Compiler for Secure Agentic Systems",
+    "abstract": "LLM-based agents are increasingly being deployed in contexts requiring complex authorization policies: customer service protocols, approval workflows, data access restrictions, and regulatory compliance. Embedding these policies in prompts provides no enforcement guarantees. We present PCAS, a Policy Compiler for Agentic Systems that provides deterministic policy enforcement.   Enforcing such policies requires tracking information flow across agents, which linear message histories cannot capture. Instead, PCAS models the agentic system state as a dependency graph capturing causal relationships among events such as tool calls, tool results, and messages. Policies are expressed in a Datalog-derived language, as declarative rules that account for transitive information flow and cross-agent provenance. A reference monitor intercepts all actions and blocks violations before execution, providing deterministic enforcement independent of model reasoning.   PCAS takes an existing agent implementation and a policy specification, and compiles them into an instrumented system that is policy-compliant by construction, with no security-specific restructuring required. We evaluate PCAS on three case studies: information flow policies for prompt injection defense, approval workflows in a multi-agent pharmacovigilance system, and organizational policies for customer service. On customer service tasks, PCAS improves policy compliance from 48% to 93% across frontier models, with zero policy violations in instrumented runs.",
+    "authors": [
+      "Nils Palumbo",
+      "Sarthak Choudhary",
+      "Jihye Choi",
+      "Prasad Chalasani",
+      "Mihai Christodorescu",
+      "Somesh Jha"
+    ],
+    "published": "2026-02-18",
+    "categories": [
+      "cs.CR",
+      "cs.AI",
+      "cs.MA"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.16708v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.16708v1",
+    "fetched_at": "2026-02-19T08:52:06.836659",
+    "chinese_title": "面向安全智能体系统的策略编译器",
+    "chinese_summary": "针对LLM智能体部署中策略嵌入无强制保障的问题，提出PCAS系统——通过依赖图建模系统状态（捕获事件因果与信息流）、Datalog衍生语言定义含传递性的策略规则，结合参考监视器拦截违规动作实现确定性执行；无需重构现有智能体即可生成合规系统，客户服务场景合规率从48%提升至93%。",
+    "tags": [
+      "LLM",
+      "Financial Agent",
+      "Transformer"
+    ],
+    "key_contributions": [
+      "提出PCAS系统，用依赖图建模智能体状态、Datalog衍生语言定义策略，结合参考监视器实现确定性策略执行",
+      "无需重构现有智能体即可生成合规系统，多场景显著提升策略合规率"
+    ],
+    "processed_at": "2026-02-19T08:56:54.342026"
+  },
+  {
+    "id": "2602.16671v1",
+    "title": "SPARC: Scenario Planning and Reasoning for Automated C Unit Test Generation",
+    "abstract": "Automated unit test generation for C remains a formidable challenge due to the semantic gap between high-level program intent and the rigid syntactic constraints of pointer arithmetic and manual memory management. While Large Language Models (LLMs) exhibit strong generative capabilities, direct intent-to-code synthesis frequently suffers from the leap-to-code failure mode, where models prematurely emit code without grounding in program structure, constraints, and semantics. This will result in non-compilable tests, hallucinated function signatures, low branch coverage, and semantically irrelevant assertions that cannot properly capture bugs. We introduce SPARC, a neuro-symbolic, scenario-based framework that bridges this gap through four stages: (1) Control Flow Graph (CFG) analysis, (2) an Operation Map that grounds LLM reasoning in validated utility helpers, (3) Path-targeted test synthesis, and (4) an iterative, self-correction validation loop using compiler and runtime feedback. We evaluate SPARC on 59 real-world and algorithmic subjects, where it outperforms the vanilla prompt generation baseline by 31.36% in line coverage, 26.01% in branch coverage, and 20.78% in mutation score, matching or exceeding the symbolic execution tool KLEE on complex subjects. SPARC retains 94.3% of tests through iterative repair and produces code with significantly higher developer-rated readability and maintainability. By aligning LLM reasoning with program structure, SPARC provides a scalable path for industrial-grade testing of legacy C codebases.",
+    "authors": [
+      "Jaid Monwar Chowdhury",
+      "Chi-An Fu",
+      "Reyhaneh Jabbarvand"
+    ],
+    "published": "2026-02-18",
+    "categories": [
+      "cs.SE",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.16671v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.16671v1",
+    "fetched_at": "2026-02-19T08:52:06.836706",
+    "chinese_title": "SPARC：用于自动化C单元测试生成的场景规划与推理",
+    "chinese_summary": "针对C语言单元测试生成中LLM直接意图转代码易出现非编译、幻觉函数签名等问题，提出神经符号框架SPARC，通过CFG分析、操作映射、路径定向合成及迭代自校正循环，在覆盖度、突变分数上优于基线，且测试可读性与修复率表现优异。",
+    "tags": [
+      "LLM"
+    ],
+    "key_contributions": [
+      "提出神经符号场景框架SPARC，通过四阶段流程（CFG分析、操作映射、路径定向合成、迭代自校正）解决LLM在C单元测试生成中的leap-to-code问题",
+      "实验验证SPARC在覆盖度、突变分数上优于基线，测试修复率与开发者评价的可读性/可维护性显著提升"
+    ],
+    "processed_at": "2026-02-19T08:57:03.629328"
+  },
+  {
+    "id": "2602.16666v1",
+    "title": "Towards a Science of AI Agent Reliability",
+    "abstract": "AI agents are increasingly deployed to execute important tasks. While rising accuracy scores on standard benchmarks suggest rapid progress, many agents still continue to fail in practice. This discrepancy highlights a fundamental limitation of current evaluations: compressing agent behavior into a single success metric obscures critical operational flaws. Notably, it ignores whether agents behave consistently across runs, withstand perturbations, fail predictably, or have bounded error severity. Grounded in safety-critical engineering, we provide a holistic performance profile by proposing twelve concrete metrics that decompose agent reliability along four key dimensions: consistency, robustness, predictability, and safety. Evaluating 14 agentic models across two complementary benchmarks, we find that recent capability gains have only yielded small improvements in reliability. By exposing these persistent limitations, our metrics complement traditional evaluations while offering tools for reasoning about how agents perform, degrade, and fail.",
+    "authors": [
+      "Stephan Rabanser",
+      "Sayash Kapoor",
+      "Peter Kirgis",
+      "Kangheng Liu",
+      "Saiteja Utpala",
+      "Arvind Narayanan"
+    ],
+    "published": "2026-02-18",
+    "categories": [
+      "cs.AI",
+      "cs.CY",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.16666v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.16666v1",
+    "fetched_at": "2026-02-19T08:52:06.836734",
+    "chinese_title": "迈向AI智能体可靠性的科学",
+    "chinese_summary": "当前AI智能体评估依赖单一成功指标，无法揭示一致性、鲁棒性等关键问题；论文基于安全关键工程提出12个指标，从一致性、鲁棒性、可预测性、安全性四维度分解智能体可靠性；通过评估14个智能体模型发现，能力提升对可靠性改进有限，这些指标可补充传统评估并帮助理解智能体的表现、退化与失败。",
+    "tags": [
+      "Financial Agent",
+      "Benchmark",
+      "LLM",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出12个指标从一致性、鲁棒性、可预测性、安全性四维度构建AI智能体可靠性评估框架，弥补单一成功指标的局限；",
+      "通过评估14个智能体模型发现，近期能力提升对可靠性改进有限，揭示当前AI智能体可靠性的持续不足。"
+    ],
+    "processed_at": "2026-02-19T08:57:22.152030"
+  },
+  {
+    "id": "2602.16603v1",
+    "title": "FlowPrefill: Decoupling Preemption from Prefill Scheduling Granularity to Mitigate Head-of-Line Blocking in LLM Serving",
+    "abstract": "The growing demand for large language models (LLMs) requires serving systems to handle many concurrent requests with diverse service level objectives (SLOs). This exacerbates head-of-line (HoL) blocking during the compute-intensive prefill phase, where long-running requests monopolize resources and delay higher-priority ones, leading to widespread time-to-first-token (TTFT) SLO violations. While chunked prefill enables interruptibility, it introduces an inherent trade-off between responsiveness and throughput: reducing chunk size improves response latency but degrades computational efficiency, whereas increasing chunk size maximizes throughput but exacerbates blocking. This necessitates an adaptive preemption mechanism. However, dynamically balancing execution granularity against scheduling overheads remains a key challenge.   In this paper, we propose FlowPrefill, a TTFT-goodput-optimized serving system that resolves this conflict by decoupling preemption granularity from scheduling frequency. To achieve adaptive prefill scheduling, FlowPrefill introduces two key innovations: 1) Operator-Level Preemption, which leverages operator boundaries to enable fine-grained execution interruption without the efficiency loss associated with fixed small chunking; and 2) Event-Driven Scheduling, which triggers scheduling decisions only upon request arrival or completion events, thereby supporting efficient preemption responsiveness while minimizing control-plane overhead. Evaluation on real-world production traces shows that FlowPrefill improves maximum goodput by up to 5.6$\\times$ compared to state-of-the-art systems while satisfying heterogeneous SLOs.",
+    "authors": [
+      "Chia-chi Hsieh",
+      "Zan Zong",
+      "Xinyang Chen",
+      "Jianjiang Li",
+      "Jidong Zhai",
+      "Lijie Wen"
+    ],
+    "published": "2026-02-18",
+    "categories": [
+      "cs.DC",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.16603v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.16603v1",
+    "fetched_at": "2026-02-19T08:52:06.836762",
+    "chinese_title": "FlowPrefill：解耦抢占与预填充调度粒度以缓解LLM服务中的队头阻塞",
+    "chinese_summary": "本文针对大语言模型（LLM）服务预填充阶段的队头阻塞问题，提出FlowPrefill系统；通过算子级抢占（利用算子边界实现细粒度中断且无固定小分块的效率损失）和事件驱动调度（仅在请求到达/完成时触发调度），解耦抢占粒度与调度频率，优化首次响应时间（TTFT）吞吐量，缓解现有分块预填充的响应性与吞吐量 trade-off。",
+    "tags": [
+      "LLM",
+      "Transformer"
+    ],
+    "key_contributions": [
+      "提出算子级抢占机制，利用算子边界实现细粒度执行中断，避免固定小分块的效率损失",
+      "提出事件驱动调度策略，仅在请求到达或完成时触发调度决策，平衡抢占响应性与控制平面开销，解耦抢占粒度与调度频率"
+    ],
+    "processed_at": "2026-02-19T08:57:39.085343"
+  },
+  {
+    "id": "2602.16585v1",
+    "title": "DataJoint 2.0: A Computational Substrate for Agentic Scientific Workflows",
+    "abstract": "Operational rigor determines whether human-agent collaboration succeeds or fails. Scientific data pipelines need the equivalent of DevOps -- SciOps -- yet common approaches fragment provenance across disconnected systems without transactional guarantees. DataJoint 2.0 addresses this gap through the relational workflow model: tables represent workflow steps, rows represent artifacts, foreign keys prescribe execution order. The schema specifies not only what data exists but how it is derived -- a single formal system where data structure, computational dependencies, and integrity constraints are all queryable, enforceable, and machine-readable. Four technical innovations extend this foundation: object-augmented schemas integrating relational metadata with scalable object storage, semantic matching using attribute lineage to prevent erroneous joins, an extensible type system for domain-specific formats, and distributed job coordination designed for composability with external orchestration. By unifying data structure, data, and computational transformations, DataJoint creates a substrate for SciOps where agents can participate in scientific workflows without risking data corruption.",
+    "authors": [
+      "Dimitri Yatsenko",
+      "Thinh T. Nguyen"
+    ],
+    "published": "2026-02-18",
+    "categories": [
+      "cs.DB",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.16585v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.16585v1",
+    "fetched_at": "2026-02-19T08:52:06.836781",
+    "chinese_title": "DataJoint 2.0：代理科学工作流的计算基础",
+    "chinese_summary": "论文指出科学数据管道需SciOps（科学DevOps），现有方法存在溯源碎片化且无事务保障的问题；DataJoint 2.0通过关系工作流模型（表代表步骤、行代表工件、外键规定执行顺序）统一数据结构、计算依赖与完整性约束，还提出四个技术创新，为无数据损坏的人类-代理协作提供基础。",
+    "tags": [
+      "Financial Agent",
+      "Algorithmic Trading"
+    ],
+    "key_contributions": [
+      "提出关系工作流模型，统一科学数据管道的数据结构、计算依赖与完整性约束，解决溯源碎片化和事务保障缺失问题",
+      "提出四个技术创新（对象增强schema、语义匹配、可扩展类型系统、分布式任务协调），强化模型的实用性与可扩展性"
+    ],
+    "processed_at": "2026-02-19T08:57:55.232384"
+  },
+  {
+    "id": "2602.16520v1",
+    "title": "Recursive language models for jailbreak detection: a procedural defense for tool-augmented agents",
+    "abstract": "Jailbreak prompts are a practical and evolving threat to large language models (LLMs), particularly in agentic systems that execute tools over untrusted content. Many attacks exploit long-context hiding, semantic camouflage, and lightweight obfuscations that can evade single-pass guardrails. We present RLM-JB, an end-to-end jailbreak detection framework built on Recursive Language Models (RLMs), in which a root model orchestrates a bounded analysis program that transforms the input, queries worker models over covered segments, and aggregates evidence into an auditable decision. RLM-JB treats detection as a procedure rather than a one-shot classification: it normalizes and de-obfuscates suspicious inputs, chunks text to reduce context dilution and guarantee coverage, performs parallel chunk screening, and composes cross-chunk signals to recover split-payload attacks. On AutoDAN-style adversarial inputs, RLM-JB achieves high detection effectiveness across three LLM backends (ASR/Recall 92.5-98.0%) while maintaining very high precision (98.99-100%) and low false positive rates (0.0-2.0%), highlighting a practical sensitivity-specificity trade-off as the screening backend changes.",
+    "authors": [
+      "Doron Shavit"
+    ],
+    "published": "2026-02-18",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.16520v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.16520v1",
+    "fetched_at": "2026-02-19T08:52:06.836800",
+    "chinese_title": "递归语言模型用于越狱检测：工具增强型智能体的程序性防御",
+    "chinese_summary": "论文提出基于递归语言模型的RLM-JB越狱检测框架，将检测视为程序性过程而非单步分类，通过归一化去混淆、分块处理、并行筛查及跨块信号聚合识别对抗性输入；在多LLM后端上实现高召回率（92.5%-98.0%）、高精确率（98.99%-100%）和低误报率（0.0%-2.0%）。",
+    "tags": [
+      "LLM",
+      "NLP",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出RLM-JB框架，以程序性分析替代单步分类，解决单步检测难以应对长上下文隐藏等越狱攻击的问题",
+      "在多LLM后端验证了框架的有效性，实现高检测性能（高召回、精确及低误报）"
+    ],
+    "processed_at": "2026-02-19T08:58:08.509257"
+  },
+  {
+    "id": "2602.16512v1",
+    "title": "Framework of Thoughts: A Foundation Framework for Dynamic and Optimized Reasoning based on Chains, Trees, and Graphs",
+    "abstract": "Prompting schemes such as Chain of Thought, Tree of Thoughts, and Graph of Thoughts can significantly enhance the reasoning capabilities of large language models. However, most existing schemes require users to define static, problem-specific reasoning structures that lack adaptability to dynamic or unseen problem types. Additionally, these schemes are often under-optimized in terms of hyperparameters, prompts, runtime, and prompting cost. To address these limitations, we introduce Framework of Thoughts (FoT)--a general-purpose foundation framework for building and optimizing dynamic reasoning schemes. FoT comes with built-in features for hyperparameter tuning, prompt optimization, parallel execution, and intelligent caching, unlocking the latent performance potential of reasoning schemes. We demonstrate FoT's capabilities by implementing three popular schemes--Tree of Thoughts, Graph of Thoughts, and ProbTree--within FoT. We empirically show that FoT enables significantly faster execution, reduces costs, and achieves better task scores through optimization. We release our codebase to facilitate the development of future dynamic and efficient reasoning schemes.",
+    "authors": [
+      "Felix Fricke",
+      "Simon Malberg",
+      "Georg Groh"
+    ],
+    "published": "2026-02-18",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.16512v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.16512v1",
+    "fetched_at": "2026-02-19T08:52:06.836824",
+    "chinese_title": "思考框架（FoT）：基于链、树和图的动态优化推理基础框架",
+    "chinese_summary": "现有CoT、ToT等提示方案存在静态性、适应性不足及未优化的问题，论文提出通用基础框架FoT，内置超参数调优、提示优化等功能，实现动态推理并提升执行效率、降低成本、改善任务表现。",
+    "tags": [
+      "LLM",
+      "NLP"
+    ],
+    "key_contributions": [
+      "提出通用基础框架FoT，解决现有提示方案静态、适应性差及未优化的缺陷",
+      "内置多优化功能，适配ToT等流行方案，显著提升推理效率、降低成本并改善任务表现"
+    ],
+    "processed_at": "2026-02-19T08:58:16.902607"
+  },
+  {
+    "id": "2602.16429v1",
+    "title": "TabAgent: A Framework for Replacing Agentic Generative Components with Tabular-Textual Classifiers",
+    "abstract": "Agentic systems, AI architectures that autonomously execute multi-step workflows to achieve complex goals, are often built using repeated large language model (LLM) calls for closed-set decision tasks such as routing, shortlisting, gating, and verification. While convenient, this design makes deployments slow and expensive due to cumulative latency and token usage. We propose TabAgent, a framework for replacing generative decision components in closed-set selection tasks with a compact textual-tabular classifier trained on execution traces. TabAgent (i) extracts structured schema, state, and dependency features from trajectories (TabSchema), (ii) augments coverage with schema-aligned synthetic supervision (TabSynth), and (iii) scores candidates with a lightweight classifier (TabHead). On the long-horizon AppWorld benchmark, TabAgent maintains task-level success while eliminating shortlist-time LLM calls, reducing latency by approximately 95% and inference cost by 85-91%. Beyond tool shortlisting, TabAgent generalizes to other agentic decision heads, establishing a paradigm for learned discriminative replacements of generative bottlenecks in production agent architectures.",
+    "authors": [
+      "Ido Levy",
+      "Eilam Shapira",
+      "Yinon Goldshtein",
+      "Avi Yaeli",
+      "Nir Mashkif",
+      "Segev Shlomov"
+    ],
+    "published": "2026-02-18",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.16429v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.16429v1",
+    "fetched_at": "2026-02-19T08:52:06.836851",
+    "chinese_title": "TabAgent：一种用表格-文本分类器替代智能体生成组件的框架",
+    "chinese_summary": "智能体系统常依赖LLM重复调用完成封闭集决策任务，导致部署慢且成本高；论文提出TabAgent框架，通过执行轨迹提取特征、合成监督并训练轻量分类器替代生成决策组件，在AppWorld基准上保持任务成功的同时，大幅降低延迟（约95%）和推理成本（85-91%），且可泛化到其他智能体决策头。",
+    "tags": [
+      "LLM",
+      "Financial Agent",
+      "Deep Learning",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出TabAgent框架，用紧凑表格-文本分类器替代智能体中封闭集决策的LLM生成组件，解决部署慢、成本高的问题",
+      "在AppWorld基准上验证，保持任务成功率的同时消除短名单生成阶段LLM调用，延迟降低约95%、推理成本降低85-91%，且可泛化到其他智能体决策头"
+    ],
+    "processed_at": "2026-02-19T08:58:30.841411"
+  },
+  {
+    "id": "2602.16346v1",
+    "title": "Helpful to a Fault: Measuring Illicit Assistance in Multi-Turn, Multilingual LLM Agents",
+    "abstract": "LLM-based agents execute real-world workflows via tools and memory. These affordances enable ill-intended adversaries to also use these agents to carry out complex misuse scenarios. Existing agent misuse benchmarks largely test single-prompt instructions, leaving a gap in measuring how agents end up helping with harmful or illegal tasks over multiple turns. We introduce STING (Sequential Testing of Illicit N-step Goal execution), an automated red-teaming framework that constructs a step-by-step illicit plan grounded in a benign persona and iteratively probes a target agent with adaptive follow-ups, using judge agents to track phase completion. We further introduce an analysis framework that models multi-turn red-teaming as a time-to-first-jailbreak random variable, enabling analysis tools like discovery curves, hazard-ratio attribution by attack language, and a new metric: Restricted Mean Jailbreak Discovery. Across AgentHarm scenarios, STING yields substantially higher illicit-task completion than single-turn prompting and chat-oriented multi-turn baselines adapted to tool-using agents. In multilingual evaluations across six non-English settings, we find that attack success and illicit-task completion do not consistently increase in lower-resource languages, diverging from common chatbot findings. Overall, STING provides a practical way to evaluate and stress-test agent misuse in realistic deployment settings, where interactions are inherently multi-turn and often multilingual.",
+    "authors": [
+      "Nivya Talokar",
+      "Ayush K Tarun",
+      "Murari Mandal",
+      "Maksym Andriushchenko",
+      "Antoine Bosselut"
+    ],
+    "published": "2026-02-18",
+    "categories": [
+      "cs.CL",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.16346v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.16346v1",
+    "fetched_at": "2026-02-19T08:52:06.836875",
+    "chinese_title": "过度帮助：多轮多语言LLM智能体中非法协助的度量",
+    "chinese_summary": "针对现有LLM智能体滥用基准多聚焦单轮提示、缺乏多轮有害任务协助度量的问题，论文提出STING自动红队框架，通过基于良性人设的分步非法计划与自适应跟进探测智能体，结合法官智能体跟踪阶段完成；还建模多轮红队为首次越狱时间随机变量，提出新指标，并在多语言评估中发现攻击成功与低资源语言的关联异于常见聊天机器人结果。",
+    "tags": [
+      "LLM",
+      "Benchmark",
+      "NLP"
+    ],
+    "key_contributions": [
+      "提出STING自动红队框架，填补多轮多语言LLM智能体非法协助度量的研究空白，实现贴近真实部署场景的滥用测试",
+      "构建多轮红队分析框架（含首次越狱时间建模、新指标），并通过多语言评估揭示攻击成功与低资源语言的关联异于常见聊天机器人的规律"
+    ],
+    "processed_at": "2026-02-19T08:58:46.776969"
+  },
+  {
+    "id": "2602.16233v1",
+    "title": "DistributedEstimator: Distributed Training of Quantum Neural Networks via Circuit Cutting",
+    "abstract": "Circuit cutting decomposes a large quantum circuit into a collection of smaller subcircuits. The outputs of these subcircuits are then classically reconstructed to recover the original expectation values. While prior work characterises cutting overhead largely in terms of subcircuit counts and sampling complexity, its end-to-end impact on iterative, estimator-driven training pipelines remains insufficiently measured from a systems perspective. In this paper, we propose a cut-aware estimator execution pipeline that treats circuit cutting as a staged distributed workload and instruments each estimator query into partitioning, subexperiment generation, parallel execution, and classical reconstruction phases. Using logged runtime traces and learning outcomes on two binary classification workloads (Iris and MNIST), we quantify cutting overheads, scaling limits, and sensitivity to injected stragglers, and we evaluate whether accuracy and robustness are preserved under matched training budgets. Our measurements show that cutting introduces substantial end-to-end overheads that grow with the number of cuts, and that reconstruction constitutes a dominant fraction of per-query time, bounding achievable speed-up under increased parallelism. Despite these systems costs, test accuracy and robustness are preserved in the measured regimes, with configuration-dependent improvements observed in some cut settings. These results indicate that practical scaling of circuit cutting for learning workloads hinges on reducing and overlapping reconstruction and on scheduling policies that account for barrier-dominated critical paths.",
+    "authors": [
+      "Prabhjot Singh",
+      "Adel N. Toosi",
+      "Rajkumar Buyya"
+    ],
+    "published": "2026-02-18",
+    "categories": [
+      "cs.DC",
+      "cs.LG",
+      "quant-ph"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.16233v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.16233v1",
+    "fetched_at": "2026-02-19T08:52:06.836896",
+    "chinese_title": "DistributedEstimator：通过电路切割实现量子神经网络的分布式训练",
+    "chinese_summary": "论文提出一种考虑电路切割的分布式训练 pipeline，将电路切割分解为分区、子实验生成、并行执行及经典重建等阶段；通过Iris和MNIST分类任务实验，量化了电路切割的端到端开销、缩放限制及对延迟节点的敏感性，验证了匹配训练预算下模型准确率与鲁棒性的保留。",
+    "tags": [
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出考虑电路切割的分布式训练 pipeline，将其分解为分阶段分布式工作负载",
+      "量化电路切割的端到端开销与性能影响，验证训练中准确率和鲁棒性的保留"
+    ],
+    "processed_at": "2026-02-19T08:59:07.093700"
+  },
+  {
+    "id": "2602.16187v1",
+    "title": "SIT-LMPC: Safe Information-Theoretic Learning Model Predictive Control for Iterative Tasks",
+    "abstract": "Robots executing iterative tasks in complex, uncertain environments require control strategies that balance robustness, safety, and high performance. This paper introduces a safe information-theoretic learning model predictive control (SIT-LMPC) algorithm for iterative tasks. Specifically, we design an iterative control framework based on an information-theoretic model predictive control algorithm to address a constrained infinite-horizon optimal control problem for discrete-time nonlinear stochastic systems. An adaptive penalty method is developed to ensure safety while balancing optimality. Trajectories from previous iterations are utilized to learn a value function using normalizing flows, which enables richer uncertainty modeling compared to Gaussian priors. SIT-LMPC is designed for highly parallel execution on graphics processing units, allowing efficient real-time optimization. Benchmark simulations and hardware experiments demonstrate that SIT-LMPC iteratively improves system performance while robustly satisfying system constraints.",
+    "authors": [
+      "Zirui Zang",
+      "Ahmad Amine",
+      "Nick-Marios T. Kokolakis",
+      "Truong X. Nghiem",
+      "Ugo Rosolia",
+      "Rahul Mangharam"
+    ],
+    "published": "2026-02-18",
+    "categories": [
+      "cs.RO",
+      "cs.AI",
+      "eess.SY"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.16187v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.16187v1",
+    "fetched_at": "2026-02-19T08:52:06.836923",
+    "chinese_title": "SIT-LMPC：面向迭代任务的安全信息论学习模型预测控制",
+    "chinese_summary": "本文提出面向迭代任务的安全信息论学习模型预测控制（SIT-LMPC）算法，基于信息论MPC框架处理离散非线性随机系统的约束无限时域最优控制问题，通过自适应惩罚方法平衡安全与最优，利用归一化流学习价值函数以更丰富建模不确定性，并支持GPU并行实现高效实时优化；仿真与硬件实验表明其可迭代提升性能且鲁棒满足系统约束。",
+    "tags": [
+      "Deep Learning",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出SIT-LMPC算法，结合信息论MPC框架、自适应惩罚方法与归一化流价值函数学习，解决离散非线性随机系统约束无限时域最优控制问题，保障安全与最优平衡",
+      "设计GPU并行执行架构实现高效实时优化，仿真与硬件实验验证其迭代提升性能且鲁棒满足系统约束"
+    ],
+    "processed_at": "2026-02-19T08:59:20.898100"
+  },
+  {
+    "id": "2602.16165v1",
+    "title": "HiPER: Hierarchical Reinforcement Learning with Explicit Credit Assignment for Large Language Model Agents",
+    "abstract": "Training LLMs as interactive agents for multi-turn decision-making remains challenging, particularly in long-horizon tasks with sparse and delayed rewards, where agents must execute extended sequences of actions before receiving meaningful feedback. Most existing reinforcement learning (RL) approaches model LLM agents as flat policies operating at a single time scale, selecting one action at each turn. In sparse-reward settings, such flat policies must propagate credit across the entire trajectory without explicit temporal abstraction, which often leads to unstable optimization and inefficient credit assignment.   We propose HiPER, a novel Hierarchical Plan-Execute RL framework that explicitly separates high-level planning from low-level execution. HiPER factorizes the policy into a high-level planner that proposes subgoals and a low-level executor that carries them out over multiple action steps. To align optimization with this structure, we introduce a key technique called hierarchical advantage estimation (HAE), which carefully assigns credit at both the planning and execution levels. By aggregating returns over the execution of each subgoal and coordinating updates across the two levels, HAE provides an unbiased gradient estimator and provably reduces variance compared to flat generalized advantage estimation.   Empirically, HiPER achieves state-of-the-art performance on challenging interactive benchmarks, reaching 97.4\\% success on ALFWorld and 83.3\\% on WebShop with Qwen2.5-7B-Instruct (+6.6\\% and +8.3\\% over the best prior method), with especially large gains on long-horizon tasks requiring multiple dependent subtasks. These results highlight the importance of explicit hierarchical decomposition for scalable RL training of multi-turn LLM agents.",
+    "authors": [
+      "Jiangweizhi Peng",
+      "Yuanxin Liu",
+      "Ruida Zhou",
+      "Charles Fleming",
+      "Zhaoran Wang",
+      "Alfredo Garcia",
+      "Mingyi Hong"
+    ],
+    "published": "2026-02-18",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.16165v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.16165v1",
+    "fetched_at": "2026-02-19T08:52:06.836952",
+    "chinese_title": "HiPER：面向大语言模型智能体的显式信用分配分层强化学习",
+    "chinese_summary": "论文针对长序列决策中稀疏奖励下LLM智能体训练的挑战，提出HiPER分层框架，显式分离高层子目标规划与低层执行；引入分层优势估计（HAE），实现显式分层信用分配，降低梯度估计方差并保证无偏性；在ALFWorld和WebShop等交互基准上取得SOTA性能。",
+    "tags": [
+      "LLM",
+      "Reinforcement Learning",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出HiPER分层强化学习框架，显式分离高层子目标规划与低层执行",
+      "引入分层优势估计（HAE），实现显式分层信用分配，提供无偏梯度估计并降低方差"
+    ],
+    "processed_at": "2026-02-19T08:59:38.479766"
+  },
+  {
+    "id": "2602.16154v1",
+    "title": "Balancing Faithfulness and Performance in Reasoning via Multi-Listener Soft Execution",
+    "abstract": "Chain-of-thought (CoT) reasoning sometimes fails to faithfully reflect the true computation of a large language model (LLM), hampering its utility in explaining how LLMs arrive at their answers. Moreover, optimizing for faithfulness and interpretability in reasoning often degrades task performance. To address this tradeoff and improve CoT faithfulness, we propose Reasoning Execution by Multiple Listeners (REMUL), a multi-party reinforcement learning approach. REMUL builds on the hypothesis that reasoning traces which other parties can follow will be more faithful. A speaker model generates a reasoning trace, which is truncated and passed to a pool of listener models who \"execute\" the trace, continuing the trace to an answer. Speakers are rewarded for producing reasoning that is clear to listeners, with additional correctness regularization via masked supervised finetuning to counter the tradeoff between faithfulness and performance. On multiple reasoning benchmarks (BIG-Bench Extra Hard, MuSR, ZebraLogicBench, and FOLIO), REMUL consistently and substantially improves three measures of faithfulness -- hint attribution, early answering area over the curve (AOC), and mistake injection AOC -- while also improving accuracy. Our analysis finds that these gains are robust across training domains, translate to legibility gains, and are associated with shorter and more direct CoTs.",
+    "authors": [
+      "Nithin Sivakumaran",
+      "Shoubin Yu",
+      "Hyunji Lee",
+      "Yue Zhang",
+      "Ali Payani",
+      "Mohit Bansal",
+      "Elias Stengel-Eskin"
+    ],
+    "published": "2026-02-18",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.16154v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.16154v1",
+    "fetched_at": "2026-02-19T08:52:06.836980",
+    "chinese_title": "通过多听者软执行平衡推理中的忠实性与性能",
+    "chinese_summary": "论文提出REMUL（多听者推理执行）方法，基于多智能体强化学习让说话者生成推理轨迹，听者执行并继续到答案，通过奖励清晰推理+掩码监督微调平衡忠实性与性能；在多个推理基准上同时提升忠实性指标（提示归因、AOC等）和准确率，且推理更短更直接。",
+    "tags": [
+      "LLM",
+      "NLP",
+      "Reinforcement Learning"
+    ],
+    "key_contributions": [
+      "提出REMUL方法，通过多听者软执行、强化学习与掩码监督微调，有效平衡推理的忠实性与任务性能",
+      "在多个推理基准上同时提升忠实性指标和准确率，且生成更短更直接的推理轨迹"
+    ],
+    "processed_at": "2026-02-19T08:59:52.052533"
+  },
+  {
+    "id": "2602.16124v1",
+    "title": "Rethinking ANN-based Retrieval: Multifaceted Learnable Index for Large-scale Recommendation System",
+    "abstract": "Approximate nearest neighbor (ANN) search is widely used in the retrieval stage of large-scale recommendation systems. In this stage, candidate items are indexed using their learned embedding vectors, and ANN search is executed for each user (or item) query to retrieve a set of relevant items. However, ANN-based retrieval has two key limitations. First, item embeddings and their indices are typically learned in separate stages: indexing is often performed offline after embeddings are trained, which can yield suboptimal retrieval quality-especially for newly created items. Second, although ANN offers sublinear query time, it must still be run for every request, incurring substantial computation cost at industry scale. In this paper, we propose MultiFaceted Learnable Index (MFLI), a scalable, real-time retrieval paradigm that learns multifaceted item embeddings and indices within a unified framework and eliminates ANN search at serving time. Specifically, we construct a multifaceted hierarchical codebook via residual quantization of item embeddings and co-train the codebook with the embeddings. We further introduce an efficient multifaceted indexing structure and mechanisms that support real-time updates. At serving time, the learned hierarchical indices are used directly to identify relevant items, avoiding ANN search altogether. Extensive experiments on real-world data with billions of users show that MFLI improves recall on engagement tasks by up to 11.8\\%, cold-content delivery by up to 57.29\\%, and semantic relevance by 13.5\\% compared with prior state-of-the-art methods. We also deploy MFLI in the system and report online experimental results demonstrating improved engagement, less popularity bias, and higher serving efficiency.",
+    "authors": [
+      "Jiang Zhang",
+      "Yubo Wang",
+      "Wei Chang",
+      "Lu Han",
+      "Xingying Cheng",
+      "Feng Zhang",
+      "Min Li",
+      "Songhao Jiang",
+      "Wei Zheng",
+      "Harry Tran",
+      "Zhen Wang",
+      "Lei Chen",
+      "Yueming Wang",
+      "Benyu Zhang",
+      "Xiangjun Fan",
+      "Bi Xue",
+      "Qifan Wang"
+    ],
+    "published": "2026-02-18",
+    "categories": [
+      "cs.IR",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.16124v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.16124v1",
+    "fetched_at": "2026-02-19T08:52:06.837027",
+    "chinese_title": "重新思考基于ANN的检索：面向大规模推荐系统的多面可学习索引",
+    "chinese_summary": "该论文针对大规模推荐系统中基于ANN检索的嵌入与索引分离学习（新物品效果差）及每次请求需执行ANN导致计算量大的问题，提出多面可学习索引（MFLI）；MFLI通过残差量化构建多面分层码本并与嵌入联合训练，设计高效索引结构支持实时更新，服务时直接用分层索引替代ANN检索，提升召回性能。",
+    "tags": [
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出MFLI框架，统一学习物品嵌入与多面可学习索引，解决嵌入与索引分离学习导致的子优问题（尤其是新物品）",
+      "设计高效多面索引结构支持实时更新，服务时无需执行ANN检索，降低计算成本并提升召回性能"
+    ],
+    "processed_at": "2026-02-19T09:00:16.171340"
+  },
+  {
+    "id": "2602.15983v1",
+    "title": "ReLoop: Structured Modeling and Behavioral Verification for Reliable LLM-Based Optimization",
+    "abstract": "Large language models (LLMs) can translate natural language into optimization code, but silent failures pose a critical risk: code that executes and returns solver-feasible solutions may encode semantically incorrect formulations, creating a feasibility-correctness gap of up to 90 percentage points on compositional problems. We introduce ReLoop, addressing silent failures from two complementary directions. Structured generation decomposes code production into a four-stage reasoning chain (understand, formalize, synthesize, verify) that mirrors expert modeling practice, with explicit variable-type reasoning and self-verification to prevent formulation errors at their source. Behavioral verification detects errors that survive generation by testing whether the formulation responds correctly to solver-based parameter perturbation, without requiring ground truth -- an external semantic signal that bypasses the self-consistency problem inherent in LLM-based code review. The two mechanisms are complementary: structured generation dominates on complex compositional problems, while behavioral verification becomes the largest single contributor on problems with localized formulation defects. Together with execution recovery via IIS-enhanced diagnostics, ReLoop raises correctness from 22.6% to 31.1% and execution from 72.1% to 100.0% on the strongest model, with consistent gains across five models spanning three paradigms (foundation, SFT, RL) and three benchmarks. We additionally release RetailOpt-190, 190 compositional retail optimization scenarios targeting the multi-constraint interactions where LLMs most frequently fail.",
+    "authors": [
+      "Junbo Jacob Lian",
+      "Yujun Sun",
+      "Huiling Chen",
+      "Chaoyu Zhang",
+      "Chung-Piaw Teo"
+    ],
+    "published": "2026-02-17",
+    "categories": [
+      "cs.SE",
+      "cs.AI",
+      "cs.LG",
+      "math.OC"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.15983v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.15983v1",
+    "fetched_at": "2026-02-19T08:52:06.837053",
+    "chinese_title": "ReLoop：面向可靠LLM优化的结构化建模与行为验证",
+    "chinese_summary": "LLM将自然语言转化为优化代码时存在语义错误但求解可行的沉默失败问题，论文提出ReLoop框架，通过结构化生成（四阶段推理链+显式变量类型推理+自验证）和行为验证（参数扰动测试无需真实值）解决，结合IIS增强诊断的执行恢复，显著提升代码正确性与执行率，跨多模型和基准有效。",
+    "tags": [
+      "LLM",
+      "Portfolio Optimization",
+      "Deep Learning",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出ReLoop框架，从结构化生成（四阶段推理链+显式变量类型+自验证）和行为验证（参数扰动测试无ground truth）两方向解决LLM优化代码的沉默失败问题",
+      "结合IIS增强诊断的执行恢复机制，显著提升LLM优化代码的正确性与执行率，跨多模型和基准验证有效"
+    ],
+    "processed_at": "2026-02-19T09:00:27.183357"
+  }
+]
