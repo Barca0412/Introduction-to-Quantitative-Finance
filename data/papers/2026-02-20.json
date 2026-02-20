@@ -1,0 +1,485 @@
+[
+  {
+    "id": "2602.17373v1",
+    "title": "Impacts of Economic Policies on Wealth Distribution in Token Economies",
+    "abstract": "In this paper, we analyse the impacts of exogenous and endogenous factors on wealth distribution in the Bitcoin token economy, where wealth distribution refers to the distribution of BTC between economic participants or groups of economic participants. The objective of the paper is to analyse the impact of economic policies on wealth distribution in the Bitcoin ecosystem. Different macroeconomic and microeconomic time series are used to eliminate noise in the wealth distribution time series, and the causality analysis is performed between Bitcoin Improvement Proposals (i.e., BIPs) and the cleaned wealth distribution data to reveal possible patterns in the impacts that the endogenous policies have on wealth distribution in token economies. Lastly, a structure for economic policy taxonomy in token economies is proposed where different the policy implementations are illustrated by existing BIPs. This approach highlights the actions available to the policy makers, as well as providing a technique for analysis of policy impacts in token economies and their categorization.",
+    "authors": [
+      "Rem Sadykhov",
+      "Geoff Goodell",
+      "Philip Treleaven"
+    ],
+    "published": "2026-02-19",
+    "categories": [
+      "q-fin.GN",
+      "cs.CE",
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.17373v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.17373v1",
+    "fetched_at": "2026-02-20T08:47:15.348089"
+  },
+  {
+    "id": "2602.17098v1",
+    "title": "Deep Reinforcement Learning for Optimal Portfolio Allocation: A Comparative Study with Mean-Variance Optimization",
+    "abstract": "Portfolio Management is the process of overseeing a group of investments, referred to as a portfolio, with the objective of achieving predetermined investment goals. Portfolio optimization is a key component that involves allocating the portfolio assets so as to maximize returns while minimizing risk taken. It is typically carried out by financial professionals who use a combination of quantitative techniques and investment expertise to make decisions about the portfolio allocation.   Recent applications of Deep Reinforcement Learning (DRL) have shown promising results when used to optimize portfolio allocation by training model-free agents on historical market data. Many of these methods compare their results against basic benchmarks or other state-of-the-art DRL agents but often fail to compare their performance against traditional methods used by financial professionals in practical settings. One of the most commonly used methods for this task is Mean-Variance Portfolio Optimization (MVO), which uses historical time series information to estimate expected asset returns and covariances, which are then used to optimize for an investment objective.   Our work is a thorough comparison between model-free DRL and MVO for optimal portfolio allocation. We detail the specifics of how to make DRL for portfolio optimization work in practice, also noting the adjustments needed for MVO. Backtest results demonstrate strong performance of the DRL agent across many metrics, including Sharpe ratio, maximum drawdowns, and absolute returns.",
+    "authors": [
+      "Srijan Sood",
+      "Kassiani Papasotiriou",
+      "Marius Vaiciulis",
+      "Tucker Balch"
+    ],
+    "published": "2026-02-19",
+    "categories": [
+      "q-fin.PM",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.17098v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.17098v1",
+    "fetched_at": "2026-02-20T08:47:15.348131"
+  },
+  {
+    "id": "2602.17090v1",
+    "title": "Local risk-minimization for exponential additive processes",
+    "abstract": "We explore local risk-minimization, a quadratic hedging method for incomplete markets, in exponential additive models. The objectives are to derive explicit mathematical expressions and to conduct numerical experiments. While local risk-minimization is well studied for Lévy processes, little is known for the additive process case because, unlike Lévy processes, the Lévy measure for an additive process depends on time, which significantly complicates the mathematical framework. This paper shall provide a set of necessary conditions for deriving expressions for LRM strategies in exponential additive models, as integrability conditions on the Lévy measure, which allow us to confirm whether these conditions are satisfied for given concrete models. In the final section, we introduce the variance-gamma scaled self-decomposable process, a Sato process that generalizes the variance-gamma process, as a primary example, and perform numerical experiments.",
+    "authors": [
+      "Takuji Arai"
+    ],
+    "published": "2026-02-19",
+    "categories": [
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.17090v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.17090v1",
+    "fetched_at": "2026-02-20T08:47:15.348153"
+  },
+  {
+    "id": "2602.16862v1",
+    "title": "Entropy Regularization as Robustness under Bayesian Drift Uncertainty",
+    "abstract": "We study entropy-regularized mean-variance portfolio optimization under Bayesian drift uncertainty. Gaussian policies remain optimal under partial information, the value function is quadratic in wealth, and belief-dependent coefficients admit closed-form solutions. The mean control is identical to deterministic Bayesian Markowitz feedback; entropy regularization affects only the policy variance. Additionally, this variance does not affect information gain, and instead provides belief-dependent robustness. Notably, optimal policy variance increases with posterior conviction $|m_t|$, forcing greater action randomization when mean position is most aggressive.",
+    "authors": [
+      "Andy Au"
+    ],
+    "published": "2026-02-18",
+    "categories": [
+      "math.OC",
+      "q-fin.PM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.16862v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.16862v1",
+    "fetched_at": "2026-02-20T08:47:15.348173"
+  },
+  {
+    "id": "2602.17542v1",
+    "title": "Using LLMs for Knowledge Component-level Correctness Labeling in Open-ended Coding Problems",
+    "abstract": "Fine-grained skill representations, commonly referred to as knowledge components (KCs), are fundamental to many approaches in student modeling and learning analytics. However, KC-level correctness labels are rarely available in real-world datasets, especially for open-ended programming tasks where solutions typically involve multiple KCs simultaneously. Simply propagating problem-level correctness to all associated KCs obscures partial mastery and often leads to poorly fitted learning curves. To address this challenge, we propose an automated framework that leverages large language models (LLMs) to label KC-level correctness directly from student-written code. Our method assesses whether each KC is correctly applied and further introduces a temporal context-aware Code-KC mapping mechanism to better align KCs with individual student code. We evaluate the resulting KC-level correctness labels in terms of learning curve fit and predictive performance using the power law of practice and the Additive Factors Model. Experimental results show that our framework leads to learning curves that are more consistent with cognitive theory and improves predictive performance, compared to baselines. Human evaluation further demonstrates substantial agreement between LLM and expert annotations.",
+    "authors": [
+      "Zhangqi Duan",
+      "Arnav Kankaria",
+      "Dhruv Kartik",
+      "Andrew Lan"
+    ],
+    "published": "2026-02-19",
+    "categories": [
+      "cs.CL",
+      "cs.CY"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.17542v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.17542v1",
+    "fetched_at": "2026-02-20T08:47:21.890218"
+  },
+  {
+    "id": "2602.17586v1",
+    "title": "Conditional Flow Matching for Continuous Anomaly Detection in Autonomous Driving on a Manifold-Aware Spectral Space",
+    "abstract": "Safety validation for Level 4 autonomous vehicles (AVs) is currently bottlenecked by the inability to scale the detection of rare, high-risk long-tail scenarios using traditional rule-based heuristics. We present Deep-Flow, an unsupervised framework for safety-critical anomaly detection that utilizes Optimal Transport Conditional Flow Matching (OT-CFM) to characterize the continuous probability density of expert human driving behavior. Unlike standard generative approaches that operate in unstable, high-dimensional coordinate spaces, Deep-Flow constrains the generative process to a low-rank spectral manifold via a Principal Component Analysis (PCA) bottleneck. This ensures kinematic smoothness by design and enables the computation of the exact Jacobian trace for numerically stable, deterministic log-likelihood estimation. To resolve multi-modal ambiguity at complex junctions, we utilize an Early Fusion Transformer encoder with lane-aware goal conditioning, featuring a direct skip-connection to the flow head to maintain intent-integrity throughout the network. We introduce a kinematic complexity weighting scheme that prioritizes high-energy maneuvers (quantified via path tortuosity and jerk) during the simulation-free training process. Evaluated on the Waymo Open Motion Dataset (WOMD), our framework achieves an AUC-ROC of 0.766 against a heuristic golden set of safety-critical events. More significantly, our analysis reveals a fundamental distinction between kinematic danger and semantic non-compliance. Deep-Flow identifies a critical predictability gap by surfacing out-of-distribution behaviors, such as lane-boundary violations and non-normative junction maneuvers, that traditional safety filters overlook. This work provides a mathematically rigorous foundation for defining statistical safety gates, enabling objective, data-driven validation for the safe deployment of autonomous fleets.",
+    "authors": [
+      "Antonio Guillen-Perez"
+    ],
+    "published": "2026-02-19",
+    "categories": [
+      "cs.RO",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.17586v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.17586v1",
+    "fetched_at": "2026-02-20T08:47:28.191539"
+  },
+  {
+    "id": "2602.17028v1",
+    "title": "Forecasting Anomaly Precursors via Uncertainty-Aware Time-Series Ensembles",
+    "abstract": "Detecting anomalies in time-series data is critical in domains such as industrial operations, finance, and cybersecurity, where early identification of abnormal patterns is essential for ensuring system reliability and enabling preventive maintenance. However, most existing methods are reactive: they detect anomalies only after they occur and lack the capability to provide proactive early warning signals. In this paper, we propose FATE (Forecasting Anomalies with Time-series Ensembles), a novel unsupervised framework for detecting Precursors-of-Anomaly (PoA) by quantifying predictive uncertainty from a diverse ensemble of time-series forecasting models. Unlike prior approaches that rely on reconstruction errors or require ground-truth labels, FATE anticipates future values and leverages ensemble disagreement to signal early signs of potential anomalies without access to target values at inference time. To rigorously evaluate PoA detection, we introduce Precursor Time-series Aware Precision and Recall (PTaPR), a new metric that extends the traditional Time-series Aware Precision and Recall (TaPR) by jointly assessing segment-level accuracy, within-segment coverage, and temporal promptness of early predictions. This enables a more holistic assessment of early warning capabilities that existing metrics overlook. Experiments on five real-world benchmark datasets show that FATE achieves an average improvement of 19.9 percentage points in PTaPR AUC and 20.02 percentage points in early detection F1 score, outperforming baselines while requiring no anomaly labels. These results demonstrate the effectiveness and practicality of FATE for real-time unsupervised early warning in complex time-series environments.",
+    "authors": [
+      "Hyeongwon Kang",
+      "Jinwoo Park",
+      "Seunghun Han",
+      "Pilsung Kang"
+    ],
+    "published": "2026-02-19",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.17028v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.17028v1",
+    "fetched_at": "2026-02-20T08:47:28.191573"
+  },
+  {
+    "id": "2602.17001v1",
+    "title": "Sonar-TS: Search-Then-Verify Natural Language Querying for Time Series Databases",
+    "abstract": "Natural Language Querying for Time Series Databases (NLQ4TSDB) aims to assist non-expert users retrieve meaningful events, intervals, and summaries from massive temporal records. However, existing Text-to-SQL methods are not designed for continuous morphological intents such as shapes or anomalies, while time series models struggle to handle ultra-long histories. To address these challenges, we propose Sonar-TS, a neuro-symbolic framework that tackles NLQ4TSDB via a Search-Then-Verify pipeline. Analogous to active sonar, it utilizes a feature index to ping candidate windows via SQL, followed by generated Python programs to lock on and verify candidates against raw signals. To enable effective evaluation, we introduce NLQTSBench, the first large-scale benchmark designed for NLQ over TSDB-scale histories. Our experiments highlight the unique challenges within this domain and demonstrate that Sonar-TS effectively navigates complex temporal queries where traditional methods fail. This work presents the first systematic study of NLQ4TSDB, offering a general framework and evaluation standard to facilitate future research.",
+    "authors": [
+      "Zhao Tan",
+      "Yiji Zhao",
+      "Shiyu Wang",
+      "Chang Xu",
+      "Yuxuan Liang",
+      "Xiping Liu",
+      "Shirui Pan",
+      "Ming Jin"
+    ],
+    "published": "2026-02-19",
+    "categories": [
+      "cs.AI",
+      "cs.CL",
+      "cs.DB"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.17001v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.17001v1",
+    "fetched_at": "2026-02-20T08:47:28.191605"
+  },
+  {
+    "id": "2602.16738v1",
+    "title": "Self-Evolving Multi-Agent Network for Industrial IoT Predictive Maintenance",
+    "abstract": "Industrial IoT predictive maintenance requires systems capable of real-time anomaly detection without sacrificing interpretability or demanding excessive computational resources. Traditional approaches rely on static, offline-trained models that cannot adapt to evolving operational conditions, while LLM-based monolithic systems demand prohibitive memory and latency, rendering them impractical for on-site edge deployment. We introduce SEMAS, a self-evolving hierarchical multi-agent system that distributes specialized agents across Edge, Fog, and Cloud computational tiers. Edge agents perform lightweight feature extraction and pre-filtering; Fog agents execute diversified ensemble detection with dynamic consensus voting; and Cloud agents continuously optimize system policies via Proximal Policy Optimization (PPO) while maintaining asynchronous, non-blocking inference. The framework incorporates LLM-based response generation for explainability and federated knowledge aggregation for adaptive policy distribution. This architecture enables resource-aware specialization without sacrificing real-time performance or model interpretability. Empirical evaluation on two industrial benchmarks (Boiler Emulator and Wind Turbine) demonstrates that SEMAS achieves superior anomaly detection performance with exceptional stability under adaptation, sustains prediction accuracy across evolving operational contexts, and delivers substantial latency improvements enabling genuine real-time deployment. Ablation studies confirm that PPO-driven policy evolution, consensus voting, and federated aggregation each contribute materially to system effectiveness. These findings indicate that resource-aware, self-evolving 1multi-agent coordination is essential for production-ready industrial IoT predictive maintenance under strict latency and explainability constraints.",
+    "authors": [
+      "Rebin Saleh",
+      "Khanh Pham Dinh",
+      "Balázs Villányi",
+      "Truong-Son Hy"
+    ],
+    "published": "2026-02-17",
+    "categories": [
+      "cs.MA",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.16738v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.16738v1",
+    "fetched_at": "2026-02-20T08:47:28.191673"
+  },
+  {
+    "id": "2602.17607v1",
+    "title": "AutoNumerics: An Autonomous, PDE-Agnostic Multi-Agent Pipeline for Scientific Computing",
+    "abstract": "PDEs are central to scientific and engineering modeling, yet designing accurate numerical solvers typically requires substantial mathematical expertise and manual tuning. Recent neural network-based approaches improve flexibility but often demand high computational cost and suffer from limited interpretability. We introduce \\texttt{AutoNumerics}, a multi-agent framework that autonomously designs, implements, debugs, and verifies numerical solvers for general PDEs directly from natural language descriptions. Unlike black-box neural solvers, our framework generates transparent solvers grounded in classical numerical analysis. We introduce a coarse-to-fine execution strategy and a residual-based self-verification mechanism. Experiments on 24 canonical and real-world PDE problems demonstrate that \\texttt{AutoNumerics} achieves competitive or superior accuracy compared to existing neural and LLM-based baselines, and correctly selects numerical schemes based on PDE structural properties, suggesting its viability as an accessible paradigm for automated PDE solving.",
+    "authors": [
+      "Jianda Du",
+      "Youran Sun",
+      "Haizhao Yang"
+    ],
+    "published": "2026-02-19",
+    "categories": [
+      "cs.AI",
+      "cs.LG",
+      "math.NA"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.17607v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.17607v1",
+    "fetched_at": "2026-02-20T08:47:56.594216"
+  },
+  {
+    "id": "2602.17588v1",
+    "title": "Modeling Distinct Human Interaction in Web Agents",
+    "abstract": "Despite rapid progress in autonomous web agents, human involvement remains essential for shaping preferences and correcting agent behavior as tasks unfold. However, current agentic systems lack a principled understanding of when and why humans intervene, often proceeding autonomously past critical decision points or requesting unnecessary confirmation. In this work, we introduce the task of modeling human intervention to support collaborative web task execution. We collect CowCorpus, a dataset of 400 real-user web navigation trajectories containing over 4,200 interleaved human and agent actions. We identify four distinct patterns of user interaction with agents -- hands-off supervision, hands-on oversight, collaborative task-solving, and full user takeover. Leveraging these insights, we train language models (LMs) to anticipate when users are likely to intervene based on their interaction styles, yielding a 61.4-63.4% improvement in intervention prediction accuracy over base LMs. Finally, we deploy these intervention-aware models in live web navigation agents and evaluate them in a user study, finding a 26.5% increase in user-rated agent usefulness. Together, our results show structured modeling of human intervention leads to more adaptive, collaborative agents.",
+    "authors": [
+      "Faria Huq",
+      "Zora Zhiruo Wang",
+      "Zhanqiu Guo",
+      "Venu Arvind Arangarajan",
+      "Tianyue Ou",
+      "Frank Xu",
+      "Shuyan Zhou",
+      "Graham Neubig",
+      "Jeffrey P. Bigham"
+    ],
+    "published": "2026-02-19",
+    "categories": [
+      "cs.CL",
+      "cs.HC"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.17588v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.17588v1",
+    "fetched_at": "2026-02-20T08:47:56.594271"
+  },
+  {
+    "id": "2602.17544v1",
+    "title": "Evaluating Chain-of-Thought Reasoning through Reusability and Verifiability",
+    "abstract": "In multi-agent IR pipelines for tasks such as search and ranking, LLM-based agents exchange intermediate reasoning in terms of Chain-of-Thought (CoT) with each other. Current CoT evaluation narrowly focuses on target task accuracy. However, this metric fails to assess the quality or utility of the reasoning process itself. To address this limitation, we introduce two novel measures: reusability and verifiability. We decouple CoT generation from execution using a Thinker-Executor framework. Reusability measures how easily an Executor can reuse the Thinker's CoT. Verifiability measures how frequently an Executor can match the Thinker's answer using the CoT. We evaluated four Thinker models against a committee of ten Executor models across five benchmarks. Our results reveal that reusability and verifiability do not correlate with standard accuracy, exposing a blind spot in current accuracy-based leaderboards for reasoning capability. Surprisingly, we find that CoTs from specialized reasoning models are not consistently more reusable or verifiable than those from general-purpose LLMs like Llama and Gemma.",
+    "authors": [
+      "Shashank Aggarwal",
+      "Ram Vikas Mishra",
+      "Amit Awekar"
+    ],
+    "published": "2026-02-19",
+    "categories": [
+      "cs.AI",
+      "cs.CL",
+      "cs.IR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.17544v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.17544v1",
+    "fetched_at": "2026-02-20T08:47:56.594294"
+  },
+  {
+    "id": "2602.17537v1",
+    "title": "IRIS: Learning-Driven Task-Specific Cinema Robot Arm for Visuomotor Motion Control",
+    "abstract": "Robotic camera systems enable dynamic, repeatable motion beyond human capabilities, yet their adoption remains limited by the high cost and operational complexity of industrial-grade platforms. We present the Intelligent Robotic Imaging System (IRIS), a task-specific 6-DOF manipulator designed for autonomous, learning-driven cinematic motion control. IRIS integrates a lightweight, fully 3D-printed hardware design with a goal-conditioned visuomotor imitation learning framework based on Action Chunking with Transformers (ACT). The system learns object-aware and perceptually smooth camera trajectories directly from human demonstrations, eliminating the need for explicit geometric programming. The complete platform costs under $1,000 USD, supports a 1.5 kg payload, and achieves approximately 1 mm repeatability. Real-world experiments demonstrate accurate trajectory tracking, reliable autonomous execution, and generalization across diverse cinematic motions.",
+    "authors": [
+      "Qilong Cheng",
+      "Matthew Mackay",
+      "Ali Bereyhi"
+    ],
+    "published": "2026-02-19",
+    "categories": [
+      "cs.RO",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.17537v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.17537v1",
+    "fetched_at": "2026-02-20T08:47:56.594316"
+  },
+  {
+    "id": "2602.17452v1",
+    "title": "Jolt Atlas: Verifiable Inference via Lookup Arguments in Zero Knowledge",
+    "abstract": "We present Jolt Atlas, a zero-knowledge machine learning (zkML) framework that extends the Jolt proving system to model inference. Unlike zkVMs (zero-knowledge virtual machines), which emulate CPU instruction execution, Jolt Atlas adapts Jolt's lookup-centric approach and applies it directly to ONNX tensor operations. The ONNX computational model eliminates the need for CPU registers and simplifies memory consistency verification. In addition, ONNX is an open-source, portable format, which makes it easy to share and deploy models across different frameworks, hardware platforms, and runtime environments without requiring framework-specific conversions.   Our lookup arguments, which use sumcheck protocol, are well-suited for non-linear functions -- key building blocks in modern ML. We apply optimisations such as neural teleportation to reduce the size of lookup tables while preserving model accuracy, as well as several tensor-level verification optimisations detailed in this paper. We demonstrate that Jolt Atlas can prove model inference in memory-constrained environments -- a prover property commonly referred to as \\textit{streaming}. Furthermore, we discuss how Jolt Atlas achieves zero-knowledge through the BlindFold technique, as introduced in Vega. In contrast to existing zkML frameworks, we show practical proving times for classification, embedding, automated reasoning, and small language models.   Jolt Atlas enables cryptographic verification that can be run on-device, without specialised hardware. The resulting proofs are succinctly verifiable. This makes Jolt Atlas well-suited for privacy-centric and adversarial environments. In a companion work, we outline various use cases of Jolt Atlas, including how it serves as guardrails in agentic commerce and for trustless AI context (often referred to as \\textit{AI memory}).",
+    "authors": [
+      "Wyatt Benno",
+      "Alberto Centelles",
+      "Antoine Douchet",
+      "Khalil Gibran"
+    ],
+    "published": "2026-02-19",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.17452v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.17452v1",
+    "fetched_at": "2026-02-20T08:47:56.594342"
+  },
+  {
+    "id": "2602.17442v1",
+    "title": "WarpRec: Unifying Academic Rigor and Industrial Scale for Responsible, Reproducible, and Efficient Recommendation",
+    "abstract": "Innovation in Recommender Systems is currently impeded by a fractured ecosystem, where researchers must choose between the ease of in-memory experimentation and the costly, complex rewriting required for distributed industrial engines. To bridge this gap, we present WarpRec, a high-performance framework that eliminates this trade-off through a novel, backend-agnostic architecture. It includes 50+ state-of-the-art algorithms, 40 metrics, and 19 filtering and splitting strategies that seamlessly transition from local execution to distributed training and optimization. The framework enforces ecological responsibility by integrating CodeCarbon for real-time energy tracking, showing that scalability need not come at the cost of scientific integrity or sustainability. Furthermore, WarpRec anticipates the shift toward Agentic AI, leading Recommender Systems to evolve from static ranking engines into interactive tools within the Generative AI ecosystem. In summary, WarpRec not only bridges the gap between academia and industry but also can serve as the architectural backbone for the next generation of sustainable, agent-ready Recommender Systems. Code is available at https://github.com/sisinflab/warprec/",
+    "authors": [
+      "Marco Avolio",
+      "Potito Aghilar",
+      "Sabino Roccotelli",
+      "Vito Walter Anelli",
+      "Chiara Mallamaci",
+      "Vincenzo Paparella",
+      "Marco Valentini",
+      "Alejandro Bellogín",
+      "Michelantonio Trizio",
+      "Joseph Trotta",
+      "Antonio Ferrara",
+      "Tommaso Di Noia"
+    ],
+    "published": "2026-02-19",
+    "categories": [
+      "cs.AI",
+      "cs.IR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.17442v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.17442v1",
+    "fetched_at": "2026-02-20T08:47:56.594379"
+  },
+  {
+    "id": "2602.17271v1",
+    "title": "Federated Latent Space Alignment for Multi-user Semantic Communications",
+    "abstract": "Semantic communication aims to convey meaning for effective task execution, but differing latent representations in AI-native devices can cause semantic mismatches that hinder mutual understanding. This paper introduces a novel approach to mitigating latent space misalignment in multi-agent AI- native semantic communications. In a downlink scenario, we consider an access point (AP) communicating with multiple users to accomplish a specific AI-driven task. Our method implements a protocol that shares a semantic pre-equalizer at the AP and local semantic equalizers at user devices, fostering mutual understanding and task-oriented communication while considering power and complexity constraints. To achieve this, we employ a federated optimization for the decentralized training of the semantic equalizers at the AP and user sides. Numerical results validate the proposed approach in goal-oriented semantic communication, revealing key trade-offs among accuracy, com- munication overhead, complexity, and the semantic proximity of AI-native communication devices.",
+    "authors": [
+      "Giuseppe Di Poce",
+      "Mario Edoardo Pandolfo",
+      "Emilio Calvanese Strinati",
+      "Paolo Di Lorenzo"
+    ],
+    "published": "2026-02-19",
+    "categories": [
+      "cs.IT",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.17271v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.17271v1",
+    "fetched_at": "2026-02-20T08:47:56.594420"
+  },
+  {
+    "id": "2602.17245v1",
+    "title": "Web Verbs: Typed Abstractions for Reliable Task Composition on the Agentic Web",
+    "abstract": "The Web is evolving from a medium that humans browse to an environment where software agents act on behalf of users. Advances in large language models (LLMs) make natural language a practical interface for goal-directed tasks, yet most current web agents operate on low-level primitives such as clicks and keystrokes. These operations are brittle, inefficient, and difficult to verify. Complementing content-oriented efforts such as NLWeb's semantic layer for retrieval, we argue that the agentic web also requires a semantic layer for web actions. We propose \\textbf{Web Verbs}, a web-scale set of typed, semantically documented functions that expose site capabilities through a uniform interface, whether implemented through APIs or robust client-side workflows. These verbs serve as stable and composable units that agents can discover, select, and synthesize into concise programs. This abstraction unifies API-based and browser-based paradigms, enabling LLMs to synthesize reliable and auditable workflows with explicit control and data flow. Verbs can carry preconditions, postconditions, policy tags, and logging support, which improves \\textbf{reliability} by providing stable interfaces, \\textbf{efficiency} by reducing dozens of steps into a few function calls, and \\textbf{verifiability} through typed contracts and checkable traces. We present our vision, a proof-of-concept implementation, and representative case studies that demonstrate concise and robust execution compared to existing agents. Finally, we outline a roadmap for standardization to make verbs deployable and trustworthy at web scale.",
+    "authors": [
+      "Linxi Jiang",
+      "Rui Xi",
+      "Zhijie Liu",
+      "Shuo Chen",
+      "Zhiqiang Lin",
+      "Suman Nath"
+    ],
+    "published": "2026-02-19",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.17245v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.17245v1",
+    "fetched_at": "2026-02-20T08:47:56.594448"
+  },
+  {
+    "id": "2602.17221v1",
+    "title": "From Labor to Collaboration: A Methodological Experiment Using AI Agents to Augment Research Perspectives in Taiwan's Humanities and Social Sciences",
+    "abstract": "Generative AI is reshaping knowledge work, yet existing research focuses predominantly on software engineering and the natural sciences, with limited methodological exploration for the humanities and social sciences. Positioned as a \"methodological experiment,\" this study proposes an AI Agent-based collaborative research workflow (Agentic Workflow) for humanities and social science research. Taiwan's Claude.ai usage data (N = 7,729 conversations, November 2025) from the Anthropic Economic Index (AEI) serves as the empirical vehicle for validating the feasibility of this methodology.   This study operates on two levels: the primary level is the design and validation of a methodological framework - a seven-stage modular workflow grounded in three principles: task modularization, human-AI division of labor, and verifiability, with each stage delineating clear roles for human researchers (research judgment and ethical decisions) and AI Agents (information retrieval and text generation); the secondary level is the empirical analysis of AEI Taiwan data - serving as an operational demonstration of the workflow's application to secondary data research, showcasing both the process and output quality (see Appendix A).   This study contributes by proposing a replicable AI collaboration framework for humanities and social science researchers, and identifying three operational modes of human-AI collaboration - direct execution, iterative refinement, and human-led - through reflexive documentation of the operational process. This taxonomy reveals the irreplaceability of human judgment in research question formulation, theoretical interpretation, contextualized reasoning, and ethical reflection. Limitations including single-platform data, cross-sectional design, and AI reliability risks are acknowledged.",
+    "authors": [
+      "Yi-Chih Huang"
+    ],
+    "published": "2026-02-19",
+    "categories": [
+      "cs.AI",
+      "cs.CL",
+      "cs.CY"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.17221v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.17221v1",
+    "fetched_at": "2026-02-20T08:47:56.594470"
+  },
+  {
+    "id": "2602.17206v1",
+    "title": "SoftDTW-CUDA-Torch: Memory-Efficient GPU-Accelerated Soft Dynamic Time Warping for PyTorch",
+    "abstract": "We present softdtw-cuda-torch, an open-source PyTorch library for computing Soft Dynamic Time Warping (SoftDTW) on GPUs. Our implementation addresses three key limitations of existing GPU implementations of SoftDTW: a hard sequence-length cap of 1024, numerical instability in the backward pass for small smoothing parameters, and excessive GPU memory consumption from materializing pairwise distance tensors. We introduce (1) tiled anti-diagonal kernel execution that removes the sequence-length constraint, (2) a log-space back-ward pass that prevents floating-point overflow, and (3) a fused distance-computation mode that eliminates the O(BN M ) intermediate distance tensor, achieving up to 98% memory reduction compared to prior work. The library supports arbitrary sequence lengths, full PyTorch autograd integration, and Soft-DTW Barycenter computation. Code is available at https://github.com/BGU-CS-VIL/sdtw-cuda-torch.",
+    "authors": [
+      "Ron Shapira Weber",
+      "Oren Freifeld"
+    ],
+    "published": "2026-02-19",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.17206v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.17206v1",
+    "fetched_at": "2026-02-20T08:47:56.594491"
+  },
+  {
+    "id": "2602.17145v1",
+    "title": "Bonsai: A Framework for Convolutional Neural Network Acceleration Using Criterion-Based Pruning",
+    "abstract": "As the need for more accurate and powerful Convolutional Neural Networks (CNNs) increases, so too does the size, execution time, memory footprint, and power consumption. To overcome this, solutions such as pruning have been proposed with their own metrics and methodologies, or criteria, for how weights should be removed. These solutions do not share a common implementation and are difficult to implement and compare. In this work, we introduce Combine, a criterion- based pruning solution and demonstrate that it is fast and effective framework for iterative pruning, demonstrate that criterion have differing effects on different models, create a standard language for comparing criterion functions, and propose a few novel criterion functions. We show the capacity of these criterion functions and the framework on VGG inspired models, pruning up to 79\\% of filters while retaining or improving accuracy, and reducing the computations needed by the network by up to 68\\%.",
+    "authors": [
+      "Joseph Bingham",
+      "Sam Helmich"
+    ],
+    "published": "2026-02-19",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.17145v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.17145v1",
+    "fetched_at": "2026-02-20T08:47:56.594510"
+  },
+  {
+    "id": "2602.17096v1",
+    "title": "Agentic Wireless Communication for 6G: Intent-Aware and Continuously Evolving Physical-Layer Intelligence",
+    "abstract": "As 6G wireless systems evolve, growing functional complexity and diverse service demands are driving a shift from rule-based control to intent-driven autonomous intelligence. User requirements are no longer captured by a single metric (e.g., throughput or reliability), but by multi-dimensional objectives such as latency sensitivity, energy preference, computational constraints, and service-level requirements. These objectives may also change over time due to environmental dynamics and user-network interactions. Therefore, accurate understanding of both the communication environment and user intent is critical for autonomous and sustainably evolving 6G communications.   Large language models (LLMs), with strong contextual understanding and cross-modal reasoning, provide a promising foundation for intent-aware network agents. Compared with rule-driven or centrally optimized designs, LLM-based agents can integrate heterogeneous information and translate natural-language intents into executable control and configuration decisions.   Focusing on a closed-loop pipeline of intent perception, autonomous decision making, and network execution, this paper investigates agentic AI for the 6G physical layer and its realization pathways. We review representative physical-layer tasks and their limitations in supporting intent awareness and autonomy, identify application scenarios where agentic AI is advantageous, and discuss key challenges and enabling technologies in multimodal perception, cross-layer decision making, and sustainable optimization. Finally, we present a case study of an intent-driven link decision agent, termed AgenCom, which adaptively constructs communication links under diverse user preferences and channel conditions.",
+    "authors": [
+      "Zhaoyang Li",
+      "Xingzhi Jin",
+      "Junyu Pan",
+      "Qianqian Yang",
+      "Zhiguo Shi"
+    ],
+    "published": "2026-02-19",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.17096v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.17096v1",
+    "fetched_at": "2026-02-20T08:47:56.594535"
+  },
+  {
+    "id": "2602.17068v1",
+    "title": "Spatio-temporal dual-stage hypergraph MARL for human-centric multimodal corridor traffic signal control",
+    "abstract": "Human-centric traffic signal control in corridor networks must increasingly account for multimodal travelers, particularly high-occupancy public transportation, rather than focusing solely on vehicle-centric performance. This paper proposes STDSH-MARL (Spatio-Temporal Dual-Stage Hypergraph based Multi-Agent Reinforcement Learning), a scalable multi-agent deep reinforcement learning framework that follows a centralized training and decentralized execution paradigm. The proposed method captures spatio-temporal dependencies through a novel dual-stage hypergraph attention mechanism that models interactions across both spatial and temporal hyperedges. In addition, a hybrid discrete action space is introduced to jointly determine the next signal phase configuration and its corresponding green duration, enabling more adaptive signal timing decisions. Experiments conducted on a corridor network under five traffic scenarios demonstrate that STDSH-MARL consistently improves multimodal performance and provides clear benefits for public transportation priority. Compared with state-of-the-art baseline methods, the proposed approach achieves superior overall performance. Further ablation studies confirm the contribution of each component of STDSH-MARL, with temporal hyperedges identified as the most influential factor driving the observed performance gains.",
+    "authors": [
+      "Xiaocai Zhang",
+      "Neema Nassir",
+      "Milad Haghani"
+    ],
+    "published": "2026-02-19",
+    "categories": [
+      "cs.LG",
+      "eess.SY"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.17068v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.17068v1",
+    "fetched_at": "2026-02-20T08:47:56.594556"
+  },
+  {
+    "id": "2602.17049v1",
+    "title": "IntentCUA: Learning Intent-level Representations for Skill Abstraction and Multi-Agent Planning in Computer-Use Agents",
+    "abstract": "Computer-use agents operate over long horizons under noisy perception, multi-window contexts, evolving environment states. Existing approaches, from RL-based planners to trajectory retrieval, often drift from user intent and repeatedly solve routine subproblems, leading to error accumulation and inefficiency. We present IntentCUA, a multi-agent computer-use framework designed to stabilize long-horizon execution through intent-aligned plan memory. A Planner, Plan-Optimizer, and Critic coordinate over shared memory that abstracts raw interaction traces into multi-view intent representations and reusable skills. At runtime, intent prototypes retrieve subgroup-aligned skills and inject them into partial plans, reducing redundant re-planning and mitigating error propagation across desktop applications. In end-to-end evaluations, IntentCUA achieved a 74.83% task success rate with a Step Efficiency Ratio of 0.91, outperforming RL-based and trajectory-centric baselines. Ablations show that multi-view intent abstraction and shared plan memory jointly improve execution stability, with the cooperative multi-agent loop providing the largest gains on long-horizon tasks. These results highlight that system-level intent abstraction and memory-grounded coordination are key to reliable and efficient desktop automation in large, dynamic environments.",
+    "authors": [
+      "Seoyoung Lee",
+      "Seobin Yoon",
+      "Seongbeen Lee",
+      "Yoojung Chun",
+      "Dayoung Park",
+      "Doyeon Kim",
+      "Joo Yong Sim"
+    ],
+    "published": "2026-02-19",
+    "categories": [
+      "cs.AI",
+      "cs.HC",
+      "cs.RO"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.17049v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.17049v1",
+    "fetched_at": "2026-02-20T08:47:56.594584"
+  },
+  {
+    "id": "2602.17022v1",
+    "title": "ReIn: Conversational Error Recovery with Reasoning Inception",
+    "abstract": "Conversational agents powered by large language models (LLMs) with tool integration achieve strong performance on fixed task-oriented dialogue datasets but remain vulnerable to unanticipated, user-induced errors. Rather than focusing on error prevention, this work focuses on error recovery, which necessitates the accurate diagnosis of erroneous dialogue contexts and execution of proper recovery plans. Under realistic constraints precluding model fine-tuning or prompt modification due to significant cost and time requirements, we explore whether agents can recover from contextually flawed interactions and how their behavior can be adapted without altering model parameters and prompts. To this end, we propose Reasoning Inception (ReIn), a test-time intervention method that plants an initial reasoning into the agent's decision-making process. Specifically, an external inception module identifies predefined errors within the dialogue context and generates recovery plans, which are subsequently integrated into the agent's internal reasoning process to guide corrective actions, without modifying its parameters or system prompts. We evaluate ReIn by systematically simulating conversational failure scenarios that directly hinder successful completion of user goals: user's ambiguous and unsupported requests. Across diverse combinations of agent models and inception modules, ReIn substantially improves task success and generalizes to unseen error types. Moreover, it consistently outperforms explicit prompt-modification approaches, underscoring its utility as an efficient, on-the-fly method. In-depth analysis of its operational mechanism, particularly in relation to instruction hierarchy, indicates that jointly defining recovery tools with ReIn can serve as a safe and effective strategy for improving the resilience of conversational agents without modifying the backbone models or system prompts.",
+    "authors": [
+      "Takyoung Kim",
+      "Jinseok Nam",
+      "Chandrayee Basu",
+      "Xing Fan",
+      "Chengyuan Ma",
+      "Heng Ji",
+      "Gokhan Tur",
+      "Dilek Hakkani-Tür"
+    ],
+    "published": "2026-02-19",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.17022v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.17022v1",
+    "fetched_at": "2026-02-20T08:47:56.594613"
+  },
+  {
+    "id": "2602.17072v1",
+    "title": "BankMathBench: A Benchmark for Numerical Reasoning in Banking Scenarios",
+    "abstract": "Large language models (LLMs)-based chatbots are increasingly being adopted in the financial domain, particularly in digital banking, to handle customer inquiries about products such as deposits, savings, and loans. However, these models still exhibit low accuracy in core banking computations-including total payout estimation, comparison of products with varying interest rates, and interest calculation under early repayment conditions. Such tasks require multi-step numerical reasoning and contextual understanding of banking products, yet existing LLMs often make systematic errors-misinterpreting product types, applying conditions incorrectly, or failing basic calculations involving exponents and geometric progressions. However, such errors have rarely been captured by existing benchmarks. Mathematical datasets focus on fundamental math problems, whereas financial benchmarks primarily target financial documents, leaving everyday banking scenarios underexplored. To address this limitation, we propose BankMathBench, a domain-specific dataset that reflects realistic banking tasks. BankMathBench is organized in three levels of difficulty-basic, intermediate, and advanced-corresponding to single-product reasoning, multi-product comparison, and multi-condition scenarios, respectively. When trained on BankMathBench, open-source LLMs exhibited notable improvements in both formula generation and numerical reasoning accuracy, demonstrating the dataset's effectiveness in enhancing domain-specific reasoning. With tool-augmented fine-tuning, the models achieved average accuracy increases of 57.6%p (basic), 75.1%p (intermediate), and 62.9%p (advanced), representing significant gains over zero-shot baselines. These findings highlight BankMathBench as a reliable benchmark for evaluating and advancing LLMs' numerical reasoning in real-world banking scenarios.",
+    "authors": [
+      "Yunseung Lee",
+      "Subin Kim",
+      "Youngjun Kwak",
+      "Jaegul Choo"
+    ],
+    "published": "2026-02-19",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.17072v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.17072v1",
+    "fetched_at": "2026-02-20T08:48:46.971192"
+  }
+]
