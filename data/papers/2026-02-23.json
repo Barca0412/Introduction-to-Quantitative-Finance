@@ -1,0 +1,270 @@
+[
+  {
+    "id": "2602.18358v1",
+    "title": "Forecasting the Evolving Composition of Inbound Tourism Demand: A Bayesian Compositional Time Series Approach Using Platform Booking Data",
+    "abstract": "Understanding how the composition of guest origin markets evolves over time is critical for destination marketing organizations, hospitality businesses, and tourism planners. We develop and apply Bayesian Dirichlet autoregressive moving average (BDARMA) models to forecast the compositional dynamics of guest origin market shares using proprietary Airbnb booking data spanning 2017--2024 across four major destination regions. Our analysis reveals substantial pandemic-induced structural breaks in origin composition, with heterogeneous recovery patterns across markets. The BDARMA framework achieves the lowest average forecast error across all destination regions, outperforming standard benchmarks including naïve forecasts, exponential smoothing, and SARIMA on log-ratio transformed data. For EMEA destinations, BDARMA achieves 23% lower forecast error than naive methods, with statistically significant improvements. By modeling compositions directly on the simplex with a Dirichlet likelihood and incorporating seasonal variation in both mean and precision parameters, our approach produces coherent forecasts that respect the unit-sum constraint while capturing complex temporal dependencies. The methodology provides destination stakeholders with probabilistic forecasts of source market shares, enabling more informed strategic planning for marketing resource allocation, infrastructure investment, and crisis response.",
+    "authors": [
+      "Harrison Katz"
+    ],
+    "published": "2026-02-20",
+    "categories": [
+      "stat.AP",
+      "q-fin.ST"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.18358v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.18358v1",
+    "fetched_at": "2026-02-23T08:55:09.950955"
+  },
+  {
+    "id": "2602.18234v1",
+    "title": "Weak error approximation for rough and Gaussian mean-reverting stochastic volatility models",
+    "abstract": "For a class of stochastic models with Gaussian and rough mean-reverting volatility that embeds the genuine rough Stein-Stein model, we study the weak approximation rate when using a Euler type scheme with integrated kernels. Our first result is a weak convergence rate for the discretised rough Ornstein-Uhlenbeck process, that is essentially in $\\min(3α-1,1)$, where $\\frac{t^{α-1}}{Γ(α)} $ is the fractional convolution kernel with $α\\in (1/2,1)$. Then, our main result is to obtain the same convergence rate for the corresponding stochastic rough volatility model with polynomial test functions.",
+    "authors": [
+      "Aurélien Alfonsi",
+      "Ahmed Kebaier"
+    ],
+    "published": "2026-02-20",
+    "categories": [
+      "math.PR",
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.18234v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.18234v1",
+    "fetched_at": "2026-02-23T08:55:09.950994"
+  },
+  {
+    "id": "2602.18157v1",
+    "title": "Time consistent portfolio strategies for a general utility function",
+    "abstract": "We study the Merton portfolio management problem within a complete market, non constant time discount rate and general utility framework. The non constant discount rate introduces time inconsistency which can be solved by introducing sub game perfect strategies. Under some asymptotic assumptions on the utility function, we show that the subgame perfect strategy is the same as the optimal strategy, provided the discount rate is replaced by the utility weighted discount rate $ρ(t,x)$ that depends on the time $t$ and wealth level $x$. A fixed point iteration is used to find $ρ$. The consumption to wealth ratio and the investment to wealth ratio are given in feedback form as functions of the value function.",
+    "authors": [
+      "Oumar Mbodji"
+    ],
+    "published": "2026-02-20",
+    "categories": [
+      "q-fin.PM",
+      "math.OC"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.18157v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.18157v1",
+    "fetched_at": "2026-02-23T08:55:09.951018"
+  },
+  {
+    "id": "2602.18078v1",
+    "title": "Entropy-regularized penalization schemes for American options and reflected BSDEs with singular generators",
+    "abstract": "This paper extends our previous work in Chee et al. [9] to continuous-time optimal stopping problems, with a particular focus on American options within an exploratory framework. We pursue two main objectives. First, motivated by reinforcement learning applications, we introduce an entropy-regularized penalization scheme for continuous-time optimal stopping problems. The scheme is inspired by classical penalization techniques for reflected backward stochastic differential equations (RBSDEs) and provides a smooth approximation of the degenerate stopping rule inherent to the American option problem. This regularization promotes exploration, enables the use of gradient-based optimization methods, and leads naturally to policy improvement algorithms. We establish well-posedness and convergence properties of the scheme, and illustrate its numerical feasibility through low-dimensional experiments based on policy iteration and least-squares Monte Carlo methods. Second, from a theoretical perspective, we study the asymptotic limit of the entropy-regularized penalization as the penalization parameter tends to infinity. We show that the limiting value process solves a reflected BSDE with a logarithmically singular driver, and we prove existence and uniqueness of solutions to this new class of RBSDEs via a monotone limit argument. To the best of our knowledge, such equations have not previously been investigated in the literature",
+    "authors": [
+      "Daniel Chee",
+      "Noufel Frikha",
+      "Libo Li"
+    ],
+    "published": "2026-02-20",
+    "categories": [
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.18078v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.18078v1",
+    "fetched_at": "2026-02-23T08:55:09.951048"
+  },
+  {
+    "id": "2602.18062v1",
+    "title": "A Monotone Limit Approach to Entropy-Regularized American Options",
+    "abstract": "Recent advances in continuous-time optimal stopping have been driven by entropy-regularized formulations of randomized stopping problems, with most existing approaches relying on partial differential equation methods. In this paper, we propose a fully probabilistic framework based on the Doob-Meyer-Mertens decomposition of the Snell envelope and its representation through reflected backward stochastic differential equations. We introduce an entropy-regularized penalization scheme yielding a monotone approximation of the value function and establish explicit convergence rates under suitable regularity assumptions. In addition, we develop a policy improvement algorithm based on linear backward stochastic differential equations and illustrate its performance through a simple numerical experiment for an American-style max call option",
+    "authors": [
+      "Daniel Chee",
+      "Noufel Frikha",
+      "Libo Li"
+    ],
+    "published": "2026-02-20",
+    "categories": [
+      "q-fin.CP",
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.18062v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.18062v1",
+    "fetched_at": "2026-02-23T08:55:09.951071"
+  },
+  {
+    "id": "2602.17895v1",
+    "title": "The Strategic Gap: How AI-Driven Timing and Complexity Shape Investor Trust in the Age of Digital Agents",
+    "abstract": "Traditional models of market efficiency assume that equity prices incorporate information based on content alone, often neglecting the structural influence of reporting timing and cadence. This study introduces the Autonomous Disclosure Regulator, a multi-node AI framework designed to audit the intersection of disclosure complexity and filing unpredictability. Analyzing a population of 484,796 regulatory filings, the research identifies a structural Strategic Gap: a state where companies use confusing language and unpredictable timing to slow down how fast the market learns the truth by 60%. The results demonstrate a fundamental computational asymmetry in contemporary capital markets. While investors are now good at spotting \"copy-paste\" text, they remain vulnerable to strategic timing that obscures structural deterioration. The framework isolates 39 high-priority failures where the convergence of dense text and temporal surprises facilitated significant information rent extraction by insiders. By implementing a recursive agentic audit, the system identifies a cumulative welfare recovery potential of over 360\\% and demonstrates near-perfect resilience against technical data interruptions. The study concludes by proposing a transition toward an agentic regulatory state, arguing that as information integration costss rise, infrastructure must evolve from passive data repositories into active auditing nodes capable of real-time synthesis to preserve market integrity.",
+    "authors": [
+      "Krishna Neupane"
+    ],
+    "published": "2026-02-19",
+    "categories": [
+      "q-fin.CP",
+      "q-fin.GN"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.17895v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.17895v1",
+    "fetched_at": "2026-02-23T08:55:09.951090"
+  },
+  {
+    "id": "2602.17890v1",
+    "title": "The Information Dynamics of Insider Intent: How Reporting Inversions (Form 144) Mask Informational Rents in Insider Sales (Form 4)",
+    "abstract": "This study identifies and quantifies a significant informational friction embedded in the SEC Form 144 disclosure regime, characterized as predictive decoupling. Drawing on a theoretical foundation of welfare economics, the article argues that the current reporting inversion -- where trade execution (Form 4) frequently precedes the public notice of intent (Form 144) -- violates the conditions for Pareto efficiency by inducing non-symmetric pricing. Utilizing an event-study framework of intent-to-sell windows, the analysis examines cases where insiders file a notice of proposed sale but fail to execute within the statutory 90-day period. The machine learning audit reveals a persistent 52.4 percent opacity rate, where aborted signals remain statistically indistinguishable from routine executions, creating a structural information ceiling that prevents the market from exhausting the signal's informational content. Contrary to the traditional small-firm effect, the study documents a large-cap significance paradox: while small-cap portfolios yield higher absolute abnormal returns (32.21 bps), statistically significant alpha is concentrated in large-cap firms (14.49 bps, $p = 0.021$). The results suggest that Institutional Salience enables more reliable processing of this negative non-event when reputational costs are maximized. Cross-sectional tests confirm that prior idiosyncratic volatility serves as a signal amplifier, with causal estimators identifying an illiquidity jump of up to 2.63 times. To mitigate this market failure, the study proposes a mandatory execution confirmation (Form 144-A) to transition the regime toward bilateral accountability, converting a predictive blind spot into a verifiable data stream and restoring the informational symmetry requisite for efficient capital allocation.",
+    "authors": [
+      "Krishna Neupane"
+    ],
+    "published": "2026-02-19",
+    "categories": [
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.17890v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.17890v1",
+    "fetched_at": "2026-02-23T08:55:09.951108"
+  },
+  {
+    "id": "2602.17851v1",
+    "title": "Beyond the Numbers: Causal Effects of Financial Report Sentiment on Bank Profitability",
+    "abstract": "This study establishes the causal effects of market sentiment on firm profitability, moving beyond traditional correlational analyses. It leverages a causal forest machine learning methodology to control for numerous confounding variables, enabling systematic analysis of heterogeneity and non-linearities often overlooked. A key innovation is the use of a pre-trained FinancialBERT to generate sentiment scores from quarterly reports, which are then treated as causal interventions impacting profitability dynamics like returns and volatilities. Utilizing a comprehensive dataset from NEPSE, NRB, and individual financial institutions, the research employs SHAP analysis to identify influential profit predictors. A two-pronged causal analysis further explores how sentiment's impact is conditioned by Loan Portfolio/Asset Composition and Balance Sheet Strength/Leverage. Average Treatment Effect analyses, combined with SHAP insights, reveal statistically significant causal associations between certain balance sheet and expense management variables and profitability. This advanced causal machine learning framework significantly extends existing literature, providing a more robust understanding of how financial sentiment truly impacts firm performance.",
+    "authors": [
+      "Krishna Neupane",
+      "Prem Sapkota",
+      "Ujjwal Prajapati"
+    ],
+    "published": "2026-02-19",
+    "categories": [
+      "q-fin.CP",
+      "q-fin.ST"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.17851v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.17851v1",
+    "fetched_at": "2026-02-23T08:55:09.951129"
+  },
+  {
+    "id": "2602.18374v1",
+    "title": "Zero-shot Interactive Perception",
+    "abstract": "Interactive perception (IP) enables robots to extract hidden information in their workspace and execute manipulation plans by physically interacting with objects and altering the state of the environment -- crucial for resolving occlusions and ambiguity in complex, partially observable scenarios. We present Zero-Shot IP (ZS-IP), a novel framework that couples multi-strategy manipulation (pushing and grasping) with a memory-driven Vision Language Model (VLM) to guide robotic interactions and resolve semantic queries. ZS-IP integrates three key components: (1) an Enhanced Observation (EO) module that augments the VLM's visual perception with both conventional keypoints and our proposed pushlines -- a novel 2D visual augmentation tailored to pushing actions, (2) a memory-guided action module that reinforces semantic reasoning through context lookup, and (3) a robotic controller that executes pushing, pulling, or grasping based on VLM output. Unlike grid-based augmentations optimized for pick-and-place, pushlines capture affordances for contact-rich actions, substantially improving pushing performance. We evaluate ZS-IP on a 7-DOF Franka Panda arm across diverse scenes with varying occlusions and task complexities. Our experiments demonstrate that ZS-IP outperforms passive and viewpoint-based perception techniques such as Mark-Based Visual Prompting (MOKA), particularly in pushing tasks, while preserving the integrity of non-target elements.",
+    "authors": [
+      "Venkatesh Sripada",
+      "Frank Guerin",
+      "Amir Ghalamzan"
+    ],
+    "published": "2026-02-20",
+    "categories": [
+      "cs.RO",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.18374v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.18374v1",
+    "fetched_at": "2026-02-23T08:55:49.919773"
+  },
+  {
+    "id": "2602.18291v1",
+    "title": "Diffusing to Coordinate: Efficient Online Multi-Agent Diffusion Policies",
+    "abstract": "Online Multi-Agent Reinforcement Learning (MARL) is a prominent framework for efficient agent coordination. Crucially, enhancing policy expressiveness is pivotal for achieving superior performance. Diffusion-based generative models are well-positioned to meet this demand, having demonstrated remarkable expressiveness and multimodal representation in image generation and offline settings. Yet, their potential in online MARL remains largely under-explored. A major obstacle is that the intractable likelihoods of diffusion models impede entropy-based exploration and coordination. To tackle this challenge, we propose among the first \\underline{O}nline off-policy \\underline{MA}RL framework using \\underline{D}iffusion policies (\\textbf{OMAD}) to orchestrate coordination. Our key innovation is a relaxed policy objective that maximizes scaled joint entropy, facilitating effective exploration without relying on tractable likelihood. Complementing this, within the centralized training with decentralized execution (CTDE) paradigm, we employ a joint distributional value function to optimize decentralized diffusion policies. It leverages tractable entropy-augmented targets to guide the simultaneous updates of diffusion policies, thereby ensuring stable coordination. Extensive evaluations on MPE and MAMuJoCo establish our method as the new state-of-the-art across $10$ diverse tasks, demonstrating a remarkable $2.5\\times$ to $5\\times$ improvement in sample efficiency.",
+    "authors": [
+      "Zhuoran Li",
+      "Hai Zhong",
+      "Xun Wang",
+      "Qingxin Xia",
+      "Lihua Zhang",
+      "Longbo Huang"
+    ],
+    "published": "2026-02-20",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.18291v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.18291v1",
+    "fetched_at": "2026-02-23T08:55:49.919810"
+  },
+  {
+    "id": "2602.18172v1",
+    "title": "Can AI Lower the Barrier to Cybersecurity? A Human-Centered Mixed-Methods Study of Novice CTF Learning",
+    "abstract": "Capture-the-Flag (CTF) competitions serve as gateways into offensive cybersecurity, yet they often present steep barriers for novices due to complex toolchains and opaque workflows. Recently, agentic AI frameworks for cybersecurity promise to lower these barriers by automating and coordinating penetration testing tasks. However, their role in shaping novice learning remains underexplored.   We present a human-centered, mixed-methods case study examining how agentic AI frameworks -- here Cybersecurity AI (CAI) -- mediates novice entry into CTF-based penetration testing. An undergraduate student without prior hacking experience attempted to approach performance benchmarks from a national cybersecurity challenge using CAI. Quantitative performance metrics were complemented by structured reflective analysis of learning progression and AI interaction patterns.   Our thematic analysis suggest that agentic AI reduces initial entry barriers by providing overview, structure and guidance, thereby lowering the cognitive workload during early engagement. Quantitatively, the observed extensive exploration of strategies and low per-strategy execution time potetially facilitatates cybersecurity training on meta, i.e. strategic levels. At the same time, AI-assisted cybersecurity education introduces new challenges related to trust, dependency, and responsible use. We discuss implications for human-centered AI-supported cybersecurity education and outline open questions for future research.",
+    "authors": [
+      "Cathrin Schachner",
+      "Jasmin Wachter"
+    ],
+    "published": "2026-02-20",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.18172v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.18172v1",
+    "fetched_at": "2026-02-23T08:55:49.919834"
+  },
+  {
+    "id": "2602.18072v1",
+    "title": "HiAER-Spike Software-Hardware Reconfigurable Platform for Event-Driven Neuromorphic Computing at Scale",
+    "abstract": "In this work, we present HiAER-Spike, a modular, reconfigurable, event-driven neuromorphic computing platform designed to execute large spiking neural networks with up to 160 million neurons and 40 billion synapses - roughly twice the neurons of a mouse brain at faster than real time. This system, assembled at the UC San Diego Supercomputer Center, comprises a co-designed hard- and software stack that is optimized for run-time massively parallel processing and hierarchical address-event routing (HiAER) of spikes while promoting memory-efficient network storage and execution. The architecture efficiently handles both sparse connectivity and sparse activity for robust and low-latency event-driven inference for both edge and cloud computing. A Python programming interface to HiAER-Spike, agnostic to hardware-level detail, shields the user from complexity in the configuration and execution of general spiking neural networks with minimal constraints in topology. The system is made easily available over a web portal for use by the wider community. In the following, we provide an overview of the hard- and software stack, explain the underlying design principles, demonstrate some of the system's capabilities and solicit feedback from the broader neuromorphic community. Examples are shown demonstrating HiAER-Spike's capabilities for event-driven vision on benchmark CIFAR-10, DVS event-based gesture, MNIST, and Pong tasks.",
+    "authors": [
+      "Gwenevere Frank",
+      "Gopabandhu Hota",
+      "Keli Wang",
+      "Christopher Deng",
+      "Krish Arora",
+      "Diana Vins",
+      "Abhinav Uppal",
+      "Omowuyi Olajide",
+      "Kenneth Yoshimoto",
+      "Qingbo Wang",
+      "Mari Yamaoka",
+      "Johannes Leugering",
+      "Stephen Deiss",
+      "Leif Gibb",
+      "Gert Cauwenberghs"
+    ],
+    "published": "2026-02-20",
+    "categories": [
+      "cs.AR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.18072v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.18072v1",
+    "fetched_at": "2026-02-23T08:55:49.919876"
+  },
+  {
+    "id": "2602.17937v1",
+    "title": "Analyzing LLM Instruction Optimization for Tabular Fact Verification",
+    "abstract": "Instruction optimization provides a lightweight, model-agnostic approach to enhancing the reasoning performance of large language models (LLMs). This paper presents the first systematic comparison of instruction optimization, based on the DSPy optimization framework, for tabular fact verification. We evaluate four out-of-the-box prompting techniques that cover both text-only prompting and code use: direct prediction, Chain-of-Thought (CoT), ReAct with SQL tools, and CodeAct with Python execution. We study three optimizers from the DSPy framework -- COPRO, MiPROv2, and SIMBA -- across four benchmarks and three model families. We find that instruction optimization consistently improves verification accuracy, with MiPROv2 yielding the most stable gains for CoT, and SIMBA providing the largest benefits for ReAct agents, particularly at larger model scales. Behavioral analyses reveal that SIMBA encourages more direct reasoning paths by applying heuristics, thereby improving numerical comparison abilities in CoT reasoning and helping avoid unnecessary tool calls in ReAct agents. Across different prompting techniques, CoT remains effective for tabular fact checking, especially with smaller models. Although ReAct agents built with larger models can achieve competitive performance, they require careful instruction optimization.",
+    "authors": [
+      "Xiaotang Du",
+      "Giwon Hong",
+      "Wai-Chung Kwan",
+      "Rohit Saxena",
+      "Ivan Titov",
+      "Pasquale Minervini",
+      "Emily Allaway"
+    ],
+    "published": "2026-02-20",
+    "categories": [
+      "cs.CL",
+      "cs.PL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.17937v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.17937v1",
+    "fetched_at": "2026-02-23T08:55:49.919904"
+  },
+  {
+    "id": "2602.17902v1",
+    "title": "El Agente Gráfico: Structured Execution Graphs for Scientific Agents",
+    "abstract": "Large language models (LLMs) are increasingly used to automate scientific workflows, yet their integration with heterogeneous computational tools remains ad hoc and fragile. Current agentic approaches often rely on unstructured text to manage context and coordinate execution, generating often overwhelming volumes of information that may obscure decision provenance and hinder auditability. In this work, we present El Agente Gráfico, a single-agent framework that embeds LLM-driven decision-making within a type-safe execution environment and dynamic knowledge graphs for external persistence. Central to our approach is a structured abstraction of scientific concepts and an object-graph mapper that represents computational state as typed Python objects, stored either in memory or persisted in an external knowledge graph. This design enables context management through typed symbolic identifiers rather than raw text, thereby ensuring consistency, supporting provenance tracking, and enabling efficient tool orchestration. We evaluate the system by developing an automated benchmarking framework across a suite of university-level quantum chemistry tasks previously evaluated on a multi-agent system, demonstrating that a single agent, when coupled to a reliable execution engine, can robustly perform complex, multi-step, and parallel computations. We further extend this paradigm to two other large classes of applications: conformer ensemble generation and metal-organic framework design, where knowledge graphs serve as both memory and reasoning substrates. Together, these results illustrate how abstraction and type safety can provide a scalable foundation for agentic scientific automation beyond prompt-centric designs.",
+    "authors": [
+      "Jiaru Bai",
+      "Abdulrahman Aldossary",
+      "Thomas Swanick",
+      "Marcel Müller",
+      "Yeonghun Kang",
+      "Zijian Zhang",
+      "Jin Won Lee",
+      "Tsz Wai Ko",
+      "Mohammad Ghazi Vakili",
+      "Varinia Bernales",
+      "Alán Aspuru-Guzik"
+    ],
+    "published": "2026-02-19",
+    "categories": [
+      "cs.AI",
+      "cs.MA",
+      "cs.SE",
+      "physics.chem-ph"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.17902v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.17902v1",
+    "fetched_at": "2026-02-23T08:55:49.919940"
+  }
+]

@@ -1,0 +1,438 @@
+[
+  {
+    "id": "2602.18358v1",
+    "title": "Forecasting the Evolving Composition of Inbound Tourism Demand: A Bayesian Compositional Time Series Approach Using Platform Booking Data",
+    "abstract": "Understanding how the composition of guest origin markets evolves over time is critical for destination marketing organizations, hospitality businesses, and tourism planners. We develop and apply Bayesian Dirichlet autoregressive moving average (BDARMA) models to forecast the compositional dynamics of guest origin market shares using proprietary Airbnb booking data spanning 2017--2024 across four major destination regions. Our analysis reveals substantial pandemic-induced structural breaks in origin composition, with heterogeneous recovery patterns across markets. The BDARMA framework achieves the lowest average forecast error across all destination regions, outperforming standard benchmarks including naïve forecasts, exponential smoothing, and SARIMA on log-ratio transformed data. For EMEA destinations, BDARMA achieves 23% lower forecast error than naive methods, with statistically significant improvements. By modeling compositions directly on the simplex with a Dirichlet likelihood and incorporating seasonal variation in both mean and precision parameters, our approach produces coherent forecasts that respect the unit-sum constraint while capturing complex temporal dependencies. The methodology provides destination stakeholders with probabilistic forecasts of source market shares, enabling more informed strategic planning for marketing resource allocation, infrastructure investment, and crisis response.",
+    "authors": [
+      "Harrison Katz"
+    ],
+    "published": "2026-02-20",
+    "categories": [
+      "stat.AP",
+      "q-fin.ST"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.18358v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.18358v1",
+    "fetched_at": "2026-02-23T08:55:09.950955",
+    "chinese_title": "预测入境旅游需求的动态构成：基于平台预订数据的贝叶斯成分时间序列方法",
+    "chinese_summary": "论文针对入境旅游客源地市场份额的动态构成预测问题，提出贝叶斯狄利克雷自回归滑动平均（BDARMA）模型，利用2017-2024年Airbnb预订数据直接在单纯形上建模（含狄利克雷似然及季节变化），相比基准方法显著降低预测误差，还揭示疫情引发的结构突变及异质性恢复模式，为旅游相关主体提供概率性预测支持。",
+    "tags": [
+      "Time Series",
+      "Benchmark",
+      "Anomaly"
+    ],
+    "key_contributions": [
+      "提出BDARMA模型，直接在单纯形上建模旅游客源地市场份额的动态构成，纳入均值和精度参数的季节变化，满足单位和约束并捕捉复杂时序依赖",
+      "基于Airbnb数据验证，模型预测误差显著低于基准方法，揭示疫情引发的结构突变及异质性恢复模式，为旅游决策提供概率性预测工具"
+    ],
+    "processed_at": "2026-02-23T08:58:20.481286"
+  },
+  {
+    "id": "2602.18234v1",
+    "title": "Weak error approximation for rough and Gaussian mean-reverting stochastic volatility models",
+    "abstract": "For a class of stochastic models with Gaussian and rough mean-reverting volatility that embeds the genuine rough Stein-Stein model, we study the weak approximation rate when using a Euler type scheme with integrated kernels. Our first result is a weak convergence rate for the discretised rough Ornstein-Uhlenbeck process, that is essentially in $\\min(3α-1,1)$, where $\\frac{t^{α-1}}{Γ(α)} $ is the fractional convolution kernel with $α\\in (1/2,1)$. Then, our main result is to obtain the same convergence rate for the corresponding stochastic rough volatility model with polynomial test functions.",
+    "authors": [
+      "Aurélien Alfonsi",
+      "Ahmed Kebaier"
+    ],
+    "published": "2026-02-20",
+    "categories": [
+      "math.PR",
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.18234v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.18234v1",
+    "fetched_at": "2026-02-23T08:55:09.950994",
+    "chinese_title": "粗糙与高斯均值回复随机波动率模型的弱误差近似",
+    "chinese_summary": "本文针对嵌入真实粗糙Stein-Stein模型的一类高斯及粗糙均值回复波动率随机模型，采用带积分核的欧拉型格式研究弱近似率；首先推导离散粗糙Ornstein-Uhlenbeck过程的弱收敛率（本质为min(3α-1,1)，α∈(1/2,1)），进而对多项式测试函数下的随机粗糙波动率模型得到相同收敛率。",
+    "tags": [
+      "Volatility",
+      "Time Series",
+      "Options"
+    ],
+    "key_contributions": [
+      "推导了离散粗糙Ornstein-Uhlenbeck过程的弱收敛率（本质为min(3α-1,1)，其中α∈(1/2,1)）",
+      "对嵌入真实粗糙Stein-Stein模型的随机粗糙波动率模型（多项式测试函数下），得到与上述相同的弱收敛率"
+    ],
+    "processed_at": "2026-02-23T08:58:59.874814"
+  },
+  {
+    "id": "2602.18157v1",
+    "title": "Time consistent portfolio strategies for a general utility function",
+    "abstract": "We study the Merton portfolio management problem within a complete market, non constant time discount rate and general utility framework. The non constant discount rate introduces time inconsistency which can be solved by introducing sub game perfect strategies. Under some asymptotic assumptions on the utility function, we show that the subgame perfect strategy is the same as the optimal strategy, provided the discount rate is replaced by the utility weighted discount rate $ρ(t,x)$ that depends on the time $t$ and wealth level $x$. A fixed point iteration is used to find $ρ$. The consumption to wealth ratio and the investment to wealth ratio are given in feedback form as functions of the value function.",
+    "authors": [
+      "Oumar Mbodji"
+    ],
+    "published": "2026-02-20",
+    "categories": [
+      "q-fin.PM",
+      "math.OC"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.18157v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.18157v1",
+    "fetched_at": "2026-02-23T08:55:09.951018",
+    "chinese_title": "一般效用函数下的时间一致投资组合策略",
+    "chinese_summary": "本文研究完全市场中含非恒定贴现率的Merton投资组合问题，针对时间不一致性引入子博弈完美策略；在效用函数渐近假设下证明该策略等价于最优策略（需将贴现率替换为依赖时间和财富的效用加权贴现率），并通过不动点迭代求解该贴现率，最终给出反馈形式的消费-财富比与投资-财富比。",
+    "tags": [
+      "Portfolio Optimization",
+      "Behavioral Finance",
+      "Risk Management"
+    ],
+    "key_contributions": [
+      "证明含非恒定贴现率的Merton问题中，效用函数渐近假设下子博弈完美策略等价于最优策略（贴现率替换为效用加权形式）",
+      "提出不动点迭代求解效用加权贴现率的方法，给出反馈形式的消费-财富比与投资-财富比"
+    ],
+    "processed_at": "2026-02-23T08:59:29.576545"
+  },
+  {
+    "id": "2602.18078v1",
+    "title": "Entropy-regularized penalization schemes for American options and reflected BSDEs with singular generators",
+    "abstract": "This paper extends our previous work in Chee et al. [9] to continuous-time optimal stopping problems, with a particular focus on American options within an exploratory framework. We pursue two main objectives. First, motivated by reinforcement learning applications, we introduce an entropy-regularized penalization scheme for continuous-time optimal stopping problems. The scheme is inspired by classical penalization techniques for reflected backward stochastic differential equations (RBSDEs) and provides a smooth approximation of the degenerate stopping rule inherent to the American option problem. This regularization promotes exploration, enables the use of gradient-based optimization methods, and leads naturally to policy improvement algorithms. We establish well-posedness and convergence properties of the scheme, and illustrate its numerical feasibility through low-dimensional experiments based on policy iteration and least-squares Monte Carlo methods. Second, from a theoretical perspective, we study the asymptotic limit of the entropy-regularized penalization as the penalization parameter tends to infinity. We show that the limiting value process solves a reflected BSDE with a logarithmically singular driver, and we prove existence and uniqueness of solutions to this new class of RBSDEs via a monotone limit argument. To the best of our knowledge, such equations have not previously been investigated in the literature",
+    "authors": [
+      "Daniel Chee",
+      "Noufel Frikha",
+      "Libo Li"
+    ],
+    "published": "2026-02-20",
+    "categories": [
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.18078v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.18078v1",
+    "fetched_at": "2026-02-23T08:55:09.951048",
+    "chinese_title": "美式期权及带奇异生成元的反射倒向随机微分方程的熵正则化惩罚方案",
+    "chinese_summary": "本文针对连续时间最优停止问题（重点美式期权），受强化学习启发引入熵正则化惩罚方案，结合反射倒向随机微分方程（RBSDE）经典惩罚技术实现停止规则的光滑近似，支持梯度优化与策略改进算法并验证数值可行性；理论上研究惩罚参数趋于无穷时的渐近极限，证明极限值过程对应带对数奇异驱动项的RBSDE，首次探讨此类方程的适定性。",
+    "tags": [
+      "Reinforcement Learning",
+      "Options",
+      "Asset Pricing"
+    ],
+    "key_contributions": [
+      "提出熵正则化惩罚方案，光滑近似美式期权问题的退化停止规则，支持梯度优化与策略改进算法并验证数值可行性",
+      "证明惩罚参数无穷时极限对应带对数奇异驱动的反射BSDE，首次研究此类新方程的适定性"
+    ],
+    "processed_at": "2026-02-23T08:59:48.230717"
+  },
+  {
+    "id": "2602.18062v1",
+    "title": "A Monotone Limit Approach to Entropy-Regularized American Options",
+    "abstract": "Recent advances in continuous-time optimal stopping have been driven by entropy-regularized formulations of randomized stopping problems, with most existing approaches relying on partial differential equation methods. In this paper, we propose a fully probabilistic framework based on the Doob-Meyer-Mertens decomposition of the Snell envelope and its representation through reflected backward stochastic differential equations. We introduce an entropy-regularized penalization scheme yielding a monotone approximation of the value function and establish explicit convergence rates under suitable regularity assumptions. In addition, we develop a policy improvement algorithm based on linear backward stochastic differential equations and illustrate its performance through a simple numerical experiment for an American-style max call option",
+    "authors": [
+      "Daniel Chee",
+      "Noufel Frikha",
+      "Libo Li"
+    ],
+    "published": "2026-02-20",
+    "categories": [
+      "q-fin.CP",
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.18062v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.18062v1",
+    "fetched_at": "2026-02-23T08:55:09.951071",
+    "chinese_title": "熵正则化美式期权的单调极限方法",
+    "chinese_summary": "现有连续时间最优停止的熵正则化美式期权问题多依赖偏微分方程方法，本文提出基于Snell包络的Doob-Meyer-Mertens分解与反射倒向随机微分方程的全概率框架；引入熵正则化惩罚方案得到价值函数的单调近似并建立显式收敛率，同时开发基于线性倒向随机微分方程的策略改进算法，通过美式max call期权数值实验验证性能。",
+    "tags": [
+      "Options",
+      "Asset Pricing",
+      "Reinforcement Learning"
+    ],
+    "key_contributions": [
+      "构建基于Snell包络分解与反射倒向随机微分方程的全概率框架，替代现有PDE方法处理熵正则化美式期权问题",
+      "提出熵正则化惩罚方案实现价值函数单调近似并建立显式收敛率，开发线性BSDE驱动的策略改进算法并数值验证"
+    ],
+    "processed_at": "2026-02-23T09:00:12.760673"
+  },
+  {
+    "id": "2602.17895v1",
+    "title": "The Strategic Gap: How AI-Driven Timing and Complexity Shape Investor Trust in the Age of Digital Agents",
+    "abstract": "Traditional models of market efficiency assume that equity prices incorporate information based on content alone, often neglecting the structural influence of reporting timing and cadence. This study introduces the Autonomous Disclosure Regulator, a multi-node AI framework designed to audit the intersection of disclosure complexity and filing unpredictability. Analyzing a population of 484,796 regulatory filings, the research identifies a structural Strategic Gap: a state where companies use confusing language and unpredictable timing to slow down how fast the market learns the truth by 60%. The results demonstrate a fundamental computational asymmetry in contemporary capital markets. While investors are now good at spotting \"copy-paste\" text, they remain vulnerable to strategic timing that obscures structural deterioration. The framework isolates 39 high-priority failures where the convergence of dense text and temporal surprises facilitated significant information rent extraction by insiders. By implementing a recursive agentic audit, the system identifies a cumulative welfare recovery potential of over 360\\% and demonstrates near-perfect resilience against technical data interruptions. The study concludes by proposing a transition toward an agentic regulatory state, arguing that as information integration costss rise, infrastructure must evolve from passive data repositories into active auditing nodes capable of real-time synthesis to preserve market integrity.",
+    "authors": [
+      "Krishna Neupane"
+    ],
+    "published": "2026-02-19",
+    "categories": [
+      "q-fin.CP",
+      "q-fin.GN"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.17895v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.17895v1",
+    "fetched_at": "2026-02-23T08:55:09.951090",
+    "chinese_title": "战略缺口：AI驱动的时机与复杂性如何塑造数字代理时代的投资者信任",
+    "chinese_summary": "论文提出多节点AI框架“自主披露监管器”，分析48万+监管文件发现企业用复杂语言+不可预测时机使市场学习真相速度慢60%的“战略缺口”；框架识别39个高优先级失败案例，显示累计福利恢复潜力超360%，并提出向代理监管转型的建议。",
+    "tags": [
+      "Financial Agent",
+      "Market Microstructure",
+      "Behavioral Finance",
+      "NLP"
+    ],
+    "key_contributions": [
+      "提出多节点AI框架“自主披露监管器”，识别企业利用披露复杂性与时机不可预测性制造的“战略缺口”",
+      "量化该缺口对市场学习速度的影响（慢60%），识别高优先级失败案例并提出向代理监管转型的建议"
+    ],
+    "processed_at": "2026-02-23T09:00:23.147649"
+  },
+  {
+    "id": "2602.17890v1",
+    "title": "The Information Dynamics of Insider Intent: How Reporting Inversions (Form 144) Mask Informational Rents in Insider Sales (Form 4)",
+    "abstract": "This study identifies and quantifies a significant informational friction embedded in the SEC Form 144 disclosure regime, characterized as predictive decoupling. Drawing on a theoretical foundation of welfare economics, the article argues that the current reporting inversion -- where trade execution (Form 4) frequently precedes the public notice of intent (Form 144) -- violates the conditions for Pareto efficiency by inducing non-symmetric pricing. Utilizing an event-study framework of intent-to-sell windows, the analysis examines cases where insiders file a notice of proposed sale but fail to execute within the statutory 90-day period. The machine learning audit reveals a persistent 52.4 percent opacity rate, where aborted signals remain statistically indistinguishable from routine executions, creating a structural information ceiling that prevents the market from exhausting the signal's informational content. Contrary to the traditional small-firm effect, the study documents a large-cap significance paradox: while small-cap portfolios yield higher absolute abnormal returns (32.21 bps), statistically significant alpha is concentrated in large-cap firms (14.49 bps, $p = 0.021$). The results suggest that Institutional Salience enables more reliable processing of this negative non-event when reputational costs are maximized. Cross-sectional tests confirm that prior idiosyncratic volatility serves as a signal amplifier, with causal estimators identifying an illiquidity jump of up to 2.63 times. To mitigate this market failure, the study proposes a mandatory execution confirmation (Form 144-A) to transition the regime toward bilateral accountability, converting a predictive blind spot into a verifiable data stream and restoring the informational symmetry requisite for efficient capital allocation.",
+    "authors": [
+      "Krishna Neupane"
+    ],
+    "published": "2026-02-19",
+    "categories": [
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.17890v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.17890v1",
+    "fetched_at": "2026-02-23T08:55:09.951108",
+    "chinese_title": "内幕意图的信息动态：Form144披露倒置如何掩盖Form4内幕销售中的信息租金",
+    "chinese_summary": "该研究识别并量化SEC Form144披露制度中的“预测性解耦”信息摩擦，指出Form4交易执行常先于Form144意图公告的报告倒置违反帕累托效率；通过事件研究框架和机器学习审计，发现52.4%的不透明率（中止出售信号与常规执行难以区分），并提出大市值显著性悖论（小市值绝对异常收益高但统计显著阿尔法集中在大市值），截面检验验证特质波动率的信号放大作用。",
+    "tags": [
+      "Asset Pricing",
+      "Market Microstructure",
+      "Behavioral Finance"
+    ],
+    "key_contributions": [
+      "揭示SEC Form144披露制度中“报告倒置”的信息摩擦，量化其对定价效率的影响；",
+      "发现大市值显著性悖论，验证特质波动率的信号放大作用及机构显著性对负向非事件处理的影响"
+    ],
+    "processed_at": "2026-02-23T09:00:47.916198"
+  },
+  {
+    "id": "2602.17851v1",
+    "title": "Beyond the Numbers: Causal Effects of Financial Report Sentiment on Bank Profitability",
+    "abstract": "This study establishes the causal effects of market sentiment on firm profitability, moving beyond traditional correlational analyses. It leverages a causal forest machine learning methodology to control for numerous confounding variables, enabling systematic analysis of heterogeneity and non-linearities often overlooked. A key innovation is the use of a pre-trained FinancialBERT to generate sentiment scores from quarterly reports, which are then treated as causal interventions impacting profitability dynamics like returns and volatilities. Utilizing a comprehensive dataset from NEPSE, NRB, and individual financial institutions, the research employs SHAP analysis to identify influential profit predictors. A two-pronged causal analysis further explores how sentiment's impact is conditioned by Loan Portfolio/Asset Composition and Balance Sheet Strength/Leverage. Average Treatment Effect analyses, combined with SHAP insights, reveal statistically significant causal associations between certain balance sheet and expense management variables and profitability. This advanced causal machine learning framework significantly extends existing literature, providing a more robust understanding of how financial sentiment truly impacts firm performance.",
+    "authors": [
+      "Krishna Neupane",
+      "Prem Sapkota",
+      "Ujjwal Prajapati"
+    ],
+    "published": "2026-02-19",
+    "categories": [
+      "q-fin.CP",
+      "q-fin.ST"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.17851v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.17851v1",
+    "fetched_at": "2026-02-23T08:55:09.951129",
+    "chinese_title": "超越数字：财务报告情绪对银行盈利能力的因果效应",
+    "chinese_summary": "该研究突破传统相关性分析，用预训练FinancialBERT提取财务报告情绪分数作为因果干预变量，结合因果森林机器学习控制混杂变量，系统分析情绪对银行盈利能力的因果效应及异质性（受贷款组合、资产负债表强度等调节）；通过SHAP识别关键盈利预测因子，发现部分资产负债表及费用管理变量与盈利能力存在显著因果关联。",
+    "tags": [
+      "Sentiment Analysis",
+      "LLM",
+      "Behavioral Finance",
+      "Transformer"
+    ],
+    "key_contributions": [
+      "突破传统相关性分析，明确建立财务报告情绪对银行盈利能力的因果效应",
+      "结合预训练FinancialBERT、因果森林与SHAP分析，系统探究情绪影响的异质性及关键盈利预测因子"
+    ],
+    "processed_at": "2026-02-23T09:01:08.750802"
+  },
+  {
+    "id": "2602.18374v1",
+    "title": "Zero-shot Interactive Perception",
+    "abstract": "Interactive perception (IP) enables robots to extract hidden information in their workspace and execute manipulation plans by physically interacting with objects and altering the state of the environment -- crucial for resolving occlusions and ambiguity in complex, partially observable scenarios. We present Zero-Shot IP (ZS-IP), a novel framework that couples multi-strategy manipulation (pushing and grasping) with a memory-driven Vision Language Model (VLM) to guide robotic interactions and resolve semantic queries. ZS-IP integrates three key components: (1) an Enhanced Observation (EO) module that augments the VLM's visual perception with both conventional keypoints and our proposed pushlines -- a novel 2D visual augmentation tailored to pushing actions, (2) a memory-guided action module that reinforces semantic reasoning through context lookup, and (3) a robotic controller that executes pushing, pulling, or grasping based on VLM output. Unlike grid-based augmentations optimized for pick-and-place, pushlines capture affordances for contact-rich actions, substantially improving pushing performance. We evaluate ZS-IP on a 7-DOF Franka Panda arm across diverse scenes with varying occlusions and task complexities. Our experiments demonstrate that ZS-IP outperforms passive and viewpoint-based perception techniques such as Mark-Based Visual Prompting (MOKA), particularly in pushing tasks, while preserving the integrity of non-target elements.",
+    "authors": [
+      "Venkatesh Sripada",
+      "Frank Guerin",
+      "Amir Ghalamzan"
+    ],
+    "published": "2026-02-20",
+    "categories": [
+      "cs.RO",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.18374v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.18374v1",
+    "fetched_at": "2026-02-23T08:55:49.919773",
+    "chinese_title": "零样本交互式感知",
+    "chinese_summary": "论文提出零样本交互式感知（ZS-IP）框架，结合多策略操作（推、抓取）与记忆驱动视觉语言模型（VLM），通过增强观测模块（含新提出的推线）、记忆引导动作模块及机器人控制器解决语义查询；实验表明其在Franka Panda机械臂上优于现有被动/视角感知方法，尤其提升推任务性能。",
+    "tags": [
+      "LLM",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出零样本交互式感知（ZS-IP）框架，整合多策略操作与记忆驱动VLM，实现语义查询与环境交互",
+      "提出推线（pushlines）这一针对推动作的2D视觉增强，显著提升接触类操作性能"
+    ],
+    "processed_at": "2026-02-23T09:01:26.017669"
+  },
+  {
+    "id": "2602.18291v1",
+    "title": "Diffusing to Coordinate: Efficient Online Multi-Agent Diffusion Policies",
+    "abstract": "Online Multi-Agent Reinforcement Learning (MARL) is a prominent framework for efficient agent coordination. Crucially, enhancing policy expressiveness is pivotal for achieving superior performance. Diffusion-based generative models are well-positioned to meet this demand, having demonstrated remarkable expressiveness and multimodal representation in image generation and offline settings. Yet, their potential in online MARL remains largely under-explored. A major obstacle is that the intractable likelihoods of diffusion models impede entropy-based exploration and coordination. To tackle this challenge, we propose among the first \\underline{O}nline off-policy \\underline{MA}RL framework using \\underline{D}iffusion policies (\\textbf{OMAD}) to orchestrate coordination. Our key innovation is a relaxed policy objective that maximizes scaled joint entropy, facilitating effective exploration without relying on tractable likelihood. Complementing this, within the centralized training with decentralized execution (CTDE) paradigm, we employ a joint distributional value function to optimize decentralized diffusion policies. It leverages tractable entropy-augmented targets to guide the simultaneous updates of diffusion policies, thereby ensuring stable coordination. Extensive evaluations on MPE and MAMuJoCo establish our method as the new state-of-the-art across $10$ diverse tasks, demonstrating a remarkable $2.5\\times$ to $5\\times$ improvement in sample efficiency.",
+    "authors": [
+      "Zhuoran Li",
+      "Hai Zhong",
+      "Xun Wang",
+      "Qingxin Xia",
+      "Lihua Zhang",
+      "Longbo Huang"
+    ],
+    "published": "2026-02-20",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.18291v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.18291v1",
+    "fetched_at": "2026-02-23T08:55:49.919810",
+    "chinese_title": "扩散协调：高效在线多智能体扩散策略",
+    "chinese_summary": "针对在线多智能体强化学习（MARL）中策略表达性不足的问题，论文提出在线离策略MARL扩散策略框架OMAD；核心创新是通过最大化缩放联合熵解决扩散模型不可处理似然导致的探索与协调障碍，结合CTDE范式用联合分布价值函数优化分散式扩散策略以稳定协调；在MPE和MAMuJoCo任务上达到新SOTA，样本效率提升2.5至5倍。",
+    "tags": [
+      "Reinforcement Learning",
+      "Deep Learning",
+      "Financial Agent"
+    ],
+    "key_contributions": [
+      "提出在线离策略多智能体强化学习框架OMAD，首次（之一）将扩散策略引入在线MARL，通过最大化缩放联合熵解决扩散模型不可处理似然导致的探索与协调障碍",
+      "在CTDE范式下，采用联合分布价值函数优化分散式扩散策略，结合可处理的熵增强目标稳定更新，在10个任务上达到SOTA且样本效率显著提升"
+    ],
+    "processed_at": "2026-02-23T09:01:55.455709"
+  },
+  {
+    "id": "2602.18172v1",
+    "title": "Can AI Lower the Barrier to Cybersecurity? A Human-Centered Mixed-Methods Study of Novice CTF Learning",
+    "abstract": "Capture-the-Flag (CTF) competitions serve as gateways into offensive cybersecurity, yet they often present steep barriers for novices due to complex toolchains and opaque workflows. Recently, agentic AI frameworks for cybersecurity promise to lower these barriers by automating and coordinating penetration testing tasks. However, their role in shaping novice learning remains underexplored.   We present a human-centered, mixed-methods case study examining how agentic AI frameworks -- here Cybersecurity AI (CAI) -- mediates novice entry into CTF-based penetration testing. An undergraduate student without prior hacking experience attempted to approach performance benchmarks from a national cybersecurity challenge using CAI. Quantitative performance metrics were complemented by structured reflective analysis of learning progression and AI interaction patterns.   Our thematic analysis suggest that agentic AI reduces initial entry barriers by providing overview, structure and guidance, thereby lowering the cognitive workload during early engagement. Quantitatively, the observed extensive exploration of strategies and low per-strategy execution time potetially facilitatates cybersecurity training on meta, i.e. strategic levels. At the same time, AI-assisted cybersecurity education introduces new challenges related to trust, dependency, and responsible use. We discuss implications for human-centered AI-supported cybersecurity education and outline open questions for future research.",
+    "authors": [
+      "Cathrin Schachner",
+      "Jasmin Wachter"
+    ],
+    "published": "2026-02-20",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.18172v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.18172v1",
+    "fetched_at": "2026-02-23T08:55:49.919834",
+    "chinese_title": "AI能否降低网络安全门槛？一项以人为主的新手CTF学习混合方法研究",
+    "chinese_summary": "该论文采用以人为主的混合方法（案例研究结合定量指标与结构化反思分析），探究代理式网络安全AI（CAI）如何辅助无经验新手进入CTF渗透测试领域；发现CAI可降低初始入门门槛并促进元策略训练，但也带来信任、依赖等新挑战，为AI支持的网络安全教育提供启示。",
+    "tags": [
+      "Deep Learning",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "揭示代理式AI（CAI）通过提供概览、结构与指导降低新手CTF学习初始门槛，促进元策略层面训练",
+      "识别AI辅助网络安全教育中的信任、依赖及负责任使用等新挑战，为以人为主的AI支持教育提供启示"
+    ],
+    "processed_at": "2026-02-23T09:02:18.644370"
+  },
+  {
+    "id": "2602.18072v1",
+    "title": "HiAER-Spike Software-Hardware Reconfigurable Platform for Event-Driven Neuromorphic Computing at Scale",
+    "abstract": "In this work, we present HiAER-Spike, a modular, reconfigurable, event-driven neuromorphic computing platform designed to execute large spiking neural networks with up to 160 million neurons and 40 billion synapses - roughly twice the neurons of a mouse brain at faster than real time. This system, assembled at the UC San Diego Supercomputer Center, comprises a co-designed hard- and software stack that is optimized for run-time massively parallel processing and hierarchical address-event routing (HiAER) of spikes while promoting memory-efficient network storage and execution. The architecture efficiently handles both sparse connectivity and sparse activity for robust and low-latency event-driven inference for both edge and cloud computing. A Python programming interface to HiAER-Spike, agnostic to hardware-level detail, shields the user from complexity in the configuration and execution of general spiking neural networks with minimal constraints in topology. The system is made easily available over a web portal for use by the wider community. In the following, we provide an overview of the hard- and software stack, explain the underlying design principles, demonstrate some of the system's capabilities and solicit feedback from the broader neuromorphic community. Examples are shown demonstrating HiAER-Spike's capabilities for event-driven vision on benchmark CIFAR-10, DVS event-based gesture, MNIST, and Pong tasks.",
+    "authors": [
+      "Gwenevere Frank",
+      "Gopabandhu Hota",
+      "Keli Wang",
+      "Christopher Deng",
+      "Krish Arora",
+      "Diana Vins",
+      "Abhinav Uppal",
+      "Omowuyi Olajide",
+      "Kenneth Yoshimoto",
+      "Qingbo Wang",
+      "Mari Yamaoka",
+      "Johannes Leugering",
+      "Stephen Deiss",
+      "Leif Gibb",
+      "Gert Cauwenberghs"
+    ],
+    "published": "2026-02-20",
+    "categories": [
+      "cs.AR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.18072v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.18072v1",
+    "fetched_at": "2026-02-23T08:55:49.919876",
+    "chinese_title": "HiAER-Spike：用于大规模事件驱动神经形态计算的软硬件可重构平台",
+    "chinese_summary": "本文提出HiAER-Spike模块化可重构事件驱动神经形态计算平台，支持最多1.6亿神经元和400亿突触（约为小鼠脑神经元的两倍）且快于实时；该平台采用软硬件协同设计优化并行处理与层级地址事件路由，通过Python接口屏蔽硬件细节，在CIFAR-10等任务中验证了事件驱动视觉等能力。",
+    "tags": [
+      "Deep Learning",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出HiAER-Spike软硬件可重构平台，支持大规模（1.6亿神经元/400亿突触）事件驱动神经形态计算且快于实时",
+      "设计Python接口屏蔽硬件细节，优化并行处理与层级路由，支持边缘和云端推理并在多基准任务验证能力"
+    ],
+    "processed_at": "2026-02-23T09:02:44.074374"
+  },
+  {
+    "id": "2602.17937v1",
+    "title": "Analyzing LLM Instruction Optimization for Tabular Fact Verification",
+    "abstract": "Instruction optimization provides a lightweight, model-agnostic approach to enhancing the reasoning performance of large language models (LLMs). This paper presents the first systematic comparison of instruction optimization, based on the DSPy optimization framework, for tabular fact verification. We evaluate four out-of-the-box prompting techniques that cover both text-only prompting and code use: direct prediction, Chain-of-Thought (CoT), ReAct with SQL tools, and CodeAct with Python execution. We study three optimizers from the DSPy framework -- COPRO, MiPROv2, and SIMBA -- across four benchmarks and three model families. We find that instruction optimization consistently improves verification accuracy, with MiPROv2 yielding the most stable gains for CoT, and SIMBA providing the largest benefits for ReAct agents, particularly at larger model scales. Behavioral analyses reveal that SIMBA encourages more direct reasoning paths by applying heuristics, thereby improving numerical comparison abilities in CoT reasoning and helping avoid unnecessary tool calls in ReAct agents. Across different prompting techniques, CoT remains effective for tabular fact checking, especially with smaller models. Although ReAct agents built with larger models can achieve competitive performance, they require careful instruction optimization.",
+    "authors": [
+      "Xiaotang Du",
+      "Giwon Hong",
+      "Wai-Chung Kwan",
+      "Rohit Saxena",
+      "Ivan Titov",
+      "Pasquale Minervini",
+      "Emily Allaway"
+    ],
+    "published": "2026-02-20",
+    "categories": [
+      "cs.CL",
+      "cs.PL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.17937v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.17937v1",
+    "fetched_at": "2026-02-23T08:55:49.919904",
+    "chinese_title": "分析用于表格事实核查的大语言模型指令优化",
+    "chinese_summary": "本文基于DSPy优化框架，系统比较大语言模型（LLM）指令优化在表格事实核查中的效果，评估四种提示技术与三个优化器，发现指令优化可提升验证准确率，MiPROv2对CoT稳定增益、SIMBA对ReAct收益显著，CoT对小模型仍有效，大模型ReAct需精细优化。",
+    "tags": [
+      "LLM",
+      "NLP",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "首次系统比较基于DSPy框架的LLM指令优化在表格事实核查中的效果，覆盖四种提示技术与三个优化器",
+      "揭示不同优化器对不同提示技术的增益规律，及CoT对小模型的有效性、大模型ReAct需精细优化的结论"
+    ],
+    "processed_at": "2026-02-23T09:03:05.661889"
+  },
+  {
+    "id": "2602.17902v1",
+    "title": "El Agente Gráfico: Structured Execution Graphs for Scientific Agents",
+    "abstract": "Large language models (LLMs) are increasingly used to automate scientific workflows, yet their integration with heterogeneous computational tools remains ad hoc and fragile. Current agentic approaches often rely on unstructured text to manage context and coordinate execution, generating often overwhelming volumes of information that may obscure decision provenance and hinder auditability. In this work, we present El Agente Gráfico, a single-agent framework that embeds LLM-driven decision-making within a type-safe execution environment and dynamic knowledge graphs for external persistence. Central to our approach is a structured abstraction of scientific concepts and an object-graph mapper that represents computational state as typed Python objects, stored either in memory or persisted in an external knowledge graph. This design enables context management through typed symbolic identifiers rather than raw text, thereby ensuring consistency, supporting provenance tracking, and enabling efficient tool orchestration. We evaluate the system by developing an automated benchmarking framework across a suite of university-level quantum chemistry tasks previously evaluated on a multi-agent system, demonstrating that a single agent, when coupled to a reliable execution engine, can robustly perform complex, multi-step, and parallel computations. We further extend this paradigm to two other large classes of applications: conformer ensemble generation and metal-organic framework design, where knowledge graphs serve as both memory and reasoning substrates. Together, these results illustrate how abstraction and type safety can provide a scalable foundation for agentic scientific automation beyond prompt-centric designs.",
+    "authors": [
+      "Jiaru Bai",
+      "Abdulrahman Aldossary",
+      "Thomas Swanick",
+      "Marcel Müller",
+      "Yeonghun Kang",
+      "Zijian Zhang",
+      "Jin Won Lee",
+      "Tsz Wai Ko",
+      "Mohammad Ghazi Vakili",
+      "Varinia Bernales",
+      "Alán Aspuru-Guzik"
+    ],
+    "published": "2026-02-19",
+    "categories": [
+      "cs.AI",
+      "cs.MA",
+      "cs.SE",
+      "physics.chem-ph"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.17902v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.17902v1",
+    "fetched_at": "2026-02-23T08:55:49.919940",
+    "chinese_title": "El Agente Gráfico：面向科学智能体的结构化执行图",
+    "chinese_summary": "针对LLM集成异构计算工具的临时脆弱问题，本文提出El Agente Gráfico框架，将LLM决策嵌入类型安全执行环境与动态知识图谱，通过结构化抽象和对象图映射器实现计算状态的类型化表示与持久化，提升上下文一致性、溯源跟踪及工具编排能力；在量子化学等任务中验证了单智能体结合可靠执行引擎可完成复杂多步并行计算，并扩展至构象生成与金属有机框架设计领域。",
+    "tags": [
+      "LLM",
+      "Execution",
+      "Benchmark",
+      "Graph Neural Network"
+    ],
+    "key_contributions": [
+      "提出El Agente Gráfico框架，将LLM决策嵌入类型安全执行环境与动态知识图谱，通过结构化抽象和对象图映射器实现计算状态的类型化表示与持久化，解决异构工具集成的临时脆弱问题，提升上下文一致性、溯源跟踪及工具编排能力",
+      "开发自动化基准框架评估量子化学等任务，验证单智能体结合可靠执行引擎可完成复杂多步并行计算，并将该范式扩展至构象集合生成与金属有机框架设计领域"
+    ],
+    "processed_at": "2026-02-23T09:03:38.746052"
+  }
+]
