@@ -1,0 +1,1237 @@
+[
+  {
+    "id": "2602.20011v1",
+    "title": "Schrödinger bridges with jumps for time series generation",
+    "abstract": "We study generative modeling for time series using entropic optimal transport and the Schrödinger bridge (SB) framework, with a focus on applications in finance and energy modeling. Extending the diffusion-based approach of Hamdouche, Henry-Labordère, Pham, 2023, we introduce a jump-diffusion Schrödinger bridge model that allows for discontinuities in the generative dynamics. Starting from a Schrödinger bridge entropy minimization problem, we reformulate the task as a stochastic control problem whose solution characterizes the optimal controlled jump-diffusion process. When sampled on a fixed time grid, this process generates synthetic time series matching the joint distributions of the observed data. The model is fully data-driven, as both the drift and the jump intensity are learned directly from the data. We propose practical algorithms for training, sampling, and hyperparameter calibration. Numerical experiments on simulated and real datasets, including financial and energy time series, show that incorporating jumps substantially improves the realism of the generated data, in particular by capturing abrupt movements, heavy tails, and regime changes that diffusion-only models fail to reproduce. Comparisons with state-of-the-art generative models highlight the benefits and limitations of the proposed approach.",
+    "authors": [
+      "Stefano De Marco",
+      "Huyên Pham",
+      "Davide Zanni"
+    ],
+    "published": "2026-02-23",
+    "categories": [
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.20011v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.20011v1",
+    "fetched_at": "2026-02-24T08:54:31.112953",
+    "chinese_title": "带跳跃的薛定谔桥时间序列生成",
+    "chinese_summary": "本文基于熵最优输运与薛定谔桥框架，将扩散模型扩展为跳扩散模型用于时间序列生成；模型数据驱动，直接从数据学习漂移与跳跃强度，能捕捉突变、厚尾等扩散模型无法复现的特征，在金融与能源时间序列上提升生成数据真实性。",
+    "tags": [
+      "Time Series",
+      "Deep Learning",
+      "Volatility"
+    ],
+    "key_contributions": [
+      "提出跳扩散型薛定谔桥模型，实现带跳跃的时间序列生成，可捕捉突变、厚尾等扩散模型难以复现的特征",
+      "提出数据驱动的训练、采样及超参数校准算法，在金融与能源数据集上验证了模型对生成数据真实性的提升"
+    ],
+    "processed_at": "2026-02-24T08:57:39.593326"
+  },
+  {
+    "id": "2602.19892v1",
+    "title": "Long-Run Sovereign Debt Composition: An Analytic Ergodic Framework with Explicit Maturity Structure",
+    "abstract": "This paper describes a discrete-time model of regularly-issued sovereign debt dynamics under a deficit-driven nominal debt growth regime that explicitly accounts for granular maturity. New issuance follows fixed allocations across a finite maturity ladder, and the government budget constraint determines total borrowing endogenously. In the deterministic baseline, we identify a sustainability condition for convergence to a steady-state and derive closed-form steady portfolio shares, as well as key metrics for steady cost and risk (proxied as one-period rollover ratio). Extending the model to a stochastic recurrence equation (SRE) driven by interest rates and (normalized) deficits that are stationary and mean-reverting, and using a future-cashflow state representation of debt, we identify an analogous condition for ergodic convergence to a unique invariant distribution. This implies that metrics calculated by Monte Carlo debt simulations driven by factors with these properties will recover the ergodic means of the underlying system, independently of initial conditions, provided the simulation horizon is sufficiently long. Analytical formulae for expectations of certain key metrics under this invariant distribution are derived, and agreement with simulation is observed. We find that the introduction of stochastic interest-rate/deficit correlation into the framework leads to intuitive correction terms to their deterministic-baseline counterparts.",
+    "authors": [
+      "Christopher Cameron"
+    ],
+    "published": "2026-02-23",
+    "categories": [
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.19892v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.19892v1",
+    "fetched_at": "2026-02-24T08:54:31.113006",
+    "chinese_title": "长期主权债务结构：含明确期限结构的解析遍历框架",
+    "chinese_summary": "论文构建明确考虑期限结构的离散时间主权债务动态模型，确定性基线下推导稳态收敛条件、债务组合份额及成本风险指标闭式解；扩展至随机环境（利率、赤字平稳均值回复），识别遍历收敛条件并推导不变分布下关键指标期望，发现随机相关性对确定性结果的修正作用。",
+    "tags": [
+      "Risk Management",
+      "Factor Model",
+      "Asset Pricing"
+    ],
+    "key_contributions": [
+      "提出含明确期限结构的主权债务动态模型，确定性框架下推导稳态收敛条件及债务组合份额、成本风险指标的闭式解",
+      "扩展至随机环境（利率、赤字平稳均值回复），识别遍历收敛条件，推导不变分布下关键指标期望并揭示随机相关性的修正效应"
+    ],
+    "processed_at": "2026-02-24T08:57:59.092068"
+  },
+  {
+    "id": "2602.19841v1",
+    "title": "Detecting and Explaining Unlawful Insider Trading: A Shapley Value and Causal Forest Approach to Identifying Key Drivers and Causal Relationships",
+    "abstract": "Corporate insiders trade for diverse reasons, often possessing Material Non-Public Information (MNPI). Determining whether specific trades leverage MNPI is a significant challenge due to inherent complexity. This study focuses on two critical objectives: accurately detecting Unlawful Insider Trading (UIT) and identifying key features explaining classification. The analysis demonstrates how combining Shapley Values (SHAP) and Causal Forest (CF) reveals these explanatory drivers.   The findings underscore the necessity of causality in identifying and interpreting UIT, requiring the consideration of alternative scenarios and potential outcomes. Within a high-dimensional feature space, the proposed architecture integrates state-of-the-art techniques to achieve high classification accuracy. The framework provides robust feature rankings via SHAP and causal significance assessments through CF, facilitating the discovery of unique causal relationships.   Statistically significant relationships are documented between the outcome and several key features, including director status, price-to-book ratio, return, and market beta. These features significantly influence the likelihood of UIT, suggesting potential links between insider behavior and factors such as information asymmetry, valuation risk, market volatility, and stock performance. The analysis draws attention to the complexities of financial causality, noting that while initial descriptors offer intuitive insights, deeper examination is required to understand nuanced impacts. These findings reaffirm the architectural flexibility of decision tree models. By incorporating heterogeneity during tree construction, these models effectively uncover latent structures within trade, finance, and governance data, characterizing fraudulent behavior while maintaining reliable results.",
+    "authors": [
+      "Krishna Neupane",
+      "Igor Griva",
+      "Robert Axtell",
+      "William Kennedy",
+      "Jason Kinser"
+    ],
+    "published": "2026-02-23",
+    "categories": [
+      "q-fin.ST"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.19841v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.19841v1",
+    "fetched_at": "2026-02-24T08:54:31.113068",
+    "chinese_title": "非法内幕交易的检测与解释：基于Shapley值和因果森林的关键驱动因素及因果关系识别",
+    "chinese_summary": "本研究结合Shapley值（SHAP）与因果森林（CF）构建框架，既实现非法内幕交易（UIT）的高精度检测，又识别关键解释特征并评估其因果关系；发现董事身份、市净率等特征与UIT显著相关，强调因果分析在UIT识别解释中的必要性。",
+    "tags": [
+      "Anomaly",
+      "Risk Management",
+      "Factor Mining"
+    ],
+    "key_contributions": [
+      "提出融合SHAP与因果森林的架构，在高维特征空间中同时实现UIT高精度分类与关键特征的稳健排序及因果显著性评估",
+      "揭示董事身份、市净率等特征与UIT的统计显著因果关系，明确信息不对称、估值风险等因素对内幕交易行为的影响"
+    ],
+    "processed_at": "2026-02-24T08:58:16.324968"
+  },
+  {
+    "id": "2602.19732v1",
+    "title": "VOLatility Archive for Realized Estimates (VOLARE)",
+    "abstract": "VOLARE (VOLatility Archive for Realized Estimates - https://volare.unime.it) is an open research infrastructure providing standardized realized volatility and covariance measures constructed from ultra-high-frequency financial data. The platform processes tick-level observations across equities, exchange rates, and futures using an asset-specific pipeline that addresses heterogeneous trading calendars, microstructure noise, and timestamp precision. For equities, price series are cleaned using a documented outlier detection procedure and sampled at regular intervals.   VOLARE delivers a comprehensive set of realized estimators, including realized variance, range-based measures, bipower variation, semivariances, realized quarticity, realized kernels, and multivariate covariance measures, ensuring methodological consistency and cross-asset comparability. In addition to bulk dataset download, the platform supports interactive visualization and real-time estimation of established volatility models such as HAR and MEM specifications.",
+    "authors": [
+      "Fabrizio Cipollini",
+      "Giulia Cruciani",
+      "Giampiero M. Gallo",
+      "Alessandra Insana",
+      "Edoardo Otranto",
+      "Fabio Spagnolo"
+    ],
+    "published": "2026-02-23",
+    "categories": [
+      "q-fin.ST"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.19732v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.19732v1",
+    "fetched_at": "2026-02-24T08:54:31.113133",
+    "chinese_title": "VOLARE（已实现估计的波动率档案库）",
+    "chinese_summary": "VOLARE是一个开放研究基础设施，基于超高频金融数据构建标准化的已实现波动率和协方差指标，通过资产特定流程解决交易日历异质性、微观结构噪声及时间戳精度问题；还提供多种已实现估计量、批量下载、交互式可视化，以及HAR、MEM等波动率模型的实时估计。",
+    "tags": [
+      "High Frequency",
+      "Market Microstructure",
+      "Volatility",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "通过资产特定流程处理超高频数据的关键问题，并支持波动率模型实时估计与可视化"
+    ],
+    "processed_at": "2026-02-24T08:58:27.793096"
+  },
+  {
+    "id": "2602.19663v1",
+    "title": "The impact of class imbalance in logistic regression models for low-default portfolios in credit risk",
+    "abstract": "In this paper, we study how class imbalance, typical of low-default credit portfolios, affects the performance of logistic regression models. Using a simulation study with controlled data-generating mechanisms, we vary (i) the level of class imbalance and (ii) the strength of association between the predictors and the response. The results show that, for a given strength of association, achievable classification accuracy deteriorates markedly as the event rate decreases, and the optimal classification cut-off shifts with the level of imbalance. In contrast, the Gini coefficient is comparatively stable with respect to class imbalance once sample sizes are sufficiently large, even when classification accuracy is strongly affected. As a practical guideline, we summarise attainable classification performance as a function of the event rate and strength of association between the predictors and the response.",
+    "authors": [
+      "Willem D. Schutte",
+      "Charl Pretorius",
+      "Neill Smit",
+      "Leandra van der Merwe",
+      "Robert Maxwell"
+    ],
+    "published": "2026-02-23",
+    "categories": [
+      "q-fin.RM",
+      "stat.CO"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.19663v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.19663v1",
+    "fetched_at": "2026-02-24T08:54:31.113194",
+    "chinese_title": "信用风险中低违约组合下逻辑回归模型的类别不平衡影响",
+    "chinese_summary": "本文通过控制数据生成机制的模拟研究，分析类别不平衡和预测因子与响应的关联强度对逻辑回归模型性能的影响；发现给定关联强度下事件率降低显著恶化分类准确率、最优阈值随不平衡变化，而样本量足够时基尼系数相对稳定，并总结分类性能与事件率及关联强度的函数关系作为实用指南。",
+    "tags": [
+      "Risk Management",
+      "Anomaly"
+    ],
+    "key_contributions": [
+      "通过模拟研究揭示类别不平衡和预测因子关联强度对逻辑回归模型性能的影响规律，包括准确率随事件率降低恶化、最优阈值随不平衡变化、样本量足够时基尼系数稳定",
+      "总结分类性能与事件率及预测因子关联强度的函数关系，为信用风险低违约组合的模型应用提供实用指南"
+    ],
+    "processed_at": "2026-02-24T08:58:58.562709"
+  },
+  {
+    "id": "2602.19590v1",
+    "title": "Metaorder modelling and identification from public data",
+    "abstract": "Market-order flow in financial markets exhibits long-range correlations. This is a widely known stylised fact of financial markets. A popular hypothesis for this stylised fact comes from the Lillo-Mike-Farmer (LMF) order-splitting theory. However, quantitative tests of this theory have historically relied on proprietary datasets with trader identifiers, limiting reproducibility and cross-market validation. We show that the LMF theory can be validated using publicly available Johannesburg Stock Exchange (JSE) data by leveraging recently developed methods for reconstructing synthetic metaorders. We demonstrate the validation using 3 years of Transaction and Quote Data (TAQ) for the largest 100 stocks on the JSE when assuming that there are either N=50 or N=150 effective traders managing metaorders in the market.",
+    "authors": [
+      "Ezra Goliath",
+      "Tim Gebbie"
+    ],
+    "published": "2026-02-23",
+    "categories": [
+      "q-fin.TR",
+      "cs.CE",
+      "q-fin.ST",
+      "stat.CO"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.19590v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.19590v1",
+    "fetched_at": "2026-02-24T08:54:31.113240",
+    "chinese_title": "基于公开数据的元订单建模与识别",
+    "chinese_summary": "金融市场订单流存在长程相关性，Lillo-Mike-Farmer（LMF）订单拆分理论是解释之一，但此前定量测试依赖带交易者标识的私有数据，限制可重复性与跨市场验证；本文利用约翰内斯堡证券交易所（JSE）3年公开交易与报价（TAQ）数据，结合合成元订单重建方法，在假设市场有效交易者数量为50或150的情况下，验证了LMF理论。",
+    "tags": [
+      "Market Microstructure",
+      "High Frequency",
+      "Algorithmic Trading",
+      "Execution"
+    ],
+    "key_contributions": [
+      "突破LMF理论验证依赖私有数据的局限，首次基于公开TAQ数据完成该理论的定量验证",
+      "结合合成元订单重建方法，在合理假设有效交易者数量的前提下，提升了验证的可重复性与跨市场适用性"
+    ],
+    "processed_at": "2026-02-24T08:59:18.118146"
+  },
+  {
+    "id": "2602.19419v1",
+    "title": "RAmmStein: Regime Adaptation in Mean-reverting Markets with Stein Thresholds -- Optimal Impulse Control in Concentrated AMMs",
+    "abstract": "Concentrated liquidity provision in decentralized exchanges presents a fundamental Impulse Control problem. Liquidity Providers (LPs) face a non-trivial trade-off between maximizing fee accrual through tight price-range concentration and minimizing the friction costs of rebalancing, including gas fees and swap slippage. Existing methods typically employ heuristic or threshold strategies that fail to account for market dynamics. This paper formulates liquidity management as an optimal control problem and derives the corresponding Hamilton-Jacobi-Bellman quasi-variational inequality (HJB-QVI). We present an approximate solution RAmmStein, a Deep Reinforcement Learning method that incorporates the mean-reversion speed (theta) of an Ornstein-Uhlenbeck process among other features as input to the model. We demonstrate that the agent learns to separate the state space into regions of action and inaction. We evaluate the framework using high-frequency 1Hz Coinbase trade data comprising over 6.8M trades. Experimental results show that RAmmStein achieves a superior net ROI of 0.72% compared to both passive and aggressive strategies. Notably, the agent reduces rebalancing frequency by 67% compared to a greedy rebalancing strategy while maintaining 88% active time. Our results demonstrate that regime-aware laziness can significantly improve capital efficiency by preserving the returns that would otherwise be eroded by the operational costs.",
+    "authors": [
+      "Pranay Anchuri"
+    ],
+    "published": "2026-02-23",
+    "categories": [
+      "cs.LG",
+      "q-fin.TR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.19419v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.19419v1",
+    "fetched_at": "2026-02-24T08:54:31.113277",
+    "chinese_title": "RAmmStein：基于Stein阈值的均值回复市场机制自适应——集中式自动做市商中的最优脉冲控制",
+    "chinese_summary": "本文将去中心化交易所的集中流动性提供建模为最优控制问题，提出结合均值回复速度等特征的深度强化学习方法RAmmStein，解决流动性提供者在价格区间集中与再平衡成本间的权衡问题；实验用高频Coinbase数据验证，RAmmStein净ROI优于被动/激进策略，再平衡频率降低67%且保持88%活跃时间，显著提升资本效率。",
+    "tags": [
+      "Reinforcement Learning",
+      "Market Making",
+      "High Frequency",
+      "Algorithmic Trading"
+    ],
+    "key_contributions": [
+      "构建集中流动性管理的最优控制框架，推导HJB-QVI，提出结合均值回复特征的DRL方法RAmmStein，学习状态空间的行动/不行动区域",
+      "实验证明RAmmStein在高频数据下净ROI更优，大幅降低再平衡频率（67%）同时保持88%活跃时间，提升资本效率"
+    ],
+    "processed_at": "2026-02-24T08:59:45.225636"
+  },
+  {
+    "id": "2602.19092v1",
+    "title": "Finite Element Solution of the Two-Dimensional Bates Model for Option Pricing Under Stochastic Volatility and Jumps",
+    "abstract": "We propose a fourth--order compact finite--difference (HOC--FD) scheme for the transformed Bates partial integro--differential equation (PIDE). The method employs an implicit--explicit (IMEX) Crank--Nicolson framework for local terms and Simpson quadrature for the jump integral. Benchmarks against second--order finite differences (FD) and quadratic finite elements (FEM, p=2) confirm near--fourth--order spatial accuracy for HOC--FD, near--second--order for FEM, and second--order temporal convergence for all time integrators. Efficiency tests show that HOC--FD achieves similar accuracy at up to two orders of magnitude lower runtime than FEM, establishing it as a practical baseline for option pricing under stochastic volatility jump--diffusion models.",
+    "authors": [
+      "Neda Bagheri Renani",
+      "Daniel Sevcovic"
+    ],
+    "published": "2026-02-22",
+    "categories": [
+      "q-fin.PR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.19092v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.19092v1",
+    "fetched_at": "2026-02-24T08:54:31.113319",
+    "chinese_title": "二维Bates模型下随机波动率与跳跃期权定价的有限元解法",
+    "chinese_summary": "本文针对随机波动率与跳跃下的Bates偏积分微分方程（PIDE），提出四阶紧致有限差分（HOC-FD）方案，采用隐式-显式（IMEX）Crank-Nicolson框架处理局部项、Simpson积分处理跳跃积分；基准测试显示该方案空间精度近四阶、时间精度二阶，且相同精度下运行时间比二次有限元低两个数量级，为相关期权定价提供实用基准。",
+    "tags": [
+      "Options",
+      "Volatility",
+      "Asset Pricing",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出四阶紧致有限差分（HOC-FD）方案求解Bates模型PIDE，结合IMEX时间离散与Simpson积分处理跳跃项",
+      "基准测试验证HOC-FD精度及效率优势，为随机波动率跳跃扩散期权定价提供实用基准"
+    ],
+    "processed_at": "2026-02-24T09:00:07.885904"
+  },
+  {
+    "id": "2602.18912v1",
+    "title": "Overreaction as an indicator for momentum in algorithmic trading: A Case of AAPL stocks",
+    "abstract": "This paper investigates whether short-term market overreactions can be systematically predicted and monetized as momentum signals using high-frequency emotional information and modern machine learning methods. Focusing on Apple Inc. (AAPL), we construct a comprehensive intraday dataset that combines volatility normalized returns with transformer-based emotion features extracted from Twitter messages. Overreactions are defined as extreme return realizations relative to contemporaneous volatility and transaction costs and are modeled as a three-class prediction problem. We evaluate the performance of several nonlinear classifiers, including XGBoost, Random Forests, Deep Neural Networks, and Bidirectional LSTMs, across multiple intraday frequencies (1, 5, 10, and 15 minute data). Model outputs are translated into trading strategies and assessed using risk-adjusted performance measures and formal statistical tests. The results show that machine learning models significantly outperform benchmark overreaction rules at ultra short horizons, while classical behavioral momentum effects dominate at intermediate frequencies, particularly around 10 minutes. Explainability analysis based on SHAP reveals that volatility and negative emotions, especially fear and sadness, play a central role in driving predicted overreactions. Overall, the findings demonstrate that emotion-driven overreactions contain a predictable structure that can be exploited by machine learning models, offering new insights into the behavioral origins of intraday momentum and the interaction between sentiment, volatility, and algorithmic trading.",
+    "authors": [
+      "Szymon Lis",
+      "Robert Ślepaczuk",
+      "Paweł Sakowski"
+    ],
+    "published": "2026-02-21",
+    "categories": [
+      "q-fin.TR",
+      "q-fin.PM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.18912v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.18912v1",
+    "fetched_at": "2026-02-24T08:54:31.113368",
+    "chinese_title": "过度反应作为算法交易中动量的指标：以苹果公司（AAPL）股票为例",
+    "chinese_summary": "论文聚焦AAPL股票，结合Twitter transformer提取的情绪特征与波动率归一化收益，用XGBoost、双向LSTM等多种机器学习模型预测短期过度反应；转化为交易策略后发现ML模型超短周期表现优于基准规则，SHAP解释显示波动率和负面情绪是核心驱动因素，证明情绪驱动的过度反应可被算法交易利用。",
+    "tags": [
+      "Behavioral Finance",
+      "Investor Sentiment",
+      "Deep Learning",
+      "Algorithmic Trading",
+      "High Frequency"
+    ],
+    "key_contributions": [
+      "首次结合Transformer情绪特征与波动率归一化收益，用多类ML模型预测AAPL股票短期过度反应，超短周期显著优于基准规则；通过SHAP解释揭示波动率和负面情绪是预测过度反应的核心因素，验证情绪驱动过度反应的可预测性与交易价值。"
+    ],
+    "processed_at": "2026-02-24T09:00:24.625188"
+  },
+  {
+    "id": "2602.18895v1",
+    "title": "Could Large Language Models work as Post-hoc Explainability Tools in Credit Risk Models?",
+    "abstract": "Post-hoc explainability is central to credit risk model governance, yet widely used tools such as coefficient-based attributions and SHapley Additive exPlanations (SHAP) often produce numerical outputs that are difficult to communicate to non-technical stakeholders. This paper investigates whether large language models (LLMs) can serve as post-hoc explainability tools for credit risk predictions through in-context learning, focusing on two roles: translators and autonomous explainers. Using a personal lending dataset from LendingClub, we evaluate three commercial LLMs, including GPT-4-turbo, Claude Sonnet 4, and Gemini-2.0-Flash. Results provide strong evidence for the translator role. In contrast, autonomous explanations show low alignment with model-based attributions. Few-shot prompting improves feature overlap for logistic regression but does not consistently benefit XGBoost, suggesting that LLMs have limited capacity to recover non-linear, interaction-driven reasoning from prompt cues alone. Our findings position LLMs as effective narrative interfaces grounded in auditable model attributions, rather than as substitutes for post-hoc explainers in credit risk model governance. Practitioners should leverage LLMs to bridge the communication gap between complex model outputs and regulatory or business stakeholders, while preserving the rigor and traceability required by credit risk governance frameworks.",
+    "authors": [
+      "Wenxi Geng",
+      "Dingyuan Liu",
+      "Liya Li",
+      "Yiqing Wang"
+    ],
+    "published": "2026-02-21",
+    "categories": [
+      "q-fin.RM",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.18895v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.18895v1",
+    "fetched_at": "2026-02-24T08:54:31.113419",
+    "chinese_title": "大语言模型能否作为信用风险模型的事后可解释性工具？",
+    "chinese_summary": "本文以LendingClub个人贷款数据为基础，评估GPT-4-turbo等三个商业大语言模型在信用风险模型事后解释中的翻译者与自主解释者角色，发现LLM作为翻译者可有效将数值归因转为易理解的叙事，但自主解释与模型归因对齐度低；结论是LLM应作为基于可审计归因的叙事接口，而非传统事后解释工具的替代品。",
+    "tags": [
+      "LLM",
+      "Risk Management",
+      "Transformer"
+    ],
+    "key_contributions": [
+      "验证大语言模型可作为信用风险模型事后解释的有效叙事翻译者，桥接技术与非技术 stakeholder 沟通 gap",
+      "指出LLM自主解释与模型归因对齐度低，明确其应作为基于可审计归因的叙事接口而非传统解释工具的替代品"
+    ],
+    "processed_at": "2026-02-24T09:00:43.689504"
+  },
+  {
+    "id": "2602.18572v1",
+    "title": "Sub-City Real Estate Price Index Forecasting at Weekly Horizons Using Satellite Radar and News Sentiment",
+    "abstract": "Reliable real estate price indicators are typically published at city level and low frequency, limiting their use for neighborhood-scale monitoring and long-horizon planning. We study whether sub-city price indices can be forecasted at weekly frequency by combining physical development signals from satellite radar with market narratives from news text. Using over 350,000 transactions from Dubai Land Department (2015-2025), we construct weekly price indices for 19 sub-city regions and evaluate forecasts from 2 to 34 weeks ahead. Our framework fuses regional transaction history with Sentinel-1 SAR backscatter, news sentiment combining lexical tone and semantic embeddings, and macroeconomic context. Results are strongly horizon dependent: at horizons up to 10 weeks, price history alone matches multimodal configurations, but beyond 14 weeks sentiment and SAR become critical. At long horizons (26-34 weeks), the full multimodal model reduces mean absolute error from 4.48 to 2.93 (35% reduction), with gains statistically significant across regions. Nonparametric learners consistently outperform deep architectures in this data regime. These findings establish benchmarks for weekly sub-city index forecasting and demonstrate that remote sensing and news sentiment materially improve predictability at strategically relevant horizons.",
+    "authors": [
+      "Baris Arat",
+      "Hasan Fehmi Ates",
+      "Emre Sefer"
+    ],
+    "published": "2026-02-20",
+    "categories": [
+      "cs.LG",
+      "q-fin.ST"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.18572v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.18572v1",
+    "fetched_at": "2026-02-24T08:54:31.113474",
+    "chinese_title": "结合卫星雷达与新闻情感的子城市房地产价格指数周度预测",
+    "chinese_summary": "论文针对子城市房地产价格指数周度预测问题，融合卫星雷达物理信号、新闻文本情感（词汇语气+语义嵌入）及区域交易历史、宏观经济背景构建预测框架；发现预测效果依赖时间 horizon，短期（≤10周）历史数据足够，中长期（≥14周）情感与SAR关键，全模态模型在26-34周时MAE降低35%，且非参数学习器优于深度架构，建立了周度子城市指数预测基准。",
+    "tags": [
+      "Sentiment Analysis",
+      "Time Series",
+      "Asset Pricing",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "构建融合卫星雷达物理信号、新闻情感及多源数据的子城市房地产价格指数周度预测框架",
+      "揭示预测效果的时间horizon依赖性，验证中长期下多模态融合的显著提升作用，建立周度子城市指数预测基准"
+    ],
+    "processed_at": "2026-02-24T09:01:02.048963"
+  },
+  {
+    "id": "2602.19393v1",
+    "title": "In Defense of Cosine Similarity: Normalization Eliminates the Gauge Freedom",
+    "abstract": "Steck, Ekanadham, and Kallus [arXiv:2403.05440] demonstrate that cosine similarity of learned embeddings from matrix factorization models can be rendered arbitrary by a diagonal ``gauge'' matrix $D$. Their result is correct and important for practitioners who compute cosine similarity on embeddings trained with dot-product objectives. However, we argue that their conclusion, cautioning against cosine similarity in general, conflates the pathology of an incompatible training objective with the geometric validity of cosine distance on the unit sphere. We prove that when embeddings are constrained to the unit sphere $\\mathbb{S}^{d-1}$ (either during or after training with an appropriate objective), the $D$-matrix ambiguity vanishes identically, and cosine distance reduces to exactly half the squared Euclidean distance. This monotonic equivalence implies that cosine-based and Euclidean-based neighbor rankings are identical on normalized embeddings. The ``problem'' with cosine similarity is not cosine similarity, it is the failure to normalize.",
+    "authors": [
+      "Taha Bouhsine"
+    ],
+    "published": "2026-02-23",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.19393v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.19393v1",
+    "fetched_at": "2026-02-24T08:54:37.239429",
+    "chinese_title": "为余弦相似度辩护：归一化消除规范自由度",
+    "chinese_summary": "本文针对Steck等人指出的矩阵分解模型嵌入余弦相似度存在规范矩阵D导致的任意性问题，证明当嵌入约束于单位球面时，D的模糊性完全消失，余弦距离与一半平方欧氏距离单调等价且邻域排序一致，指出余弦相似度的“问题”源于未归一化而非其本身。",
+    "tags": [
+      "Factor Model",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "证明嵌入约束于单位球面时，余弦相似度的规范矩阵D模糊性完全消失",
+      "揭示余弦距离与一半平方欧氏距离单调等价、邻域排序一致，澄清余弦相似度的“问题”源于未归一化而非其本身"
+    ],
+    "processed_at": "2026-02-24T09:01:16.919371"
+  },
+  {
+    "id": "2602.20100v1",
+    "title": "Transcending the Annotation Bottleneck: AI-Powered Discovery in Biology and Medicine",
+    "abstract": "The dependence on expert annotation has long constituted the primary rate-limiting step in the application of artificial intelligence to biomedicine. While supervised learning drove the initial wave of clinical algorithms, a paradigm shift towards unsupervised and self-supervised learning (SSL) is currently unlocking the latent potential of biobank-scale datasets. By learning directly from the intrinsic structure of data - whether pixels in a magnetic resonance image (MRI), voxels in a volumetric scan, or tokens in a genomic sequence - these methods facilitate the discovery of novel phenotypes, the linkage of morphology to genetics, and the detection of anomalies without human bias. This article synthesises seminal and recent advances in \"learning without labels,\" highlighting how unsupervised frameworks can derive heritable cardiac traits, predict spatial gene expression in histology, and detect pathologies with performance that rivals or exceeds supervised counterparts.",
+    "authors": [
+      "Soumick Chatterjee"
+    ],
+    "published": "2026-02-23",
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "eess.IV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.20100v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.20100v1",
+    "fetched_at": "2026-02-24T08:54:43.362603",
+    "chinese_title": "突破标注瓶颈：生物医学中的AI驱动发现",
+    "chinese_summary": "论文指出生物医学AI应用长期受专家标注限制，当前正从监督学习转向无监督/自监督学习（SSL），这些方法通过学习数据内在结构（如MRI像素、基因组序列token等），可发现新表型、关联形态与遗传、检测异常，性能媲美甚至超越监督学习，解锁生物银行规模数据集潜力。",
+    "tags": [
+      "Deep Learning",
+      "Anomaly",
+      "Transformer"
+    ],
+    "key_contributions": [
+      "提出无监督/自监督学习突破生物医学AI标注瓶颈，解锁生物银行规模数据潜力",
+      "展示该方法可发现新表型、关联形态与遗传、检测异常，性能媲美监督学习"
+    ],
+    "processed_at": "2026-02-24T09:01:33.119635"
+  },
+  {
+    "id": "2602.20019v1",
+    "title": "Learning Discriminative and Generalizable Anomaly Detector for Dynamic Graph with Limited Supervision",
+    "abstract": "Dynamic graph anomaly detection (DGAD) is critical for many real-world applications but remains challenging due to the scarcity of labeled anomalies. Existing methods are either unsupervised or semi-supervised: unsupervised methods avoid the need for labeled anomalies but often produce ambiguous boundary, whereas semi-supervised methods can overfit to the limited labeled anomalies and generalize poorly to unseen anomalies. To address this gap, we consider a largely underexplored problem in DGAD: learning a discriminative boundary from normal/unlabeled data, while leveraging limited labeled anomalies \\textbf{when available} without sacrificing generalization to unseen anomalies. To this end, we propose an effective, generalizable, and model-agnostic framework with three main components: (i) residual representation encoding that capture deviations between current interactions and their historical context, providing anomaly-relevant signals; (ii) a restriction loss that constrain the normal representations within an interval bounded by two co-centered hyperspheres, ensuring consistent scales while keeping anomalies separable; (iii) a bi-boundary optimization strategy that learns a discriminative and robust boundary using the normal log-likelihood distribution modeled by a normalizing flow. Extensive experiments demonstrate the superiority of our framework across diverse evaluation settings.",
+    "authors": [
+      "Yuxing Tian",
+      "Yiyan Qi",
+      "Fengran Mo",
+      "Weixu Zhang",
+      "Jian Guo",
+      "Jian-Yun Nie"
+    ],
+    "published": "2026-02-23",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.20019v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.20019v1",
+    "fetched_at": "2026-02-24T08:54:43.362637",
+    "chinese_title": "基于有限监督的动态图判别性泛化异常检测器学习",
+    "chinese_summary": "本文针对动态图异常检测中标签稀缺导致的泛化性不足问题，提出一个三组件框架：残差表示编码捕捉当前交互与历史上下文的偏差、约束损失将正常表示限制在同心超球区间内、双边界优化利用归一化流建模的正常似然分布学习判别鲁棒边界；实验验证了该框架在多样评估设置下的优越性。",
+    "tags": [
+      "Anomaly",
+      "Graph Neural Network",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出面向有限监督的动态图异常检测框架，解决现有方法泛化差或边界模糊的问题",
+      "设计残差编码、约束损失和双边界优化策略，提升异常检测的判别性与泛化性"
+    ],
+    "processed_at": "2026-02-24T09:01:58.824337"
+  },
+  {
+    "id": "2602.19984v1",
+    "title": "Multivariate time-series forecasting of ASTRI-Horn monitoring data: A Normal Behavior Model",
+    "abstract": "This study presents a Normal Behavior Model (NBM) developed to forecast monitoring time-series data from the ASTRI-Horn Cherenkov telescope under normal operating conditions. The analysis focused on 15 physical variables acquired by the Telescope Control Unit between September 2022 and July 2024, representing sensor measurements from the Azimuth and Elevation motors. After data cleaning, resampling, feature selection, and correlation analysis, the dataset was segmented into fixed-length intervals, in which the first I samples represented the input sequence provided to the model, while the forecast length, T, indicated the number of future time steps to be predicted. A sliding-window technique was then applied to increase the number of intervals. A Multi-Layer Perceptron (MLP) was trained to perform multivariate forecasting across all features simultaneously. Model performance was evaluated using the Mean Squared Error (MSE) and the Normalized Median Absolute Deviation (NMAD), and it was also benchmarked against a Long Short-Term Memory (LSTM) network. The MLP model demonstrated consistent results across different features and I-T configurations, and matched the performance of the LSTM while converging faster. It achieved an MSE of 0.019+/-0.003 and an NMAD of 0.032+/-0.009 on the test set under its best configuration (4 hidden layers, 720 units per layer, and I-T lengths of 300 samples each, corresponding to 5 hours at 1-minute resolution). Extending the forecast horizon up to 6.5 hours-the maximum allowed by this configuration-did not degrade performance, confirming the model's effectiveness in providing reliable hour-scale predictions. The proposed NBM provides a powerful tool for enabling early anomaly detection in online ASTRI-Horn monitoring time series, offering a basis for the future development of a prognostics and health management system that supports predictive maintenance.",
+    "authors": [
+      "Federico Incardona",
+      "Alessandro Costa",
+      "Farida Farsian",
+      "Francesco Franchina",
+      "Giuseppe Leto",
+      "Emilio Mastriani",
+      "Kevin Munari",
+      "Giovanni Pareschi",
+      "Salvatore Scuderi",
+      "Sebastiano Spinello",
+      "Gino Tosti"
+    ],
+    "published": "2026-02-23",
+    "categories": [
+      "astro-ph.IM",
+      "astro-ph.HE",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.19984v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.19984v1",
+    "fetched_at": "2026-02-24T08:54:43.362674",
+    "chinese_title": "ASTRI-Horn监测数据的多变量时间序列预测：一种正常行为模型",
+    "chinese_summary": "该研究针对ASTRI-Horn切伦科夫望远镜的监测数据构建正常行为模型（NBM），采用多感知器（MLP）实现多变量时间序列预测；模型在最优配置下测试集MSE为0.019±0.003、NMAD为0.032±0.009，性能与长短期记忆网络（LSTM）相当但收敛更快。",
+    "tags": [
+      "Time Series",
+      "Deep Learning",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "构建了针对ASTRI-Horn望远镜监测数据的正常行为模型，实现多变量时间序列预测",
+      "提出的MLP模型预测性能与LSTM相当且收敛更快，最优配置下取得良好精度"
+    ],
+    "processed_at": "2026-02-24T09:02:15.875231"
+  },
+  {
+    "id": "2602.19907v1",
+    "title": "Gradient based Severity Labeling for Biomarker Classification in OCT",
+    "abstract": "In this paper, we propose a novel selection strategy for contrastive learning for medical images. On natural images, contrastive learning uses augmentations to select positive and negative pairs for the contrastive loss. However, in the medical domain, arbitrary augmentations have the potential to distort small localized regions that contain the biomarkers we are interested in detecting. A more intuitive approach is to select samples with similar disease severity characteristics, since these samples are more likely to have similar structures related to the progression of a disease. To enable this, we introduce a method that generates disease severity labels for unlabeled OCT scans on the basis of gradient responses from an anomaly detection algorithm. These labels are used to train a supervised contrastive learning setup to improve biomarker classification accuracy by as much as 6% above self-supervised baselines for key indicators of Diabetic Retinopathy.",
+    "authors": [
+      "Kiran Kokilepersaud",
+      "Mohit Prabhushankar",
+      "Ghassan AlRegib",
+      "Stephanie Trejo Corona",
+      "Charles Wykoff"
+    ],
+    "published": "2026-02-23",
+    "categories": [
+      "cs.CV",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.19907v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.19907v1",
+    "fetched_at": "2026-02-24T08:54:43.362699",
+    "chinese_title": "基于梯度的严重度标注用于OCT中的生物标志物分类",
+    "chinese_summary": "本文针对医疗图像对比学习提出新样本选择策略，避免任意增强扭曲生物标志物区域；通过异常检测算法的梯度响应生成未标注OCT扫描的疾病严重度标签，用于训练有监督对比学习，使糖尿病视网膜病变关键指标分类准确率较自监督基线提升最多6%。",
+    "tags": [
+      "Deep Learning",
+      "Anomaly"
+    ],
+    "key_contributions": [
+      "提出基于疾病严重度特征的对比学习样本选择策略，解决医疗图像中增强扭曲生物标志物的问题",
+      "通过异常检测梯度响应生成未标注OCT的严重度标签，提升糖尿病视网膜病变生物标志物分类准确率"
+    ],
+    "processed_at": "2026-02-24T09:02:34.489951"
+  },
+  {
+    "id": "2602.19844v1",
+    "title": "LLM-enabled Applications Require System-Level Threat Monitoring",
+    "abstract": "LLM-enabled applications are rapidly reshaping the software ecosystem by using large language models as core reasoning components for complex task execution. This paradigm shift, however, introduces fundamentally new reliability challenges and significantly expands the security attack surface, due to the non-deterministic, learning-driven, and difficult-to-verify nature of LLM behavior. In light of these emerging and unavoidable safety challenges, we argue that such risks should be treated as expected operational conditions rather than exceptional events, necessitating a dedicated incident-response perspective. Consequently, the primary barrier to trustworthy deployment is not further improving model capability but establishing system-level threat monitoring mechanisms that can detect and contextualize security-relevant anomalies after deployment -- an aspect largely underexplored beyond testing or guardrail-based defenses. Accordingly, this position paper advocates systematic and comprehensive monitoring of security threats in LLM-enabled applications as a prerequisite for reliable operation and a foundation for dedicated incident-response frameworks.",
+    "authors": [
+      "Yedi Zhang",
+      "Haoyu Wang",
+      "Xianglin Yang",
+      "Jin Song Dong",
+      "Jun Sun"
+    ],
+    "published": "2026-02-23",
+    "categories": [
+      "cs.CR",
+      "cs.AI",
+      "cs.SE"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.19844v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.19844v1",
+    "fetched_at": "2026-02-24T08:54:43.362724",
+    "chinese_title": "支持大语言模型的应用需要系统级威胁监控",
+    "chinese_summary": "该论文指出LLM驱动的应用因模型非确定性、难验证等特性引入新的可靠性与安全挑战，攻击面显著扩大；认为此类风险应视为常规操作条件，当前部署核心障碍是缺乏系统级威胁监控机制（而非提升模型能力），该机制需检测并上下文化部署后的安全异常；倡导将系统级安全监控作为可靠运行前提与事件响应框架基础。",
+    "tags": [
+      "LLM",
+      "Risk Management",
+      "Anomaly"
+    ],
+    "key_contributions": [
+      "揭示LLM驱动应用的新型安全挑战，提出风险应视为常规操作条件"
+    ],
+    "processed_at": "2026-02-24T09:02:56.349599"
+  },
+  {
+    "id": "2602.19785v1",
+    "title": "Unsupervised Anomaly Detection in NSL-KDD Using $β$-VAE: A Latent Space and Reconstruction Error Approach",
+    "abstract": "As Operational Technology increasingly integrates with Information Technology, the need for Intrusion Detection Systems becomes more important. This paper explores an unsupervised approach to anomaly detection in network traffic using $β$-Variational Autoencoders on the NSL-KDD dataset. We investigate two methods: leveraging the latent space structure by measuring distances from test samples to the training data projections, and using the reconstruction error as a conventional anomaly detection metric. By comparing these approaches, we provide insights into their respective advantages and limitations in an unsupervised setting. Experimental results highlight the effectiveness of latent space exploitation for classification tasks.",
+    "authors": [
+      "Dylan Baptiste",
+      "Ramla Saddem",
+      "Alexandre Philippot",
+      "François Foyer"
+    ],
+    "published": "2026-02-23",
+    "categories": [
+      "cs.LG",
+      "cs.NE",
+      "stat.ML"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.19785v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.19785v1",
+    "fetched_at": "2026-02-24T08:54:43.362748",
+    "chinese_title": "基于β-变分自动编码器的NSL-KDD无监督异常检测：潜在空间与重构误差方法",
+    "chinese_summary": "本文针对网络流量异常检测，采用无监督β-变分自动编码器（β-VAE）方法，对比了潜在空间中测试样本到训练数据投影的距离度量与重构误差两种异常检测策略；实验结果凸显了潜在空间利用在分类任务中的有效性。",
+    "tags": [
+      "Anomaly",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出基于β-VAE的无监督异常检测方法，对比了潜在空间距离与重构误差两种策略",
+      "实验验证潜在空间利用对分类任务的有效性，为无监督异常检测提供对比 insights"
+    ],
+    "processed_at": "2026-02-24T09:03:15.431162"
+  },
+  {
+    "id": "2602.19396v1",
+    "title": "Hiding in Plain Text: Detecting Concealed Jailbreaks via Activation Disentanglement",
+    "abstract": "Large language models (LLMs) remain vulnerable to jailbreak prompts that are fluent and semantically coherent, and therefore difficult to detect with standard heuristics. A particularly challenging failure mode occurs when an attacker tries to hide the malicious goal of their request by manipulating its framing to induce compliance. Because these attacks maintain malicious intent through a flexible presentation, defenses that rely on structural artifacts or goal-specific signatures can fail. Motivated by this, we introduce a self-supervised framework for disentangling semantic factor pairs in LLM activations at inference. We instantiate the framework for goal and framing and construct GoalFrameBench, a corpus of prompts with controlled goal and framing variations, which we use to train Representation Disentanglement on Activations (ReDAct) module to extract disentangled representations in a frozen LLM. We then propose FrameShield, an anomaly detector operating on the framing representations, which improves model-agnostic detection across multiple LLM families with minimal computational overhead. Theoretical guarantees for ReDAct and extensive empirical validations show that its disentanglement effectively powers FrameShield. Finally, we use disentanglement as an interpretability probe, revealing distinct profiles for goal and framing signals and positioning semantic disentanglement as a building block for both LLM safety and mechanistic interpretability.",
+    "authors": [
+      "Amirhossein Farzam",
+      "Majid Behabahani",
+      "Mani Malek",
+      "Yuriy Nevmyvaka",
+      "Guillermo Sapiro"
+    ],
+    "published": "2026-02-23",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.19396v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.19396v1",
+    "fetched_at": "2026-02-24T08:54:43.362772",
+    "chinese_title": "隐藏在明文中：通过激活解纠缠检测隐蔽越狱攻击",
+    "chinese_summary": "针对LLM易受流畅连贯的隐蔽越狱攻击（现有依赖结构/特定目标签名的防御易失效）的问题，论文提出自监督框架ReDAct，利用GoalFrameBench语料训练以提取冻结LLM的目标与框架解纠缠表示；进而提出FrameShield异常检测器，跨多LLM家族提升检测性能且计算开销低，还通过解纠缠实现可解释性探针。",
+    "tags": [
+      "LLM",
+      "NLP",
+      "Anomaly",
+      "Transformer"
+    ],
+    "key_contributions": [
+      "提出自监督框架ReDAct，结合GoalFrameBench语料实现冻结LLM中目标与框架的激活表示解纠缠",
+      "提出FrameShield异常检测器，跨多LLM家族高效检测隐蔽越狱攻击，并利用解纠缠实现可解释性探针"
+    ],
+    "processed_at": "2026-02-24T09:03:29.386485"
+  },
+  {
+    "id": "2602.19339v1",
+    "title": "SplitLight: An Exploratory Toolkit for Recommender Systems Datasets and Splits",
+    "abstract": "Offline evaluation of recommender systems is often affected by hidden, under-documented choices in data preparation. Seemingly minor decisions in filtering, handling repeats, cold-start treatment, and splitting strategy design can substantially reorder model rankings and undermine reproducibility and cross-paper comparability.   In this paper, we introduce SplitLight, an open-source exploratory toolkit that enables researchers and practitioners designing preprocessing and splitting pipelines or reviewing external artifacts to make these decisions measurable, comparable, and reportable. Given an interaction log and derived split subsets, SplitLight analyzes core and temporal dataset statistics, characterizes repeat consumption patterns and timestamp anomalies, and diagnoses split validity, including temporal leakage, cold-user/item exposure, and distribution shifts. SplitLight further allows side-by-side comparison of alternative splitting strategies through comprehensive aggregated summaries and interactive visualizations. Delivered as both a Python toolkit and an interactive no-code interface, SplitLight produces audit summaries that justify evaluation protocols and support transparent, reliable, and comparable experimentation in recommender systems research and industry.",
+    "authors": [
+      "Anna Volodkevich",
+      "Dmitry Anikin",
+      "Danil Gusak",
+      "Anton Klenitskiy",
+      "Evgeny Frolov",
+      "Alexey Vasilev"
+    ],
+    "published": "2026-02-22",
+    "categories": [
+      "cs.IR",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.19339v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.19339v1",
+    "fetched_at": "2026-02-24T08:54:43.362800",
+    "chinese_title": "SplitLight：推荐系统数据集与拆分的探索性工具包",
+    "chinese_summary": "论文指出推荐系统离线评估常受数据预处理中隐藏决策的影响，这些决策会显著改变模型排名、削弱可重复性与跨研究可比性；为此提出开源工具SplitLight，可分析数据集统计特征、诊断拆分有效性（如时间泄漏、冷启动暴露等），并支持对比不同拆分策略，以提升实验的透明性、可靠性与可比性。",
+    "tags": [
+      "Time Series",
+      "Deep Learning",
+      "Anomaly"
+    ],
+    "key_contributions": [
+      "揭示推荐系统离线评估中数据预处理隐藏决策对实验结果的负面影响",
+      "开发开源工具SplitLight，支持数据集统计分析、拆分有效性诊断及策略对比，提升实验透明性与可比性"
+    ],
+    "processed_at": "2026-02-24T09:03:47.466436"
+  },
+  {
+    "id": "2602.19289v1",
+    "title": "AdsorbFlow: energy-conditioned flow matching enables fast and realistic adsorbate placement",
+    "abstract": "Identifying low-energy adsorption geometries on catalytic surfaces is a practical bottleneck for computational heterogeneous catalysis: the difficulty lies not only in the cost of density functional theory (DFT) but in proposing initial placements that relax into the correct energy basins. Conditional denoising diffusion has improved success rates, yet requires $\\sim$100 iterative steps per sample.   Here we introduce AdsorbFlow, a deterministic generative model that learns an energy-conditioned vector field on the rigid-body configuration space of adsorbate translation and rotation via conditional flow matching. Energy information enters through classifier-free guidance conditioning -- not energy-gradient guidance -- and sampling reduces to integrating an ODE in as few as 5 steps.   On OC20-Dense with full DFT single-point verification, AdsorbFlow with an EquiformerV2 backbone achieves 61.4% SR@10 and 34.1% SR@1 -- surpassing AdsorbDiff (31.8% SR@1, 41.0% SR@10) at every evaluation level and AdsorbML (47.7% SR@10) -- while using 20 times fewer generative steps and achieving the lowest anomaly rate among generative methods (6.8%). On 50 out-of-distribution systems, AdsorbFlow retains 58.0% SR@10 with a MLFF-to-DFT gap of only 4~percentage points. These results establish that deterministic transport is both faster and more accurate than stochastic denoising for adsorbate placement.",
+    "authors": [
+      "Jiangjie Qiu",
+      "Wentao Li",
+      "Honghao Chen",
+      "Leyi Zhao",
+      "Xiaonan Wang"
+    ],
+    "published": "2026-02-22",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.19289v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.19289v1",
+    "fetched_at": "2026-02-24T08:54:43.362825",
+    "chinese_title": "AdsorbFlow：能量条件流匹配实现快速且真实的吸附物放置",
+    "chinese_summary": "针对催化表面低能吸附构型识别瓶颈，提出AdsorbFlow确定性生成模型，通过条件流匹配学习吸附物构型空间能量条件向量场，采用无分类器引导，仅需5步ODE积分即可采样；在OC20-Dense数据集上性能超越现有方法，生成步骤减少20倍且异常率最低，分布外系统表现优异，证明确定性传输更高效准确。",
+    "tags": [
+      "Deep Learning",
+      "Transformer",
+      "Anomaly"
+    ],
+    "key_contributions": [
+      "在OC20-Dense等数据集上性能超越AdsorbDiff、AdsorbML，异常率最低，分布外系统保持良好表现，验证确定性传输优于随机去噪方法"
+    ],
+    "processed_at": "2026-02-24T09:04:03.758205"
+  },
+  {
+    "id": "2602.19248v1",
+    "title": "No Need For Real Anomaly: MLLM Empowered Zero-Shot Video Anomaly Detection",
+    "abstract": "The collection and detection of video anomaly data has long been a challenging problem due to its rare occurrence and spatio-temporal scarcity. Existing video anomaly detection (VAD) methods under perform in open-world scenarios. Key contributing factors include limited dataset diversity, and inadequate understanding of context-dependent anomalous semantics. To address these issues, i) we propose LAVIDA, an end-to-end zero-shot video anomaly detection framework. ii) LAVIDA employs an Anomaly Exposure Sampler that transforms segmented objects into pseudo-anomalies to enhance model adaptability to unseen anomaly categories. It further integrates a Multimodal Large Language Model (MLLM) to bolster semantic comprehension capabilities. Additionally, iii) we design a token compression approach based on reverse attention to handle the spatio-temporal scarcity of anomalous patterns and decrease computational cost. The training process is conducted solely on pseudo anomalies without any VAD data. Evaluations across four benchmark VAD datasets demonstrate that LAVIDA achieves SOTA performance in both frame-level and pixel-level anomaly detection under the zero-shot setting. Our code is available in https://github.com/VitaminCreed/LAVIDA.",
+    "authors": [
+      "Zunkai Dai",
+      "Ke Li",
+      "Jiajia Liu",
+      "Jie Yang",
+      "Yuanyuan Qiao"
+    ],
+    "published": "2026-02-22",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.19248v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.19248v1",
+    "fetched_at": "2026-02-24T08:54:43.362850",
+    "chinese_title": "无需真实异常：多模态大语言模型赋能的零样本视频异常检测",
+    "chinese_summary": "针对视频异常数据稀缺及开放场景性能不足问题，提出零样本框架LAVIDA，通过伪异常采样器增强未见过异常的适应性、结合多模态大语言模型提升语义理解、反向注意力token压缩降低计算成本，仅用伪异常训练即可在多基准数据集零样本检测中实现SOTA。",
+    "tags": [
+      "Anomaly",
+      "Deep Learning",
+      "LLM"
+    ],
+    "key_contributions": [
+      "提出零样本视频异常检测框架LAVIDA，通过伪异常采样、MLLM语义增强及token压缩解决异常数据稀缺与开放场景性能问题",
+      "仅用伪异常训练，在多基准数据集零样本帧级和像素级检测中实现SOTA性能"
+    ],
+    "processed_at": "2026-02-24T09:04:17.705161"
+  },
+  {
+    "id": "2602.19068v1",
+    "title": "TimeRadar: A Domain-Rotatable Foundation Model for Time Series Anomaly Detection",
+    "abstract": "Current time series foundation models (TSFMs) primarily focus on learning prevalent and regular patterns within a predefined time or frequency domain to enable supervised downstream tasks (e.g., forecasting). Consequently, they are often ineffective for inherently unsupervised downstream tasks-such as time series anomaly detection (TSAD), which aims to identify rare, irregular patterns. This limitation arises because such abnormal patterns can closely resemble the regular patterns when presented in the same time/frequency domain. To address this issue, we introduce TimeRadar, an innovative TSFM built in a fractional time-frequency domain to support generalist TSAD across diverse unseen datasets. Our key insight is that rotating a time series into a data-dependent fractional time-frequency representation can adaptively differentiate the normal and abnormal signals across different datasets. To this end, a novel component, namely Fractionally modulated Time-Frequency Reconstruction (FTFRecon), is proposed in TimeRadar to leverage a learnable fractional order to rotate the time series to the most pronounced angle between a continuous time and frequency domain for accurate data reconstruction. This provides adaptive data reconstruction in an optimal time-frequency domain for each data input, enabling effective differentiation of the unbounded abnormal patterns from the regular ones across datasets, including unseen datasets. To allow TimeRadar to model local abnormality that is not captured by the global data reconstruction, we further introduce a Contextual Deviation Learning (CDL) component to model the local deviation of the input relative to its contextual time series data in the rotatable domain.",
+    "authors": [
+      "Hui He",
+      "Hezhe Qiao",
+      "Yutong Chen",
+      "Kun Yi",
+      "Guansong Pang"
+    ],
+    "published": "2026-02-22",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.19068v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.19068v1",
+    "fetched_at": "2026-02-24T08:54:43.362917",
+    "chinese_title": "TimeRadar：面向时间序列异常检测的领域可旋转基础模型",
+    "chinese_summary": "现有时间序列基础模型（TSFM）聚焦常规模式，难以应对无监督的时间序列异常检测（TSAD）；本文提出TimeRadar，在分数时频域构建，通过分数调制时频重建（FTFRecon）组件的可学习分数阶，将时间序列旋转到最优时频域实现自适应重建，有效区分异常与常规模式，支持跨多样本（含未见过）的TSAD。",
+    "tags": [
+      "Anomaly",
+      "Time Series",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "揭示现有TSFM因聚焦常规模式不适合无监督TSAD的问题，提出分数时频域的基础模型TimeRadar",
+      "设计FTFRecon组件，利用可学习分数阶自适应旋转时间序列到最优时频域，实现跨数据集（含未见过）的有效异常检测"
+    ],
+    "processed_at": "2026-02-24T09:04:39.766984"
+  },
+  {
+    "id": "2602.18793v1",
+    "title": "From Few-Shot to Zero-Shot: Towards Generalist Graph Anomaly Detection",
+    "abstract": "Graph anomaly detection (GAD) is critical for identifying abnormal nodes in graph-structured data from diverse domains, including cybersecurity and social networks. The existing GAD methods often focus on the learning paradigms of \"one-model-for-one-dataset\", requiring dataset-specific training for each dataset to achieve optimal performance. However, this paradigm suffers from significant limitations, such as high computational and data costs, limited generalization and transferability to new datasets, and challenges in privacy-sensitive scenarios where access to full datasets or sufficient labels is restricted. To address these limitations, we propose a novel generalist GAD paradigm that aims to develop a unified model capable of detecting anomalies on multiple unseen datasets without extensive retraining/fine-tuning or dataset-specific customization. To this end, we propose ARC, a few-shot generalist GAD method that leverages in-context learning and requires only a few labeled normal samples at inference time. Specifically, ARC consists of three core modules: a feature Alignment module to unify and align features across datasets, a Residual GNN encoder to capture dataset-agnostic anomaly representations, and a cross-attentive in-Context learning module to score anomalies using few-shot normal context. Building on ARC, we further introduce ARC_zero for the zero-shot generalist GAD setting, which selects representative pseudo-normal nodes via a pseudo-context mechanism and thus enables fully label-free inference on unseen datasets. Extensive experiments on 17 real-world graph datasets demonstrate that both ARC and ARC_zero effectively detect anomalies, exhibit strong generalization ability, and perform efficiently under few-shot and zero-shot settings.",
+    "authors": [
+      "Yixin Liu",
+      "Shiyuan Li",
+      "Yu Zheng",
+      "Qingfeng Chen",
+      "Chengqi Zhang",
+      "Philip S. Yu",
+      "Shirui Pan"
+    ],
+    "published": "2026-02-21",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.18793v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.18793v1",
+    "fetched_at": "2026-02-24T08:54:43.362948",
+    "chinese_title": "从少样本到零样本：迈向通用图异常检测",
+    "chinese_summary": "现有图异常检测（GAD）多采用“单模型单数据集”范式，存在计算/数据成本高、泛化性差等局限；论文提出通用GAD范式，先设计ARC（少样本方法），通过特征对齐、残差GNN编码器和跨注意力上下文学习模块，仅需推理时少量标注正常样本检测异常；进一步扩展为ARC_zero（零样本方法），利用伪上下文机制选择代表性伪正常节点实现无标注异常检测。",
+    "tags": [
+      "Anomaly",
+      "Graph Neural Network",
+      "Deep Learning",
+      "Transformer"
+    ],
+    "key_contributions": [
+      "提出通用图异常检测（GAD）范式，突破现有“单模型单数据集”局限，实现多未知数据集异常检测无需大量重训练/微调",
+      "设计ARC（少样本）和ARC_zero（零样本）方法：ARC通过特征对齐、残差GNN和跨注意力上下文学习，仅需推理时少量标注正常样本；ARC_zero通过伪上下文机制实现零样本异常检测"
+    ],
+    "processed_at": "2026-02-24T09:05:02.665735"
+  },
+  {
+    "id": "2602.20156v1",
+    "title": "Skill-Inject: Measuring Agent Vulnerability to Skill File Attacks",
+    "abstract": "LLM agents are evolving rapidly, powered by code execution, tools, and the recently introduced agent skills feature. Skills allow users to extend LLM applications with specialized third-party code, knowledge, and instructions. Although this can extend agent capabilities to new domains, it creates an increasingly complex agent supply chain, offering new surfaces for prompt injection attacks. We identify skill-based prompt injection as a significant threat and introduce SkillInject, a benchmark evaluating the susceptibility of widely-used LLM agents to injections through skill files. SkillInject contains 202 injection-task pairs with attacks ranging from obviously malicious injections to subtle, context-dependent attacks hidden in otherwise legitimate instructions. We evaluate frontier LLMs on SkillInject, measuring both security in terms of harmful instruction avoidance and utility in terms of legitimate instruction compliance. Our results show that today's agents are highly vulnerable with up to 80% attack success rate with frontier models, often executing extremely harmful instructions including data exfiltration, destructive action, and ransomware-like behavior. They furthermore suggest that this problem will not be solved through model scaling or simple input filtering, but that robust agent security will require context-aware authorization frameworks. Our benchmark is available at https://www.skill-inject.com/.",
+    "authors": [
+      "David Schmotz",
+      "Luca Beurer-Kellner",
+      "Sahar Abdelnabi",
+      "Maksym Andriushchenko"
+    ],
+    "published": "2026-02-23",
+    "categories": [
+      "cs.CR",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.20156v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.20156v1",
+    "fetched_at": "2026-02-24T08:55:10.886546",
+    "chinese_title": "Skill-Inject：衡量智能体对技能文件攻击的脆弱性",
+    "chinese_summary": "该论文指出LLM智能体因技能扩展带来的基于技能的提示注入威胁，提出包含202个注入-任务对的SkillInject基准评估其脆弱性；评估发现前沿模型攻击成功率最高达80%，且问题无法通过模型缩放或简单输入过滤解决，需构建上下文感知授权框架。",
+    "tags": [
+      "LLM",
+      "Benchmark",
+      "Transformer"
+    ],
+    "key_contributions": [
+      "提出SkillInject基准，包含202个覆盖明显恶意到隐蔽上下文依赖型的注入-任务对，用于评估LLM智能体对技能文件攻击的脆弱性",
+      "揭示当前前沿LLM智能体对该攻击的高脆弱性（最高80%攻击成功率），并指出模型缩放或简单输入过滤无法解决问题，需上下文感知授权框架保障安全"
+    ],
+    "processed_at": "2026-02-24T09:05:38.540206"
+  },
+  {
+    "id": "2602.20144v1",
+    "title": "Agentic AI for Scalable and Robust Optical Systems Control",
+    "abstract": "We present AgentOptics, an agentic AI framework for high-fidelity, autonomous optical system control built on the Model Context Protocol (MCP). AgentOptics interprets natural language tasks and executes protocol-compliant actions on heterogeneous optical devices through a structured tool abstraction layer. We implement 64 standardized MCP tools across 8 representative optical devices and construct a 410-task benchmark to evaluate request understanding, role-aware responses, multi-step coordination, robustness to linguistic variation, and error handling. We assess two deployment configurations--commercial online LLMs and locally hosted open-source LLMs--and compare them with LLM-based code generation baselines. AgentOptics achieves 87.7%--99.0% average task success rates, significantly outperforming code-generation approaches, which reach up to 50% success. We further demonstrate broader applicability through five case studies extending beyond device-level control to system orchestration, monitoring, and closed-loop optimization. These include DWDM link provisioning and coordinated monitoring of coherent 400 GbE and analog radio-over-fiber (ARoF) channels; autonomous characterization and bias optimization of a wideband ARoF link carrying 5G fronthaul traffic; multi-span channel provisioning with launch power optimization; closed-loop fiber polarization stabilization; and distributed acoustic sensing (DAS)-based fiber monitoring with LLM-assisted event detection. These results establish AgentOptics as a scalable, robust paradigm for autonomous control and orchestration of heterogeneous optical systems.",
+    "authors": [
+      "Zehao Wang",
+      "Mingzhe Han",
+      "Wei Cheng",
+      "Yue-Kai Huang",
+      "Philip Ji",
+      "Denton Wu",
+      "Mahdi Safari",
+      "Flemming Holtorf",
+      "Kenaish AlQubaisi",
+      "Norbert M. Linke",
+      "Danyang Zhuo",
+      "Yiran Chen",
+      "Ting Wang",
+      "Dirk Englund",
+      "Tingjun Chen"
+    ],
+    "published": "2026-02-23",
+    "categories": [
+      "eess.SY",
+      "cs.AI",
+      "cs.NI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.20144v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.20144v1",
+    "fetched_at": "2026-02-24T08:55:10.886601",
+    "chinese_title": "面向可扩展且鲁棒的光学系统控制的智能体AI",
+    "chinese_summary": "论文提出基于模型上下文协议（MCP）的智能体AI框架AgentOptics，可解释自然语言任务并通过结构化工具抽象层控制异构光学设备；实现64个标准化MCP工具覆盖8类设备，构建410任务基准，实验显示其任务成功率87.7%-99.0%远超代码生成基线（最高50%），并通过5个案例验证系统编排、监控等多场景应用能力。",
+    "tags": [
+      "LLM",
+      "Financial Agent"
+    ],
+    "key_contributions": [
+      "提出基于MCP的AgentOptics框架，实现自然语言驱动的异构光学设备控制与系统编排",
+      "构建410任务基准并实验验证，其任务成功率显著高于代码生成基线，且覆盖多类光学系统应用场景"
+    ],
+    "processed_at": "2026-02-24T09:05:56.548056"
+  },
+  {
+    "id": "2602.20119v1",
+    "title": "NovaPlan: Zero-Shot Long-Horizon Manipulation via Closed-Loop Video Language Planning",
+    "abstract": "Solving long-horizon tasks requires robots to integrate high-level semantic reasoning with low-level physical interaction. While vision-language models (VLMs) and video generation models can decompose tasks and imagine outcomes, they often lack the physical grounding necessary for real-world execution. We introduce NovaPlan, a hierarchical framework that unifies closed-loop VLM and video planning with geometrically grounded robot execution for zero-shot long-horizon manipulation. At the high level, a VLM planner decomposes tasks into sub-goals and monitors robot execution in a closed loop, enabling the system to recover from single-step failures through autonomous re-planning. To compute low-level robot actions, we extract and utilize both task-relevant object keypoints and human hand poses as kinematic priors from the generated videos, and employ a switching mechanism to choose the better one as a reference for robot actions, maintaining stable execution even under heavy occlusion or depth inaccuracy. We demonstrate the effectiveness of NovaPlan on three long-horizon tasks and the Functional Manipulation Benchmark (FMB). Our results show that NovaPlan can perform complex assembly tasks and exhibit dexterous error recovery behaviors without any prior demonstrations or training. Project page: https://nova-plan.github.io/",
+    "authors": [
+      "Jiahui Fu",
+      "Junyu Nan",
+      "Lingfeng Sun",
+      "Hongyu Li",
+      "Jianing Qian",
+      "Jennifer L. Barry",
+      "Kris Kitani",
+      "George Konidaris"
+    ],
+    "published": "2026-02-23",
+    "categories": [
+      "cs.RO",
+      "cs.AI",
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.20119v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.20119v1",
+    "fetched_at": "2026-02-24T08:55:10.886632",
+    "chinese_title": "NovaPlan：基于闭环视频语言规划的零样本长程操作方法",
+    "chinese_summary": "论文提出NovaPlan层级框架，融合闭环视觉语言模型（VLM）规划、视频规划与几何接地机器人执行，实现零样本长程操作；高层面VLM分解任务、闭环监控并自主重规划恢复故障，低层面从生成视频提取物体关键点和人手姿态作为运动先验，通过切换机制稳定应对遮挡或深度误差；在多个任务和功能操作基准（FMB）验证有效，无需先验演示即可完成复杂装配与错误恢复。",
+    "tags": [
+      "Deep Learning",
+      "Transformer",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出NovaPlan层级框架，融合闭环视觉语言模型（VLM）规划、视频规划与几何接地机器人执行，实现零样本长程操作",
+      "设计基于生成视频的物体关键点和人手姿态提取及切换机制，稳定应对遮挡或深度误差，支持自主故障恢复"
+    ],
+    "processed_at": "2026-02-24T09:06:27.414170"
+  },
+  {
+    "id": "2602.20064v1",
+    "title": "The LLMbda Calculus: AI Agents, Conversations, and Information Flow",
+    "abstract": "A conversation with a large language model (LLM) is a sequence of prompts and responses, with each response generated from the preceding conversation. AI agents build such conversations automatically: given an initial human prompt, a planner loop interleaves LLM calls with tool invocations and code execution. This tight coupling creates a new and poorly understood attack surface. A malicious prompt injected into a conversation can compromise later reasoning, trigger dangerous tool calls, or distort final outputs. Despite the centrality of such systems, we currently lack a principled semantic foundation for reasoning about their behaviour and safety. We address this gap by introducing an untyped call-by-value lambda calculus enriched with dynamic information-flow control and a small number of primitives for constructing prompt-response conversations. Our language includes a primitive that invokes an LLM: it serializes a value, sends it to the model as a prompt, and parses the response as a new term. This calculus faithfully represents planner loops and their vulnerabilities, including the mechanisms by which prompt injection alters subsequent computation. The semantics explicitly captures conversations, and so supports reasoning about defenses such as quarantined sub-conversations, isolation of generated code, and information-flow restrictions on what may influence an LLM call. A termination-insensitive noninterference theorem establishes integrity and confidentiality guarantees, demonstrating that a formal calculus can provide rigorous foundations for safe agentic programming.",
+    "authors": [
+      "Zac Garby",
+      "Andrew D. Gordon",
+      "David Sands"
+    ],
+    "published": "2026-02-23",
+    "categories": [
+      "cs.PL",
+      "cs.AI",
+      "cs.CR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.20064v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.20064v1",
+    "fetched_at": "2026-02-24T08:55:10.886654",
+    "chinese_title": "LLMbda演算：AI智能体、对话与信息流",
+    "chinese_summary": "本文针对基于LLM的AI智能体对话系统缺乏语义基础及存在恶意prompt注入等安全漏洞的问题，提出一种增强型lambda演算（LLMbda演算），融入动态信息流控制与对话构建原语，可准确建模智能体行为、漏洞及安全防御，且证明了终止不敏感非干扰定理保障系统安全性质。",
+    "tags": [
+      "LLM",
+      "NLP"
+    ],
+    "key_contributions": [
+      "提出LLMbda演算，为基于LLM的AI智能体对话系统提供带信息流控制的语义基础，可建模planner loop及prompt注入等漏洞",
+      "证明终止不敏感非干扰定理，建立系统完整性与机密性保障，支持安全防御策略的推理"
+    ],
+    "processed_at": "2026-02-24T09:06:50.122399"
+  },
+  {
+    "id": "2602.20055v1",
+    "title": "To Move or Not to Move: Constraint-based Planning Enables Zero-Shot Generalization for Interactive Navigation",
+    "abstract": "Visual navigation typically assumes the existence of at least one obstacle-free path between start and goal, which must be discovered/planned by the robot. However, in real-world scenarios, such as home environments and warehouses, clutter can block all routes. Targeted at such cases, we introduce the Lifelong Interactive Navigation problem, where a mobile robot with manipulation abilities can move clutter to forge its own path to complete sequential object- placement tasks - each involving placing an given object (eg. Alarm clock, Pillow) onto a target object (eg. Dining table, Desk, Bed). To address this lifelong setting - where effects of environment changes accumulate and have long-term effects - we propose an LLM-driven, constraint-based planning framework with active perception. Our framework allows the LLM to reason over a structured scene graph of discovered objects and obstacles, deciding which object to move, where to place it, and where to look next to discover task-relevant information. This coupling of reasoning and active perception allows the agent to explore the regions expected to contribute to task completion rather than exhaustively mapping the environment. A standard motion planner then executes the corresponding navigate-pick-place, or detour sequence, ensuring reliable low-level control. Evaluated in physics-enabled ProcTHOR-10k simulator, our approach outperforms non-learning and learning-based baselines. We further demonstrate our approach qualitatively on real-world hardware.",
+    "authors": [
+      "Apoorva Vashisth",
+      "Manav Kulshrestha",
+      "Pranav Bakshi",
+      "Damon Conover",
+      "Guillaume Sartoretti",
+      "Aniket Bera"
+    ],
+    "published": "2026-02-23",
+    "categories": [
+      "cs.RO",
+      "cs.AI",
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.20055v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.20055v1",
+    "fetched_at": "2026-02-24T08:55:10.886680",
+    "chinese_title": "移动与否：基于约束的规划实现交互式导航的零样本泛化",
+    "chinese_summary": "论文针对现实环境中杂乱无可行路径的情况，提出终身交互式导航问题（机器人可移动杂物完成顺序物体放置任务）；方法为LLM驱动的基于约束规划框架结合主动感知，通过结构化场景图推理物体移动、放置及下一步观察，再由运动规划器执行操作，在ProcTHOR-10k模拟器中优于基线方法。",
+    "tags": [
+      "LLM",
+      "Graph Neural Network",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出终身交互式导航问题，针对环境动态变化下的顺序物体放置任务",
+      "提出LLM驱动的约束规划+主动感知框架，实现零样本泛化并优于非学习/学习基线"
+    ],
+    "processed_at": "2026-02-24T09:07:09.685329"
+  },
+  {
+    "id": "2602.20021v1",
+    "title": "Agents of Chaos",
+    "abstract": "We report an exploratory red-teaming study of autonomous language-model-powered agents deployed in a live laboratory environment with persistent memory, email accounts, Discord access, file systems, and shell execution. Over a two-week period, twenty AI researchers interacted with the agents under benign and adversarial conditions. Focusing on failures emerging from the integration of language models with autonomy, tool use, and multi-party communication, we document eleven representative case studies. Observed behaviors include unauthorized compliance with non-owners, disclosure of sensitive information, execution of destructive system-level actions, denial-of-service conditions, uncontrolled resource consumption, identity spoofing vulnerabilities, cross-agent propagation of unsafe practices, and partial system takeover. In several cases, agents reported task completion while the underlying system state contradicted those reports. We also report on some of the failed attempts. Our findings establish the existence of security-, privacy-, and governance-relevant vulnerabilities in realistic deployment settings. These behaviors raise unresolved questions regarding accountability, delegated authority, and responsibility for downstream harms, and warrant urgent attention from legal scholars, policymakers, and researchers across disciplines. This report serves as an initial empirical contribution to that broader conversation.",
+    "authors": [
+      "Natalie Shapira",
+      "Chris Wendler",
+      "Avery Yen",
+      "Gabriele Sarti",
+      "Koyena Pal",
+      "Olivia Floody",
+      "Adam Belfki",
+      "Alex Loftus",
+      "Aditya Ratan Jannali",
+      "Nikhil Prakash",
+      "Jasmine Cui",
+      "Giordano Rogers",
+      "Jannik Brinkmann",
+      "Can Rager",
+      "Amir Zur",
+      "Michael Ripa",
+      "Aruna Sankaranarayanan",
+      "David Atkinson",
+      "Rohit Gandikota",
+      "Jaden Fiotto-Kaufman",
+      "EunJeong Hwang",
+      "Hadas Orgad",
+      "P Sam Sahil",
+      "Negev Taglicht",
+      "Tomer Shabtay",
+      "Atai Ambus",
+      "Nitay Alon",
+      "Shiri Oron",
+      "Ayelet Gordon-Tapiero",
+      "Yotam Kaplan",
+      "Vered Shwartz",
+      "Tamar Rott Shaham",
+      "Christoph Riedl",
+      "Reuth Mirsky",
+      "Maarten Sap",
+      "David Manheim",
+      "Tomer Ullman",
+      "David Bau"
+    ],
+    "published": "2026-02-23",
+    "categories": [
+      "cs.AI",
+      "cs.CY"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.20021v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.20021v1",
+    "fetched_at": "2026-02-24T08:55:10.886766",
+    "chinese_title": "混沌代理：自主语言模型代理的红队测试研究",
+    "chinese_summary": "该研究采用红队测试方法，在具备持久记忆、邮箱等工具的真实实验室环境中，让20名AI研究者与自主语言模型代理互动两周，记录11个代表性故障案例；发现代理存在未授权合规、信息泄露、破坏性操作等安全隐私治理漏洞，提出了问责、授权等需跨学科解决的问题。",
+    "tags": [
+      "LLM",
+      "Risk Management",
+      "Anomaly"
+    ],
+    "key_contributions": [
+      "实证发现自主语言模型代理在真实部署环境中存在多类安全、隐私及治理相关漏洞",
+      "揭示了此类代理引发的问责、授权等未解决问题，为跨学科研究提供初始实证依据"
+    ],
+    "processed_at": "2026-02-24T09:07:36.338733"
+  },
+  {
+    "id": "2602.19883v1",
+    "title": "Denotational Semantics for ODRL: Knowledge-Based Constraint Conflict Detection",
+    "abstract": "ODRL's six set-based operators -- isA, isPartOf, hasPart, isAnyOf, isAllOf, isNoneOf -- depend on external domain knowledge that the W3C specification leaves unspecified. Without it, every cross-dataspace policy comparison defaults to Unknown. We present a denotational semantics that maps each ODRL constraint to the set of knowledge-base concepts satisfying it. Conflict detection reduces to denotation intersection under a three-valued verdict -- Conflict, Compatible, or Unknown -- that is sound under incomplete knowledge. The framework covers all three ODRL composition modes (and, or, xone) and all three semantic domains arising in practice: taxonomic (class subsumption), mereological (part-whole containment), and nominal (identity). For cross-dataspace interoperability, we define order-preserving alignments between knowledge bases and prove two guarantees: conflicts are preserved across different KB standards, and unmapped concepts degrade gracefully to Unknown -- never to false conflicts. A runtime soundness theorem ensures that design-time verdicts hold for all execution contexts. The encoding stays within the decidable EPR fragment of first-order logic. We validate it with 154 benchmarks across six knowledge base families (GeoNames, ISO 3166, W3C DPV, a GDPR-derived taxonomy, BCP 47, and ISO 639-3) and four structural KBs targeting adversarial edge cases. Both the Vampire theorem prover and the Z3 SMT solver agree on all 154 verdicts. A key finding is that exclusive composition (xone) requires strictly stronger KB axioms than conjunction or disjunction: open-world semantics blocks exclusivity even when positive evidence appears to satisfy exactly one branch.",
+    "authors": [
+      "Daham Mustafa",
+      "Diego Collarana",
+      "Yixin Peng",
+      "Rafiqul Haque",
+      "Christoph Lange-Bever",
+      "Christoph Quix",
+      "Stephan Decker"
+    ],
+    "published": "2026-02-23",
+    "categories": [
+      "cs.CL",
+      "cs.LO"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.19883v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.19883v1",
+    "fetched_at": "2026-02-24T08:55:10.886794",
+    "chinese_title": "ODRL的指称语义：基于知识的约束冲突检测",
+    "chinese_summary": "论文针对ODRL运算符依赖未指定领域知识导致跨数据空间策略比较默认未知的问题，提出指称语义将约束映射到知识库概念集合，把冲突检测转化为三值（冲突、兼容、未知）下的指称交集，覆盖所有ODRL组合模式及三类语义域；还定义知识库间保序对齐，证明冲突保留等性质，编码在可判定EPR逻辑片段，经154个基准验证有效。",
+    "tags": [
+      "Risk Management",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出ODRL的指称语义框架，实现三值约束冲突检测，覆盖所有ODRL组合模式及三类语义域",
+      "定义知识库间保序对齐，证明冲突保留等性质，编码在可判定EPR逻辑片段并经多知识库基准验证"
+    ],
+    "processed_at": "2026-02-24T09:08:07.917107"
+  },
+  {
+    "id": "2602.19818v1",
+    "title": "SafePickle: Robust and Generic ML Detection of Malicious Pickle-based ML Models",
+    "abstract": "Model repositories such as Hugging Face increasingly distribute machine learning artifacts serialized with Python's pickle format, exposing users to remote code execution (RCE) risks during model loading. Recent defenses, such as PickleBall, rely on per-library policy synthesis that requires complex system setups and verified benign models, which limits scalability and generalization. In this work, we propose a lightweight, machine-learning-based scanner that detects malicious Pickle-based files without policy generation or code instrumentation. Our approach statically extracts structural and semantic features from Pickle bytecode and applies supervised and unsupervised models to classify files as benign or malicious. We construct and release a labeled dataset of 727 Pickle-based files from Hugging Face and evaluate our models on four datasets: our own, PickleBall (out-of-distribution), Hide-and-Seek (9 advanced evasive malicious models), and synthetic joblib files. Our method achieves 90.01% F1-score compared with 7.23%-62.75% achieved by the SOTA scanners (Modelscan, Fickling, ClamAV, VirusTotal) on our dataset. Furthermore, on the PickleBall data (OOD), it achieves 81.22% F1-score compared with 76.09% achieved by the PickleBall method, while remaining fully library-agnostic. Finally, we show that our method is the only one to correctly parse and classify 9/9 evasive Hide-and-Seek malicious models specially crafted to evade scanners. This demonstrates that data-driven detection can effectively and generically mitigate Pickle-based model file attacks.",
+    "authors": [
+      "Hillel Ohayon",
+      "Daniel Gilkarov",
+      "Ran Dubin"
+    ],
+    "published": "2026-02-23",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.19818v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.19818v1",
+    "fetched_at": "2026-02-24T08:55:10.886840",
+    "chinese_title": "SafePickle：基于机器学习的恶意Pickle序列化ML模型的鲁棒通用检测",
+    "chinese_summary": "本文针对模型仓库中Pickle序列化带来的远程代码执行风险，提出轻量机器学习扫描器SafePickle，通过静态提取Pickle字节码的结构与语义特征，结合监督/无监督模型分类恶意文件；该方法无需策略生成或代码插桩，在含对抗样本的多数据集上显著优于现有SOTA，且库无关。",
+    "tags": [
+      "Anomaly",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出轻量、库无关的恶意Pickle检测方法，静态提取字节码特征并结合ML分类，无需策略生成或代码插桩",
+      "构建727个带标签的Pickle文件数据集，在含OOD、对抗样本的多数据集上显著优于现有SOTA方法"
+    ],
+    "processed_at": "2026-02-24T09:08:32.397308"
+  },
+  {
+    "id": "2602.19786v1",
+    "title": "The Climate Change Knowledge Graph: Supporting Climate Services",
+    "abstract": "Climate change impacts a broad spectrum of human resources and activities, necessitating the use of climate models to project long-term effects and inform mitigation and adaptation strategies. These models generate multiple datasets by running simulations across various scenarios and configurations, thereby covering a range of potential future outcomes. Currently, researchers rely on traditional search interfaces and APIs to retrieve such datasets, often piecing together information from metadata and community vocabularies. The Climate Change Knowledge Graph is designed to address these challenges by integrating diverse data sources related to climate simulations into a coherent and interoperable knowledge graph. This innovative resource allows for executing complex queries involving climate models, simulations, variables, spatio-temporal domains, and granularities. Developed with input from domain experts, the knowledge graph and its underlying ontology are published with open access license and provide a comprehensive framework that enhances the exploration of climate data, facilitating more informed decision-making in addressing climate change issues.",
+    "authors": [
+      "Miguel Ceriani",
+      "Fiorela Ciroku",
+      "Alessandro Russo",
+      "Massimiliano Schembri",
+      "Fai Fung",
+      "Neha Mittal",
+      "Vito Trianni",
+      "Andrea Giovanni Nuzzolese"
+    ],
+    "published": "2026-02-23",
+    "categories": [
+      "cs.DB",
+      "cs.AI",
+      "cs.CY"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.19786v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.19786v1",
+    "fetched_at": "2026-02-24T08:55:10.886885",
+    "chinese_title": "气候变化知识图谱：支持气候服务",
+    "chinese_summary": "本文针对当前气候数据检索依赖传统搜索/API、需拼凑元数据等信息的问题，设计气候变化知识图谱，整合多源气候模拟数据形成连贯互操作的资源，支持跨气候模型、变量等的复杂查询，开放访问且经领域专家参与开发，助力应对气候变化的决策。",
+    "tags": [
+      "Graph Neural Network",
+      "Time Series"
+    ],
+    "key_contributions": [
+      "设计构建了气候变化知识图谱，整合多源气候模拟数据为连贯互操作的资源",
+      "支持跨气候模型、模拟、变量等多维度的复杂查询，开放访问且经领域专家验证，提升气候数据探索与决策支持能力"
+    ],
+    "processed_at": "2026-02-24T09:08:55.556487"
+  },
+  {
+    "id": "2602.19672v1",
+    "title": "SkillOrchestra: Learning to Route Agents via Skill Transfer",
+    "abstract": "Compound AI systems promise capabilities beyond those of individual models, yet their success depends critically on effective orchestration. Existing routing approaches face two limitations: (1) input-level routers make coarse query-level decisions that ignore evolving task requirements; (2) RL-trained orchestrators are expensive to adapt and often suffer from routing collapse, repeatedly invoking one strong but costly option in multi-turn scenarios. We introduce SkillOrchestra, a framework for skill-aware orchestration. Instead of directly learning a routing policy end-to-end, SkillOrchestra learns fine-grained skills from execution experience and models agent-specific competence and cost under those skills. At deployment, the orchestrator infers the skill demands of the current interaction and selects agents that best satisfy them under an explicit performance-cost trade-off. Extensive experiments across ten benchmarks demonstrate that SkillOrchestra outperforms SoTA RL-based orchestrators by up to 22.5% with 700x and 300x learning cost reduction compared to Router-R1 and ToolOrchestra, respectively. These results show that explicit skill modeling enables scalable, interpretable, and sample-efficient orchestration, offering a principled alternative to data-intensive RL-based approaches. The code is available at: https://github.com/jiayuww/SkillOrchestra.",
+    "authors": [
+      "Jiayu Wang",
+      "Yifei Ming",
+      "Zixuan Ke",
+      "Shafiq Joty",
+      "Aws Albarghouthi",
+      "Frederic Sala"
+    ],
+    "published": "2026-02-23",
+    "categories": [
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.19672v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.19672v1",
+    "fetched_at": "2026-02-24T08:55:10.886911",
+    "chinese_title": "SkillOrchestra：基于技能迁移的Agent路由学习",
+    "chinese_summary": "现有复合AI系统的编排面临输入级路由粗糙、RL训练编排器适配成本高且易出现路由坍缩等问题，本文提出SkillOrchestra框架——通过从执行经验中学习细粒度技能，建模Agent在技能下的能力与成本，部署时推断交互的技能需求并做性能-成本权衡选择；实验表明其比SOTA RL编排器性能提升最多22.5%，学习成本较Router-R1降低700倍、较ToolOrchestra降低300倍，且可扩展、可解释、样本高效。",
+    "tags": [
+      "LLM",
+      "Reinforcement Learning",
+      "Execution",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出SkillOrchestra框架，通过显式技能建模解决现有编排器的粗糙决策与RL训练适配问题",
+      "实验验证该框架在性能与学习成本上显著优于SOTA RL-based编排器，具备可扩展、可解释、样本高效特性"
+    ],
+    "processed_at": "2026-02-24T09:09:12.666187"
+  },
+  {
+    "id": "2602.19655v1",
+    "title": "Representation Stability in a Minimal Continual Learning Agent",
+    "abstract": "Continual learning systems are increasingly deployed in environments where retraining or reset is infeasible, yet many approaches emphasize task performance rather than the evolution of internal representations over time. In this work, we study a minimal continual learning agent designed to isolate representational dynamics from architectural complexity and optimization objectives. The agent maintains a persistent state vector across executions and incrementally updates it as new textual data is introduced. We quantify representational change using cosine similarity between successive normalized state vectors and define a stability metric over time intervals. Longitudinal experiments across eight executions reveal a transition from an initial plastic regime to a stable representational regime under consistent input. A deliberately introduced semantic perturbation produces a bounded decrease in similarity, followed by recovery and restabilization under subsequent coherent input. These results demonstrate that meaningful stability plasticity tradeoffs can emerge in a minimal, stateful learning system without explicit regularization, replay, or architectural complexity. The work establishes a transparent empirical baseline for studying representational accumulation and adaptation in continual learning systems.",
+    "authors": [
+      "Vishnu Subramanian"
+    ],
+    "published": "2026-02-23",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.19655v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.19655v1",
+    "fetched_at": "2026-02-24T08:55:10.886929",
+    "chinese_title": "最小持续学习智能体中的表示稳定性",
+    "chinese_summary": "本文设计了一个最小持续学习智能体，通过跨执行维护持久状态向量并随新文本数据增量更新，以连续归一化状态向量的余弦相似度量化表示变化并定义稳定性指标；实验发现一致输入下智能体从初始塑性阶段过渡到稳定表示阶段，语义扰动仅导致相似度有限下降后恢复稳定，证明无需显式正则化、回放或复杂架构即可出现稳定性-可塑性权衡，建立了研究持续学习系统表示积累与适应的实证基线。",
+    "tags": [
+      "Deep Learning",
+      "NLP",
+      "LLM"
+    ],
+    "key_contributions": [
+      "设计最小持续学习智能体，隔离表示动态与架构复杂度、优化目标，建立研究表示积累与适应的透明实证基线",
+      "通过实验揭示一致输入下的表示阶段过渡及语义扰动后的恢复稳定，证明无需显式正则化等即可出现有意义的稳定性-可塑性权衡"
+    ],
+    "processed_at": "2026-02-24T09:09:54.530118"
+  },
+  {
+    "id": "2602.19644v1",
+    "title": "Spectral Phase Encoding for Quantum Kernel Methods",
+    "abstract": "Quantum kernel methods are promising for near-term quantum ma- chine learning, yet their behavior under data corruption remains insuf- ficiently understood. We analyze how quantum feature constructions degrade under controlled additive noise. We introduce Spectral Phase Encoding (SPE), a hybrid construc- tion combining a discrete Fourier transform (DFT) front-end with a diagonal phase-only embedding aligned with the geometry of diagonal quantum maps. Within a unified framework, we compare QK-DFT against alternative quantum variants (QK-PCA, QK-RP) and classi- cal SVM baselines under identical clean-data hyperparameter selection, quantifying robustness via dataset fixed-effects regression with wild cluster bootstrap inference across heterogeneous real-world datasets. Across the quantum family, DFT-based preprocessing yields the smallest degradation rate as noise increases, with statistically sup- ported slope differences relative to PCA and RP. Compared to classical baselines, QK-DFT shows degradation comparable to linear SVM and more stable than RBF SVM under matched tuning. Hardware exper- iments confirm that SPE remains executable and numerically stable for overlap estimation. These results indicate that robustness in quan- tum kernels depends critically on structure-aligned preprocessing and its interaction with diagonal embeddings, supporting a robustness-first perspective for NISQ-era quantum machine learning.",
+    "authors": [
+      "Pablo Herrero Gómez",
+      "Antonio Jimeno Morenilla",
+      "David Muñoz-Hernández",
+      "Higinio Mora Mora"
+    ],
+    "published": "2026-02-23",
+    "categories": [
+      "cs.LG",
+      "quant-ph"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.19644v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.19644v1",
+    "fetched_at": "2026-02-24T08:55:10.886951",
+    "chinese_title": "量子核方法的谱相位编码",
+    "chinese_summary": "论文分析量子特征构造在加性噪声下的退化问题，提出结合离散傅里叶变换（DFT）前端与对角相位嵌入的谱相位编码（SPE）；通过跨异质真实数据集的固定效应回归与wild cluster bootstrap推断，发现DFT预处理的量子核方法退化率最小，且硬件实验验证SPE可执行且数值稳定。",
+    "tags": [
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出谱相位编码（SPE）：一种结合DFT前端与对角相位嵌入的混合量子核特征构造方法",
+      "系统量化量子核方法在加性噪声下的鲁棒性，证明DFT预处理的退化率最小，且硬件实验验证SPE的可执行性与稳定性"
+    ],
+    "processed_at": "2026-02-24T09:10:32.965581"
+  },
+  {
+    "id": "2602.19634v1",
+    "title": "Compositional Planning with Jumpy World Models",
+    "abstract": "The ability to plan with temporal abstractions is central to intelligent decision-making. Rather than reasoning over primitive actions, we study agents that compose pre-trained policies as temporally extended actions, enabling solutions to complex tasks that no constituent alone can solve. Such compositional planning remains elusive as compounding errors in long-horizon predictions make it challenging to estimate the visitation distribution induced by sequencing policies. Motivated by the geometric policy composition framework introduced in arXiv:2206.08736, we address these challenges by learning predictive models of multi-step dynamics -- so-called jumpy world models -- that capture state occupancies induced by pre-trained policies across multiple timescales in an off-policy manner. Building on Temporal Difference Flows (arXiv:2503.09817), we enhance these models with a novel consistency objective that aligns predictions across timescales, improving long-horizon predictive accuracy. We further demonstrate how to combine these generative predictions to estimate the value of executing arbitrary sequences of policies over varying timescales. Empirically, we find that compositional planning with jumpy world models significantly improves zero-shot performance across a wide range of base policies on challenging manipulation and navigation tasks, yielding, on average, a 200% relative improvement over planning with primitive actions on long-horizon tasks.",
+    "authors": [
+      "Jesse Farebrother",
+      "Matteo Pirotta",
+      "Andrea Tirinzoni",
+      "Marc G. Bellemare",
+      "Alessandro Lazaric",
+      "Ahmed Touati"
+    ],
+    "published": "2026-02-23",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "stat.ML"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.19634v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.19634v1",
+    "fetched_at": "2026-02-24T08:55:10.886976",
+    "chinese_title": "带跳跃世界模型的组合规划",
+    "chinese_summary": "本文针对长horizon任务中组合预训练策略的规划问题，提出跳跃世界模型（学习多步动力学的预测模型），结合时间差分流与跨时间尺度一致性目标提升预测精度，进而估计任意策略序列的价值；实证在操作和导航任务中，该方法比原始动作规划的长horizon零样本性能平均相对提升200%。",
+    "tags": [
+      "Reinforcement Learning",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出跳跃世界模型，学习多步动力学以捕捉预训练策略的状态 occupancy，解决长horizon预测误差问题",
+      "结合时间差分流与跨时间尺度一致性目标提升模型精度，可估计任意策略序列的价值，实证验证性能显著提升"
+    ],
+    "processed_at": "2026-02-24T09:10:52.558574"
+  },
+  {
+    "id": "2602.19633v1",
+    "title": "TAPE: Tool-Guided Adaptive Planning and Constrained Execution in Language Model Agents",
+    "abstract": "Language Model (LM) agents have demonstrated remarkable capabilities in solving tasks that require multiple interactions with the environment. However, they remain vulnerable in environments where a single error often leads to irrecoverable failure, particularly under strict feasibility constraints. We systematically analyze existing agent frameworks, identifying imperfect planning and stochastic execution as the primary causes. To address these challenges, we propose Tool-guided Adaptive Planning with constrained Execution (TAPE). TAPE enhances planning capability by aggregating multiple plans into a graph and employing an external solver to identify a feasible path. During execution, TAPE employs constrained decoding to reduce sampling noise, while adaptively re-planning whenever environmental feedback deviates from the intended state. Experiments across Sokoban, ALFWorld, MuSiQue, and GSM8K-Hard demonstrate that TAPE consistently outperforms existing frameworks, with particularly large gains on hard settings, improving success rates by 21.0 percentage points on hard settings on average, and by 20.0 percentage points for weaker base models on average. Code and data available at here.",
+    "authors": [
+      "Jongwon Jeong",
+      "Jungtaek Kim",
+      "Kangwook Lee"
+    ],
+    "published": "2026-02-23",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.19633v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.19633v1",
+    "fetched_at": "2026-02-24T08:55:10.886998",
+    "chinese_title": "TAPE：语言模型智能体中的工具引导自适应规划与约束执行",
+    "chinese_summary": "现有语言模型（LM）智能体在易因单错误导致不可恢复失败的环境（尤其严格可行性约束下）表现脆弱，主要源于规划不完善与执行随机。论文提出TAPE框架：规划阶段聚合多计划为图并调用外部求解器找可行路径，执行阶段用约束解码减少采样噪声且环境反馈偏离时自适应重规划；实验在多任务上显著优于现有框架，硬设置平均提升21%，弱基础模型平均提升20%。",
+    "tags": [
+      "LLM",
+      "NLP",
+      "Execution",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出TAPE框架，通过工具引导的自适应规划与约束执行解决LM智能体在严格约束环境下的脆弱性问题",
+      "实验验证TAPE在多任务（含硬设置、弱基础模型）上显著优于现有框架，提升效果明显"
+    ],
+    "processed_at": "2026-02-24T09:11:10.428190"
+  }
+]
