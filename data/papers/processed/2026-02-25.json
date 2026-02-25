@@ -1,0 +1,717 @@
+[
+  {
+    "id": "2602.21173v1",
+    "title": "Bayesian Parametric Portfolio Policies",
+    "abstract": "Parametric Portfolio Policies (PPP) estimate optimal portfolio weights directly as functions of observable signals by maximizing expected utility, bypassing the need to model asset returns and covariances. However, PPP ignores policy risk. We show that this is consequential, leading to an overstatement of expected utility and an understatement of portfolio risk. We develop Bayesian Parametric Portfolio Policies (BPPP), which place a prior on policy coefficients thereby correcting the decision rule. We derive a general result showing that the utility gap between PPP and BPPP is strictly positive and proportional to posterior parameter uncertainty and signal magnitude. Under a mean--variance approximation, this correction appears as an additional estimation-risk term in portfolio variance, implying that PPP overexposes when signals are strongest and when risk aversion is high. Empirically, in a high-dimensional setting with 242 signals and six factors over 1973--2023, BPPP delivers higher Sharpe ratios, substantially lower turnover, larger investor welfare, and lower tail risk, with advantages that increase monotonically in risk aversion and are strongest during crisis episodes.",
+    "authors": [
+      "Miguel C. Herculano"
+    ],
+    "published": "2026-02-24",
+    "categories": [
+      "q-fin.PM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.21173v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.21173v1",
+    "fetched_at": "2026-02-25T08:55:34.124361",
+    "chinese_title": "贝叶斯参数化投资组合策略",
+    "chinese_summary": "本文指出参数化投资组合策略（PPP）忽略政策风险，导致预期效用高估、组合风险低估；提出贝叶斯参数化投资组合策略（BPPP），通过对政策系数施加先验修正决策规则，理论证明其效用优于PPP且与后验参数不确定性等相关；实证在高维场景下BPPP夏普比更高、 turnover更低、投资者福利更大。",
+    "tags": [
+      "Portfolio Optimization",
+      "Risk Management",
+      "Factor Model"
+    ],
+    "key_contributions": [
+      "揭示参数化投资组合策略（PPP）因忽略政策风险导致预期效用高估、组合风险低估的问题",
+      "提出贝叶斯参数化投资组合策略（BPPP），通过先验修正政策系数提升组合表现，理论与实证均验证其优势"
+    ],
+    "processed_at": "2026-02-25T08:58:45.284117"
+  },
+  {
+    "id": "2602.21125v1",
+    "title": "An Infinite-Dimensional Insider Trading Game",
+    "abstract": "We generalize the seminal framework of Kyle (1985) to a many-asset setting, bridging the gap between informed-trading theory and modern trading practices. Specifically, we formulate an infinite-dimensional Bayesian trading game in which the informed trader's private information may concern arbitrary aspects of the cross-sectional payoff structure across a continuum of traded assets. In this general setting, we obtain a parsimonious equilibrium characterized by a single scalar fixed point, yielding closed-form characterizations of equilibrium trading strategy, price impact within and across markets, and the informational efficiency of equilibrium prices.",
+    "authors": [
+      "Christian Keller",
+      "Michael C. Tseng"
+    ],
+    "published": "2026-02-24",
+    "categories": [
+      "q-fin.MF",
+      "econ.TH",
+      "q-fin.GN",
+      "q-fin.TR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.21125v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.21125v1",
+    "fetched_at": "2026-02-25T08:55:34.124397",
+    "chinese_title": "无限维内幕交易博弈",
+    "chinese_summary": "本文将Kyle(1985)的经典内幕交易框架推广至连续统资产的无限维场景，构建知情交易者私有信息覆盖资产横截面收益结构任意方面的贝叶斯交易博弈；该框架下得到的均衡由单一标量不动点刻画，可闭式表征均衡交易策略、市场内及跨市场价格影响与均衡价格的信息效率。",
+    "tags": [
+      "Market Microstructure",
+      "Asset Pricing",
+      "Market Making",
+      "Algorithmic Trading"
+    ],
+    "key_contributions": [
+      "推广Kyle(1985)经典内幕交易框架至连续统资产的无限维贝叶斯交易博弈场景，覆盖资产横截面收益结构任意方面的私有信息；",
+      "得到由单一标量不动点刻画的简洁均衡，可闭式表达均衡交易策略、市场内及跨市场价格影响与均衡价格的信息效率。"
+    ],
+    "processed_at": "2026-02-25T08:59:05.141448"
+  },
+  {
+    "id": "2602.20856v1",
+    "title": "Stochastic Discount Factors with Cross-Asset Spillovers",
+    "abstract": "This paper develops a unified framework that links firm-level predictive signals, cross-asset spillovers, and the stochastic discount factor (SDF). Signals and spillovers are jointly estimated by maximizing the Sharpe ratio, yielding an interpretable SDF that both ranks characteristic relevance and uncovers the direction of predictive influence across assets. Out-of-sample, the SDF consistently outperforms self-predictive and expected-return benchmarks across investment universes and market states. The inferred information network highlights large, low-turnover firms as net transmitters. The framework offers a clear, economically grounded view of the informational architecture underlying cross-sectional return dynamics.",
+    "authors": [
+      "Doron Avramov",
+      "Xin He"
+    ],
+    "published": "2026-02-24",
+    "categories": [
+      "q-fin.CP",
+      "econ.EM",
+      "q-fin.PM",
+      "stat.ML"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.20856v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.20856v1",
+    "fetched_at": "2026-02-25T08:55:34.124422",
+    "chinese_title": "含跨资产溢出的随机折现因子",
+    "chinese_summary": "论文构建统一框架关联公司层面预测信号、跨资产溢出与随机折现因子（SDF），通过最大化夏普比率联合估计信号和溢出，得到可解释SDF（能排序特征相关性并揭示资产间预测影响方向）；样本外该SDF在各投资 universe 和市场状态下均优于自预测及预期收益基准，且推断的信息网络显示大市值低换手率公司为净传递者，为横截面收益动态的信息架构提供经济基础清晰的视角。",
+    "tags": [
+      "Asset Pricing",
+      "Factor Mining",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "构建统一框架，联合估计公司预测信号、跨资产溢出与SDF，得到可解释SDF（排序特征相关性、揭示资产间预测影响方向）",
+      "样本外SDF优于多基准，揭示大市值低换手率公司为信息净传递者，明确横截面收益动态的信息架构"
+    ],
+    "processed_at": "2026-02-25T08:59:22.378662"
+  },
+  {
+    "id": "2602.20771v1",
+    "title": "Market Inefficiency in Cryptoasset Markets",
+    "abstract": "We demonstrate market inefficiency in cryptoasset markets. Our approach examines investments that share a dominant risk factor but differ in their exposure to a secondary risk. We derive equilibrium restrictions that must hold regardless of how investors price either risk. Our empirical results strongly reject these necessary equilibrium restrictions. The rejection implies market inefficiency that cannot be attributed to mispriced risk, suggesting the presence of frictions that impede capital reallocation.",
+    "authors": [
+      "Joel Hasbrouck",
+      "Julian Ma",
+      "Fahad Saleh",
+      "Caspar Schwarz-Schilling"
+    ],
+    "published": "2026-02-24",
+    "categories": [
+      "q-fin.TR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.20771v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.20771v1",
+    "fetched_at": "2026-02-25T08:55:34.124448",
+    "chinese_title": "加密资产市场的市场无效性",
+    "chinese_summary": "该论文通过分析共享主导风险因子但对次要风险暴露不同的投资，推导了无论投资者如何定价风险都必须成立的均衡约束；实证结果强烈拒绝这些约束，表明加密资产市场存在无效性，且该无效性不能归因于风险定价错误，而是源于阻碍资本再分配的摩擦。",
+    "tags": [
+      "Asset Pricing",
+      "Factor Model",
+      "Anomaly",
+      "Market Microstructure"
+    ],
+    "key_contributions": [
+      "推导了不依赖投资者风险定价方式的均衡约束条件",
+      "实证证明加密资产市场无效且无效性源于资本再分配摩擦而非风险定价错误"
+    ],
+    "processed_at": "2026-02-25T08:59:39.637956"
+  },
+  {
+    "id": "2602.20552v1",
+    "title": "Stochastic Control Problems with Infinite Horizon and Regime Switching Arising in Optimal Liquidation with Semimartingale Strategies",
+    "abstract": "We study an optimal control problem on infinite time horizon with semimartingale strategies, random coefficients and regime switching. The value function and the optimal strategy can be characterized in terms of three systems of backward stochastic differential equations (BSDEs) with infinite horizon. One of them is a system of linear BSDEs with unbounded coefficients and infinite horizon, which seems to be new in literature. We establish the existence of the solutions to these BSDEs by BMO analysis and comparison theorem for multi-dimensional BSDEs. Next, we establish that the optimal control problem is well posed, in the sense that the value function is finite and the optimal strategy-when it exists-is unique. This is achieved by reformulating the cost functional as the sum of a quadratic functional and the candidate value function. The reformulation crucially relies on the well-established well-posedness results for systems of BSDEs. Finally, under additional assumptions, we obtain the unique optimal strategy.",
+    "authors": [
+      "Xinman Cheng",
+      "Guanxing Fu",
+      "Xiaonyu Xia"
+    ],
+    "published": "2026-02-24",
+    "categories": [
+      "math.OC",
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.20552v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.20552v1",
+    "fetched_at": "2026-02-25T08:55:34.124470",
+    "chinese_title": "带无限时域与区制切换的随机控制问题：源于半鞅策略下的最优清算",
+    "chinese_summary": "本文研究无限时域、随机系数及区制切换下的最优控制问题，用三个无限时域倒向随机微分方程（BSDE）刻画价值函数与最优策略（含一类新的无界系数线性BSDE）；通过BMO分析和多维BSDE比较定理证明BSDE解的存在性，证明最优控制问题适定（价值函数有限、最优策略唯一），并在额外假设下得到唯一最优策略。",
+    "tags": [
+      "Execution",
+      "Portfolio Optimization",
+      "Risk Management"
+    ],
+    "key_contributions": [
+      "提出用三个无限时域倒向随机微分方程（含一类新的无界系数线性BSDE）刻画带无限时域与区制切换的最优控制问题的价值函数及最优策略",
+      "利用BMO分析和多维BSDE比较定理证明BSDE解的存在性，证明最优控制问题适定（价值函数有限、最优策略唯一），并在额外假设下得到唯一最优策略"
+    ],
+    "processed_at": "2026-02-25T09:00:08.540278"
+  },
+  {
+    "id": "2602.20415v1",
+    "title": "Markets are competitive if and only if P != NP",
+    "abstract": "I prove that competitive market outcomes require computational intractability. If P = NP, firms can efficiently solve the collusion detection problem, identifying deviations from cooperative agreements in complex, noisy markets and thereby making collusion sustainable as an equilibrium. If P != NP, the collusion detection problem is computationally infeasible for markets satisfying a natural instance-hardness condition on their demand structure, rendering punishment threats non-credible and collusion unstable. Combined with Maymin (2011), who proved that market efficiency requires P = NP, this yields a fundamental impossibility: markets can be informationally efficient or competitive, but not both. Artificial intelligence, by expanding firms' computational capabilities, is pushing markets from the competitive regime toward the collusive regime, explaining the empirical emergence of algorithmic collusion without explicit coordination.",
+    "authors": [
+      "Philip Z. Maymin"
+    ],
+    "published": "2026-02-23",
+    "categories": [
+      "cs.GT",
+      "cs.CC",
+      "econ.TH",
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.20415v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.20415v1",
+    "fetched_at": "2026-02-25T08:55:34.124493",
+    "chinese_title": "市场具有竞争性当且仅当P≠NP",
+    "chinese_summary": "论文证明市场竞争性等价于P≠NP：若P=NP，企业可高效解决合谋检测问题使合谋可持续；若P≠NP则检测不可行、合谋不稳定。结合已有研究（市场有效需P=NP）得出市场无法同时信息有效与竞争，且AI提升计算能力推动市场从竞争转向合谋，解释算法合谋现象。",
+    "tags": [
+      "Market Microstructure",
+      "Algorithmic Trading",
+      "Behavioral Finance"
+    ],
+    "key_contributions": [
+      "严格证明市场竞争性与计算复杂度P≠NP等价，明确P/NP问题与市场结构的核心关联",
+      "揭示市场无法同时信息有效和竞争的不可能定理，解释AI驱动算法合谋的机制"
+    ],
+    "processed_at": "2026-02-25T09:00:29.185370"
+  },
+  {
+    "id": "2602.20639v1",
+    "title": "Grounding LLMs in Scientific Discovery via Embodied Actions",
+    "abstract": "Large Language Models (LLMs) have shown significant potential in scientific discovery but struggle to bridge the gap between theoretical reasoning and verifiable physical simulation. Existing solutions operate in a passive \"execute-then-response\" loop and thus lacks runtime perception, obscuring agents to transient anomalies (e.g., numerical instability or diverging oscillations). To address this limitation, we propose EmbodiedAct, a framework that transforms established scientific software into active embodied agents by grounding LLMs in embodied actions with a tight perception-execution loop. We instantiate EmbodiedAct within MATLAB and evaluate it on complex engineering design and scientific modeling tasks. Extensive experiments show that EmbodiedAct significantly outperforms existing baselines, achieving SOTA performance by ensuring satisfactory reliability and stability in long-horizon simulations and enhanced accuracy in scientific modeling.",
+    "authors": [
+      "Bo Zhang",
+      "Jinfeng Zhou",
+      "Yuxuan Chen",
+      "Jianing Yin",
+      "Minlie Huang",
+      "Hongning Wang"
+    ],
+    "published": "2026-02-24",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.20639v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.20639v1",
+    "fetched_at": "2026-02-25T08:55:46.765519",
+    "chinese_title": "通过具身行动将大语言模型锚定在科学发现中",
+    "chinese_summary": "针对大语言模型（LLM）难以衔接理论推理与可验证物理模拟的问题，论文提出EmbodiedAct框架，通过感知-执行闭环将科学软件转化为主动具身智能体；在MATLAB上的实验表明，该框架显著优于现有基线，提升长时模拟可靠性与科学建模准确性。",
+    "tags": [
+      "LLM",
+      "Transformer",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出EmbodiedAct框架，以具身行动和感知-执行闭环解决LLM理论与模拟衔接的缺陷，将科学软件转化为主动智能体",
+      "实验验证该框架在工程设计与科学建模任务中达SOTA，提升模拟可靠性和建模准确性"
+    ],
+    "processed_at": "2026-02-25T09:00:44.669878"
+  },
+  {
+    "id": "2602.20468v1",
+    "title": "CGSTA: Cross-Scale Graph Contrast with Stability-Aware Alignment for Multivariate Time-Series Anomaly Detection",
+    "abstract": "Multivariate time-series anomaly detection is essential for reliable industrial control, telemetry, and service monitoring. However, the evolving inter-variable dependencies and inevitable noise render it challenging. Existing methods often use single-scale graphs or instance-level contrast. Moreover, learned dynamic graphs can overfit noise without a stable anchor, causing false alarms or misses. To address these challenges, we propose the CGSTA framework with two key innovations. First, Dynamic Layered Graph Construction (DLGC) forms local, regional, and global views of variable relations for each sliding window; rather than contrasting whole windows, Contrastive Discrimination across Scales (CDS) contrasts graph representations within each view and aligns the same window across views to make learning structure-aware. Second, Stability-Aware Alignment (SAA) maintains a per-scale stable reference learned from normal data and guides the current window's fast-changing graphs toward it to suppress noise. We fuse the multi-scale and temporal features and use a conditional density estimator to produce per-time-step anomaly scores. Across four benchmarks, CGSTA delivers optimal performance on PSM and WADI, and is comparable to the baseline methods on SWaT and SMAP.",
+    "authors": [
+      "Zhongpeng Qi",
+      "Jun Zhang",
+      "Wei Li",
+      "Zhuoxuan Liang"
+    ],
+    "published": "2026-02-24",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.20468v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.20468v1",
+    "fetched_at": "2026-02-25T08:55:46.765551",
+    "chinese_title": "CGSTA：面向多元时间序列异常检测的跨尺度图对比与稳定性感知对齐",
+    "chinese_summary": "针对多元时间序列异常检测中变量依赖变化及噪声问题，论文提出CGSTA框架：通过动态分层图构建生成多尺度变量关系视图，结合跨尺度对比判别学习结构感知特征；同时用稳定性感知对齐维持正常数据的稳定参考以抑制噪声，融合多尺度及时序特征后生成异常分数，在基准数据集上表现优异。",
+    "tags": [
+      "Anomaly",
+      "Time Series",
+      "Graph Neural Network",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出动态分层图构建与跨尺度对比判别，生成多尺度变量关系视图并跨视图对齐学习结构感知特征",
+      "提出稳定性感知对齐，维持各尺度正常数据的稳定参考以抑制噪声，提升异常检测鲁棒性"
+    ],
+    "processed_at": "2026-02-25T09:00:55.209793"
+  },
+  {
+    "id": "2602.21198v1",
+    "title": "Learning from Trials and Errors: Reflective Test-Time Planning for Embodied LLMs",
+    "abstract": "Embodied LLMs endow robots with high-level task reasoning, but they cannot reflect on what went wrong or why, turning deployment into a sequence of independent trials where mistakes repeat rather than accumulate into experience. Drawing upon human reflective practitioners, we introduce Reflective Test-Time Planning, which integrates two modes of reflection: \\textit{reflection-in-action}, where the agent uses test-time scaling to generate and score multiple candidate actions using internal reflections before execution; and \\textit{reflection-on-action}, which uses test-time training to update both its internal reflection model and its action policy based on external reflections after execution. We also include retrospective reflection, allowing the agent to re-evaluate earlier decisions and perform model updates with hindsight for proper long-horizon credit assignment. Experiments on our newly-designed Long-Horizon Household benchmark and MuJoCo Cupboard Fitting benchmark show significant gains over baseline models, with ablative studies validating the complementary roles of reflection-in-action and reflection-on-action. Qualitative analyses, including real-robot trials, highlight behavioral correction through reflection.",
+    "authors": [
+      "Yining Hong",
+      "Huang Huang",
+      "Manling Li",
+      "Li Fei-Fei",
+      "Jiajun Wu",
+      "Yejin Choi"
+    ],
+    "published": "2026-02-24",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CL",
+      "cs.CV",
+      "cs.RO"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.21198v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.21198v1",
+    "fetched_at": "2026-02-25T08:56:16.163012",
+    "chinese_title": "从试错中学习：具身大语言模型的反思性测试时规划",
+    "chinese_summary": "本文针对具身大语言模型无法反思错误导致重复犯错的问题，提出反思性测试时规划方法，整合行动中反思（测试时生成并评分多候选动作）、行动后反思（执行后更新模型与策略）及事后反思（事后重新评估决策）；在长程家庭任务和MuJoCo橱柜适配基准上显著优于基线，消融实验验证两种反思模式的互补性，真实机器人试验体现反思的行为修正效果。",
+    "tags": [
+      "LLM",
+      "Reinforcement Learning",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出整合行动中反思、行动后反思及事后反思的反思性测试时规划方法，解决具身LLM无法积累错误经验的问题",
+      "设计长程家庭任务基准，在两个基准上验证方法有效性，消融实验证明反思模式互补性"
+    ],
+    "processed_at": "2026-02-25T09:01:10.397558"
+  },
+  {
+    "id": "2602.21144v1",
+    "title": "Scaling State-Space Models on Multiple GPUs with Tensor Parallelism",
+    "abstract": "Selective state space models (SSMs) have rapidly become a compelling backbone for large language models, especially for long-context workloads. Yet in deployment, their inference performance is often bounded by the memory capacity, bandwidth, and latency limits of a single GPU, making multi-GPU execution increasingly necessary. Although tensor parallelism (TP) is widely used to scale Transformer inference, applying it to selective SSM blocks is non-trivial because the SSM mixer couples large projections with a sequence-wise recurrent state update and local mixing whose efficiency depends on preserving locality and avoiding synchronization in the critical path.   This paper presents a communication-efficient TP design for selective SSM inference that addresses three practical engineering challenges: enabling TTFT improvements via an SSM state cache across prefill and decode, partitioning the mixer's packed parameter tensor so that recurrent updates remain local while minimizing communication, and reducing TP aggregation overhead with quantized AllReduce. We evaluate on three representative SSM-based LLMs spanning pure-SSM and hybrid architectures - Mamba, Falcon-Mamba, and Zamba - on NVIDIA A6000 and A100 clusters. Our experiments show substantial throughput gains from tensor-parallel SSM inference, improving batch-request throughput by ~1.6-2.1x on 2 GPUs and ~2.6-4.0x on 4 GPUs for Mamba, with the largest benefits at long context lengths, and achieving a further ~10-18% throughput improvement from quantized all-reduce by lowering synchronization bandwidth overhead.",
+    "authors": [
+      "Anurag Dutt",
+      "Nimit Shah",
+      "Hazem Masarani",
+      "Anshul Gandhi"
+    ],
+    "published": "2026-02-24",
+    "categories": [
+      "cs.DC",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.21144v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.21144v1",
+    "fetched_at": "2026-02-25T08:56:16.163049",
+    "chinese_title": "基于张量并行的多GPU选择性状态空间模型扩展",
+    "chinese_summary": "选择性状态空间模型（SSM）是长上下文大语言模型的关键 backbone，但单GPU推理受内存、带宽等限制。本文提出通信高效的张量并行（TP）设计，解决跨预填充与解码的SSM状态缓存、参数分割保持局部更新、量化AllReduce降聚合开销三大挑战，在Mamba等模型上验证多GPU吞吐量显著提升（2GPU~1.6-2.1x，4GPU~2.6-4.0x），长上下文收益更大。",
+    "tags": [
+      "LLM",
+      "Deep Learning",
+      "Transformer",
+      "Time Series"
+    ],
+    "key_contributions": [
+      "提出针对选择性SSM推理的通信高效张量并行设计，突破三大工程挑战（状态缓存、参数分割、量化聚合）",
+      "在SSM-based LLM上验证多GPU推理吞吐量显著提升，长上下文场景收益更突出"
+    ],
+    "processed_at": "2026-02-25T09:01:34.089497"
+  },
+  {
+    "id": "2602.21143v1",
+    "title": "A Benchmark for Deep Information Synthesis",
+    "abstract": "Large language model (LLM)-based agents are increasingly used to solve complex tasks involving tool use, such as web browsing, code execution, and data analysis. However, current evaluation benchmarks do not adequately assess their ability to solve real-world tasks that require synthesizing information from multiple sources and inferring insights beyond simple fact retrieval. To address this, we introduce DEEPSYNTH, a novel benchmark designed to evaluate agents on realistic, time-consuming problems that combine information gathering, synthesis, and structured reasoning to produce insights. DEEPSYNTH contains 120 tasks collected across 7 domains and data sources covering 67 countries. DEEPSYNTH is constructed using a multi-stage data collection pipeline that requires annotators to collect official data sources, create hypotheses, perform manual analysis, and design tasks with verifiable answers. When evaluated on DEEPSYNTH, 11 state-of-the-art LLMs and deep research agents achieve a maximum F1 score of 8.97 and 17.5 on the LLM-judge metric, underscoring the difficulty of the benchmark. Our analysis reveals that current agents struggle with hallucinations and reasoning over large information spaces, highlighting DEEPSYNTH as a crucial benchmark for guiding future research.",
+    "authors": [
+      "Debjit Paul",
+      "Daniel Murphy",
+      "Milan Gritta",
+      "Ronald Cardenas",
+      "Victor Prokhorov",
+      "Lena Sophia Bolliger",
+      "Aysim Toker",
+      "Roy Miles",
+      "Andreea-Maria Oncescu",
+      "Jasivan Alex Sivakumar",
+      "Philipp Borchert",
+      "Ismail Elezi",
+      "Meiru Zhang",
+      "Ka Yiu Lee",
+      "Guchun Zhang",
+      "Jun Wang",
+      "Gerasimos Lampouras"
+    ],
+    "published": "2026-02-24",
+    "categories": [
+      "cs.AI",
+      "cs.CL",
+      "cs.IR",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.21143v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.21143v1",
+    "fetched_at": "2026-02-25T08:56:16.163103",
+    "chinese_title": "深度信息合成基准测试",
+    "chinese_summary": "现有LLM代理基准未充分评估多源信息合成与推理能力，论文提出DEEPSYNTH基准，包含跨7领域67国的120个任务，采用多阶段数据收集 pipeline，评估显示当前模型性能较低，凸显该基准对未来研究的指导意义。",
+    "tags": [
+      "LLM",
+      "Benchmark",
+      "NLP"
+    ],
+    "key_contributions": [
+      "提出DEEPSYNTH基准，填补现有基准在多源信息合成与推理能力评估上的空白",
+      "构建包含120个跨7领域67国任务的数据集，验证当前SOTA模型性能不足，为未来研究提供方向"
+    ],
+    "processed_at": "2026-02-25T09:01:46.877942"
+  },
+  {
+    "id": "2602.20958v1",
+    "title": "EKF-Based Depth Camera and Deep Learning Fusion for UAV-Person Distance Estimation and Following in SAR Operations",
+    "abstract": "Search and rescue (SAR) operations require rapid responses to save lives or property. Unmanned Aerial Vehicles (UAVs) equipped with vision-based systems support these missions through prior terrain investigation or real-time assistance during the mission itself. Vision-based UAV frameworks aid human search tasks by detecting and recognizing specific individuals, then tracking and following them while maintaining a safe distance. A key safety requirement for UAV following is the accurate estimation of the distance between camera and target object under real-world conditions, achieved by fusing multiple image modalities. UAVs with deep learning-based vision systems offer a new approach to the planning and execution of SAR operations. As part of the system for automatic people detection and face recognition using deep learning, in this paper we present the fusion of depth camera measurements and monocular camera-to-body distance estimation for robust tracking and following. Deep learning-based filtering of depth camera data and estimation of camera-to-body distance from a monocular camera are achieved with YOLO-pose, enabling real-time fusion of depth information using the Extended Kalman Filter (EKF) algorithm. The proposed subsystem, designed for use in drones, estimates and measures the distance between the depth camera and the human body keypoints, to maintain the safe distance between the drone and the human target. Our system provides an accurate estimated distance, which has been validated against motion capture ground truth data. The system has been tested in real time indoors, where it reduces the average errors, root mean square error (RMSE) and standard deviations of distance estimation up to 15,3\\% in three tested scenarios.",
+    "authors": [
+      "Luka Šiktar",
+      "Branimir Ćaran",
+      "Bojan Šekoranja",
+      "Marko Švaco"
+    ],
+    "published": "2026-02-24",
+    "categories": [
+      "cs.RO",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.20958v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.20958v1",
+    "fetched_at": "2026-02-25T08:56:16.163133",
+    "chinese_title": "基于扩展卡尔曼滤波（EKF）的深度相机与深度学习融合的无人机-人员距离估计及搜救作业跟踪方法",
+    "chinese_summary": "本文针对搜救（SAR）作业中无人机（UAV）的人员跟踪需求，提出融合深度相机测量与单目相机人体距离估计的方法；通过YOLO-pose实现深度数据滤波和单目距离估计，结合EKF实时融合信息，准确估计无人机与人员目标的距离以维持安全跟踪。",
+    "tags": [
+      "Deep Learning",
+      "Risk Management"
+    ],
+    "key_contributions": [
+      "提出适配无人机搜救场景的多模态（深度+单目）距离估计融合方法",
+      "结合YOLO-pose与EKF实现实时、准确的距离估计，保障无人机与人员目标的安全距离"
+    ],
+    "processed_at": "2026-02-25T09:02:10.199041"
+  },
+  {
+    "id": "2602.20946v1",
+    "title": "Some Simple Economics of AGI",
+    "abstract": "For millennia, human cognition was the primary engine of progress on Earth. As AI decouples cognition from biology, the marginal cost of measurable execution falls to zero, absorbing any labor capturable by metrics--including creative, analytical, and innovative work. The binding constraint on growth is no longer intelligence but human verification bandwidth: the capacity to validate, audit, and underwrite responsibility when execution is abundant. We model the AGI transition as the collision of two racing cost curves: an exponentially decaying Cost to Automate and a biologically bottlenecked Cost to Verify. This structural asymmetry widens a Measurability Gap between what agents can execute and what humans can afford to verify. It also drives a shift from skill-biased to measurability-biased technical change. Rents migrate to verification-grade ground truth, cryptographic provenance, and liability underwriting--the ability to insure outcomes rather than merely generate them. The current human-in-the-loop equilibrium is unstable: eroded from below as apprenticeship collapses (Missing Junior Loop) and from within as experts codify their obsolescence (Codifier's Curse). Unverified deployment becomes privately rational--a Trojan Horse externality. Unmanaged, these forces pull toward a Hollow Economy. Yet by scaling verification alongside agentic capabilities, the forces that threaten collapse become the catalyst for unbounded discovery and experimentation--an Augmented Economy. We derive a practical playbook for individuals, companies, investors, and policymakers. Today's defining challenge is not the race to deploy the most autonomous systems; it is the race to secure the foundations of their oversight. Only by scaling our bandwidth for verification alongside our capacity for execution can we ensure that the intelligence we have summoned preserves the humanity that initiated it.",
+    "authors": [
+      "Christian Catalini",
+      "Xiang Hui",
+      "Jane Wu"
+    ],
+    "published": "2026-02-24",
+    "categories": [
+      "econ.GN",
+      "cs.AI",
+      "cs.CY",
+      "cs.LG",
+      "cs.SI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.20946v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.20946v1",
+    "fetched_at": "2026-02-25T08:56:16.163158",
+    "chinese_title": "AGI的若干简单经济学分析",
+    "chinese_summary": "该论文将AGI转型建模为自动化成本指数下降与人类验证成本受生物瓶颈限制的两条成本曲线碰撞，揭示可测量性缺口及技术变革从技能偏向转向可测量性偏向的规律；分析当前人机闭环的不稳定性，指出验证规模化是避免空心经济、实现增强经济的关键。",
+    "tags": [
+      "Financial Agent",
+      "Deep Learning",
+      "Risk Management"
+    ],
+    "key_contributions": [
+      "构建自动化成本与验证成本的双曲线模型，揭示AGI转型下的可测量性缺口及技术变革偏向变化",
+      "分析人机闭环的不稳定性及空心经济/增强经济两种结果，指出验证规模化对可持续增长的关键作用"
+    ],
+    "processed_at": "2026-02-25T09:02:33.172030"
+  },
+  {
+    "id": "2602.20924v1",
+    "title": "Airavat: An Agentic Framework for Internet Measurement",
+    "abstract": "Internet measurement faces twin challenges: complex analyses require expert-level orchestration of tools, yet even syntactically correct implementations can have methodological flaws and can be difficult to verify. Democratizing measurement capabilities thus demands automating both workflow generation and verification against methodological standards established through decades of research.   We present Airavat, the first agentic framework for Internet measurement workflow generation with systematic verification and validation. Airavat coordinates a set of agents mirroring expert reasoning: three agents handle problem decomposition, solution design, and code implementation, with assistance from a registry of existing tools. Two specialized engines ensure methodological correctness: a Verification Engine evaluates workflows against a knowledge graph encoding five decades of measurement research, while a Validation Engine identifies appropriate validation techniques grounded in established methodologies. Through four Internet measurement case studies, we demonstrate that Airavat (i) generates workflows matching expert-level solutions, (ii) makes sound architectural decisions, (iii) addresses novel problems without ground truth, and (iv) identifies methodological flaws missed by standard execution-based testing.",
+    "authors": [
+      "Alagappan Ramanathan",
+      "Eunju Kang",
+      "Dongsu Han",
+      "Sangeetha Abdu Jyothi"
+    ],
+    "published": "2026-02-24",
+    "categories": [
+      "cs.NI",
+      "cs.AI",
+      "cs.SE"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.20924v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.20924v1",
+    "fetched_at": "2026-02-25T08:56:16.163185",
+    "chinese_title": "Airavat：用于互联网测量的智能体框架",
+    "chinese_summary": "论文针对互联网测量中专家级工具编排复杂且方法易存缺陷的问题，提出首个带系统验证的智能体框架Airavat；该框架通过多智能体协调处理问题分解、方案设计与代码实现，结合基于知识图谱的验证引擎和成熟方法导向的验证引擎确保方法正确性，经案例验证其能生成专家级工作流、解决无基准的新问题并识别方法缺陷。",
+    "tags": [
+      "LLM",
+      "Financial Agent"
+    ],
+    "key_contributions": [
+      "提出首个集成多智能体协调与工具支持的互联网测量工作流生成框架Airavat，覆盖全流程设计实现",
+      "构建双引擎（知识图谱验证+成熟方法验证）确保方法正确性，案例证明其优于传统测试且能解决无基准新问题"
+    ],
+    "processed_at": "2026-02-25T09:02:57.044790"
+  },
+  {
+    "id": "2602.20867v1",
+    "title": "SoK: Agentic Skills -- Beyond Tool Use in LLM Agents",
+    "abstract": "Agentic systems increasingly rely on reusable procedural capabilities, \\textit{a.k.a., agentic skills}, to execute long-horizon workflows reliably. These capabilities are callable modules that package procedural knowledge with explicit applicability conditions, execution policies, termination criteria, and reusable interfaces. Unlike one-off plans or atomic tool calls, skills operate (and often do well) across tasks.   This paper maps the skill layer across the full lifecycle (discovery, practice, distillation, storage, composition, evaluation, and update) and introduces two complementary taxonomies. The first is a system-level set of \\textbf{seven design patterns} capturing how skills are packaged and executed in practice, from metadata-driven progressive disclosure and executable code skills to self-evolving libraries and marketplace distribution. The second is an orthogonal \\textbf{representation $\\times$ scope} taxonomy describing what skills \\emph{are} (natural language, code, policy, hybrid) and what environments they operate over (web, OS, software engineering, robotics).   We analyze the security and governance implications of skill-based agents, covering supply-chain risks, prompt injection via skill payloads, and trust-tiered execution, grounded by a case study of the ClawHavoc campaign in which nearly 1{,}200 malicious skills infiltrated a major agent marketplace, exfiltrating API keys, cryptocurrency wallets, and browser credentials at scale. We further survey deterministic evaluation approaches, anchored by recent benchmark evidence that curated skills can substantially improve agent success rates while self-generated skills may degrade them. We conclude with open challenges toward robust, verifiable, and certifiable skills for real-world autonomous agents.",
+    "authors": [
+      "Yanna Jiang",
+      "Delong Li",
+      "Haiyu Deng",
+      "Baihe Ma",
+      "Xu Wang",
+      "Qin Wang",
+      "Guangsheng Yu"
+    ],
+    "published": "2026-02-24",
+    "categories": [
+      "cs.CR",
+      "cs.AI",
+      "cs.CE",
+      "cs.ET"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.20867v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.20867v1",
+    "fetched_at": "2026-02-25T08:56:16.163218",
+    "chinese_title": "SoK：智能体技能——超越LLM智能体的工具使用",
+    "chinese_summary": "本文聚焦LLM智能体的可复用过程能力（智能体技能），系统映射其全生命周期并提出两个互补分类法（七个系统级设计模式及“表示×范围”分类）；同时结合ClawHavoc恶意技能渗透案例，分析技能型智能体的安全治理风险。",
+    "tags": [
+      "LLM",
+      "Financial Agent",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "系统梳理LLM智能体技能的全生命周期，提出包含七个设计模式的系统级分类及“表示×范围”的技能本质分类",
+      "结合ClawHavoc案例实证分析技能型智能体的安全治理风险（如供应链风险、恶意技能渗透等）"
+    ],
+    "processed_at": "2026-02-25T09:03:19.334908"
+  },
+  {
+    "id": "2602.20720v1",
+    "title": "AdapTools: Adaptive Tool-based Indirect Prompt Injection Attacks on Agentic LLMs",
+    "abstract": "The integration of external data services (e.g., Model Context Protocol, MCP) has made large language model-based agents increasingly powerful for complex task execution. However, this advancement introduces critical security vulnerabilities, particularly indirect prompt injection (IPI) attacks. Existing attack methods are limited by their reliance on static patterns and evaluation on simple language models, failing to address the fast-evolving nature of modern AI agents. We introduce AdapTools, a novel adaptive IPI attack framework that selects stealthier attack tools and generates adaptive attack prompts to create a rigorous security evaluation environment. Our approach comprises two key components: (1) Adaptive Attack Strategy Construction, which develops transferable adversarial strategies for prompt optimization, and (2) Attack Enhancement, which identifies stealthy tools capable of circumventing task-relevance defenses. Comprehensive experimental evaluation shows that AdapTools achieves a 2.13 times improvement in attack success rate while degrading system utility by a factor of 1.78. Notably, the framework maintains its effectiveness even against state-of-the-art defense mechanisms. Our method advances the understanding of IPI attacks and provides a useful reference for future research.",
+    "authors": [
+      "Che Wang",
+      "Jiaming Zhang",
+      "Ziqi Zhang",
+      "Zijie Wang",
+      "Yinghui Wang",
+      "Jianbo Gao",
+      "Tao Wei",
+      "Zhong Chen",
+      "Wei Yang Bryan Lim"
+    ],
+    "published": "2026-02-24",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.20720v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.20720v1",
+    "fetched_at": "2026-02-25T08:56:16.163252",
+    "chinese_title": "AdapTools：面向智能体大语言模型的自适应工具型间接提示注入攻击",
+    "chinese_summary": "论文针对智能体大语言模型（LLM）的间接提示注入（IPI）攻击缺陷，提出AdapTools框架，含自适应攻击策略构建（优化可迁移对抗提示）和攻击增强（识别规避任务防御的隐秘工具）两部分；实验显示其攻击成功率提升2.13倍、系统效用降1.78倍，且对先进防御仍有效，为LLM安全评估提供支撑。",
+    "tags": [
+      "LLM",
+      "NLP"
+    ],
+    "key_contributions": [
+      "实验验证AdapTools攻击成功率显著提升且对先进防御机制有效，为LLM智能体安全评估提供严格环境"
+    ],
+    "processed_at": "2026-02-25T09:03:29.695992"
+  },
+  {
+    "id": "2602.20708v1",
+    "title": "ICON: Indirect Prompt Injection Defense for Agents based on Inference-Time Correction",
+    "abstract": "Large Language Model (LLM) agents are susceptible to Indirect Prompt Injection (IPI) attacks, where malicious instructions in retrieved content hijack the agent's execution. Existing defenses typically rely on strict filtering or refusal mechanisms, which suffer from a critical limitation: over-refusal, prematurely terminating valid agentic workflows. We propose ICON, a probing-to-mitigation framework that neutralizes attacks while preserving task continuity. Our key insight is that IPI attacks leave distinct over-focusing signatures in the latent space. We introduce a Latent Space Trace Prober to detect attacks based on high intensity scores. Subsequently, a Mitigating Rectifier performs surgical attention steering that selectively manipulate adversarial query key dependencies while amplifying task relevant elements to restore the LLM's functional trajectory. Extensive evaluations on multiple backbones show that ICON achieves a competitive 0.4% ASR, matching commercial grade detectors, while yielding a over 50% task utility gain. Furthermore, ICON demonstrates robust Out of Distribution(OOD) generalization and extends effectively to multi-modal agents, establishing a superior balance between security and efficiency.",
+    "authors": [
+      "Che Wang",
+      "Fuyao Zhang",
+      "Jiaming Zhang",
+      "Ziqi Zhang",
+      "Yinghui Wang",
+      "Longtao Huang",
+      "Jianbo Gao",
+      "Zhong Chen",
+      "Wei Yang Bryan Lim"
+    ],
+    "published": "2026-02-24",
+    "categories": [
+      "cs.AI",
+      "cs.CR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.20708v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.20708v1",
+    "fetched_at": "2026-02-25T08:56:16.163284",
+    "chinese_title": "ICON：基于推理时修正的智能体间接提示注入防御方法",
+    "chinese_summary": "针对大语言模型（LLM）智能体易受间接提示注入（IPI）攻击且现有防御过度拒绝的问题，本文提出ICON框架：通过潜在空间追踪探测器检测攻击，再经缓解整流器选择性操纵对抗性查询键依赖并放大任务相关元素，在保持低攻击成功率（0.4%）的同时提升任务效用超50%，还具备分布外泛化与多模态扩展能力。",
+    "tags": [
+      "LLM",
+      "NLP",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出探测-缓解框架ICON，通过潜在空间检测与注意力引导实现IPI攻击中和，避免过度拒绝并保留任务连续性",
+      "实验验证ICON在多骨干模型上的低攻击成功率（0.4%）、高任务效用增益（超50%），且具备分布外泛化与多模态扩展能力"
+    ],
+    "processed_at": "2026-02-25T09:03:50.626250"
+  },
+  {
+    "id": "2602.20659v1",
+    "title": "Recursive Belief Vision Language Model",
+    "abstract": "Current vision-language-action (VLA) models struggle with long-horizon manipulation under partial observability. Most existing approaches remain observation-driven, relying on short context windows or repeated queries to vision-language models (VLMs). This leads to loss of task progress, action repetition under perceptual aliasing, and high inference latency. Semantic reasoning alone is not the primary bottleneck in long-horizon manipulation. Instead, VLAs lack persistent, action-conditioned state representations and exhibit limited temporal and physical reasoning, making them ill-suited for multi-stage control. This paper introduces RB-VLA, a belief-centric architecture trained with self-supervised world-model objectives that maintains a compact latent state encoding task-relevant history, dynamics, and object interactions. Queried once for high-level intent, the VLM provides task specification, while the belief tracks task progress and enables phase-aware, causally grounded control under partial observability without storing raw observations or scaling memory with time. The belief and intent jointly condition a diffusion policy for robust closed-loop execution. RB-VLA outperforms prior VLAs on long-horizon benchmarks, achieving 52.5% and 37.5% higher success on multi-stage pick-and-place and stacking tasks, respectively, compared to π0. It also reduces inference latency by up to 5x relative to baselines and eliminates memory growth across timesteps observed in existing VLAs. Ablations show that the belief module is the primary driver of performance, increasing success rates from 32.5% to 77.5%. These results demonstrate the effectiveness of belief-based state representations for long-horizon VLA policies.",
+    "authors": [
+      "Vaidehi Bagaria",
+      "Bijo Sebastian",
+      "Nirav Patel"
+    ],
+    "published": "2026-02-24",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.20659v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.20659v1",
+    "fetched_at": "2026-02-25T08:56:16.163305",
+    "chinese_title": "递归信念视觉语言模型",
+    "chinese_summary": "现有视觉语言动作模型（VLA）在部分可观测下长horizon操作存在任务进度丢失、感知混叠等问题，本文提出RB-VLA，采用信念中心架构结合自监督世界模型维护紧凑任务相关潜在状态，联合VLM高层意图与信念条件扩散策略，在长horizon基准任务上表现更优，延迟降低且无内存增长。",
+    "tags": [
+      "Deep Learning",
+      "Transformer",
+      "Reinforcement Learning",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出RB-VLA信念中心架构，通过自监督世界模型维护紧凑任务相关状态编码，解决现有VLA长horizon操作的部分可观测与内存增长问题；",
+      "实验表明RB-VLA在多阶段任务上比基线方法成功率显著提升，推理延迟降低最多5倍。"
+    ],
+    "processed_at": "2026-02-25T09:04:07.524299"
+  },
+  {
+    "id": "2602.20593v1",
+    "title": "Is the Trigger Essential? A Feature-Based Triggerless Backdoor Attack in Vertical Federated Learning",
+    "abstract": "As a distributed collaborative machine learning paradigm, vertical federated learning (VFL) allows multiple passive parties with distinct features and one active party with labels to collaboratively train a model. Although it is known for the privacy-preserving capabilities, VFL still faces significant privacy and security threats from backdoor attacks. Existing backdoor attacks typically involve an attacker implanting a trigger into the model during the training phase and executing the attack by adding the trigger to the samples during the inference phase. However, in this paper, we find that triggers are not essential for backdoor attacks in VFL. In light of this, we disclose a new backdoor attack pathway in VFL by introducing a feature-based triggerless backdoor attack. This attack operates under a more stringent security assumption, where the attacker is honest-but-curious rather than malicious during the training phase. It comprises three modules: label inference for the targeted backdoor attack, poison generation with amplification and perturbation mechanisms, and backdoor execution to implement the attack. Extensive experiments on five benchmark datasets demonstrate that our attack outperforms three baseline backdoor attacks by 2 to 50 times while minimally impacting the main task. Even in VFL scenarios with 32 passive parties and only one set of auxiliary data, our attack maintains high performance. Moreover, when confronted with distinct defense strategies, our attack remains largely unaffected and exhibits strong robustness. We hope that the disclosure of this triggerless backdoor attack pathway will encourage the community to revisit security threats in VFL scenarios and inspire researchers to develop more robust and practical defense strategies.",
+    "authors": [
+      "Yige Liu",
+      "Yiwei Lou",
+      "Che Wang",
+      "Yongzhi Cao",
+      "Hanpin Wang"
+    ],
+    "published": "2026-02-24",
+    "categories": [
+      "cs.LG",
+      "cs.CR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.20593v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.20593v1",
+    "fetched_at": "2026-02-25T08:56:16.163355",
+    "chinese_title": "触发是否必要？垂直联邦学习中基于特征的无触发后门攻击",
+    "chinese_summary": "本文发现垂直联邦学习（VFL）中后门攻击无需依赖触发，提出基于特征的无触发后门攻击新方法；该攻击在诚实但好奇假设下包含标签推理、带放大扰动的毒化生成及攻击执行三模块；实验表明其性能优于3种基线攻击2-50倍，多被动方和少辅助数据场景下仍高效且抗部分防御。",
+    "tags": [
+      "Deep Learning",
+      "Anomaly"
+    ],
+    "key_contributions": [
+      "揭示垂直联邦学习中后门攻击无需依赖触发的新路径，提出基于特征的无触发后门攻击方法",
+      "该攻击在诚实但好奇假设下实现，实验证明其性能显著优于基线且多场景下鲁棒高效"
+    ],
+    "processed_at": "2026-02-25T09:04:26.385342"
+  },
+  {
+    "id": "2602.20571v1",
+    "title": "CausalReasoningBenchmark: A Real-World Benchmark for Disentangled Evaluation of Causal Identification and Estimation",
+    "abstract": "Many benchmarks for automated causal inference evaluate a system's performance based on a single numerical output, such as an Average Treatment Effect (ATE). This approach conflates two distinct steps in causal analysis: identification-formulating a valid research design under stated assumptions-and estimation-implementing that design numerically on finite data. We introduce CausalReasoningBenchmark, a benchmark of 173 queries across 138 real-world datasets, curated from 85 peer-reviewed research papers and four widely-used causal-inference textbooks. For each query a system must produce (i) a structured identification specification that names the strategy, the treatment, outcome, and control variables, and all design-specific elements, and (ii) a point estimate with a standard error. By scoring these two components separately, our benchmark enables granular diagnosis: it distinguishes failures in causal reasoning from errors in numerical execution. Baseline results with a state-of-the-art LLM show that, while the model correctly identifies the high-level strategy in 84 % of cases, full identification-specification correctness drops to only 30 %, revealing that the bottleneck lies in the nuanced details of research design rather than in computation. CausalReasoningBenchmark is publicly available on Hugging Face and is designed to foster the development of more robust automated causal-inference systems.",
+    "authors": [
+      "Ayush Sawarni",
+      "Jiyuan Tan",
+      "Vasilis Syrgkanis"
+    ],
+    "published": "2026-02-24",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.20571v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.20571v1",
+    "fetched_at": "2026-02-25T08:56:16.163375",
+    "chinese_title": "CausalReasoningBenchmark：用于因果识别与估计解纠缠评估的真实世界基准",
+    "chinese_summary": "现有因果推断基准混淆了识别（设计有效研究方案）与估计（数值计算）两个核心步骤，论文构建了包含138个真实数据集、173个查询的CausalReasoningBenchmark，通过分别评分结构化识别规范和估计结果实现细粒度诊断；基准测试显示SOTA LLM在策略识别上准确率达84%，但完整识别规范正确性仅30%，瓶颈在于研究设计细节而非计算。",
+    "tags": [
+      "LLM",
+      "NLP",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "构建了解纠缠评估因果识别与估计的真实世界基准，包含多来源真实数据集和结构化查询",
+      "设计分离评分机制，可区分因果推理失败（识别环节）与数值执行错误（估计环节）",
+      "揭示自动化因果推断系统在研究设计细节规范上的核心瓶颈"
+    ],
+    "processed_at": "2026-02-25T09:04:44.937436"
+  },
+  {
+    "id": "2602.20517v1",
+    "title": "Inner Speech as Behavior Guides: Steerable Imitation of Diverse Behaviors for Human-AI coordination",
+    "abstract": "Effective human-AI coordination requires artificial agents capable of exhibiting and responding to human-like behaviors while adapting to changing contexts. Imitation learning has emerged as one of the prominent approaches to build such agents by training them to mimic human-demonstrated behaviors. However, current methods struggle to capture the inherent diversity and non-Markovian nature of human behavior and lack the ability to steer behavior at inference time. Drawing inspiration from the theory of human cognitive processes, where inner speech guides action selection before execution, we propose MIMIC (Modeling Inner Motivations for Imitation and Control), a framework that uses language as an internal representation of behavioral intent. MIMIC employs the novel use of vision-language models as linguistic scaffolding to train a conditional variational autoencoder capable of generating inner speech from observations. A diffusion-based behavior cloning policy then selects actions conditioned on current observations and the generated inner speech. MIMIC enables fine-grained steering of behavior at inference time by conditioning the agent on behavior-specific speech. Experiments across robotic manipulation tasks and human-AI collaboration games demonstrate that MIMIC significantly enhances both behavior diversity and fidelity to human demonstrations while enabling nuanced behavioral steering without training on additional demonstrations. We open source our code and provide pre-trained MIMIC agents and qualitative demos at: https://mimic-research.github.io.",
+    "authors": [
+      "Rakshit Trivedi",
+      "Kartik Sharma",
+      "David C Parkes"
+    ],
+    "published": "2026-02-24",
+    "categories": [
+      "cs.AI",
+      "cs.CL",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.20517v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.20517v1",
+    "fetched_at": "2026-02-25T08:56:16.163396",
+    "chinese_title": "内部言语作为行为引导：面向人机协作的多样化行为可引导模仿",
+    "chinese_summary": "该论文提出MIMIC框架，通过视觉语言模型训练条件变分自动编码器生成内部言语，结合扩散行为克隆策略实现行为选择；其核心贡献在于提升人机协作中行为多样性与对人类演示的 fidelity，且能推理时无需额外演示即可精细引导行为。",
+    "tags": [
+      "LLM",
+      "Deep Learning",
+      "Reinforcement Learning"
+    ],
+    "key_contributions": [
+      "提出MIMIC框架，以内部言语为行为引导，解决现有模仿学习难以捕捉人类行为多样性与非马尔可夫性的问题",
+      "实现推理时无需额外演示即可精细引导行为，同时显著提升行为多样性与对人类演示的 fidelity"
+    ],
+    "processed_at": "2026-02-25T09:05:03.301155"
+  },
+  {
+    "id": "2602.20502v1",
+    "title": "ActionEngine: From Reactive to Programmatic GUI Agents via State Machine Memory",
+    "abstract": "Existing Graphical User Interface (GUI) agents operate through step-by-step calls to vision language models--taking a screenshot, reasoning about the next action, executing it, then repeating on the new page--resulting in high costs and latency that scale with the number of reasoning steps, and limited accuracy due to no persistent memory of previously visited pages.   We propose ActionEngine, a training-free framework that transitions from reactive execution to programmatic planning through a novel two-agent architecture: a Crawling Agent that constructs an updatable state-machine memory of the GUIs through offline exploration, and an Execution Agent that leverages this memory to synthesize complete, executable Python programs for online task execution.   To ensure robustness against evolving interfaces, execution failures trigger a vision-based re-grounding fallback that repairs the failed action and updates the memory.   This design drastically improves both efficiency and accuracy: on Reddit tasks from the WebArena benchmark, our agent achieves 95% task success with on average a single LLM call, compared to 66% for the strongest vision-only baseline, while reducing cost by 11.8x and end-to-end latency by 2x.   Together, these components yield scalable and reliable GUI interaction by combining global programmatic planning, crawler-validated action templates, and node-level execution with localized validation and repair.",
+    "authors": [
+      "Hongbin Zhong",
+      "Fazle Faisal",
+      "Luis França",
+      "Tanakorn Leesatapornwongsa",
+      "Adriana Szekeres",
+      "Kexin Rong",
+      "Suman Nath"
+    ],
+    "published": "2026-02-24",
+    "categories": [
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.20502v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.20502v1",
+    "fetched_at": "2026-02-25T08:56:16.163425",
+    "chinese_title": "ActionEngine：通过状态机记忆从反应式到程序化GUI智能体",
+    "chinese_summary": "论文提出训练-free框架ActionEngine，采用爬行智能体（构建可更新GUI状态机记忆）和执行智能体（利用记忆合成可执行Python程序）的两智能体架构，解决现有GUI智能体成本高、延迟大、无持久记忆的问题；引入视觉重定位fallback应对界面变化，实验在WebArena的Reddit任务上实现95%成功率（单LLM调用），成本降11.8x、延迟降2x，显著提升效率与准确性。",
+    "tags": [
+      "LLM",
+      "Financial Agent",
+      "Execution",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出训练-free的ActionEngine框架，通过两智能体架构实现从反应式到程序化GUI交互，解决现有方法依赖多步LLM调用导致的高成本、高延迟及无持久记忆问题",
+      "引入视觉重定位fallback机制应对界面演化，结合全局程序规划、验证的动作模板与节点级执行，提升GUI交互的鲁棒性与效率"
+    ],
+    "processed_at": "2026-02-25T09:05:29.883620"
+  }
+]

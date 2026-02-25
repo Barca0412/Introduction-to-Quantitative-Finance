@@ -1,0 +1,451 @@
+[
+  {
+    "id": "2602.21173v1",
+    "title": "Bayesian Parametric Portfolio Policies",
+    "abstract": "Parametric Portfolio Policies (PPP) estimate optimal portfolio weights directly as functions of observable signals by maximizing expected utility, bypassing the need to model asset returns and covariances. However, PPP ignores policy risk. We show that this is consequential, leading to an overstatement of expected utility and an understatement of portfolio risk. We develop Bayesian Parametric Portfolio Policies (BPPP), which place a prior on policy coefficients thereby correcting the decision rule. We derive a general result showing that the utility gap between PPP and BPPP is strictly positive and proportional to posterior parameter uncertainty and signal magnitude. Under a mean--variance approximation, this correction appears as an additional estimation-risk term in portfolio variance, implying that PPP overexposes when signals are strongest and when risk aversion is high. Empirically, in a high-dimensional setting with 242 signals and six factors over 1973--2023, BPPP delivers higher Sharpe ratios, substantially lower turnover, larger investor welfare, and lower tail risk, with advantages that increase monotonically in risk aversion and are strongest during crisis episodes.",
+    "authors": [
+      "Miguel C. Herculano"
+    ],
+    "published": "2026-02-24",
+    "categories": [
+      "q-fin.PM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.21173v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.21173v1",
+    "fetched_at": "2026-02-25T08:55:34.124361"
+  },
+  {
+    "id": "2602.21125v1",
+    "title": "An Infinite-Dimensional Insider Trading Game",
+    "abstract": "We generalize the seminal framework of Kyle (1985) to a many-asset setting, bridging the gap between informed-trading theory and modern trading practices. Specifically, we formulate an infinite-dimensional Bayesian trading game in which the informed trader's private information may concern arbitrary aspects of the cross-sectional payoff structure across a continuum of traded assets. In this general setting, we obtain a parsimonious equilibrium characterized by a single scalar fixed point, yielding closed-form characterizations of equilibrium trading strategy, price impact within and across markets, and the informational efficiency of equilibrium prices.",
+    "authors": [
+      "Christian Keller",
+      "Michael C. Tseng"
+    ],
+    "published": "2026-02-24",
+    "categories": [
+      "q-fin.MF",
+      "econ.TH",
+      "q-fin.GN",
+      "q-fin.TR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.21125v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.21125v1",
+    "fetched_at": "2026-02-25T08:55:34.124397"
+  },
+  {
+    "id": "2602.20856v1",
+    "title": "Stochastic Discount Factors with Cross-Asset Spillovers",
+    "abstract": "This paper develops a unified framework that links firm-level predictive signals, cross-asset spillovers, and the stochastic discount factor (SDF). Signals and spillovers are jointly estimated by maximizing the Sharpe ratio, yielding an interpretable SDF that both ranks characteristic relevance and uncovers the direction of predictive influence across assets. Out-of-sample, the SDF consistently outperforms self-predictive and expected-return benchmarks across investment universes and market states. The inferred information network highlights large, low-turnover firms as net transmitters. The framework offers a clear, economically grounded view of the informational architecture underlying cross-sectional return dynamics.",
+    "authors": [
+      "Doron Avramov",
+      "Xin He"
+    ],
+    "published": "2026-02-24",
+    "categories": [
+      "q-fin.CP",
+      "econ.EM",
+      "q-fin.PM",
+      "stat.ML"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.20856v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.20856v1",
+    "fetched_at": "2026-02-25T08:55:34.124422"
+  },
+  {
+    "id": "2602.20771v1",
+    "title": "Market Inefficiency in Cryptoasset Markets",
+    "abstract": "We demonstrate market inefficiency in cryptoasset markets. Our approach examines investments that share a dominant risk factor but differ in their exposure to a secondary risk. We derive equilibrium restrictions that must hold regardless of how investors price either risk. Our empirical results strongly reject these necessary equilibrium restrictions. The rejection implies market inefficiency that cannot be attributed to mispriced risk, suggesting the presence of frictions that impede capital reallocation.",
+    "authors": [
+      "Joel Hasbrouck",
+      "Julian Ma",
+      "Fahad Saleh",
+      "Caspar Schwarz-Schilling"
+    ],
+    "published": "2026-02-24",
+    "categories": [
+      "q-fin.TR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.20771v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.20771v1",
+    "fetched_at": "2026-02-25T08:55:34.124448"
+  },
+  {
+    "id": "2602.20552v1",
+    "title": "Stochastic Control Problems with Infinite Horizon and Regime Switching Arising in Optimal Liquidation with Semimartingale Strategies",
+    "abstract": "We study an optimal control problem on infinite time horizon with semimartingale strategies, random coefficients and regime switching. The value function and the optimal strategy can be characterized in terms of three systems of backward stochastic differential equations (BSDEs) with infinite horizon. One of them is a system of linear BSDEs with unbounded coefficients and infinite horizon, which seems to be new in literature. We establish the existence of the solutions to these BSDEs by BMO analysis and comparison theorem for multi-dimensional BSDEs. Next, we establish that the optimal control problem is well posed, in the sense that the value function is finite and the optimal strategy-when it exists-is unique. This is achieved by reformulating the cost functional as the sum of a quadratic functional and the candidate value function. The reformulation crucially relies on the well-established well-posedness results for systems of BSDEs. Finally, under additional assumptions, we obtain the unique optimal strategy.",
+    "authors": [
+      "Xinman Cheng",
+      "Guanxing Fu",
+      "Xiaonyu Xia"
+    ],
+    "published": "2026-02-24",
+    "categories": [
+      "math.OC",
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.20552v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.20552v1",
+    "fetched_at": "2026-02-25T08:55:34.124470"
+  },
+  {
+    "id": "2602.20415v1",
+    "title": "Markets are competitive if and only if P != NP",
+    "abstract": "I prove that competitive market outcomes require computational intractability. If P = NP, firms can efficiently solve the collusion detection problem, identifying deviations from cooperative agreements in complex, noisy markets and thereby making collusion sustainable as an equilibrium. If P != NP, the collusion detection problem is computationally infeasible for markets satisfying a natural instance-hardness condition on their demand structure, rendering punishment threats non-credible and collusion unstable. Combined with Maymin (2011), who proved that market efficiency requires P = NP, this yields a fundamental impossibility: markets can be informationally efficient or competitive, but not both. Artificial intelligence, by expanding firms' computational capabilities, is pushing markets from the competitive regime toward the collusive regime, explaining the empirical emergence of algorithmic collusion without explicit coordination.",
+    "authors": [
+      "Philip Z. Maymin"
+    ],
+    "published": "2026-02-23",
+    "categories": [
+      "cs.GT",
+      "cs.CC",
+      "econ.TH",
+      "q-fin.CP"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.20415v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.20415v1",
+    "fetched_at": "2026-02-25T08:55:34.124493"
+  },
+  {
+    "id": "2602.20639v1",
+    "title": "Grounding LLMs in Scientific Discovery via Embodied Actions",
+    "abstract": "Large Language Models (LLMs) have shown significant potential in scientific discovery but struggle to bridge the gap between theoretical reasoning and verifiable physical simulation. Existing solutions operate in a passive \"execute-then-response\" loop and thus lacks runtime perception, obscuring agents to transient anomalies (e.g., numerical instability or diverging oscillations). To address this limitation, we propose EmbodiedAct, a framework that transforms established scientific software into active embodied agents by grounding LLMs in embodied actions with a tight perception-execution loop. We instantiate EmbodiedAct within MATLAB and evaluate it on complex engineering design and scientific modeling tasks. Extensive experiments show that EmbodiedAct significantly outperforms existing baselines, achieving SOTA performance by ensuring satisfactory reliability and stability in long-horizon simulations and enhanced accuracy in scientific modeling.",
+    "authors": [
+      "Bo Zhang",
+      "Jinfeng Zhou",
+      "Yuxuan Chen",
+      "Jianing Yin",
+      "Minlie Huang",
+      "Hongning Wang"
+    ],
+    "published": "2026-02-24",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.20639v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.20639v1",
+    "fetched_at": "2026-02-25T08:55:46.765519"
+  },
+  {
+    "id": "2602.20468v1",
+    "title": "CGSTA: Cross-Scale Graph Contrast with Stability-Aware Alignment for Multivariate Time-Series Anomaly Detection",
+    "abstract": "Multivariate time-series anomaly detection is essential for reliable industrial control, telemetry, and service monitoring. However, the evolving inter-variable dependencies and inevitable noise render it challenging. Existing methods often use single-scale graphs or instance-level contrast. Moreover, learned dynamic graphs can overfit noise without a stable anchor, causing false alarms or misses. To address these challenges, we propose the CGSTA framework with two key innovations. First, Dynamic Layered Graph Construction (DLGC) forms local, regional, and global views of variable relations for each sliding window; rather than contrasting whole windows, Contrastive Discrimination across Scales (CDS) contrasts graph representations within each view and aligns the same window across views to make learning structure-aware. Second, Stability-Aware Alignment (SAA) maintains a per-scale stable reference learned from normal data and guides the current window's fast-changing graphs toward it to suppress noise. We fuse the multi-scale and temporal features and use a conditional density estimator to produce per-time-step anomaly scores. Across four benchmarks, CGSTA delivers optimal performance on PSM and WADI, and is comparable to the baseline methods on SWaT and SMAP.",
+    "authors": [
+      "Zhongpeng Qi",
+      "Jun Zhang",
+      "Wei Li",
+      "Zhuoxuan Liang"
+    ],
+    "published": "2026-02-24",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.20468v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.20468v1",
+    "fetched_at": "2026-02-25T08:55:46.765551"
+  },
+  {
+    "id": "2602.21198v1",
+    "title": "Learning from Trials and Errors: Reflective Test-Time Planning for Embodied LLMs",
+    "abstract": "Embodied LLMs endow robots with high-level task reasoning, but they cannot reflect on what went wrong or why, turning deployment into a sequence of independent trials where mistakes repeat rather than accumulate into experience. Drawing upon human reflective practitioners, we introduce Reflective Test-Time Planning, which integrates two modes of reflection: \\textit{reflection-in-action}, where the agent uses test-time scaling to generate and score multiple candidate actions using internal reflections before execution; and \\textit{reflection-on-action}, which uses test-time training to update both its internal reflection model and its action policy based on external reflections after execution. We also include retrospective reflection, allowing the agent to re-evaluate earlier decisions and perform model updates with hindsight for proper long-horizon credit assignment. Experiments on our newly-designed Long-Horizon Household benchmark and MuJoCo Cupboard Fitting benchmark show significant gains over baseline models, with ablative studies validating the complementary roles of reflection-in-action and reflection-on-action. Qualitative analyses, including real-robot trials, highlight behavioral correction through reflection.",
+    "authors": [
+      "Yining Hong",
+      "Huang Huang",
+      "Manling Li",
+      "Li Fei-Fei",
+      "Jiajun Wu",
+      "Yejin Choi"
+    ],
+    "published": "2026-02-24",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CL",
+      "cs.CV",
+      "cs.RO"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.21198v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.21198v1",
+    "fetched_at": "2026-02-25T08:56:16.163012"
+  },
+  {
+    "id": "2602.21144v1",
+    "title": "Scaling State-Space Models on Multiple GPUs with Tensor Parallelism",
+    "abstract": "Selective state space models (SSMs) have rapidly become a compelling backbone for large language models, especially for long-context workloads. Yet in deployment, their inference performance is often bounded by the memory capacity, bandwidth, and latency limits of a single GPU, making multi-GPU execution increasingly necessary. Although tensor parallelism (TP) is widely used to scale Transformer inference, applying it to selective SSM blocks is non-trivial because the SSM mixer couples large projections with a sequence-wise recurrent state update and local mixing whose efficiency depends on preserving locality and avoiding synchronization in the critical path.   This paper presents a communication-efficient TP design for selective SSM inference that addresses three practical engineering challenges: enabling TTFT improvements via an SSM state cache across prefill and decode, partitioning the mixer's packed parameter tensor so that recurrent updates remain local while minimizing communication, and reducing TP aggregation overhead with quantized AllReduce. We evaluate on three representative SSM-based LLMs spanning pure-SSM and hybrid architectures - Mamba, Falcon-Mamba, and Zamba - on NVIDIA A6000 and A100 clusters. Our experiments show substantial throughput gains from tensor-parallel SSM inference, improving batch-request throughput by ~1.6-2.1x on 2 GPUs and ~2.6-4.0x on 4 GPUs for Mamba, with the largest benefits at long context lengths, and achieving a further ~10-18% throughput improvement from quantized all-reduce by lowering synchronization bandwidth overhead.",
+    "authors": [
+      "Anurag Dutt",
+      "Nimit Shah",
+      "Hazem Masarani",
+      "Anshul Gandhi"
+    ],
+    "published": "2026-02-24",
+    "categories": [
+      "cs.DC",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.21144v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.21144v1",
+    "fetched_at": "2026-02-25T08:56:16.163049"
+  },
+  {
+    "id": "2602.21143v1",
+    "title": "A Benchmark for Deep Information Synthesis",
+    "abstract": "Large language model (LLM)-based agents are increasingly used to solve complex tasks involving tool use, such as web browsing, code execution, and data analysis. However, current evaluation benchmarks do not adequately assess their ability to solve real-world tasks that require synthesizing information from multiple sources and inferring insights beyond simple fact retrieval. To address this, we introduce DEEPSYNTH, a novel benchmark designed to evaluate agents on realistic, time-consuming problems that combine information gathering, synthesis, and structured reasoning to produce insights. DEEPSYNTH contains 120 tasks collected across 7 domains and data sources covering 67 countries. DEEPSYNTH is constructed using a multi-stage data collection pipeline that requires annotators to collect official data sources, create hypotheses, perform manual analysis, and design tasks with verifiable answers. When evaluated on DEEPSYNTH, 11 state-of-the-art LLMs and deep research agents achieve a maximum F1 score of 8.97 and 17.5 on the LLM-judge metric, underscoring the difficulty of the benchmark. Our analysis reveals that current agents struggle with hallucinations and reasoning over large information spaces, highlighting DEEPSYNTH as a crucial benchmark for guiding future research.",
+    "authors": [
+      "Debjit Paul",
+      "Daniel Murphy",
+      "Milan Gritta",
+      "Ronald Cardenas",
+      "Victor Prokhorov",
+      "Lena Sophia Bolliger",
+      "Aysim Toker",
+      "Roy Miles",
+      "Andreea-Maria Oncescu",
+      "Jasivan Alex Sivakumar",
+      "Philipp Borchert",
+      "Ismail Elezi",
+      "Meiru Zhang",
+      "Ka Yiu Lee",
+      "Guchun Zhang",
+      "Jun Wang",
+      "Gerasimos Lampouras"
+    ],
+    "published": "2026-02-24",
+    "categories": [
+      "cs.AI",
+      "cs.CL",
+      "cs.IR",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.21143v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.21143v1",
+    "fetched_at": "2026-02-25T08:56:16.163103"
+  },
+  {
+    "id": "2602.20958v1",
+    "title": "EKF-Based Depth Camera and Deep Learning Fusion for UAV-Person Distance Estimation and Following in SAR Operations",
+    "abstract": "Search and rescue (SAR) operations require rapid responses to save lives or property. Unmanned Aerial Vehicles (UAVs) equipped with vision-based systems support these missions through prior terrain investigation or real-time assistance during the mission itself. Vision-based UAV frameworks aid human search tasks by detecting and recognizing specific individuals, then tracking and following them while maintaining a safe distance. A key safety requirement for UAV following is the accurate estimation of the distance between camera and target object under real-world conditions, achieved by fusing multiple image modalities. UAVs with deep learning-based vision systems offer a new approach to the planning and execution of SAR operations. As part of the system for automatic people detection and face recognition using deep learning, in this paper we present the fusion of depth camera measurements and monocular camera-to-body distance estimation for robust tracking and following. Deep learning-based filtering of depth camera data and estimation of camera-to-body distance from a monocular camera are achieved with YOLO-pose, enabling real-time fusion of depth information using the Extended Kalman Filter (EKF) algorithm. The proposed subsystem, designed for use in drones, estimates and measures the distance between the depth camera and the human body keypoints, to maintain the safe distance between the drone and the human target. Our system provides an accurate estimated distance, which has been validated against motion capture ground truth data. The system has been tested in real time indoors, where it reduces the average errors, root mean square error (RMSE) and standard deviations of distance estimation up to 15,3\\% in three tested scenarios.",
+    "authors": [
+      "Luka Šiktar",
+      "Branimir Ćaran",
+      "Bojan Šekoranja",
+      "Marko Švaco"
+    ],
+    "published": "2026-02-24",
+    "categories": [
+      "cs.RO",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.20958v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.20958v1",
+    "fetched_at": "2026-02-25T08:56:16.163133"
+  },
+  {
+    "id": "2602.20946v1",
+    "title": "Some Simple Economics of AGI",
+    "abstract": "For millennia, human cognition was the primary engine of progress on Earth. As AI decouples cognition from biology, the marginal cost of measurable execution falls to zero, absorbing any labor capturable by metrics--including creative, analytical, and innovative work. The binding constraint on growth is no longer intelligence but human verification bandwidth: the capacity to validate, audit, and underwrite responsibility when execution is abundant. We model the AGI transition as the collision of two racing cost curves: an exponentially decaying Cost to Automate and a biologically bottlenecked Cost to Verify. This structural asymmetry widens a Measurability Gap between what agents can execute and what humans can afford to verify. It also drives a shift from skill-biased to measurability-biased technical change. Rents migrate to verification-grade ground truth, cryptographic provenance, and liability underwriting--the ability to insure outcomes rather than merely generate them. The current human-in-the-loop equilibrium is unstable: eroded from below as apprenticeship collapses (Missing Junior Loop) and from within as experts codify their obsolescence (Codifier's Curse). Unverified deployment becomes privately rational--a Trojan Horse externality. Unmanaged, these forces pull toward a Hollow Economy. Yet by scaling verification alongside agentic capabilities, the forces that threaten collapse become the catalyst for unbounded discovery and experimentation--an Augmented Economy. We derive a practical playbook for individuals, companies, investors, and policymakers. Today's defining challenge is not the race to deploy the most autonomous systems; it is the race to secure the foundations of their oversight. Only by scaling our bandwidth for verification alongside our capacity for execution can we ensure that the intelligence we have summoned preserves the humanity that initiated it.",
+    "authors": [
+      "Christian Catalini",
+      "Xiang Hui",
+      "Jane Wu"
+    ],
+    "published": "2026-02-24",
+    "categories": [
+      "econ.GN",
+      "cs.AI",
+      "cs.CY",
+      "cs.LG",
+      "cs.SI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.20946v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.20946v1",
+    "fetched_at": "2026-02-25T08:56:16.163158"
+  },
+  {
+    "id": "2602.20924v1",
+    "title": "Airavat: An Agentic Framework for Internet Measurement",
+    "abstract": "Internet measurement faces twin challenges: complex analyses require expert-level orchestration of tools, yet even syntactically correct implementations can have methodological flaws and can be difficult to verify. Democratizing measurement capabilities thus demands automating both workflow generation and verification against methodological standards established through decades of research.   We present Airavat, the first agentic framework for Internet measurement workflow generation with systematic verification and validation. Airavat coordinates a set of agents mirroring expert reasoning: three agents handle problem decomposition, solution design, and code implementation, with assistance from a registry of existing tools. Two specialized engines ensure methodological correctness: a Verification Engine evaluates workflows against a knowledge graph encoding five decades of measurement research, while a Validation Engine identifies appropriate validation techniques grounded in established methodologies. Through four Internet measurement case studies, we demonstrate that Airavat (i) generates workflows matching expert-level solutions, (ii) makes sound architectural decisions, (iii) addresses novel problems without ground truth, and (iv) identifies methodological flaws missed by standard execution-based testing.",
+    "authors": [
+      "Alagappan Ramanathan",
+      "Eunju Kang",
+      "Dongsu Han",
+      "Sangeetha Abdu Jyothi"
+    ],
+    "published": "2026-02-24",
+    "categories": [
+      "cs.NI",
+      "cs.AI",
+      "cs.SE"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.20924v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.20924v1",
+    "fetched_at": "2026-02-25T08:56:16.163185"
+  },
+  {
+    "id": "2602.20867v1",
+    "title": "SoK: Agentic Skills -- Beyond Tool Use in LLM Agents",
+    "abstract": "Agentic systems increasingly rely on reusable procedural capabilities, \\textit{a.k.a., agentic skills}, to execute long-horizon workflows reliably. These capabilities are callable modules that package procedural knowledge with explicit applicability conditions, execution policies, termination criteria, and reusable interfaces. Unlike one-off plans or atomic tool calls, skills operate (and often do well) across tasks.   This paper maps the skill layer across the full lifecycle (discovery, practice, distillation, storage, composition, evaluation, and update) and introduces two complementary taxonomies. The first is a system-level set of \\textbf{seven design patterns} capturing how skills are packaged and executed in practice, from metadata-driven progressive disclosure and executable code skills to self-evolving libraries and marketplace distribution. The second is an orthogonal \\textbf{representation $\\times$ scope} taxonomy describing what skills \\emph{are} (natural language, code, policy, hybrid) and what environments they operate over (web, OS, software engineering, robotics).   We analyze the security and governance implications of skill-based agents, covering supply-chain risks, prompt injection via skill payloads, and trust-tiered execution, grounded by a case study of the ClawHavoc campaign in which nearly 1{,}200 malicious skills infiltrated a major agent marketplace, exfiltrating API keys, cryptocurrency wallets, and browser credentials at scale. We further survey deterministic evaluation approaches, anchored by recent benchmark evidence that curated skills can substantially improve agent success rates while self-generated skills may degrade them. We conclude with open challenges toward robust, verifiable, and certifiable skills for real-world autonomous agents.",
+    "authors": [
+      "Yanna Jiang",
+      "Delong Li",
+      "Haiyu Deng",
+      "Baihe Ma",
+      "Xu Wang",
+      "Qin Wang",
+      "Guangsheng Yu"
+    ],
+    "published": "2026-02-24",
+    "categories": [
+      "cs.CR",
+      "cs.AI",
+      "cs.CE",
+      "cs.ET"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.20867v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.20867v1",
+    "fetched_at": "2026-02-25T08:56:16.163218"
+  },
+  {
+    "id": "2602.20720v1",
+    "title": "AdapTools: Adaptive Tool-based Indirect Prompt Injection Attacks on Agentic LLMs",
+    "abstract": "The integration of external data services (e.g., Model Context Protocol, MCP) has made large language model-based agents increasingly powerful for complex task execution. However, this advancement introduces critical security vulnerabilities, particularly indirect prompt injection (IPI) attacks. Existing attack methods are limited by their reliance on static patterns and evaluation on simple language models, failing to address the fast-evolving nature of modern AI agents. We introduce AdapTools, a novel adaptive IPI attack framework that selects stealthier attack tools and generates adaptive attack prompts to create a rigorous security evaluation environment. Our approach comprises two key components: (1) Adaptive Attack Strategy Construction, which develops transferable adversarial strategies for prompt optimization, and (2) Attack Enhancement, which identifies stealthy tools capable of circumventing task-relevance defenses. Comprehensive experimental evaluation shows that AdapTools achieves a 2.13 times improvement in attack success rate while degrading system utility by a factor of 1.78. Notably, the framework maintains its effectiveness even against state-of-the-art defense mechanisms. Our method advances the understanding of IPI attacks and provides a useful reference for future research.",
+    "authors": [
+      "Che Wang",
+      "Jiaming Zhang",
+      "Ziqi Zhang",
+      "Zijie Wang",
+      "Yinghui Wang",
+      "Jianbo Gao",
+      "Tao Wei",
+      "Zhong Chen",
+      "Wei Yang Bryan Lim"
+    ],
+    "published": "2026-02-24",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.20720v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.20720v1",
+    "fetched_at": "2026-02-25T08:56:16.163252"
+  },
+  {
+    "id": "2602.20708v1",
+    "title": "ICON: Indirect Prompt Injection Defense for Agents based on Inference-Time Correction",
+    "abstract": "Large Language Model (LLM) agents are susceptible to Indirect Prompt Injection (IPI) attacks, where malicious instructions in retrieved content hijack the agent's execution. Existing defenses typically rely on strict filtering or refusal mechanisms, which suffer from a critical limitation: over-refusal, prematurely terminating valid agentic workflows. We propose ICON, a probing-to-mitigation framework that neutralizes attacks while preserving task continuity. Our key insight is that IPI attacks leave distinct over-focusing signatures in the latent space. We introduce a Latent Space Trace Prober to detect attacks based on high intensity scores. Subsequently, a Mitigating Rectifier performs surgical attention steering that selectively manipulate adversarial query key dependencies while amplifying task relevant elements to restore the LLM's functional trajectory. Extensive evaluations on multiple backbones show that ICON achieves a competitive 0.4% ASR, matching commercial grade detectors, while yielding a over 50% task utility gain. Furthermore, ICON demonstrates robust Out of Distribution(OOD) generalization and extends effectively to multi-modal agents, establishing a superior balance between security and efficiency.",
+    "authors": [
+      "Che Wang",
+      "Fuyao Zhang",
+      "Jiaming Zhang",
+      "Ziqi Zhang",
+      "Yinghui Wang",
+      "Longtao Huang",
+      "Jianbo Gao",
+      "Zhong Chen",
+      "Wei Yang Bryan Lim"
+    ],
+    "published": "2026-02-24",
+    "categories": [
+      "cs.AI",
+      "cs.CR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.20708v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.20708v1",
+    "fetched_at": "2026-02-25T08:56:16.163284"
+  },
+  {
+    "id": "2602.20659v1",
+    "title": "Recursive Belief Vision Language Model",
+    "abstract": "Current vision-language-action (VLA) models struggle with long-horizon manipulation under partial observability. Most existing approaches remain observation-driven, relying on short context windows or repeated queries to vision-language models (VLMs). This leads to loss of task progress, action repetition under perceptual aliasing, and high inference latency. Semantic reasoning alone is not the primary bottleneck in long-horizon manipulation. Instead, VLAs lack persistent, action-conditioned state representations and exhibit limited temporal and physical reasoning, making them ill-suited for multi-stage control. This paper introduces RB-VLA, a belief-centric architecture trained with self-supervised world-model objectives that maintains a compact latent state encoding task-relevant history, dynamics, and object interactions. Queried once for high-level intent, the VLM provides task specification, while the belief tracks task progress and enables phase-aware, causally grounded control under partial observability without storing raw observations or scaling memory with time. The belief and intent jointly condition a diffusion policy for robust closed-loop execution. RB-VLA outperforms prior VLAs on long-horizon benchmarks, achieving 52.5% and 37.5% higher success on multi-stage pick-and-place and stacking tasks, respectively, compared to π0. It also reduces inference latency by up to 5x relative to baselines and eliminates memory growth across timesteps observed in existing VLAs. Ablations show that the belief module is the primary driver of performance, increasing success rates from 32.5% to 77.5%. These results demonstrate the effectiveness of belief-based state representations for long-horizon VLA policies.",
+    "authors": [
+      "Vaidehi Bagaria",
+      "Bijo Sebastian",
+      "Nirav Patel"
+    ],
+    "published": "2026-02-24",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.20659v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.20659v1",
+    "fetched_at": "2026-02-25T08:56:16.163305"
+  },
+  {
+    "id": "2602.20593v1",
+    "title": "Is the Trigger Essential? A Feature-Based Triggerless Backdoor Attack in Vertical Federated Learning",
+    "abstract": "As a distributed collaborative machine learning paradigm, vertical federated learning (VFL) allows multiple passive parties with distinct features and one active party with labels to collaboratively train a model. Although it is known for the privacy-preserving capabilities, VFL still faces significant privacy and security threats from backdoor attacks. Existing backdoor attacks typically involve an attacker implanting a trigger into the model during the training phase and executing the attack by adding the trigger to the samples during the inference phase. However, in this paper, we find that triggers are not essential for backdoor attacks in VFL. In light of this, we disclose a new backdoor attack pathway in VFL by introducing a feature-based triggerless backdoor attack. This attack operates under a more stringent security assumption, where the attacker is honest-but-curious rather than malicious during the training phase. It comprises three modules: label inference for the targeted backdoor attack, poison generation with amplification and perturbation mechanisms, and backdoor execution to implement the attack. Extensive experiments on five benchmark datasets demonstrate that our attack outperforms three baseline backdoor attacks by 2 to 50 times while minimally impacting the main task. Even in VFL scenarios with 32 passive parties and only one set of auxiliary data, our attack maintains high performance. Moreover, when confronted with distinct defense strategies, our attack remains largely unaffected and exhibits strong robustness. We hope that the disclosure of this triggerless backdoor attack pathway will encourage the community to revisit security threats in VFL scenarios and inspire researchers to develop more robust and practical defense strategies.",
+    "authors": [
+      "Yige Liu",
+      "Yiwei Lou",
+      "Che Wang",
+      "Yongzhi Cao",
+      "Hanpin Wang"
+    ],
+    "published": "2026-02-24",
+    "categories": [
+      "cs.LG",
+      "cs.CR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.20593v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.20593v1",
+    "fetched_at": "2026-02-25T08:56:16.163355"
+  },
+  {
+    "id": "2602.20571v1",
+    "title": "CausalReasoningBenchmark: A Real-World Benchmark for Disentangled Evaluation of Causal Identification and Estimation",
+    "abstract": "Many benchmarks for automated causal inference evaluate a system's performance based on a single numerical output, such as an Average Treatment Effect (ATE). This approach conflates two distinct steps in causal analysis: identification-formulating a valid research design under stated assumptions-and estimation-implementing that design numerically on finite data. We introduce CausalReasoningBenchmark, a benchmark of 173 queries across 138 real-world datasets, curated from 85 peer-reviewed research papers and four widely-used causal-inference textbooks. For each query a system must produce (i) a structured identification specification that names the strategy, the treatment, outcome, and control variables, and all design-specific elements, and (ii) a point estimate with a standard error. By scoring these two components separately, our benchmark enables granular diagnosis: it distinguishes failures in causal reasoning from errors in numerical execution. Baseline results with a state-of-the-art LLM show that, while the model correctly identifies the high-level strategy in 84 % of cases, full identification-specification correctness drops to only 30 %, revealing that the bottleneck lies in the nuanced details of research design rather than in computation. CausalReasoningBenchmark is publicly available on Hugging Face and is designed to foster the development of more robust automated causal-inference systems.",
+    "authors": [
+      "Ayush Sawarni",
+      "Jiyuan Tan",
+      "Vasilis Syrgkanis"
+    ],
+    "published": "2026-02-24",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.20571v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.20571v1",
+    "fetched_at": "2026-02-25T08:56:16.163375"
+  },
+  {
+    "id": "2602.20517v1",
+    "title": "Inner Speech as Behavior Guides: Steerable Imitation of Diverse Behaviors for Human-AI coordination",
+    "abstract": "Effective human-AI coordination requires artificial agents capable of exhibiting and responding to human-like behaviors while adapting to changing contexts. Imitation learning has emerged as one of the prominent approaches to build such agents by training them to mimic human-demonstrated behaviors. However, current methods struggle to capture the inherent diversity and non-Markovian nature of human behavior and lack the ability to steer behavior at inference time. Drawing inspiration from the theory of human cognitive processes, where inner speech guides action selection before execution, we propose MIMIC (Modeling Inner Motivations for Imitation and Control), a framework that uses language as an internal representation of behavioral intent. MIMIC employs the novel use of vision-language models as linguistic scaffolding to train a conditional variational autoencoder capable of generating inner speech from observations. A diffusion-based behavior cloning policy then selects actions conditioned on current observations and the generated inner speech. MIMIC enables fine-grained steering of behavior at inference time by conditioning the agent on behavior-specific speech. Experiments across robotic manipulation tasks and human-AI collaboration games demonstrate that MIMIC significantly enhances both behavior diversity and fidelity to human demonstrations while enabling nuanced behavioral steering without training on additional demonstrations. We open source our code and provide pre-trained MIMIC agents and qualitative demos at: https://mimic-research.github.io.",
+    "authors": [
+      "Rakshit Trivedi",
+      "Kartik Sharma",
+      "David C Parkes"
+    ],
+    "published": "2026-02-24",
+    "categories": [
+      "cs.AI",
+      "cs.CL",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.20517v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.20517v1",
+    "fetched_at": "2026-02-25T08:56:16.163396"
+  },
+  {
+    "id": "2602.20502v1",
+    "title": "ActionEngine: From Reactive to Programmatic GUI Agents via State Machine Memory",
+    "abstract": "Existing Graphical User Interface (GUI) agents operate through step-by-step calls to vision language models--taking a screenshot, reasoning about the next action, executing it, then repeating on the new page--resulting in high costs and latency that scale with the number of reasoning steps, and limited accuracy due to no persistent memory of previously visited pages.   We propose ActionEngine, a training-free framework that transitions from reactive execution to programmatic planning through a novel two-agent architecture: a Crawling Agent that constructs an updatable state-machine memory of the GUIs through offline exploration, and an Execution Agent that leverages this memory to synthesize complete, executable Python programs for online task execution.   To ensure robustness against evolving interfaces, execution failures trigger a vision-based re-grounding fallback that repairs the failed action and updates the memory.   This design drastically improves both efficiency and accuracy: on Reddit tasks from the WebArena benchmark, our agent achieves 95% task success with on average a single LLM call, compared to 66% for the strongest vision-only baseline, while reducing cost by 11.8x and end-to-end latency by 2x.   Together, these components yield scalable and reliable GUI interaction by combining global programmatic planning, crawler-validated action templates, and node-level execution with localized validation and repair.",
+    "authors": [
+      "Hongbin Zhong",
+      "Fazle Faisal",
+      "Luis França",
+      "Tanakorn Leesatapornwongsa",
+      "Adriana Szekeres",
+      "Kexin Rong",
+      "Suman Nath"
+    ],
+    "published": "2026-02-24",
+    "categories": [
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.20502v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.20502v1",
+    "fetched_at": "2026-02-25T08:56:16.163425"
+  }
+]
