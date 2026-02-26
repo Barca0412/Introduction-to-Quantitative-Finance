@@ -1,0 +1,335 @@
+[
+  {
+    "id": "2602.22069v1",
+    "title": "Pools as Portfolios: Observed arbitrage efficiency & LVR analysis of dynamic weight AMMs",
+    "abstract": "Dynamic-weight AMMs (aka Temporal Function Market Makers, TFMMs) implement algorithmic asset allocation, analogous to index or smart beta funds, by continuously updating pools' weights. A strategy updates target weights over time, and arbitrageurs trade the pool back toward those weights. This creates a sequence of small, predictable mispricings that grow until taken, effectively executing rebalances as a series of Dutch reverse auctions. Prior theoretical and simulation work (Willetts & Harrington, 2024) predicted that this mechanism could outperform CEX-style rebalancing. We test that claim on two live pools on the QuantAMM protocol, one on Ethereum mainnet and one on Base, across two short rebalancing windows six months apart (July 2025 and January 2026). We perform block-level arbitrage analysis, and then measure long term outcomes using Loss-vs-Rebalancing (LVR) and Rebalancing-vs-Rebalancing (RVR) benchmarks. On mainnet, rebalancing becomes markedly more efficient over time (more frequent arbitrage trades with lower value extracted per trade), reaching performance comparable to or better than CEX-based models. On Base, rebalancing persists even when per-trade extraction is near (or below) zero, consistent with routing-driven execution, and achieves efficiencies that meet or exceed standard \"perfect rebalancing\" LVR baselines. These results demonstrate dynamic-weight AMMs as a competitive execution layer for tokenised funds, with superior performance on L2s where routing and lower data costs compress arbitrage spreads.",
+    "authors": [
+      "Matthew Willetts",
+      "Christian Harrington"
+    ],
+    "published": "2026-02-25",
+    "categories": [
+      "q-fin.TR",
+      "q-fin.PM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.22069v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.22069v1",
+    "fetched_at": "2026-02-26T08:53:59.519444"
+  },
+  {
+    "id": "2602.21869v1",
+    "title": "A Bayesian approach to out-of-sample network reconstruction",
+    "abstract": "Networks underpin systems that range from finance to biology, yet their structure is often only partially observed. Current reconstruction methods typically fit the parameters of a model anew to each snapshot, thus offering no guidance to predict future configurations. Here, we develop a Bayesian approach that uses the information about past network snapshots to inform a prior and predict the subsequent ones, while quantifying uncertainty. Instantiated with a single-parameter fitness model, our method infers link probabilities from node strengths and carries information forward in time. When applied to the Electronic Market for Interbank Deposit across the years 1999-2012, our method accurately recovers the number of connections per bank at subsequent times, outperforming probabilistic benchmarks designed for analogous, link prediction tasks. Notably, each predicted snapshot serves as a reliable prior for the next one, thus enabling self-sustained, out-of-sample reconstruction of evolving networks with a minimal amount of additional data.",
+    "authors": [
+      "Mattia Marzi",
+      "Tiziano Squartini"
+    ],
+    "published": "2026-02-25",
+    "categories": [
+      "physics.soc-ph",
+      "physics.app-ph",
+      "physics.data-an",
+      "q-fin.ST"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.21869v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.21869v1",
+    "fetched_at": "2026-02-26T08:53:59.519481"
+  },
+  {
+    "id": "2602.21928v1",
+    "title": "Learning Unknown Interdependencies for Decentralized Root Cause Analysis in Nonlinear Dynamical Systems",
+    "abstract": "Root cause analysis (RCA) in networked industrial systems, such as supply chains and power networks, is notoriously difficult due to unknown and dynamically evolving interdependencies among geographically distributed clients. These clients represent heterogeneous physical processes and industrial assets equipped with sensors that generate large volumes of nonlinear, high-dimensional, and heterogeneous IoT data. Classical RCA methods require partial or full knowledge of the system's dependency graph, which is rarely available in these complex networks. While federated learning (FL) offers a natural framework for decentralized settings, most existing FL methods assume homogeneous feature spaces and retrainable client models. These assumptions are not compatible with our problem setting. Different clients have different data features and often run fixed, proprietary models that cannot be modified. This paper presents a federated cross-client interdependency learning methodology for feature-partitioned, nonlinear time-series data, without requiring access to raw sensor streams or modifying proprietary client models. Each proprietary local client model is augmented with a Machine Learning (ML) model that encodes cross-client interdependencies. These ML models are coordinated via a global server that enforces representation consistency while preserving privacy through calibrated differential privacy noise. RCA is performed using model residuals and anomaly flags. We establish theoretical convergence guarantees and validate our approach on extensive simulations and a real-world industrial cybersecurity dataset.",
+    "authors": [
+      "Ayush Mohanty",
+      "Paritosh Ramanan",
+      "Nagi Gebraeel"
+    ],
+    "published": "2026-02-25",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.21928v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.21928v1",
+    "fetched_at": "2026-02-26T08:54:11.685788"
+  },
+  {
+    "id": "2602.21766v1",
+    "title": "RAMSeS: Robust and Adaptive Model Selection for Time-Series Anomaly Detection Algorithms",
+    "abstract": "Time-series data vary widely across domains, making a universal anomaly detector impractical. Methods that perform well on one dataset often fail to transfer because what counts as an anomaly is context dependent. The key challenge is to design a method that performs well in specific contexts while remaining adaptable across domains with varying data complexities. We present the Robust and Adaptive Model Selection for Time-Series Anomaly Detection RAMSeS framework. RAMSeS comprises two branches: (i) a stacking ensemble optimized with a genetic algorithm to leverage complementary detectors. (ii) An adaptive model-selection branch identifies the best single detector using techniques including Thompson sampling, robustness testing with generative adversarial networks, and Monte Carlo simulations. This dual strategy exploits the collective strength of multiple models and adapts to dataset-specific characteristics. We evaluate RAMSeS and show that it outperforms prior methods on F1.",
+    "authors": [
+      "Mohamed Abdelmaksoud",
+      "Sheng Ding",
+      "Andrey Morozov",
+      "Ziawasch Abedjan"
+    ],
+    "published": "2026-02-25",
+    "categories": [
+      "cs.DB",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.21766v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.21766v1",
+    "fetched_at": "2026-02-26T08:54:11.685821"
+  },
+  {
+    "id": "2602.21252v1",
+    "title": "INTACT: Intent-Aware Representation Learning for Cryptographic Traffic Violation Detection",
+    "abstract": "Security monitoring systems typically treat anomaly detection as identifying statistical deviations from observed data distributions. In cryptographic traffic analysis, however, violations are defined not by rarity but by explicit policy constraints, including key reuse prohibition, downgrade prevention, and bounded key lifetimes. This fundamental mismatch limits the interpretability and adaptability of conventional anomaly detection methods. We introduce INTACT (INTent-Aware Cryptographic Traffic), a policy-conditioned framework that reformulates violation detection as conditional constraint learning. Instead of learning a static decision boundary over behavioral features, INTACT models the probability of violation conditioned on both observed behavior and declared security intent. The architecture factorizes representation learning into behavioral and intent encoders whose fused embeddings produce a violation score, yielding a policy-parameterized family of decision boundaries. We evaluate the framework on a real-world network flow dataset and a 210,000-trace synthetic multi-intent cryptographic dataset. INTACT matches or exceeds strong unsupervised and supervised baselines, achieving near-perfect discrimination (AUROC up to 1.0000) in the real dataset and consistent superiority in detecting relational and composite violations in the synthetic setting. These results demonstrate that explicit intent conditioning improves discrimination, interpretability, and robustness in cryptographic monitoring.",
+    "authors": [
+      "Rahul D Ray"
+    ],
+    "published": "2026-02-22",
+    "categories": [
+      "cs.CR",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.21252v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.21252v1",
+    "fetched_at": "2026-02-26T08:54:11.686152"
+  },
+  {
+    "id": "2602.22056v1",
+    "title": "FlowCorrect: Efficient Interactive Correction of Generative Flow Policies for Robotic Manipulation",
+    "abstract": "Generative manipulation policies can fail catastrophically under deployment-time distribution shift, yet many failures are near-misses: the robot reaches almost-correct poses and would succeed with a small corrective motion. We present FlowCorrect, a deployment-time correction framework that converts near-miss failures into successes using sparse human nudges, without full policy retraining. During execution, a human provides brief corrective pose nudges via a lightweight VR interface. FlowCorrect uses these sparse corrections to locally adapt the policy, improving actions without retraining the backbone while preserving the model performance on previously learned scenarios. We evaluate on a real-world robot across three tabletop tasks: pick-and-place, pouring, and cup uprighting. With a low correction budget, FlowCorrect improves success on hard cases by 85\\% while preserving performance on previously solved scenarios. The results demonstrate clearly that FlowCorrect learns only with very few demonstrations and enables fast and sample-efficient incremental, human-in-the-loop corrections of generative visuomotor policies at deployment time in real-world robotics.",
+    "authors": [
+      "Edgar Welte",
+      "Yitian Shi",
+      "Rosa Wolf",
+      "Maximillian Gilles",
+      "Rania Rayyes"
+    ],
+    "published": "2026-02-25",
+    "categories": [
+      "cs.RO",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.22056v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.22056v1",
+    "fetched_at": "2026-02-26T08:54:40.629583"
+  },
+  {
+    "id": "2602.21947v1",
+    "title": "Large Language Models are Algorithmically Blind",
+    "abstract": "Large language models (LLMs) demonstrate remarkable breadth of knowledge, yet their ability to reason about computational processes remains poorly understood. Closing this gap matters for practitioners who rely on LLMs to guide algorithm selection and deployment. We address this limitation using causal discovery as a testbed and evaluate eight frontier LLMs against ground truth derived from large-scale algorithm executions and find systematic, near-total failure. Models produce ranges far wider than true confidence intervals yet still fail to contain the true algorithmic mean in the majority of instances; most perform worse than random guessing and the marginal above-random performance of the best model is most consistent with benchmark memorization rather than principled reasoning. We term this failure algorithmic blindness and argue it reflects a fundamental gap between declarative knowledge about algorithms and calibrated procedural prediction.",
+    "authors": [
+      "Sohan Venkatesh",
+      "Ashish Mahendran Kurapath",
+      "Tejas Melkote"
+    ],
+    "published": "2026-02-25",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.21947v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.21947v1",
+    "fetched_at": "2026-02-26T08:54:40.629615"
+  },
+  {
+    "id": "2602.21858v1",
+    "title": "ProactiveMobile: A Comprehensive Benchmark for Boosting Proactive Intelligence on Mobile Devices",
+    "abstract": "Multimodal large language models (MLLMs) have made significant progress in mobile agent development, yet their capabilities are predominantly confined to a reactive paradigm, where they merely execute explicit user commands. The emerging paradigm of proactive intelligence, where agents autonomously anticipate needs and initiate actions, represents the next frontier for mobile agents. However, its development is critically bottlenecked by the lack of benchmarks that can address real-world complexity and enable objective, executable evaluation. To overcome these challenges, we introduce ProactiveMobile, a comprehensive benchmark designed to systematically advance research in this domain. ProactiveMobile formalizes the proactive task as inferring latent user intent across four dimensions of on-device contextual signals and generating an executable function sequence from a comprehensive function pool of 63 APIs. The benchmark features over 3,660 instances of 14 scenarios that embrace real-world complexity through multi-answer annotations. To ensure quality, a team of 30 experts conducts a final audit of the benchmark, verifying factual accuracy, logical consistency, and action feasibility, and correcting any non-compliant entries. Extensive experiments demonstrate that our fine-tuned Qwen2.5-VL-7B-Instruct achieves a success rate of 19.15%, outperforming o1 (15.71%) and GPT-5 (7.39%). This result indicates that proactivity is a critical competency widely lacking in current MLLMs, yet it is learnable, emphasizing the importance of the proposed benchmark for proactivity evaluation.",
+    "authors": [
+      "Dezhi Kong",
+      "Zhengzhao Feng",
+      "Qiliang Liang",
+      "Hao Wang",
+      "Haofei Sun",
+      "Changpeng Yang",
+      "Yang Li",
+      "Peng Zhou",
+      "Shuai Nie",
+      "Hongzhen Wang",
+      "Linfeng Zhou",
+      "Hao Jia",
+      "Jiaming Xu",
+      "Runyu Shi",
+      "Ying Huang"
+    ],
+    "published": "2026-02-25",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.21858v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.21858v1",
+    "fetched_at": "2026-02-26T08:54:40.629658"
+  },
+  {
+    "id": "2602.21783v1",
+    "title": "Therapist-Robot-Patient Physical Interaction is Worth a Thousand Words: Enabling Intuitive Therapist Guidance via Remote Haptic Control",
+    "abstract": "Robotic systems can enhance the amount and repeatability of physically guided motor training. Yet their real-world adoption is limited, partly due to non-intuitive trainer/therapist-trainee/patient interactions. To address this gap, we present a haptic teleoperation system for trainers to remotely guide and monitor the movements of a trainee wearing an arm exoskeleton. The trainer can physically interact with the exoskeleton through a commercial handheld haptic device via virtual contact points at the exoskeleton's elbow and wrist, allowing intuitive guidance. Thirty-two participants tested the system in a trainer-trainee paradigm, comparing our haptic demonstration system with conventional visual demonstration in guiding trainees in executing arm poses. Quantitative analyses showed that haptic demonstration significantly reduced movement completion time and improved smoothness, while speech analysis using large language models for automated transcription and categorization of verbal commands revealed fewer verbal instructions. The haptic demonstration did not result in higher reported mental and physical effort by trainers compared to the visual demonstration, while trainers reported greater competence and trainees lower physical demand. These findings support the feasibility of our proposed interface for effective remote human-robot physical interaction. Future work should assess its usability and efficacy for clinical populations in restoring clinicians' sense of agency during robot-assisted therapy.",
+    "authors": [
+      "Beatrice Luciani",
+      "Alex van den Berg",
+      "Matti Lang",
+      "Alexandre L. Ratschat",
+      "Laura Marchal-Crespo"
+    ],
+    "published": "2026-02-25",
+    "categories": [
+      "cs.RO",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.21783v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.21783v1",
+    "fetched_at": "2026-02-26T08:54:40.629683"
+  },
+  {
+    "id": "2602.21680v1",
+    "title": "Hierarchical Lead Critic based Multi-Agent Reinforcement Learning",
+    "abstract": "Cooperative Multi-Agent Reinforcement Learning (MARL) solves complex tasks that require coordination from multiple agents, but is often limited to either local (independent learning) or global (centralized learning) perspectives. In this paper, we introduce a novel sequential training scheme and MARL architecture, which learns from multiple perspectives on different hierarchy levels. We propose the Hierarchical Lead Critic (HLC) - inspired by natural emerging distributions in team structures, where following high-level objectives combines with low-level execution. HLC demonstrates that introducing multiple hierarchies, leveraging local and global perspectives, can lead to improved performance with high sample efficiency and robust policies. Experimental results conducted on cooperative, non-communicative, and partially observable MARL benchmarks demonstrate that HLC outperforms single hierarchy baselines and scales robustly with increasing amounts of agents and difficulty.",
+    "authors": [
+      "David Eckel",
+      "Henri Meeß"
+    ],
+    "published": "2026-02-25",
+    "categories": [
+      "cs.LG",
+      "cs.MA"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.21680v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.21680v1",
+    "fetched_at": "2026-02-26T08:54:40.629706"
+  },
+  {
+    "id": "2602.21670v1",
+    "title": "Hierarchical LLM-Based Multi-Agent Framework with Prompt Optimization for Multi-Robot Task Planning",
+    "abstract": "Multi-robot task planning requires decomposing natural-language instructions into executable actions for heterogeneous robot teams. Conventional Planning Domain Definition Language (PDDL) planners provide rigorous guarantees but struggle to handle ambiguous or long-horizon missions, while large language models (LLMs) can interpret instructions and propose plans but may hallucinate or produce infeasible actions. We present a hierarchical multi-agent LLM-based planner with prompt optimization: an upper layer decomposes tasks and assigns them to lower-layer agents, which generate PDDL problems solved by a classical planner. When plans fail, the system applies TextGrad-inspired textual-gradient updates to optimize each agent's prompt and thereby improve planning accuracy. In addition, meta-prompts are learned and shared across agents within the same layer, enabling efficient prompt optimization in multi-agent settings. On the MAT-THOR benchmark, our planner achieves success rates of 0.95 on compound tasks, 0.84 on complex tasks, and 0.60 on vague tasks, improving over the previous state-of-the-art LaMMA-P by 2, 7, and 15 percentage points respectively. An ablation study shows that the hierarchical structure, prompt optimization, and meta-prompt sharing contribute roughly +59, +37, and +4 percentage points to the overall success rate.",
+    "authors": [
+      "Tomoya Kawabe",
+      "Rin Takano"
+    ],
+    "published": "2026-02-25",
+    "categories": [
+      "cs.RO",
+      "cs.AI",
+      "cs.MA"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.21670v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.21670v1",
+    "fetched_at": "2026-02-26T08:54:40.629727"
+  },
+  {
+    "id": "2602.21634v1",
+    "title": "AgentLTV: An Agent-Based Unified Search-and-Evolution Framework for Automated Lifetime Value Prediction",
+    "abstract": "Lifetime Value (LTV) prediction is critical in advertising, recommender systems, and e-commerce. In practice, LTV data patterns vary across decision scenarios. As a result, practitioners often build complex, scenario-specific pipelines and iterate over feature processing, objective design, and tuning. This process is expensive and hard to transfer. We propose AgentLTV, an agent-based unified search-and-evolution framework for automated LTV modeling. AgentLTV treats each candidate solution as an {executable pipeline program}. LLM-driven agents generate code, run and repair pipelines, and analyze execution feedback. Two decision agents coordinate a two-stage search. The Monte Carlo Tree Search (MCTS) stage explores a broad space of modeling choices under a fixed budget, guided by the Polynomial Upper Confidence bounds for Trees criterion and a Pareto-aware multi-metric value function. The Evolutionary Algorithm (EA) stage refines the best MCTS program via island-based evolution with crossover, mutation, and migration. Experiments on a large-scale proprietary dataset and a public benchmark show that AgentLTV consistently discovers strong models across ranking and error metrics. Online bucket-level analysis further indicates improved ranking consistency and value calibration, especially for high-value and negative-LTV segments. We summarize practitioner-oriented takeaways: use MCTS for rapid adaptation to new data patterns, use EA for stable refinement, and validate deployment readiness with bucket-level ranking and calibration diagnostics. The proposed AgentLTV has been successfully deployed online.",
+    "authors": [
+      "Chaowei Wu",
+      "Huazhu Chen",
+      "Congde Yuan",
+      "Qirui Yang",
+      "Guoqing Song",
+      "Yue Gao",
+      "Li Luo",
+      "Frank Youhua Chen",
+      "Mengzhuo Guo"
+    ],
+    "published": "2026-02-25",
+    "categories": [
+      "cs.LG",
+      "cs.MA"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.21634v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.21634v1",
+    "fetched_at": "2026-02-26T08:54:40.629758"
+  },
+  {
+    "id": "2602.21597v1",
+    "title": "NGDB-Zoo: Towards Efficient and Scalable Neural Graph Databases Training",
+    "abstract": "Neural Graph Databases (NGDBs) facilitate complex logical reasoning over incomplete knowledge structures, yet their training efficiency and expressivity are constrained by rigid query-level batching and structure-exclusive embeddings. We present NGDB-Zoo, a unified framework that resolves these bottlenecks by synergizing operator-level training with semantic augmentation. By decoupling logical operators from query topologies, NGDB-Zoo transforms the training loop into a dynamically scheduled data-flow execution, enabling multi-stream parallelism and achieving a $1.8\\times$ - $6.8\\times$ throughput compared to baselines. Furthermore, we formalize a decoupled architecture to integrate high-dimensional semantic priors from Pre-trained Text Encoders (PTEs) without triggering I/O stalls or memory overflows. Extensive evaluations on six benchmarks, including massive graphs like ogbl-wikikg2 and ATLAS-Wiki, demonstrate that NGDB-Zoo maintains high GPU utilization across diverse logical patterns and significantly mitigates representation friction in hybrid neuro-symbolic reasoning.",
+    "authors": [
+      "Zhongwei Xie",
+      "Jiaxin Bai",
+      "Shujie Liu",
+      "Haoyu Huang",
+      "Yufei Li",
+      "Yisen Gao",
+      "Hong Ting Tsang",
+      "Yangqiu Song"
+    ],
+    "published": "2026-02-25",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.21597v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.21597v1",
+    "fetched_at": "2026-02-26T08:54:40.629787"
+  },
+  {
+    "id": "2602.21496v1",
+    "title": "Beyond Refusal: Probing the Limits of Agentic Self-Correction for Semantic Sensitive Information",
+    "abstract": "While defenses for structured PII are mature, Large Language Models (LLMs) pose a new threat: Semantic Sensitive Information (SemSI), where models infer sensitive identity attributes, generate reputation-harmful content, or hallucinate potentially wrong information. The capacity of LLMs to self-regulate these complex, context-dependent sensitive information leaks without destroying utility remains an open scientific question. To address this, we introduce SemSIEdit, an inference-time framework where an agentic \"Editor\" iteratively critiques and rewrites sensitive spans to preserve narrative flow rather than simply refusing to answer. Our analysis reveals a Privacy-Utility Pareto Frontier, where this agentic rewriting reduces leakage by 34.6% across all three SemSI categories while incurring a marginal utility loss of 9.8%. We also uncover a Scale-Dependent Safety Divergence: large reasoning models (e.g., GPT-5) achieve safety through constructive expansion (adding nuance), whereas capacity-constrained models revert to destructive truncation (deleting text). Finally, we identify a Reasoning Paradox: while inference-time reasoning increases baseline risk by enabling the model to make deeper sensitive inferences, it simultaneously empowers the defense to execute safe rewrites.",
+    "authors": [
+      "Umid Suleymanov",
+      "Zaur Rajabov",
+      "Emil Mirzazada",
+      "Murat Kantarcioglu"
+    ],
+    "published": "2026-02-25",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.21496v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.21496v1",
+    "fetched_at": "2026-02-26T08:54:40.629809"
+  },
+  {
+    "id": "2602.21480v1",
+    "title": "Both Ends Count! Just How Good are LLM Agents at \"Text-to-Big SQL\"?",
+    "abstract": "Text-to-SQL and Big Data are both extensively benchmarked fields, yet there is limited research that evaluates them jointly. In the real world, Text-to-SQL systems are often embedded with Big Data workflows, such as large-scale data processing or interactive data analytics. We refer to this as \"Text-to-Big SQL\". However, existing text-to-SQL benchmarks remain narrowly scoped and overlook the cost and performance implications that arise at scale. For instance, translation errors that are minor on small datasets lead to substantial cost and latency overheads as data scales, a relevant issue completely ignored by text-to-SQL metrics.   In this paper, we overcome this overlooked challenge by introducing novel and representative metrics for evaluating Text-to-Big SQL. Our study focuses on production-level LLM agents, a database-agnostic system adaptable to diverse user needs. Via an extensive evaluation of frontier models, we show that text-to-SQL metrics are insufficient for Big Data. In contrast, our proposed text-to-Big SQL metrics accurately reflect execution efficiency, cost, and the impact of data scale. Furthermore, we provide LLM-specific insights, including fine-grained, cross-model comparisons of latency and cost.",
+    "authors": [
+      "Germán T. Eizaguirre",
+      "Lars Tissen",
+      "Marc Sánchez-Artigas"
+    ],
+    "published": "2026-02-25",
+    "categories": [
+      "cs.DB",
+      "cs.CL",
+      "cs.IR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.21480v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.21480v1",
+    "fetched_at": "2026-02-26T08:54:40.629833"
+  },
+  {
+    "id": "2602.21401v1",
+    "title": "The Headless Firm: How AI Reshapes Enterprise Boundaries",
+    "abstract": "The boundary of the firm is determined by coordination cost. We argue that agentic AI induces a structural change in how coordination costs scale: in prior modular systems, integration cost grew with interaction topology (O(n^2) in the number of components); in protocol-mediated agentic systems, integration cost collapses to O(n) while verification scales with task throughput rather than interaction count. This shift selects for a specific organizational equilibrium -- the Headless Firm -- structured as an hourglass: a personalized generative interface at the top, a standardized protocol waist in the middle, and a competitive market of micro-specialized execution agents at the bottom. We formalize this claim as a coordination cost model with two falsifiable empirical predictions: (1) the marginal cost of adding an execution provider should be approximately constant in a mature hourglass ecosystem; (2) the ratio of total coordination cost to task throughput should remain stable as ecosystem size grows. We derive conditions for hourglass stability versus re-centralization and analyze implications for firm size distributions, labor markets, and software economics. The analysis predicts a domain-conditional Great Unbundling: in high knowledge-velocity domains, firm size distributions shift mass from large integrated incumbents toward micro-specialized agents and thin protocol orchestrators.",
+    "authors": [
+      "Tassilo Klein",
+      "Sebastian Wieczorek"
+    ],
+    "published": "2026-02-24",
+    "categories": [
+      "cs.GT",
+      "cs.AI",
+      "cs.SI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.21401v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.21401v1",
+    "fetched_at": "2026-02-26T08:54:40.629852"
+  },
+  {
+    "id": "2602.21351v1",
+    "title": "A Hierarchical Multi-Agent System for Autonomous Discovery in Geoscientific Data Archives",
+    "abstract": "The rapid accumulation of Earth science data has created a significant scalability challenge; while repositories like PANGAEA host vast collections of datasets, citation metrics indicate that a substantial portion remains underutilized, limiting data reusability. Here we present PANGAEA-GPT, a hierarchical multi-agent framework designed for autonomous data discovery and analysis. Unlike standard Large Language Model (LLM) wrappers, our architecture implements a centralized Supervisor-Worker topology with strict data-type-aware routing, sandboxed deterministic code execution, and self-correction via execution feedback, enabling agents to diagnose and resolve runtime errors. Through use-case scenarios spanning physical oceanography and ecology, we demonstrate the system's capacity to execute complex, multi-step workflows with minimal human intervention. This framework provides a methodology for querying and analyzing heterogeneous repository data through coordinated agent workflows.",
+    "authors": [
+      "Dmitrii Pantiukhin",
+      "Ivan Kuznetsov",
+      "Boris Shapkin",
+      "Antonia Anna Jost",
+      "Thomas Jung",
+      "Nikolay Koldunov"
+    ],
+    "published": "2026-02-24",
+    "categories": [
+      "cs.AI",
+      "cs.IR",
+      "cs.MA"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.21351v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.21351v1",
+    "fetched_at": "2026-02-26T08:54:40.629878"
+  }
+]
