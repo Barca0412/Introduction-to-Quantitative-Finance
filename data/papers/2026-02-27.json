@@ -1,0 +1,465 @@
+[
+  {
+    "id": "2602.23330v1",
+    "title": "Toward Expert Investment Teams:A Multi-Agent LLM System with Fine-Grained Trading Tasks",
+    "abstract": "The advancement of large language models (LLMs) has accelerated the development of autonomous financial trading systems. While mainstream approaches deploy multi-agent systems mimicking analyst and manager roles, they often rely on abstract instructions that overlook the intricacies of real-world workflows, which can lead to degraded inference performance and less transparent decision-making. Therefore, we propose a multi-agent LLM trading framework that explicitly decomposes investment analysis into fine-grained tasks, rather than providing coarse-grained instructions. We evaluate the proposed framework using Japanese stock data, including prices, financial statements, news, and macro information, under a leakage-controlled backtesting setting. Experimental results show that fine-grained task decomposition significantly improves risk-adjusted returns compared to conventional coarse-grained designs. Crucially, further analysis of intermediate agent outputs suggests that alignment between analytical outputs and downstream decision preferences is a critical driver of system performance. Moreover, we conduct standard portfolio optimization, exploiting low correlation with the stock index and the variance of each system's output. This approach achieves superior performance. These findings contribute to the design of agent structure and task configuration when applying LLM agents to trading systems in practical settings.",
+    "authors": [
+      "Kunihiro Miyazaki",
+      "Takanobu Kawahara",
+      "Stephen Roberts",
+      "Stefan Zohren"
+    ],
+    "published": "2026-02-26",
+    "categories": [
+      "cs.AI",
+      "q-fin.TR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.23330v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.23330v1",
+    "fetched_at": "2026-02-27T08:47:51.516680"
+  },
+  {
+    "id": "2602.20552v2",
+    "title": "Stochastic Control Problems with Infinite Horizon and Regime Switching Arising in Optimal Liquidation with Semimartingale Strategies",
+    "abstract": "We study an optimal control problem on infinite time horizon with semimartingale strategies, random coefficients and regime switching. The value function and the optimal strategy can be characterized in terms of three systems of backward stochastic differential equations (BSDEs) with infinite horizon. One of them is a system of linear BSDEs with unbounded coefficients and infinite horizon, which seems to be new in literature. We establish the existence of the solutions to these BSDEs by BMO analysis and comparison theorem for multi-dimensional BSDEs. Next, we establish that the optimal control problem is well posed, in the sense that the value function is finite and the optimal strategy-when it exists-is unique. This is achieved by reformulating the cost functional as the sum of a quadratic functional and the candidate value function. The reformulation crucially relies on the well-established well-posedness results for systems of BSDEs. Finally, under additional assumptions, we obtain the unique optimal strategy.",
+    "authors": [
+      "Xinman Cheng",
+      "Guanxing Fu",
+      "Xiaonyu Xia"
+    ],
+    "published": "2026-02-24",
+    "categories": [
+      "math.OC",
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.20552v2",
+    "arxiv_url": "https://arxiv.org/abs/2602.20552v2",
+    "fetched_at": "2026-02-27T08:47:51.516845"
+  },
+  {
+    "id": "2602.22962v1",
+    "title": "Scaling Laws of Global Weather Models",
+    "abstract": "Data-driven models are revolutionizing weather forecasting. To optimize training efficiency and model performance, this paper analyzes empirical scaling laws within this domain. We investigate the relationship between model performance (validation loss) and three key factors: model size ($N$), dataset size ($D$), and compute budget ($C$). Across a range of models, we find that Aurora exhibits the strongest data-scaling behavior: increasing the training dataset by 10x reduces validation loss by up to 3.2x. GraphCast demonstrates the highest parameter efficiency, yet suffers from limited hardware utilization. Our compute-optimal analysis indicates that, under fixed compute budgets, allocating resources to longer training durations yields greater performance gains than increasing model size. Furthermore, we analyze model shape and uncover scaling behaviors that differ fundamentally from those observed in language models: weather forecasting models consistently favor increased width over depth. These findings suggest that future weather models should prioritize wider architectures and larger effective training datasets to maximize predictive performance.",
+    "authors": [
+      "Yuejiang Yu",
+      "Langwen Huang",
+      "Alexandru Calotoiu",
+      "Torsten Hoefler"
+    ],
+    "published": "2026-02-26",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.22962v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.22962v1",
+    "fetched_at": "2026-02-27T08:47:58.025139"
+  },
+  {
+    "id": "2602.22387v1",
+    "title": "Disentangling Shared and Target-Enriched Topics via Background-Contrastive Non-negative Matrix Factorization",
+    "abstract": "Biological signals of interest in high-dimensional data are often masked by dominant variation shared across conditions. This variation, arising from baseline biological structure or technical effects, can prevent standard dimensionality reduction methods from resolving condition-specific structure. The challenge is that these confounding topics are often unknown and mixed with biological signals. Existing background correction methods are either unscalable to high dimensions or not interpretable. We introduce background contrastive Non-negative Matrix Factorization (\\model), which extracts target-enriched latent topics by jointly factorizing a target dataset and a matched background using shared non-negative bases under a contrastive objective that suppresses background-expressed structure. This approach yields non-negative components that are directly interpretable at the feature level, and explicitly isolates target-specific variation. \\model is learned by an efficient multiplicative update algorithm via matrix multiplication such that it is highly efficient on GPU hardware and scalable to big data via minibatch training akin to deep learning approach. Across simulations and diverse biological datasets, \\model reveals signals obscured by conventional methods, including disease-associated programs in postmortem depressive brain single-cell RNA-seq, genotype-linked protein expression patterns in mice, treatment-specific transcriptional changes in leukemia, and TP53-dependent drug responses in cancer cell lines.",
+    "authors": [
+      "Yixuan Li",
+      "Archer Y. Yang",
+      "Yue Li"
+    ],
+    "published": "2026-02-25",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.22387v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.22387v1",
+    "fetched_at": "2026-02-27T08:47:58.025170"
+  },
+  {
+    "id": "2602.23013v1",
+    "title": "SubspaceAD: Training-Free Few-Shot Anomaly Detection via Subspace Modeling",
+    "abstract": "Detecting visual anomalies in industrial inspection often requires training with only a few normal images per category. Recent few-shot methods achieve strong results employing foundation-model features, but typically rely on memory banks, auxiliary datasets, or multi-modal tuning of vision-language models. We therefore question whether such complexity is necessary given the feature representations of vision foundation models. To answer this question, we introduce SubspaceAD, a training-free method, that operates in two simple stages. First, patch-level features are extracted from a small set of normal images by a frozen DINOv2 backbone. Second, a Principal Component Analysis (PCA) model is fit to these features to estimate the low-dimensional subspace of normal variations. At inference, anomalies are detected via the reconstruction residual with respect to this subspace, producing interpretable and statistically grounded anomaly scores. Despite its simplicity, SubspaceAD achieves state-of-the-art performance across one-shot and few-shot settings without training, prompt tuning, or memory banks. In the one-shot anomaly detection setting, SubspaceAD achieves image-level and pixel-level AUROC of 98.0% and 97.6% on the MVTec-AD dataset, and 93.3% and 98.3% on the VisA dataset, respectively, surpassing prior state-of-the-art results. Code and demo are available at https://github.com/CLendering/SubspaceAD.",
+    "authors": [
+      "Camile Lendering",
+      "Erkut Akdag",
+      "Egor Bondarev"
+    ],
+    "published": "2026-02-26",
+    "categories": [
+      "cs.CV",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.23013v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.23013v1",
+    "fetched_at": "2026-02-27T08:48:04.310641"
+  },
+  {
+    "id": "2602.22297v1",
+    "title": "Learning Rewards, Not Labels: Adversarial Inverse Reinforcement Learning for Machinery Fault Detection",
+    "abstract": "Reinforcement learning (RL) offers significant promise for machinery fault detection (MFD). However, most existing RL-based MFD approaches do not fully exploit RL's sequential decision-making strengths, often treating MFD as a simple guessing game (Contextual Bandits). To bridge this gap, we formulate MFD as an offline inverse reinforcement learning problem, where the agent learns the reward dynamics directly from healthy operational sequences, thereby bypassing the need for manual reward engineering and fault labels. Our framework employs Adversarial Inverse Reinforcement Learning to train a discriminator that distinguishes between normal (expert) and policy-generated transitions. The discriminator's learned reward serves as an anomaly score, indicating deviations from normal operating behaviour. When evaluated on three run-to-failure benchmark datasets (HUMS2023, IMS, and XJTU-SY), the model consistently assigns low anomaly scores to normal samples and high scores to faulty ones, enabling early and robust fault detection. By aligning RL's sequential reasoning with MFD's temporal structure, this work opens a path toward RL-based diagnostics in data-driven industrial settings.",
+    "authors": [
+      "Dhiraj Neupane",
+      "Richard Dazeley",
+      "Mohamed Reda Bouadjenek",
+      "Sunil Aryal"
+    ],
+    "published": "2026-02-25",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.22297v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.22297v1",
+    "fetched_at": "2026-02-27T08:48:04.310675"
+  },
+  {
+    "id": "2602.22412v1",
+    "title": "A Learning-Based Hybrid Decision Framework for Matching Systems with User Departure Detection",
+    "abstract": "In matching markets such as kidney exchanges and freight exchanges, delayed matching has been shown to improve overall market efficiency. The benefits of delay are highly sensitive to participants' sojourn times and departure behavior, and delaying matches can impose significant costs, including longer waiting times and increased market congestion. These competing effects make fixed matching policies inherently inflexible in dynamic environments. We propose a learning-based Hybrid framework that adaptively combines immediate and delayed matching. The framework continuously collects data on user departures over time, estimates the underlying departure distribution via regression, and determines whether to delay matching in the subsequent period based on a decision threshold that governs the system's tolerance for matching efficiency loss. The proposed framework can substantially reduce waiting times and congestion while sacrificing only a limited amount of matching efficiency. By dynamically adjusting its matching strategy, the Hybrid framework enables system performance to flexibly interpolate between purely greedy and purely patient policies, offering a robust and adaptive alternative to static matching mechanisms.",
+    "authors": [
+      "Ruiqi Zhou",
+      "Donghao Zhu",
+      "Houcai Shen"
+    ],
+    "published": "2026-02-25",
+    "categories": [
+      "cs.LG",
+      "cs.HC",
+      "cs.IT",
+      "econ.GN"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.22412v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.22412v1",
+    "fetched_at": "2026-02-27T08:48:13.821415"
+  },
+  {
+    "id": "2602.23286v1",
+    "title": "SPARTA: Scalable and Principled Benchmark of Tree-Structured Multi-hop QA over Text and Tables",
+    "abstract": "Real-world Table-Text question answering (QA) tasks require models that can reason across long text and source tables, traversing multiple hops and executing complex operations such as aggregation. Yet existing benchmarks are small, manually curated - and therefore error-prone - and contain shallow questions that seldom demand more than two hops or invoke aggregations, grouping, or other advanced analytical operations expressible in natural-language queries. We present SPARTA, an end-to-end construction framework that automatically generates large-scale Table-Text QA benchmarks with lightweight human validation, requiring only one quarter of the annotation time of HybridQA. The framework first constructs a reference fact database by enriching each source table with grounding tables whose tuples are atomic facts automatically extracted from the accompanying unstructured passages, then synthesizes nested queries whose number of nested predicates matches the desired hop count. To ensure that every SQL statement is executable and that its verbalization yields a fluent, human-sounding question, we propose two novel techniques: provenance-based refinement, which rewrites any syntactically valid query that returns a non-empty result, and realistic-structure enforcement, which confines generation to post-order traversals of the query graph. The resulting pipeline produces thousands of high-fidelity question-answer pairs covering aggregations, grouping, and deep multi-hop reasoning across text and tables. On SPARTA, state-of-the-art models that reach over 70 F1 on HybridQA or over 50 F1 on OTT-QA drop by more than 30 F1 points, exposing fundamental weaknesses in current cross-modal reasoning. Our benchmark, construction code, and baseline models are available at https://github.com/pshlego/SPARTA/tree/main.",
+    "authors": [
+      "Sungho Park",
+      "Jueun Kim",
+      "Wook-Shin Han"
+    ],
+    "published": "2026-02-26",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.DB",
+      "cs.IR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.23286v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.23286v1",
+    "fetched_at": "2026-02-27T08:48:33.842632"
+  },
+  {
+    "id": "2602.23271v1",
+    "title": "Evaluating Stochasticity in Deep Research Agents",
+    "abstract": "Deep Research Agents (DRAs) are promising agentic systems that gather and synthesize information to support research across domains such as financial decision-making, medical analysis, and scientific discovery. Despite recent improvements in research quality (e.g., outcome accuracy when ground truth is available), DRA system design often overlooks a critical barrier to real-world deployment: stochasticity. Under identical queries, repeated executions of DRAs can exhibit substantial variability in terms of research outcome, findings, and citations. In this paper, we formalize the study of stochasticity in DRAs by modeling them as information acquisition Markov Decision Processes. We introduce an evaluation framework that quantifies variance in the system and identify three sources of it: information acquisition, information compression, and inference. Through controlled experiments, we investigate how stochasticity from these modules across different decision steps influences the variance of DRA outputs. Our results show that reducing stochasticity can improve research output quality, with inference and early-stage stochasticity contributing the most to DRA output variance. Based on these findings, we propose strategies for mitigating stochasticity while maintaining output quality via structured output and ensemble-based query generation. Our experiments on DeepSearchQA show that our proposed mitigation methods reduce average stochasticity by 22% while maintaining high research quality.",
+    "authors": [
+      "Haotian Zhai",
+      "Elias Stengel-Eskin",
+      "Pratik Patil",
+      "Liu Leqi"
+    ],
+    "published": "2026-02-26",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.23271v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.23271v1",
+    "fetched_at": "2026-02-27T08:48:33.842666"
+  },
+  {
+    "id": "2602.23193v1",
+    "title": "ESAA: Event Sourcing for Autonomous Agents in LLM-Based Software Engineering",
+    "abstract": "Autonomous agents based on Large Language Models (LLMs) have evolved from reactive assistants to systems capable of planning, executing actions via tools, and iterating over environment observations. However, they remain vulnerable to structural limitations: lack of native state, context degradation over long horizons, and the gap between probabilistic generation and deterministic execution requirements. This paper presents the ESAA (Event Sourcing for Autonomous Agents) architecture, which separates the agent's cognitive intention from the project's state mutation, inspired by the Event Sourcing pattern. In ESAA, agents emit only structured intentions in validated JSON (agent.result or issue.report); a deterministic orchestrator validates, persists events in an append-only log (activity.jsonl), applies file-writing effects, and projects a verifiable materialized view (roadmap.json). The proposal incorporates boundary contracts (AGENT_CONTRACT.yaml), metaprompting profiles (PARCER), and replay verification with hashing (esaa verify), ensuring the immutability of completed tasks and forensic traceability. Two case studies validate the architecture: (i) a landing page project (9 tasks, 49 events, single-agent composition) and (ii) a clinical dashboard system (50 tasks, 86 events, 4 concurrent agents across 8 phases), both concluding with run.status=success and verify_status=ok. The multi-agent case study demonstrates real concurrent orchestration with heterogeneous LLMs (Claude Sonnet 4.6, Codex GPT-5, Antigravity/Gemini 3 Pro, and Claude Opus 4.6), providing empirical evidence of the architecture's scalability beyond single-agent scenarios.",
+    "authors": [
+      "Elzo Brito dos Santos Filho"
+    ],
+    "published": "2026-02-26",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.23193v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.23193v1",
+    "fetched_at": "2026-02-27T08:48:33.842685"
+  },
+  {
+    "id": "2602.23167v1",
+    "title": "SettleFL: Trustless and Scalable Reward Settlement Protocol for Federated Learning on Permissionless Blockchains (Extended version)",
+    "abstract": "In open Federated Learning (FL) environments where no central authority exists, ensuring collaboration fairness relies on decentralized reward settlement, yet the prohibitive cost of permissionless blockchains directly clashes with the high-frequency, iterative nature of model training. Existing solutions either compromise decentralization or suffer from scalability bottlenecks due to linear on-chain costs. To address this, we present SettleFL, a trustless and scalable reward settlement protocol designed to minimize total economic friction by offering a family of two interoperable protocols. Leveraging a shared domain-specific circuit architecture, SettleFL offers two interoperable strategies: (1) a Commit-and-Challenge variant that minimizes on-chain costs via optimistic execution and dispute-driven arbitration, and (2) a Commit-with-Proof variant that guarantees instant finality through per-round validity proofs. This design allows the protocol to flexibly adapt to varying latency and cost constraints while enforcing rational robustness without trusted coordination. We conduct extensive experiments combining real FL workloads and controlled simulations. Results show that SettleFL remains practical when scaling to 800 participants, achieving substantially lower gas cost.",
+    "authors": [
+      "Shuang Liang",
+      "Yang Hua",
+      "Linshan Jiang",
+      "Peishen Yan",
+      "Tao Song",
+      "Bin Yao",
+      "Haibing Guan"
+    ],
+    "published": "2026-02-26",
+    "categories": [
+      "cs.CR",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.23167v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.23167v1",
+    "fetched_at": "2026-02-27T08:48:33.842713"
+  },
+  {
+    "id": "2602.23062v1",
+    "title": "Toward Automatic Filling of Case Report Forms: A Case Study on Data from an Italian Emergency Department",
+    "abstract": "Case Report Forms (CRFs) collect data about patients and are at the core of well-established practices to conduct research in clinical settings. With the recent progress of language technologies, there is an increasing interest in automatic CRF-filling from clinical notes, mostly based on the use of Large Language Models (LLMs). However, there is a general scarcity of annotated CRF data, both for training and testing LLMs, which limits the progress on this task. As a step in the direction of providing such data, we present a new dataset of clinical notes from an Italian Emergency Department annotated with respect to a pre-defined CRF containing 134 items to be filled. We provide an analysis of the data, define the CRF-filling task and metric for its evaluation, and report on pilot experiments where we use an open-source state-of-the-art LLM to automatically execute the task. Results of the case-study show that (i) CRF-filling from real clinical notes in Italian can be approached in a zero-shot setting; (ii) LLMs' results are affected by biases (e.g., a cautious behaviour favours \"unknown\" answers), which need to be corrected.",
+    "authors": [
+      "Gabriela Anna Kaczmarek",
+      "Pietro Ferrazzi",
+      "Lorenzo Porta",
+      "Vicky Rubini",
+      "Bernardo Magnini"
+    ],
+    "published": "2026-02-26",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.23062v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.23062v1",
+    "fetched_at": "2026-02-27T08:48:33.842737"
+  },
+  {
+    "id": "2602.22897v1",
+    "title": "OmniGAIA: Towards Native Omni-Modal AI Agents",
+    "abstract": "Human intelligence naturally intertwines omni-modal perception -- spanning vision, audio, and language -- with complex reasoning and tool usage to interact with the world. However, current multi-modal LLMs are primarily confined to bi-modal interactions (e.g., vision-language), lacking the unified cognitive capabilities required for general AI assistants. To bridge this gap, we introduce OmniGAIA, a comprehensive benchmark designed to evaluate omni-modal agents on tasks necessitating deep reasoning and multi-turn tool execution across video, audio, and image modalities. Constructed via a novel omni-modal event graph approach, OmniGAIA synthesizes complex, multi-hop queries derived from real-world data that require cross-modal reasoning and external tool integration. Furthermore, we propose OmniAtlas, a native omni-modal foundation agent under tool-integrated reasoning paradigm with active omni-modal perception. Trained on trajectories synthesized via a hindsight-guided tree exploration strategy and OmniDPO for fine-grained error correction, OmniAtlas effectively enhances the tool-use capabilities of existing open-source models. This work marks a step towards next-generation native omni-modal AI assistants for real-world scenarios.",
+    "authors": [
+      "Xiaoxi Li",
+      "Wenxiang Jiao",
+      "Jiarui Jin",
+      "Shijian Wang",
+      "Guanting Dong",
+      "Jiajie Jin",
+      "Hao Wang",
+      "Yinuo Wang",
+      "Ji-Rong Wen",
+      "Yuan Lu",
+      "Zhicheng Dou"
+    ],
+    "published": "2026-02-26",
+    "categories": [
+      "cs.AI",
+      "cs.CL",
+      "cs.CV",
+      "cs.LG",
+      "cs.MM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.22897v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.22897v1",
+    "fetched_at": "2026-02-27T08:48:33.842773"
+  },
+  {
+    "id": "2602.22839v1",
+    "title": "DeepPresenter: Environment-Grounded Reflection for Agentic Presentation Generation",
+    "abstract": "Presentation generation requires deep content research, coherent visual design, and iterative refinement based on observation. However, existing presentation agents often rely on predefined workflows and fixed templates. To address this, we present DeepPresenter, an agentic framework that adapts to diverse user intents, enables effective feedback-driven refinement, and generalizes beyond a scripted pipeline. Specifically, DeepPresenter autonomously plans, renders, and revises intermediate slide artifacts to support long-horizon refinement with environmental observations. Furthermore, rather than relying on self-reflection over internal signals (e.g., reasoning traces), our environment-grounded reflection conditions the generation process on perceptual artifact states (e.g., rendered slides), enabling the system to identify and correct presentation-specific issues during execution. Results on the evaluation set covering diverse presentation-generation scenarios show that DeepPresenter achieves state-of-the-art performance, and the fine-tuned 9B model remains highly competitive at substantially lower cost. Our project is available at: https://github.com/icip-cas/PPTAgent",
+    "authors": [
+      "Hao Zheng",
+      "Guozhao Mo",
+      "Xinru Yan",
+      "Qianhao Yuan",
+      "Wenkai Zhang",
+      "Xuanang Chen",
+      "Yaojie Lu",
+      "Hongyu Lin",
+      "Xianpei Han",
+      "Le Sun"
+    ],
+    "published": "2026-02-26",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.22839v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.22839v1",
+    "fetched_at": "2026-02-27T08:48:33.842806"
+  },
+  {
+    "id": "2602.22808v1",
+    "title": "MiroFlow: Towards High-Performance and Robust Open-Source Agent Framework for General Deep Research Tasks",
+    "abstract": "Despite the remarkable progress of large language models (LLMs), the capabilities of standalone LLMs have begun to plateau when tackling real-world, complex tasks that require interaction with external tools and dynamic environments. Although recent agent frameworks aim to enhance model autonomy through tool integration and external interaction, they still suffer from naive workflows, unstable performance, limited support across diverse benchmarks and tasks, and heavy reliance on costly commercial APIs. In this work, we propose a high-performance and robust open-source agent framework, termed MiroFlow, which incorporates an agent graph for flexible orchestration, an optional deep reasoning mode to enhance performance, and a robust workflow execution to ensure stable and reproducible performance. Extensive experiments demonstrate that MiroFlow consistently achieves state-of-the-art performance across multiple agent benchmarks, including GAIA, BrowseComp-EN/ZH, HLE, xBench-DeepSearch, and notably FutureX. We hope it could serve as an easily accessible, reproducible, and comparable baseline for the deep research community.",
+    "authors": [
+      "Shiqian Su",
+      "Sen Xing",
+      "Xuan Dong",
+      "Muyan Zhong",
+      "Bin Wang",
+      "Xizhou Zhu",
+      "Yuntao Chen",
+      "Wenhai Wang",
+      "Yue Deng",
+      "Pengxiang Zhu",
+      "Ziyuan Liu",
+      "Tiantong Li",
+      "Jiaheng Yu",
+      "Zhe Chen",
+      "Lidong Bing",
+      "Jifeng Dai"
+    ],
+    "published": "2026-02-26",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.22808v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.22808v1",
+    "fetched_at": "2026-02-27T08:48:33.842848"
+  },
+  {
+    "id": "2602.22724v1",
+    "title": "AgentSentry: Mitigating Indirect Prompt Injection in LLM Agents via Temporal Causal Diagnostics and Context Purification",
+    "abstract": "Large language model (LLM) agents increasingly rely on external tools and retrieval systems to autonomously complete complex tasks. However, this design exposes agents to indirect prompt injection (IPI), where attacker-controlled context embedded in tool outputs or retrieved content silently steers agent actions away from user intent. Unlike prompt-based attacks, IPI unfolds over multi-turn trajectories, making malicious control difficult to disentangle from legitimate task execution. Existing inference-time defenses primarily rely on heuristic detection and conservative blocking of high-risk actions, which can prematurely terminate workflows or broadly suppress tool usage under ambiguous multi-turn scenarios. We propose AgentSentry, a novel inference-time detection and mitigation framework for tool-augmented LLM agents. To the best of our knowledge, AgentSentry is the first inference-time defense to model multi-turn IPI as a temporal causal takeover. It localizes takeover points via controlled counterfactual re-executions at tool-return boundaries and enables safe continuation through causally guided context purification that removes attack-induced deviations while preserving task-relevant evidence. We evaluate AgentSentry on the \\textsc{AgentDojo} benchmark across four task suites, three IPI attack families, and multiple black-box LLMs. AgentSentry eliminates successful attacks and maintains strong utility under attack, achieving an average Utility Under Attack (UA) of 74.55 %, improving UA by 20.8 to 33.6 percentage points over the strongest baselines without degrading benign performance.",
+    "authors": [
+      "Tian Zhang",
+      "Yiwei Xu",
+      "Juan Wang",
+      "Keyan Guo",
+      "Xiaoyang Xu",
+      "Bowen Xiao",
+      "Quanlong Guan",
+      "Jinlin Fan",
+      "Jiawei Liu",
+      "Zhiquan Liu",
+      "Hongxin Hu"
+    ],
+    "published": "2026-02-26",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.22724v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.22724v1",
+    "fetched_at": "2026-02-27T08:48:33.842883"
+  },
+  {
+    "id": "2602.22718v1",
+    "title": "RLHFless: Serverless Computing for Efficient RLHF",
+    "abstract": "Reinforcement Learning from Human Feedback (RLHF) has been widely applied to Large Language Model (LLM) post-training to align model outputs with human preferences. Recent models, such as DeepSeek-R1, have also shown RLHF's potential to improve LLM reasoning on complex tasks. In RL, inference and training co-exist, creating dynamic resource demands throughout the workflow. Compared to traditional RL, RLHF further challenges training efficiency due to expanding model sizes and resource consumption. Several RLHF frameworks aim to balance flexible abstraction and efficient execution. However, they rely on serverful infrastructures, which struggle with fine-grained resource variability. As a result, during synchronous RLHF training, idle time between or within RL components often causes overhead and resource wastage.   To address these issues, we present RLHFless, the first scalable training framework for synchronous RLHF, built on serverless computing environments. RLHFless adapts to dynamic resource demands throughout the RLHF pipeline, pre-computes shared prefixes to avoid repeated computation, and uses a cost-aware actor scaling strategy that accounts for response length variation to find sweet spots with lower cost and higher speed. In addition, RLHFless assigns workloads efficiently to reduce intra-function imbalance and idle time. Experiments on both physical testbeds and a large-scale simulated cluster show that RLHFless achieves up to 1.35x speedup and 44.8% cost reduction compared to the state-of-the-art baseline.",
+    "authors": [
+      "Rui Wei",
+      "Hanfei Yu",
+      "Shubham Jain",
+      "Yogarajan Sivakumar",
+      "Devesh Tiwari",
+      "Jian Li",
+      "Seung-Jong Park",
+      "Hao Wang"
+    ],
+    "published": "2026-02-26",
+    "categories": [
+      "cs.AI",
+      "cs.DC"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.22718v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.22718v1",
+    "fetched_at": "2026-02-27T08:48:33.842914"
+  },
+  {
+    "id": "2602.22700v1",
+    "title": "IMMACULATE: A Practical LLM Auditing Framework via Verifiable Computation",
+    "abstract": "Commercial large language models are typically deployed as black-box API services, requiring users to trust providers to execute inference correctly and report token usage honestly. We present IMMACULATE, a practical auditing framework that detects economically motivated deviations-such as model substitution, quantization abuse, and token overbilling-without trusted hardware or access to model internals. IMMACULATE selectively audits a small fraction of requests using verifiable computation, achieving strong detection guarantees while amortizing cryptographic overhead. Experiments on dense and MoE models show that IMMACULATE reliably distinguishes benign and malicious executions with under 1% throughput overhead. Our code is published at https://github.com/guo-yanpei/Immaculate.",
+    "authors": [
+      "Yanpei Guo",
+      "Wenjie Qu",
+      "Linyu Wu",
+      "Shengfang Zhai",
+      "Lionel Z. Wang",
+      "Ming Xu",
+      "Yue Liu",
+      "Binhang Yuan",
+      "Dawn Song",
+      "Jiaheng Zhang"
+    ],
+    "published": "2026-02-26",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.22700v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.22700v1",
+    "fetched_at": "2026-02-27T08:48:33.842947"
+  },
+  {
+    "id": "2602.22680v1",
+    "title": "Toward Personalized LLM-Powered Agents: Foundations, Evaluation, and Future Directions",
+    "abstract": "Large language models have enabled agents that reason, plan, and interact with tools and environments to accomplish complex tasks. As these agents operate over extended interaction horizons, their effectiveness increasingly depends on adapting behavior to individual users and maintaining continuity across time, giving rise to personalized LLM-powered agents. In such long-term, user-dependent settings, personalization permeates the entire decision pipeline rather than remaining confined to surface-level generation. This survey provides a capability-oriented review of personalized LLM-powered agents. We organize the literature around four interdependent components: profile modeling, memory, planning, and action execution. Using this taxonomy, we synthesize representative methods and analyze how user signals are represented, propagated, and utilized, highlighting cross-component interactions and recurring design trade-offs. We further examine evaluation metrics and benchmarks tailored to personalized agents, summarize application scenarios spanning general assistance to specialized domains, and outline future directions for research and deployment. By offering a structured framework for understanding and designing personalized LLM-powered agents, this survey charts a roadmap toward more user-aligned, adaptive, robust, and deployable agentic systems, accelerating progress from prototype personalization to scalable real-world assistants.",
+    "authors": [
+      "Yue Xu",
+      "Qian Chen",
+      "Zizhan Ma",
+      "Dongrui Liu",
+      "Wenxuan Wang",
+      "Xiting Wang",
+      "Li Xiong",
+      "Wenjie Wang"
+    ],
+    "published": "2026-02-26",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.22680v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.22680v1",
+    "fetched_at": "2026-02-27T08:48:33.842976"
+  },
+  {
+    "id": "2602.22631v1",
+    "title": "TorchLean: Formalizing Neural Networks in Lean",
+    "abstract": "Neural networks are increasingly deployed in safety- and mission-critical pipelines, yet many verification and analysis results are produced outside the programming environment that defines and runs the model. This separation creates a semantic gap between the executed network and the analyzed artifact, so guarantees can hinge on implicit conventions such as operator semantics, tensor layouts, preprocessing, and floating-point corner cases. We introduce TorchLean, a framework in the Lean 4 theorem prover that treats learned models as first-class mathematical objects with a single, precise semantics shared by execution and verification. TorchLean unifies (1) a PyTorch-style verified API with eager and compiled modes that lower to a shared op-tagged SSA/DAG computation-graph IR, (2) explicit Float32 semantics via an executable IEEE-754 binary32 kernel and proof-relevant rounding models, and (3) verification via IBP and CROWN/LiRPA-style bound propagation with certificate checking. We validate TorchLean end-to-end on certified robustness, physics-informed residual bounds for PINNs, and Lyapunov-style neural controller verification, alongside mechanized theoretical results including a universal approximation theorem. These results demonstrate a semantics-first infrastructure for fully formal, end-to-end verification of learning-enabled systems.",
+    "authors": [
+      "Robert Joseph George",
+      "Jennifer Cruden",
+      "Xiangru Zhong",
+      "Huan Zhang",
+      "Anima Anandkumar"
+    ],
+    "published": "2026-02-26",
+    "categories": [
+      "cs.MS",
+      "cs.LG",
+      "cs.LO",
+      "cs.PL",
+      "math.NA"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.22631v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.22631v1",
+    "fetched_at": "2026-02-27T08:48:33.843001"
+  },
+  {
+    "id": "2602.22603v1",
+    "title": "SideQuest: Model-Driven KV Cache Management for Long-Horizon Agentic Reasoning",
+    "abstract": "Long-running agentic tasks, such as deep research, require multi-hop reasoning over information distributed across multiple webpages and documents. In such tasks, the LLM context is dominated by tokens from external retrieval, causing memory usage to grow rapidly and limiting decode performance. While several KV cache compression techniques exist for long-context inputs, we find that existing heuristics fail to support multi-step reasoning models effectively. We address this challenge with SideQuest -- a novel approach that leverages the Large Reasoning Model (LRM) itself to perform KV cache compression by reasoning about the usefulness of tokens in its context. To prevent the tokens associated with this management process from polluting the model's memory, we frame KV cache compression as an auxiliary task executed in parallel to the main reasoning task. Our evaluations, using a model trained with just 215 samples, show that SideQuest reduces peak token usage by up to 65% on agentic tasks with minimal degradation in accuracy, outperforming heuristic-based KV cache compression techniques.",
+    "authors": [
+      "Sanjay Kariyappa",
+      "G. Edward Suh"
+    ],
+    "published": "2026-02-26",
+    "categories": [
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.22603v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.22603v1",
+    "fetched_at": "2026-02-27T08:48:33.843019"
+  },
+  {
+    "id": "2602.22583v1",
+    "title": "Strategy Executability in Mathematical Reasoning: Leveraging Human-Model Differences for Effective Guidance",
+    "abstract": "Example-based guidance is widely used to improve mathematical reasoning at inference time, yet its effectiveness is highly unstable across problems and models-even when the guidance is correct and problem-relevant. We show that this instability arises from a previously underexplored gap between strategy usage-whether a reasoning strategy appears in successful solutions-and strategy executability-whether the strategy remains effective when instantiated as guidance for a target model. Through a controlled analysis of paired human-written and model-generated solutions, we identify a systematic dissociation between usage and executability: human- and model-derived strategies differ in structured, domain-dependent ways, leading to complementary strengths and consistent source-dependent reversals under guidance. Building on this diagnosis, we propose Selective Strategy Retrieval (SSR), a test-time framework that explicitly models executability by selectively retrieving and combining strategies using empirical, multi-route, source-aware signals. Across multiple mathematical reasoning benchmarks, SSR yields reliable and consistent improvements over direct solving, in-context learning, and single-source guidance, improving accuracy by up to $+13$ points on AIME25 and $+5$ points on Apex for compact reasoning models. Code and benchmark are publicly available at: https://github.com/lwd17/strategy-execute-pipeline.",
+    "authors": [
+      "Weida Liang",
+      "Yiyou Sun",
+      "Shuyuan Nan",
+      "Chuang Li",
+      "Dawn Song",
+      "Kenji Kawaguchi"
+    ],
+    "published": "2026-02-26",
+    "categories": [
+      "cs.AI",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.22583v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.22583v1",
+    "fetched_at": "2026-02-27T08:48:33.843044"
+  }
+]
