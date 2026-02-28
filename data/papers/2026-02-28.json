@@ -1,0 +1,21 @@
+[
+  {
+    "id": "2602.20859v1",
+    "title": "FinAnchor: Aligned Multi-Model Representations for Financial Prediction",
+    "abstract": "Financial prediction from long documents involves significant challenges, as actionable signals are often sparse and obscured by noise, and the optimal LLM for generating embeddings varies across tasks and time periods. In this paper, we propose FinAnchor(Financial Anchored Representations), a lightweight framework that integrates embeddings from multiple LLMs without fine-tuning the underlying models. FinAnchor addresses the incompatibility of feature spaces by selecting an anchor embedding space and learning linear mappings to align representations from other models into this anchor. These aligned features are then aggregated to form a unified representation for downstream prediction. Across multiple financial NLP tasks, FinAnchor consistently outperforms strong single-model baselines and standard ensemble methods, demonstrating the effectiveness of anchoring heterogeneous representations for robust financial prediction.",
+    "authors": [
+      "Zirui He",
+      "Huopu Zhang",
+      "Yanguang Liu",
+      "Sirui Wu",
+      "Mengnan Du"
+    ],
+    "published": "2026-02-24",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.20859v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.20859v1",
+    "fetched_at": "2026-02-28T08:36:34.334022"
+  }
+]

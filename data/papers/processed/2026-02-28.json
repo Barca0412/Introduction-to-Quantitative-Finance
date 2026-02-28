@@ -1,0 +1,34 @@
+[
+  {
+    "id": "2602.20859v1",
+    "title": "FinAnchor: Aligned Multi-Model Representations for Financial Prediction",
+    "abstract": "Financial prediction from long documents involves significant challenges, as actionable signals are often sparse and obscured by noise, and the optimal LLM for generating embeddings varies across tasks and time periods. In this paper, we propose FinAnchor(Financial Anchored Representations), a lightweight framework that integrates embeddings from multiple LLMs without fine-tuning the underlying models. FinAnchor addresses the incompatibility of feature spaces by selecting an anchor embedding space and learning linear mappings to align representations from other models into this anchor. These aligned features are then aggregated to form a unified representation for downstream prediction. Across multiple financial NLP tasks, FinAnchor consistently outperforms strong single-model baselines and standard ensemble methods, demonstrating the effectiveness of anchoring heterogeneous representations for robust financial prediction.",
+    "authors": [
+      "Zirui He",
+      "Huopu Zhang",
+      "Yanguang Liu",
+      "Sirui Wu",
+      "Mengnan Du"
+    ],
+    "published": "2026-02-24",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.20859v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.20859v1",
+    "fetched_at": "2026-02-28T08:36:34.334022",
+    "chinese_title": "FinAnchor：用于金融预测的对齐多模型表示",
+    "chinese_summary": "本文针对长文档金融预测中信号稀疏、噪声干扰及最优LLM随任务/时期变化的问题，提出FinAnchor框架——无需微调底层模型，通过选择锚点嵌入空间并学习线性映射对齐多LLM表示，聚合后用于下游预测；实验表明其跨多个金融NLP任务优于单模型和标准集成方法，验证了锚定异质表示对稳健金融预测的有效性。",
+    "tags": [
+      "LLM",
+      "NLP",
+      "Deep Learning",
+      "Asset Pricing"
+    ],
+    "key_contributions": [
+      "提出FinAnchor轻量化框架，无需微调底层LLM，通过锚点嵌入空间对齐多模型表示，解决异质LLM特征空间不兼容问题",
+      "跨多个金融NLP任务实验验证，该框架优于单模型基线和标准集成方法，提升金融预测的稳健性与性能"
+    ],
+    "processed_at": "2026-02-28T08:37:26.168809"
+  }
+]
