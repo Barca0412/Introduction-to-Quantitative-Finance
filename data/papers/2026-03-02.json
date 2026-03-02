@@ -1,0 +1,501 @@
+[
+  {
+    "id": "2602.24194v1",
+    "title": "Betting under Common Beliefs: The Effect of Probability Weighting",
+    "abstract": "This paper examines the impact of introducing a Rank-Dependent Utility (RDU) agent into a von Neumann-Morgenstern (vNM) pure-exchange economy with no aggregate uncertainty. In the absence of the RDU agent, the classical theory predicts that Pareto-optimal allocations are full-insurance, or no-betting, allocations. We show how the probability weighting function of the RDU agent, seen as a proxy for probabilistic risk aversion that is not captured by marginal utility of wealth, can lead to Pareto optima characterized by endogenous betting, despite common baseline beliefs. Such endogenous betting at an optimum leads to uncertainty-generating trade arising purely from heterogeneity in the perception of risk, rather than in beliefs. Our results formalize the intuitive understanding that probability weighting can act as an endogenous source of belief heterogeneity, and provide a new behavioral foundation for the coexistence of common beliefs and speculative behavior, in an environment with no initial aggregate uncertainty. Interpreting the RDU agent's nonlinear weighting function as an ``internality'' prompts the question of whether a social planner should intervene. We show how a benevolent social planner can nudge the RDU agent to behave closer to a vNM agent, through costly statistical or financial education, thereby (partially) restoring the optimality of full-insurance allocations.",
+    "authors": [
+      "Patrick Beissner",
+      "Tim Boonen",
+      "Mario Ghossoub"
+    ],
+    "published": "2026-02-27",
+    "categories": [
+      "econ.TH",
+      "q-fin.RM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.24194v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.24194v1",
+    "fetched_at": "2026-03-02T08:51:51.020242"
+  },
+  {
+    "id": "2602.23784v1",
+    "title": "TradeFM: A Generative Foundation Model for Trade-flow and Market Microstructure",
+    "abstract": "Foundation models have transformed domains from language to genomics by learning general-purpose representations from large-scale, heterogeneous data. We introduce TradeFM, a 524M-parameter generative Transformer that brings this paradigm to market microstructure, learning directly from billions of trade events across >9K equities. To enable cross-asset generalization, we develop scale-invariant features and a universal tokenization scheme that map the heterogeneous, multi-modal event stream of order flow into a unified discrete sequence -- eliminating asset-specific calibration. Integrated with a deterministic market simulator, TradeFM-generated rollouts reproduce key stylized facts of financial returns, including heavy tails, volatility clustering, and absence of return autocorrelation. Quantitatively, TradeFM achieves 2-3x lower distributional error than Compound Hawkes baselines and generalizes zero-shot to geographically out-of-distribution APAC markets with moderate perplexity degradation. Together, these results suggest that scale-invariant trade representations capture transferable structure in market microstructure, opening a path toward synthetic data generation, stress testing, and learning-based trading agents.",
+    "authors": [
+      "Maxime Kawawa-Beaudan",
+      "Srijan Sood",
+      "Kassiani Papasotiriou",
+      "Daniel Borrajo",
+      "Manuela Veloso"
+    ],
+    "published": "2026-02-27",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "q-fin.CP",
+      "q-fin.TR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.23784v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.23784v1",
+    "fetched_at": "2026-03-02T08:51:51.020321"
+  },
+  {
+    "id": "2602.23762v1",
+    "title": "One Rising Ship Sinks Other Ships: Cross-Chain Negative Spillovers in Crypto Markets",
+    "abstract": "We document the first systematic evidence of negative spillover effects in crypto asset returns across blockchains. Using on-chain data from Ethereum, Solana, Binance Smart Chain, Arbitrum, and Avalanche (2022-2025), we show that surges on one chain often coincide with declines on others, in contrast to the positive co-movements typical of equity markets. These spillovers intensify during attention shocks, proxied by chain activity and extreme return events, and persist after controlling for global equity returns, interest rates, and Bitcoin. Nonlinear factor models reveal that attention-driven capital reallocation, rather than common information, underlies these dynamics. Our findings introduce a new form of cross-market linkage, attention-induced substitution, that shapes risk transmission in crypto markets. The results carry implications for portfolio diversification, systemic risk measurement, and regulation of token launches that may trigger cross-chain capital flight.",
+    "authors": [
+      "Mengzhong Ma",
+      "Te Bao",
+      "Yonggang Wen"
+    ],
+    "published": "2026-02-27",
+    "categories": [
+      "q-fin.PR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.23762v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.23762v1",
+    "fetched_at": "2026-03-02T08:51:51.020368"
+  },
+  {
+    "id": "2602.24209v1",
+    "title": "An Efficient Unsupervised Federated Learning Approach for Anomaly Detection in Heterogeneous IoT Networks",
+    "abstract": "Federated learning (FL) is an effective paradigm for distributed environments such as the Internet of Things (IoT), where data from diverse devices with varying functionalities remains localized while contributing to a shared global model. By eliminating the need to transmit raw data, FL inherently preserves privacy. However, the heterogeneous nature of IoT data, stemming from differences in device capabilities, data formats, and communication constraints, poses significant challenges to maintaining both global model performance and privacy. In the context of IoT-based anomaly detection, unsupervised FL offers a promising means to identify abnormal behavior without centralized data aggregation. Nevertheless, feature heterogeneity across devices complicates model training and optimization, hindering effective implementation. In this study we propose an efficient unsupervised FL framework that enhances anomaly detection by leveraging shared features from two distinct IoT datasets: one focused on anomaly detection and the other on device identification, while preserving dataset-specific features. To improve transparency and interpretability, we employ explainable AI techniques, such as SHAP, to identify key features influencing local model decisions. Experiments conducted on real-world IoT datasets demonstrate that the proposed method significantly outperforms conventional FL approaches in anomaly detection accuracy. This work underscores the potential of using shared features from complementary datasets to optimize unsupervised federated learning and achieve superior anomaly detection results in decentralized IoT environments.",
+    "authors": [
+      "Mohsen Tajgardan",
+      "Atena Shiranzaei",
+      "Mahdi Rabbani",
+      "Reza Khoshkangini",
+      "Mahtab Jamali"
+    ],
+    "published": "2026-02-27",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.24209v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.24209v1",
+    "fetched_at": "2026-03-02T08:52:03.416890"
+  },
+  {
+    "id": "2602.23846v1",
+    "title": "MI$^2$DAS: A Multi-Layer Intrusion Detection Framework with Incremental Learning for Securing Industrial IoT Networks",
+    "abstract": "The rapid expansion of Industrial IoT (IIoT) systems has amplified security challenges, as heterogeneous devices and dynamic traffic patterns increase exposure to sophisticated and previously unseen cyberattacks. Traditional intrusion detection systems often struggle in such environments due to their reliance on extensive labeled data and limited ability to detect new threats. To address these challenges, we propose MI$^2$DAS, a multi-layer intrusion detection framework that integrates anomaly-based hierarchical traffic pooling, open-set recognition to distinguish between known and unknown attacks and incremental learning for adapting to novel attack types with minimal labeling. Experiments conducted on the Edge-IIoTset dataset demonstrate strong performance across all layers. In the first layer, GMM achieves superior normal-attack discrimination (accuracy = 0.953, TPR = 1.000). In open-set recognition, GMM attains a recall of 0.813 for known attacks, while LOF achieves 0.882 recall for unknown attacks. For fine-grained classification of known attacks, Random Forest achieves a macro-F1 of 0.941. Finally, the incremental learning module maintains robust performance when incorporation novel attack classes, achieving a macro-F1 of 0.8995. These results showcase MI$^2$DAS as an effective, scalable and adaptive framework for enhancing IIoT security against evolving threats.",
+    "authors": [
+      "Wei Lian",
+      "Alejandro Guerra-Manzanares"
+    ],
+    "published": "2026-02-27",
+    "categories": [
+      "cs.CR",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.23846v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.23846v1",
+    "fetched_at": "2026-03-02T08:52:03.416920"
+  },
+  {
+    "id": "2602.23729v1",
+    "title": "From Static Benchmarks to Dynamic Protocol: Agent-Centric Text Anomaly Detection for Evaluating LLM Reasoning",
+    "abstract": "The evaluation of large language models (LLMs) has predominantly relied on static datasets, which offer limited scalability and fail to capture the evolving reasoning capabilities of recent models. To overcome these limitations, we propose an agent-centric benchmarking paradigm that moves beyond static datasets by introducing a dynamic protocol in which autonomous agents iteratively generate, validate, and solve problems. Within this protocol, a teacher agent generates candidate problems, an orchestrator agent rigorously verifies their validity and guards against adversarial attacks, and a student agent attempts to solve the validated problems. An invalid problem is revised by the teacher agent until it passes validation. If the student correctly solves the problem, the orchestrator prompts the teacher to generate more challenging variants. Consequently, the benchmark scales in difficulty automatically as more capable agents are substituted into any role, enabling progressive evaluation of large language models without manually curated datasets. Adopting text anomaly detection as our primary evaluation format, which demands cross-sentence logical inference and resists pattern-matching shortcuts, we demonstrate that this protocol systematically exposes corner-case reasoning errors that conventional benchmarks fail to reveal. We further advocate evaluating systems along several complementary axes including cross-model pairwise performance and progress between the initial and orchestrator-finalized problems. By shifting the focus from fixed datasets to dynamic protocols, our approach offers a sustainable direction for evaluating ever-evolving language models and introduces a research agenda centered on the co-evolution of agent-centric benchmarks.",
+    "authors": [
+      "Seungdong Yoa",
+      "Sanghyu Yoon",
+      "Suhee Yoon",
+      "Dongmin Kim",
+      "Ye Seul Sim",
+      "Junhyun Lee",
+      "Woohyung Lim"
+    ],
+    "published": "2026-02-27",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.23729v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.23729v1",
+    "fetched_at": "2026-03-02T08:52:03.416950"
+  },
+  {
+    "id": "2602.23662v1",
+    "title": "Selective Denoising Diffusion Model for Time Series Anomaly Detection",
+    "abstract": "Time series anomaly detection (TSAD) has been an important area of research for decades, with reconstruction-based methods, mostly based on generative models, gaining popularity and demonstrating success. Diffusion models have recently attracted attention due to their advanced generative capabilities. Existing diffusion-based methods for TSAD rely on a conditional strategy, which reconstructs input instances from white noise with the aid of the conditioner. However, this poses challenges in accurately reconstructing the normal parts, resulting in suboptimal detection performance. In response, we propose a novel diffusion-based method, named AnomalyFilter, which acts as a selective filter that only denoises anomaly parts in the instance while retaining normal parts. To build such a filter, we mask Gaussian noise during the training phase and conduct the denoising process without adding noise to the instances. The synergy of the two simple components greatly enhances the performance of naive diffusion models. Extensive experiments on five datasets demonstrate that AnomalyFilter achieves notably low reconstruction error on normal parts, providing empirical support for its effectiveness in anomaly detection. AnomalyFilter represents a pioneering approach that focuses on the noise design of diffusion models specifically tailored for TSAD.",
+    "authors": [
+      "Kohei Obata",
+      "Zheng Chen",
+      "Yasuko Matsubara",
+      "Lingwei Zhu",
+      "Yasushi Sakurai"
+    ],
+    "published": "2026-02-27",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.23662v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.23662v1",
+    "fetched_at": "2026-03-02T08:52:03.416975"
+  },
+  {
+    "id": "2602.23599v1",
+    "title": "Normalisation and Initialisation Strategies for Graph Neural Networks in Blockchain Anomaly Detection",
+    "abstract": "Graph neural networks (GNNs) offer a principled approach to financial fraud detection by jointly learning from node features and transaction graph topology. However, their effectiveness on real-world anti-money laundering (AML) benchmarks depends critically on training practices such as specifically weight initialisation and normalisation that remain underexplored. We present a systematic ablation of initialisation and normalisation strategies across three GNN architectures (GCN, GAT, and GraphSAGE) on the Elliptic Bitcoin dataset. Our experiments reveal that initialisation and normalisation are architecture-dependent: GraphSAGE achieves the strongest performance with Xavier initialisation alone, GAT benefits most from combining GraphNorm with Xavier initialisation, while GCN shows limited sensitivity to these modifications. These findings offer practical, architecture-specific guidance for deploying GNNs in AML pipelines for datasets with severe class imbalance. We release a reproducible experimental framework with temporal data splits, seeded runs, and full ablation results.",
+    "authors": [
+      "Dang Sy Duy",
+      "Nguyen Duy Chien",
+      "Kapil Dev",
+      "Jeff Nijsse"
+    ],
+    "published": "2026-02-27",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.23599v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.23599v1",
+    "fetched_at": "2026-03-02T08:52:03.416998"
+  },
+  {
+    "id": "2602.23514v1",
+    "title": "Modelling and Simulation of Neuromorphic Datasets for Anomaly Detection in Computer Vision",
+    "abstract": "Limitations on the availability of Dynamic Vision Sensors (DVS) present a fundamental challenge to researchers of neuromorphic computer vision applications. In response, datasets have been created by the research community, but often contain a limited number of samples or scenarios. To address the lack of a comprehensive simulator of neuromorphic vision datasets, we introduce the Anomalous Neuromorphic Tool for Shapes (ANTShapes), a novel dataset simulation framework. Built in the Unity engine, ANTShapes simulates abstract, configurable 3D scenes populated by objects displaying randomly-generated behaviours describing attributes such as motion and rotation. The sampling of object behaviours, and the labelling of anomalously-acting objects, is a statistical process following central limit theorem principles. Datasets containing an arbitrary number of samples can be created and exported from ANTShapes, along with accompanying label and frame data, through the adjustment of a limited number of parameters within the software. ANTShapes addresses the limitations of data availability to researchers of event-based computer vision by allowing for the simulation of bespoke datasets to suit purposes including object recognition and localisation alongside anomaly detection.",
+    "authors": [
+      "Mike Middleton",
+      "Teymoor Ali",
+      "Hakan Kayan",
+      "Basabdatta Sen Bhattacharya",
+      "Charith Perera",
+      "Oliver Rhodes",
+      "Elena Gheorghiu",
+      "Mark Vousden",
+      "Martin A. Trefzer"
+    ],
+    "published": "2026-02-26",
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.23514v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.23514v1",
+    "fetched_at": "2026-03-02T08:52:03.417030"
+  },
+  {
+    "id": "2602.24286v1",
+    "title": "CUDA Agent: Large-Scale Agentic RL for High-Performance CUDA Kernel Generation",
+    "abstract": "GPU kernel optimization is fundamental to modern deep learning but remains a highly specialized task requiring deep hardware expertise. Despite strong performance in general programming, large language models (LLMs) remain uncompetitive with compiler-based systems such as torch.compile for CUDA kernel generation. Existing CUDA code generation approaches either rely on training-free refinement or fine-tune models within fixed multi-turn execution-feedback loops, but both paradigms fail to fundamentally improve the model's intrinsic CUDA optimization ability, resulting in limited performance gains. We present CUDA Agent, a large-scale agentic reinforcement learning system that develops CUDA kernel expertise through three components: a scalable data synthesis pipeline, a skill-augmented CUDA development environment with automated verification and profiling to provide reliable reward signals, and reinforcement learning algorithmic techniques enabling stable training. CUDA Agent achieves state-of-the-art results on KernelBench, delivering 100\\%, 100\\%, and 92\\% faster rate over torch.compile on KernelBench Level-1, Level-2, and Level-3 splits, outperforming the strongest proprietary models such as Claude Opus 4.5 and Gemini 3 Pro by about 40\\% on the hardest Level-3 setting.",
+    "authors": [
+      "Weinan Dai",
+      "Hanlin Wu",
+      "Qiying Yu",
+      "Huan-ang Gao",
+      "Jiahao Li",
+      "Chengquan Jiang",
+      "Weiqiang Lou",
+      "Yufan Song",
+      "Hongli Yu",
+      "Jiaze Chen",
+      "Wei-Ying Ma",
+      "Ya-Qin Zhang",
+      "Jingjing Liu",
+      "Mingxuan Wang",
+      "Xin Liu",
+      "Hao Zhou"
+    ],
+    "published": "2026-02-27",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.24286v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.24286v1",
+    "fetched_at": "2026-03-02T08:52:31.322298"
+  },
+  {
+    "id": "2602.24220v1",
+    "title": "Comparing Classical and Quantum Variational Classifiers on the XOR Problem",
+    "abstract": "Quantum machine learning applies principles such as superposition and entanglement to data processing and optimization. Variational quantum models operate on qubits in high-dimensional Hilbert spaces and provide an alternative approach to model expressivity. We compare classical models and a variational quantum classifier on the XOR problem. Logistic regression, a one-hidden-layer multilayer perceptron, and a two-qubit variational quantum classifier with circuit depths 1 and 2 are evaluated on synthetic XOR datasets with varying Gaussian noise and sample sizes using accuracy and binary cross-entropy.   Performance is determined primarily by model expressivity. Logistic regression and the depth-1 quantum circuit fail to represent XOR reliably, whereas the multilayer perceptron and the depth-2 quantum circuit achieve perfect test accuracy under representative conditions. Robustness analyses across noise levels, dataset sizes, and random seeds confirm that circuit depth is decisive for quantum performance on this task. Despite matching accuracy, the multilayer perceptron achieves lower binary cross-entropy and substantially shorter training time. Hardware execution preserves the global XOR structure but introduces structured deviations in the decision function. Overall, deeper variational quantum classifiers can match classical neural networks in accuracy on low-dimensional XOR benchmarks, but no clear empirical advantage in robustness or efficiency is observed in the examined settings.",
+    "authors": [
+      "Miras Seilkhan",
+      "Adilbek Taizhanov"
+    ],
+    "published": "2026-02-27",
+    "categories": [
+      "cs.LG",
+      "quant-ph"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.24220v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.24220v1",
+    "fetched_at": "2026-03-02T08:52:31.322332"
+  },
+  {
+    "id": "2602.24191v1",
+    "title": "Resilient Strategies for Stochastic Systems: How Much Does It Take to Break a Winning Strategy?",
+    "abstract": "We study the problem of resilient strategies in the presence of uncertainty. Resilient strategies enable an agent to make decisions that are robust against disturbances. In particular, we are interested in those disturbances that are able to flip a decision made by the agent. Such a disturbance may, for instance, occur when the intended action of the agent cannot be executed due to a malfunction of an actuator in the environment. In this work, we introduce the concept of resilience in the stochastic setting and present a comprehensive set of fundamental problems. Specifically, we discuss such problems for Markov decision processes with reachability and safety objectives, which also smoothly extend to stochastic games. To account for the stochastic setting, we provide various ways of aggregating the amounts of disturbances that may have occurred, for instance, in expectation or in the worst case. Moreover, to reason about infinite disturbances, we use quantitative measures, like their frequency of occurrence.",
+    "authors": [
+      "Kush Grover",
+      "Markel Zubia",
+      "Debraj Chakraborty",
+      "Muqsit Azeem",
+      "Nils Jansen",
+      "Jan Kretinsky"
+    ],
+    "published": "2026-02-27",
+    "categories": [
+      "cs.GT",
+      "cs.AI",
+      "cs.LO"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.24191v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.24191v1",
+    "fetched_at": "2026-03-02T08:52:31.322362"
+  },
+  {
+    "id": "2602.24188v1",
+    "title": "MT-PingEval: Evaluating Multi-Turn Collaboration with Private Information Games",
+    "abstract": "We present a scalable methodology for evaluating language models in multi-turn interactions, using a suite of collaborative games that require effective communication about private information. This enables an interactive scaling analysis, in which a fixed token budget is divided over a variable number of turns. We find that in many cases, language models are unable to use interactive collaboration to improve over the non-interactive baseline scenario in which one agent attempts to summarize its information and the other agent immediately acts -- despite substantial headroom. This suggests that state-of-the-art models still suffer from significant weaknesses in planning and executing multi-turn collaborative conversations. We analyze the linguistic features of these dialogues, assessing the roles of sycophancy, information density, and discourse coherence. While there is no single linguistic explanation for the collaborative weaknesses of contemporary language models, we note that humans achieve comparable task success at superior token efficiency by producing dialogues that are more coherent than those produced by most language models. The proactive management of private information is a defining feature of real-world communication, and we hope that MT-PingEval will drive further work towards improving this capability.",
+    "authors": [
+      "Jacob Eisenstein",
+      "Fantine Huot",
+      "Adam Fisch",
+      "Jonathan Berant",
+      "Mirella Lapata"
+    ],
+    "published": "2026-02-27",
+    "categories": [
+      "cs.CL",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.24188v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.24188v1",
+    "fetched_at": "2026-03-02T08:52:31.322391"
+  },
+  {
+    "id": "2602.24142v1",
+    "title": "CoME: Empowering Channel-of-Mobile-Experts with Informative Hybrid-Capabilities Reasoning",
+    "abstract": "Mobile Agents can autonomously execute user instructions, which requires hybrid-capabilities reasoning, including screen summary, subtask planning, action decision and action function. However, existing agents struggle to achieve both decoupled enhancement and balanced integration of these capabilities. To address these challenges, we propose Channel-of-Mobile-Experts (CoME), a novel agent architecture consisting of four distinct experts, each aligned with a specific reasoning stage, CoME activates the corresponding expert to generate output tokens in each reasoning stage via output-oriented activation. To empower CoME with hybrid-capabilities reasoning, we introduce a progressive training strategy: Expert-FT enables decoupling and enhancement of different experts' capability; Router-FT aligns expert activation with the different reasoning stage; CoT-FT facilitates seamless collaboration and balanced optimization across multiple capabilities. To mitigate error propagation in hybrid-capabilities reasoning, we propose InfoGain-Driven DPO (Info-DPO), which uses information gain to evaluate the contribution of each intermediate step, thereby guiding CoME toward more informative reasoning. Comprehensive experiments show that CoME outperforms dense mobile agents and MoE methods on both AITZ and AMEX datasets.",
+    "authors": [
+      "Yuxuan Liu",
+      "Weikai Xu",
+      "Kun Huang",
+      "Changyu Chen",
+      "Jiankun Zhao",
+      "Pengzhi Gao",
+      "Wei Liu",
+      "Jian Luan",
+      "Shuo Shang",
+      "Bo Du",
+      "Ji-Rong Wen",
+      "Rui Yan"
+    ],
+    "published": "2026-02-27",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.24142v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.24142v1",
+    "fetched_at": "2026-03-02T08:52:31.322429"
+  },
+  {
+    "id": "2602.24068v1",
+    "title": "A Novel Hierarchical Multi-Agent System for Payments Using LLMs",
+    "abstract": "Large language model (LLM) agents, such as OpenAI's Operator and Claude's Computer Use, can automate workflows but unable to handle payment tasks. Existing agentic solutions have gained significant attention; however, even the latest approaches face challenges in implementing end-to-end agentic payment workflows. To address this gap, this research proposes the Hierarchical Multi-Agent System for Payments (HMASP), which provides an end-to-end agentic method for completing payment workflows. The proposed HMASP leverages either open-weight or proprietary LLMs and employs a modular architecture consisting of the Conversational Payment Agent (CPA - first agent level), Supervisor agents (second agent level), Routing agents (third agent level), and the Process summary agent (fourth agent level). The CPA serves as the central entry point, handling all external requests and coordinating subsequent tasks across hierarchical levels. HMASP incorporates architectural patterns that enable modular task execution across agents and levels for payment operations, including shared state variables, decoupled message states, and structured handoff protocols that facilitate coordination across agents and workflows. Experimental results demonstrate the feasibility of the proposed HMASP. To our knowledge, HMASP is the first LLM-based multi-agent system to implement end-to-end agentic payment workflows. This work lays a foundation for extending agentic capabilities into the payment domain.",
+    "authors": [
+      "Joon Kiat Chua",
+      "Donghao Huang",
+      "Zhaoxia Wang"
+    ],
+    "published": "2026-02-27",
+    "categories": [
+      "cs.MA",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.24068v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.24068v1",
+    "fetched_at": "2026-03-02T08:52:31.322451"
+  },
+  {
+    "id": "2602.24044v1",
+    "title": "Data Driven Optimization of GPU efficiency for Distributed LLM Adapter Serving",
+    "abstract": "Large Language Model (LLM) adapters enable low-cost model specialization, but introduce complex caching and scheduling challenges in distributed serving systems where hundreds of adapters must be hosted concurrently. While prior work has largely focused on latency minimization, resource efficiency through throughput maximization remains underexplored. This paper presents a data-driven pipeline that, for a given workload, computes an adapter placement that serves the workload with the minimum number of GPUs while avoiding request starvation and GPU memory errors. To that end, the approach identifies the maximum feasible throughput attainable on each GPU by leveraging accurate performance predictions learned from real serving behavior. The proposed pipeline integrates three components: (i) a Digital Twin (DT) tailored to LLM-adapter serving, (ii) a distilled machine learning (ML) model trained on DT-generated data, and (iii) a greedy placement algorithm that exploits ML-based performance estimates to maximize GPU efficiency. The DT emulates real system dynamics with high fidelity, achieving below 5% throughput estimation error while executing up to 90 times faster than full LLM benchmarking across both predictable and unpredictable workloads. The learned ML models further accelerate performance estimation with marginal accuracy degradation, enabling scalable optimization. Experimental results demonstrate that the pipeline substantially improves GPU efficiency by reducing the number of GPUs required to sustain target workloads. Beyond GPU efficiency, the pipeline can be adapted to alternative objectives, such as latency minimization, highlighting its versatility for future large-scale LLM serving infrastructures.",
+    "authors": [
+      "Ferran Agullo",
+      "Joan Oliveras",
+      "Chen Wang",
+      "Alberto Gutierrez-Torre",
+      "Olivier Tardieu",
+      "Alaa Youssef",
+      "Jordi Torres",
+      "Josep Ll. Berral"
+    ],
+    "published": "2026-02-27",
+    "categories": [
+      "cs.DC",
+      "cs.AI",
+      "cs.CL",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.24044v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.24044v1",
+    "fetched_at": "2026-03-02T08:52:31.322481"
+  },
+  {
+    "id": "2602.24009v1",
+    "title": "Jailbreak Foundry: From Papers to Runnable Attacks for Reproducible Benchmarking",
+    "abstract": "Jailbreak techniques for large language models (LLMs) evolve faster than benchmarks, making robustness estimates stale and difficult to compare across papers due to drift in datasets, harnesses, and judging protocols. We introduce JAILBREAK FOUNDRY (JBF), a system that addresses this gap via a multi-agent workflow to translate jailbreak papers into executable modules for immediate evaluation within a unified harness. JBF features three core components: (i) JBF-LIB for shared contracts and reusable utilities; (ii) JBF-FORGE for the multi-agent paper-to-module translation; and (iii) JBF-EVAL for standardizing evaluations. Across 30 reproduced attacks, JBF achieves high fidelity with a mean (reproduced-reported) attack success rate (ASR) deviation of +0.26 percentage points. By leveraging shared infrastructure, JBF reduces attack-specific implementation code by nearly half relative to original repositories and achieves an 82.5% mean reused-code ratio. This system enables a standardized AdvBench evaluation of all 30 attacks across 10 victim models using a consistent GPT-4o judge. By automating both attack integration and standardized evaluation, JBF offers a scalable solution for creating living benchmarks that keep pace with the rapidly shifting security landscape.",
+    "authors": [
+      "Zhicheng Fang",
+      "Jingjie Zheng",
+      "Chenxu Fu",
+      "Wei Xu"
+    ],
+    "published": "2026-02-27",
+    "categories": [
+      "cs.CR",
+      "cs.AI",
+      "cs.CL",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.24009v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.24009v1",
+    "fetched_at": "2026-03-02T08:52:31.322504"
+  },
+  {
+    "id": "2602.23866v1",
+    "title": "SWE-rebench V2: Language-Agnostic SWE Task Collection at Scale",
+    "abstract": "Software engineering agents (SWE) are improving rapidly, with recent gains largely driven by reinforcement learning (RL). However, RL training is constrained by the scarcity of large-scale task collections with reproducible execution environments and reliable test suites. Although a growing number of benchmarks have emerged, datasets suitable for training remain limited in scale and diversity or often target a limited set of high-resource language ecosystems. We introduce SWE-rebench V2, a language-agnostic automated pipeline for harvesting executable real-world SWE tasks and constructing RL training environments at scale. The pipeline synthesizes repository-specific installation and test procedures via an interactive setup agent, and filters unsound instances using an ensemble of LLM judges, validated against human-verified SWE-bench annotations. Using this pipeline, we construct a dataset of 32,000+ tasks spanning 20 languages and 3,600+ repositories, with pre-built images for reproducible execution. To further scale training data, we additionally release 120,000+ tasks with installation instructions, fail-to-pass tests and rich metadata, where the problem statement is generated based on the original pull request description. We validate the collected instances through a diagnostic study that covers a subset of tasks in five programming languages across seven popular models, and provide instance-level metadata that flags common confounders such as overly restrictive tests and underspecified descriptions. We release the datasets, the collection and execution code, and associated artifacts to enable large-scale training of SWE agents across diverse languages and repositories.",
+    "authors": [
+      "Ibragim Badertdinov",
+      "Maksim Nekrashevich",
+      "Anton Shevtsov",
+      "Alexander Golubev"
+    ],
+    "published": "2026-02-27",
+    "categories": [
+      "cs.SE",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.23866v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.23866v1",
+    "fetched_at": "2026-03-02T08:52:31.322527"
+  },
+  {
+    "id": "2602.23816v1",
+    "title": "Learning to maintain safety through expert demonstrations in settings with unknown constraints: A Q-learning perspective",
+    "abstract": "Given a set of trajectories demonstrating the execution of a task safely in a constrained MDP with observable rewards but with unknown constraints and non-observable costs, we aim to find a policy that maximizes the likelihood of demonstrated trajectories trading the balance between being conservative and increasing significantly the likelihood of high-rewarding trajectories but with potentially unsafe steps. Having these objectives, we aim towards learning a policy that maximizes the probability of the most $promising$ trajectories with respect to the demonstrations. In so doing, we formulate the ``promise\" of individual state-action pairs in terms of $Q$ values, which depend on task-specific rewards as well as on the assessment of states' safety, mixing expectations in terms of rewards and safety. This entails a safe Q-learning perspective of the inverse learning problem under constraints: The devised Safe $Q$ Inverse Constrained Reinforcement Learning (SafeQIL) algorithm is compared to state-of-the art inverse constraint reinforcement learning algorithms to a set of challenging benchmark tasks, showing its merits.",
+    "authors": [
+      "George Papadopoulos",
+      "George A. Vouros"
+    ],
+    "published": "2026-02-27",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.23816v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.23816v1",
+    "fetched_at": "2026-03-02T08:52:31.322546"
+  },
+  {
+    "id": "2602.23798v1",
+    "title": "MPU: Towards Secure and Privacy-Preserving Knowledge Unlearning for Large Language Models",
+    "abstract": "Machine unlearning for large language models often faces a privacy dilemma in which strict constraints prohibit sharing either the server's parameters or the client's forget set. To address this dual non-disclosure constraint, we propose MPU, an algorithm-agnostic privacy-preserving Multiple Perturbed Copies Unlearning framework that primarily introduces two server-side modules: Pre-Process for randomized copy generation and Post-Process for update aggregation. In Pre-Process, the server distributes multiple perturbed and reparameterized model instances, allowing the client to execute unlearning locally on its private forget set without accessing the server's exact original parameters. After local unlearning, the server performs Post-Process by inverting the reparameterization and aggregating updates with a harmonic denoising procedure to alleviate the impact of perturbation. Experiments with seven unlearning algorithms show that MPU achieves comparable unlearning performance to noise-free baselines, with most algorithms' average degradation well below 1% under 10% noise, and can even outperform the noise-free baseline for some algorithms under 1% noise. Code is available at https://github.com/Tristan-SHU/MPU.",
+    "authors": [
+      "Tiantong Wang",
+      "Xinyu Yan",
+      "Tiantong Wu",
+      "Yurong Hao",
+      "Yong Jiang",
+      "Fei Huang",
+      "Wei Yang Bryan Lim"
+    ],
+    "published": "2026-02-27",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CR",
+      "cs.DC"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.23798v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.23798v1",
+    "fetched_at": "2026-03-02T08:52:31.322574"
+  },
+  {
+    "id": "2602.23722v1",
+    "title": "SLA-Aware Distributed LLM Inference Across Device-RAN-Cloud",
+    "abstract": "Embodied AI requires sub-second inference near the Radio Access Network (RAN), but deployments span heterogeneous tiers (on-device, RAN-edge, cloud) and must not disrupt real-time baseband processing. We report measurements from a 5G Standalone (SA) AI-RAN testbed using a fixed baseline policy for repeatability. The setup includes an on-device tier, a three-node RAN-edge cluster co-hosting a containerized 5G RAN, and a cloud tier. We find that on-device execution remains multi-second and fails to meet sub-second budgets. At the RAN edge, SLA feasibility is primarily determined by model variant choice: quantized models concentrate below 0.5\\,s, while unquantized and some larger quantized models incur deadline misses due to stalls and queuing. In the cloud tier, meeting a 0.5\\,s deadline is challenging on the measured WAN path (up to 32.9\\% of requests complete within 0.5\\,s), but all evaluated variants meet a 1.0\\,s deadline (100\\% within 1.0\\,s). Under saturated downlink traffic and up to $N{=}20$ concurrent inference clients, Multi-Instance GPU (MIG) isolation preserves baseband timing-health proxies, supporting safe co-location under fixed partitioning.",
+    "authors": [
+      "Hariz Yet",
+      "Nguyen Thanh Tam",
+      "Mao V. Ngo",
+      "Lim Yi Shen",
+      "Lin Wei",
+      "Jihong Park",
+      "Binbin Chen",
+      "Tony Q. S. Quek"
+    ],
+    "published": "2026-02-27",
+    "categories": [
+      "cs.NI",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.23722v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.23722v1",
+    "fetched_at": "2026-03-02T08:52:31.322604"
+  },
+  {
+    "id": "2602.23720v1",
+    "title": "The Auton Agentic AI Framework",
+    "abstract": "The field of Artificial Intelligence is undergoing a transition from Generative AI -- probabilistic generation of text and images -- to Agentic AI, in which autonomous systems execute actions within external environments on behalf of users. This transition exposes a fundamental architectural mismatch: Large Language Models (LLMs) produce stochastic, unstructured outputs, whereas the backend infrastructure they must control -- databases, APIs, cloud services -- requires deterministic, schema-conformant inputs. The present paper describes the Auton Agentic AI Framework, a principled architecture for standardizing the creation, execution, and governance of autonomous agent systems. The framework is organized around a strict separation between the Cognitive Blueprint, a declarative, language-agnostic specification of agent identity and capabilities, and the Runtime Engine, the platform-specific execution substrate that instantiates and runs the agent. This separation enables cross-language portability, formal auditability, and modular tool integration via the Model Context Protocol (MCP). The paper formalizes the agent execution model as an augmented Partially Observable Markov Decision Process (POMDP) with a latent reasoning space, introduces a hierarchical memory consolidation architecture inspired by biological episodic memory systems, defines a constraint manifold formalism for safety enforcement via policy projection rather than post-hoc filtering, presents a three-level self-evolution framework spanning in-context adaptation through reinforcement learning, and describes runtime optimizations -- including parallel graph execution, speculative inference, and dynamic context pruning -- that reduce end-to-end latency for multi-step agent workflows.",
+    "authors": [
+      "Sheng Cao",
+      "Zhao Chang",
+      "Chang Li",
+      "Hannan Li",
+      "Liyao Fu",
+      "Ji Tang"
+    ],
+    "published": "2026-02-27",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.23720v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.23720v1",
+    "fetched_at": "2026-03-02T08:52:31.322630"
+  },
+  {
+    "id": "2602.23701v1",
+    "title": "From Flat Logs to Causal Graphs: Hierarchical Failure Attribution for LLM-based Multi-Agent Systems",
+    "abstract": "LLM-powered Multi-Agent Systems (MAS) have demonstrated remarkable capabilities in complex domains but suffer from inherent fragility and opaque failure mechanisms. Existing failure attribution methods, whether relying on direct prompting, costly replays, or supervised fine-tuning, typically treat execution logs as flat sequences. This linear perspective fails to disentangle the intricate causal links inherent to MAS, leading to weak observability and ambiguous responsibility boundaries. To address these challenges, we propose CHIEF, a novel framework that transforms chaotic trajectories into a structured hierarchical causal graph. It then employs hierarchical oracle-guided backtracking to efficiently prune the search space via sybthesized virtual oracles. Finally, it implements counterfactual attribution via a progressive causal screening strategy to rigorously distinguish true root causes from propagated symptoms. Experiments on Who&When benchmark show that CHIEF outperforms eight strong and state-of-the-art baselines on both agent- and step-level accuracy. Ablation studies further confirm the critical role of each proposed module.",
+    "authors": [
+      "Yawen Wang",
+      "Wenjie Wu",
+      "Junjie Wang",
+      "Qing Wang"
+    ],
+    "published": "2026-02-27",
+    "categories": [
+      "cs.AI",
+      "cs.SE"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.23701v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.23701v1",
+    "fetched_at": "2026-03-02T08:52:31.322653"
+  },
+  {
+    "id": "2602.23679v1",
+    "title": "The Compulsory Imaginary: AGI and Corporate Authority",
+    "abstract": "This paper argues that the two leading AGI firms -- OpenAI and Anthropic -- construct sociotechnical imaginaries through a structurally consistent rhetorical strategy, despite meaningful differences in execution. Drawing on Jasanoff (2015)'s framework of sociotechnical imaginaries, the paper analyzes two essays published in late 2024: Sam Altman's \"The Intelligence Age\" and Dario Amodei's \"Machines of Loving Grace.\" Close comparative reading identifies four shared rhetorical operations: the self-exemption move, which disavows prophetic authority while exercising it; teleological naturalization, which embeds AGI's arrival in narratives of historical inevitability; qualified acknowledgment, which absorbs concessions to risk into an optimistic frame; and implicit indispensability, which positions each firm as central to the imagined future without naming it as a commercial actor. That two competing institutions with different cultures, risk philosophies, and leaders with notably different public personae converge on the same rhetorical architecture suggests the imaginary reflects not only firm-level strategy but the institutional position these firms occupy. The paper extends the sociotechnical imaginaries framework from nation-states to private firms at the frontier of transformative technology development, identifies the discursive mechanism through which corporate authority over technological futures is projected and stabilized, and demonstrates that this mechanism is at minimum structural rather than idiosyncratic. The findings raise the question of what institutional arrangements would make that authority contestable from outside the firms that produce it.",
+    "authors": [
+      "Emilio Barkett"
+    ],
+    "published": "2026-02-27",
+    "categories": [
+      "cs.HC",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.23679v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.23679v1",
+    "fetched_at": "2026-03-02T08:52:31.322671"
+  }
+]

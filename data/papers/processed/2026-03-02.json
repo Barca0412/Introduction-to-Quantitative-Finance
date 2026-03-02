@@ -1,0 +1,789 @@
+[
+  {
+    "id": "2602.24194v1",
+    "title": "Betting under Common Beliefs: The Effect of Probability Weighting",
+    "abstract": "This paper examines the impact of introducing a Rank-Dependent Utility (RDU) agent into a von Neumann-Morgenstern (vNM) pure-exchange economy with no aggregate uncertainty. In the absence of the RDU agent, the classical theory predicts that Pareto-optimal allocations are full-insurance, or no-betting, allocations. We show how the probability weighting function of the RDU agent, seen as a proxy for probabilistic risk aversion that is not captured by marginal utility of wealth, can lead to Pareto optima characterized by endogenous betting, despite common baseline beliefs. Such endogenous betting at an optimum leads to uncertainty-generating trade arising purely from heterogeneity in the perception of risk, rather than in beliefs. Our results formalize the intuitive understanding that probability weighting can act as an endogenous source of belief heterogeneity, and provide a new behavioral foundation for the coexistence of common beliefs and speculative behavior, in an environment with no initial aggregate uncertainty. Interpreting the RDU agent's nonlinear weighting function as an ``internality'' prompts the question of whether a social planner should intervene. We show how a benevolent social planner can nudge the RDU agent to behave closer to a vNM agent, through costly statistical or financial education, thereby (partially) restoring the optimality of full-insurance allocations.",
+    "authors": [
+      "Patrick Beissner",
+      "Tim Boonen",
+      "Mario Ghossoub"
+    ],
+    "published": "2026-02-27",
+    "categories": [
+      "econ.TH",
+      "q-fin.RM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.24194v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.24194v1",
+    "fetched_at": "2026-03-02T08:51:51.020242",
+    "chinese_title": "共同信念下的博弈：概率加权的影响",
+    "chinese_summary": "本文将秩依效用（RDU）主体引入无总不确定性的冯·诺依曼-摩根斯坦（vNM）纯交换经济，发现RDU主体的概率加权函数（非边际财富效用捕获的概率风险厌恶代理）会导致内生博弈的帕累托最优（尽管基线信念相同），贸易源于风险感知异质性而非信念差异；形式化概率加权为内生信念异质性来源，为共同信念与投机行为共存提供新行为基础，并分析社会计划者通过教育引导RDU主体接近vNM主体以部分恢复完全保险配置最优性。",
+    "tags": [
+      "Behavioral Finance",
+      "Financial Agent",
+      "Asset Pricing"
+    ],
+    "key_contributions": [
+      "1. 证明无总不确定性且基线信念相同的vNM经济中，RDU主体的概率加权会导致内生博弈的帕累托最优，贸易源于风险感知异质性而非信念差异；",
+      "2. 形式化概率加权为内生信念异质性来源，为共同信念与投机行为共存提供新行为基础，并分析社会计划者通过教育部分恢复完全保险配置最优性。"
+    ],
+    "processed_at": "2026-03-02T08:54:57.427413"
+  },
+  {
+    "id": "2602.23784v1",
+    "title": "TradeFM: A Generative Foundation Model for Trade-flow and Market Microstructure",
+    "abstract": "Foundation models have transformed domains from language to genomics by learning general-purpose representations from large-scale, heterogeneous data. We introduce TradeFM, a 524M-parameter generative Transformer that brings this paradigm to market microstructure, learning directly from billions of trade events across >9K equities. To enable cross-asset generalization, we develop scale-invariant features and a universal tokenization scheme that map the heterogeneous, multi-modal event stream of order flow into a unified discrete sequence -- eliminating asset-specific calibration. Integrated with a deterministic market simulator, TradeFM-generated rollouts reproduce key stylized facts of financial returns, including heavy tails, volatility clustering, and absence of return autocorrelation. Quantitatively, TradeFM achieves 2-3x lower distributional error than Compound Hawkes baselines and generalizes zero-shot to geographically out-of-distribution APAC markets with moderate perplexity degradation. Together, these results suggest that scale-invariant trade representations capture transferable structure in market microstructure, opening a path toward synthetic data generation, stress testing, and learning-based trading agents.",
+    "authors": [
+      "Maxime Kawawa-Beaudan",
+      "Srijan Sood",
+      "Kassiani Papasotiriou",
+      "Daniel Borrajo",
+      "Manuela Veloso"
+    ],
+    "published": "2026-02-27",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "q-fin.CP",
+      "q-fin.TR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.23784v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.23784v1",
+    "fetched_at": "2026-03-02T08:51:51.020321",
+    "chinese_title": "TradeFM：交易流与市场微观结构的生成型基础模型",
+    "chinese_summary": "论文引入5.24亿参数的生成Transformer模型TradeFM，通过尺度不变特征与通用token化方案将跨资产异质多模态订单流映射为统一离散序列（无需资产特定校准）；集成确定性市场模拟器后，其生成序列可复现金融收益重尾、波动率聚类等关键 stylized facts，且比Compound Hawkes基线低2-3倍分布误差，能零样本泛化至APAC市场，证明尺度不变表示捕捉了可迁移的市场微观结构规律。",
+    "tags": [
+      "Market Microstructure",
+      "Transformer",
+      "Deep Learning",
+      "High Frequency"
+    ],
+    "key_contributions": [
+      "提出TradeFM生成型Transformer，采用尺度不变特征与通用token化实现跨资产泛化，消除资产特定校准需求",
+      "生成序列复现金融收益关键 stylized facts，分布误差优于基线2-3倍，零样本泛化至APAC市场，支撑合成数据生成等应用"
+    ],
+    "processed_at": "2026-03-02T08:55:15.538857"
+  },
+  {
+    "id": "2602.23762v1",
+    "title": "One Rising Ship Sinks Other Ships: Cross-Chain Negative Spillovers in Crypto Markets",
+    "abstract": "We document the first systematic evidence of negative spillover effects in crypto asset returns across blockchains. Using on-chain data from Ethereum, Solana, Binance Smart Chain, Arbitrum, and Avalanche (2022-2025), we show that surges on one chain often coincide with declines on others, in contrast to the positive co-movements typical of equity markets. These spillovers intensify during attention shocks, proxied by chain activity and extreme return events, and persist after controlling for global equity returns, interest rates, and Bitcoin. Nonlinear factor models reveal that attention-driven capital reallocation, rather than common information, underlies these dynamics. Our findings introduce a new form of cross-market linkage, attention-induced substitution, that shapes risk transmission in crypto markets. The results carry implications for portfolio diversification, systemic risk measurement, and regulation of token launches that may trigger cross-chain capital flight.",
+    "authors": [
+      "Mengzhong Ma",
+      "Te Bao",
+      "Yonggang Wen"
+    ],
+    "published": "2026-02-27",
+    "categories": [
+      "q-fin.PR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.23762v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.23762v1",
+    "fetched_at": "2026-03-02T08:51:51.020368",
+    "chinese_title": "一船升起，众船沉没：加密货币市场中的跨链负溢出效应",
+    "chinese_summary": "论文利用2022-2025年以太坊等五大链的链上数据，首次系统发现加密资产跨链收益存在负溢出效应（不同于股市正联动），且在注意力冲击（链活动、极端收益事件）时增强；非线性因子模型表明该效应源于注意力驱动的资本再分配而非共同信息，提出“注意力诱导替代”的新跨市场联动形式，对加密市场组合分散化、系统风险度量及代币发行监管有启示。",
+    "tags": [
+      "Asset Pricing",
+      "Behavioral Finance",
+      "Risk Management",
+      "Factor Model"
+    ],
+    "key_contributions": [
+      "首次系统验证加密资产跨链收益的负溢出效应，区别于传统股市正联动特征",
+      "揭示注意力驱动资本再分配的新跨市场联动机制，明确负溢出的核心成因",
+      "为加密市场组合分散化、系统风险度量及代币发行监管提供实践启示"
+    ],
+    "processed_at": "2026-03-02T08:55:30.892855"
+  },
+  {
+    "id": "2602.24209v1",
+    "title": "An Efficient Unsupervised Federated Learning Approach for Anomaly Detection in Heterogeneous IoT Networks",
+    "abstract": "Federated learning (FL) is an effective paradigm for distributed environments such as the Internet of Things (IoT), where data from diverse devices with varying functionalities remains localized while contributing to a shared global model. By eliminating the need to transmit raw data, FL inherently preserves privacy. However, the heterogeneous nature of IoT data, stemming from differences in device capabilities, data formats, and communication constraints, poses significant challenges to maintaining both global model performance and privacy. In the context of IoT-based anomaly detection, unsupervised FL offers a promising means to identify abnormal behavior without centralized data aggregation. Nevertheless, feature heterogeneity across devices complicates model training and optimization, hindering effective implementation. In this study we propose an efficient unsupervised FL framework that enhances anomaly detection by leveraging shared features from two distinct IoT datasets: one focused on anomaly detection and the other on device identification, while preserving dataset-specific features. To improve transparency and interpretability, we employ explainable AI techniques, such as SHAP, to identify key features influencing local model decisions. Experiments conducted on real-world IoT datasets demonstrate that the proposed method significantly outperforms conventional FL approaches in anomaly detection accuracy. This work underscores the potential of using shared features from complementary datasets to optimize unsupervised federated learning and achieve superior anomaly detection results in decentralized IoT environments.",
+    "authors": [
+      "Mohsen Tajgardan",
+      "Atena Shiranzaei",
+      "Mahdi Rabbani",
+      "Reza Khoshkangini",
+      "Mahtab Jamali"
+    ],
+    "published": "2026-02-27",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.24209v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.24209v1",
+    "fetched_at": "2026-03-02T08:52:03.416890",
+    "chinese_title": "异构物联网网络中异常检测的高效无监督联邦学习方法",
+    "chinese_summary": "本文针对异构物联网数据异质性对联邦学习异常检测的挑战，提出一种无监督联邦学习框架，通过利用异常检测与设备识别两类IoT数据集的共享特征并保留数据集特定特征提升检测性能；同时引入SHAP等可解释AI技术增强模型透明度，实验表明该方法显著优于传统联邦学习方法的异常检测准确率。",
+    "tags": [
+      "Anomaly",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出异构物联网异常检测的高效无监督联邦学习框架，利用两类IoT数据集的共享特征并保留特定特征，解决数据异质性带来的模型训练难题",
+      "引入SHAP等可解释AI技术增强模型透明度，实验验证该方法异常检测准确率显著优于传统联邦学习方法"
+    ],
+    "processed_at": "2026-03-02T08:55:48.540122"
+  },
+  {
+    "id": "2602.23846v1",
+    "title": "MI$^2$DAS: A Multi-Layer Intrusion Detection Framework with Incremental Learning for Securing Industrial IoT Networks",
+    "abstract": "The rapid expansion of Industrial IoT (IIoT) systems has amplified security challenges, as heterogeneous devices and dynamic traffic patterns increase exposure to sophisticated and previously unseen cyberattacks. Traditional intrusion detection systems often struggle in such environments due to their reliance on extensive labeled data and limited ability to detect new threats. To address these challenges, we propose MI$^2$DAS, a multi-layer intrusion detection framework that integrates anomaly-based hierarchical traffic pooling, open-set recognition to distinguish between known and unknown attacks and incremental learning for adapting to novel attack types with minimal labeling. Experiments conducted on the Edge-IIoTset dataset demonstrate strong performance across all layers. In the first layer, GMM achieves superior normal-attack discrimination (accuracy = 0.953, TPR = 1.000). In open-set recognition, GMM attains a recall of 0.813 for known attacks, while LOF achieves 0.882 recall for unknown attacks. For fine-grained classification of known attacks, Random Forest achieves a macro-F1 of 0.941. Finally, the incremental learning module maintains robust performance when incorporation novel attack classes, achieving a macro-F1 of 0.8995. These results showcase MI$^2$DAS as an effective, scalable and adaptive framework for enhancing IIoT security against evolving threats.",
+    "authors": [
+      "Wei Lian",
+      "Alejandro Guerra-Manzanares"
+    ],
+    "published": "2026-02-27",
+    "categories": [
+      "cs.CR",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.23846v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.23846v1",
+    "fetched_at": "2026-03-02T08:52:03.416920",
+    "chinese_title": "MI²DAS：一种用于工业物联网网络安全的带增量学习的多层入侵检测框架",
+    "chinese_summary": "针对工业物联网（IIoT）系统异构设备与动态流量带来的安全挑战，论文提出MI²DAS多层入侵检测框架，集成异常分层流量池化、开集识别区分已知/未知攻击及增量学习适应新攻击类型；在Edge-IIoTset数据集上实验显示各层性能优异，验证了框架对演化威胁的有效性。",
+    "tags": [
+      "Anomaly",
+      "Risk Management"
+    ],
+    "key_contributions": [
+      "提出MI²DAS多层入侵检测框架，整合异常分层流量池化、开集识别与增量学习，适配工业物联网动态异构环境；",
+      "在Edge-IIoTset数据集上验证框架可有效区分已知/未知攻击并通过增量学习适应新攻击类型，提升IIoT安全防护能力。"
+    ],
+    "processed_at": "2026-03-02T08:56:03.336028"
+  },
+  {
+    "id": "2602.23729v1",
+    "title": "From Static Benchmarks to Dynamic Protocol: Agent-Centric Text Anomaly Detection for Evaluating LLM Reasoning",
+    "abstract": "The evaluation of large language models (LLMs) has predominantly relied on static datasets, which offer limited scalability and fail to capture the evolving reasoning capabilities of recent models. To overcome these limitations, we propose an agent-centric benchmarking paradigm that moves beyond static datasets by introducing a dynamic protocol in which autonomous agents iteratively generate, validate, and solve problems. Within this protocol, a teacher agent generates candidate problems, an orchestrator agent rigorously verifies their validity and guards against adversarial attacks, and a student agent attempts to solve the validated problems. An invalid problem is revised by the teacher agent until it passes validation. If the student correctly solves the problem, the orchestrator prompts the teacher to generate more challenging variants. Consequently, the benchmark scales in difficulty automatically as more capable agents are substituted into any role, enabling progressive evaluation of large language models without manually curated datasets. Adopting text anomaly detection as our primary evaluation format, which demands cross-sentence logical inference and resists pattern-matching shortcuts, we demonstrate that this protocol systematically exposes corner-case reasoning errors that conventional benchmarks fail to reveal. We further advocate evaluating systems along several complementary axes including cross-model pairwise performance and progress between the initial and orchestrator-finalized problems. By shifting the focus from fixed datasets to dynamic protocols, our approach offers a sustainable direction for evaluating ever-evolving language models and introduces a research agenda centered on the co-evolution of agent-centric benchmarks.",
+    "authors": [
+      "Seungdong Yoa",
+      "Sanghyu Yoon",
+      "Suhee Yoon",
+      "Dongmin Kim",
+      "Ye Seul Sim",
+      "Junhyun Lee",
+      "Woohyung Lim"
+    ],
+    "published": "2026-02-27",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.23729v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.23729v1",
+    "fetched_at": "2026-03-02T08:52:03.416950",
+    "chinese_title": "从静态基准到动态协议：面向LLM推理评估的Agent-centric文本异常检测",
+    "chinese_summary": "现有LLM评估依赖静态数据集，可扩展性差且无法捕捉模型进化的推理能力，论文提出Agent-centric动态基准协议：教师Agent生成问题、协调者验证修正、学生Agent解决，正确则生成更难变体，自动扩展难度；以需跨句逻辑推理的文本异常检测为评估形式，系统暴露传统基准未发现的边缘推理错误。",
+    "tags": [
+      "LLM",
+      "Anomaly",
+      "Benchmark",
+      "NLP"
+    ],
+    "key_contributions": [
+      "提出Agent-centric动态基准协议，解决静态数据集评估LLM推理的可扩展性与进化能力捕捉不足问题",
+      "以跨句逻辑推理的文本异常检测为评估形式，系统暴露传统基准未发现的边缘推理错误，无需手动 curated数据集即可自动扩展难度"
+    ],
+    "processed_at": "2026-03-02T08:56:17.629454"
+  },
+  {
+    "id": "2602.23662v1",
+    "title": "Selective Denoising Diffusion Model for Time Series Anomaly Detection",
+    "abstract": "Time series anomaly detection (TSAD) has been an important area of research for decades, with reconstruction-based methods, mostly based on generative models, gaining popularity and demonstrating success. Diffusion models have recently attracted attention due to their advanced generative capabilities. Existing diffusion-based methods for TSAD rely on a conditional strategy, which reconstructs input instances from white noise with the aid of the conditioner. However, this poses challenges in accurately reconstructing the normal parts, resulting in suboptimal detection performance. In response, we propose a novel diffusion-based method, named AnomalyFilter, which acts as a selective filter that only denoises anomaly parts in the instance while retaining normal parts. To build such a filter, we mask Gaussian noise during the training phase and conduct the denoising process without adding noise to the instances. The synergy of the two simple components greatly enhances the performance of naive diffusion models. Extensive experiments on five datasets demonstrate that AnomalyFilter achieves notably low reconstruction error on normal parts, providing empirical support for its effectiveness in anomaly detection. AnomalyFilter represents a pioneering approach that focuses on the noise design of diffusion models specifically tailored for TSAD.",
+    "authors": [
+      "Kohei Obata",
+      "Zheng Chen",
+      "Yasuko Matsubara",
+      "Lingwei Zhu",
+      "Yasushi Sakurai"
+    ],
+    "published": "2026-02-27",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.23662v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.23662v1",
+    "fetched_at": "2026-03-02T08:52:03.416975",
+    "chinese_title": "用于时间序列异常检测的选择性去噪扩散模型",
+    "chinese_summary": "针对现有基于扩散的时间序列异常检测方法依赖条件策略导致正常部分重建精度不足的问题，论文提出AnomalyFilter选择性去噪扩散模型，训练时掩码高斯噪声且去噪过程不添加噪声，仅选择性去噪异常部分并保留正常部分；实验在五个数据集上验证其正常部分重建误差显著更低，检测性能更优，是针对该任务的扩散模型噪声设计的开创性方法。",
+    "tags": [
+      "Anomaly",
+      "Time Series",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出AnomalyFilter选择性去噪扩散模型，通过训练时掩码高斯噪声、去噪过程不添加噪声，实现仅去噪异常部分保留正常部分的选择性过滤，解决现有扩散方法重建正常部分精度不足的问题",
+      "实验验证在五个数据集上正常部分重建误差显著更低，证明方法有效性，是针对时间序列异常检测的扩散模型噪声设计的开创性方法"
+    ],
+    "processed_at": "2026-03-02T08:56:39.578734"
+  },
+  {
+    "id": "2602.23599v1",
+    "title": "Normalisation and Initialisation Strategies for Graph Neural Networks in Blockchain Anomaly Detection",
+    "abstract": "Graph neural networks (GNNs) offer a principled approach to financial fraud detection by jointly learning from node features and transaction graph topology. However, their effectiveness on real-world anti-money laundering (AML) benchmarks depends critically on training practices such as specifically weight initialisation and normalisation that remain underexplored. We present a systematic ablation of initialisation and normalisation strategies across three GNN architectures (GCN, GAT, and GraphSAGE) on the Elliptic Bitcoin dataset. Our experiments reveal that initialisation and normalisation are architecture-dependent: GraphSAGE achieves the strongest performance with Xavier initialisation alone, GAT benefits most from combining GraphNorm with Xavier initialisation, while GCN shows limited sensitivity to these modifications. These findings offer practical, architecture-specific guidance for deploying GNNs in AML pipelines for datasets with severe class imbalance. We release a reproducible experimental framework with temporal data splits, seeded runs, and full ablation results.",
+    "authors": [
+      "Dang Sy Duy",
+      "Nguyen Duy Chien",
+      "Kapil Dev",
+      "Jeff Nijsse"
+    ],
+    "published": "2026-02-27",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.23599v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.23599v1",
+    "fetched_at": "2026-03-02T08:52:03.416998",
+    "chinese_title": "区块链异常检测中图形神经网络的归一化与初始化策略",
+    "chinese_summary": "针对区块链反洗钱（AML）异常检测任务，本文系统消融分析三种图神经网络（GCN、GAT、GraphSAGE）在Elliptic比特币数据集上的初始化与归一化策略，发现不同架构依赖不同最优组合（如GraphSAGE用Xavier初始化最优、GAT结合GraphNorm与Xavier最优），并发布可复现实验框架，为类不平衡数据集的AML pipeline部署GNN提供实用指导。",
+    "tags": [
+      "Anomaly",
+      "Graph Neural Network",
+      "Deep Learning",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "系统消融揭示三种GNN架构在区块链异常检测中初始化与归一化策略的架构依赖性及最优组合",
+      "发布含时间分割、种子运行及完整消融结果的可复现实验框架，助力AML场景GNN实用部署"
+    ],
+    "processed_at": "2026-03-02T08:56:52.903046"
+  },
+  {
+    "id": "2602.23514v1",
+    "title": "Modelling and Simulation of Neuromorphic Datasets for Anomaly Detection in Computer Vision",
+    "abstract": "Limitations on the availability of Dynamic Vision Sensors (DVS) present a fundamental challenge to researchers of neuromorphic computer vision applications. In response, datasets have been created by the research community, but often contain a limited number of samples or scenarios. To address the lack of a comprehensive simulator of neuromorphic vision datasets, we introduce the Anomalous Neuromorphic Tool for Shapes (ANTShapes), a novel dataset simulation framework. Built in the Unity engine, ANTShapes simulates abstract, configurable 3D scenes populated by objects displaying randomly-generated behaviours describing attributes such as motion and rotation. The sampling of object behaviours, and the labelling of anomalously-acting objects, is a statistical process following central limit theorem principles. Datasets containing an arbitrary number of samples can be created and exported from ANTShapes, along with accompanying label and frame data, through the adjustment of a limited number of parameters within the software. ANTShapes addresses the limitations of data availability to researchers of event-based computer vision by allowing for the simulation of bespoke datasets to suit purposes including object recognition and localisation alongside anomaly detection.",
+    "authors": [
+      "Mike Middleton",
+      "Teymoor Ali",
+      "Hakan Kayan",
+      "Basabdatta Sen Bhattacharya",
+      "Charith Perera",
+      "Oliver Rhodes",
+      "Elena Gheorghiu",
+      "Mark Vousden",
+      "Martin A. Trefzer"
+    ],
+    "published": "2026-02-26",
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.23514v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.23514v1",
+    "fetched_at": "2026-03-02T08:52:03.417030",
+    "chinese_title": "计算机视觉异常检测用神经形态数据集的建模与仿真",
+    "chinese_summary": "针对神经形态计算机视觉中动态视觉传感器（DVS）数据不足、现有数据集样本/场景有限的问题，论文提出基于Unity引擎的ANTShapes数据集模拟框架，通过遵循中心极限定理的统计采样生成可配置3D场景及异常标注，支持任意数量定制化数据集生成，满足目标识别、定位及异常检测等任务需求。",
+    "tags": [
+      "Anomaly",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出基于Unity引擎的ANTShapes神经形态数据集模拟框架，解决DVS数据不足及现有数据集局限问题",
+      "通过统计采样实现可配置3D场景与异常标注，支持任意数量定制化数据集生成，适配多任务需求"
+    ],
+    "processed_at": "2026-03-02T08:57:07.269790"
+  },
+  {
+    "id": "2602.24286v1",
+    "title": "CUDA Agent: Large-Scale Agentic RL for High-Performance CUDA Kernel Generation",
+    "abstract": "GPU kernel optimization is fundamental to modern deep learning but remains a highly specialized task requiring deep hardware expertise. Despite strong performance in general programming, large language models (LLMs) remain uncompetitive with compiler-based systems such as torch.compile for CUDA kernel generation. Existing CUDA code generation approaches either rely on training-free refinement or fine-tune models within fixed multi-turn execution-feedback loops, but both paradigms fail to fundamentally improve the model's intrinsic CUDA optimization ability, resulting in limited performance gains. We present CUDA Agent, a large-scale agentic reinforcement learning system that develops CUDA kernel expertise through three components: a scalable data synthesis pipeline, a skill-augmented CUDA development environment with automated verification and profiling to provide reliable reward signals, and reinforcement learning algorithmic techniques enabling stable training. CUDA Agent achieves state-of-the-art results on KernelBench, delivering 100\\%, 100\\%, and 92\\% faster rate over torch.compile on KernelBench Level-1, Level-2, and Level-3 splits, outperforming the strongest proprietary models such as Claude Opus 4.5 and Gemini 3 Pro by about 40\\% on the hardest Level-3 setting.",
+    "authors": [
+      "Weinan Dai",
+      "Hanlin Wu",
+      "Qiying Yu",
+      "Huan-ang Gao",
+      "Jiahao Li",
+      "Chengquan Jiang",
+      "Weiqiang Lou",
+      "Yufan Song",
+      "Hongli Yu",
+      "Jiaze Chen",
+      "Wei-Ying Ma",
+      "Ya-Qin Zhang",
+      "Jingjing Liu",
+      "Mingxuan Wang",
+      "Xin Liu",
+      "Hao Zhou"
+    ],
+    "published": "2026-02-27",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.24286v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.24286v1",
+    "fetched_at": "2026-03-02T08:52:31.322298",
+    "chinese_title": "CUDA Agent：用于高性能CUDA内核生成的大规模智能体强化学习",
+    "chinese_summary": "针对GPU内核优化的专业性难题及现有LLM生成CUDA内核性能不足的问题，论文提出CUDA Agent大规模智能体强化学习系统，通过可扩展数据合成、带自动验证与 profiling 的技能增强开发环境、稳定训练的RL算法三个组件提升内核优化能力；在KernelBench基准上取得SOTA结果，显著优于torch.compile及Claude Opus等专有模型。",
+    "tags": [
+      "Reinforcement Learning",
+      "Deep Learning",
+      "LLM",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出包含可扩展数据合成、技能增强开发环境、稳定训练RL技术的CUDA Agent大规模智能体强化学习系统，提升模型内在CUDA优化能力",
+      "在KernelBench基准上实现SOTA性能，显著优于torch.compile及Claude Opus等专有模型"
+    ],
+    "processed_at": "2026-03-02T08:57:19.482435"
+  },
+  {
+    "id": "2602.24220v1",
+    "title": "Comparing Classical and Quantum Variational Classifiers on the XOR Problem",
+    "abstract": "Quantum machine learning applies principles such as superposition and entanglement to data processing and optimization. Variational quantum models operate on qubits in high-dimensional Hilbert spaces and provide an alternative approach to model expressivity. We compare classical models and a variational quantum classifier on the XOR problem. Logistic regression, a one-hidden-layer multilayer perceptron, and a two-qubit variational quantum classifier with circuit depths 1 and 2 are evaluated on synthetic XOR datasets with varying Gaussian noise and sample sizes using accuracy and binary cross-entropy.   Performance is determined primarily by model expressivity. Logistic regression and the depth-1 quantum circuit fail to represent XOR reliably, whereas the multilayer perceptron and the depth-2 quantum circuit achieve perfect test accuracy under representative conditions. Robustness analyses across noise levels, dataset sizes, and random seeds confirm that circuit depth is decisive for quantum performance on this task. Despite matching accuracy, the multilayer perceptron achieves lower binary cross-entropy and substantially shorter training time. Hardware execution preserves the global XOR structure but introduces structured deviations in the decision function. Overall, deeper variational quantum classifiers can match classical neural networks in accuracy on low-dimensional XOR benchmarks, but no clear empirical advantage in robustness or efficiency is observed in the examined settings.",
+    "authors": [
+      "Miras Seilkhan",
+      "Adilbek Taizhanov"
+    ],
+    "published": "2026-02-27",
+    "categories": [
+      "cs.LG",
+      "quant-ph"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.24220v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.24220v1",
+    "fetched_at": "2026-03-02T08:52:31.322332",
+    "chinese_title": "经典与量子变分分类器在异或问题上的比较",
+    "chinese_summary": "该论文比较逻辑回归、单隐层MLP与深度1/2的两比特量子变分分类器在带高斯噪声的异或数据集上的性能，以准确率和二元交叉熵为评估指标；核心发现是模型表达能力主导性能（逻辑回归和深度1量子电路无法可靠表示异或，MLP和深度2量子电路可达完美测试准确率），但MLP训练更快、二元交叉熵更低，硬件执行量子模型存在结构偏差，未观察到量子模型的鲁棒性或效率优势。",
+    "tags": [
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "揭示模型表达能力（经典网络复杂度、量子电路深度）是异或问题分类性能的核心决定因素，明确逻辑回归和深度1量子电路无法可靠学习异或，而单隐层MLP和深度2量子电路可实现完美测试准确率",
+      "量化对比显示，虽准确率匹配，但单隐层MLP训练时间更短、二元交叉熵更低，硬件执行量子模型存在结构偏差，未发现量子模型在鲁棒性或效率上的优势"
+    ],
+    "processed_at": "2026-03-02T08:57:48.266861"
+  },
+  {
+    "id": "2602.24191v1",
+    "title": "Resilient Strategies for Stochastic Systems: How Much Does It Take to Break a Winning Strategy?",
+    "abstract": "We study the problem of resilient strategies in the presence of uncertainty. Resilient strategies enable an agent to make decisions that are robust against disturbances. In particular, we are interested in those disturbances that are able to flip a decision made by the agent. Such a disturbance may, for instance, occur when the intended action of the agent cannot be executed due to a malfunction of an actuator in the environment. In this work, we introduce the concept of resilience in the stochastic setting and present a comprehensive set of fundamental problems. Specifically, we discuss such problems for Markov decision processes with reachability and safety objectives, which also smoothly extend to stochastic games. To account for the stochastic setting, we provide various ways of aggregating the amounts of disturbances that may have occurred, for instance, in expectation or in the worst case. Moreover, to reason about infinite disturbances, we use quantitative measures, like their frequency of occurrence.",
+    "authors": [
+      "Kush Grover",
+      "Markel Zubia",
+      "Debraj Chakraborty",
+      "Muqsit Azeem",
+      "Nils Jansen",
+      "Jan Kretinsky"
+    ],
+    "published": "2026-02-27",
+    "categories": [
+      "cs.GT",
+      "cs.AI",
+      "cs.LO"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.24191v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.24191v1",
+    "fetched_at": "2026-03-02T08:52:31.322362",
+    "chinese_title": "随机系统的弹性策略：打破一个获胜策略需要多大代价？",
+    "chinese_summary": "本文研究随机环境下的弹性策略问题，引入随机设置下的弹性概念，针对马尔可夫决策过程的可达性与安全目标（可扩展至随机博弈），提出聚合扰动的多种方法（如期望、最坏情况），并用量化指标分析打破获胜策略的扰动代价。",
+    "tags": [
+      "Risk Management",
+      "Financial Agent",
+      "Algorithmic Trading"
+    ],
+    "key_contributions": [
+      "引入随机环境下的弹性策略概念，明确打破获胜策略所需扰动代价的分析问题",
+      "针对马尔可夫决策过程的可达性与安全目标（扩展至随机博弈），提出多种扰动聚合方法及无限扰动的量化分析指标"
+    ],
+    "processed_at": "2026-03-02T08:58:14.373668"
+  },
+  {
+    "id": "2602.24188v1",
+    "title": "MT-PingEval: Evaluating Multi-Turn Collaboration with Private Information Games",
+    "abstract": "We present a scalable methodology for evaluating language models in multi-turn interactions, using a suite of collaborative games that require effective communication about private information. This enables an interactive scaling analysis, in which a fixed token budget is divided over a variable number of turns. We find that in many cases, language models are unable to use interactive collaboration to improve over the non-interactive baseline scenario in which one agent attempts to summarize its information and the other agent immediately acts -- despite substantial headroom. This suggests that state-of-the-art models still suffer from significant weaknesses in planning and executing multi-turn collaborative conversations. We analyze the linguistic features of these dialogues, assessing the roles of sycophancy, information density, and discourse coherence. While there is no single linguistic explanation for the collaborative weaknesses of contemporary language models, we note that humans achieve comparable task success at superior token efficiency by producing dialogues that are more coherent than those produced by most language models. The proactive management of private information is a defining feature of real-world communication, and we hope that MT-PingEval will drive further work towards improving this capability.",
+    "authors": [
+      "Jacob Eisenstein",
+      "Fantine Huot",
+      "Adam Fisch",
+      "Jonathan Berant",
+      "Mirella Lapata"
+    ],
+    "published": "2026-02-27",
+    "categories": [
+      "cs.CL",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.24188v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.24188v1",
+    "fetched_at": "2026-03-02T08:52:31.322391",
+    "chinese_title": "MT-PingEval：基于私有信息博弈的多轮协作评估",
+    "chinese_summary": "论文提出基于私有信息协作游戏的可扩展多轮语言模型评估方法，可分析固定token预算下多轮交互效果；发现当前语言模型多轮协作常无法优于非交互基线，存在规划执行弱点，且人类对话更连贯且token效率更高。",
+    "tags": [
+      "LLM",
+      "NLP",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出基于私有信息协作游戏的可扩展多轮语言模型评估方法MT-PingEval",
+      "揭示当前语言模型多轮协作的规划执行弱点，并对比分析人类与模型对话的语言特征差异"
+    ],
+    "processed_at": "2026-03-02T08:58:32.319536"
+  },
+  {
+    "id": "2602.24142v1",
+    "title": "CoME: Empowering Channel-of-Mobile-Experts with Informative Hybrid-Capabilities Reasoning",
+    "abstract": "Mobile Agents can autonomously execute user instructions, which requires hybrid-capabilities reasoning, including screen summary, subtask planning, action decision and action function. However, existing agents struggle to achieve both decoupled enhancement and balanced integration of these capabilities. To address these challenges, we propose Channel-of-Mobile-Experts (CoME), a novel agent architecture consisting of four distinct experts, each aligned with a specific reasoning stage, CoME activates the corresponding expert to generate output tokens in each reasoning stage via output-oriented activation. To empower CoME with hybrid-capabilities reasoning, we introduce a progressive training strategy: Expert-FT enables decoupling and enhancement of different experts' capability; Router-FT aligns expert activation with the different reasoning stage; CoT-FT facilitates seamless collaboration and balanced optimization across multiple capabilities. To mitigate error propagation in hybrid-capabilities reasoning, we propose InfoGain-Driven DPO (Info-DPO), which uses information gain to evaluate the contribution of each intermediate step, thereby guiding CoME toward more informative reasoning. Comprehensive experiments show that CoME outperforms dense mobile agents and MoE methods on both AITZ and AMEX datasets.",
+    "authors": [
+      "Yuxuan Liu",
+      "Weikai Xu",
+      "Kun Huang",
+      "Changyu Chen",
+      "Jiankun Zhao",
+      "Pengzhi Gao",
+      "Wei Liu",
+      "Jian Luan",
+      "Shuo Shang",
+      "Bo Du",
+      "Ji-Rong Wen",
+      "Rui Yan"
+    ],
+    "published": "2026-02-27",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.24142v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.24142v1",
+    "fetched_at": "2026-03-02T08:52:31.322429",
+    "chinese_title": "CoME：通过信息性混合能力推理赋能移动专家通道",
+    "chinese_summary": "本文提出移动Agent架构CoME，包含四个对应推理阶段（屏幕总结、子任务规划等）的专家，通过输出导向激活调用；采用渐进训练策略实现能力解耦增强与协作优化，提出Info-DPO缓解混合推理错误传播；实验表明CoME在AITZ和AMEX数据集上优于现有密集型移动Agent和MoE方法。",
+    "tags": [
+      "LLM",
+      "Financial Agent",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出CoME四专家通道架构，通过输出导向激活实现移动Agent混合能力的解耦增强与平衡集成",
+      "提出Info-DPO和渐进训练策略，缓解混合推理错误传播并优化多能力协作"
+    ],
+    "processed_at": "2026-03-02T08:58:44.063512"
+  },
+  {
+    "id": "2602.24068v1",
+    "title": "A Novel Hierarchical Multi-Agent System for Payments Using LLMs",
+    "abstract": "Large language model (LLM) agents, such as OpenAI's Operator and Claude's Computer Use, can automate workflows but unable to handle payment tasks. Existing agentic solutions have gained significant attention; however, even the latest approaches face challenges in implementing end-to-end agentic payment workflows. To address this gap, this research proposes the Hierarchical Multi-Agent System for Payments (HMASP), which provides an end-to-end agentic method for completing payment workflows. The proposed HMASP leverages either open-weight or proprietary LLMs and employs a modular architecture consisting of the Conversational Payment Agent (CPA - first agent level), Supervisor agents (second agent level), Routing agents (third agent level), and the Process summary agent (fourth agent level). The CPA serves as the central entry point, handling all external requests and coordinating subsequent tasks across hierarchical levels. HMASP incorporates architectural patterns that enable modular task execution across agents and levels for payment operations, including shared state variables, decoupled message states, and structured handoff protocols that facilitate coordination across agents and workflows. Experimental results demonstrate the feasibility of the proposed HMASP. To our knowledge, HMASP is the first LLM-based multi-agent system to implement end-to-end agentic payment workflows. This work lays a foundation for extending agentic capabilities into the payment domain.",
+    "authors": [
+      "Joon Kiat Chua",
+      "Donghao Huang",
+      "Zhaoxia Wang"
+    ],
+    "published": "2026-02-27",
+    "categories": [
+      "cs.MA",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.24068v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.24068v1",
+    "fetched_at": "2026-03-02T08:52:31.322451",
+    "chinese_title": "一种使用大语言模型的支付分层多智能体系统",
+    "chinese_summary": "现有LLM代理无法处理支付任务，本文提出分层多智能体支付系统HMASP，包含对话支付代理、监督代理等四个层级，采用模块化架构实现端到端支付工作流；实验验证其可行性，是首个基于LLM的端到端支付多智能体系统，为支付领域拓展代理能力奠定基础。",
+    "tags": [
+      "LLM",
+      "Financial Agent"
+    ],
+    "key_contributions": [
+      "提出HMASP分层多智能体系统，通过模块化架构实现端到端支付工作流",
+      "实验验证可行性，是首个基于LLM的端到端支付多智能体系统，拓展LLM代理在支付领域的应用"
+    ],
+    "processed_at": "2026-03-02T08:58:57.144280"
+  },
+  {
+    "id": "2602.24044v1",
+    "title": "Data Driven Optimization of GPU efficiency for Distributed LLM Adapter Serving",
+    "abstract": "Large Language Model (LLM) adapters enable low-cost model specialization, but introduce complex caching and scheduling challenges in distributed serving systems where hundreds of adapters must be hosted concurrently. While prior work has largely focused on latency minimization, resource efficiency through throughput maximization remains underexplored. This paper presents a data-driven pipeline that, for a given workload, computes an adapter placement that serves the workload with the minimum number of GPUs while avoiding request starvation and GPU memory errors. To that end, the approach identifies the maximum feasible throughput attainable on each GPU by leveraging accurate performance predictions learned from real serving behavior. The proposed pipeline integrates three components: (i) a Digital Twin (DT) tailored to LLM-adapter serving, (ii) a distilled machine learning (ML) model trained on DT-generated data, and (iii) a greedy placement algorithm that exploits ML-based performance estimates to maximize GPU efficiency. The DT emulates real system dynamics with high fidelity, achieving below 5% throughput estimation error while executing up to 90 times faster than full LLM benchmarking across both predictable and unpredictable workloads. The learned ML models further accelerate performance estimation with marginal accuracy degradation, enabling scalable optimization. Experimental results demonstrate that the pipeline substantially improves GPU efficiency by reducing the number of GPUs required to sustain target workloads. Beyond GPU efficiency, the pipeline can be adapted to alternative objectives, such as latency minimization, highlighting its versatility for future large-scale LLM serving infrastructures.",
+    "authors": [
+      "Ferran Agullo",
+      "Joan Oliveras",
+      "Chen Wang",
+      "Alberto Gutierrez-Torre",
+      "Olivier Tardieu",
+      "Alaa Youssef",
+      "Jordi Torres",
+      "Josep Ll. Berral"
+    ],
+    "published": "2026-02-27",
+    "categories": [
+      "cs.DC",
+      "cs.AI",
+      "cs.CL",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.24044v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.24044v1",
+    "fetched_at": "2026-03-02T08:52:31.322481",
+    "chinese_title": "面向分布式大语言模型适配器服务的GPU效率数据驱动优化",
+    "chinese_summary": "该论文针对分布式大语言模型（LLM）适配器服务中GPU效率优化不足的问题，提出数据驱动 pipeline，包含高精度数字孪生（DT）、蒸馏ML模型及贪心放置算法，可最小化GPU数量并避免请求饥饿与内存错误，显著提升GPU效率。",
+    "tags": [
+      "LLM",
+      "Deep Learning",
+      "Transformer"
+    ],
+    "key_contributions": [
+      "提出高精度LLM适配器服务数字孪生（DT），吞吐量估计误差<5%且仿真速度比全基准快90倍，支持复杂系统动态仿真",
+      "构建数据驱动优化 pipeline，通过DT生成数据训练蒸馏ML模型加速性能估计，结合贪心算法最小化GPU数量并保障服务稳定性"
+    ],
+    "processed_at": "2026-03-02T08:59:15.648467"
+  },
+  {
+    "id": "2602.24009v1",
+    "title": "Jailbreak Foundry: From Papers to Runnable Attacks for Reproducible Benchmarking",
+    "abstract": "Jailbreak techniques for large language models (LLMs) evolve faster than benchmarks, making robustness estimates stale and difficult to compare across papers due to drift in datasets, harnesses, and judging protocols. We introduce JAILBREAK FOUNDRY (JBF), a system that addresses this gap via a multi-agent workflow to translate jailbreak papers into executable modules for immediate evaluation within a unified harness. JBF features three core components: (i) JBF-LIB for shared contracts and reusable utilities; (ii) JBF-FORGE for the multi-agent paper-to-module translation; and (iii) JBF-EVAL for standardizing evaluations. Across 30 reproduced attacks, JBF achieves high fidelity with a mean (reproduced-reported) attack success rate (ASR) deviation of +0.26 percentage points. By leveraging shared infrastructure, JBF reduces attack-specific implementation code by nearly half relative to original repositories and achieves an 82.5% mean reused-code ratio. This system enables a standardized AdvBench evaluation of all 30 attacks across 10 victim models using a consistent GPT-4o judge. By automating both attack integration and standardized evaluation, JBF offers a scalable solution for creating living benchmarks that keep pace with the rapidly shifting security landscape.",
+    "authors": [
+      "Zhicheng Fang",
+      "Jingjie Zheng",
+      "Chenxu Fu",
+      "Wei Xu"
+    ],
+    "published": "2026-02-27",
+    "categories": [
+      "cs.CR",
+      "cs.AI",
+      "cs.CL",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.24009v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.24009v1",
+    "fetched_at": "2026-03-02T08:52:31.322504",
+    "chinese_title": "越狱铸造厂：从论文到可运行攻击以实现可复现基准测试",
+    "chinese_summary": "论文针对大语言模型（LLM）越狱技术基准测试滞后的问题，提出Jailbreak Foundry（JBF）系统，通过多智能体工作流将越狱论文转化为可执行模块，包含共享库、论文转模块锻造器和标准化评估组件；该系统实现30种攻击的高保真复现（攻击成功率偏差仅+0.26个百分点），减少近半攻击特定代码并提升复用率，还能对10个受害模型进行标准化评估，为动态安全基准提供可扩展方案。",
+    "tags": [
+      "LLM",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出JBF系统，通过多智能体工作流将越狱论文转化为可执行模块，解决LLM越狱基准测试滞后问题",
+      "实现高保真攻击复现与代码复用，支持标准化评估，为动态安全基准提供可扩展方案"
+    ],
+    "processed_at": "2026-03-02T08:59:28.052541"
+  },
+  {
+    "id": "2602.23866v1",
+    "title": "SWE-rebench V2: Language-Agnostic SWE Task Collection at Scale",
+    "abstract": "Software engineering agents (SWE) are improving rapidly, with recent gains largely driven by reinforcement learning (RL). However, RL training is constrained by the scarcity of large-scale task collections with reproducible execution environments and reliable test suites. Although a growing number of benchmarks have emerged, datasets suitable for training remain limited in scale and diversity or often target a limited set of high-resource language ecosystems. We introduce SWE-rebench V2, a language-agnostic automated pipeline for harvesting executable real-world SWE tasks and constructing RL training environments at scale. The pipeline synthesizes repository-specific installation and test procedures via an interactive setup agent, and filters unsound instances using an ensemble of LLM judges, validated against human-verified SWE-bench annotations. Using this pipeline, we construct a dataset of 32,000+ tasks spanning 20 languages and 3,600+ repositories, with pre-built images for reproducible execution. To further scale training data, we additionally release 120,000+ tasks with installation instructions, fail-to-pass tests and rich metadata, where the problem statement is generated based on the original pull request description. We validate the collected instances through a diagnostic study that covers a subset of tasks in five programming languages across seven popular models, and provide instance-level metadata that flags common confounders such as overly restrictive tests and underspecified descriptions. We release the datasets, the collection and execution code, and associated artifacts to enable large-scale training of SWE agents across diverse languages and repositories.",
+    "authors": [
+      "Ibragim Badertdinov",
+      "Maksim Nekrashevich",
+      "Anton Shevtsov",
+      "Alexander Golubev"
+    ],
+    "published": "2026-02-27",
+    "categories": [
+      "cs.SE",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.23866v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.23866v1",
+    "fetched_at": "2026-03-02T08:52:31.322527",
+    "chinese_title": "SWE-rebench V2：大规模语言无关的软件工程任务集合",
+    "chinese_summary": "论文针对强化学习训练中大规模可执行软件工程任务集合稀缺的问题，提出语言无关的自动化 pipeline 来采集真实任务并构建训练环境，生成了跨20种语言的32000+任务数据集及12万+带安装说明等的任务，还通过诊断研究验证并标记常见混淆因素。",
+    "tags": [
+      "LLM",
+      "Reinforcement Learning",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出语言无关的自动化 pipeline，可大规模采集可执行真实软件工程任务并构建RL训练环境",
+      "构建了跨20种语言的32000+任务数据集（含预构建镜像）及12万+带丰富元数据的任务"
+    ],
+    "processed_at": "2026-03-02T08:59:37.518913"
+  },
+  {
+    "id": "2602.23816v1",
+    "title": "Learning to maintain safety through expert demonstrations in settings with unknown constraints: A Q-learning perspective",
+    "abstract": "Given a set of trajectories demonstrating the execution of a task safely in a constrained MDP with observable rewards but with unknown constraints and non-observable costs, we aim to find a policy that maximizes the likelihood of demonstrated trajectories trading the balance between being conservative and increasing significantly the likelihood of high-rewarding trajectories but with potentially unsafe steps. Having these objectives, we aim towards learning a policy that maximizes the probability of the most $promising$ trajectories with respect to the demonstrations. In so doing, we formulate the ``promise\" of individual state-action pairs in terms of $Q$ values, which depend on task-specific rewards as well as on the assessment of states' safety, mixing expectations in terms of rewards and safety. This entails a safe Q-learning perspective of the inverse learning problem under constraints: The devised Safe $Q$ Inverse Constrained Reinforcement Learning (SafeQIL) algorithm is compared to state-of-the art inverse constraint reinforcement learning algorithms to a set of challenging benchmark tasks, showing its merits.",
+    "authors": [
+      "George Papadopoulos",
+      "George A. Vouros"
+    ],
+    "published": "2026-02-27",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.23816v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.23816v1",
+    "fetched_at": "2026-03-02T08:52:31.322546",
+    "chinese_title": "基于专家演示学习未知约束场景下的安全维护：Q学习视角",
+    "chinese_summary": "针对含未知约束、不可观测成本但可观测奖励的约束马尔可夫决策过程（MDP），论文通过专家演示轨迹学习平衡保守性与高奖励（潜在不安全）的策略；提出SafeQ Inverse Constrained Reinforcement Learning（SafeQIL）算法，用结合任务奖励与安全评估的Q值衡量状态-动作对的“前景”，在基准任务中优于现有逆约束强化学习算法。",
+    "tags": [
+      "Reinforcement Learning",
+      "Risk Management",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出SafeQIL算法，基于专家演示解决未知约束、不可观测成本的约束MDP下安全策略学习问题，通过融合奖励与安全的Q值量化状态-动作对前景",
+      "实现保守性与高奖励（潜在不安全）的平衡，在基准任务中验证算法优于现有逆约束强化学习算法"
+    ],
+    "processed_at": "2026-03-02T08:59:54.130361"
+  },
+  {
+    "id": "2602.23798v1",
+    "title": "MPU: Towards Secure and Privacy-Preserving Knowledge Unlearning for Large Language Models",
+    "abstract": "Machine unlearning for large language models often faces a privacy dilemma in which strict constraints prohibit sharing either the server's parameters or the client's forget set. To address this dual non-disclosure constraint, we propose MPU, an algorithm-agnostic privacy-preserving Multiple Perturbed Copies Unlearning framework that primarily introduces two server-side modules: Pre-Process for randomized copy generation and Post-Process for update aggregation. In Pre-Process, the server distributes multiple perturbed and reparameterized model instances, allowing the client to execute unlearning locally on its private forget set without accessing the server's exact original parameters. After local unlearning, the server performs Post-Process by inverting the reparameterization and aggregating updates with a harmonic denoising procedure to alleviate the impact of perturbation. Experiments with seven unlearning algorithms show that MPU achieves comparable unlearning performance to noise-free baselines, with most algorithms' average degradation well below 1% under 10% noise, and can even outperform the noise-free baseline for some algorithms under 1% noise. Code is available at https://github.com/Tristan-SHU/MPU.",
+    "authors": [
+      "Tiantong Wang",
+      "Xinyu Yan",
+      "Tiantong Wu",
+      "Yurong Hao",
+      "Yong Jiang",
+      "Fei Huang",
+      "Wei Yang Bryan Lim"
+    ],
+    "published": "2026-02-27",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CR",
+      "cs.DC"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.23798v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.23798v1",
+    "fetched_at": "2026-03-02T08:52:31.322574",
+    "chinese_title": "MPU：面向大语言模型的安全隐私保护知识遗忘框架",
+    "chinese_summary": "针对大语言模型知识遗忘中无法共享服务器参数与客户端遗忘集的隐私困境，提出算法无关的隐私保护框架MPU，包含服务器端预处理（生成扰动重参数化模型副本供客户端本地遗忘）和后处理（逆重参数化+谐波去噪聚合更新）；实验验证其与无噪声基线性能相当，部分算法在低噪声下表现更优。",
+    "tags": [
+      "LLM",
+      "Deep Learning",
+      "Transformer"
+    ],
+    "key_contributions": [
+      "提出算法无关的隐私保护知识遗忘框架MPU，解决大模型遗忘时双非披露约束问题",
+      "设计预处理（扰动重参数化模型副本）和后处理（逆重参数化+谐波去噪聚合）模块，实验证明性能接近/优于无噪声基线"
+    ],
+    "processed_at": "2026-03-02T09:00:08.154327"
+  },
+  {
+    "id": "2602.23722v1",
+    "title": "SLA-Aware Distributed LLM Inference Across Device-RAN-Cloud",
+    "abstract": "Embodied AI requires sub-second inference near the Radio Access Network (RAN), but deployments span heterogeneous tiers (on-device, RAN-edge, cloud) and must not disrupt real-time baseband processing. We report measurements from a 5G Standalone (SA) AI-RAN testbed using a fixed baseline policy for repeatability. The setup includes an on-device tier, a three-node RAN-edge cluster co-hosting a containerized 5G RAN, and a cloud tier. We find that on-device execution remains multi-second and fails to meet sub-second budgets. At the RAN edge, SLA feasibility is primarily determined by model variant choice: quantized models concentrate below 0.5\\,s, while unquantized and some larger quantized models incur deadline misses due to stalls and queuing. In the cloud tier, meeting a 0.5\\,s deadline is challenging on the measured WAN path (up to 32.9\\% of requests complete within 0.5\\,s), but all evaluated variants meet a 1.0\\,s deadline (100\\% within 1.0\\,s). Under saturated downlink traffic and up to $N{=}20$ concurrent inference clients, Multi-Instance GPU (MIG) isolation preserves baseband timing-health proxies, supporting safe co-location under fixed partitioning.",
+    "authors": [
+      "Hariz Yet",
+      "Nguyen Thanh Tam",
+      "Mao V. Ngo",
+      "Lim Yi Shen",
+      "Lin Wei",
+      "Jihong Park",
+      "Binbin Chen",
+      "Tony Q. S. Quek"
+    ],
+    "published": "2026-02-27",
+    "categories": [
+      "cs.NI",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.23722v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.23722v1",
+    "fetched_at": "2026-03-02T08:52:31.322604",
+    "chinese_title": "面向SLA感知的跨设备-RAN-云分布式大语言模型推理",
+    "chinese_summary": "论文基于5G独立（SA）AI-RAN测试床，测量跨设备、RAN边缘、云三层的LLM推理性能，发现设备端推理超秒级不满足子秒要求，RAN边缘量化模型多低于0.5s但非量化等存在超时，云端1.0s deadline可100%达成；同时验证MIG隔离支持RAN基带与推理安全共存。",
+    "tags": [
+      "LLM",
+      "Deep Learning",
+      "Transformer"
+    ],
+    "key_contributions": [
+      "基于5G SA AI-RAN测试床，量化分析跨设备-RAN边缘-云三层LLM推理的SLA满足特征",
+      "揭示模型量化对RAN边缘推理SLA的关键影响，验证MIG隔离支持RAN与LLM推理安全共存"
+    ],
+    "processed_at": "2026-03-02T09:00:18.476794"
+  },
+  {
+    "id": "2602.23720v1",
+    "title": "The Auton Agentic AI Framework",
+    "abstract": "The field of Artificial Intelligence is undergoing a transition from Generative AI -- probabilistic generation of text and images -- to Agentic AI, in which autonomous systems execute actions within external environments on behalf of users. This transition exposes a fundamental architectural mismatch: Large Language Models (LLMs) produce stochastic, unstructured outputs, whereas the backend infrastructure they must control -- databases, APIs, cloud services -- requires deterministic, schema-conformant inputs. The present paper describes the Auton Agentic AI Framework, a principled architecture for standardizing the creation, execution, and governance of autonomous agent systems. The framework is organized around a strict separation between the Cognitive Blueprint, a declarative, language-agnostic specification of agent identity and capabilities, and the Runtime Engine, the platform-specific execution substrate that instantiates and runs the agent. This separation enables cross-language portability, formal auditability, and modular tool integration via the Model Context Protocol (MCP). The paper formalizes the agent execution model as an augmented Partially Observable Markov Decision Process (POMDP) with a latent reasoning space, introduces a hierarchical memory consolidation architecture inspired by biological episodic memory systems, defines a constraint manifold formalism for safety enforcement via policy projection rather than post-hoc filtering, presents a three-level self-evolution framework spanning in-context adaptation through reinforcement learning, and describes runtime optimizations -- including parallel graph execution, speculative inference, and dynamic context pruning -- that reduce end-to-end latency for multi-step agent workflows.",
+    "authors": [
+      "Sheng Cao",
+      "Zhao Chang",
+      "Chang Li",
+      "Hannan Li",
+      "Liyao Fu",
+      "Ji Tang"
+    ],
+    "published": "2026-02-27",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.23720v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.23720v1",
+    "fetched_at": "2026-03-02T08:52:31.322630",
+    "chinese_title": "Auton智能体AI框架",
+    "chinese_summary": "论文针对AI从生成式向智能体式转型中LLM随机非结构化输出与后端基础设施所需确定结构化输入的架构不匹配问题，提出Auton智能体AI框架，通过认知蓝图（声明式、语言无关的智能体规范）与运行时引擎（平台执行层）分离实现跨语言可移植、形式化可审计等特性，并引入增强型POMDP执行模型、生物启发记忆架构及约束流形安全机制。",
+    "tags": [
+      "LLM",
+      "Financial Agent",
+      "Reinforcement Learning",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出Auton智能体AI框架，通过认知蓝图与运行时引擎的严格分离解决LLM输出与后端基础设施需求的架构不匹配问题",
+      "引入增强型POMDP执行模型、生物启发的分层记忆整合架构及约束流形安全机制，定义Model Context Protocol实现智能体跨语言可移植、形式化可审计及模块化工具集成"
+    ],
+    "processed_at": "2026-03-02T09:00:34.757156"
+  },
+  {
+    "id": "2602.23701v1",
+    "title": "From Flat Logs to Causal Graphs: Hierarchical Failure Attribution for LLM-based Multi-Agent Systems",
+    "abstract": "LLM-powered Multi-Agent Systems (MAS) have demonstrated remarkable capabilities in complex domains but suffer from inherent fragility and opaque failure mechanisms. Existing failure attribution methods, whether relying on direct prompting, costly replays, or supervised fine-tuning, typically treat execution logs as flat sequences. This linear perspective fails to disentangle the intricate causal links inherent to MAS, leading to weak observability and ambiguous responsibility boundaries. To address these challenges, we propose CHIEF, a novel framework that transforms chaotic trajectories into a structured hierarchical causal graph. It then employs hierarchical oracle-guided backtracking to efficiently prune the search space via sybthesized virtual oracles. Finally, it implements counterfactual attribution via a progressive causal screening strategy to rigorously distinguish true root causes from propagated symptoms. Experiments on Who&When benchmark show that CHIEF outperforms eight strong and state-of-the-art baselines on both agent- and step-level accuracy. Ablation studies further confirm the critical role of each proposed module.",
+    "authors": [
+      "Yawen Wang",
+      "Wenjie Wu",
+      "Junjie Wang",
+      "Qing Wang"
+    ],
+    "published": "2026-02-27",
+    "categories": [
+      "cs.AI",
+      "cs.SE"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.23701v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.23701v1",
+    "fetched_at": "2026-03-02T08:52:31.322653",
+    "chinese_title": "从扁平日志到因果图：基于大语言模型的多智能体系统层次化故障归因",
+    "chinese_summary": "针对基于大语言模型（LLM）的多智能体系统（MAS）故障归因中日志扁平处理导致因果关系不清的问题，提出CHIEF框架：先将执行轨迹转化为结构化层次因果图，再通过层次化oracle引导回溯与渐进因果筛选策略高效区分根因与传播症状；实验在Who&When基准上优于8个强基线，消融研究验证各模块关键作用。",
+    "tags": [
+      "LLM",
+      "Graph Neural Network",
+      "Benchmark",
+      "Execution"
+    ],
+    "key_contributions": [
+      "提出CHIEF框架，将扁平执行日志转化为结构化层次因果图，解决MAS故障归因中因果关系难以理清的问题",
+      "设计层次化oracle引导回溯与渐进因果筛选策略，高效区分根因与传播症状，实验表现优于多个强基线"
+    ],
+    "processed_at": "2026-03-02T09:00:56.598740"
+  },
+  {
+    "id": "2602.23679v1",
+    "title": "The Compulsory Imaginary: AGI and Corporate Authority",
+    "abstract": "This paper argues that the two leading AGI firms -- OpenAI and Anthropic -- construct sociotechnical imaginaries through a structurally consistent rhetorical strategy, despite meaningful differences in execution. Drawing on Jasanoff (2015)'s framework of sociotechnical imaginaries, the paper analyzes two essays published in late 2024: Sam Altman's \"The Intelligence Age\" and Dario Amodei's \"Machines of Loving Grace.\" Close comparative reading identifies four shared rhetorical operations: the self-exemption move, which disavows prophetic authority while exercising it; teleological naturalization, which embeds AGI's arrival in narratives of historical inevitability; qualified acknowledgment, which absorbs concessions to risk into an optimistic frame; and implicit indispensability, which positions each firm as central to the imagined future without naming it as a commercial actor. That two competing institutions with different cultures, risk philosophies, and leaders with notably different public personae converge on the same rhetorical architecture suggests the imaginary reflects not only firm-level strategy but the institutional position these firms occupy. The paper extends the sociotechnical imaginaries framework from nation-states to private firms at the frontier of transformative technology development, identifies the discursive mechanism through which corporate authority over technological futures is projected and stabilized, and demonstrates that this mechanism is at minimum structural rather than idiosyncratic. The findings raise the question of what institutional arrangements would make that authority contestable from outside the firms that produce it.",
+    "authors": [
+      "Emilio Barkett"
+    ],
+    "published": "2026-02-27",
+    "categories": [
+      "cs.HC",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2602.23679v1",
+    "arxiv_url": "https://arxiv.org/abs/2602.23679v1",
+    "fetched_at": "2026-03-02T08:52:31.322671",
+    "chinese_title": "强制想象：通用人工智能与企业权威",
+    "chinese_summary": "本文运用Jasanoff（2015）的社会技术想象框架，分析OpenAI与Anthropic两家AGI企业领导者2024年末的两篇文章，识别出自我豁免、目的论自然化等四个共同修辞操作；研究发现这些策略既反映企业战略，更体现其机构地位，拓展了该框架至前沿科技私营企业的适用范围。",
+    "tags": [
+      "LLM",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "识别OpenAI与Anthropic在AGI叙事中共享的四个核心修辞操作",
+      "将社会技术想象框架从民族国家拓展至前沿科技私营企业，揭示企业权威投射的话语机制"
+    ],
+    "processed_at": "2026-03-02T09:01:08.744933"
+  }
+]
