@@ -1,0 +1,708 @@
+[
+  {
+    "id": "2603.02187v1",
+    "title": "Does the Market Anticipate? Can it? Should it?",
+    "abstract": "We explore a nuance to 'no arbitrage' in relation to 'informational efficiency': acting immediately on an arbitrage is sometimes suboptimal; in such cases optimised trading can suppress the anticipation of predictable risk-outcomes, thereby creating an apparent Status Quo Bias, with Momentum and Low-Risk effects. This is shown in continuous time under model- or event-risk, where, unlike existing approaches, pre-horizon risk-resolution and Risk-Neutral Equivalent pricing are allowed, with the technical challenges overcome through results from the 'weak viability' and 'side-inside information' literature. The 'tension' between 'no arbitrage', 'informational efficiency' and 'risk-anticipation' is thus exposed and treated in a practically relevant setting.",
+    "authors": [
+      "Kangda Ken Wren"
+    ],
+    "published": "2026-03-02",
+    "categories": [
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.02187v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.02187v1",
+    "fetched_at": "2026-03-03T08:48:50.719624"
+  },
+  {
+    "id": "2603.01821v1",
+    "title": "Asymptotics of Ruin Probabilities in a Subordinated Cramér-Lundberg Model",
+    "abstract": "We study a dynamic model of a non-life insurance portfolio. The foundation of the model is a compound Poisson process that represents the claims side of the insurer. To introduce clusters of claims appearing, e.g. with catastrophic events, this process is time-changed by a Lévy subordinator. The subordinator is chosen so that it evolves, on average, at the same speed as calendar time, creating a trade-off between intensity and severity. We show that such a transformation always has a negative impact on the probability of ruin. Despite the expected total claim amount remaining invariant, it turns out that the probability of ruin as a function of the initial capital falls arbitrarily slowly depending on the choice of the subordinator.",
+    "authors": [
+      "Jonathan Klinge",
+      "Maren Diane Schmeck"
+    ],
+    "published": "2026-03-02",
+    "categories": [
+      "q-fin.RM",
+      "math.PR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.01821v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.01821v1",
+    "fetched_at": "2026-03-03T08:48:50.719660"
+  },
+  {
+    "id": "2603.01820v1",
+    "title": "Deep Learning for Financial Time Series: A Large-Scale Benchmark of Risk-Adjusted Performance",
+    "abstract": "We present a large scale benchmark of modern deep learning architectures for a financial time series prediction and position sizing task, with a primary focus on Sharpe ratio optimization. Evaluating linear models, recurrent networks, transformer based architectures, state space models, and recent sequence representation approaches, we assess out of sample performance on a daily futures dataset spanning commodities, equity indices, bonds, and FX spanning 2010 to 2025. Our evaluation goes beyond average returns and includes statistical significance, downside and tail risk measures, breakeven transaction cost analysis, robustness to random seed selection, and computational efficiency. We find that models explicitly designed to learn rich temporal representations consistently outperform linear benchmarks and generic deep learning models, which often lead the ranking in standard time series benchmarks. Hybrid models such as VSN with LSTM, a combination of Variable Selection Networks (VSN) and LSTMs, achieves the highest overall Sharpe ratio, while VSN with xLSTM and LSTM with PatchTST exhibit superior downside adjusted characteristics. xLSTM demonstrates the largest breakeven transaction cost buffer, indicating improved robustness to trading frictions.",
+    "authors": [
+      "Adir Saly-Kaufmann",
+      "Kieran Wood",
+      "Jan Peter-Calliess",
+      "Stefan Zohren"
+    ],
+    "published": "2026-03-02",
+    "categories": [
+      "q-fin.TR",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.01820v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.01820v1",
+    "fetched_at": "2026-03-03T08:48:50.719686"
+  },
+  {
+    "id": "2603.01434v1",
+    "title": "A Laplace-based perspective on conditional mean risk sharing",
+    "abstract": "The conditional mean risk-sharing (CMRS) rule is an important tool for distributing aggregate losses across individual risks, but its implementation in continuous multivariate models typically requires complicated multidimensional integrals. We develop a framework to compute CMRS allocations from the joint Laplace--Stieltjes transform of the risk vector. The LSTs of the allocation measures $ν_i(B)=\\mathbb{E}[X_i\\boldsymbol{1}_{\\{S\\in B\\}}]$ are expressed as partial derivatives of the joint LST evaluated on the diagonal $t_1=\\cdots=t_n$. When densities exist, this yields one-dimensional Laplace inversions for $f_S$ and $ξ_i$, and hence $h_i(s)=ξ_i(s)/f_S(s)$ on the absolutely continuous part, providing closed-form or semi-analytic solutions for a broad class of distributions. We also develop numerical inversion methods for cases where analytic inversion is unavailable. We introduce an exponential tilting procedure to stabilize numerical inversion in low-probability aggregate events. We provide several examples to illustrate the approach, including in some high-dimensional settings where existing approaches are infeasible.",
+    "authors": [
+      "Christopher Blier-Wong"
+    ],
+    "published": "2026-03-02",
+    "categories": [
+      "math.ST",
+      "q-fin.RM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.01434v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.01434v1",
+    "fetched_at": "2026-03-03T08:48:50.719737"
+  },
+  {
+    "id": "2603.01344v1",
+    "title": "Pricing and hedging for liquidity provision in Constant Function Market Making",
+    "abstract": "This paper develops a robust mathematical framework for Constant Function Market Makers (CFMMs) by transitioning from traditional token reserve analyses to a coordinate system defined by price and intrinsic liquidity. We establish a canonical parametrization of the bonding curve that ensures dimensional consistency across diverse trading functions, such as those employed by Uniswap and Balancer, and demonstrate that asset reserves and value functions exhibit a linear dependence on this intrinsic liquidity. This linear structure facilitates a streamlined approach to arbitrage-free pricing, delta hedging, and systematic risk management. By leveraging the Carr-Madan spanning formula, we characterize Impermanent Loss (IL) as a weighted strip of vanilla options, thereby defining a fine-grained implied volatility structure for liquidity profiles. Furthermore, we provide a path-dependent analysis of IL using the last-passage time. Empirical results from Uniswap v3 ETH/USDC pools and Deribit option markets confirm a volatility smile consistent with crypto-asset dynamics, validating the framework's utility in characterizing the risk-neutral fair value of liquidity provision.",
+    "authors": [
+      "Jimmy Risk",
+      "Shen-Ning Tung",
+      "Tai-Ho Wang"
+    ],
+    "published": "2026-03-02",
+    "categories": [
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.01344v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.01344v1",
+    "fetched_at": "2026-03-03T08:48:50.719758"
+  },
+  {
+    "id": "2603.01298v1",
+    "title": "Single-Asset Adaptive Leveraged Volatility Control",
+    "abstract": "This paper introduces methodologies for constructing an index composed of a risky asset and a risk-free asset that achieves a fixed target volatility. We propose a simple proportional-control-based approach for setting the index weights, and we demonstrate in simulation that this method is more effective at consistently achieving the target volatility than an open-loop approach. We additionally present a modification to our proportional control approach that reduces index drawdowns in simulation.",
+    "authors": [
+      "Nikhil Devanathan",
+      "Dylan Rueter",
+      "Stephen Boyd",
+      "Emmanuel Candès",
+      "Trevor Hastie",
+      "Mykel J. Kochenderfer",
+      "Arpit Apoorv",
+      "David Soronow",
+      "Igor Zamkovsky"
+    ],
+    "published": "2026-03-01",
+    "categories": [
+      "q-fin.PM",
+      "math.OC"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.01298v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.01298v1",
+    "fetched_at": "2026-03-03T08:48:50.719788"
+  },
+  {
+    "id": "2603.01232v1",
+    "title": "Submodular risk measures",
+    "abstract": "We study submodularity for law-invariant functionals, with special attention to convex risk measures. Expected losses are modular, and certainty equivalents are submodular if and only if the underlying loss function is convex. Law-invariant coherent risk measures are submodular if and only if they are coherent distortion risk measures, which include the class of Expected Shortfall (ES). We proceed to consider four classes of convex risk measures with explicit formulas. For shortfall risk measures, we give a complete characterization through an inequality on the Arrow--Pratt measure of risk aversion. The optimized certainty equivalents are always submodular, whereas for the adjusted Expected Shortfall (AES) with a nonconvex penalty function, submodularity forces reduction to a standard ES. Within a subclass of monotone mean-deviation risk measures, submodularity can hold only in coherent distortion cases. In an empirical study of daily US equity returns using rolling historical estimation, no ES submodularity violations are observed, as expected from the exact ES structure of the estimator; VaR shows persistent violations linked to market stress, and AES shows a small percentage of violations.",
+    "authors": [
+      "Ruodu Wang",
+      "Jingcheng Yu"
+    ],
+    "published": "2026-03-01",
+    "categories": [
+      "q-fin.RM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.01232v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.01232v1",
+    "fetched_at": "2026-03-03T08:48:50.719806"
+  },
+  {
+    "id": "2603.01157v1",
+    "title": "Adaptive Window Selection for Financial Risk Forecasting",
+    "abstract": "Risk forecasts in financial regulation and internal management are calculated through historical data. The unknown structural changes of financial data poses a substantial challenge in selecting an appropriate look-back window for risk modeling and forecasting. We develop a data-driven online learning method, called the bootstrap-based adaptive window selection (BAWS), that adaptively determines the window size in a sequential manner. A central component of BAWS is to compare the realized scores against a data-dependent threshold, which is evaluate based on an idea of bootstrap. The proposed method is applicable to the forecast of risk measures that are elicitable individually or jointly, such as the Value-at-Risk (VaR) and the pair of the VaR and the corresponding Expected Shortfall. Through simulation studies and empirical analyses, we demonstrate that BAWS generally outperforms the standard rolling window approach and the recently developed method of stability-based adaptive window selection, especially when there are structural changes in the data-generating process.",
+    "authors": [
+      "Yinhuan Li",
+      "Chenxin Lyu",
+      "Ruodu Wang"
+    ],
+    "published": "2026-03-01",
+    "categories": [
+      "q-fin.RM",
+      "stat.ML"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.01157v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.01157v1",
+    "fetched_at": "2026-03-03T08:48:50.719825"
+  },
+  {
+    "id": "2603.01109v1",
+    "title": "A stochastic correlation extension of the Vasicek credit risk model",
+    "abstract": "In the Vasicek credit portfolio model, tail risk is driven primarily by the asset-correlation parameter, yet empirically is subject to correlation risk. We propose a stochastic correlation extension of the Vasicek framework in which the correlation state evolves as a diffusion on the circle. This representation accommodates both non-mean-reverting and mean-reverting dependence regimes via circular Brownian motion and von Mises process, while retaining tractable transition densities. Conditionally on a fixed correlation state, we derive closed or semi-closed form expressions for the joint distribution of two assets, the joint first-passage (default) time distribution, and the joint survival probability. A simulation study quantifies how correlation volatility and persistence reshape joint default-at-horizon, survival, and joint barrier-crossing probabilities beyond marginal volatility effects. An empirical illustration using U.S. bank charge-off rates demonstrates economically interpretable time-variation in a dependence index and shows how inferred stochastic dependence translates into materially different joint tail-event probabilities. Overall, circular diffusion models provide a parsimonious and operationally tractable route to incorporating correlation risk into Vasicek structural credit calculations.",
+    "authors": [
+      "Dhruv Bansal",
+      "Mayank Goud",
+      "Sourav Majumdar"
+    ],
+    "published": "2026-03-01",
+    "categories": [
+      "q-fin.RM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.01109v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.01109v1",
+    "fetched_at": "2026-03-03T08:48:50.719844"
+  },
+  {
+    "id": "2603.00738v1",
+    "title": "Exploratory Randomization for Discrete-Time Risk-Sensitive Benchmarked Investment Management with Reinforcement Learning",
+    "abstract": "This paper bridges reinforcement learning (RL) and risk-sensitive stochastic control by introducing a tractable exploration mechanism for policy search in risk-sensitive portfolio management, with known and unknown model parameters, that yields an endogenous relative-entropy regularization. We construct a discrete-time risk-sensitive benchmarked investment model. This model combines a factor-based asset universe with periodic portfolio rebalancing. Exploration is incorporated through user-specified Gaussian perturbations to baseline (exploitative) controls. The risk-sensitive stochastic control problem is solved analytically using the Free Energy-Entropy Duality. The Duality recasts the control problem as a linear-quadratic-Gaussian game and introduces a natural penalty for exploration. This approach yields simple sufficiency conditions for optimality. It also induces intuitive bounds on exploration based on risk sensitivity, asset covariance, and rebalancing frequency. Additionally, the optimal investment strategy can be interpreted through the lens of fractional Kelly strategies. By connecting risk-sensitive control theory and RL, this work provides a principled parametric family for policy-gradient implementations, guiding the design of RL methods.",
+    "authors": [
+      "Sebastien Lleo",
+      "Wolfgang Runggaldier"
+    ],
+    "published": "2026-02-28",
+    "categories": [
+      "q-fin.PM",
+      "math.OC"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.00738v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.00738v1",
+    "fetched_at": "2026-03-03T08:48:50.719862"
+  },
+  {
+    "id": "2603.00422v1",
+    "title": "Coupled Supply and Demand Forecasting in Platform Accommodation Markets",
+    "abstract": "Tourism demand forecasting is methodologically mature, but it typically treats accommodation supply as fixed or exogenous. In platform-mediated short-term rentals, supply is elastic, decision-driven, and co-evolves with demand through pricing, information design, and interventions. I reframe the core issue as endogenous stock-out censoring: realized booked nights satisfy B_{k,t} <= min(D_{k,t}, S_{k,t}), so booking models that ignore supply learn a regime-specific ceiling and become fragile under policy changes and supply shocks. This narrated review synthesizes work from tourism forecasting, revenue management, two-sided market economics, and Bayesian time-series methods; develops a three-part coupling framework (behavioral, informational, intervention); and illustrates the identification failure with a toy simulation. I conclude with a focused research agenda for jointly forecasting supply, demand, and their compositions.",
+    "authors": [
+      "Harrison Katz"
+    ],
+    "published": "2026-02-28",
+    "categories": [
+      "stat.AP",
+      "q-fin.ST"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.00422v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.00422v1",
+    "fetched_at": "2026-03-03T08:48:50.719879"
+  },
+  {
+    "id": "2603.00361v1",
+    "title": "Market Dynamics of Information Avalanches",
+    "abstract": "Financial markets convert the incremental arrival of information into asset price changes. In a sandpile model grains of sand represent bits of data, and the size of an avalanche, governed by a scaling law, is linked to price volatility. While this model of self-organized criticality reproduces stylized facts, it also identifies a structural tension between the non-arbitrage condition and price adjustments consistent with a constant Sharpe ratio.",
+    "authors": [
+      "Bernhard K Meister"
+    ],
+    "published": "2026-02-27",
+    "categories": [
+      "q-fin.PM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.00361v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.00361v1",
+    "fetched_at": "2026-03-03T08:48:50.719895"
+  },
+  {
+    "id": "2603.02059v1",
+    "title": "TRAKNN: Efficient Trajectory Aware Spatiotemporal kNN for Rare Meteorological Trajectory Detection",
+    "abstract": "Extreme weather events, such as windstorms and heatwaves, are driven by persistent atmospheric circulation patterns that evolve over several consecutive days. While traditional circulation-based studies often focus on instantaneous atmospheric states, capturing the temporal evolution, or trajectory, of these spatial fields is essential for characterizing rare and potentially impactful atmospheric behavior. However, performing an exhaustive similarity search on multi-decadal, continental-scale gridded datasets presents significant computational and memory challenges. In this paper, we propose TRAKNN (TRajectory Aware KNN), a fully unsupervised and data-agnostic framework for detecting geometrically rare short trajectories in spatio-temporal data with an exact kNN approach. TRAKNN leverages a recurrence-based algorithm that decouples computational complexity from trajectory length and efficient batch operations, maximizing computational intensity. These optimizations enable exhaustive analysis on standard workstations, either on CPU or on GPU. We evaluate our approach on 75 years of daily European sea-level pressure data. Our results illustrate that rare trajectories identified by TRAKNN correspond to physically coherent atmospheric anomalies and align with independent extreme-event databases.",
+    "authors": [
+      "Guillaume Coulaud",
+      "Davide Faranda"
+    ],
+    "published": "2026-03-02",
+    "categories": [
+      "stat.ML",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.02059v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.02059v1",
+    "fetched_at": "2026-03-03T08:49:03.015574"
+  },
+  {
+    "id": "2603.01841v1",
+    "title": "Trivial Graph Features and Classical Learning are Enough to Detect Random Anomalies",
+    "abstract": "Detecting anomalies in link streams that represent various kinds of interactions is an important research topic with crucial applications. Because of the lack of ground truth data, proposed methods are mostly evaluated through their ability to detect randomly injected links. In contrast with most proposed methods, that rely on complex approaches raising computational and/or interpretability issues, we show here that trivial graph features and classical learning techniques are sufficient to detect such anomalies extremely well. This basic approach has very low computational costs and it leads to easily interpretable results. It also has many other desirable properties that we study through an extensive set of experiments. We conclude that detection methods should now target more complex kinds of anomalies.",
+    "authors": [
+      "Matthieu Latapy",
+      "Stephany Rajeh"
+    ],
+    "published": "2026-03-02",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.01841v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.01841v1",
+    "fetched_at": "2026-03-03T08:49:03.015602"
+  },
+  {
+    "id": "2603.01806v1",
+    "title": "GCTAM: Global and Contextual Truncated Affinity Combined Maximization Model For Unsupervised Graph Anomaly Detection",
+    "abstract": "Anomalies often occur in real-world information networks/graphs, such as malevolent users, malicious comments, banned users, and fake news in social graphs. The latest graph anomaly detection methods use a novel mechanism called truncated affinity maximization (TAM) to detect anomaly nodes without using any label information and achieve impressive results. TAM maximizes the affinities among the normal nodes while truncating the affinities of the anomalous nodes to identify the anomalies. However, existing TAM-based methods truncate suspicious nodes according to a rigid threshold that ignores the specificity and high-order affinities of different nodes. This inevitably causes inefficient truncations from both normal and anomalous nodes, limiting the effectiveness of anomaly detection. To this end, this paper proposes a novel truncation model combining contextual and global affinity to truncate the anomalous nodes. The core idea of the work is to use contextual truncation to decrease the affinity of anomalous nodes, while global truncation increases the affinity of normal nodes. Extensive experiments on massive real-world datasets show that our method surpasses peer methods in most graph anomaly detection tasks. In highlights, compared with previous state-of-the-art methods, the proposed method has +15\\% $\\sim$ +20\\% improvements in two famous real-world datasets, Amazon and YelpChi. Notably, our method works well in large datasets, Amazin-all and YelpChi-all, and achieves the best results, while most previous models cannot complete the tasks.",
+    "authors": [
+      "Xiong Zhang",
+      "Hong Peng",
+      "Zhenli He",
+      "Cheng Xie",
+      "Xin Jin",
+      "Hua Jiang"
+    ],
+    "published": "2026-03-02",
+    "categories": [
+      "cs.SI",
+      "cs.GR",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.01806v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.01806v1",
+    "fetched_at": "2026-03-03T08:49:03.015628"
+  },
+  {
+    "id": "2603.01305v1",
+    "title": "AG-VAS: Anchor-Guided Zero-Shot Visual Anomaly Segmentation with Large Multimodal Models",
+    "abstract": "Large multimodal models (LMMs) exhibit strong task generalization capabilities, offering new opportunities for zero-shot visual anomaly segmentation (ZSAS). However, existing LMM-based segmentation approaches still face fundamental limitations: anomaly concepts are inherently abstract and context-dependent, lacking stable visual prototypes, and the weak alignment between high-level semantic embeddings and pixel-level spatial features hinders precise anomaly localization. To address these challenges, we present AG-VAS (Anchor-Guided Visual Anomaly Segmentation), a new framework that expands the LMM vocabulary with three learnable semantic anchor tokens-[SEG], [NOR], and [ANO], establishing a unified anchor-guided segmentation paradigm. Specifically, [SEG] serves as an absolute semantic anchor that translates abstract anomaly semantics into explicit, spatially grounded visual entities (e.g., holes or scratches), while [NOR] and [ANO] act as relative anchors that model the contextual contrast between normal and abnormal patterns across categories. To further enhance cross-modal alignment, we introduce a Semantic-Pixel Alignment Module (SPAM) that aligns language-level semantic embeddings with high-resolution visual features, along with an Anchor-Guided Mask Decoder (AGMD) that performs anchor-conditioned mask prediction for precise anomaly localization. In addition, we curate Anomaly-Instruct20K, a large-scale instruction dataset that organizes anomaly knowledge into structured descriptions of appearance, shape, and spatial attributes, facilitating effective learning and integration of the proposed semantic anchors. Extensive experiments on six industrial and medical benchmarks demonstrate that AG-VAS achieves consistent state-of-the-art performance in the zero-shot setting.",
+    "authors": [
+      "Zhen Qu",
+      "Xian Tao",
+      "Xiaoyi Bao",
+      "Dingrong Wang",
+      "ShiChen Qu",
+      "Zhengtao Zhang",
+      "Xingang Wang"
+    ],
+    "published": "2026-03-01",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.01305v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.01305v1",
+    "fetched_at": "2026-03-03T08:49:03.015655"
+  },
+  {
+    "id": "2603.01125v1",
+    "title": "Predictive Reasoning with Augmented Anomaly Contrastive Learning for Compositional Visual Relations",
+    "abstract": "While visual reasoning for simple analogies has received significant attention, compositional visual relations (CVR) remain relatively unexplored due to their greater complexity. To solve CVR tasks, we propose Predictive Reasoning with Augmented Anomaly Contrastive Learning (PR-A$^2$CL), \\ie, to identify an outlier image given three other images that follow the same compositional rules. To address the challenge of modelling abundant compositional rules, an Augmented Anomaly Contrastive Learning is designed to distil discriminative and generalizable features by maximizing similarity among normal instances while minimizing similarity between normal and anomalous outliers. More importantly, a predict-and-verify paradigm is introduced for rule-based reasoning, in which a series of Predictive Anomaly Reasoning Blocks (PARBs) iteratively leverage features from three out of the four images to predict those of the remaining one. Throughout the subsequent verification stage, the PARBs progressively pinpoint the specific discrepancies attributable to the underlying rules. Experimental results on SVRT, CVR and MC$^2$R datasets show that PR-A$^2$CL significantly outperforms state-of-the-art reasoning models.",
+    "authors": [
+      "Chengtai Li",
+      "Yuting He",
+      "Jianfeng Ren",
+      "Ruibin Bai",
+      "Yitian Zhao",
+      "Heng Yu",
+      "Xudong Jiang"
+    ],
+    "published": "2026-03-01",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.01125v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.01125v1",
+    "fetched_at": "2026-03-03T08:49:03.015682"
+  },
+  {
+    "id": "2603.00859v1",
+    "title": "AMDS: Attack-Aware Multi-Stage Defense System for Network Intrusion Detection with Two-Stage Adaptive Weight Learning",
+    "abstract": "Machine learning based network intrusion detection systems are vulnerable to adversarial attacks that degrade classification performance under both gradient-based and distribution shift threat models. Existing defenses typically apply uniform detection strategies, which may not account for heterogeneous attack characteristics. This paper proposes an attack-aware multi-stage defense framework that learns attack-specific detection strategies through a weighted combination of ensemble disagreement, predictive uncertainty, and distributional anomaly signals. Empirical analysis across seven adversarial attack types reveals distinct detection signatures, enabling a two-stage adaptive detection mechanism. Experimental evaluation on a benchmark intrusion detection dataset indicates that the proposed system attains 94.2% area under the receiver operating characteristic curve and improves classification accuracy by 4.5 percentage points and F1-score by 9.0 points over adversarially trained ensembles. Under adaptive white-box attacks with full architectural knowledge, the system appears to maintain 94.4% accuracy with a 4.2% attack success rate, though this evaluation is limited to two adaptive variants and does not constitute a formal robustness guarantee. Cross-dataset validation further suggests that defense effectiveness depends on baseline classifier competence and may vary with feature dimensionality. These results suggest that attack-specific optimization combined with multi-signal integration can provide a practical approach to improving adversarial robustness in machine learning-based intrusion detection systems.",
+    "authors": [
+      "Oluseyi Olukola",
+      "Nick Rahimi"
+    ],
+    "published": "2026-03-01",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.00859v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.00859v1",
+    "fetched_at": "2026-03-03T08:49:03.015701"
+  },
+  {
+    "id": "2603.00602v1",
+    "title": "Learning to Explore: Policy-Guided Outlier Synthesis for Graph Out-of-Distribution Detection",
+    "abstract": "Detecting out-of-distribution (OOD) graphs is crucial for ensuring the safety and reliability of Graph Neural Networks. In unsupervised graph-level OOD detection, models are typically trained using only in-distribution (ID) data, resulting in incomplete feature space characterization and weak decision boundaries. Although synthesizing outliers offers a promising solution, existing approaches rely on fixed, non-adaptive sampling heuristics (e.g., distance- or density-based), limiting their ability to explore informative OOD regions. We propose a Policy-Guided Outlier Synthesis (PGOS) framework that replaces static heuristics with a learned exploration strategy. Specifically, PGOS trains a reinforcement learning agent to navigate low-density regions in a structured latent space and sample representations that most effectively refine the OOD decision boundary. These representations are then decoded into high-quality pseudo-OOD graphs to improve detector robustness. Extensive experiments demonstrate that PGOS achieves state-of-the-art performance on multiple graph OOD and anomaly detection benchmarks.",
+    "authors": [
+      "Li Sun",
+      "Lanxu Yang",
+      "Jiayu Tian",
+      "Bowen Fang",
+      "Xiaoyan Yu",
+      "Junda Ye",
+      "Peng Tang",
+      "Hao Peng",
+      "Philip S. Yu"
+    ],
+    "published": "2026-02-28",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.00602v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.00602v1",
+    "fetched_at": "2026-03-03T08:49:03.015730"
+  },
+  {
+    "id": "2603.00393v1",
+    "title": "Dual-space posterior sampling for Bayesian inference in constrained inverse problems",
+    "abstract": "Inverse problems constrained by partial differential equations are often ill-conditioned due to noisy and incomplete data or inherent non-uniqueness. A prominent example is full waveform inversion, which estimates Earth's subsurface properties by fitting seismic measurements subject to the wave equation, where ill-conditioning is inherent to noisy, band-limited, finite-aperture data and shadow zones. Casting the inverse problem into a Bayesian framework allows for a more comprehensive description of its solution, where instead of a single estimate, the posterior distribution characterizes non-uniqueness and can be sampled to quantify uncertainty. However, no clear procedure exists for translating hard physical constraints, such as the wave equation, into prior distributions amenable to existing sampling techniques. To address this, we perform posterior sampling in the dual space using an augmented Lagrangian formulation, which translates hard constraints into penalties amenable to sampling algorithms while ensuring their exact satisfaction. We achieve this by seamlessly integrating the alternating direction method of multipliers (ADMM) with Stein variational gradient descent (SVGD) -- a particle-based sampler -- where the constraint is relaxed at each iteration and multiplier updates progressively enforce satisfaction. This enables constrained posterior sampling while inheriting the favorable conditioning properties of dual-space solvers, where partial constraint relaxation allows productive updates even when the current model is far from the true solution. We validate the method on a stylized Rosenbrock conditional inference problem and on frequency-domain full waveform inversion for a Gaussian anomaly model and the Marmousi~II benchmark, demonstrating well-calibrated uncertainty estimates and posterior contraction with increasing data coverage.",
+    "authors": [
+      "Ali Siahkoohi",
+      "Kamal Aghazade",
+      "Ali Gholami"
+    ],
+    "published": "2026-02-28",
+    "categories": [
+      "physics.geo-ph",
+      "cs.LG",
+      "stat.ML"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.00393v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.00393v1",
+    "fetched_at": "2026-03-03T08:49:03.015750"
+  },
+  {
+    "id": "2603.02203v1",
+    "title": "Tool Verification for Test-Time Reinforcement Learning",
+    "abstract": "Test-time reinforcement learning (TTRL) has emerged as a promising paradigm for self-evolving large reasoning models (LRMs), enabling online adaptation on unlabeled test inputs via self-induced rewards through majority voting. However, a spurious yet high-frequency unverified consensus can become a biased and reinforced reward signal, leading to incorrect mode collapse. We address this failure mode with T^3RL (Tool-Verification for Test-Time Reinforcement Learning), which introduces test-time tool verification into reward estimation. Concretely, a verifier uses an external tool as evidence (e.g., from code execution) to upweight verified rollouts in a verification-aware voting, producing more reliable pseudo-labels for training. Across various math difficulties (MATH-500, AMC, and AIME 2024) and diverse backbone types, T^3RL significantly improves over TTRL, with larger gains on harder problems. More broadly, T^3RL can be viewed as verified online data synthesis, highlighting test-time tool verification as a key mechanism for stabilizing self-evolution.",
+    "authors": [
+      "Ruotong Liao",
+      "Nikolai Röhrich",
+      "Xiaohan Wang",
+      "Yuhui Zhang",
+      "Yasaman Samadzadeh",
+      "Volker Tresp",
+      "Serena Yeung-Levy"
+    ],
+    "published": "2026-03-02",
+    "categories": [
+      "cs.AI",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.02203v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.02203v1",
+    "fetched_at": "2026-03-03T08:49:30.676301"
+  },
+  {
+    "id": "2603.02176v1",
+    "title": "Organizing, Orchestrating, and Benchmarking Agent Skills at Ecosystem Scale",
+    "abstract": "The rapid proliferation of Claude agent skills has raised the central question of how to effectively leverage, manage, and scale the agent skill ecosystem. In this paper, we propose AgentSkillOS, the first principled framework for skill selection, orchestration, and ecosystem-level management. AgentSkillOS comprises two stages: (i) Manage Skills, which organizes skills into a capability tree via node-level recursive categorization for efficient discovery; and (ii) Solve Tasks, which retrieves, orchestrates, and executes multiple skills through DAG-based pipelines. To evaluate the agent's ability to invoke skills, we construct a benchmark of 30 artifact-rich tasks across five categories: data computation, document creation, motion video, visual design, and web interaction. We assess the quality of task outputs using LLM-based pairwise evaluation, and the results are aggregated via a Bradley-Terry model to produce unified quality scores. Experiments across three skill ecosystem scales (200 to 200K skills) show that tree-based retrieval effectively approximates oracle skill selection, and that DAG-based orchestration substantially outperforms native flat invocation even when given the identical skill set.Our findings confirm that structured composition is the key to unlocking skill potential. Our GitHub repository is available at:https://github.com/ynulihao/AgentSkillOS.",
+    "authors": [
+      "Hao Li",
+      "Chunjiang Mu",
+      "Jianhao Chen",
+      "Siyue Ren",
+      "Zhiyao Cui",
+      "Yiqun Zhang",
+      "Lei Bai",
+      "Shuyue Hu"
+    ],
+    "published": "2026-03-02",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.02176v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.02176v1",
+    "fetched_at": "2026-03-03T08:49:30.676338"
+  },
+  {
+    "id": "2603.02109v1",
+    "title": "Orchestrating Multimodal DNN Workloads in Wireless Neural Processing",
+    "abstract": "In edge inference, wireless resource allocation and accelerator-level deep neural network (DNN) scheduling have yet to be co-optimized in an end-to-end manner. The lack of coordination between wireless transmission and accelerator-level DNN execution prevents efficient overlap, leading to higher end-to-end inference latency. To address this issue, this paper investigates multimodal DNN workload orchestration in wireless neural processing (WNP), a paradigm that integrates wireless transmission and multi-core accelerator execution into a unified end-to-end pipeline. First, we develop a unified communication-computation model for multimodal DNN execution and formulate the corresponding optimization problem. Second, we propose O-WiN, a framework that orchestrates DNN workloads in WNP through two tightly coupled stages: simulation-based optimization and runtime execution. Third, we develop two algorithms, RTFS and PACS. RTFS schedules communication and computation sequentially, whereas PACS interleaves them to enable pipeline parallelism by overlapping wireless data transfer with accelerator-level DNN execution. Simulation results demonstrate that PACS significantly outperforms RTFS under high modality heterogeneity by better masking wireless latency through communication-computation overlap, thereby highlighting the effectiveness of communication-computation pipelining in accelerating multimodal DNN execution in WNP.",
+    "authors": [
+      "Sai Xu",
+      "Kai-Kit Wong",
+      "Yanan Du",
+      "Hyundong Shin"
+    ],
+    "published": "2026-03-02",
+    "categories": [
+      "eess.SP",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.02109v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.02109v1",
+    "fetched_at": "2026-03-03T08:49:30.676359"
+  },
+  {
+    "id": "2603.02081v1",
+    "title": "GenDB: The Next Generation of Query Processing -- Synthesized, Not Engineered",
+    "abstract": "Traditional query processing relies on engines that are carefully optimized and engineered by many experts. However, new techniques and user requirements evolve rapidly, and existing systems often cannot keep pace. At the same time, these systems are difficult to extend due to their internal complexity, and developing new systems requires substantial engineering effort and cost. In this paper, we argue that recent advances in Large Language Models (LLMs) are starting to shape the next generation of query processing systems.   We propose using LLMs to synthesize execution code for each incoming query, instead of continuously building, extending, and maintaining complex query processing engines. As a proof of concept, we present GenDB, an LLM-powered agentic system that generates instance-optimized and customized query execution code tailored to specific data, workloads, and hardware resources.   We implemented an early prototype of GenDB that uses Claude Code Agent as the underlying component in the multi-agent system, and we evaluate it on OLAP workloads. We use queries from the well-known TPC-H benchmark and also construct a new benchmark designed to reduce potential data leakage from LLM training data. We compare GenDB with state-of-the-art query engines, including DuckDB, Umbra, MonetDB, ClickHouse, and PostgreSQL. GenDB achieves significantly better performance than these systems. Finally, we discuss the current limitations of GenDB and outline future extensions and related research challenges.",
+    "authors": [
+      "Jiale Lao",
+      "Immanuel Trummer"
+    ],
+    "published": "2026-03-02",
+    "categories": [
+      "cs.DB",
+      "cs.AI",
+      "cs.CL",
+      "cs.LG",
+      "cs.MA"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.02081v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.02081v1",
+    "fetched_at": "2026-03-03T08:49:30.676380"
+  },
+  {
+    "id": "2603.02050v1",
+    "title": "\"When to Hand Off, When to Work Together\": Expanding Human-Agent Co-Creative Collaboration through Concurrent Interaction",
+    "abstract": "Human collaborators coordinate dynamically through process visibility and workspace awareness, yet AI agents typically either provide only final outputs or expose read-only execution processes (e.g., planning, reasoning) without interpreting concurrent user actions on shared artifacts. Building on mixed-initiative interaction principles, we explore whether agents can achieve collaborative context awareness -- interpreting concurrent user actions on shared artifacts and adapting in real-time. Study 1 (N=10 professional designers) revealed that process visibility enabled reasoning about agent actions but exposed conflicts when agents could not distinguish feedback from independent work. We developed CLEO, which interprets collaborative intent and adapts in real-time. Study 2 (N=10, two-day with stimulated recall interviews) analyzed 214 turns, identifying five action patterns, six triggers, and four enabling factors explaining when designers choose delegation (70.1%), direction (28.5%), or concurrent work (31.8%). We present a decision model with six interaction loops, design implications, and an annotated dataset.",
+    "authors": [
+      "Kihoon Son",
+      "Hyewon Lee",
+      "DaEun Choi",
+      "Yoonsu Kim",
+      "Tae Soo Kim",
+      "Yoonjoo Lee",
+      "John Joon Young Chung",
+      "HyunJoon Jung",
+      "Juho Kim"
+    ],
+    "published": "2026-03-02",
+    "categories": [
+      "cs.HC",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.02050v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.02050v1",
+    "fetched_at": "2026-03-03T08:49:30.676408"
+  },
+  {
+    "id": "2603.01999v1",
+    "title": "Learning Vision-Based Omnidirectional Navigation: A Teacher-Student Approach Using Monocular Depth Estimation",
+    "abstract": "Reliable obstacle avoidance in industrial settings demands 3D scene understanding, but widely used 2D LiDAR sensors perceive only a single horizontal slice of the environment, missing critical obstacles above or below the scan plane. We present a teacher-student framework for vision-based mobile robot navigation that eliminates the need for LiDAR sensors. A teacher policy trained via Proximal Policy Optimization (PPO) in NVIDIA Isaac Lab leverages privileged 2D LiDAR observations that account for the full robot footprint to learn robust navigation. The learned behavior is distilled into a student policy that relies solely on monocular depth maps predicted by a fine-tuned Depth Anything V2 model from four RGB cameras. The complete inference pipeline, comprising monocular depth estimation (MDE), policy execution, and motor control, runs entirely onboard an NVIDIA Jetson Orin AGX mounted on a DJI RoboMaster platform, requiring no external computation for inference. In simulation, the student achieves success rates of 82-96.5%, consistently outperforming the standard 2D LiDAR teacher (50-89%). In real-world experiments, the MDE-based student outperforms the 2D LiDAR teacher when navigating around obstacles with complex 3D geometries, such as overhanging structures and low-profile objects, that fall outside the single scan plane of a 2D LiDAR.",
+    "authors": [
+      "Jan Finke",
+      "Wayne Paul Martis",
+      "Adrian Schmelter",
+      "Lars Erbach",
+      "Christian Jestel",
+      "Marvin Wiedemann"
+    ],
+    "published": "2026-03-02",
+    "categories": [
+      "cs.RO",
+      "cs.CV",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.01999v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.01999v1",
+    "fetched_at": "2026-03-03T08:49:30.676432"
+  },
+  {
+    "id": "2603.01953v1",
+    "title": "Closed-Loop Action Chunks with Dynamic Corrections for Training-Free Diffusion Policy",
+    "abstract": "Diffusion-based policies have achieved remarkable results in robotic manipulation but often struggle to adapt rapidly in dynamic scenarios, leading to delayed responses or task failures. We present DCDP, a Dynamic Closed-Loop Diffusion Policy framework that integrates chunk-based action generation with real-time correction. DCDP integrates a self-supervised dynamic feature encoder, cross-attention fusion, and an asymmetric action encoder-decoder to inject environmental dynamics before action execution, achieving real-time closed-loop action correction and enhancing the system's adaptability in dynamic scenarios. In dynamic PushT simulations, DCDP improves adaptability by 19\\% without retraining while requiring only 5\\% additional computation. Its modular design enables plug-and-play integration, achieving both temporal coherence and real-time responsiveness in dynamic robotic scenarios, including real-world manipulation tasks. The project page is at: https://github.com/wupengyuan/dcdp",
+    "authors": [
+      "Pengyuan Wu",
+      "Pingrui Zhang",
+      "Zhigang Wang",
+      "Dong Wang",
+      "Bin Zhao",
+      "Xuelong Li"
+    ],
+    "published": "2026-03-02",
+    "categories": [
+      "cs.RO",
+      "cs.AI",
+      "cs.CV"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.01953v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.01953v1",
+    "fetched_at": "2026-03-03T08:49:30.676456"
+  },
+  {
+    "id": "2603.01940v1",
+    "title": "CoVe: Training Interactive Tool-Use Agents via Constraint-Guided Verification",
+    "abstract": "Developing multi-turn interactive tool-use agents is challenging because real-world user needs are often complex and ambiguous, yet agents must execute deterministic actions to satisfy them. To address this gap, we introduce \\textbf{CoVe} (\\textbf{Co}nstraint-\\textbf{Ve}rification), a post-training data synthesis framework designed for training interactive tool-use agents while ensuring both data complexity and correctness. CoVe begins by defining explicit task constraints, which serve a dual role: they guide the generation of complex trajectories and act as deterministic verifiers for assessing trajectory quality. This enables the creation of high-quality training trajectories for supervised fine-tuning (SFT) and the derivation of accurate reward signals for reinforcement learning (RL). Our evaluation on the challenging $τ^2$-bench benchmark demonstrates the effectiveness of the framework. Notably, our compact \\textbf{CoVe-4B} model achieves success rates of 43.0\\% and 59.4\\% in the Airline and Retail domains, respectively; its overall performance significantly outperforms strong baselines of similar scale and remains competitive with models up to $17\\times$ its size. These results indicate that CoVe provides an effective and efficient pathway for synthesizing training data for state-of-the-art interactive tool-use agents. To support future research, we open-source our code, trained model, and the full set of 12K high-quality trajectories used for training.",
+    "authors": [
+      "Jinpeng Chen",
+      "Cheng Gong",
+      "Hanbo Li",
+      "Ziru Liu",
+      "Zichen Tian",
+      "Xinyu Fu",
+      "Shi Wu",
+      "Chenyang Zhang",
+      "Wu Zhang",
+      "Suiyun Zhang",
+      "Dandan Tu",
+      "Rui Liu"
+    ],
+    "published": "2026-03-02",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.01940v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.01940v1",
+    "fetched_at": "2026-03-03T08:49:30.676489"
+  },
+  {
+    "id": "2603.01912v1",
+    "title": "Demonstrating ViviDoc: Generating Interactive Documents through Human-Agent Collaboration",
+    "abstract": "Interactive articles help readers engage with complex ideas through exploration, yet creating them remains costly, requiring both domain expertise and web development skills. Recent LLM-based agents can automate content creation, but naively applying them yields uncontrollable and unverifiable outputs. We present ViviDoc, a human-agent collaborative system that generates interactive educational documents from a single topic input. ViviDoc introduces a multi-agent pipeline (Planner, Executor, Evaluator) and the Document Specification (DocSpec), a human-readable intermediate representation that decomposes each interactive visualization into State, Render, Transition, and Constraint components. The DocSpec enables educators to review and refine generation plans before code is produced, bridging the gap between pedagogical intent and executable output. Expert evaluation and a user study show that ViviDoc substantially outperforms naive agentic generation and provides an intuitive editing experience. Our project homepage is available at https://vividoc-homepage.vercel.app/.",
+    "authors": [
+      "Yinghao Tang",
+      "Yupeng Xie",
+      "Yingchaojie Feng",
+      "Tingfeng Lan",
+      "Wei Chen"
+    ],
+    "published": "2026-03-02",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.01912v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.01912v1",
+    "fetched_at": "2026-03-03T08:49:30.676526"
+  },
+  {
+    "id": "2603.01896v1",
+    "title": "Agentic Code Reasoning",
+    "abstract": "Can LLM agents explore codebases and reason about code semantics without executing the code? We study this capability, which we call agentic code reasoning, and introduce semi-formal reasoning: a structured prompting methodology that requires agents to construct explicit premises, trace execution paths, and derive formal conclusions. Unlike unstructured chain-of-thought, semi-formal reasoning acts as a certificate: the agent cannot skip cases or make unsupported claims. We evaluate across three tasks (patch equivalence verification, fault localization, and code question answering) and show that semi-formal reasoning consistently improves accuracy on all of them. For patch equivalence, accuracy improves from 78% to 88% on curated examples and reaches 93% on real-world agent-generated patches, approaching the reliability needed for execution-free RL reward signals. For code question answering on RubberDuckBench Mohammad et al. (2026), semi-formal reasoning achieves 87% accuracy. For fault localization on Defects4J Just et al. (2014), semi-formal reasoning improves Top-5 accuracy by 5 percentage points over standard reasoning. These results demonstrate that structured agentic reasoning enables meaningful semantic code analysis without execution, opening practical applications in RL training pipelines, code review, and static program analysis.",
+    "authors": [
+      "Shubham Ugare",
+      "Satish Chandra"
+    ],
+    "published": "2026-03-02",
+    "categories": [
+      "cs.SE",
+      "cs.AI",
+      "cs.PL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.01896v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.01896v1",
+    "fetched_at": "2026-03-03T08:49:30.676544"
+  },
+  {
+    "id": "2603.01801v1",
+    "title": "What Papers Don't Tell You: Recovering Tacit Knowledge for Automated Paper Reproduction",
+    "abstract": "Automated paper reproduction -- generating executable code from academic papers -- is bottlenecked not by information retrieval but by the tacit knowledge that papers inevitably leave implicit. We formalize this challenge as the progressive recovery of three types of tacit knowledge -- relational, somatic, and collective -- and propose \\method, a graph-based agent framework with a dedicated mechanism for each: node-level relation-aware aggregation recovers relational knowledge by analyzing implementation-unit-level reuse and adaptation relationships between the target paper and its citation neighbors; execution-feedback refinement recovers somatic knowledge through iterative debugging driven by runtime signals; and graph-level knowledge induction distills collective knowledge from clusters of papers sharing similar implementations. On an extended ReproduceBench spanning 3 domains, 10 tasks, and 40 recent papers, \\method{} achieves an average performance gap of 10.04\\% against official implementations, improving over the strongest baseline by 24.68\\%. The code will be publicly released upon acceptance; the repository link will be provided in the final version.",
+    "authors": [
+      "Lehui Li",
+      "Ruining Wang",
+      "Haochen Song",
+      "Yaoxin Mao",
+      "Tong Zhang",
+      "Yuyao Wang",
+      "Jiayi Fan",
+      "Yitong Zhang",
+      "Jieping Ye",
+      "Chengqi Zhang",
+      "Yongshun Gong"
+    ],
+    "published": "2026-03-02",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.01801v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.01801v1",
+    "fetched_at": "2026-03-03T08:49:30.676576"
+  },
+  {
+    "id": "2603.01788v1",
+    "title": "nchellwig at SemEval-2026 Task 3: Self-Consistent Structured Generation (SCSG) for Dimensional Aspect-Based Sentiment Analysis using Large Language Models",
+    "abstract": "We present Self-Consistent Structured Generation (SCSG) for Dimensional Aspect-Based Sentiment Analysis in SemEval-2026 Task 3 (Track A). SCSG enhances prediction reliability by executing a LoRA-adapted large language model multiple times per instance, retaining only tuples that achieve a majority consensus across runs. To mitigate the computational overhead of multiple forward passes, we leverage vLLM's PagedAttention mechanism for efficient key--value cache reuse. Evaluation across 6 languages and 8 language--domain combinations demonstrates that self-consistency with 15 executions yields statistically significant improvements over single-inference prompting, with our system (leveraging Gemma 3) ranking in the top seven across all settings, achieving second place on three out of four English subsets and first place on Tatar-Restaurant for DimASTE.",
+    "authors": [
+      "Nils Constantin Hellwig",
+      "Jakob Fehle",
+      "Udo Kruschwitz",
+      "Christian Wolff"
+    ],
+    "published": "2026-03-02",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.01788v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.01788v1",
+    "fetched_at": "2026-03-03T08:49:30.676596"
+  },
+  {
+    "id": "2603.01692v1",
+    "title": "Reasoning as Gradient: Scaling MLE Agents Beyond Tree Search",
+    "abstract": "LLM-based agents for machine learning engineering (MLE) predominantly rely on tree search, a form of gradient-free optimization that uses scalar validation scores to rank candidates. As LLM reasoning capabilities improve, exhaustive enumeration becomes increasingly inefficient compared to directed updates, analogous to how accurate gradients enable efficient descent over random search. We introduce \\textsc{Gome}, an MLE agent that operationalizes gradient-based optimization. \\textsc{Gome} maps structured diagnostic reasoning to gradient computation, success memory to momentum, and multi-trace execution to distributed optimization. Under a closed-world protocol that isolates architectural effects from external knowledge, \\textsc{Gome} achieves a state-of-the-art 35.1\\% any-medal rate on MLE-Bench with a restricted 12-hour budget on a single V100 GPU. Scaling experiments across 10 models reveal a critical crossover: with weaker models, tree search retains advantages by compensating for unreliable reasoning through exhaustive exploration; as reasoning capability strengthens, gradient-based optimization progressively outperforms, with the gap widening at frontier-tier models. Given the rapid advancement of reasoning-oriented LLMs, this positions gradient-based optimization as an increasingly favorable paradigm. We release our codebase and GPT-5 traces.",
+    "authors": [
+      "Yifei Zhang",
+      "Xu Yang",
+      "Xiao Yang",
+      "Bowen Xian",
+      "Qizheng Li",
+      "Shikai Fang",
+      "Jingyuan Li",
+      "Jian Wang",
+      "Mingrui Xu",
+      "Weiqing Liu",
+      "Jiang Bian"
+    ],
+    "published": "2026-03-02",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.01692v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.01692v1",
+    "fetched_at": "2026-03-03T08:49:30.676627"
+  },
+  {
+    "id": "2603.01588v1",
+    "title": "Jump Like A Squirrel: Optimized Execution Step Order for Anytime Random Forest Inference",
+    "abstract": "Due to their efficiency and small size, decision trees and random forests are popular machine learning models used for classification on resource-constrained systems. In such systems, the available execution time for inference in a random forest might not be sufficient for a complete model execution. Ideally, the already gained prediction confidence should be retained. An anytime algorithm is designed to be able to be aborted anytime, while giving a result with an increasing quality over time. Previous approaches have realized random forests as anytime algorithms on the granularity of trees, stopping after some but not all trees of a forest have been executed. However, due to the way decision trees subdivide the sample space in every step, an increase in prediction quality is achieved with every additional step in one tree. In this paper, we realize decision trees and random forest as anytime algorithms on the granularity of single steps in trees. This approach opens a design space to define the step order in a forest, which has the potential to optimize the mean accuracy. We propose the Optimal Order, which finds a step order with a maximal mean accuracy in exponential runtime and the polynomial runtime heuristics Forward Squirrel Order and Backward Squirrel Order, which greedily maximize the accuracy for each additional step taken down and up the trees, respectively.   Our evaluation shows, that the Backward Squirrel Order performs $\\sim94\\%$ as well as the Optimal Order and $\\sim99\\%$ as well as all other step orders.",
+    "authors": [
+      "Daniel Biebert",
+      "Christian Hakert",
+      "Kay Heider",
+      "Daniel Kuhse",
+      "Sebastian Buschjäger",
+      "Jian-Jia Chen"
+    ],
+    "published": "2026-03-02",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.01588v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.01588v1",
+    "fetched_at": "2026-03-03T08:49:30.676652"
+  },
+  {
+    "id": "2603.01548v1",
+    "title": "Graph-Based Self-Healing Tool Routing for Cost-Efficient LLM Agents",
+    "abstract": "Tool-using LLM agents face a reliability-cost tradeoff: routing every decision through the LLM improves correctness but incurs high latency and inference cost, while pre-coded workflow graphs reduce cost but become brittle under unanticipated compound tool failures. We present Self-Healing Router, a fault-tolerant orchestration architecture that treats most agent control-flow decisions as routing rather than reasoning. The system combines (i) parallel health monitors that assign priority scores to runtime conditions such as tool outages and risk signals, and (ii) a cost-weighted tool graph where Dijkstra's algorithm performs deterministic shortest-path routing. When a tool fails mid-execution, its edges are reweighted to infinity and the path is recomputed -- yielding automatic recovery without invoking the LLM. The LLM is reserved exclusively for cases where no feasible path exists, enabling goal demotion or escalation. Prior graph-based tool-use systems (ControlLLM, ToolNet, NaviAgent) focus on tool selection and planning; our contribution is runtime fault tolerance with deterministic recovery and binary observability -- every failure is either a logged reroute or an explicit escalation, never a silent skip. Across 19 scenarios spanning three graph topologies (linear pipeline, dependency DAG, parallel fan-out), Self-Healing Router matches ReAct's correctness while reducing control-plane LLM calls by 93% (9 vs 123 aggregate) and eliminating the silent-failure cases observed in a well-engineered static workflow baseline under compound failures.",
+    "authors": [
+      "Neeraj Bholani"
+    ],
+    "published": "2026-03-02",
+    "categories": [
+      "cs.AI",
+      "cs.SE"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.01548v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.01548v1",
+    "fetched_at": "2026-03-03T08:49:30.676668"
+  },
+  {
+    "id": "2603.01353v1",
+    "title": "Constructing Synthetic Instruction Datasets for Improving Reasoning in Domain-Specific LLMs: A Case Study in the Japanese Financial Domain",
+    "abstract": "In adapting LLMs to specific domains, achieving both domain expertise and reasoning ability remains an urgent challenge. This study proposes a general method for constructing high-quality synthetic instruction data for any domain, starting from domain-specific vocabulary. As a demonstration, we applied this method to the financial domain and constructed a large-scale instruction dataset totaling approximately 9.5 billion tokens with Chain-of-Thought reasoning traces. Evaluation results confirmed performance improvements over baseline models on financial benchmarks, demonstrating the effectiveness of our approach. We also report findings on the impact of reasoning trace length on performance and its limitations. Lastly, we open-source our models and datasets on https://huggingface.co/nri-ai .",
+    "authors": [
+      "Yuma Okochi",
+      "Fabio Milentiansen Sim",
+      "Tomoyasu Okada"
+    ],
+    "published": "2026-03-02",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.01353v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.01353v1",
+    "fetched_at": "2026-03-03T08:50:19.898914"
+  }
+]
