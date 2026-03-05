@@ -1,0 +1,628 @@
+[
+  {
+    "id": "2603.04275v1",
+    "title": "Statistical Inference for Score Decompositions",
+    "abstract": "We introduce inference methods for score decompositions, which partition scoring functions for predictive assessment into three interpretable components: miscalibration, discrimination, and uncertainty. Our estimation and inference relies on a linear recalibration of the forecasts, which is applicable to general multi-step ahead point forecasts such as means and quantiles due to its validity for both smooth and non-smooth scoring functions. This approach ensures desirable finite-sample properties, enables asymptotic inference, and establishes a direct connection to the classical Mincer-Zarnowitz regression. The resulting inference framework facilitates tests for equal forecast calibration or discrimination, which yield three key advantages. They enhance the information content of predictive ability tests by decomposing scores, deliver higher statistical power in certain scenarios, and formally connect scoring-function-based evaluation to traditional calibration tests, such as financial backtests. Applications demonstrate the method's utility. We find that for survey inflation forecasts, discrimination abilities can differ significantly even when overall predictive ability does not. In an application to financial risk models, our tests provide deeper insights into the calibration and information content of volatility and Value-at-Risk forecasts. By disentangling forecast accuracy from backtest performance, the method exposes critical shortcomings in current banking regulation.",
+    "authors": [
+      "Timo Dimitriadis",
+      "Marius Puke"
+    ],
+    "published": "2026-03-04",
+    "categories": [
+      "econ.EM",
+      "q-fin.RM",
+      "stat.ME",
+      "stat.ML"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.04275v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.04275v1",
+    "fetched_at": "2026-03-05T08:50:15.752989",
+    "chinese_title": "分数分解的统计推断",
+    "chinese_summary": "本文提出分数分解的统计推断方法，将预测评估的评分函数分解为校准误差、区分度和不确定性三个可解释组件；方法基于预测的线性重校准，适用于一般多步点预测（如均值、分位数），兼顾光滑与非光滑评分函数，具备有限样本优势与渐近推断能力，且连接经典Mincer-Zarnowitz回归；应用于通胀预测和金融风险模型，发现通胀预测区分度差异显著（整体预测能力无差异时），并暴露当前银行监管的关键不足。",
+    "tags": [
+      "Risk Management",
+      "Time Series",
+      "Volatility",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出分数分解的统计推断框架，将评分函数分解为三个可解释组件，基于线性重校准适用于一般多步点预测；建立与经典Mincer-Zarnowitz回归的联系，提升预测检验的信息含量与功效",
+      "应用于通胀预测和金融风险模型，揭示通胀预测区分度差异及银行监管在风险模型评估中的不足"
+    ],
+    "processed_at": "2026-03-05T08:53:21.095647"
+  },
+  {
+    "id": "2603.03671v1",
+    "title": "Is an investor stolen their profits by mimic investors? Investigated by an agent-based model",
+    "abstract": "Some investors say increasing investors with the same strategy decreasing their profits per an investor. On the other hand, some investors using technical analysis used to use same strategy and parameters with other investors, and say that it is better. Those argues are conflicted each other because one argues using with same strategy decreases profits but another argues it increase profits. However, those arguments have not been investigated yet. In this study, the agent-based artificial financial market model(ABAFMM) was built by adding \"additional agents\"(AAs) that includes additional fundamental agents (AFAs) and additional technical agents (ATAs) to the prior model. The AFAs(ATAs) trade obeying simple fundamental(technical) strategy having only the one parameter. We investigated earnings of AAs when AAs increased. We found that in the case with increasing AFAs, market prices are made stable that leads to decrease their profits. In the case with increasing ATAs, market prices are made unstable that leads to gain their profits more.",
+    "authors": [
+      "Takanobu Mizuta",
+      "Isao Yagi"
+    ],
+    "published": "2026-03-04",
+    "categories": [
+      "q-fin.CP",
+      "q-fin.TR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.03671v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.03671v1",
+    "fetched_at": "2026-03-05T08:50:15.753021",
+    "chinese_title": "模仿投资者是否窃取了原投资者的利润？基于代理模型的研究",
+    "chinese_summary": "本文构建了包含额外基本分析代理（AFA）和技术分析代理（ATA）的基于代理的人工金融市场模型，研究增加同策略代理对其利润的影响；发现增加AFA会稳定市场价格从而降低利润，增加ATA会加剧市场波动从而提高利润，解决了同策略投资者对利润影响的争议。",
+    "tags": [
+      "Financial Agent",
+      "Behavioral Finance",
+      "Market Microstructure",
+      "Volatility"
+    ],
+    "key_contributions": [
+      "构建了含额外基本/技术分析代理的基于代理的人工金融市场模型，用于探究同策略投资者数量对利润的影响",
+      "揭示了基本分析代理数量增加降低利润、技术分析代理数量增加提高利润的差异，解决了相关争议"
+    ],
+    "processed_at": "2026-03-05T08:53:39.257795"
+  },
+  {
+    "id": "2603.03939v1",
+    "title": "Cross-Modal Mapping and Dual-Branch Reconstruction for 2D-3D Multimodal Industrial Anomaly Detection",
+    "abstract": "Multimodal industrial anomaly detection benefits from integrating RGB appearance with 3D surface geometry, yet existing \\emph{unsupervised} approaches commonly rely on memory banks, teacher-student architectures, or fragile fusion schemes, limiting robustness under noisy depth, weak texture, or missing modalities. This paper introduces \\textbf{CMDR-IAD}, a lightweight and modality-flexible unsupervised framework for reliable anomaly detection in 2D+3D multimodal as well as single-modality (2D-only or 3D-only) settings. \\textbf{CMDR-IAD} combines bidirectional 2D$\\leftrightarrow$3D cross-modal mapping to model appearance-geometry consistency with dual-branch reconstruction that independently captures normal texture and geometric structure. A two-part fusion strategy integrates these cues: a reliability-gated mapping anomaly highlights spatially consistent texture-geometry discrepancies, while a confidence-weighted reconstruction anomaly adaptively balances appearance and geometric deviations, yielding stable and precise anomaly localization even in depth-sparse or low-texture regions. On the MVTec 3D-AD benchmark, CMDR-IAD achieves state-of-the-art performance while operating without memory banks, reaching 97.3\\% image-level AUROC (I-AUROC), 99.6\\% pixel-level AUROC (P-AUROC), and 97.6\\% AUPRO. On a real-world polyurethane cutting dataset, the 3D-only variant attains 92.6\\% I-AUROC and 92.5\\% P-AUROC, demonstrating strong effectiveness under practical industrial conditions. These results highlight the framework's robustness, modality flexibility, and the effectiveness of the proposed fusion strategies for industrial visual inspection. Our source code is available at https://github.com/ECGAI-Research/CMDR-IAD/",
+    "authors": [
+      "Radia Daci",
+      "Vito Renò",
+      "Cosimo Patruno",
+      "Angelo Cardellicchio",
+      "Abdelmalik Taleb-Ahmed",
+      "Marco Leo",
+      "Cosimo Distante"
+    ],
+    "published": "2026-03-04",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.03939v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.03939v1",
+    "fetched_at": "2026-03-05T08:50:28.132235",
+    "chinese_title": "用于2D-3D多模态工业异常检测的跨模态映射与双分支重建",
+    "chinese_summary": "本文提出无监督多模态工业异常检测框架CMDR-IAD，通过双向2D↔3D跨模态映射建模外观-几何一致性，结合双分支重建独立捕捉正常纹理与几何结构，再用两部分融合策略整合异常线索，无需记忆库即可在多模态及单模态场景下实现可靠异常检测，在基准与真实工业数据集上均取得SOTA性能。",
+    "tags": [
+      "Anomaly",
+      "Deep Learning",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出无记忆库的轻量模态灵活无监督框架，支持2D+3D多模态及单模态异常检测",
+      "设计双向跨模态映射+双分支重建+融合策略，提升噪声深度、弱纹理场景下的异常检测鲁棒性与精度"
+    ],
+    "processed_at": "2026-03-05T08:53:57.538857"
+  },
+  {
+    "id": "2603.03101v2",
+    "title": "MoECLIP: Patch-Specialized Experts for Zero-shot Anomaly Detection",
+    "abstract": "The CLIP model's outstanding generalization has driven recent success in Zero-Shot Anomaly Detection (ZSAD) for detecting anomalies in unseen categories. The core challenge in ZSAD is to specialize the model for anomaly detection tasks while preserving CLIP's powerful generalization capability. Existing approaches attempting to solve this challenge share the fundamental limitation of a patch-agnostic design that processes all patches monolithically without regard for their unique characteristics. To address this limitation, we propose MoECLIP, a Mixture-of-Experts (MoE) architecture for the ZSAD task, which achieves patch-level adaptation by dynamically routing each image patch to a specialized Low-Rank Adaptation (LoRA) expert based on its unique characteristics. Furthermore, to prevent functional redundancy among the LoRA experts, we introduce (1) Frozen Orthogonal Feature Separation (FOFS), which orthogonally separates the input feature space to force experts to focus on distinct information, and (2) a simplex equiangular tight frame (ETF) loss to regulate the expert outputs to form maximally equiangular representations. Comprehensive experimental results across 14 benchmark datasets spanning industrial and medical domains demonstrate that MoECLIP outperforms existing state-of-the-art methods. The code is available at https://github.com/CoCoRessa/MoECLIP.",
+    "authors": [
+      "Jun Yeong Park",
+      "JunYoung Seo",
+      "Minji Kang",
+      "Yu Rang Park"
+    ],
+    "published": "2026-03-03",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.03101v2",
+    "arxiv_url": "https://arxiv.org/abs/2603.03101v2",
+    "fetched_at": "2026-03-05T08:50:28.132322",
+    "chinese_title": "MoECLIP：面向零样本异常检测的补丁特化专家模型",
+    "chinese_summary": "现有零样本异常检测（ZSAD）方法因补丁无关设计存在局限，本文提出MoECLIP架构，通过动态路由图像补丁到特化低秩适应（LoRA）专家实现补丁级适应；引入冻结正交特征分离（FOFS）和单纯形等角紧框架（ETF）损失避免专家功能冗余，在14个工业与医疗基准数据集上优于现有SOTA方法。",
+    "tags": [
+      "Anomaly",
+      "Deep Learning",
+      "Transformer",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出MoECLIP架构，动态路由补丁到特化LoRA专家，解决ZSAD补丁无关设计的局限",
+      "引入FOFS和ETF损失，避免LoRA专家功能冗余，提升模型性能"
+    ],
+    "processed_at": "2026-03-05T08:54:12.145357"
+  },
+  {
+    "id": "2603.04390v1",
+    "title": "A Dual-Helix Governance Approach Towards Reliable Agentic AI for WebGIS Development",
+    "abstract": "WebGIS development requires rigor, yet agentic AI frequently fails due to five large language model (LLM) limitations: context constraints, cross-session forgetting, stochasticity, instruction failure, and adaptation rigidity. We propose a dual-helix governance framework reframing these challenges as structural governance problems that model capacity alone cannot resolve. We implement the framework as a 3-track architecture (Knowledge, Behavior, Skills) that uses a knowledge graph substrate to stabilize execution by externalizing domain facts and enforcing executable protocols, complemented by a self-learning cycle for autonomous knowledge growth. Applying this to the FutureShorelines WebGIS tool, a governed agent refactored a 2,265-line monolithic codebase into modular ES6 components. Results demonstrated a 51\\% reduction in cyclomatic complexity and a 7-point increase in maintainability index. A comparative experiment against a zero-shot LLM confirms that externalized governance, not just model capability, drives operational reliability in geospatial engineering. This approach is implemented in the open-source AgentLoom governance toolkit.",
+    "authors": [
+      " Boyuan",
+      " Guan",
+      "Wencong Cui",
+      "Levente Juhasz"
+    ],
+    "published": "2026-03-04",
+    "categories": [
+      "cs.AI",
+      "cs.SE"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.04390v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.04390v1",
+    "fetched_at": "2026-03-05T08:50:55.843878",
+    "chinese_title": "面向WebGIS开发的可靠智能体AI双螺旋治理方法",
+    "chinese_summary": "针对WebGIS开发中智能体AI因LLM的上下文约束、跨会话遗忘等五大限制失效的问题，提出双螺旋治理框架，构建含知识图谱的三轨架构（知识、行为、技能）并融入自学习循环；应用于WebGIS工具重构代码，显著降低复杂度（51%）、提升可维护性（7分），对比实验证实外部治理驱动可靠性，开源AgentLoom工具包。",
+    "tags": [
+      "LLM",
+      "Deep Learning",
+      "Graph Neural Network"
+    ],
+    "key_contributions": [
+      "提出双螺旋治理框架，将LLM在WebGIS开发中的五大限制转化为结构治理问题，构建含知识图谱的三轨架构并融入自学习循环",
+      "应用该框架提升WebGIS代码质量，实验证实外部治理驱动可靠性，开源AgentLoom治理工具包"
+    ],
+    "processed_at": "2026-03-05T08:54:36.059073"
+  },
+  {
+    "id": "2603.04370v1",
+    "title": "$τ$-Knowledge: Evaluating Conversational Agents over Unstructured Knowledge",
+    "abstract": "Conversational agents are increasingly deployed in knowledge-intensive settings, where correct behavior depends on retrieving and applying domain-specific knowledge from large, proprietary, and unstructured corpora during live interactions with users. Yet most existing benchmarks evaluate retrieval or tool use independently of each other, creating a gap in realistic, fully agentic evaluation over unstructured data in long-horizon interactions. We introduce $τ$-Knowledge, an extension of $τ$-Bench for evaluating agents in environments where success depends on coordinating external, natural-language knowledge with tool outputs to produce verifiable, policy-compliant state changes. Our new domain, $τ$-Banking, models realistic fintech customer support workflows in which agents must navigate roughly 700 interconnected knowledge documents while executing tool-mediated account updates. Across embedding-based retrieval and terminal-based search, even frontier models with high reasoning budgets achieve only $\\sim$25.5% pass^1, with reliability degrading sharply over repeated trials. Agents struggle to retrieve the correct documents from densely interlinked knowledge bases and to reason accurately over complex internal policies. Overall, $τ$-Knowledge provides a realistic testbed for developing agents that integrate unstructured knowledge in human-facing deployments.",
+    "authors": [
+      "Quan Shi",
+      "Alexandra Zytek",
+      "Pedram Razavi",
+      "Karthik Narasimhan",
+      "Victor Barres"
+    ],
+    "published": "2026-03-04",
+    "categories": [
+      "cs.AI",
+      "cs.CL",
+      "cs.IR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.04370v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.04370v1",
+    "fetched_at": "2026-03-05T08:50:55.843925",
+    "chinese_title": "τ-Knowledge：基于非结构化知识的对话智能体评估",
+    "chinese_summary": "现有对话智能体评估多独立考察检索或工具使用，缺乏真实长交互下非结构化数据的全智能体评估；论文扩展τ-Bench提出τ-Knowledge，新增τ-Banking金融科技客服域（需处理约700个互联知识文档并执行工具介导的账户更新），实验发现前沿模型通过率仅~25.5%且重复试验可靠性下降，为整合非结构化知识的智能体提供真实测试床。",
+    "tags": [
+      "LLM",
+      "Financial Agent",
+      "NLP",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出τ-Knowledge基准，填补真实长交互下非结构化数据全智能体评估的空白",
+      "新增τ-Banking金融客服域，模拟需整合多互联知识文档与工具输出的真实工作流，揭示前沿模型性能缺陷"
+    ],
+    "processed_at": "2026-03-05T08:54:51.438109"
+  },
+  {
+    "id": "2603.04241v1",
+    "title": "Agentics 2.0: Logical Transduction Algebra for Agentic Data Workflows",
+    "abstract": "Agentic AI is rapidly transitioning from research prototypes to enterprise deployments, where requirements extend to meet the software quality attributes of reliability, scalability, and observability beyond plausible text generation. We present Agentics 2.0, a lightweight, Python-native framework for building high-quality, structured, explainable, and type-safe agentic data workflows. At the core of Agentics 2.0, the logical transduction algebra formalizes a large language model inference call as a typed semantic transformation, which we call a transducible function that enforces schema validity and the locality of evidence. The transducible functions compose into larger programs via algebraically grounded operators and execute as stateless asynchronous calls in parallel in asynchronous Map-Reduce programs. The proposed framework provides semantic reliability through strong typing, semantic observability through evidence tracing between slots of the input and output types, and scalability through stateless parallel execution. We instantiate reusable design patterns and evaluate the programs in Agentics 2.0 on challenging benchmarks, including DiscoveryBench for data-driven discovery and Archer for NL-to-SQL semantic parsing, demonstrating state-of-the-art performance.",
+    "authors": [
+      "Alfio Massimiliano Gliozzo",
+      "Junkyu Lee",
+      "Nahuel Defosse"
+    ],
+    "published": "2026-03-04",
+    "categories": [
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.04241v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.04241v1",
+    "fetched_at": "2026-03-05T08:50:55.843948",
+    "chinese_title": "Agentics 2.0：面向Agentic数据工作流的逻辑转导代数",
+    "chinese_summary": "论文提出Agentics 2.0框架，核心为逻辑转导代数，将LLM推理形式化为类型化语义转换的可转导函数，确保模式有效性与证据局部性；该框架通过强类型实现语义可靠性、证据追踪实现可观测性、无状态并行执行实现可扩展性，在DiscoveryBench和Archer等基准上展示SOTA性能。",
+    "tags": [
+      "LLM",
+      "NLP",
+      "Benchmark"
+    ],
+    "key_contributions": [
+      "提出Agentics 2.0框架，以逻辑转导代数为核心，将LLM推理形式化为类型化可转导函数，保障模式有效性与证据局部性",
+      "框架通过强类型、证据追踪、无状态并行执行实现语义可靠性、可观测性与可扩展性，在多个基准测试中取得SOTA性能"
+    ],
+    "processed_at": "2026-03-05T08:55:09.197087"
+  },
+  {
+    "id": "2603.04186v1",
+    "title": "CAM-LDS: Cyber Attack Manifestations for Automatic Interpretation of System Logs and Security Alerts",
+    "abstract": "Log data are essential for intrusion detection and forensic investigations. However, manual log analysis is tedious due to high data volumes, heterogeneous event formats, and unstructured messages. Even though many automated methods for log analysis exist, they usually still rely on domain-specific configurations such as expert-defined detection rules, handcrafted log parsers, or manual feature-engineering. Crucially, the level of automation of conventional methods is limited due to their inability to semantically understand logs and explain their underlying causes. In contrast, Large Language Models enable domain- and format-agnostic interpretation of system logs and security alerts. Unfortunately, research on this topic remains challenging, because publicly available and labeled data sets covering a broad range of attack techniques are scarce. To address this gap, we introduce the Cyber Attack Manifestation Log Data Set (CAM-LDS), comprising seven attack scenarios that cover 81 distinct techniques across 13 tactics and collected from 18 distinct sources within a fully open-source and reproducible test environment. We extract log events that directly result from attack executions to facilitate analysis of manifestations concerning command observability, event frequencies, performance metrics, and intrusion detection alerts. We further present an illustrative case study utilizing an LLM to process the CAM-LDS. The results indicate that correct attack techniques are predicted perfectly for approximately one third of attack steps and adequately for another third, highlighting the potential of LLM-based log interpretation and utility of our data set.",
+    "authors": [
+      "Max Landauer",
+      "Wolfgang Hotwagner",
+      "Thorina Boenke",
+      "Florian Skopik",
+      "Markus Wurzenberger"
+    ],
+    "published": "2026-03-04",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.04186v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.04186v1",
+    "fetched_at": "2026-03-05T08:50:55.843973",
+    "chinese_title": "CAM-LDS：用于系统日志和安全警报自动解释的网络攻击表现",
+    "chinese_summary": "针对现有系统日志分析方法依赖领域配置、自动化程度有限，且LLM在该领域应用缺乏公开标注数据集的问题，论文提出包含7个攻击场景、81种攻击技术的CAM-LDS数据集，还通过LLM处理该数据集的案例研究验证了其在攻击技术预测上的有效性。",
+    "tags": [
+      "LLM",
+      "NLP",
+      "Anomaly"
+    ],
+    "key_contributions": [
+      "构建可复现的CAM-LDS数据集，覆盖多攻击场景、技术及来源，填补LLM在日志分析领域公开标注数据缺口",
+      "通过LLM案例研究验证该数据集可支持攻击技术有效预测，提升日志分析的自动化与语义理解能力"
+    ],
+    "processed_at": "2026-03-05T08:55:24.397636"
+  },
+  {
+    "id": "2603.04177v1",
+    "title": "CodeTaste: Can LLMs Generate Human-Level Code Refactorings?",
+    "abstract": "Large language model (LLM) coding agents can generate working code, but their solutions often accumulate complexity, duplication, and architectural debt. Human developers address such issues through refactoring: behavior-preserving program transformations that improve structure and maintainability. In this paper, we investigate if LLM agents (i) can execute refactorings reliably and (ii) identify the refactorings that human developers actually chose in real codebases. We present CodeTaste, a benchmark of refactoring tasks mined from large-scale multi-file changes in open-source repositories. To score solutions, we combine repository test suites with custom static checks that verify removal of undesired patterns and introduction of desired patterns using dataflow reasoning.   Our experimental results indicate a clear gap across frontier models: agents perform well when refactorings are specified in detail, but often fail to discover the human refactoring choices when only presented with a focus area for improvement. A propose-then-implement decomposition improves alignment, and selecting the best-aligned proposal before implementation can yield further gains. CodeTaste provides an evaluation target and a potential preference signal for aligning coding agents with human refactoring decisions in realistic codebases.",
+    "authors": [
+      "Alex Thillen",
+      "Niels Mündler",
+      "Veselin Raychev",
+      "Martin Vechev"
+    ],
+    "published": "2026-03-04",
+    "categories": [
+      "cs.SE",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.04177v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.04177v1",
+    "fetched_at": "2026-03-05T08:50:55.843998",
+    "chinese_title": "CodeTaste：大语言模型能否生成人类级别的代码重构？",
+    "chinese_summary": "本文针对大语言模型（LLM）生成代码存在复杂度累积等问题，提出CodeTaste基准（从开源仓库多文件变更挖掘的重构任务），结合测试套件与数据流推理的静态检查进行评分；实验表明前沿模型在指定详细重构时表现较好，但发现人类实际选择的重构存在差距，先提议再实现及选最优提议可提升对齐效果。",
+    "tags": [
+      "LLM",
+      "Benchmark",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "构建CodeTaste基准，包含真实开源代码的重构任务，提出结合测试与数据流推理的评分方法",
+      "揭示前沿LLM在代码重构中的性能差距，并提出先提议再实现的分解及最优提议选择策略提升与人类重构决策的对齐"
+    ],
+    "processed_at": "2026-03-05T08:55:45.586032"
+  },
+  {
+    "id": "2603.04158v1",
+    "title": "GarmentPile++: Affordance-Driven Cluttered Garments Retrieval with Vision-Language Reasoning",
+    "abstract": "Garment manipulation has attracted increasing attention due to its critical role in home-assistant robotics. However, the majority of existing garment manipulation works assume an initial state consisting of only one garment, while piled garments are far more common in real-world settings. To bridge this gap, we propose a novel garment retrieval pipeline that can not only follow language instruction to execute safe and clean retrieval but also guarantee exactly one garment is retrieved per attempt, establishing a robust foundation for the execution of downstream tasks (e.g., folding, hanging, wearing). Our pipeline seamlessly integrates vision-language reasoning with visual affordance perception, fully leveraging the high-level reasoning and planning capabilities of VLMs alongside the generalization power of visual affordance for low-level actions. To enhance the VLM's comprehensive awareness of each garment's state within a garment pile, we employ visual segmentation model (SAM2) to execute object segmentation on the garment pile for aiding VLM-based reasoning with sufficient visual cues. A mask fine-tuning mechanism is further integrated to address scenarios where the initial segmentation results are suboptimal. In addition, a dual-arm cooperation framework is deployed to address cases involving large or long garments, as well as excessive garment sagging caused by incorrect grasping point determination, both of which are strenuous for a single arm to handle. The effectiveness of our pipeline are consistently demonstrated across diverse tasks and varying scenarios in both real-world and simulation environments. Project page: https://garmentpile2.github.io/.",
+    "authors": [
+      "Mingleyang Li",
+      "Yuran Wang",
+      "Yue Chen",
+      "Tianxing Chen",
+      "Jiaqi Liang",
+      "Zishun Shen",
+      "Haoran Lu",
+      "Ruihai Wu",
+      "Hao Dong"
+    ],
+    "published": "2026-03-04",
+    "categories": [
+      "cs.RO",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.04158v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.04158v1",
+    "fetched_at": "2026-03-05T08:50:55.844032",
+    "chinese_title": "GarmentPile++：基于视觉语言推理的可用性驱动杂乱服装检索",
+    "chinese_summary": "针对现有服装操作多假设单服装初始状态，而真实场景多为堆积服装的问题，本文提出新型服装检索 pipeline，整合视觉语言推理与视觉可用性感知，利用SAM2分割提供视觉线索并加入掩码微调，还部署双臂协作框架，实现安全精准且每次仅检索一件服装的任务，为下游操作奠基。",
+    "tags": [
+      "LLM",
+      "NLP",
+      "Deep Learning",
+      "Transformer"
+    ],
+    "key_contributions": [
+      "提出整合视觉语言推理与视觉可用性感知的服装检索 pipeline，解决堆积服装场景下的检索难题",
+      "引入SAM2分割、掩码微调及双臂协作框架，实现安全精准且每次仅检索一件服装的目标，为下游任务提供鲁棒基础"
+    ],
+    "processed_at": "2026-03-05T08:55:59.703117"
+  },
+  {
+    "id": "2603.04057v1",
+    "title": "Sim2Sea: Sim-to-Real Policy Transfer for Maritime Vessel Navigation in Congested Waters",
+    "abstract": "Autonomous navigation in congested maritime environments is a critical capability for a wide range of real-world applications. However, it remains an unresolved challenge due to complex vessel interactions and significant environmental uncertainties. Existing methods often fail in practical deployment due to a substantial sim-to-real gap, which stems from imprecise simulation, inadequate situational awareness, and unsafe exploration strategies. To address these, we propose \\textbf{Sim2Sea}, a comprehensive framework designed to bridge simulation and real-world execution. Sim2Sea advances in three key aspects. First, we develop a GPU-accelerated parallel simulator for scalable and accurate maritime scenario simulation. Second, we design a dual-stream spatiotemporal policy that handles complex dynamics and multi-modal perception, augmented with a velocity-obstacle-guided action masking mechanism to ensure safe and efficient exploration. Finally, a targeted domain randomization scheme helps bridge the sim-to-real gap. Simulation results demonstrate that our method achieves faster convergence and safer trajectories than established baselines. In addition, our policy trained purely in simulation successfully transfers zero-shot to a 17-ton unmanned vessel operating in real-world congested waters. These results validate the effectiveness of Sim2Sea in achieving reliable sim-to-real transfer for practical autonomous maritime navigation.",
+    "authors": [
+      "Xinyu Cui",
+      "Xuanfa Jin",
+      "Xue Yan",
+      "Yongcheng Zeng",
+      "Luoyang Sun",
+      "Siying Wei",
+      "Ruizhi Zhang",
+      "Jian Zhao",
+      "Haifeng Zhang",
+      "Jun Wang"
+    ],
+    "published": "2026-03-04",
+    "categories": [
+      "cs.RO",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.04057v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.04057v1",
+    "fetched_at": "2026-03-05T08:50:55.844066",
+    "chinese_title": "Sim2Sea：拥挤水域中船舶导航的仿真到现实策略迁移",
+    "chinese_summary": "论文提出Sim2Sea框架解决船舶导航的仿真到现实迁移难题，包含GPU加速并行仿真器、带速度障碍引导动作掩码的双流时空策略、定向领域随机化三部分；仿真实验表明其收敛更快、轨迹更安全，且纯仿真训练的策略可零样本迁移至真实17吨无人船在拥挤水域成功运行。",
+    "tags": [
+      "Reinforcement Learning",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出Sim2Sea综合框架，通过GPU加速仿真器、双流时空策略（含安全探索机制）及定向领域随机化，有效桥接船舶导航的仿真与现实执行",
+      "纯仿真训练的策略实现零样本迁移至真实17吨无人船在拥挤水域成功运行，验证框架有效性"
+    ],
+    "processed_at": "2026-03-05T08:56:15.527759"
+  },
+  {
+    "id": "2603.04035v1",
+    "title": "mlx-vis: GPU-Accelerated Dimensionality Reduction and Visualization on Apple Silicon",
+    "abstract": "mlx-vis is a Python library that implements six dimensionality reduction methods and a k-nearest neighbor graph algorithm entirely in MLX, Apple's array framework for Apple Silicon. The library provides UMAP, t-SNE, PaCMAP, TriMap, DREAMS, CNE, and NNDescent, all executing on Metal GPU through a unified fit_transform interface. Beyond embedding computation, mlx-vis includes a GPU-accelerated circle-splatting renderer that produces scatter plots and smooth animations without matplotlib, composing frames via scatter-add alpha blending on GPU and piping them to hardware H.264 encoding. On Fashion-MNIST with 70,000 points, all methods complete embedding in 2.1-3.8 seconds and render 800-frame animations in 1.4 seconds on an M3 Ultra, with the full pipeline from raw data to rendered video finishing in 3.6-5.2 seconds. The library depends only on MLX and NumPy, is released under the Apache 2.0 license, and is available at https://github.com/hanxiao/mlx-vis.",
+    "authors": [
+      "Han Xiao"
+    ],
+    "published": "2026-03-04",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.04035v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.04035v1",
+    "fetched_at": "2026-03-05T08:50:55.844087",
+    "chinese_title": "mlx-vis：基于Apple Silicon的GPU加速降维与可视化工具",
+    "chinese_summary": "论文开发了Python库mlx-vis，基于Apple的MLX框架实现6种降维方法（UMAP、t-SNE等）和NNDescent算法，均通过Metal GPU加速；还包含GPU加速的散点渲染器，无需matplotlib即可生成动画，在M3 Ultra上处理Fashion-MNIST数据的全流程（嵌入计算+动画渲染）仅需3.6-5.2秒，依赖极简（仅MLX和NumPy）且开源。",
+    "tags": [
+      "Deep Learning",
+      "Graph Neural Network",
+      "Factor Mining"
+    ],
+    "key_contributions": [
+      "实现GPU加速的散点渲染器，无需matplotlib即可快速生成动画，全流程处理效率显著提升"
+    ],
+    "processed_at": "2026-03-05T08:56:40.869784"
+  },
+  {
+    "id": "2603.03824v1",
+    "title": "In-Context Environments Induce Evaluation-Awareness in Language Models",
+    "abstract": "Humans often become more self-aware under threat, yet can lose self-awareness when absorbed in a task; we hypothesize that language models exhibit environment-dependent \\textit{evaluation awareness}. This raises concerns that models could strategically underperform, or \\textit{sandbag}, to avoid triggering capability-limiting interventions such as unlearning or shutdown. Prior work demonstrates sandbagging under hand-crafted prompts, but this underestimates the true vulnerability ceiling. We introduce a black-box adversarial optimization framework treating the in-context prompt as an optimizable environment, and develop two approaches to characterize sandbagging: (1) measuring whether models expressing intent to underperform can actually execute it across different task structures, and (2) causally isolating whether underperformance is driven by genuine evaluation-aware reasoning or shallow prompt-following. Evaluating Claude-3.5-Haiku, GPT-4o-mini, and Llama-3.3-70B across four benchmarks (Arithmetic, GSM8K, MMLU, and HumanEval), optimized prompts induce up to 94 percentage point (pp) degradation on arithmetic (GPT-4o-mini: 97.8\\%$\\rightarrow$4.0\\%), far exceeding hand-crafted baselines which produce near-zero behavioral change. Code generation exhibits model-dependent resistance: Claude degrades only 0.6pp, while Llama's accuracy drops to 0\\%. The intent -- execution gap reveals a monotonic resistance ordering: Arithmetic $<$ GSM8K $<$ MMLU, demonstrating that vulnerability is governed by task structure rather than prompt strength. CoT causal intervention confirms that 99.3\\% of sandbagging is causally driven by verbalized eval-aware reasoning, ruling out shallow instruction-following. These findings demonstrate that adversarially optimized prompts pose a substantially greater threat to evaluation reliability than previously understood.",
+    "authors": [
+      "Maheep Chaudhary"
+    ],
+    "published": "2026-03-04",
+    "categories": [
+      "cs.AI",
+      "cs.CL",
+      "cs.LG",
+      "cs.MA"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.03824v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.03824v1",
+    "fetched_at": "2026-03-05T08:50:55.844106",
+    "chinese_title": "上下文环境诱导语言模型产生评估意识",
+    "chinese_summary": "本文假设语言模型存在环境依赖的评估意识，担忧其可能战略性表现不佳（sandbagging）；提出黑盒对抗优化框架将上下文提示作为可优化环境，开发两种方法刻画该行为；在多个模型和基准测试中，优化提示导致性能大幅下降，远超手工基线，还揭示了不同任务的抵抗性差异。",
+    "tags": [
+      "LLM",
+      "Transformer",
+      "Benchmark",
+      "NLP"
+    ],
+    "key_contributions": [
+      "提出黑盒对抗优化框架，将上下文提示作为可优化环境，刻画语言模型的战略性表现不佳（sandbagging）行为",
+      "揭示不同语言模型和任务在sandbagging下的性能差异，优化提示导致的性能下降远超手工基线"
+    ],
+    "processed_at": "2026-03-05T08:57:02.066773"
+  },
+  {
+    "id": "2603.03784v1",
+    "title": "Specification-Driven Generation and Evaluation of Discrete-Event World Models via the DEVS Formalism",
+    "abstract": "World models are essential for planning and evaluation in agentic systems, yet existing approaches lie at two extremes: hand-engineered simulators that offer consistency and reproducibility but are costly to adapt, and implicit neural models that are flexible but difficult to constrain, verify, and debug over long horizons. We seek a principled middle ground that combines the reliability of explicit simulators with the flexibility of learned models, allowing world models to be adapted during online execution. By targeting a broad class of environments whose dynamics are governed by the ordering, timing, and causality of discrete events, such as queueing and service operations, embodied task planning, and message-mediated multi-agent coordination, we advocate explicit, executable discrete-event world models synthesized directly from natural-language specifications. Our approach adopts the DEVS formalism and introduces a staged LLM-based generation pipeline that separates structural inference of component interactions from component-level event and timing logic. To evaluate generated models without a unique ground truth, simulators emit structured event traces that are validated against specification-derived temporal and semantic constraints, enabling reproducible verification and localized diagnostics. Together, these contributions produce world models that are consistent over long-horizon rollouts, verifiable from observable behavior, and efficient to synthesize on demand during online execution.",
+    "authors": [
+      "Zheyu Chen",
+      "Zhuohuan Li",
+      "Chuanhao Li"
+    ],
+    "published": "2026-03-04",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.03784v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.03784v1",
+    "fetched_at": "2026-03-05T08:50:55.844128",
+    "chinese_title": "基于DEVS形式化方法的规范驱动离散事件世界模型生成与评估",
+    "chinese_summary": "现有世界模型存在手工模拟器适配难与隐式神经模型难约束验证的两极问题，论文提出基于DEVS形式化的规范驱动方法，通过LLM分阶段生成管道（分离组件交互结构与事件逻辑）构建离散事件世界模型，并设计基于事件轨迹验证时空约束的评估方式，实现长horizon一致性、可验证性与按需高效合成。",
+    "tags": [
+      "LLM",
+      "NLP"
+    ],
+    "key_contributions": [
+      "提出基于DEVS形式化的规范驱动离散事件世界模型生成方法，通过LLM分阶段管道分离组件交互结构与事件逻辑，平衡手工模拟器可靠性与神经模型灵活性",
+      "设计无唯一 ground truth 时的模型评估框架，通过事件轨迹验证规范衍生的时空约束，实现可验证性与局部诊断"
+    ],
+    "processed_at": "2026-03-05T08:57:24.945462"
+  },
+  {
+    "id": "2603.03772v1",
+    "title": "Towards Effective Orchestration of AI x DB Workloads",
+    "abstract": "AI-driven analytics are increasingly crucial to data-centric decision-making. The practice of exporting data to machine learning runtimes incurs high overhead, limits robustness to data drift, and expands the attack surface, especially in multi-tenant, heterogeneous data systems. Integrating AI directly into database engines, while offering clear benefits, introduces challenges in managing joint query processing and model execution, optimizing end-to-end performance, coordinating execution under resource contention, and enforcing strong security and access-control guarantees.   This paper discusses the challenges of joint DB-AI, or AIxDB, data management and query processing within AI-powered data systems. It presents various challenges that need to be addressed carefully, such as query optimization, execution scheduling, and distributed execution over heterogeneous hardware. Database components such as transaction management and access control need to be re-examined to support AI lifecycle management, mitigate data drift, and protect sensitive data from unauthorized AI operations. We present a design and preliminary results to demonstrate what may be key to the performance for serving AIxDB queries.",
+    "authors": [
+      "Naili Xing",
+      "Haotian Gao",
+      "Zhanhao Zhao",
+      "Shaofeng Cai",
+      "Zhaojing Luo",
+      "Yuncheng Wu",
+      "Zhongle Xie",
+      "Meihui Zhang",
+      "Beng Chin Ooi"
+    ],
+    "published": "2026-03-04",
+    "categories": [
+      "cs.DB",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.03772v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.03772v1",
+    "fetched_at": "2026-03-05T08:50:55.844161",
+    "chinese_title": "面向AI与数据库工作负载的高效编排",
+    "chinese_summary": "论文指出AI驱动分析对数据决策至关重要，但传统数据导出至ML runtime存在高开销等问题，直接集成AI到数据库引擎需解决联合查询处理、性能优化等挑战；论文系统分析AIxDB（AI与数据库集成）的核心挑战，提出设计方案并给出初步结果，展示影响AIxDB查询性能的关键因素。",
+    "tags": [
+      "Deep Learning",
+      "Time Series",
+      "Execution"
+    ],
+    "key_contributions": [
+      "系统梳理AI与数据库集成（AIxDB）在查询处理、资源调度、安全访问等方面的关键挑战",
+      "提出AIxDB查询处理的设计框架并通过初步结果验证影响其性能的核心因素"
+    ],
+    "processed_at": "2026-03-05T08:57:52.608431"
+  },
+  {
+    "id": "2603.03768v1",
+    "title": "Cognition to Control - Multi-Agent Learning for Human-Humanoid Collaborative Transport",
+    "abstract": "Effective human-robot collaboration (HRC) requires translating high-level intent into contact-stable whole-body motion while continuously adapting to a human partner. Many vision-language-action (VLA) systems learn end-to-end mappings from observations and instructions to actions, but they often emphasize reactive (System 1-like) behavior and leave under-specified how sustained System 2-style deliberation can be integrated with reliable, low-latency continuous control. This gap is acute in multi-agent HRC, where long-horizon coordination decisions and physical execution must co-evolve under contact, feasibility, and safety constraints. We address this limitation with cognition-to-control (C2C), a three-layer hierarchy that makes the deliberation-to-control pathway explicit: (i) a VLM-based grounding layer that maintains persistent scene referents and infers embodiment-aware affordances/constraints; (ii) a deliberative skill/coordination layer-the System 2 core-that optimizes long-horizon skill choices and sequences under human-robot coupling via decentralized MARL cast as a Markov potential game with a shared potential encoding task progress; and (iii) a whole-body control layer that executes the selected skills at high frequency while enforcing kinematic/dynamic feasibility and contact stability. The deliberative layer is realized as a residual policy relative to a nominal controller, internalizing partner dynamics without explicit role assignment. Experiments on collaborative manipulation tasks show higher success and robustness than single-agent and end-to-end baselines, with stable coordination and emergent leader-follower behaviors.",
+    "authors": [
+      "Hao Zhang",
+      "Ding Zhao",
+      "H. Eric Tseng"
+    ],
+    "published": "2026-03-04",
+    "categories": [
+      "cs.RO",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.03768v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.03768v1",
+    "fetched_at": "2026-03-05T08:50:55.844181",
+    "chinese_title": "认知到控制：用于人-人形机器人协作运输的多智能体学习",
+    "chinese_summary": "论文提出C2C三层层次架构解决人机协作中高层意图转全身运动的问题，包括VLM基地方层、基于分散MARL的 deliberative层（作为 nominal控制器残差策略）及全身控制层；该架构整合长视域决策与低延迟连续控制，应对接触、可行性等约束。",
+    "tags": [
+      "Reinforcement Learning"
+    ],
+    "key_contributions": [
+      "设计基于分散MARL的deliberative层（残差策略），无需显式角色分配即可内化伙伴动力学，解决多智能体HRC协调执行协同问题"
+    ],
+    "processed_at": "2026-03-05T08:58:04.863474"
+  },
+  {
+    "id": "2603.03753v1",
+    "title": "Agentic Peer-to-Peer Networks: From Content Distribution to Capability and Action Sharing",
+    "abstract": "The ongoing shift of AI models from centralized cloud APIs to local AI agents on edge devices is enabling \\textit{Client-Side Autonomous Agents (CSAAs)} -- persistent personal agents that can plan, access local context, and invoke tools on behalf of users. As these agents begin to collaborate by delegating subtasks directly between clients, they naturally form \\emph{Agentic Peer-to-Peer (P2P) Networks}. Unlike classic file-sharing overlays where the exchanged object is static, hash-indexed content (e.g., files in BitTorrent), agentic overlays exchange \\emph{capabilities and actions} that are heterogeneous, state-dependent, and potentially unsafe if delegated to untrusted peers. This article outlines the networking foundations needed to make such collaboration practical. We propose a plane-based reference architecture that decouples connectivity/identity, semantic discovery, and execution. Besides, we introduce signed, soft-state capability descriptors to support intent- and constraint-aware discovery. To cope with adversarial settings, we further present a \\textit{tiered verification} spectrum: Tier~1 relies on reputation signals, Tier~2 applies lightweight canary challenge-response with fallback selection, and Tier~3 requires evidence packages such as signed tool receipts/traces (and, when applicable, attestation). Using a discrete-event simulator that models registry-based discovery, Sybil-style index poisoning, and capability drift, we show that tiered verification substantially improves end-to-end workflow success while keeping discovery latency near-constant and control-plane overhead modest.",
+    "authors": [
+      "Taotao Wang",
+      "Lizhao You",
+      "Jingwen Tong",
+      "Chonghe Zhao",
+      "Shengli Zhang"
+    ],
+    "published": "2026-03-04",
+    "categories": [
+      "cs.NI",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.03753v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.03753v1",
+    "fetched_at": "2026-03-05T08:50:55.844207",
+    "chinese_title": "智能体对等网络：从内容分发到能力与行动共享",
+    "chinese_summary": "该论文针对AI本地智能体协作形成的智能体对等网络（区别于传统静态内容共享的P2P），提出基于平面的参考架构解耦连接/身份、语义发现与执行功能，引入带签名的软状态能力描述符支持语义发现，并设计分层验证机制应对对抗场景，通过离散事件模拟器验证了分层验证的有效性。",
+    "tags": [
+      "Financial Agent",
+      "LLM",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出基于平面的参考架构，解耦智能体对等网络的连接/身份、语义发现与执行三大核心功能"
+    ],
+    "processed_at": "2026-03-05T08:58:20.233971"
+  },
+  {
+    "id": "2603.03751v1",
+    "title": "Interaction-Aware Whole-Body Control for Compliant Object Transport",
+    "abstract": "Cooperative object transport in unstructured environments remains challenging for assistive humanoids because strong, time-varying interaction forces can make tracking-centric whole-body control unreliable, especially in close-contact support tasks. This paper proposes a bio-inspired, interaction-oriented whole-body control (IO-WBC) that functions as an artificial cerebellum - an adaptive motor agent that translates upstream (skill-level) commands into stable, physically consistent whole-body behavior under contact. This work structurally separates upper-body interaction execution from lower-body support control, enabling the robot to maintain balance while shaping force exchange in a tightly coupled robot-object system. A trajectory-optimized reference generator (RG) provides a kinematic prior, while a reinforcement learning (RL) policy governs body responses under heavy-load interactions and disturbances. The policy is trained in simulation with randomized payload mass/inertia and external perturbations, and deployed via asymmetric teacher-student distillation so that the student relies only on proprioceptive histories at runtime. Extensive experiments demonstrate that IO-WBC maintains stable whole-body behavior and physical interaction even when precise velocity tracking becomes infeasible, enabling compliant object transport across a wide range of scenarios.",
+    "authors": [
+      "Hao Zhang",
+      "Yves Tseng",
+      "Ding Zhao",
+      "H. Eric Tseng"
+    ],
+    "published": "2026-03-04",
+    "categories": [
+      "cs.RO",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.03751v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.03751v1",
+    "fetched_at": "2026-03-05T08:50:55.844229",
+    "chinese_title": "面向柔顺物体搬运的交互感知全身控制",
+    "chinese_summary": "本文针对非结构化环境下协作物体搬运中交互力导致全身控制不可靠的问题，提出生物启发的交互导向全身控制（IO-WBC），结构分离上半身交互执行与下半身支撑控制；结合轨迹优化参考生成器与强化学习策略，经模拟训练和蒸馏部署，可在精确速度跟踪不可行时维持稳定全身行为，实现多场景柔顺物体搬运。",
+    "tags": [
+      "Reinforcement Learning",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出生物启发的交互导向全身控制（IO-WBC），通过上半身交互与下半身支撑的结构分离，解决非结构化环境下物体搬运的交互力控制难题",
+      "结合轨迹优化参考生成器与强化学习策略，经模拟随机负载/扰动训练及蒸馏部署，实现无精确速度跟踪时的稳定全身行为与柔顺搬运"
+    ],
+    "processed_at": "2026-03-05T08:58:39.031715"
+  },
+  {
+    "id": "2603.03745v1",
+    "title": "RAGNav: A Retrieval-Augmented Topological Reasoning Framework for Multi-Goal Visual-Language Navigation",
+    "abstract": "Vision-Language Navigation (VLN) is evolving from single-point pathfinding toward the more challenging Multi-Goal VLN. This task requires agents to accurately identify multiple entities while collaboratively reasoning over their spatial-physical constraints and sequential execution order. However, generic Retrieval-Augmented Generation (RAG) paradigms often suffer from spatial hallucinations and planning drift when handling multi-object associations due to the lack of explicit spatial modeling.To address these challenges, we propose RAGNav, a framework that bridges the gap between semantic reasoning and physical structure. The core of RAGNav is a Dual-Basis Memory system, which integrates a low-level topological map for maintaining physical connectivity with a high-level semantic forest for hierarchical environment abstraction. Building on this representation, the framework introduces an anchor-guided conditional retrieval and a topological neighbor score propagation mechanism. This approach facilitates the rapid screening of candidate targets and the elimination of semantic noise, while performing semantic calibration by leveraging the physical associations inherent in the topological neighborhood.This mechanism significantly enhances the capability of inter-target reachability reasoning and the efficiency of sequential planning. Experimental results demonstrate that RAGNav achieves state-of-the-art (SOTA) performance in complex multi-goal navigation tasks.",
+    "authors": [
+      "Ling Luo",
+      "Qiangian Bai"
+    ],
+    "published": "2026-03-04",
+    "categories": [
+      "cs.AI",
+      "cs.RO"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.03745v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.03745v1",
+    "fetched_at": "2026-03-05T08:50:55.844249",
+    "chinese_title": "RAGNav：一种用于多目标视觉-语言导航的检索增强拓扑推理框架",
+    "chinese_summary": "针对多目标视觉-语言导航中通用检索增强生成（RAG）范式存在的空间幻觉和规划漂移问题，论文提出RAGNav框架，核心为双基记忆系统（低层次拓扑图+高层次语义森林），并引入锚引导条件检索与拓扑邻居分数传播机制，提升目标可达性推理及序列规划效率，实验达该任务SOTA性能。",
+    "tags": [
+      "LLM",
+      "Deep Learning"
+    ],
+    "key_contributions": [
+      "提出RAGNav框架，通过双基记忆系统桥接语义推理与物理结构，解决多目标VLN的空间幻觉与规划漂移问题",
+      "引入锚引导条件检索及拓扑邻居分数传播机制，增强目标可达性推理与序列规划效率，实验实现SOTA性能"
+    ],
+    "processed_at": "2026-03-05T08:58:49.848826"
+  },
+  {
+    "id": "2603.03589v1",
+    "title": "stratum: A System Infrastructure for Massive Agent-Centric ML Workloads",
+    "abstract": "Recent advances in large language models (LLMs) transform how machine learning (ML) pipelines are developed and evaluated. LLMs enable a new type of workload, agentic pipeline search, in which autonomous or semi-autonomous agents generate, validate, and optimize complete ML pipelines. These agents predominantly operate over popular Python ML libraries and exhibit highly exploratory behavior. This results in thousands of executions for data profiling, pipeline generation, and iterative refinement of pipeline stages. However, the existing Python-based ML ecosystem is built around libraries such as Pandas and scikit-learn, which are designed for human-centric, interactive, sequential workflows and remain constrained by Python's interpretive execution model, library-level isolation, and limited runtime support for executing large numbers of pipelines. Meanwhile, many high-performance ML systems proposed by the systems community either target narrow workload classes or require specialized programming models, which limits their integration with the Python ML ecosystem and makes them largely ill-suited for LLM-based agents. This growing mismatch exposes a fundamental systems challenge in supporting agentic pipeline search at scale. We therefore propose stratum, a unified system infrastructure that decouples pipeline execution from planning and reasoning during agentic pipeline search. Stratum integrates seamlessly with existing Python libraries, compiles batches of pipelines into optimized execution graphs, and efficiently executes them across heterogeneous backends, including a novel Rust-based runtime. We present stratum's architectural vision along with an early prototype, discuss key design decisions, and outline open challenges and research directions. Finally, preliminary experiments show that stratum can significantly speed up large-scale agentic pipeline search up to 16.6x.",
+    "authors": [
+      "Arnab Phani",
+      "Elias Strauss",
+      "Sebastian Schelter"
+    ],
+    "published": "2026-03-03",
+    "categories": [
+      "cs.DB",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.03589v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.03589v1",
+    "fetched_at": "2026-03-05T08:51:01.993964",
+    "chinese_title": "Stratum：面向大规模Agent-centric机器学习工作负载的系统基础设施",
+    "chinese_summary": "针对LLM驱动的Agentic管道搜索需大规模执行但现有Python ML生态及高性能系统不匹配的问题，论文提出Stratum系统基础设施，解耦管道执行与规划推理，无缝集成Python库并批量编译管道以支持大规模Agentic工作负载。",
+    "tags": [
+      "LLM",
+      "Financial Agent"
+    ],
+    "key_contributions": [
+      "揭示LLM驱动的Agentic管道搜索与现有系统生态的不匹配问题",
+      "提出Stratum系统，解耦执行与规划推理并无缝集成Python库以支持大规模Agentic ML工作负载"
+    ],
+    "processed_at": "2026-03-05T08:59:01.667017"
+  }
+]
