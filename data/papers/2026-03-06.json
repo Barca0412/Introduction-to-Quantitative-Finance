@@ -1,0 +1,527 @@
+[
+  {
+    "id": "2603.05326v1",
+    "title": "Riemannian Geometry of Optimal Rebalancing in Dynamic Weight Automated Market Makers",
+    "abstract": "In Temporal Function Market Making (TFMM), a dynamic weight AMM pool rebalances from initial to final holdings by creating a series of arbitrage opportunities whose total cost depends on the weight trajectory taken. We show that the per-step arbitrage loss is the KL divergence between new and old weight vectors, meaning the Fisher--Rao metric is the natural Riemannian metric on the weight simplex. The loss-minimising interpolation under the leading-order expansion of this KL cost is SLERP (Spherical Linear Interpolation) in the Hellinger coordinates $η_i = \\sqrt{w_i}$, i.e.\\ a geodesic on the positive orthant of the unit sphere traversed at constant speed. The SLERP midpoint equals the (AM+GM)/normalise heuristic of prior work (Willetts & Harrington, 2024), so the heuristic lies on the geodesic. This identity holds for any number of tokens and any magnitude of weight change; using this link, all dyadic points on the geodesic can be reached by recursive AM-GM bisection without trigonometric functions. SLERP's relative sub-optimality on the full KL cost is proportional to the squared magnitude of the overall weight change and to $1/f^2$, where $f$ is the number of interpolation steps.",
+    "authors": [
+      "Matthew Willetts"
+    ],
+    "published": "2026-03-05",
+    "categories": [
+      "q-fin.MF",
+      "cs.IT",
+      "math.DG",
+      "q-fin.TR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.05326v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.05326v1",
+    "fetched_at": "2026-03-06T08:42:42.231810"
+  },
+  {
+    "id": "2603.05283v1",
+    "title": "Wealth Tax Neutrality as Drift-Shift Symmetry: A Statistical Physics Formulation",
+    "abstract": "We reformulate the neutral wealth tax framework of Froeseth (2026) in the language of stochastic dynamics and statistical physics. Individual wealth under geometric Brownian motion satisfies a Langevin equation with multiplicative noise; the probability density of wealth across a population then evolves according to a Fokker-Planck equation. A proportional wealth tax at market value enters as a uniform reduction of the drift coefficient, preserving the diffusion structure and all relative probability currents. This drift-shift symmetry is the physical content of tax neutrality. Each channel through which neutrality breaks down in practice, book-value assessment, liquidity frictions, forced dividend extraction, migration, and market impact, corresponds to a specific violation of this symmetry: a state-dependent, asset-dependent, or flow-dependent modification of the Fokker-Planck equation. The framework clarifies when wealth taxation is a benign rescaling of the dynamics and when it introduces genuinely new physics.",
+    "authors": [
+      "Anders G. Froeseth"
+    ],
+    "published": "2026-03-05",
+    "categories": [
+      "physics.soc-ph",
+      "cond-mat.stat-mech",
+      "q-fin.PM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.05283v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.05283v1",
+    "fetched_at": "2026-03-06T08:42:42.231849"
+  },
+  {
+    "id": "2603.05277v1",
+    "title": "Extensions to the Wealth Tax Neutrality Framework",
+    "abstract": "Froeseth (2026) shows that a proportional wealth tax on market values is neutral with respect to portfolio choice, Sharpe ratios, and equilibrium prices under CRRA preferences and geometric Brownian motion. This paper investigates the robustness of that result along two dimensions. First, we extend the neutrality frontier: portfolio neutrality, including all intertemporal hedging demands, is preserved under stochastic volatility (Heston and general Markov diffusions) and Epstein-Zin recursive utility, but breaks under non-homothetic preferences such as HARA. Second, we identify four channels through which implemented wealth taxes depart from neutrality even under CRRA: non-uniform assessment across asset classes, general equilibrium price effects in inelastic markets, progressive threshold structures, and endogenous labour supply. Each channel is formalised and, where possible, calibrated to the Norwegian wealth tax system. The progressive threshold introduces a tax shield that increases risk-taking near the exemption boundary, an effect opposite in sign to the HARA distortion, and, at the extreme, generates a participation margin at which investors exit the tax jurisdiction entirely. We formalise this tax-induced migration as the extreme response at the progressive threshold and examine the Norwegian post-2022 experience as a case study. The full framework is applied to evaluate the Saez-Zucman proposal for a global minimum wealth tax on billionaires and the related French proposal for a national minimum tax above EUR 100 million.",
+    "authors": [
+      "Anders G. Froeseth"
+    ],
+    "published": "2026-03-05",
+    "categories": [
+      "physics.soc-ph",
+      "econ.GN",
+      "q-fin.PM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.05277v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.05277v1",
+    "fetched_at": "2026-03-06T08:42:42.231872"
+  },
+  {
+    "id": "2603.05264v1",
+    "title": "Asset Returns, Portfolio Choice, and Proportional Wealth Taxation",
+    "abstract": "We analyse the effect of a proportional wealth tax on asset returns, portfolio choice, and asset pricing. The tax is levied annually on the market value of all holdings at a uniform rate. We show that such a tax is economically equivalent to the government acquiring a proportional stake in the investor's portfolio each period, a form of risk sharing in which expected wealth and risk are reduced by the same factor, while the return per share is unaffected. This multiplicative separability drives four main results: (i) the coefficient of variation of wealth is invariant to the tax rate; (ii) optimal portfolio weights are independent of the tax rate; (iii) the wealth tax is orthogonal to portfolio choice, inducing a homothetic contraction of the opportunity set that preserves the Sharpe ratio of every portfolio; (iv) taxed and untaxed investors price assets identically. Results are derived under geometric Brownian motion and generalised to the location-scale family. A Modigliani-Miller analysis confirms pricing neutrality and identifies an inconsistency in the literature regarding the discount rate for after-tax cash flows. Under CAPM with CRRA preferences, after-tax betas equal pre-tax betas and the security market line contracts by the tax factor; general-equilibrium prices are unchanged. This resolves an error in Fama (2021). The neutrality results depend on three conditions commonly violated in practice: universal taxation at market value, frictionless markets, and dividend consumption. We formalise three channels through which relaxing these conditions breaks neutrality: book-value taxation, liquidity frictions, and dividend extraction, and show they have opposing effects on asset prices.",
+    "authors": [
+      "Anders G. Froeseth"
+    ],
+    "published": "2026-03-05",
+    "categories": [
+      "physics.soc-ph",
+      "econ.GN",
+      "q-fin.PM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.05264v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.05264v1",
+    "fetched_at": "2026-03-06T08:42:42.231893"
+  },
+  {
+    "id": "2603.05260v1",
+    "title": "Extreme Value Analysis for Finite, Multivariate and Correlated Systems with Finance as an Example",
+    "abstract": "Extreme values and the tail behavior of probability distributions are essential for quantifying and mitigating risk in complex systems of all kinds. In multivariate settings, accounting for correlations is crucial. Although extreme value analysis for infinite correlated systems remains an open challenge, we propose a practical framework for handling a large but finite number of correlated time series. We develop our approach for finance as a concrete example but emphasize its generality. We study the extremal behavior of high-frequency stock returns after rotating them into the eigenbasis of the correlation matrix. This separates and extracts various collective effects, including information on the correlated market as a whole and on correlated sectoral behavior from idiosyncratic features, while allowing us to use univariate tools of extreme value analysis. This holds even for high-frequency data where discretization effects normally complicate analysis. We employ a peaks-over-threshold approach and thereby fully avoid the analysis of block maxima. We estimate the tail shape of the rotated returns while explicitly accounting for nonstationarity, a key feature in finance and many other complex systems. Our framework facilitates tail risk estimation relative to larger trends and intraday seasonalities at both market and sectoral levels.",
+    "authors": [
+      "Benjamin Köhler",
+      "Anton J. Heckens",
+      "Thomas Guhr"
+    ],
+    "published": "2026-03-05",
+    "categories": [
+      "q-fin.ST",
+      "physics.data-an",
+      "q-fin.RM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.05260v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.05260v1",
+    "fetched_at": "2026-03-06T08:42:42.231916"
+  },
+  {
+    "id": "2603.05119v1",
+    "title": "Asymptotic Separability of Diffusion and Jump Components in High-Frequency CIR and CKLS Models",
+    "abstract": "This paper develops a robust parametric framework for jump detection in discretely observed CKLS-type jump-diffusion processes with high-frequency asymptotics, based on the minimum density power divergence estimator (MDPDE). The methodology exploits the intrinsic asymptotic scale separation between diffusion increments, which decay at rate $\\sqrt{Δ_n}$, and jump increments, which remain of non-vanishing stochastic magnitude. Using robust MDPDE-based estimators of the drift and diffusion coefficients, we construct standardized residuals whose extremal behavior provides a principled basis for statistical discrimination between continuous and discontinuous components. We establish that, over diffusion intervals, the maximum of the normalized residuals converges to the Gumbel extreme-value distribution, yielding an explicit and asymptotically valid detection threshold. Building on this result, we prove classification consistency of the proposed robust detection procedure: the probability of correctly identifying all jump and diffusion increments converges to one under proper asymptotics. The MDPDE-based normalization attenuates the influence of atypical increments and stabilizes the detection boundary in the presence of discontinuities. Simulation results confirm that robustness improves finite-sample stability and reduces spurious detections without compromising asymptotic validity. The proposed methodology provides a theoretically rigorous and practically resilient robust approach to jump identification in high-frequency stochastic systems.",
+    "authors": [
+      "Sourojyoti Barick"
+    ],
+    "published": "2026-03-05",
+    "categories": [
+      "q-fin.ST",
+      "math.ST"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.05119v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.05119v1",
+    "fetched_at": "2026-03-06T08:42:42.231935"
+  },
+  {
+    "id": "2603.04880v1",
+    "title": "A class of stochastic control problems with state constraints",
+    "abstract": "We obtain a probabilistic solution to linear-quadratic optimal control problems with state constraints. Given a closed set $\\mathcal{D}\\subseteq [0,T]\\times\\mathbb{R}^d$, a diffusion $X$ in $\\mathbb{R}^d$ must be linearly controlled in order to keep the time-space process $(t,X_t)$ inside the set $\\mathcal{C}:=([0,T]\\times\\mathbb{R}^d)\\setminus\\mathcal{D}$, while at the same time minimising an expected cost that depends on the state $(t,X_t)$ and is quadratic in the speed of the control exerted. We find a probabilistic representation for the value function and an optimal control under a set of mild sufficient conditions concerning the coefficients of the underlying dynamics and the regularity of the set $\\mathcal{D}$. The optimally controlled dynamics is in strong form, in the sense that it is adapted to the filtration generated by the driving Brownian motion. Fully explicit formulae are presented in some relevant examples.",
+    "authors": [
+      "Tiziano De Angelis",
+      "Erik Ekström"
+    ],
+    "published": "2026-03-05",
+    "categories": [
+      "math.OC",
+      "math.PR",
+      "q-fin.MF"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.04880v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.04880v1",
+    "fetched_at": "2026-03-06T08:42:42.231956"
+  },
+  {
+    "id": "2603.01109v2",
+    "title": "A stochastic correlation extension of the Vasicek credit risk model",
+    "abstract": "In the Vasicek credit portfolio model, tail risk is driven primarily by the asset-correlation parameter, yet empirically is subject to correlation risk. We propose a stochastic correlation extension of the Vasicek framework in which the correlation state evolves as a diffusion on the circle. This representation accommodates both non-mean-reverting and mean-reverting dependence regimes via circular Brownian motion and von Mises process, while retaining tractable transition densities. Conditionally on a fixed correlation state, we derive closed or semi-closed form expressions for the joint distribution of two assets, the joint first-passage (default) time distribution, and the joint survival probability. A simulation study quantifies how correlation volatility and persistence reshape joint default-at-horizon, survival, and joint barrier-crossing probabilities beyond marginal volatility effects. An empirical illustration using U.S. bank charge-off rates demonstrates economically interpretable time-variation in a dependence index and shows how inferred stochastic dependence translates into materially different joint tail-event probabilities. Overall, circular diffusion models provide a parsimonious and operationally tractable route to incorporating correlation risk into Vasicek structural credit calculations.",
+    "authors": [
+      "Dhruv Bansal",
+      "Mayank Goud",
+      "Sourav Majumdar"
+    ],
+    "published": "2026-03-01",
+    "categories": [
+      "q-fin.RM"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.01109v2",
+    "arxiv_url": "https://arxiv.org/abs/2603.01109v2",
+    "fetched_at": "2026-03-06T08:42:42.232385"
+  },
+  {
+    "id": "2603.05414v1",
+    "title": "Dissociating Direct Access from Inference in AI Introspection",
+    "abstract": "Introspection is a foundational cognitive ability, but its mechanism is not well understood. Recent work has shown that AI models can introspect. We study their mechanism of introspection, first extensively replicating Lindsey et al. (2025)'s thought injection detection paradigm in large open-source models. We show that these models detect injected representations via two separable mechanisms: (i) probability-matching (inferring from perceived anomaly of the prompt) and (ii) direct access to internal states. The direct access mechanism is content-agnostic: models detect that an anomaly occurred but cannot reliably identify its semantic content. The two model classes we study confabulate injected concepts that are high-frequency and concrete (e.g., \"apple'\"); for them correct concept guesses typically require significantly more tokens. This content-agnostic introspective mechanism is consistent with leading theories in philosophy and psychology.",
+    "authors": [
+      "Harvey Lederman",
+      "Kyle Mahowald"
+    ],
+    "published": "2026-03-05",
+    "categories": [
+      "cs.AI",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.05414v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.05414v1",
+    "fetched_at": "2026-03-06T08:42:54.491355"
+  },
+  {
+    "id": "2603.05031v1",
+    "title": "AegisUI: Behavioral Anomaly Detection for Structured User Interface Protocols in AI Agent Systems",
+    "abstract": "AI agents that build user interfaces on the fly assembling buttons, forms, and data displays from structured protocol payloads are becoming common in production systems. The trouble is that a payload can pass every schema check and still trick a user: a button might say \"View invoice\" while its hidden action wipes an account, or a display widget might quietly bind to an internal salary field. Current defenses stop at syntax; they were never built to catch this kind of behavioral mismatch.   We built AegisUI to study exactly this gap. The framework generates structured UI payloads, injects realistic attacks into them, extracts numeric features, and benchmarks anomaly detectors end-to-end. We produced 4000 labeled payloads (3000 benign, 1000 malicious) spanning five application domains and five attack families: phishing interfaces, data leakage, layout abuse, manipulative UI, and workflow anomalies.   From each payload we extracted 18 features covering structural, semantic, binding, and session dimensions, then compared three detectors: Isolation Forest (unsupervised), a benign-trained autoencoder (semi-supervised), and Random Forest (supervised). On a stratified 80/20 split, Random Forest scored best overall (accuracy 0.931, precision 0.980, recall 0.740, F1 0.843, ROC-AUC 0.952). The autoencoder came second (F1 0.762, ROC-AUC 0.863) and needs no malicious labels at training time, which matters when deploying a new system that lacks attack history. Per-attack-type analysis showed that layout abuse is easiest to catch while manipulative UI payloads are hardest. All code, data, and configurations are released for full reproducibility.",
+    "authors": [
+      "Mohd Safwan Uddin",
+      "Saba Hajira"
+    ],
+    "published": "2026-03-05",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.05031v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.05031v1",
+    "fetched_at": "2026-03-06T08:42:54.491387"
+  },
+  {
+    "id": "2603.04727v1",
+    "title": "Are Multimodal LLMs Ready for Surveillance? A Reality Check on Zero-Shot Anomaly Detection in the Wild",
+    "abstract": "Multimodal large language models (MLLMs) have demonstrated impressive general competence in video understanding, yet their reliability for real-world Video Anomaly Detection (VAD) remains largely unexplored. Unlike conventional pipelines relying on reconstruction or pose-based cues, MLLMs enable a paradigm shift: treating anomaly detection as a language-guided reasoning task. In this work, we systematically evaluate state-of-the-art MLLMs on the ShanghaiTech and CHAD benchmarks by reformulating VAD as a binary classification task under weak temporal supervision. We investigate how prompt specificity and temporal window lengths (1s--3s) influence performance, focusing on the precision--recall trade-off. Our findings reveal a pronounced conservative bias in zero-shot settings; while models exhibit high confidence, they disproportionately favor the 'normal' class, resulting in high precision but a recall collapse that limits practical utility. We demonstrate that class-specific instructions can significantly shift this decision boundary, improving the peak F1-score on ShanghaiTech from 0.09 to 0.64, yet recall remains a critical bottleneck. These results highlight a significant performance gap for MLLMs in noisy environments and provide a foundation for future work in recall-oriented prompting and model calibration for open-world surveillance, which demands complex video understanding and reasoning.",
+    "authors": [
+      "Shanle Yao",
+      "Armin Danesh Pazho",
+      "Narges Rashvand",
+      "Hamed Tabkhi"
+    ],
+    "published": "2026-03-05",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.04727v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.04727v1",
+    "fetched_at": "2026-03-06T08:42:54.491413"
+  },
+  {
+    "id": "2603.04723v1",
+    "title": "From Offline to Periodic Adaptation for Pose-Based Shoplifting Detection in Real-world Retail Security",
+    "abstract": "Shoplifting is a growing operational and economic challenge for retailers, with incidents rising and losses increasing despite extensive video surveillance. Continuous human monitoring is infeasible, motivating automated, privacy-preserving, and resource-aware detection solutions. In this paper, we cast shoplifting detection as a pose-based, unsupervised video anomaly detection problem and introduce a periodic adaptation framework designed for on-site Internet of Things (IoT) deployment. Our approach enables edge devices in smart retail environments to adapt from streaming, unlabeled data, supporting scalable and low-latency anomaly detection across distributed camera networks. To support reproducibility, we introduce RetailS, a new large-scale real-world shoplifting dataset collected from a retail store under multi-day, multi-camera conditions, capturing unbiased shoplifting behavior in realistic IoT settings. For deployable operation, thresholds are selected using both F1 and H_PRS scores, the harmonic mean of precision, recall, and specificity, during data filtering and training. In periodic adaptation experiments, our framework consistently outperformed offline baselines on AUC-ROC and AUC-PR in 91.6% of evaluations, with each training update completing in under 30 minutes on edge-grade hardware, demonstrating the feasibility and reliability of our solution for IoT-enabled smart retail deployment.",
+    "authors": [
+      "Shanle Yao",
+      "Narges Rashvand",
+      "Armin Danesh Pazho",
+      "Hamed Tabkhi"
+    ],
+    "published": "2026-03-05",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.04723v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.04723v1",
+    "fetched_at": "2026-03-06T08:42:54.491436"
+  },
+  {
+    "id": "2603.04663v1",
+    "title": "Neuro-Symbolic Financial Reasoning via Deterministic Fact Ledgers and Adversarial Low-Latency Hallucination Detector",
+    "abstract": "Standard Retrieval-Augmented Generation (RAG) architectures fail in high-stakes financial domains due to two fundamental limitations: the inherent arithmetic incompetence of Large Language Models (LLMs) and the distributional semantic conflation of dense vector retrieval (e.g., mapping ``Net Income'' to ``Net Sales'' due to contextual proximity). In deterministic domains, a 99% accuracy rate yields 0% operational trust. To achieve zero-hallucination financial reasoning, we introduce the Verifiable Numerical Reasoning Agent (VeNRA). VeNRA shifts the RAG paradigm from retrieving probabilistic text to retrieving deterministic variables via a strictly typed Universal Fact Ledger (UFL), mathematically bounded by a novel Double-Lock Grounding algorithm. Recognizing that upstream parsing anomalies inevitably occur, we introduce the VeNRA Sentinel: a 3-billion parameter SLM trained to forensically audit Python execution traces with only one token test budget. To train this model, we avoid traditional generative hallucination datasets in favor of Adversarial Simulation, programmatically sabotaging golden financial records to simulate production-level ``Ecological Errors'' (e.g., Logic Code Lies and Numeric Neighbor Traps). Finally, to optimize the Sentinel under strict latency budgets, we utilize a single-pass classification paradigm with optional post thinking for debug. We identify the phenomenon of Loss Dilution in Reverse-Chain-of-Thought training and present a novel, OOM-safe Micro-Chunking loss algorithm to stabilize gradients under extreme differential penalization.",
+    "authors": [
+      "Pedram Agand"
+    ],
+    "published": "2026-03-04",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CE"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.04663v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.04663v1",
+    "fetched_at": "2026-03-06T08:42:54.491453"
+  },
+  {
+    "id": "2603.05504v1",
+    "title": "RoboPocket: Improve Robot Policies Instantly with Your Phone",
+    "abstract": "Scaling imitation learning is fundamentally constrained by the efficiency of data collection. While handheld interfaces have emerged as a scalable solution for in-the-wild data acquisition, they predominantly operate in an open-loop manner: operators blindly collect demonstrations without knowing the underlying policy's weaknesses, leading to inefficient coverage of critical state distributions. Conversely, interactive methods like DAgger effectively address covariate shift but rely on physical robot execution, which is costly and difficult to scale. To reconcile this trade-off, we introduce RoboPocket, a portable system that enables Robot-Free Instant Policy Iteration using single consumer smartphones. Its core innovation is a Remote Inference framework that visualizes the policy's predicted trajectory via Augmented Reality (AR) Visual Foresight. This immersive feedback allows collectors to proactively identify potential failures and focus data collection on the policy's weak regions without requiring a physical robot. Furthermore, we implement an asynchronous Online Finetuning pipeline that continuously updates the policy with incoming data, effectively closing the learning loop in minutes. Extensive experiments demonstrate that RoboPocket adheres to data scaling laws and doubles the data efficiency compared to offline scaling strategies, overcoming their long-standing efficiency bottleneck. Moreover, our instant iteration loop also boosts sample efficiency by up to 2$\\times$ in distributed environments a small number of interactive corrections per person. Project page and videos: https://robo-pocket.github.io.",
+    "authors": [
+      "Junjie Fang",
+      "Wendi Chen",
+      "Han Xue",
+      "Fangyuan Zhou",
+      "Tian Le",
+      "Yi Wang",
+      "Yuting Zhang",
+      "Jun Lv",
+      "Chuan Wen",
+      "Cewu Lu"
+    ],
+    "published": "2026-03-05",
+    "categories": [
+      "cs.RO",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.05504v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.05504v1",
+    "fetched_at": "2026-03-06T08:43:22.070402"
+  },
+  {
+    "id": "2603.05451v1",
+    "title": "FlashAttention-4: Algorithm and Kernel Pipelining Co-Design for Asymmetric Hardware Scaling",
+    "abstract": "Attention, as a core layer of the ubiquitous Transformer architecture, is the bottleneck for large language models and long-context applications. While FlashAttention-3 optimized attention for Hopper GPUs through asynchronous execution and warp specialization, it primarily targets the H100 architecture. The AI industry has rapidly transitioned to deploying Blackwell-based systems such as the B200 and GB200, which exhibit fundamentally different performance characteristics due to asymmetric hardware scaling: tensor core throughput doubles while other functional units (shared memory bandwidth, exponential units) scale more slowly or remain unchanged. We develop several techniques to address these shifting bottlenecks on Blackwell GPUs: (1) redesigned pipelines that exploit fully asynchronous MMA operations and larger tile sizes, (2) software-emulated exponential and conditional softmax rescaling that reduces non-matmul operations, and (3) leveraging tensor memory and the 2-CTA MMA mode to reduce shared memory traffic and atomic adds in the backward pass. We demonstrate that our method, FlashAttention-4, achieves up to 1.3$\\times$ speedup over cuDNN 9.13 and 2.7$\\times$ over Triton on B200 GPUs with BF16, reaching up to 1613 TFLOPs/s (71% utilization). Beyond algorithmic innovations, we implement FlashAttention-4 entirely in CuTe-DSL embedded in Python, achieving 20-30$\\times$ faster compile times compared to traditional C++ template-based approaches while maintaining full expressivity.",
+    "authors": [
+      "Ted Zadouri",
+      "Markus Hoehnerbach",
+      "Jay Shah",
+      "Timmy Liu",
+      "Vijay Thakkar",
+      "Tri Dao"
+    ],
+    "published": "2026-03-05",
+    "categories": [
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.05451v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.05451v1",
+    "fetched_at": "2026-03-06T08:43:22.070450"
+  },
+  {
+    "id": "2603.05418v1",
+    "title": "The Spatial and Temporal Resolution of Motor Intention in Multi-Target Prediction",
+    "abstract": "Reaching for grasping, and manipulating objects are essential motor functions in everyday life. Decoding human motor intentions is a central challenge for rehabilitation and assistive technologies. This study focuses on predicting intentions by inferring movement direction and target location from multichannel electromyography (EMG) signals, and investigating how spatially and temporally accurate such information can be detected relative to movement onset. We present a computational pipeline that combines data-driven temporal segmentation with classical and deep learning classifiers in order to analyse EMG data recorded during the planning, early execution, and target contact phases of a delayed reaching task.   Early intention prediction enables devices to anticipate user actions, improving responsiveness and supporting active motor recovery in adaptive rehabilitation systems. Random Forest achieves $80\\%$ accuracy and Convolutional Neural Network $75\\%$ accuracy across $25$ spatial targets, each separated by $14^\\circ$ azimuth/altitude. Furthermore, a systematic evaluation of EMG channels, feature sets, and temporal windows demonstrates that motor intention can be efficiently decoded even with drastically reduced data. This work sheds light on the temporal and spatial evolution of motor intention, paving the way for anticipatory control in adaptive rehabilitation systems and driving advancements in computational approaches to motor neuroscience.",
+    "authors": [
+      "Marie Dominique Schmidt",
+      "Ioannis Iossifidis"
+    ],
+    "published": "2026-03-05",
+    "categories": [
+      "q-bio.NC",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.05418v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.05418v1",
+    "fetched_at": "2026-03-06T08:43:22.070474"
+  },
+  {
+    "id": "2603.05344v1",
+    "title": "Building AI Coding Agents for the Terminal: Scaffolding, Harness, Context Engineering, and Lessons Learned",
+    "abstract": "The landscape of AI coding assistance is undergoing a fundamental shift from complex IDE plugins to versatile, terminal-native agents. Operating directly where developers manage source control, execute builds, and deploy environments, CLI-based agents offer unprecedented autonomy for long-horizon development tasks. In this paper, we present OPENDEV, an open-source, command-line coding agent engineered specifically for this new paradigm. Effective autonomous assistance requires strict safety controls and highly efficient context management to prevent context bloat and reasoning degradation. OPENDEV overcomes these challenges through a compound AI system architecture with workload-specialized model routing, a dual-agent architecture separating planning from execution, lazy tool discovery, and adaptive context compaction that progressively reduces older observations. Furthermore, it employs an automated memory system to accumulate project-specific knowledge across sessions and counteracts instruction fade-out through event-driven system reminders. By enforcing explicit reasoning phases and prioritizing context efficiency, OPENDEV provides a secure, extensible foundation for terminal-first AI assistance, offering a blueprint for robust autonomous software engineering.",
+    "authors": [
+      "Nghi D. Q. Bui"
+    ],
+    "published": "2026-03-05",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.05344v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.05344v1",
+    "fetched_at": "2026-03-06T08:43:22.070493"
+  },
+  {
+    "id": "2603.05232v1",
+    "title": "SlideSparse: Fast and Flexible (2N-2):2N Structured Sparsity",
+    "abstract": "NVIDIA's 2:4 Sparse Tensor Cores deliver 2x throughput but demand strict 50% pruning -- a ratio that collapses LLM reasoning accuracy (Qwen3: 54% to 15%). Milder $(2N-2):2N$ patterns (e.g., 6:8, 25% pruning) preserve accuracy yet receive no hardware support, falling back to dense execution without any benefit from sparsity. We present SlideSparse, the first system to unlock Sparse Tensor Core acceleration for the $(2N-2):2N$ model family on commodity GPUs. Our Sliding Window Decomposition reconstructs any $(2N-2):2N$ weight block into $N-1$ overlapping 2:4-compliant windows without any accuracy loss; Activation Lifting fuses the corresponding activation rearrangement into per-token quantization at near-zero cost. Integrated into vLLM, SlideSparse is evaluated across various GPUs (A100, H100, B200, RTX 4090, RTX 5080, DGX-spark), precisions (FP4, INT8, FP8, BF16, FP16), and model families (Llama, Qwen, BitNet). On compute-bound workloads, the measured speedup ratio (1.33x) approaches the theoretical upper-bound $N/(N-1)=4/3$ at 6:8 weight sparsity in Qwen2.5-7B, establishing $(2N-2):2N$ as a practical path to accuracy-preserving LLM acceleration. Code available at https://github.com/bcacdwk/vllmbench.",
+    "authors": [
+      "Hanyong Shao",
+      "Yingbo Hao",
+      "Ting Song",
+      "Yan Xia",
+      "Di Zhang",
+      "Shaohan Huang",
+      "Xun Wu",
+      "Songchen Xu",
+      "Le Xu",
+      "Li Dong",
+      "Zewen Chi",
+      "Yi Zou",
+      "Furu Wei"
+    ],
+    "published": "2026-03-05",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.05232v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.05232v1",
+    "fetched_at": "2026-03-06T08:43:22.070532"
+  },
+  {
+    "id": "2603.05069v1",
+    "title": "Jagarin: A Three-Layer Architecture for Hibernating Personal Duty Agents on Mobile",
+    "abstract": "Personal AI agents face a fundamental deployment paradox on mobile: persistent background execution drains battery and violates platform sandboxing policies, yet purely reactive agents miss time-sensitive obligations until the user remembers to ask. We present Jagarin, a three-layer architecture that resolves this paradox through structured hibernation and demand-driven wake. The first layer, DAWN (Duty-Aware Wake Network), is an on-device heuristic engine that computes a composite urgency score from four signals: duty-typed optimal action windows, user behavioral engagement prediction, opportunity cost of inaction, and cross-duty batch resonance. It uses adaptive per-user thresholds to decide when a sleeping agent should nudge or escalate. The second layer, ARIA (Agent Relay Identity Architecture), is a commercial email identity proxy that routes the full commercial inbox -- obligations, promotional offers, loyalty rewards, and platform updates -- to appropriate DAWN handlers by message category, eliminating cold-start and removing manual data entry. The third layer, ACE (Agent-Centric Exchange), is a protocol framework for direct machine-readable communication from institutions to personal agents, replacing human-targeted email as the canonical channel. Together, these three layers form a complete stack from institutional signal to on-device action, without persistent cloud state, continuous background execution, or privacy compromise. A working Flutter prototype is demonstrated on Android, combining all three layers with an ephemeral cloud agent invoked only on user-initiated escalation.",
+    "authors": [
+      "Ravi Kiran Kadaboina"
+    ],
+    "published": "2026-03-05",
+    "categories": [
+      "cs.AI",
+      "cs.HC",
+      "cs.MA"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.05069v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.05069v1",
+    "fetched_at": "2026-03-06T08:43:22.070565"
+  },
+  {
+    "id": "2603.04915v1",
+    "title": "EVMbench: Evaluating AI Agents on Smart Contract Security",
+    "abstract": "Smart contracts on public blockchains now manage large amounts of value, and vulnerabilities in these systems can lead to substantial losses. As AI agents become more capable at reading, writing, and running code, it is natural to ask how well they can already navigate this landscape, both in ways that improve security and in ways that might increase risk. We introduce EVMbench, an evaluation that measures the ability of agents to detect, patch, and exploit smart contract vulnerabilities. EVMbench draws on 117 curated vulnerabilities from 40 repositories and, in the most realistic setting, uses programmatic grading based on tests and blockchain state under a local Ethereum execution environment. We evaluate a range of frontier agents and find that they are capable of discovering and exploiting vulnerabilities end-to-end against live blockchain instances. We release code, tasks, and tooling to support continued measurement of these capabilities and future work on security.",
+    "authors": [
+      "Justin Wang",
+      "Andreas Bigger",
+      "Xiaohai Xu",
+      "Justin W. Lin",
+      "Andy Applebaum",
+      "Tejal Patwardhan",
+      "Alpin Yukseloglu",
+      "Olivia Watkins"
+    ],
+    "published": "2026-03-05",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CR"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.04915v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.04915v1",
+    "fetched_at": "2026-03-06T08:43:22.070598"
+  },
+  {
+    "id": "2603.04902v1",
+    "title": "AgentSCOPE: Evaluating Contextual Privacy Across Agentic Workflows",
+    "abstract": "Agentic systems are increasingly acting on users' behalf, accessing calendars, email, and personal files to complete everyday tasks. Privacy evaluation for these systems has focused on the input and output boundaries, but each task involves several intermediate information flows, from agent queries to tool responses, that are not currently evaluated. We argue that every boundary in an agentic pipeline is a site of potential privacy violation and must be assessed independently. To support this, we introduce the Privacy Flow Graph, a Contextual Integrity-grounded framework that decomposes agentic execution into a sequence of information flows, each annotated with the five CI parameters, and traces violations to their point of origin. We present AgentSCOPE, a benchmark of 62 multi-tool scenarios across eight regulatory domains with ground truth at every pipeline stage. Our evaluation across seven state-of-the-art LLMs show that privacy violations in the pipeline occur in over 80% of scenarios, even when final outputs appear clean (24%), with most violations arising at the tool-response stage where APIs return sensitive data indiscriminately. These results indicate that output-level evaluation alone substantially underestimates the privacy risk of agentic systems.",
+    "authors": [
+      "Ivoline C. Ngong",
+      "Keerthiram Murugesan",
+      "Swanand Kadhe",
+      "Justin D. Weisz",
+      "Amit Dhurandhar",
+      "Karthikeyan Natesan Ramamurthy"
+    ],
+    "published": "2026-03-05",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.04902v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.04902v1",
+    "fetched_at": "2026-03-06T08:43:22.070625"
+  },
+  {
+    "id": "2603.04873v1",
+    "title": "SEA-TS: Self-Evolving Agent for Autonomous Code Generation of Time Series Forecasting Algorithms",
+    "abstract": "Accurate time series forecasting underpins decision-making across domains, yet conventional ML development suffers from data scarcity in new deployments, poor adaptability under distribution shift, and diminishing returns from manual iteration. We propose Self-Evolving Agent for Time Series Algorithms (SEA-TS), a framework that autonomously generates, validates, and optimizes forecasting code via an iterative self-evolution loop. Our framework introduces three key innovations: (1) Metric-Advantage Monte Carlo Tree Search (MA-MCTS), which replaces fixed rewards with a normalized advantage score for discriminative search guidance; (2) Code Review with running prompt refinement, where each executed solution undergoes automated review followed by prompt updates that encode corrective patterns, preventing recurrence of similar errors; and (3) Global Steerable Reasoning, which compares each node against global best and worst solutions, enabling cross-trajectory knowledge transfer. We adopt a MAP-Elites archive for architectural diversity. On the public Solar-Energy benchmark, SEA-TS generated code achieves a 40% MAE reduction relative to TimeMixer, surpassing state-of-the-art methods. On proprietary datasets, SEA-TS generated code reduces WAPE by 8.6% on solar PV forecasting and 7.7% on residential load forecasting compared to human-engineered baselines, and achieves 26.17% MAPE on load forecasting versus 29.34% by TimeMixer. Notably, the evolved models discover novel architectural patterns--including physics-informed monotonic decay heads encoding solar irradiance constraints, per-station learned diurnal cycle profiles, and learnable hourly bias correction--demonstrating that autonomous ML engineering can generate genuinely novel algorithmic ideas beyond manual design.",
+    "authors": [
+      "Longkun Xu",
+      "Xiaochun Zhang",
+      "Qiantu Tuo",
+      "Rui Li"
+    ],
+    "published": "2026-03-05",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.04873v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.04873v1",
+    "fetched_at": "2026-03-06T08:43:22.070652"
+  },
+  {
+    "id": "2603.04833v1",
+    "title": "SCoUT: Scalable Communication via Utility-Guided Temporal Grouping in Multi-Agent Reinforcement Learning",
+    "abstract": "Communication can improve coordination in partially observed multi-agent reinforcement learning (MARL), but learning \\emph{when} and \\emph{who} to communicate with requires choosing among many possible sender-recipient pairs, and the effect of any single message on future reward is hard to isolate. We introduce \\textbf{SCoUT} (\\textbf{S}calable \\textbf{Co}mmunication via \\textbf{U}tility-guided \\textbf{T}emporal grouping), which addresses both these challenges via temporal and agent abstraction within traditional MARL. During training, SCoUT resamples \\textit{soft} agent groups every \\(K\\) environment steps (macro-steps) via Gumbel-Softmax; these groups are latent clusters that induce an affinity used as a differentiable prior over recipients. Using the same assignments, a group-aware critic predicts values for each agent group and maps them to per-agent baselines through the same soft assignments, reducing critic complexity and variance. Each agent is trained with a three-headed policy: environment action, send decision, and recipient selection. To obtain precise communication learning signals, we derive counterfactual communication advantages by analytically removing each sender's contribution from the recipient's aggregated messages. This counterfactual computation enables precise credit assignment for both send and recipient-selection decisions. At execution time, all centralized training components are discarded and only the per-agent policy is run, preserving decentralized execution. Project website, videos and code: \\hyperlink{https://scout-comm.github.io/}{https://scout-comm.github.io/}",
+    "authors": [
+      "Manav Vora",
+      "Gokul Puthumanaillam",
+      "Hiroyasu Tsukamoto",
+      "Melkior Ornik"
+    ],
+    "published": "2026-03-05",
+    "categories": [
+      "cs.MA",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.04833v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.04833v1",
+    "fetched_at": "2026-03-06T08:43:22.070676"
+  },
+  {
+    "id": "2603.04815v1",
+    "title": "EchoGuard: An Agentic Framework with Knowledge-Graph Memory for Detecting Manipulative Communication in Longitudinal Dialogue",
+    "abstract": "Manipulative communication, such as gaslighting, guilt-tripping, and emotional coercion, is often difficult for individuals to recognize. Existing agentic AI systems lack the structured, longitudinal memory to track these subtle, context-dependent tactics, often failing due to limited context windows and catastrophic forgetting. We introduce EchoGuard, an agentic AI framework that addresses this gap by using a Knowledge Graph (KG) as the agent's core episodic and semantic memory. EchoGuard employs a structured Log-Analyze-Reflect loop: (1) users log interactions, which the agent structures as nodes and edges in a personal, episodic KG (capturing events, emotions, and speakers); (2) the system executes complex graph queries to detect six psychologically-grounded manipulation patterns (stored as a semantic KG); and (3) an LLM generates targeted Socratic prompts grounded by the subgraph of detected patterns, guiding users toward self-discovery. This framework demonstrates how the interplay between agentic architectures and Knowledge Graphs can empower individuals in recognizing manipulative communication while maintaining personal autonomy and safety. We present the theoretical foundation, framework design, a comprehensive evaluation strategy, and a vision to validate this approach.",
+    "authors": [
+      "Ratna Kandala",
+      "Niva Manchanda",
+      "Akshata Kishore Moharir",
+      "Ananth Kandala"
+    ],
+    "published": "2026-03-05",
+    "categories": [
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.04815v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.04815v1",
+    "fetched_at": "2026-03-06T08:43:22.070699"
+  },
+  {
+    "id": "2603.04799v1",
+    "title": "Beyond Linear LLM Invocation: An Efficient and Effective Semantic Filter Paradigm",
+    "abstract": "Large language models (LLMs) are increasingly used for semantic query processing over large corpora. A set of semantic operators derived from relational algebra has been proposed to provide a unified interface for expressing such queries, among which the semantic filter operator serves as a cornerstone. Given a table T with a natural language predicate e, for each tuple in the relation, the execution of a semantic filter proceeds by constructing an input prompt that combines the predicate e with its content, querying the LLM, and obtaining the binary decision. However, this tuple-by-tuple evaluation necessitates a complete linear scan of the table, incurring prohibitive latency and token costs. Although recent work has attempted to optimize semantic filtering, it still does not break the linear LLM invocation barriers. To address this, we propose Clustering-Sampling-Voting (CSV), a new framework that reduces LLM invocations to sublinear complexity while providing error guarantees. CSV embeds tuples into semantic clusters, samples a small subset for LLM evaluation, and infers cluster-level labels via two proposed voting strategies: UniVote, which aggregates labels uniformly, and SimVote, which weights votes by semantic similarity. Moreover, CSV triggers re-clustering on ambiguous clusters to ensure robustness across diverse datasets. The results conducted on real-world datasets demonstrate that CSV reduces the number of LLM calls by 1.28-355x compared to the state-of-the-art approaches, while maintaining comparable effectiveness in terms of Accuracy and F1 score.",
+    "authors": [
+      "Nan Hou",
+      "Kangfei Zhao",
+      "Jiadong Xie",
+      "Jeffrey Xu Yu"
+    ],
+    "published": "2026-03-05",
+    "categories": [
+      "cs.DB",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.04799v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.04799v1",
+    "fetched_at": "2026-03-06T08:43:22.070723"
+  },
+  {
+    "id": "2603.04756v1",
+    "title": "MOOSEnger -- a Domain-Specific AI Agent for the MOOSE Ecosystem",
+    "abstract": "MOOSEnger is a tool-enabled AI agent tailored to the Multiphysics Object-Oriented Simulation Environment (MOOSE). MOOSE cases are specified in HIT \".i\" input files; the large object catalog and strict syntax make initial setup and debugging slow. MOOSEnger offers a conversational workflow that turns natural-language intent into runnable inputs by combining retrieval-augmented generation over curated docs/examples with deterministic, MOOSE-aware parsing, validation, and execution tools. A core-plus-domain architecture separates reusable agent infrastructure (configuration, registries, tool dispatch, retrieval services, persistence, and evaluation) from a MOOSE plugin that adds HIT-based parsing, syntax-preserving ingestion of input files, and domain-specific utilities for input repair and checking. An input precheck pipeline removes hidden formatting artifacts, fixes malformed HIT structure with a bounded grammar-constrained loop, and resolves invalid object types via similarity search over an application syntax registry. Inputs are then validated and optionally smoke-tested with the MOOSE runtime in the loop via an MCP-backed execution backend (with local fallback), translating solver diagnostics into iterative verify-and-correct updates. Built-in evaluation reports RAG metrics (faithfulness, relevancy, context precision/recall) and end-to-end success by actual execution. On a 125-prompt benchmark spanning diffusion, transient heat conduction, solid mechanics, porous flow, and incompressible Navier--Stokes, MOOSEnger achieves a 0.93 execution pass rate versus 0.08 for an LLM-only baseline.",
+    "authors": [
+      "Mengnan Li",
+      "Jason Miller",
+      "Zachary Prince",
+      "Alexander Lindsay",
+      "Cody Permann"
+    ],
+    "published": "2026-03-05",
+    "categories": [
+      "cs.AI",
+      "cs.CE",
+      "cs.SE"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.04756v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.04756v1",
+    "fetched_at": "2026-03-06T08:43:22.070748"
+  },
+  {
+    "id": "2603.04750v1",
+    "title": "HiMAP-Travel: Hierarchical Multi-Agent Planning for Long-Horizon Constrained Travel",
+    "abstract": "Sequential LLM agents fail on long-horizon planning with hard constraints like budgets and diversity requirements. As planning progresses and context grows, these agents drift from global constraints. We propose HiMAP-Travel, a hierarchical multi-agent framework that splits planning into strategic coordination and parallel day-level execution. A Coordinator allocates resources across days, while Day Executors plan independently in parallel. Three key mechanisms enable this: a transactional monitor enforcing budget and uniqueness constraints across parallel agents, a bargaining protocol allowing agents to reject infeasible sub-goals and trigger re-planning, and a single policy trained with GRPO that powers all agents through role conditioning. On TravelPlanner, HiMAP-Travel with Qwen3-8B achieves 52.78% validation and 52.65% test Final Pass Rate (FPR). In a controlled comparison with identical model, training, and tools, it outperforms the sequential DeepTravel baseline by +8.67~pp. It also surpasses ATLAS by +17.65~pp and MTP by +10.0~pp. On FlexTravelBench multi-turn scenarios, it achieves 44.34% (2-turn) and 37.42% (3-turn) FPR while reducing latency 2.5x through parallelization.",
+    "authors": [
+      "The Viet Bui",
+      "Wenjun Li",
+      "Yong Liu"
+    ],
+    "published": "2026-03-05",
+    "categories": [
+      "cs.AI",
+      "cs.CL"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.04750v1",
+    "arxiv_url": "https://arxiv.org/abs/2603.04750v1",
+    "fetched_at": "2026-03-06T08:43:22.070769"
+  },
+  {
+    "id": "2603.03589v2",
+    "title": "stratum: A System Infrastructure for Massive Agent-Centric ML Workloads",
+    "abstract": "Recent advances in large language models (LLMs) transform how machine learning (ML) pipelines are developed and evaluated. LLMs enable a new type of workload, agentic pipeline search, in which autonomous or semi-autonomous agents generate, validate, and optimize complete ML pipelines. These agents predominantly operate over popular Python ML libraries and exhibit highly exploratory behavior. This results in thousands of executions for data profiling, pipeline generation, and iterative refinement of pipeline stages. However, the existing Python-based ML ecosystem is built around libraries such as Pandas and scikit-learn, which are designed for human-centric, interactive, sequential workflows and remain constrained by Python's interpretive execution model, library-level isolation, and limited runtime support for executing large numbers of pipelines. Meanwhile, many high-performance ML systems proposed by the systems community either target narrow workload classes or require specialized programming models, which limits their integration with the Python ML ecosystem and makes them largely ill-suited for LLM-based agents. This growing mismatch exposes a fundamental systems challenge in supporting agentic pipeline search at scale. We therefore propose stratum, a unified system infrastructure that decouples pipeline execution from planning and reasoning during agentic pipeline search. Stratum integrates seamlessly with existing Python libraries, compiles batches of pipelines into optimized execution graphs, and efficiently executes them across heterogeneous backends, including a novel Rust-based runtime. We present stratum's architectural vision along with an early prototype, discuss key design decisions, and outline open challenges and research directions. Finally, preliminary experiments show that stratum can significantly speed up large-scale agentic pipeline search up to 16.6x.",
+    "authors": [
+      "Arnab Phani",
+      "Elias Strauss",
+      "Sebastian Schelter"
+    ],
+    "published": "2026-03-03",
+    "categories": [
+      "cs.DB",
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.03589v2",
+    "arxiv_url": "https://arxiv.org/abs/2603.03589v2",
+    "fetched_at": "2026-03-06T08:43:28.189216"
+  }
+]
