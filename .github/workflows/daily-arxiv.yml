@@ -2,8 +2,8 @@ name: Daily arXiv Update
 
 on:
   schedule:
-    # 每天 UTC 8:00 运行 (北京时间 16:00)
-    - cron: '0 8 * * *'
+    # Weekdays 05:00 Beijing time = previous day 21:00 UTC, Sun-Thu cron
+    - cron: '0 21 * * 0-4'
   workflow_dispatch: # 允许手动触发
 
 permissions:
@@ -17,38 +17,41 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          ref: main
+          ref: guohao_vitepress
           token: ${{ secrets.GITHUB_TOKEN }}
-      
+          fetch-depth: 0
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      
-      - name: Install dependencies
-        run: pip install openai
-      
-      - name: Crawl arXiv papers
-        run: python scripts/arxiv_crawler.py
-      
-      - name: Process papers with LLM
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install Python dependencies
+        run: pip install -r scripts/arxiv_radar/requirements.txt
+
+      - name: Install Node dependencies
+        run: npm ci
+
+      - name: Run arXiv radar pipeline
         env:
-          ARK_API_KEY: ${{ secrets.ARK_API_KEY }}
-        run: python scripts/paper_processor.py
-        continue-on-error: true
-      
-      - name: Generate daily markdown
-        run: python scripts/generate_daily.py
-      
-      - name: Generate topic index
-        run: python scripts/generate_topic_index.py
-      
+          DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
+        run: npm run arxiv:update
+
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: update arXiv papers for $(date +'%Y-%m-%d')"
-          branch: main
+          branch: guohao_vitepress
           file_pattern: |
-            data/papers/*.json
-            data/papers/processed/*.json
-            论文/AI金融论文整理/**/*.md
+            data/papers.json
+            data/stats.json
+            data/embeddings_index.json
+            docs/public/arxiv-data/*.json
+            docs/public/arxiv-charts/*.html
+            README.md
