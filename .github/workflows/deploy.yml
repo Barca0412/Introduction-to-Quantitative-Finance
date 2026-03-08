@@ -3,7 +3,7 @@ name: Deploy VitePress
 on:
   push:
     branches:
-      - main
+      - guohao_vitepress
   workflow_dispatch:
 
 permissions:

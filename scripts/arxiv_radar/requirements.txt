@@ -1,0 +1,5 @@
+aiohttp
+arxiv
+plotly
+python-dateutil
+python-dotenv

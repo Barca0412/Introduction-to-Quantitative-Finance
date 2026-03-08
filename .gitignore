@@ -1,8 +1,8 @@
 # Dependencies
 node_modules/
 
-# VitePress (在 guohao_vitepress 分支)
-docs/
+# VitePress build output
+docs/.vitepress/dist/
 
 # OS
 .DS_Store

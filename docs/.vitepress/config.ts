@@ -103,11 +103,14 @@ export default defineConfig({
       ],
       '/arxiv/': [
         {
-          text: 'AI+金融论文',
+          text: 'ArXiv Radar',
           link: '/arxiv/',
           collapsed: false,
           items: [
-            { text: '标签分类', link: '/arxiv/tags/' }
+            { text: '总览', link: '/arxiv/' },
+            { text: 'Papers', link: '/arxiv/papers' },
+            { text: 'Trends', link: '/arxiv/trends' },
+            { text: 'About', link: '/arxiv/about' }
           ]
         },
         quickNav
