@@ -43,16 +43,28 @@
 </div>
 
 
-# [AI+金融 📄 论文整理](./论文/AI金融论文整理/README.md) （12-15已更新，点击查看）
+<a id="section-arxiv"></a>
 
-每日自动更新 arXiv 上 AI+金融相关论文，使用 LLM 生成中文概述与标签。
+# AI + Finance arXiv Radar
 
-- 📰 **每日更新**: 自动抓取arXiv上 q-fin、cs.LG+finance 相关论文
-- 🤔 **智能分析**: 使用大模型生成中文摘要和关键贡献
-- 🏷️ **主题分类**: Asset Pricing、LLM、Factor Mining、RL 等标签
+站点已集成新的 `/arxiv/` Radar 子站，替换原有的旧版 arXiv 文档体验。
 
-<a id="section2"></a>
+- 入口：VitePress `/arxiv/` 子区块
+- 能力：论文列表、趋势图、语义检索、机构筛选、标签聚合
+- 数据：`data/papers.json`、`data/stats.json`、`data/embeddings_index.json`
+- 管线：`scripts/arxiv_radar/`
 
+<!-- ARXIV_RADAR_STATUS:START -->
+> [!NOTE]
+> Machine-updated arXiv Radar Status
+> - Latest update: 2026-03-08
+> - Indexed papers: 962
+> - Focus papers: 494
+> - Latest publication date: 2026-03-05
+> - Monitored categories: 10
+<!-- ARXIV_RADAR_STATUS:END -->
+
+如需刷新数据与 README 状态块，可运行：`npm run arxiv:update`
 
 # 基于多因子股票量化投研框架的开源教程
 
@@ -86,7 +98,7 @@
 - 机器学习因子挖掘💻
 - ...
 
-<a id="section-arxiv"></a>
+<a id="section2"></a>
 
 # 公开资料整理
 
