@@ -55,3 +55,16 @@ jobs:
             docs/public/arxiv-data/*.json
             docs/public/arxiv-charts/*.html
             README.md
+
+      - name: Copy updated README for default branch
+        run: cp README.md /tmp/arxiv-radar-readme.md
+
+      - name: Switch to main and sync README
+        run: git fetch origin main && git checkout -B main origin/main && cp /tmp/arxiv-radar-readme.md README.md
+
+      - name: Commit README status to main
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "docs: sync arXiv radar README status"
+          branch: main
+          file_pattern: README.md
