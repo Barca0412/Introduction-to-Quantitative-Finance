@@ -137,6 +137,7 @@
 - [kernc/backtesting.py](https://github.com/kernc/backtesting.py) - 简洁高效Python回测库
 - [polakowo/vectorbt](https://github.com/polakowo/vectorbt) - 极速向量化回测，支持大规模参数优化
 - [stefan-jansen/zipline-reloaded](https://github.com/stefan-jansen/zipline-reloaded) - Quantopian事件驱动框架维护版
+- [HephaestLab/TraderHarness](https://github.com/HephaestLab/TraderHarness) - 抗数据污染的A股LLM交易Agent回测环境：时点掩码、实体/日期匿名化、指纹回放与SFT轨迹导出
 
 ### 因子挖掘与机器学习
 - [RndmVariableQ/AlphaAgent](https://github.com/RndmVariableQ/AlphaAgent) - KDD 2025 LLM驱动因子挖掘
