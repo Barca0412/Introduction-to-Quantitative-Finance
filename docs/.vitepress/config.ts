@@ -20,6 +20,30 @@ export default defineConfig({
   lang: 'zh-CN',
   ignoreDeadLinks: true,
   base: '/Introduction-to-Quantitative-Finance/',
+  sitemap: {
+    hostname: 'https://barca0412.github.io',
+    transformItems: (items) => items.map((item) => ({
+      ...item,
+      url: `/Introduction-to-Quantitative-Finance/${item.url}`,
+      links: item.links?.map((link) => ({
+        ...link,
+        url: `/Introduction-to-Quantitative-Finance/${link.url}`
+      }))
+    }))
+  },
+  transformHead: ({ page }) => {
+    const path = page
+      .replace(/(^|\/)index\.md$/, '$1')
+      .replace(/\.md$/, '')
+
+    return [[
+      'link',
+      {
+        rel: 'canonical',
+        href: `https://barca0412.github.io/Introduction-to-Quantitative-Finance/${path}`
+      }
+    ]]
+  },
   
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
@@ -31,8 +55,29 @@ export default defineConfig({
     ['meta', { property: 'og:title', content: '量化研究入门 - 多因子投研框架教程' }],
     ['meta', { property: 'og:description', content: '基于多因子股票量化投研框架的开源教程，每日更新AI+金融论文' }],
     ['meta', { property: 'og:url', content: 'https://barca0412.github.io/Introduction-to-Quantitative-Finance/' }],
+    ['meta', { property: 'og:image', content: 'https://barca0412.github.io/Introduction-to-Quantitative-Finance/og-cover.png' }],
+    ['meta', { property: 'og:image:alt', content: '量化研究入门：多因子投研框架与 AI 金融论文雷达' }],
     // Twitter Card
-    ['meta', { name: 'twitter:card', content: 'summary' }],
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { name: 'twitter:image', content: 'https://barca0412.github.io/Introduction-to-Quantitative-Finance/og-cover.png' }],
+    ['script', { type: 'application/ld+json' }, JSON.stringify({
+      '@context': 'https://schema.org',
+      '@graph': [
+        {
+          '@type': 'Organization',
+          name: '湖南大学金融科技协会 Quant Group',
+          url: 'https://barca0412.github.io/Introduction-to-Quantitative-Finance/',
+          sameAs: ['https://github.com/Barca0412/Introduction-to-Quantitative-Finance']
+        },
+        {
+          '@type': 'WebSite',
+          name: '量化研究入门',
+          url: 'https://barca0412.github.io/Introduction-to-Quantitative-Finance/',
+          inLanguage: 'zh-CN',
+          description: '基于多因子股票量化投研框架的开源教程，并提供每日更新的 AI 与金融论文雷达。'
+        }
+      ]
+    })],
   ],
 
   themeConfig: {
