@@ -1,15 +1,39 @@
-# 量化研究入门资料 (走过路过给个star！感谢朋友们)
+# 量化研究入门资料
 
+> 面向量化研究者与学习者的中文开源知识库：多因子投研框架、AI + Finance arXiv Radar，以及经过整理的工具、课程与研究资源。
 
- ![visitors](https://visitor-badge.laobi.icu/badge?page_id=Barca0412.Introduction-to-Quantitative-Finance)
+<p align="center">
+  <a href="https://barca0412.github.io/Introduction-to-Quantitative-Finance/"><strong>浏览文档站</strong></a> ·
+  <a href="https://barca0412.github.io/Introduction-to-Quantitative-Finance/arxiv/"><strong>查看 AI + Finance Radar</strong></a> ·
+  <a href="https://github.com/Barca0412/Introduction-to-Quantitative-Finance/discussions"><strong>参与讨论</strong></a> ·
+  <a href="#contributing"><strong>参与贡献</strong></a>
+</p>
 
-目录：
+<p align="center">
+  <a href="https://github.com/Barca0412/Introduction-to-Quantitative-Finance/stargazers"><img src="https://img.shields.io/github/stars/Barca0412/Introduction-to-Quantitative-Finance?style=flat&color=ffd700" alt="GitHub stars"></a>
+  <a href="https://github.com/Barca0412/Introduction-to-Quantitative-Finance/forks"><img src="https://img.shields.io/github/forks/Barca0412/Introduction-to-Quantitative-Finance?style=flat" alt="GitHub forks"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/Barca0412/Introduction-to-Quantitative-Finance" alt="MIT License"></a>
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=Barca0412.Introduction-to-Quantitative-Finance" alt="Visitors">
+</p>
 
-- [基于多因子股票量化投研框架的开源教程](#基于多因子股票量化投研框架的开源教程)
-- [我的资料](#section1)
-- [AI+金融论文整理](#section-arxiv) 🆕
-- [公开资料整理](#section2)
------
+## 你会得到什么
+
+- **多因子量化投研教程**：从研究框架到因子、回测与组合优化的学习路线。
+- **AI + Finance arXiv Radar**：工作日自动抓取、聚类与检索相关论文，提供趋势与标签视图。
+- **精选资源地图**：量化数据、回测、因子挖掘、机器学习、强化学习与金融课程的持续整理。
+
+## 快速开始
+
+| 想做什么 | 从这里开始 |
+| --- | --- |
+| 系统学习量化投研 | [多因子投研框架教程](#基于多因子股票量化投研框架的开源教程) |
+| 跟踪 AI + Finance 最新论文 | [arXiv Radar](https://barca0412.github.io/Introduction-to-Quantitative-Finance/arxiv/) |
+| 查找工具、课程与资料 | [公开资料整理](#section2) |
+| 提出建议或补充资源 | [GitHub Discussions](https://github.com/Barca0412/Introduction-to-Quantitative-Finance/discussions) |
+
+如果这个项目对你有帮助，欢迎点一个 Star ⭐；它能帮助更多量化学习者发现这份资料。
+
+---
 
 <!--
 <div align="center">
@@ -57,14 +81,20 @@
 <!-- ARXIV_RADAR_STATUS:START -->
 > [!NOTE]
 > Machine-updated arXiv Radar Status
-> - Latest update: 2026-03-08
-> - Indexed papers: 962
-> - Focus papers: 494
-> - Latest publication date: 2026-03-05
+> - Latest update: 2026-08-12
+> - Indexed papers: 14705
+> - Focus papers: 6126
+> - Latest publication date: 2026-08-11
 > - Monitored categories: 10
 <!-- ARXIV_RADAR_STATUS:END -->
 
 如需刷新数据与 README 状态块，可运行：`npm run arxiv:update`
+
+<a id="contributing"></a>
+
+## Contributing
+
+欢迎补充高质量资料、修复失效链接、改进教程或完善 Radar 标签。提交前请先在 [Discussions](https://github.com/Barca0412/Introduction-to-Quantitative-Finance/discussions) 交流想法；小型修正可直接提交 Pull Request，并说明资料来源与适用场景。
 
 # 基于多因子股票量化投研框架的开源教程
 
