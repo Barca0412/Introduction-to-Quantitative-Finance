@@ -43,28 +43,52 @@ jobs:
           DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
         run: npm run arxiv:update
 
-      - name: Commit and push changes
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "chore: update arXiv papers for $(date +'%Y-%m-%d')"
-          branch: guohao_vitepress
-          file_pattern: |
-            data/papers.json
-            data/stats.json
-            data/embeddings_index.json
-            docs/public/arxiv-data/*.json
-            docs/public/arxiv-charts/*.html
+      - name: Commit and push radar data
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            data/papers.json \
+            data/stats.json \
+            data/embeddings_index.json \
+            docs/public/arxiv-data \
+            docs/public/arxiv-charts \
             README.md
+          if git diff --cached --quiet; then
+            echo "No radar changes to commit."
+          else
+            git commit -m "chore: update arXiv papers for $(date +'%Y-%m-%d')"
+            git push origin HEAD:guohao_vitepress
+          fi
 
-      - name: Copy updated README for default branch
-        run: cp README.md /tmp/arxiv-radar-readme.md
+      - name: Sync README status to main
+        shell: bash
+        run: |
+          main_worktree="$(mktemp -d)"
+          trap 'git worktree remove --force "${main_worktree}" || true; rm -rf "${main_worktree}"' EXIT
+          git worktree add --detach "${main_worktree}" origin/main
+          cp README.md "${main_worktree}/README.md"
+          cd "${main_worktree}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          if git diff --cached --quiet; then
+            echo "README status is already current on main."
+          else
+            git commit -m "docs: sync arXiv radar README status"
+            git push origin HEAD:main
+          fi
 
-      - name: Switch to main and sync README
-        run: git fetch origin main && git checkout -B main origin/main && cp /tmp/arxiv-radar-readme.md README.md
+      # GITHUB_TOKEN-generated pushes do not reliably start other workflows.
+      # Publish here as well, so the Radar update and the public site stay in sync.
+      - name: Build VitePress site
+        run: npm run docs:build
 
-      - name: Commit README status to main
-        uses: stefanzweifel/git-auto-commit-action@v5
+      - name: Publish site to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          commit_message: "docs: sync arXiv radar README status"
-          branch: main
-          file_pattern: README.md
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: docs/.vitepress/dist
+          force_orphan: true
