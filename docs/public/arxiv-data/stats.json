@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-12T21:47:40.231496",
+  "last_updated": "2026-08-13T21:47:17.677318",
   "tag_stats": {
     "_all": {
       "daily": [
@@ -453,6 +453,10 @@
         },
         {
           "date": "2026-08-11",
+          "counts": {}
+        },
+        {
+          "date": "2026-08-12",
           "counts": {}
         }
       ],
@@ -2335,6 +2339,26 @@
             "multimodal": 121,
             "ai-finance": 7
           }
+        },
+        {
+          "date": "2026-08-12",
+          "counts": {
+            "memory": 34,
+            "agent-planning": 46,
+            "deep-research": 5,
+            "benchmark": 159,
+            "rag": 46,
+            "reasoning": 96,
+            "multi-agent": 60,
+            "code-generation": 41,
+            "tool-use": 21,
+            "rlhf-alignment": 51,
+            "time-series": 25,
+            "prompt-engineering": 16,
+            "training-efficiency": 66,
+            "multimodal": 121,
+            "ai-finance": 7
+          }
         }
       ]
     }
@@ -3090,6 +3114,10 @@
         },
         {
           "date": "2026-08-11",
+          "counts": {}
+        },
+        {
+          "date": "2026-08-12",
           "counts": {}
         }
       ],
@@ -15104,17 +15132,146 @@
             "3d reconstruction": 3,
             "web agents": 3
           }
+        },
+        {
+          "date": "2026-08-12",
+          "counts": {
+            "large language models": 72,
+            "reinforcement learning": 43,
+            "vision-language models": 21,
+            "llm agents": 19,
+            "retrieval-augmented generation": 16,
+            "group relative policy optimization": 14,
+            "multimodal large language models": 11,
+            "multi-agent framework": 10,
+            "catastrophic forgetting": 10,
+            "multi-agent systems": 9,
+            "evaluation framework": 9,
+            "chain-of-thought": 9,
+            "supervised fine-tuning": 9,
+            "automatic speech recognition": 9,
+            "generative ai": 9,
+            "diffusion models": 9,
+            "multi-agent reinforcement learning": 7,
+            "in-context learning": 7,
+            "multi-task learning": 7,
+            "llm-as-a-judge": 7,
+            "continual learning": 7,
+            "federated learning": 7,
+            "mixture-of-experts": 7,
+            "contrastive learning": 7,
+            "fine-tuning": 6,
+            "benchmark": 6,
+            "knowledge distillation": 6,
+            "graph neural networks": 6,
+            "imitation learning": 6,
+            "large language model": 6,
+            "multi-agent collaboration": 5,
+            "test-time adaptation": 5,
+            "long-term memory": 5,
+            "knowledge graph": 5,
+            "interpretability": 5,
+            "benchmark evaluation": 5,
+            "llm safety": 5,
+            "robotic manipulation": 5,
+            "instruction tuning": 5,
+            "state space models": 5,
+            "cross-modal alignment": 5,
+            "agentic systems": 5,
+            "multi-agent system": 5,
+            "llm-based agents": 5,
+            "flow matching": 5,
+            "low-rank adaptation (lora)": 5,
+            "agentic ai": 5,
+            "low-resource languages": 5,
+            "formal verification": 4,
+            "model predictive control": 4,
+            "mathematical reasoning": 4,
+            "grpo": 4,
+            "safety alignment": 4,
+            "convolutional neural networks": 4,
+            "diffusion model": 4,
+            "reinforcement learning with verifiable rewards": 4,
+            "deep reinforcement learning": 4,
+            "chain-of-thought reasoning": 4,
+            "code generation": 4,
+            "test-time scaling": 4,
+            "linear probes": 4,
+            "vision-language-action (vla)": 4,
+            "model merging": 4,
+            "diffusion language models": 4,
+            "world model": 4,
+            "offline reinforcement learning": 4,
+            "parameter-efficient fine-tuning": 4,
+            "transformers": 4,
+            "software engineering": 3,
+            "multi-agent coordination": 3,
+            "drug discovery": 3,
+            "internal representations": 3,
+            "self-distillation": 3,
+            "explainable ai": 3,
+            "inference efficiency": 3,
+            "model efficiency": 3,
+            "transformer": 3,
+            "attention mechanism": 3,
+            "large multimodal models": 3,
+            "zero-shot learning": 3,
+            "proximal policy optimization": 3,
+            "multi-hop reasoning": 3,
+            "temporal dynamics": 3,
+            "graphrag": 3,
+            "direct preference optimization": 3,
+            "reasoning capabilities": 3,
+            "multimodal llms": 3,
+            "model compression": 3,
+            "multimodal retrieval": 3,
+            "monte carlo tree search": 3,
+            "reward models": 3,
+            "membership inference": 3,
+            "partial differential equations": 3,
+            "human-in-the-loop": 3,
+            "vision-language-action models": 3,
+            "foundation model": 3,
+            "generalization": 3,
+            "linear complexity": 3,
+            "early exit": 3,
+            "large vision-language models": 3,
+            "sample efficiency": 3,
+            "epistemic uncertainty": 3,
+            "training-free": 3,
+            "physics-informed neural networks": 3,
+            "vision-language navigation": 3,
+            "importance sampling": 3,
+            "synthetic data generation": 3,
+            "model evaluation": 3,
+            "coding agents": 3,
+            "reward model": 3,
+            "recommender systems": 3,
+            "autonomous driving": 3,
+            "world models": 3,
+            "explainability": 3,
+            "uncertainty quantification": 3,
+            "information retrieval": 3,
+            "clip": 3,
+            "generalization bounds": 3,
+            "long-horizon tasks": 3,
+            "human-robot collaboration": 3,
+            "post-training quantization": 3,
+            "time series forecasting": 3,
+            "3d reconstruction": 3,
+            "web agents": 3
+          }
         }
       ]
     }
   },
   "summary": {
-    "total_papers": 14705,
-    "focus_papers": 6126,
+    "total_papers": 14900,
+    "focus_papers": 6210,
     "monitored_categories": 10,
-    "observed_categories": 125,
+    "observed_categories": 126,
     "tracked_tags": 15,
-    "latest_published_date": "2026-08-11",
+    "latest_published_date": "2026-08-12",
     "focus_tag_counts": {
       "reasoning": 96,
       "multi-agent": 60,
@@ -15127,9 +15284,9 @@
       "deep-research": 5
     },
     "focus_topic_counts": {
-      "agent-planning": 3703,
-      "ai-finance": 2129,
-      "deep-research": 150,
+      "agent-planning": 3760,
+      "ai-finance": 2155,
+      "deep-research": 151,
       "reasoning": 52,
       "time-series": 18,
       "rag": 13,
@@ -15137,17 +15294,17 @@
       "tool-use": 2
     },
     "top_categories": {
-      "cs.AI": 8799,
-      "cs.CL": 5758,
-      "cs.LG": 3592,
-      "cs.SE": 1697,
-      "cs.CV": 1634,
-      "cs.IR": 1108,
-      "cs.MA": 817,
-      "cs.CR": 685,
-      "cs.RO": 531,
-      "cs.CE": 496
+      "cs.AI": 8914,
+      "cs.CL": 5839,
+      "cs.LG": 3643,
+      "cs.SE": 1714,
+      "cs.CV": 1662,
+      "cs.IR": 1123,
+      "cs.MA": 826,
+      "cs.CR": 696,
+      "cs.RO": 537,
+      "cs.CE": 502
     },
-    "tag_days": 94
+    "tag_days": 95
   }
 }
