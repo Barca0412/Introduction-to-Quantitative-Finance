@@ -2,8 +2,9 @@ name: Daily arXiv Update
 
 on:
   schedule:
-    # Weekdays 05:00 Beijing time = previous day 21:00 UTC, Sun-Thu cron
-    - cron: '0 21 * * 0-4'
+    # 05:00 Beijing time. Run every day so a Friday publication cannot fall
+    # into the gap between weekday runs.
+    - cron: '0 21 * * *'
   workflow_dispatch: # 允许手动触发
 
 permissions:
