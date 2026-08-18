@@ -503,7 +503,9 @@ REQUEST_TIMEOUT = 90
 # ============================================
 # arXiv Fetching Configuration
 # ============================================
-FETCH_DAYS = 2
+# Include the current UTC date and keep a full week of slack for arXiv's
+# weekday announcement cycle, weekends, and delayed submissions.
+FETCH_DAYS = 7
 MAX_RESULTS_PER_CATEGORY = 100
 
 # ============================================

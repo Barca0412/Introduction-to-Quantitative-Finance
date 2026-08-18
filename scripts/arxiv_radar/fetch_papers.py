@@ -27,17 +27,23 @@ def fetch_category_papers(
     category: str,
     target_dates: List[str],
     max_results: int = MAX_RESULTS_PER_CATEGORY,
+    client: Optional[arxiv.Client] = None,
 ) -> List[Dict[str, Any]]:
     """Fetch papers from a single arXiv category and filter by target dates."""
     logger.info("Fetching papers from category: %s", category)
 
     papers: List[Dict[str, Any]] = []
-    client = arxiv.Client()
+    client = client or arxiv.Client()
     target_date_set = set(target_dates)
+    start_date = min(target_date_set).replace("-", "") + "0000"
+    end_date = max(target_date_set).replace("-", "") + "2359"
 
     try:
         search = arxiv.Search(
-            query=f"cat:{category}",
+            query=(
+                f"cat:{category} AND "
+                f"submittedDate:[{start_date} TO {end_date}]"
+            ),
             max_results=max_results,
             sort_by=arxiv.SortCriterion.SubmittedDate,
             sort_order=arxiv.SortOrder.Descending,
@@ -56,22 +62,30 @@ def fetch_category_papers(
     return papers
 
 
-async def fetch_all_categories_parallel(
+async def fetch_all_categories(
     categories: List[str],
     days: int = FETCH_DAYS,
 ) -> List[Dict[str, Any]]:
-    """Fetch recent papers from all monitored categories in parallel."""
+    """Fetch recent papers from all monitored categories within arXiv's rate limit."""
     target_dates = get_target_dates(days)
     logger.info("Fetching papers for target dates: %s", ", ".join(target_dates))
     logger.info("Fetching papers from %s categories...", len(categories))
 
     loop = asyncio.get_running_loop()
-    tasks = [
-        loop.run_in_executor(None, fetch_category_papers, category, target_dates)
-        for category in categories
-    ]
-
-    results = await asyncio.gather(*tasks)
+    # One shared client serializes requests and enforces arXiv's 3-second
+    # minimum delay. Parallel clients can otherwise produce intermittent 429s.
+    client = arxiv.Client(delay_seconds=3.0, num_retries=3)
+    results = []
+    for category in categories:
+        papers = await loop.run_in_executor(
+            None,
+            fetch_category_papers,
+            category,
+            target_dates,
+            MAX_RESULTS_PER_CATEGORY,
+            client,
+        )
+        results.append(papers)
     all_papers: List[Dict[str, Any]] = []
     for papers in results:
         all_papers.extend(papers)
@@ -87,10 +101,11 @@ async def run_pipeline() -> Optional[Dict[str, Any]]:
     logger.info("=" * 60)
 
     logger.info("\n[Step 1] Fetching papers from arXiv...")
-    fetched_papers = await fetch_all_categories_parallel(ARXIV_CATEGORIES)
+    fetched_papers = await fetch_all_categories(ARXIV_CATEGORIES)
     if not fetched_papers:
-        logger.warning("No papers fetched. Exiting.")
-        return None
+        raise RuntimeError(
+            "No papers matched the arXiv date window. Refusing to publish stale Radar data."
+        )
 
     deduped_batch = merge_papers({"papers": []}, fetched_papers)["papers"]
     if len(deduped_batch) != len(fetched_papers):

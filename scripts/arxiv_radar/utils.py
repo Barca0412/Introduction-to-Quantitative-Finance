@@ -18,11 +18,19 @@ def get_date_range(days: int = 2) -> Tuple[str, str]:
 
 
 def get_target_dates(days: int = 2) -> List[str]:
-    """Return the last ``days`` completed UTC dates in ascending order."""
+    """Return a UTC date window ending today in ascending order.
+
+    The workflow runs after arXiv's daily release window. Excluding the
+    current UTC date meant the newest API results were routinely discarded;
+    a wider inclusive window also covers weekends and announcement delays.
+    """
+    if days < 1:
+        raise ValueError("days must be at least 1")
+
     today = datetime.utcnow().date()
     return [
         (today - timedelta(days=offset)).isoformat()
-        for offset in range(days, 0, -1)
+        for offset in range(days - 1, -1, -1)
     ]
 
 

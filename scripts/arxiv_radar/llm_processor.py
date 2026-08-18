@@ -206,6 +206,22 @@ def validate_tags_for_paper(paper: Dict[str, Any], tags: List[str]) -> List[str]
     return validated[:3]
 
 
+def fallback_tags_for_paper(paper: Dict[str, Any]) -> List[str]:
+    """Produce conservative navigation tags when the LLM secret is unavailable."""
+    text = _paper_text(paper)
+    categories = [str(category) for category in paper.get("categories", [])]
+    tags: List[str] = []
+
+    if _has_any(text, FINANCE_TERMS) or any(category.startswith("q-fin.") for category in categories):
+        tags.append("ai-finance")
+
+    for tag, signals in TAG_SIGNALS.items():
+        if _has_any(text, signals):
+            tags.append(tag)
+
+    return validate_tags_for_paper(paper, tags)
+
+
 def async_retry(max_retries: int = 3, base_delay: float = 2.0):
     """
     Decorator for async function retry with exponential backoff.
@@ -449,11 +465,13 @@ async def process_papers_batch(
         List of processed papers
     """
     if not DASHSCOPE_API_KEY:
-        logger.warning("DASHSCOPE_API_KEY is not configured; skipping LLM enrichment")
+        logger.warning(
+            "DASHSCOPE_API_KEY is not configured; using deterministic fallback tags"
+        )
         return [
             {
                 **paper,
-                "tags": list(paper.get("tags", [])),
+                "tags": fallback_tags_for_paper(paper),
                 "keywords": list(paper.get("keywords", [])),
                 "summary_zh": str(paper.get("summary_zh", "")),
             }
