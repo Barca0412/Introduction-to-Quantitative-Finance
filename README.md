@@ -81,7 +81,7 @@
 <!-- ARXIV_RADAR_STATUS:START -->
 > [!NOTE]
 > Machine-updated arXiv Radar Status
-> - Latest update: 2026-08-29
+> - Latest update: 2026-08-30
 > - Indexed papers: 16804
 > - Focus papers: 7736
 > - Latest publication date: 2026-08-27
