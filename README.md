@@ -81,10 +81,10 @@
 <!-- ARXIV_RADAR_STATUS:START -->
 > [!NOTE]
 > Machine-updated arXiv Radar Status
-> - Latest update: 2026-09-02
-> - Indexed papers: 17537
-> - Focus papers: 8299
-> - Latest publication date: 2026-09-01
+> - Latest update: 2026-09-03
+> - Indexed papers: 17748
+> - Focus papers: 8465
+> - Latest publication date: 2026-09-02
 > - Monitored categories: 10
 <!-- ARXIV_RADAR_STATUS:END -->
 
@@ -167,7 +167,6 @@
 - [kernc/backtesting.py](https://github.com/kernc/backtesting.py) - 简洁高效Python回测库
 - [polakowo/vectorbt](https://github.com/polakowo/vectorbt) - 极速向量化回测，支持大规模参数优化
 - [stefan-jansen/zipline-reloaded](https://github.com/stefan-jansen/zipline-reloaded) - Quantopian事件驱动框架维护版
-- [HephaestLab/TraderHarness](https://github.com/HephaestLab/TraderHarness) - 抗数据污染的A股LLM交易Agent回测环境：时点掩码、实体/日期匿名化、指纹回放与SFT轨迹导出
 
 ### 因子挖掘与机器学习
 - [RndmVariableQ/AlphaAgent](https://github.com/RndmVariableQ/AlphaAgent) - KDD 2025 LLM驱动因子挖掘
@@ -267,5 +266,3 @@
 By the way 所整理资料可能有不完善的地方,如有好的建议可移步 `Discussions` 留言
 
 或联系：📫Email：qgh124430@hnu.edu.cn, 📞Wechat：qgh985695077
-
-国内 AtomGit 同步托管：[便于国内用户访问](https://atomgit.com/Barca12345/Introduction-to-Quantitative-Finance)
