@@ -267,3 +267,5 @@
 By the way 所整理资料可能有不完善的地方,如有好的建议可移步 `Discussions` 留言
 
 或联系：📫Email：qgh124430@hnu.edu.cn, 📞Wechat：qgh985695077
+
+国内 AtomGit 同步托管：[便于国内用户访问](https://atomgit.com/Barca12345/Introduction-to-Quantitative-Finance)
