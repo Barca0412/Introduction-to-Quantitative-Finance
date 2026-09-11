@@ -59,7 +59,7 @@
         <img width="341"  alt="image" src="https://github.com/user-attachments/assets/60a940e6-88b6-4c6d-ae86-6c125085ca14" />
       </td>
       <td align="center" width="33%">
-        <img src="https://api.star-history.com/svg?repos=Barca0412/Introduction-to-Quantitative-Finance&type=Date" alt="Star History Chart" style="width: 100%; max-width: 300px;"/>
+        <img src="https://star-history.dera.page/svg?repos=Barca0412/Introduction-to-Quantitative-Finance&type=Date" alt="Star History Chart" style="width: 100%; max-width: 300px;"/>
       </td>
     </tr>
   </table>
