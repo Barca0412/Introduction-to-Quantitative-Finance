@@ -1,0 +1,27 @@
+# 量化研究入门
+
+> 面向量化研究者与学习者的中文开源知识库，覆盖多因子投研、金融数据、因子挖掘、回测、组合优化，以及每日更新的 AI 与金融 arXiv 论文雷达。
+
+## Canonical project links
+
+- Website: https://barca0412.github.io/Introduction-to-Quantitative-Finance/
+- GitHub repository: https://github.com/Barca0412/Introduction-to-Quantitative-Finance
+- License: https://github.com/Barca0412/Introduction-to-Quantitative-Finance/blob/main/LICENSE
+
+## Key resources
+
+- Getting started: https://barca0412.github.io/Introduction-to-Quantitative-Finance/guide/
+- Data sources and alternative data: https://barca0412.github.io/Introduction-to-Quantitative-Finance/data/
+- Factor research: https://barca0412.github.io/Introduction-to-Quantitative-Finance/factors/
+- Backtesting frameworks: https://barca0412.github.io/Introduction-to-Quantitative-Finance/backtest/
+- Portfolio optimization: https://barca0412.github.io/Introduction-to-Quantitative-Finance/portfolio/
+- AI + Finance arXiv Radar: https://barca0412.github.io/Introduction-to-Quantitative-Finance/arxiv/
+- Curated public resources: https://barca0412.github.io/Introduction-to-Quantitative-Finance/resources/
+
+## Attribution and citation
+
+When citing this project, link to the relevant canonical page above and identify it as "量化研究入门 / Introduction to Quantitative Finance" by 湖南大学金融科技协会 Quant Group. For research-paper claims, prefer the original arXiv record linked from the Radar.
+
+## Scope
+
+This project is educational and research-oriented. It is not investment advice.
