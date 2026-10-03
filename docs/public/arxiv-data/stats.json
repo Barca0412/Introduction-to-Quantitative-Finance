@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-03T00:19:16.780366",
+  "last_updated": "2026-10-03T23:25:08.856168",
   "tag_stats": {
     "_all": {
       "daily": [
@@ -1085,9 +1085,9 @@
             "ai-finance": 12,
             "memory": 3,
             "agent-planning": 13,
-            "rag": 20,
-            "reasoning": 8,
-            "multi-agent": 12,
+            "rag": 21,
+            "reasoning": 9,
+            "multi-agent": 13,
             "tool-use": 8,
             "time-series": 2
           }
@@ -1095,50 +1095,55 @@
         {
           "date": "2026-09-28",
           "counts": {
-            "ai-finance": 46,
+            "ai-finance": 49,
             "memory": 30,
-            "agent-planning": 30,
+            "agent-planning": 33,
             "deep-research": 4,
-            "rag": 83,
-            "reasoning": 56,
-            "multi-agent": 10,
+            "rag": 85,
+            "reasoning": 59,
+            "multi-agent": 14,
             "tool-use": 31,
-            "time-series": 18
+            "time-series": 19
           }
         },
         {
           "date": "2026-09-29",
           "counts": {
-            "ai-finance": 27,
-            "memory": 18,
-            "agent-planning": 22,
-            "rag": 65,
-            "reasoning": 34,
-            "multi-agent": 3,
-            "tool-use": 12,
+            "ai-finance": 37,
+            "memory": 23,
+            "agent-planning": 32,
+            "rag": 73,
+            "reasoning": 38,
+            "multi-agent": 19,
+            "tool-use": 13,
             "time-series": 4
           }
         },
         {
           "date": "2026-09-30",
           "counts": {
-            "ai-finance": 12,
-            "memory": 1,
-            "agent-planning": 2,
-            "rag": 17,
-            "reasoning": 3,
-            "tool-use": 3,
-            "time-series": 3
+            "ai-finance": 21,
+            "memory": 6,
+            "agent-planning": 12,
+            "rag": 27,
+            "reasoning": 10,
+            "multi-agent": 10,
+            "tool-use": 10,
+            "time-series": 5
           }
         },
         {
           "date": "2026-10-01",
           "counts": {
-            "ai-finance": 7,
-            "memory": 3,
-            "agent-planning": 1,
-            "rag": 9,
-            "time-series": 1
+            "ai-finance": 44,
+            "memory": 26,
+            "agent-planning": 33,
+            "deep-research": 3,
+            "rag": 72,
+            "reasoning": 45,
+            "multi-agent": 20,
+            "tool-use": 21,
+            "time-series": 18
           }
         }
       ],
@@ -3949,9 +3954,9 @@
             "agent-planning": 1005,
             "deep-research": 89,
             "benchmark": 159,
-            "rag": 2292,
-            "reasoning": 1103,
-            "multi-agent": 455,
+            "rag": 2293,
+            "reasoning": 1104,
+            "multi-agent": 456,
             "code-generation": 41,
             "tool-use": 666,
             "rlhf-alignment": 51,
@@ -3966,80 +3971,80 @@
           "date": "2026-09-28",
           "counts": {
             "memory": 671,
-            "agent-planning": 1035,
+            "agent-planning": 1038,
             "deep-research": 93,
             "benchmark": 159,
-            "rag": 2375,
-            "reasoning": 1159,
-            "multi-agent": 465,
+            "rag": 2378,
+            "reasoning": 1163,
+            "multi-agent": 470,
             "code-generation": 41,
             "tool-use": 697,
             "rlhf-alignment": 51,
-            "time-series": 565,
+            "time-series": 566,
             "prompt-engineering": 16,
             "training-efficiency": 66,
             "multimodal": 121,
-            "ai-finance": 1115
+            "ai-finance": 1118
           }
         },
         {
           "date": "2026-09-29",
           "counts": {
-            "memory": 689,
-            "agent-planning": 1057,
+            "memory": 694,
+            "agent-planning": 1070,
             "deep-research": 93,
             "benchmark": 159,
-            "rag": 2440,
-            "reasoning": 1193,
-            "multi-agent": 468,
+            "rag": 2451,
+            "reasoning": 1201,
+            "multi-agent": 489,
             "code-generation": 41,
-            "tool-use": 709,
+            "tool-use": 710,
             "rlhf-alignment": 51,
-            "time-series": 569,
+            "time-series": 570,
             "prompt-engineering": 16,
             "training-efficiency": 66,
             "multimodal": 121,
-            "ai-finance": 1142
+            "ai-finance": 1155
           }
         },
         {
           "date": "2026-09-30",
           "counts": {
-            "memory": 690,
-            "agent-planning": 1059,
+            "memory": 700,
+            "agent-planning": 1082,
             "deep-research": 93,
             "benchmark": 159,
-            "rag": 2457,
-            "reasoning": 1196,
-            "multi-agent": 468,
+            "rag": 2478,
+            "reasoning": 1211,
+            "multi-agent": 499,
             "code-generation": 41,
-            "tool-use": 712,
+            "tool-use": 720,
             "rlhf-alignment": 51,
-            "time-series": 572,
+            "time-series": 575,
             "prompt-engineering": 16,
             "training-efficiency": 66,
             "multimodal": 121,
-            "ai-finance": 1154
+            "ai-finance": 1176
           }
         },
         {
           "date": "2026-10-01",
           "counts": {
-            "memory": 693,
-            "agent-planning": 1060,
-            "deep-research": 93,
+            "memory": 726,
+            "agent-planning": 1115,
+            "deep-research": 96,
             "benchmark": 159,
-            "rag": 2466,
-            "reasoning": 1196,
-            "multi-agent": 468,
+            "rag": 2550,
+            "reasoning": 1256,
+            "multi-agent": 519,
             "code-generation": 41,
-            "tool-use": 712,
+            "tool-use": 741,
             "rlhf-alignment": 51,
-            "time-series": 573,
+            "time-series": 593,
             "prompt-engineering": 16,
             "training-efficiency": 66,
             "multimodal": 121,
-            "ai-finance": 1161
+            "ai-finance": 1220
           }
         }
       ]
@@ -23598,44 +23603,44 @@
     }
   },
   "summary": {
-    "total_papers": 21849,
-    "focus_papers": 11619,
+    "total_papers": 22140,
+    "focus_papers": 11867,
     "monitored_categories": 10,
     "observed_categories": 131,
     "tracked_tags": 15,
     "latest_published_date": "2026-10-01",
     "focus_tag_counts": {
-      "rag": 2466,
-      "reasoning": 1196,
-      "ai-finance": 1161,
-      "agent-planning": 1060,
-      "tool-use": 712,
-      "memory": 693,
-      "time-series": 573,
-      "multi-agent": 468,
-      "deep-research": 93
+      "rag": 2550,
+      "reasoning": 1256,
+      "ai-finance": 1220,
+      "agent-planning": 1115,
+      "tool-use": 741,
+      "memory": 726,
+      "time-series": 593,
+      "multi-agent": 519,
+      "deep-research": 96
     },
     "focus_topic_counts": {
-      "agent-planning": 5625,
-      "ai-finance": 3675,
-      "rag": 888,
-      "reasoning": 561,
-      "memory": 246,
-      "deep-research": 226,
-      "tool-use": 198,
-      "time-series": 152
+      "agent-planning": 5737,
+      "ai-finance": 3748,
+      "rag": 907,
+      "reasoning": 578,
+      "memory": 258,
+      "deep-research": 229,
+      "tool-use": 208,
+      "time-series": 154
     },
     "top_categories": {
-      "cs.AI": 12690,
-      "cs.CL": 8475,
-      "cs.LG": 5063,
-      "cs.SE": 2772,
-      "cs.CV": 2243,
+      "cs.AI": 12866,
+      "cs.CL": 8577,
+      "cs.LG": 5135,
+      "cs.SE": 2820,
+      "cs.CV": 2268,
       "cs.IR": 1902,
-      "cs.MA": 1280,
-      "cs.CR": 1049,
-      "cs.CE": 834,
-      "cs.RO": 776
+      "cs.MA": 1350,
+      "cs.CR": 1070,
+      "cs.CE": 845,
+      "cs.RO": 792
     },
     "tag_days": 145
   }
