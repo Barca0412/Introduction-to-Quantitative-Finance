@@ -81,10 +81,10 @@
 <!-- ARXIV_RADAR_STATUS:START -->
 > [!NOTE]
 > Machine-updated arXiv Radar Status
-> - Latest update: 2026-10-06
-> - Indexed papers: 22409
-> - Focus papers: 12086
-> - Latest publication date: 2026-10-03
+> - Latest update: 2026-10-07
+> - Indexed papers: 22684
+> - Focus papers: 12297
+> - Latest publication date: 2026-10-05
 > - Monitored categories: 10
 <!-- ARXIV_RADAR_STATUS:END -->
 
