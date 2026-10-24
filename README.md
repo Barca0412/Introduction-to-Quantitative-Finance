@@ -166,6 +166,7 @@
 ### 回测框架
 - [kernc/backtesting.py](https://github.com/kernc/backtesting.py) - 简洁高效Python回测库
 - [polakowo/vectorbt](https://github.com/polakowo/vectorbt) - 极速向量化回测，支持大规模参数优化
+- [manifoldbt/manifoldbt](https://github.com/manifoldbt/manifoldbt) - 基于 Rust 核心的高性能 Python 回测引擎：向量化信号、真实成交（费用/滑点/前视偏差）、参数扫描、walk-forward、蒙特卡洛
 - [stefan-jansen/zipline-reloaded](https://github.com/stefan-jansen/zipline-reloaded) - Quantopian事件驱动框架维护版
 
 ### 因子挖掘与机器学习
