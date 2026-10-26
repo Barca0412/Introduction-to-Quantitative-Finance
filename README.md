@@ -172,6 +172,7 @@
 - [RndmVariableQ/AlphaAgent](https://github.com/RndmVariableQ/AlphaAgent) - KDD 2025 LLM驱动因子挖掘
 - [nshen7/alpha-gfn](https://github.com/nshen7/alpha-gfn) - GFlowNet挖掘alpha因子
 - [microsoft/RD-Agent](https://github.com/microsoft/RD-Agent) - 多Agent自动化R&D
+- [AutoResearch-Factory/AgonAlpha](https://github.com/AutoResearch-Factory/AgonAlpha) - LLM多Agent自主alpha挖掘，WorldQuant BRAIN上60次提交获17个SPECTACULAR
 
 ### 投资组合优化
 - [dcajasn/Riskfolio-Lib](https://github.com/dcajasn/Riskfolio-Lib) - 专业组合优化，24种风险度量
