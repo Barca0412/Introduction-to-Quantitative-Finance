@@ -52,7 +52,7 @@
     <tr>
       <td align="center" width="33%">
         <a href='https://clustrmaps.com/site/1c3vp' title='Visit tracker'>
-          <img src='https://clustrmaps.com/map_v2.png?cl=68a9f2&w=a&t=tt&d=EA5lZ0x62vTuH0tg8sz-qVIdoH8GwwB_J3Vo24wAVTk&co=ffffff&ct=000000' style="width: 60%; max-width: 300px;"/>
+          <img src="https://visitor-badge.laobi.icu/badge?page_id=Barca0412.Introduction-to-Quantitative-Finance" alt="Visitors"/>
         </a>
       </td>
       <td align="center" width="33%">
