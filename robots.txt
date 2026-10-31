@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://barca0412.github.io/Introduction-to-Quantitative-Finance/sitemap.xml
