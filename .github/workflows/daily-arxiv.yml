@@ -21,6 +21,10 @@ on:
     paths:
       - 'docs/**'
       - 'scripts/arxiv_radar/**'
+      - 'scripts/site/**'
+      # The /library/ index is generated from these folders at build time.
+      - '资料/**'
+      - '论文/**'
       - 'package.json'
       - 'package-lock.json'
       - '.github/workflows/daily-arxiv.yml'
