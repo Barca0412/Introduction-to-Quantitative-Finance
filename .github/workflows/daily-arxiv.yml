@@ -1,31 +1,64 @@
-name: Daily arXiv Update
+name: arXiv Radar update and site deploy
+
+# One workflow for the whole site:
+# - schedule / manual run: restore full history -> fetch arXiv -> embed -> build site data
+#   -> deploy Pages -> publish full history (GitHub Release `radar-data` + Hugging Face)
+#   -> commit the README status block (only after a successful deploy).
+# - push to main: rebuild and deploy the site from the stored history, no arXiv fetch.
+# Generated data is never committed. Only the README status block is.
+# restore picks the newest of Hugging Face / Release and, if neither has data yet,
+# fetches the legacy `guohao_vitepress` branch by itself for a one-time bootstrap.
+#
+# Requires Settings -> Pages -> Source = "GitHub Actions".
 
 on:
   schedule:
-    # 05:00 Beijing time. Run every day so a Friday publication cannot fall
-    # into the gap between weekday runs.
+    # 05:00 Beijing time, every day (Friday papers would otherwise fall into a gap).
     - cron: '0 21 * * *'
-  workflow_dispatch: # 允许手动触发
+  push:
+    branches:
+      - main
+    paths:
+      - 'docs/**'
+      - 'scripts/arxiv_radar/**'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/daily-arxiv.yml'
+  workflow_dispatch:
+    inputs:
+      fetch:
+        description: 'Fetch new arXiv papers (off = only rebuild the site from stored data)'
+        type: boolean
+        default: true
 
 permissions:
-  contents: write
+  contents: read
+
+concurrency:
+  group: radar-pages
+  cancel-in-progress: false
+
+env:
+  # Repository variable, e.g. "Barca21412/FinPaperRadar". Empty = skip Hugging Face.
+  HF_DATASET_REPO: ${{ vars.HF_DATASET_REPO }}
+  RADAR_RELEASE_TAG: radar-data
+  FETCH: ${{ github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.fetch) }}
 
 jobs:
-  update-papers:
+  build:
     runs-on: ubuntu-latest
-    
+    # Embedding refresh is capped (RADAR_EMBED_REFRESH_LIMIT, ~3000 papers ≈ 5-10 min).
+    timeout-minutes: 60
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          ref: guohao_vitepress
-          token: ${{ secrets.GITHUB_TOKEN }}
-          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+          cache: pip
+          cache-dependency-path: scripts/arxiv_radar/requirements.txt
 
       - name: Set up Node
         uses: actions/setup-node@v4
@@ -33,63 +66,171 @@ jobs:
           node-version: 20
           cache: npm
 
-      - name: Install Python dependencies
-        run: pip install -r scripts/arxiv_radar/requirements.txt
-
-      - name: Install Node dependencies
-        run: npm ci
-
-      - name: Run arXiv radar pipeline
-        env:
-          DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
-        run: npm run arxiv:update
-
-      - name: Commit and push radar data
-        shell: bash
+      - name: Install dependencies
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add \
-            data/papers.json \
-            data/stats.json \
-            data/embeddings_index.json \
-            docs/public/arxiv-data \
-            docs/public/arxiv-charts \
-            README.md
-          if git diff --cached --quiet; then
-            echo "No radar changes to commit."
-          else
-            git commit -m "chore: update arXiv papers for $(date +'%Y-%m-%d')"
-            git push origin HEAD:guohao_vitepress
+          pip install -r scripts/arxiv_radar/requirements.txt
+          npm ci
+
+      - name: Restore full history
+        run: npm run arxiv:restore
+
+      - name: Fetch and tag new arXiv papers
+        if: env.FETCH == 'true'
+        env:
+          # Any OpenAI-compatible endpoint. Defaults to DeepSeek; override with
+          # repository variables LLM_BASE_URL / LLM_MODEL (e.g. DashScope + qwen).
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_BASE_URL: ${{ vars.LLM_BASE_URL }}
+          LLM_MODEL: ${{ vars.LLM_MODEL }}
+          DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
+        run: npm run arxiv:fetch
+
+      - name: Update embeddings (incremental)
+        env:
+          # Site-only runs do not export, so refreshing stale vectors there is wasted time.
+          RADAR_EMBED_REFRESH_LIMIT: ${{ env.FETCH == 'true' && '3000' || '0' }}
+        run: npm run arxiv:embeddings
+
+      - name: Build light site data
+        run: npm run arxiv:site-data
+
+      - name: Export full history as Parquet
+        if: env.FETCH == 'true'
+        run: npm run arxiv:export
+
+      - name: Keep the export for the publish job
+        if: env.FETCH == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: radar-export
+          path: data/export/
+          retention-days: 7
+
+      - name: Keep stats for the README job
+        if: env.FETCH == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: radar-stats
+          path: data/stats.json
+          retention-days: 7
+
+      - name: Build VitePress site
+        run: npm run docs:build
+
+      - name: Check published file sizes
+        run: |
+          big="$(find docs/.vitepress/dist -type f -size +10M)"
+          if [ -n "${big}" ]; then
+            echo "::error::Files above 10 MB in the site build:"
+            echo "${big}"
+            exit 1
           fi
 
-      - name: Sync README status to main
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/.vitepress/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  publish-data:
+    # Runs beside the deploy: a Hugging Face or Release hiccup must not block the site.
+    # The next run restores from whichever copy is newest available; FETCH_DAYS=7 covers gaps.
+    needs: build
+    if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.fetch)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # GitHub Release mirror
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+          cache-dependency-path: scripts/arxiv_radar/requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r scripts/arxiv_radar/requirements.txt
+
+      - name: Download export
+        uses: actions/download-artifact@v4
+        with:
+          name: radar-export
+          path: data/export/
+
+      # Release first, Hugging Face second; each runs even if the other failed,
+      # and the job still turns red if either one did.
+      - name: Mirror to GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if ! gh release view "${RADAR_RELEASE_TAG}" >/dev/null 2>&1; then
+            gh release create "${RADAR_RELEASE_TAG}" \
+              --title "arXiv Radar data" \
+              --notes "Full arXiv Radar history (Parquet), refreshed by the daily workflow. Thank you to arXiv for use of its open access interoperability." \
+              --latest=false
+          fi
+          gh release upload "${RADAR_RELEASE_TAG}" data/export/* --clobber
+
+      - name: Push to Hugging Face dataset
+        if: ${{ !cancelled() }}
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: python -m scripts.arxiv_radar.data_store push-hf
+
+  commit-readme:
+    # Only after the site is live, so the README never advertises a deploy that failed.
+    needs: deploy
+    if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.fetch)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Download stats
+        uses: actions/download-artifact@v4
+        with:
+          name: radar-stats
+          path: data/
+
+      - name: Commit README status to main
         shell: bash
         run: |
-          main_worktree="$(mktemp -d)"
-          trap 'git worktree remove --force "${main_worktree}" || true; rm -rf "${main_worktree}"' EXIT
-          git worktree add --detach "${main_worktree}" origin/main
-          cp README.md "${main_worktree}/README.md"
-          cd "${main_worktree}"
+          node scripts/arxiv_radar/update_readme.mjs
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add README.md
           if git diff --cached --quiet; then
-            echo "README status is already current on main."
-          else
-            git commit -m "docs: sync arXiv radar README status"
-            git push origin HEAD:main
+            echo "README status is already current."
+            exit 0
           fi
-
-      # GITHUB_TOKEN-generated pushes do not reliably start other workflows.
-      # Publish here as well, so the Radar update and the public site stay in sync.
-      - name: Build VitePress site
-        run: npm run docs:build
-
-      - name: Publish site to gh-pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: docs/.vitepress/dist
-          force_orphan: true
+          git commit -m "docs: sync arXiv radar README status ($(date -u +'%Y-%m-%d'))"
+          git pull --rebase origin main
+          git push origin HEAD:main

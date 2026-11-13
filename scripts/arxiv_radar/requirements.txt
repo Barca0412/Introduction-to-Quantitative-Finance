@@ -1,0 +1,8 @@
+aiohttp
+arxiv
+plotly
+python-dateutil
+python-dotenv
+huggingface_hub
+numpy
+pyarrow

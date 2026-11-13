@@ -1,10 +1,10 @@
 # 量化研究入门资料
 
-> 面向量化研究者与学习者的中文开源知识库：多因子投研框架、AI + Finance arXiv Radar，以及经过整理的工具、课程与研究资源。
+> 面向量化研究者与学习者的中文开源知识库：多因子投研框架、FinPaperRadar（AI × 金融论文雷达），以及经过整理的工具、课程与研究资源。
 
 <p align="center">
   <a href="https://barca0412.github.io/Introduction-to-Quantitative-Finance/"><strong>浏览文档站</strong></a> ·
-  <a href="https://barca0412.github.io/Introduction-to-Quantitative-Finance/arxiv/"><strong>查看 AI + Finance Radar</strong></a> ·
+  <a href="https://barca0412.github.io/Introduction-to-Quantitative-Finance/arxiv/"><strong>查看 FinPaperRadar 论文雷达</strong></a> ·
   <a href="https://github.com/Barca0412/Introduction-to-Quantitative-Finance/discussions"><strong>参与讨论</strong></a> ·
   <a href="#contributing"><strong>参与贡献</strong></a>
 </p>
@@ -19,7 +19,7 @@
 ## 你会得到什么
 
 - **多因子量化投研教程**：从研究框架到因子、回测与组合优化的学习路线。
-- **AI + Finance arXiv Radar**：工作日自动抓取、聚类与检索相关论文，提供趋势与标签视图。
+- **FinPaperRadar（AI × 金融论文雷达）**：每天自动抓取、标注与检索 AI × 金融相关的 arXiv 论文，提供趋势与标签视图。
 - **精选资源地图**：量化数据、回测、因子挖掘、机器学习、强化学习与金融课程的持续整理。
 
 ## 快速开始
@@ -27,7 +27,7 @@
 | 想做什么 | 从这里开始 |
 | --- | --- |
 | 系统学习量化投研 | [多因子投研框架教程](#基于多因子股票量化投研框架的开源教程) |
-| 跟踪 AI + Finance 最新论文 | [arXiv Radar](https://barca0412.github.io/Introduction-to-Quantitative-Finance/arxiv/) |
+| 跟踪 AI × 金融最新论文 | [FinPaperRadar](https://barca0412.github.io/Introduction-to-Quantitative-Finance/arxiv/) |
 | 查找工具、课程与资料 | [公开资料整理](#section2) |
 | 提出建议或补充资源 | [GitHub Discussions](https://github.com/Barca0412/Introduction-to-Quantitative-Finance/discussions) |
 
@@ -69,18 +69,18 @@
 
 <a id="section-arxiv"></a>
 
-# AI + Finance arXiv Radar
+# FinPaperRadar · AI × 金融论文雷达
 
-站点已集成新的 `/arxiv/` Radar 子站，替换原有的旧版 arXiv 文档体验。
+文档站的 `/arxiv/` 子站即 FinPaperRadar，替换原有的旧版 arXiv 文档体验。
 
 - 入口：VitePress `/arxiv/` 子区块
 - 能力：论文列表、趋势图、语义检索、机构筛选、标签聚合
-- 数据：`data/papers.json`、`data/stats.json`、`data/embeddings_index.json`
+- 数据：全量历史以 Parquet 存在 Hugging Face 数据集（仓库名由 `HF_DATASET_REPO` 配置）和 GitHub Release `radar-data`，不进 git；标签、中文摘要、评分与向量按 CC BY 4.0 授权，arXiv 元数据本身为 CC0
 - 管线：`scripts/arxiv_radar/`
 
 <!-- ARXIV_RADAR_STATUS:START -->
 > [!NOTE]
-> Machine-updated arXiv Radar Status
+> FinPaperRadar（AI × 金融论文雷达）machine-updated status
 > - Latest update: 2026-11-06
 > - Indexed papers: 27813
 > - Focus papers: 16354
@@ -94,7 +94,7 @@
 
 ## Contributing
 
-欢迎补充高质量资料、修复失效链接、改进教程或完善 Radar 标签。提交前请先在 [Discussions](https://github.com/Barca0412/Introduction-to-Quantitative-Finance/discussions) 交流想法；小型修正可直接提交 Pull Request，并说明资料来源与适用场景。
+欢迎补充高质量资料、修复失效链接、改进教程或完善 FinPaperRadar 标签。提交前请先在 [Discussions](https://github.com/Barca0412/Introduction-to-Quantitative-Finance/discussions) 交流想法；小型修正可直接提交 Pull Request，并说明资料来源与适用场景。
 
 # 基于多因子股票量化投研框架的开源教程
 

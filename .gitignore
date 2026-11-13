@@ -1,8 +1,24 @@
 # Dependencies
 node_modules/
 
-# VitePress (在 guohao_vitepress 分支)
-docs/
+# VitePress build output
+docs/.vitepress/dist/
+docs/.vitepress/cache/
+
+# arXiv Radar generated data: never committed.
+# Full history lives on Hugging Face + the GitHub Release `radar-data`;
+# the site data is rebuilt on every deploy.
+data/papers.json
+data/stats.json
+data/embeddings_index.json
+data/embeddings.f32
+data/embeddings.f32.tmp
+data/embeddings.meta.json
+data/restore_record.json
+data/export/
+data/*.tmp
+docs/public/arxiv-data/
+docs/public/arxiv-charts/
 
 # OS
 .DS_Store
