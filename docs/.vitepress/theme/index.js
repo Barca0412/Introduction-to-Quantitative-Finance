@@ -2,6 +2,10 @@ import { defineAsyncComponent, h } from 'vue'
 import DefaultTheme from 'vitepress/theme'
 import { useRoute } from 'vitepress'
 import './style.css'
+// Lecture/knowledge-base glue: small, and needed on lecture and wiki pages.
+import TutorialMeta from './components/TutorialMeta.vue'
+import TutorialList from './components/TutorialList.vue'
+import WikiBacklinks from './components/WikiBacklinks.vue'
 
 // Radar components (and echarts / the data loader they pull in) are split into
 // their own chunks, so non-Radar pages never download them.
@@ -54,6 +58,8 @@ export default {
   extends: DefaultTheme,
   Layout() {
     return h(DefaultTheme.Layout, null, {
+      'doc-before': () => h(TutorialMeta),
+      'doc-after': () => h(WikiBacklinks),
       'layout-bottom': () => h(RadarAttribution),
     })
   },
@@ -63,5 +69,6 @@ export default {
     app.component('TrendsChart', TrendsChart)
     app.component('IconWrapper', IconWrapper)
     app.component('RadarDatasetLinks', RadarDatasetLinks)
+    app.component('TutorialList', TutorialList)
   }
 }

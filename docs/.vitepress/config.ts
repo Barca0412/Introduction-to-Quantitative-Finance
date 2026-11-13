@@ -1,17 +1,50 @@
 import { defineConfig } from 'vitepress'
+import { mkdirSync, writeFileSync } from 'node:fs'
+import { dirname, join } from 'node:path'
 
-// 共享的快速导航配置
+const BASE = '/Introduction-to-Quantitative-Finance/'
+const SITE = `https://barca0412.github.io${BASE}`
+
+// Sidebar block shared by every section.
 const quickNav = {
-  text: '快速导航',
+  text: '全部栏目',
   items: [
-    { text: '入门指南', link: '/guide/' },
-    { text: '数据源与另类数据', link: '/data/' },
-    { text: '因子挖掘', link: '/factors/' },
-    { text: '回测框架', link: '/backtest/' },
-    { text: '投资组合优化', link: '/portfolio/' },
+    { text: '教程', link: '/tutorials/' },
+    { text: '知识库', link: '/wiki/' },
+    { text: '研报与论文', link: '/library/' },
     { text: 'FinPaperRadar 论文雷达', link: '/arxiv/' },
-    { text: '公开资源', link: '/resources/' }
+    { text: '资源', link: '/resources/' },
+    { text: '关于与引用', link: '/about' }
   ]
+}
+
+// Pages that moved into /wiki/ in the 2026-11 restructure. Old URLs keep
+// working through static redirect pages written in buildEnd below.
+// Keys are old paths (without base): 'x/' was x/index.md, 'x/y' was x/y.md.
+const MOVED_PAGES: Record<string, string> = {
+  'guide/': 'wiki/',
+  'guide/framework': 'wiki/framework',
+  'data/': 'wiki/data',
+  'factors/': 'wiki/factors/',
+  'factors/fundamental': 'wiki/factors/fundamental',
+  'factors/technical': 'wiki/factors/technical',
+  'factors/ml-factors': 'wiki/factors/ml-factors',
+  'factors/llm-factors': 'wiki/factors/llm-factors',
+  'backtest/': 'wiki/backtest',
+  'portfolio/': 'wiki/portfolio',
+  'sentiment/': 'wiki/sentiment'
+}
+
+function redirectPage(target: string) {
+  const url = `${SITE}${target}`
+  return `<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>页面已移动</title>
+<link rel="canonical" href="${url}">
+<meta name="robots" content="noindex">
+<meta http-equiv="refresh" content="0; url=${url}">
+<script>location.replace(${JSON.stringify(url)} + location.hash)</script>
+</head><body><p>页面已移动到 <a href="${url}">${url}</a>。</p></body></html>
+`
 }
 
 export default defineConfig({
@@ -29,7 +62,23 @@ export default defineConfig({
   description: '基于多因子股票量化投研框架的开源教程',
   lang: 'zh-CN',
   ignoreDeadLinks: true,
-  base: '/Introduction-to-Quantitative-Finance/',
+  base: BASE,
+  // Lecture code/ and data/ folders hold notebooks and sample data, not pages.
+  srcExclude: ['tutorials/*/code/**', 'tutorials/*/data/**'],
+
+  // Old URL -> new URL. Both 'old.html' and 'old/index.html' are written so the
+  // redirect also works once cleanUrls is turned on.
+  buildEnd({ outDir }) {
+    for (const [from, to] of Object.entries(MOVED_PAGES)) {
+      const files = from.endsWith('/')
+        ? [join(outDir, from, 'index.html')]
+        : [join(outDir, `${from}.html`), join(outDir, from, 'index.html')]
+      for (const file of files) {
+        mkdirSync(dirname(file), { recursive: true })
+        writeFileSync(file, redirectPage(to))
+      }
+    }
+  },
   sitemap: {
     hostname: 'https://barca0412.github.io',
     transformItems: (items) => items.map((item) => ({
@@ -95,64 +144,58 @@ export default defineConfig({
     
     nav: [
       { text: '首页', link: '/' },
-      { text: '入门指南', link: '/guide/' },
-      { text: '因子挖掘', link: '/factors/' },
-      { text: '回测', link: '/backtest/' },
-      { text: '组合优化', link: '/portfolio/' },
-      { text: 'FinPaperRadar', link: '/arxiv/' },
-      { text: '资源', link: '/resources/' }
+      { text: '教程', link: '/tutorials/', activeMatch: '^/tutorials/' },
+      { text: '知识库', link: '/wiki/', activeMatch: '^/wiki/' },
+      { text: '研报与论文', link: '/library/', activeMatch: '^/library/' },
+      { text: '论文雷达', link: '/arxiv/', activeMatch: '^/arxiv/' },
+      { text: '资源', link: '/resources/', activeMatch: '^/resources/' }
     ],
 
     sidebar: {
-      '/guide/': [
+      '/tutorials/': [
         {
-          text: '入门指南',
-          link: '/guide/',
+          text: '教程',
+          link: '/tutorials/',
+          collapsed: false,
+          items: []
+        },
+        quickNav
+      ],
+      '/wiki/': [
+        {
+          text: '知识库',
+          link: '/wiki/',
           collapsed: false,
           items: [
-            { text: '多因子投研框架', link: '/guide/framework' }
+            { text: '多因子投研框架', link: '/wiki/framework' },
+            { text: '数据源与另类数据', link: '/wiki/data' },
+            {
+              text: '因子挖掘',
+              link: '/wiki/factors/',
+              collapsed: false,
+              items: [
+                { text: '基本面因子', link: '/wiki/factors/fundamental' },
+                { text: '技术因子', link: '/wiki/factors/technical' },
+                { text: '机器学习因子', link: '/wiki/factors/ml-factors' },
+                { text: 'LLM 因子挖掘', link: '/wiki/factors/llm-factors' }
+              ]
+            },
+            { text: '回测框架', link: '/wiki/backtest' },
+            { text: '投资组合优化', link: '/wiki/portfolio' },
+            { text: '投资者情绪与行为金融', link: '/wiki/sentiment' }
           ]
         },
         quickNav
       ],
-      '/data/': [
+      '/library/': [
         {
-          text: '数据源',
-          link: '/data/',
-          collapsed: false,
-          items: []
-        },
-        quickNav
-      ],
-      '/factors/': [
-        {
-          text: '因子挖掘',
-          link: '/factors/',
+          text: '研报与论文',
+          link: '/library/',
           collapsed: false,
           items: [
-            { text: '基本面因子', link: '/factors/fundamental' },
-            { text: '技术因子', link: '/factors/technical' },
-            { text: '机器学习因子', link: '/factors/ml-factors' },
-            { text: 'LLM因子挖掘', link: '/factors/llm-factors' }
+            { text: '卖方金工研报', link: '/library/reports' },
+            { text: '论文', link: '/library/papers' }
           ]
-        },
-        quickNav
-      ],
-      '/backtest/': [
-        {
-          text: '回测框架',
-          link: '/backtest/',
-          collapsed: false,
-          items: []
-        },
-        quickNav
-      ],
-      '/portfolio/': [
-        {
-          text: '投资组合优化',
-          link: '/portfolio/',
-          collapsed: false,
-          items: []
         },
         quickNav
       ],
@@ -179,15 +222,7 @@ export default defineConfig({
         },
         quickNav
       ],
-      '/sentiment/': [
-        {
-          text: '投资者情绪',
-          link: '/sentiment/',
-          collapsed: false,
-          items: []
-        },
-        quickNav
-      ]
+      '/about': [quickNav]
     },
 
     socialLinks: [
@@ -195,8 +230,13 @@ export default defineConfig({
     ],
 
     footer: {
-      message: '基于 VitePress 构建',
-      copyright: 'Copyright © 2024 湖南大学金融科技协会'
+      message: [
+        `<a href="${BASE}about">关于</a>`,
+        '<a href="https://github.com/Barca0412/Introduction-to-Quantitative-Finance/blob/main/CONTRIBUTING.md">参与贡献</a>',
+        `<a href="${BASE}about#如何引用">如何引用</a>`,
+        `<a href="${BASE}about#合作与联系">合作联系</a>`
+      ].join(' · '),
+      copyright: 'Copyright © 2024–2026 湖南大学金融科技协会 Quant Group · 仅供教育与研究，不构成投资建议'
     },
 
     search: {

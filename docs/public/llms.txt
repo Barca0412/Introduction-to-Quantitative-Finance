@@ -1,6 +1,6 @@
 # 量化研究入门
 
-> 面向量化研究者与学习者的中文开源知识库，覆盖多因子投研、金融数据、因子挖掘、回测、组合优化，以及每日更新的 AI 与金融 arXiv 论文雷达。
+> 面向量化研究者与学习者的中文开源知识库：用免费数据跑通的项目式量化教程、多因子投研知识库、研报与论文目录，以及每日更新的 AI 与金融 arXiv 论文雷达。
 
 ## Canonical project links
 
@@ -10,13 +10,13 @@
 
 ## Key resources
 
-- Getting started: https://barca0412.github.io/Introduction-to-Quantitative-Finance/guide/
-- Data sources and alternative data: https://barca0412.github.io/Introduction-to-Quantitative-Finance/data/
-- Factor research: https://barca0412.github.io/Introduction-to-Quantitative-Finance/factors/
-- Backtesting frameworks: https://barca0412.github.io/Introduction-to-Quantitative-Finance/backtest/
-- Portfolio optimization: https://barca0412.github.io/Introduction-to-Quantitative-Finance/portfolio/
+- Project-style tutorials (each lecture is a runnable mini-project on free data): https://barca0412.github.io/Introduction-to-Quantitative-Finance/tutorials/
+- Knowledge base (multi-factor framework, data sources, factors, backtesting, portfolio optimization): https://barca0412.github.io/Introduction-to-Quantitative-Finance/wiki/
+- Sell-side quant research reports and academic papers index: https://barca0412.github.io/Introduction-to-Quantitative-Finance/library/
 - FinPaperRadar (AI × 金融论文雷达), daily AI + finance arXiv paper radar: https://barca0412.github.io/Introduction-to-Quantitative-Finance/arxiv/
+- FinPaperRadar full dataset (CC BY 4.0 additions): https://huggingface.co/datasets/Barca21412/FinPaperRadar
 - Curated public resources: https://barca0412.github.io/Introduction-to-Quantitative-Finance/resources/
+- About, licensing and citation: https://barca0412.github.io/Introduction-to-Quantitative-Finance/about
 
 ## Attribution and citation
 

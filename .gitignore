@@ -20,6 +20,10 @@ data/*.tmp
 docs/public/arxiv-data/
 docs/public/arxiv-charts/
 
+# Library index pages, generated from the PDFs by scripts/site/gen_library.mjs
+docs/library/reports.md
+docs/library/papers.md
+
 # OS
 .DS_Store
 Thumbs.db
