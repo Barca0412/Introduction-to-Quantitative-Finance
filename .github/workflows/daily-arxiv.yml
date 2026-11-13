@@ -39,7 +39,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  # Repository variable, e.g. "your-name/ai-finance-arxiv-radar". Empty = skip Hugging Face.
+  # Repository variable, e.g. "Barca21412/FinPaperRadar". Empty = skip Hugging Face.
   HF_DATASET_REPO: ${{ vars.HF_DATASET_REPO }}
   RADAR_RELEASE_TAG: radar-data
   FETCH: ${{ github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.fetch) }}

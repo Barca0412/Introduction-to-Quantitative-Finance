@@ -44,7 +44,7 @@ def _env_list(name: str) -> List[str]:
 # ============================================
 # External storage for the full history
 # ============================================
-# Hugging Face dataset, e.g. "your-name/ai-finance-arxiv-radar". Empty = skip.
+# Hugging Face dataset, e.g. "Barca21412/FinPaperRadar". Empty = skip.
 HF_DATASET_REPO = os.getenv("HF_DATASET_REPO", "").strip()
 HF_TOKEN = os.getenv("HF_TOKEN", "").strip()
 # GitHub Release used as a mirror ("owner/repo" is provided by Actions).
