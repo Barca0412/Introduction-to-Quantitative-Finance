@@ -47,6 +47,33 @@ function redirectPage(target: string) {
 `
 }
 
+const SITE_NAME = '量化研究入门'
+const OG_IMAGE = `${SITE}og-cover.png`
+
+// docs/wiki/factors/index.md -> 'wiki/factors/', docs/about.md -> 'about' (cleanUrls form)
+const pagePath = (relativePath: string) =>
+  relativePath.replace(/(^|\/)index\.md$/, '$1').replace(/\.md$/, '')
+
+// Breadcrumb labels for the top-level sections.
+const SECTION_NAMES: Record<string, string> = {
+  tutorials: '教程',
+  wiki: '知识库',
+  library: '研报与论文',
+  arxiv: '论文雷达',
+  resources: '资源',
+  about: '关于'
+}
+
+// Search-console verification tokens come from repository variables at build time;
+// unset means no tag. They are public by design (they end up in the HTML).
+const siteVerification = [
+  ['google-site-verification', process.env.GOOGLE_SITE_VERIFICATION],
+  ['msvalidate.01', process.env.BING_SITE_VERIFICATION],
+  ['baidu-site-verification', process.env.BAIDU_SITE_VERIFICATION]
+]
+  .filter(([, content]) => content && content.trim())
+  .map(([name, content]) => ['meta', { name, content: (content as string).trim() }] as [string, Record<string, string>])
+
 export default defineConfig({
   vite: {
     define: {
@@ -58,8 +85,14 @@ export default defineConfig({
       ),
     },
   },
-  title: '量化研究入门',
-  description: '基于多因子股票量化投研框架的开源教程',
+  title: SITE_NAME,
+  titleTemplate: `:title | ${SITE_NAME}`,
+  description: '中文开源量化知识库：项目式多因子量化教程、因子与回测知识库、研报与论文目录，以及每天更新的 AI × 金融论文雷达。',
+  // URLs without .html; canonical, og:url and the sitemap all use this form.
+  cleanUrls: true,
+  // Per-page "last updated" from git history; also feeds <lastmod> in the sitemap.
+  // CI checks out full history (fetch-depth: 0) so these are real edit dates.
+  lastUpdated: true,
   lang: 'zh-CN',
   ignoreDeadLinks: true,
   base: BASE,
@@ -90,35 +123,62 @@ export default defineConfig({
       }))
     }))
   },
-  transformHead: ({ page }) => {
-    const path = page
-      .replace(/(^|\/)index\.md$/, '$1')
-      .replace(/\.md$/, '')
+  transformHead: ({ pageData, title, description }) => {
+    if (pageData.isNotFound) return []
+    const path = pagePath(pageData.relativePath)
+    const url = `${SITE}${path}`
+    const isHome = path === ''
+    const head: [string, Record<string, string>, string?][] = [
+      ['link', { rel: 'canonical', href: url }],
+      ['meta', { property: 'og:type', content: isHome ? 'website' : 'article' }],
+      ['meta', { property: 'og:site_name', content: SITE_NAME }],
+      ['meta', { property: 'og:title', content: title }],
+      ['meta', { property: 'og:description', content: description }],
+      ['meta', { property: 'og:url', content: url }],
+      ['meta', { property: 'og:image', content: OG_IMAGE }],
+      ['meta', { property: 'og:image:alt', content: `${SITE_NAME}：项目式量化教程与 AI × 金融论文雷达` }],
+      ['meta', { property: 'og:locale', content: 'zh_CN' }],
+      ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+      ['meta', { name: 'twitter:title', content: title }],
+      ['meta', { name: 'twitter:description', content: description }],
+      ['meta', { name: 'twitter:image', content: OG_IMAGE }]
+    ]
 
-    return [[
-      'link',
-      {
-        rel: 'canonical',
-        href: `https://barca0412.github.io/Introduction-to-Quantitative-Finance/${path}`
-      }
-    ]]
+    const graph: Record<string, unknown>[] = []
+    // Breadcrumb: 首页 > section > page (section pages stop at the section).
+    const section = path.split('/')[0]
+    if (!isHome && SECTION_NAMES[section]) {
+      const crumbs = [{ name: SITE_NAME, url: SITE }, { name: SECTION_NAMES[section], url: `${SITE}${section}${section === 'about' ? '' : '/'}` }]
+      if (path !== section && path !== `${section}/`) crumbs.push({ name: pageData.title || title, url })
+      graph.push({
+        '@type': 'BreadcrumbList',
+        itemListElement: crumbs.map((c, k) => ({ '@type': 'ListItem', position: k + 1, name: c.name, item: c.url }))
+      })
+    }
+    // Lectures are TechArticles with their author, level and dates.
+    const tutorial = pageData.frontmatter.tutorial
+    if (tutorial && !tutorial.draft) {
+      graph.push({
+        '@type': 'TechArticle',
+        headline: pageData.title,
+        description,
+        url,
+        inLanguage: 'zh-CN',
+        author: { '@type': 'Organization', name: tutorial.author || '湖南大学金融科技协会 Quant Group' },
+        ...(tutorial.level ? { proficiencyLevel: tutorial.level } : {}),
+        ...(pageData.lastUpdated ? { dateModified: new Date(pageData.lastUpdated).toISOString() } : {}),
+        isPartOf: { '@type': 'WebSite', name: SITE_NAME, url: SITE }
+      })
+    }
+    if (graph.length) {
+      head.push(['script', { type: 'application/ld+json' }, JSON.stringify({ '@context': 'https://schema.org', '@graph': graph })])
+    }
+    return head
   },
-  
+
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }],
-    // SEO meta
-    ['meta', { name: 'keywords', content: '量化投资,多因子模型,量化交易,机器学习,LLM金融,arXiv论文,因子挖掘,回测框架,投资组合优化' }],
-    ['meta', { name: 'author', content: '湖南大学金融科技协会' }],
-    // Open Graph
-    ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:title', content: '量化研究入门 - 多因子投研框架教程' }],
-    ['meta', { property: 'og:description', content: '基于多因子股票量化投研框架的开源教程，每日更新 FinPaperRadar（AI × 金融论文雷达）' }],
-    ['meta', { property: 'og:url', content: 'https://barca0412.github.io/Introduction-to-Quantitative-Finance/' }],
-    ['meta', { property: 'og:image', content: 'https://barca0412.github.io/Introduction-to-Quantitative-Finance/og-cover.png' }],
-    ['meta', { property: 'og:image:alt', content: '量化研究入门：多因子投研框架与 FinPaperRadar（AI × 金融论文雷达）' }],
-    // Twitter Card
-    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-    ['meta', { name: 'twitter:image', content: 'https://barca0412.github.io/Introduction-to-Quantitative-Finance/og-cover.png' }],
+    ...siteVerification,
+    ['meta', { name: 'author', content: '湖南大学金融科技协会 Quant Group' }],
     ['script', { type: 'application/ld+json' }, JSON.stringify({
       '@context': 'https://schema.org',
       '@graph': [
@@ -140,7 +200,6 @@ export default defineConfig({
   ],
 
   themeConfig: {
-    logo: '/logo.png',
     
     nav: [
       { text: '首页', link: '/' },
@@ -242,6 +301,13 @@ export default defineConfig({
     search: {
       provider: 'local'
     },
+
+    lastUpdated: {
+      text: '最后更新',
+      formatOptions: { dateStyle: 'medium' }
+    },
+
+    docFooter: { prev: '上一页', next: '下一页' },
 
     outline: {
       level: [2, 3],

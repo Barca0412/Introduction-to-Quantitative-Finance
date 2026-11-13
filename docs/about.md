@@ -46,7 +46,7 @@ description: 量化研究入门由湖南大学金融科技协会 Quant Group 维
 
 欢迎交流讲义内容、数据集使用、课程合作或研究合作。
 
-- Email：qgh124430@hnu.edu.cn
+- Email：qgh124430@hnu.edu.cn / guohaoqi@u.nus.edu
 - 微信：qgh985695077
 - [湖南大学金融科技协会介绍](https://www.guohaoqi.cn/hft-association)
 - 问题和建议：[GitHub Discussions](https://github.com/Barca0412/Introduction-to-Quantitative-Finance/discussions)

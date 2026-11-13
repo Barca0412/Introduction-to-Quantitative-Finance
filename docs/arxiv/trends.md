@@ -1,3 +1,8 @@
+---
+title: 研究趋势 · FinPaperRadar
+description: AI × 金融方向 arXiv 论文的研究趋势：各研究标签的论文数量随时间的变化、热门主题和高产机构。
+---
+
 # Research Trends
 
 <script setup>

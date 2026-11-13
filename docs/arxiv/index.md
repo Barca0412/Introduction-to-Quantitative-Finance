@@ -1,6 +1,7 @@
 ---
 layout: home
 title: FinPaperRadar · AI × 金融论文雷达
+description: FinPaperRadar 每天抓取 arXiv 上 10 个分类的 AI × 金融论文，用大模型打研究标签、写中文摘要，提供论文列表、趋势图、机构筛选和语义检索，完整数据集公开在 Hugging Face。
 ---
 
 <script setup>
