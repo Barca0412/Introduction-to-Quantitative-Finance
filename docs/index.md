@@ -13,7 +13,7 @@ hero:
       text: 开始阅读
       link: /guide/
     - theme: alt
-      text: 论文日报
+      text: FinPaperRadar
       link: /arxiv/
     - theme: alt
       text: GitHub
@@ -32,8 +32,8 @@ features:
   - title: 投资组合优化
     details: 均值方差优化、Barra多因子风控模型
     link: /portfolio/
-  - title: AI+金融论文日报
-    details: 每日自动抓取arXiv论文，LLM生成中文概述与标签分类
+  - title: FinPaperRadar · AI × 金融论文雷达
+    details: 每日自动抓取 arXiv 论文，LLM 生成中文概述与标签分类
     link: /arxiv/
   - title: 公开资源
     details: 量化论坛、在线课程、开源工具汇总
@@ -62,7 +62,7 @@ features:
 
 ## 这是什么
 
-**量化研究入门**是由湖南大学金融科技协会 Quant Group 维护的中文开源知识库，帮助学习者建立从金融数据、因子研究、回测到组合优化的量化投研工作流。项目同时提供每日更新的 **AI + Finance arXiv Radar**：从 10 个 arXiv 分类筛选论文，并提供标签、关键词和中文概述。
+**量化研究入门**是由湖南大学金融科技协会 Quant Group 维护的中文开源知识库，帮助学习者建立从金融数据、因子研究、回测到组合优化的量化投研工作流。项目同时提供每日更新的 **FinPaperRadar（AI × 金融论文雷达）**：从 10 个 arXiv 分类筛选论文，并提供标签、关键词和中文概述。
 
 适合希望学习多因子量化、寻找开源回测工具，或跟踪 AI、LLM 与智能体在金融研究中最新进展的学生、研究者和开发者。
 
@@ -73,9 +73,9 @@ features:
 3. 学习[基本面、技术、机器学习与 LLM 因子](/factors/)。
 4. 使用[回测框架](/backtest/)验证策略，再进入[组合优化](/portfolio/)与风险管理。
 
-## AI + Finance 论文雷达如何工作
+## FinPaperRadar 如何工作
 
-Radar 每日抓取近期 arXiv 论文，为相关研究生成主题标签、关键词、中文摘要和趋势统计。阅读[论文雷达](/arxiv/)可查看结果；关于筛选范围、分类和数据流程，请见[方法说明](/arxiv/about)。原始研究结论应以链接到的 arXiv 论文为准。
+FinPaperRadar（AI × 金融论文雷达）每日抓取近期 arXiv 论文，为相关研究生成主题标签、关键词、中文摘要和趋势统计。阅读 [FinPaperRadar](/arxiv/) 可查看结果；关于筛选范围、分类和数据流程，请见[方法说明](/arxiv/about)。原始研究结论应以链接到的 arXiv 论文为准。
 
 本项目用于教育与研究，不构成投资建议。
 

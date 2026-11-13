@@ -25,6 +25,7 @@ import hashlib
 import json
 import logging
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -502,10 +503,34 @@ def _sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
+def dataset_links() -> Dict[str, str]:
+    """Public locations of the full dataset. The HF link exists only when HF_DATASET_REPO is set."""
+    links = {"release": f"https://github.com/{GITHUB_REPOSITORY}/releases/tag/{RADAR_RELEASE_TAG}"}
+    if HF_DATASET_REPO:
+        links["hf"] = f"https://huggingface.co/datasets/{HF_DATASET_REPO}"
+    return links
+
+
 def _render_dataset_card(info: Dict[str, Any]) -> str:
+    links = dataset_links()
+    lines = []
+    if "hf" in links:
+        lines.append(f"- Hugging Face: [{HF_DATASET_REPO}]({links['hf']}) (primary copy)")
+    lines.append(f"- GitHub Release mirror: [`{RADAR_RELEASE_TAG}`]({links['release']})")
+    generated = str(info.get("generated_at", ""))
+    values = {
+        **info,
+        "year": generated[:4] or datetime.now(timezone.utc).strftime("%Y"),
+        "generated_date": generated[:10],
+        "dataset_url": links.get("hf", links["release"]),
+        "download_lines": "\n".join(lines),
+    }
     template = DATASET_CARD_TEMPLATE.read_text(encoding="utf-8")
-    for key, value in info.items():
+    for key, value in values.items():
         template = template.replace("{{" + key + "}}", str(value))
+    leftover = re.findall(r"\{\{([a-z_]+)\}\}", template)
+    if leftover:
+        raise RuntimeError(f"Unfilled dataset card placeholders: {leftover}")
     return template
 
 

@@ -20,7 +20,7 @@
 | [因子挖掘](/factors/) | 基本面、技术面、ML、LLM 因子 |
 | [回测框架](/backtest/) | Backtrader、Qlib 等工具 |
 | [投资组合优化](/portfolio/) | 凸优化、Barra 风控 |
-| [论文日报](/arxiv/) | AI+金融每日论文更新 |
+| [FinPaperRadar](/arxiv/) | AI × 金融论文雷达，每日更新 |
 | [公开资源](/resources/) | 论坛、课程、工具汇总 |
 
 ## 联系方式

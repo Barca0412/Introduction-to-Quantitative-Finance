@@ -9,12 +9,22 @@ const quickNav = {
     { text: '因子挖掘', link: '/factors/' },
     { text: '回测框架', link: '/backtest/' },
     { text: '投资组合优化', link: '/portfolio/' },
-    { text: 'arXiv 日报', link: '/arxiv/' },
+    { text: 'FinPaperRadar 论文雷达', link: '/arxiv/' },
     { text: '公开资源', link: '/resources/' }
   ]
 }
 
 export default defineConfig({
+  vite: {
+    define: {
+      // Full-dataset location for the FinPaperRadar pages, read at build time.
+      // Empty (the default) hides the Hugging Face link.
+      __HF_DATASET_REPO__: JSON.stringify((process.env.HF_DATASET_REPO || '').trim()),
+      __RADAR_RELEASE_URL__: JSON.stringify(
+        `https://github.com/${process.env.GITHUB_REPOSITORY || 'Barca0412/Introduction-to-Quantitative-Finance'}/releases/tag/${process.env.RADAR_RELEASE_TAG || 'radar-data'}`
+      ),
+    },
+  },
   title: '量化研究入门',
   description: '基于多因子股票量化投研框架的开源教程',
   lang: 'zh-CN',
@@ -53,10 +63,10 @@ export default defineConfig({
     // Open Graph
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:title', content: '量化研究入门 - 多因子投研框架教程' }],
-    ['meta', { property: 'og:description', content: '基于多因子股票量化投研框架的开源教程，每日更新AI+金融论文' }],
+    ['meta', { property: 'og:description', content: '基于多因子股票量化投研框架的开源教程，每日更新 FinPaperRadar（AI × 金融论文雷达）' }],
     ['meta', { property: 'og:url', content: 'https://barca0412.github.io/Introduction-to-Quantitative-Finance/' }],
     ['meta', { property: 'og:image', content: 'https://barca0412.github.io/Introduction-to-Quantitative-Finance/og-cover.png' }],
-    ['meta', { property: 'og:image:alt', content: '量化研究入门：多因子投研框架与 AI 金融论文雷达' }],
+    ['meta', { property: 'og:image:alt', content: '量化研究入门：多因子投研框架与 FinPaperRadar（AI × 金融论文雷达）' }],
     // Twitter Card
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:image', content: 'https://barca0412.github.io/Introduction-to-Quantitative-Finance/og-cover.png' }],
@@ -74,7 +84,7 @@ export default defineConfig({
           name: '量化研究入门',
           url: 'https://barca0412.github.io/Introduction-to-Quantitative-Finance/',
           inLanguage: 'zh-CN',
-          description: '基于多因子股票量化投研框架的开源教程，并提供每日更新的 AI 与金融论文雷达。'
+          description: '基于多因子股票量化投研框架的开源教程，并提供每日更新的 FinPaperRadar（AI × 金融论文雷达）。'
         }
       ]
     })],
@@ -89,7 +99,7 @@ export default defineConfig({
       { text: '因子挖掘', link: '/factors/' },
       { text: '回测', link: '/backtest/' },
       { text: '组合优化', link: '/portfolio/' },
-      { text: 'arXiv日报', link: '/arxiv/' },
+      { text: 'FinPaperRadar', link: '/arxiv/' },
       { text: '资源', link: '/resources/' }
     ],
 
@@ -148,7 +158,7 @@ export default defineConfig({
       ],
       '/arxiv/': [
         {
-          text: 'ArXiv Radar',
+          text: 'FinPaperRadar',
           link: '/arxiv/',
           collapsed: false,
           items: [

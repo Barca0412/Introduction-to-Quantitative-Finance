@@ -15,7 +15,7 @@
 - Factor research: https://barca0412.github.io/Introduction-to-Quantitative-Finance/factors/
 - Backtesting frameworks: https://barca0412.github.io/Introduction-to-Quantitative-Finance/backtest/
 - Portfolio optimization: https://barca0412.github.io/Introduction-to-Quantitative-Finance/portfolio/
-- AI + Finance arXiv Radar: https://barca0412.github.io/Introduction-to-Quantitative-Finance/arxiv/
+- FinPaperRadar (AI × 金融论文雷达), daily AI + finance arXiv paper radar: https://barca0412.github.io/Introduction-to-Quantitative-Finance/arxiv/
 - Curated public resources: https://barca0412.github.io/Introduction-to-Quantitative-Finance/resources/
 
 ## Attribution and citation

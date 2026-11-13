@@ -1,8 +1,8 @@
-# About ArXiv Radar
+# About FinPaperRadar
 
 ## Purpose and editorial scope
 
-ArXiv Radar is an educational discovery tool, not an investment-research recommendation engine. It helps readers find recent work at the intersection of AI, LLM and agent systems with finance and quantitative research. Each paper should be evaluated through its original arXiv record, methods, data and limitations.
+FinPaperRadar（AI × 金融论文雷达）is an educational discovery tool, not an investment-research recommendation engine. It helps readers find recent work at the intersection of AI, LLM and agent systems with finance and quantitative research. Each paper should be evaluated through its original arXiv record, methods, data and limitations.
 
 This subsection is a focused arXiv monitoring stack for the overlap of:
 
@@ -49,7 +49,7 @@ The automated pipeline runs daily. The displayed tags, summaries and affiliation
 ## Data and storage
 
 - The daily job restores the full history from external storage, adds the new papers, and never commits generated data to git.
-- Full history (metadata, abstracts, tags, embeddings) is published as Parquet to a Hugging Face dataset, with a mirror on the GitHub Release `radar-data`.
+- Full history (metadata, abstracts, tags, embeddings) is published as Parquet to a Hugging Face dataset, with a mirror on the GitHub Release `radar-data`. <RadarDatasetLinks />
 - The site only ships light data in `docs/public/arxiv-data/`: the last ~90 days of metadata with short abstract snippets on first load; full abstracts, int8 embeddings and older months (split by month) load on demand.
 - Working files during a run: `data/papers.json`, `data/stats.json`, `data/embeddings.f32` (all git-ignored).
 - Pipeline code: `scripts/arxiv_radar/`
@@ -58,4 +58,8 @@ The automated pipeline runs daily. The displayed tags, summaries and affiliation
 
 Thank you to arXiv for use of its open access interoperability.
 
-Radar uses the arXiv API for metadata only. It publishes titles, authors, abstracts, categories and links back to arXiv; it does not host full texts, PDFs or figures. Please follow each paper's own license when reusing it.
+FinPaperRadar uses the arXiv API for metadata only. It publishes titles, authors, abstracts, categories and links back to arXiv; it does not host full texts, PDFs or figures. Please follow each paper's own license when reusing it.
+
+## License of the dataset
+
+The tags, keywords, Chinese summaries, affiliation normalisation, focus scores, embeddings, statistics and the curation of the dataset are released under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The arXiv metadata itself (titles, authors, abstracts, categories) is CC0 and not restricted by this license.

@@ -1,5 +1,6 @@
 ---
 layout: home
+title: FinPaperRadar · AI × 金融论文雷达
 ---
 
 <script setup>
@@ -212,10 +213,10 @@ onMounted(() => {
 </style>
 
 <div class="hero-shell">
-  <div class="hero-kicker">Focused AI/LLM/Agent Finance Radar</div>
+  <div class="hero-kicker">FinPaperRadar · AI × 金融论文雷达</div>
   <h1 class="hero-title">Track the papers that matter to your research workflow</h1>
   <p class="hero-lead">
-    The arXiv radar continuously monitors 10 arXiv categories, enriches papers with tags,
+    FinPaperRadar continuously monitors 10 arXiv categories, enriches papers with tags,
     keywords, Chinese summaries, affiliations, and semantic embeddings, then publishes a static
     browsing experience under this VitePress site.
   </p>
