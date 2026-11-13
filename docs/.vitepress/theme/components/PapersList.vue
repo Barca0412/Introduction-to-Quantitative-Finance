@@ -684,6 +684,18 @@ const loadPapers = async () => {
   }
 }
 
+// Theme ranking, "similar papers" and free-text queries all score only the groups
+// whose vectors were loaded, so each must be recomputed after a month is added.
+const refreshSemanticRanking = async () => {
+  if (selectedSimilarPaperId.value) {
+    await activateSimilarPapers({ id: selectedSimilarPaperId.value, title: selectedSimilarPaperTitle.value })
+  } else if (selectedEmbeddingTheme.value) {
+    await activateEmbeddingTheme(selectedEmbeddingTheme.value)
+  } else if (semanticQuery.value.trim() && Object.keys(semanticScores.value).length > 0) {
+    await runSemanticSearch()
+  }
+}
+
 const isMonthLoaded = (month) => loadedGroups.value.includes(`archive/${month}`)
 
 // Older months are only fetched when the reader asks for them.
@@ -697,8 +709,8 @@ const loadArchiveMonth = async (month) => {
     loadedGroups.value = loadedGroups.value.concat(group)
     rebuildFacets()
     if (searchQuery.value.trim()) await ensureFullAbstracts()
-    // Re-run an active embedding ranking so the new month is included.
-    if (selectedEmbeddingTheme.value) await activateEmbeddingTheme(selectedEmbeddingTheme.value)
+    // Re-run whichever embedding ranking is active so the new month is scored too.
+    await refreshSemanticRanking()
   } catch (error) {
     console.error(`Failed to load ${month}:`, error)
     loadError.value = error.message || `Failed to load ${month}`

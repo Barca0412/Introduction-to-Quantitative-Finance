@@ -50,8 +50,13 @@ HF_TOKEN = os.getenv("HF_TOKEN", "").strip()
 # GitHub Release used as a mirror ("owner/repo" is provided by Actions).
 GITHUB_REPOSITORY = os.getenv("GITHUB_REPOSITORY", "Barca0412/Introduction-to-Quantitative-Finance").strip()
 RADAR_RELEASE_TAG = os.getenv("RADAR_RELEASE_TAG", "radar-data").strip()
+# Override for tests / mirrors, e.g. "file:///tmp/fake-release". Empty = GitHub Release URL.
+RADAR_RELEASE_BASE_URL = os.getenv("RADAR_RELEASE_BASE_URL", "").strip().rstrip("/")
 # One-time bootstrap source: the branch that still has data/papers.json in git.
-RADAR_LEGACY_GIT_REF = os.getenv("RADAR_LEGACY_GIT_REF", "origin/guohao_vitepress").strip()
+# restore() fetches RADAR_LEGACY_BRANCH from origin into RADAR_LEGACY_GIT_REF when
+# neither Hugging Face nor the GitHub Release has any data yet.
+RADAR_LEGACY_BRANCH = os.getenv("RADAR_LEGACY_BRANCH", "guohao_vitepress").strip()
+RADAR_LEGACY_GIT_REF = os.getenv("RADAR_LEGACY_GIT_REF", "refs/remotes/origin/guohao_vitepress").strip()
 
 # ============================================
 # Site data budget

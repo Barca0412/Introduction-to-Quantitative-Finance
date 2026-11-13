@@ -145,17 +145,49 @@ def _quantize(matrix):
     return quantized, scales
 
 
+class SlimCache:
+    """slim_paper() results and their serialized sizes, computed once per paper."""
+
+    # `,"ac":N` added to records whose full abstract lives in a chunk file.
+    AC_FIELD_BYTES = 8
+
+    def __init__(self) -> None:
+        self._items: Dict[str, Tuple[Dict[str, Any], Optional[str], int]] = {}
+
+    def get(self, paper: Dict[str, Any]) -> Tuple[Dict[str, Any], Optional[str]]:
+        record, full, _ = self._entry(paper)
+        return dict(record), full
+
+    def size(self, paper: Dict[str, Any]) -> int:
+        return self._entry(paper)[2]
+
+    def _entry(self, paper: Dict[str, Any]):
+        paper_id = paper["id"]
+        if paper_id not in self._items:
+            record, full = slim_paper(paper)
+            size = len(_dumps(record)) + 1 + (self.AC_FIELD_BYTES if full else 0)
+            self._items[paper_id] = (record, full, size)
+        return self._items[paper_id]
+
+
+def estimate_first_load(papers: List[Dict[str, Any]], cache: SlimCache, max_bytes: int) -> int:
+    """Bytes of the papers-N.json chunks for this group, without writing anything."""
+    sizes = [cache.size(p) for p in papers]
+    chunks = max(1, -(-sum(sizes) // max(1, max_bytes - 64)))
+    return sum(sizes) + chunks * len(_dumps({"papers": []}))
+
+
 def build_group(
     name: str,
     papers: List[Dict[str, Any]],
     vectors_by_id: Dict[str, int],
     matrix,
     max_bytes: int,
+    cache: Optional[SlimCache] = None,
 ) -> Dict[str, Any]:
     """Write papers/abstracts/vectors chunks for one group (recent or a month)."""
-    import numpy as np
-
-    slim_and_full = [slim_paper(p) for p in papers]
+    cache = cache or SlimCache()
+    slim_and_full = [cache.get(p) for p in papers]
 
     # Abstract chunks first, so each slim record can point at its chunk.
     full_abstracts = [(rec["id"], full) for rec, full in slim_and_full if full]
@@ -224,21 +256,27 @@ def build(today: Optional[date] = None) -> Dict[str, Any]:
         shutil.rmtree(SITE_DATA_DIR)
     SITE_DATA_DIR.mkdir(parents=True)
 
-    # Shrink the recent window until the first load fits the budget.
+    # Pick the window from size estimates first, then write the group once.
+    cache = SlimCache()
     days = SITE_RECENT_DAYS
     while True:
         cutoff = (anchor - timedelta(days=days - 1)).isoformat()
         recent = [p for p in papers if p.get("published_date", "") >= cutoff]
-        recent_info = build_group("recent", recent, vectors_by_id, matrix, SITE_MAX_FILE_BYTES)
-        if recent_info["first_load_bytes"] <= SITE_FIRST_LOAD_BUDGET - 200_000 or days <= SITE_MIN_RECENT_DAYS:
+        estimate = estimate_first_load(recent, cache, SITE_MAX_FILE_BYTES)
+        if estimate <= SITE_FIRST_LOAD_BUDGET - 200_000 or days <= SITE_MIN_RECENT_DAYS:
             break
         logger.warning(
-            "Recent window of %s days needs %.2f MB on first load; shrinking by a week",
+            "Recent window of %s days needs ~%.2f MB on first load; shrinking by a week",
             days,
-            recent_info["first_load_bytes"] / 1e6,
+            estimate / 1e6,
         )
-        shutil.rmtree(SITE_DATA_DIR / "recent")
-        days -= 7
+        days = max(SITE_MIN_RECENT_DAYS, days - 7)
+    recent_info = build_group("recent", recent, vectors_by_id, matrix, SITE_MAX_FILE_BYTES, cache)
+    logger.info(
+        "Recent first load: estimated %.3f MB, written %.3f MB",
+        estimate / 1e6,
+        recent_info["first_load_bytes"] / 1e6,
+    )
 
     by_month: Dict[str, List[Dict[str, Any]]] = defaultdict(list)
     undated = 0
@@ -253,7 +291,7 @@ def build(today: Optional[date] = None) -> Dict[str, Any]:
 
     archive = []
     for month in sorted(by_month, reverse=True):
-        info = build_group(f"archive/{month}", by_month[month], vectors_by_id, matrix, SITE_MAX_FILE_BYTES)
+        info = build_group(f"archive/{month}", by_month[month], vectors_by_id, matrix, SITE_MAX_FILE_BYTES, cache)
         info.pop("first_load_bytes")
         archive.append({"month": month, **info})
 

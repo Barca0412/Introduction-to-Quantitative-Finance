@@ -38,9 +38,11 @@ function buildStatusBlock(statsPayload, papersPayload) {
 }
 
 async function main() {
+  // papers.json is optional: the post-deploy README job only receives stats.json,
+  // whose summary already carries the totals and the latest publication date.
   const [readme, papersPayload, statsPayload] = await Promise.all([
     fs.readFile(README_FILE, 'utf8'),
-    fs.readFile(PAPERS_FILE, 'utf8').then(JSON.parse),
+    fs.readFile(PAPERS_FILE, 'utf8').then(JSON.parse).catch(() => ({ papers: [] })),
     fs.readFile(STATS_FILE, 'utf8').then(JSON.parse),
   ])
 

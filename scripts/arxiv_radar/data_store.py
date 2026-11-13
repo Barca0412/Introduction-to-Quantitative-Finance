@@ -31,9 +31,10 @@ import sys
 import tempfile
 import urllib.error
 import urllib.request
+from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Callable, Dict, List, Optional, Tuple
 
 from .config import (
     BASE_DIR,
@@ -45,7 +46,9 @@ from .config import (
     HF_DATASET_REPO,
     HF_TOKEN,
     PAPERS_FILE,
+    RADAR_LEGACY_BRANCH,
     RADAR_LEGACY_GIT_REF,
+    RADAR_RELEASE_BASE_URL,
     RADAR_RELEASE_TAG,
     STATS_FILE,
 )
@@ -185,13 +188,47 @@ def _write_papers_json(papers: List[Dict[str, Any]], last_updated: Optional[str]
 # --------------------------------------------------------------------------
 # Restore sources
 # --------------------------------------------------------------------------
+#
+# Every source is turned into a Candidate first (cheap: only export_info.json is
+# downloaded), then the newest one is imported. "Newest" = latest
+# papers_last_updated, ties broken by paper count. This way a stale Hugging Face
+# copy (e.g. its upload failed yesterday) never wins over a fresher Release copy.
 
-def _import_parquet_pair(papers_path: Path, embeddings_path: Optional[Path]) -> int:
+
+@dataclass
+class Candidate:
+    name: str
+    papers: int
+    updated: str  # naive-UTC ISO timestamp, "" when unknown
+    load: Callable[[], int] = field(repr=False)
+
+
+def _normalize_timestamp(value: Any) -> str:
+    if not value:
+        return ""
+    try:
+        parsed = datetime.fromisoformat(str(value))
+    except ValueError:
+        return ""
+    if parsed.tzinfo is not None:
+        parsed = parsed.astimezone(timezone.utc).replace(tzinfo=None)
+    return parsed.isoformat()
+
+
+def _import_parquet_pair(
+    papers_path: Path,
+    embeddings_path: Optional[Path],
+    stats_path: Optional[Path] = None,
+    last_updated: Optional[str] = None,
+) -> int:
     import numpy as np
     import pyarrow.parquet as pq
 
     papers = pq.read_table(papers_path).to_pylist()
-    _write_papers_json(papers)
+    _write_papers_json(papers, last_updated or None)
+
+    if stats_path and stats_path.exists():
+        shutil.copy2(stats_path, STATS_FILE)
 
     if embeddings_path and embeddings_path.exists():
         table = pq.read_table(embeddings_path)
@@ -206,31 +243,19 @@ def _import_parquet_pair(papers_path: Path, embeddings_path: Optional[Path]) -> 
     return len(papers)
 
 
-def _restore_from_hf(workdir: Path) -> Optional[int]:
+def _hf_fetch(filename: str, workdir: Path) -> Optional[Path]:
+    """Download one file of the Hugging Face dataset, or None."""
     if not HF_DATASET_REPO:
-        logger.info("HF_DATASET_REPO is empty; skipping Hugging Face restore")
         return None
     try:
         from huggingface_hub import hf_hub_download
-    except ImportError:
-        logger.warning("huggingface_hub is not installed; skipping Hugging Face restore")
-        return None
 
-    try:
-        papers_path = Path(
-            hf_hub_download(HF_DATASET_REPO, PAPERS_PARQUET, repo_type="dataset", token=HF_TOKEN or None, local_dir=workdir)
+        return Path(
+            hf_hub_download(HF_DATASET_REPO, filename, repo_type="dataset", token=HF_TOKEN or None, local_dir=workdir)
         )
-        try:
-            emb_path = Path(
-                hf_hub_download(HF_DATASET_REPO, EMBEDDINGS_PARQUET, repo_type="dataset", token=HF_TOKEN or None, local_dir=workdir)
-            )
-        except Exception as exc:  # embeddings are optional: they can be rebuilt
-            logger.warning("No embeddings on Hugging Face (%s); they will be recomputed", exc)
-            emb_path = None
     except Exception as exc:
-        logger.warning("Hugging Face restore failed: %s", exc)
+        logger.info("Hugging Face %s: %s not available (%s)", HF_DATASET_REPO, filename, type(exc).__name__)
         return None
-    return _import_parquet_pair(papers_path, emb_path)
 
 
 def _download(url: str, target: Path) -> bool:
@@ -243,41 +268,118 @@ def _download(url: str, target: Path) -> bool:
         logger.info("GET %s -> HTTP %s", url, exc.code)
     except urllib.error.URLError as exc:
         logger.warning("GET %s failed: %s", url, exc.reason)
+    if target.exists():
+        target.unlink()
     return False
 
 
-def _restore_from_release(workdir: Path) -> Optional[int]:
-    if not GITHUB_REPOSITORY or not RADAR_RELEASE_TAG:
+def _release_fetch(filename: str, workdir: Path) -> Optional[Path]:
+    """Download one asset of the GitHub Release mirror, or None."""
+    base = RADAR_RELEASE_BASE_URL or (
+        f"https://github.com/{GITHUB_REPOSITORY}/releases/download/{RADAR_RELEASE_TAG}"
+        if GITHUB_REPOSITORY and RADAR_RELEASE_TAG
+        else ""
+    )
+    if not base:
         return None
-    base = f"https://github.com/{GITHUB_REPOSITORY}/releases/download/{RADAR_RELEASE_TAG}"
-    papers_path = workdir / PAPERS_PARQUET
-    if not _download(f"{base}/{PAPERS_PARQUET}", papers_path):
-        logger.info("No GitHub Release mirror found at %s", base)
+    target = workdir / filename
+    url = f"{base}/{filename}"
+    return target if _download(url, target) else None
+
+
+def _remote_candidate(name: str, fetch: Callable[[str, Path], Optional[Path]], workdir: Path) -> Optional[Candidate]:
+    sub = workdir / name
+    sub.mkdir(parents=True, exist_ok=True)
+    info_path = fetch(EXPORT_INFO, sub)
+    papers_path: Optional[Path] = None
+    if info_path:
+        info = json.loads(info_path.read_text(encoding="utf-8"))
+        papers = int(info.get("papers") or 0)
+        updated = _normalize_timestamp(info.get("papers_last_updated") or info.get("generated_at"))
+    else:
+        papers_path = fetch(PAPERS_PARQUET, sub)
+        if not papers_path:
+            logger.info("%s: no data", name)
+            return None
+        import pyarrow.parquet as pq
+
+        papers = pq.read_metadata(papers_path).num_rows
+        updated = ""
+    if papers <= 0:
+        logger.info("%s: dataset is empty", name)
         return None
-    emb_path = workdir / EMBEDDINGS_PARQUET
-    if not _download(f"{base}/{EMBEDDINGS_PARQUET}", emb_path):
-        emb_path = None
-    return _import_parquet_pair(papers_path, emb_path)
+
+    def load() -> int:
+        path = papers_path or fetch(PAPERS_PARQUET, sub)
+        if not path:
+            raise RuntimeError(f"{name}: export_info.json exists but {PAPERS_PARQUET} could not be downloaded")
+        return _import_parquet_pair(
+            path,
+            fetch(EMBEDDINGS_PARQUET, sub),
+            fetch("stats.json", sub),
+            updated,
+        )
+
+    logger.info("%s: %s papers, updated %s", name, papers, updated or "unknown")
+    return Candidate(name, papers, updated, load)
+
+
+def _local_candidate() -> Optional[Candidate]:
+    if not PAPERS_FILE.exists():
+        return None
+    payload = json.loads(PAPERS_FILE.read_text(encoding="utf-8"))
+    papers = len(payload.get("papers", []))
+    if papers <= 0:
+        return None
+    updated = _normalize_timestamp(payload.get("last_updated"))
+    logger.info("local: %s papers, updated %s", papers, updated or "unknown")
+    # Already in place: nothing to import.
+    return Candidate("local", papers, updated, lambda: papers)
+
+
+def _git(*args: str, stdout=subprocess.PIPE) -> subprocess.CompletedProcess:
+    return subprocess.run(["git", *args], cwd=BASE_DIR, stdout=stdout, stderr=subprocess.PIPE)
 
 
 def _git_show(ref_path: str, target: Path) -> bool:
     with open(target, "wb") as handle:
-        result = subprocess.run(
-            ["git", "show", ref_path], cwd=BASE_DIR, stdout=handle, stderr=subprocess.PIPE
-        )
+        result = _git("show", ref_path, stdout=handle)
     if result.returncode != 0:
         logger.info("git show %s failed: %s", ref_path, result.stderr.decode(errors="ignore").strip())
         return False
     return True
 
 
-def import_legacy_json(papers_json: Path, embeddings_json: Optional[Path]) -> int:
+def _ensure_legacy_ref() -> bool:
+    """Make RADAR_LEGACY_GIT_REF available, fetching the legacy branch if needed."""
+    if not RADAR_LEGACY_GIT_REF:
+        return False
+    if _git("rev-parse", "--verify", "--quiet", RADAR_LEGACY_GIT_REF).returncode == 0:
+        return True
+    if not RADAR_LEGACY_BRANCH or not RADAR_LEGACY_GIT_REF.startswith("refs/"):
+        return False
+    logger.info("Fetching legacy branch %s into %s", RADAR_LEGACY_BRANCH, RADAR_LEGACY_GIT_REF)
+    result = _git("fetch", "--no-tags", "--depth=1", "origin", f"+{RADAR_LEGACY_BRANCH}:{RADAR_LEGACY_GIT_REF}")
+    if result.returncode != 0:
+        logger.info("Legacy branch not available: %s", result.stderr.decode(errors="ignore").strip())
+        return False
+    return True
+
+
+def import_legacy_json(
+    papers_json: Path,
+    embeddings_json: Optional[Path],
+    stats_json: Optional[Path] = None,
+) -> int:
     """Convert the old in-git JSON files (indent=2, float lists) to the new layout."""
     import numpy as np
 
     payload = json.loads(papers_json.read_text(encoding="utf-8"))
     papers = payload.get("papers", [])
     _write_papers_json(papers, payload.get("last_updated"))
+
+    if stats_json and stats_json.exists():
+        write_atomically(STATS_FILE, json.loads(stats_json.read_text(encoding="utf-8")))
 
     if embeddings_json and embeddings_json.exists():
         legacy = json.loads(embeddings_json.read_text(encoding="utf-8"))
@@ -289,54 +391,90 @@ def import_legacy_json(papers_json: Path, embeddings_json: Optional[Path]) -> in
             "theme_queries": legacy.get("theme_queries", {}),
             "theme_vectors": legacy.get("theme_vectors", {}),
             "ids": [row["id"] for row in rows],
-            # Unknown hash: generate_embeddings.mjs adopts these vectors as-is.
+            # Empty hash = built with the old text recipe; generate_embeddings.mjs
+            # reuses these vectors and refreshes them gradually.
             "text_hashes": [""] * len(rows),
         }
         save_local_embeddings(meta, matrix)
     return len(papers)
 
 
-def _restore_from_legacy_git(workdir: Path) -> Optional[int]:
-    if not RADAR_LEGACY_GIT_REF:
+def _legacy_candidate(workdir: Path) -> Optional[Candidate]:
+    if not _ensure_legacy_ref():
         return None
     papers_path = workdir / "legacy_papers.json"
     if not _git_show(f"{RADAR_LEGACY_GIT_REF}:data/papers.json", papers_path):
         return None
-    emb_path = workdir / "legacy_embeddings_index.json"
-    if not _git_show(f"{RADAR_LEGACY_GIT_REF}:data/embeddings_index.json", emb_path):
-        emb_path = None
-    return import_legacy_json(papers_path, emb_path)
+    payload = json.loads(papers_path.read_text(encoding="utf-8"))
+    papers = len(payload.get("papers", []))
+    if papers <= 0:
+        return None
+
+    def load() -> int:
+        emb_path = workdir / "legacy_embeddings_index.json"
+        stats_path = workdir / "legacy_stats.json"
+        return import_legacy_json(
+            papers_path,
+            emb_path if _git_show(f"{RADAR_LEGACY_GIT_REF}:data/embeddings_index.json", emb_path) else None,
+            stats_path if _git_show(f"{RADAR_LEGACY_GIT_REF}:data/stats.json", stats_path) else None,
+        )
+
+    updated = _normalize_timestamp(payload.get("last_updated"))
+    logger.info("legacy-git: %s papers, updated %s", papers, updated or "unknown")
+    return Candidate("legacy-git", papers, updated, load)
+
+
+def _ensure_stats() -> None:
+    """The site needs stats.json; recompute it when the source did not carry one."""
+    if STATS_FILE.exists():
+        return
+    from .compute_stats import compute_and_save_stats
+
+    papers = json.loads(PAPERS_FILE.read_text(encoding="utf-8")).get("papers", [])
+    logger.info("No stats.json in the restored data; recomputing from %s papers", len(papers))
+    compute_and_save_stats(papers)
 
 
 def restore(source: str = "auto") -> Dict[str, Any]:
-    """Make sure data/ holds the full history before the daily fetch."""
+    """Make sure data/ holds the newest full history (and its stats) before a run."""
     DATA_DIR.mkdir(parents=True, exist_ok=True)
+    fetchers = {"hf": _hf_fetch, "release": _release_fetch}
 
-    if source in ("auto", "local") and PAPERS_FILE.exists():
-        count = len(json.loads(PAPERS_FILE.read_text(encoding="utf-8")).get("papers", []))
-        record = {"source": "local", "papers": count}
-    else:
-        record = None
-        order = {
-            "auto": ["hf", "release", "legacy-git"],
-            "hf": ["hf"],
-            "release": ["release"],
-            "legacy-git": ["legacy-git"],
-            "local": [],
-        }[source]
-        handlers = {"hf": _restore_from_hf, "release": _restore_from_release, "legacy-git": _restore_from_legacy_git}
-        with tempfile.TemporaryDirectory() as tmp:
-            for name in order:
-                count = handlers[name](Path(tmp))
-                if count:
-                    record = {"source": name, "papers": count}
-                    break
+    with tempfile.TemporaryDirectory() as tmp:
+        workdir = Path(tmp)
+        candidates: List[Candidate] = []
+        if source in ("auto", "local"):
+            local = _local_candidate()
+            if local:
+                candidates.append(local)
+        for name in ("hf", "release"):
+            if source in ("auto", name):
+                candidate = _remote_candidate(name, fetchers[name], workdir)
+                if candidate:
+                    candidates.append(candidate)
+        # The legacy branch is only a bootstrap: used when nothing else has data.
+        if source == "legacy-git" or (source == "auto" and not candidates):
+            legacy = _legacy_candidate(workdir)
+            if legacy:
+                candidates.append(legacy)
 
-    if record is None:
-        if os.getenv("RADAR_ALLOW_EMPTY_HISTORY") == "1":
+        if candidates:
+            chosen = max(candidates, key=lambda c: (c.updated, c.papers))
+            if chosen.name != "local":
+                # Drop stats that belong to a different snapshot.
+                STATS_FILE.unlink(missing_ok=True)
+            count = chosen.load()
+            record = {
+                "source": chosen.name,
+                "papers": count,
+                "updated": chosen.updated,
+                "considered": [{"source": c.name, "papers": c.papers, "updated": c.updated} for c in candidates],
+            }
+        elif os.getenv("RADAR_ALLOW_EMPTY_HISTORY") == "1":
             logger.warning("No history found anywhere; starting from an empty dataset (RADAR_ALLOW_EMPTY_HISTORY=1)")
             _write_papers_json([])
-            record = {"source": "empty", "papers": 0}
+            STATS_FILE.unlink(missing_ok=True)
+            record = {"source": "empty", "papers": 0, "considered": []}
         else:
             raise SystemExit(
                 "Could not restore Radar history from local files, Hugging Face, GitHub Release "
@@ -345,6 +483,7 @@ def restore(source: str = "auto") -> Dict[str, Any]:
                 "only if you really want to start over."
             )
 
+    _ensure_stats()
     record["restored_at"] = datetime.now(timezone.utc).isoformat()
     write_atomically(RESTORE_RECORD, record)
     logger.info("Restored %s papers from %s", record["papers"], record["source"])
@@ -413,6 +552,8 @@ def export() -> Dict[str, Any]:
     dates = sorted(p.get("published_date", "") for p in papers if p.get("published_date"))
     info = {
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        # restore() compares this across Hugging Face / Release to pick the newest copy.
+        "papers_last_updated": payload.get("last_updated"),
         "papers": len(papers),
         "embedded_papers": len(meta.get("ids", [])),
         "embedding_model": meta.get("model") or "Xenova/all-MiniLM-L6-v2",
@@ -463,6 +604,7 @@ def main(argv: Optional[List[str]] = None) -> None:
     legacy = sub.add_parser("import-legacy", help="convert old papers.json / embeddings_index.json")
     legacy.add_argument("papers_json", type=Path)
     legacy.add_argument("embeddings_json", type=Path, nargs="?")
+    legacy.add_argument("stats_json", type=Path, nargs="?")
     args = parser.parse_args(argv)
 
     if args.command == "restore":
@@ -472,7 +614,7 @@ def main(argv: Optional[List[str]] = None) -> None:
     elif args.command == "push-hf":
         push_hf()
     elif args.command == "import-legacy":
-        count = import_legacy_json(args.papers_json, args.embeddings_json)
+        count = import_legacy_json(args.papers_json, args.embeddings_json, args.stats_json)
         write_atomically(RESTORE_RECORD, {"source": "import-legacy", "papers": count})
         logger.info("Imported %s legacy papers", count)
 

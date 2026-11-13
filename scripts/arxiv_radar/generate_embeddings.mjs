@@ -6,6 +6,9 @@
 //         data/embeddings.meta.json   ids (row order), text hashes, model, theme vectors
 //
 // Only papers that are new, or whose embedded text changed, are re-embedded.
+// Vectors built with an older text recipe (or imported from the legacy JSON, which
+// carries no hash) are reused but marked stale (empty hash), and refreshed
+// gradually: at most RADAR_EMBED_REFRESH_LIMIT of them per run, newest papers first.
 // The site gets an int8 copy built by build_site_data.py; this full-precision
 // matrix only goes to the Parquet export (Hugging Face / GitHub Release).
 import crypto from 'node:crypto'
@@ -25,6 +28,10 @@ const PAPERS_FILE = path.join(DATA_DIR, 'papers.json')
 const EMB_BIN = path.join(DATA_DIR, 'embeddings.f32')
 const EMB_META = path.join(DATA_DIR, 'embeddings.meta.json')
 const BATCH_SIZE = 24
+// Bump when buildPaperText() changes: every stored vector then becomes stale and
+// is refreshed gradually instead of all at once.
+const TEXT_RECIPE = 'v1'
+const REFRESH_LIMIT = Number.parseInt(process.env.RADAR_EMBED_REFRESH_LIMIT || '3000', 10)
 
 const THEME_QUERIES = {
   'ai-finance': 'AI agents and large language models for finance, trading, portfolio management, risk forecasting, quantitative research, financial analysis, market intelligence',
@@ -80,24 +87,49 @@ async function main() {
   const previous = await readPrevious()
   const reuseAllowed = previous && previous.meta.model === MODEL_NAME
 
+  const sameRecipe = reuseAllowed && previous.meta.text_recipe === TEXT_RECIPE
   const previousRows = new Map()
   if (reuseAllowed) {
-    previous.meta.ids.forEach((id, row) => previousRows.set(id, { row, hash: previous.meta.text_hashes?.[row] ?? '' }))
+    previous.meta.ids.forEach((id, row) => {
+      // A different recipe makes every old hash meaningless: treat the vector as stale.
+      const hash = sameRecipe ? previous.meta.text_hashes?.[row] ?? '' : ''
+      previousRows.set(id, { row, hash })
+    })
   }
 
-  const hashes = papers.map((paper) => textHash(buildPaperText(paper)))
+  const currentHashes = papers.map((paper) => textHash(buildPaperText(paper)))
+  const hashes = new Array(papers.length)
   const todo = []
+  const stale = []
   papers.forEach((paper, index) => {
     const prior = previousRows.get(paper.id)
-    // An empty hash comes from the legacy JSON import: adopt that vector as-is.
-    if (!prior || (prior.hash !== '' && prior.hash !== hashes[index])) todo.push(index)
+    if (!prior) {
+      todo.push(index) // new paper
+    } else if (prior.hash === '') {
+      stale.push(index) // reusable, but built from unknown / older text
+    } else if (prior.hash !== currentHashes[index]) {
+      todo.push(index) // text changed (e.g. new tags or summary)
+    }
+  })
+  // papers.json is sorted newest first, so the site's recent window is refreshed first.
+  const refresh = stale.slice(0, Math.max(0, REFRESH_LIMIT))
+  todo.push(...refresh)
+  const refreshed = new Set(refresh)
+  papers.forEach((_, index) => {
+    const prior = previousRows.get(papers[index].id)
+    const keptStale = prior && prior.hash === '' && !refreshed.has(index)
+    hashes[index] = keptStale ? '' : currentHashes[index]
   })
 
   const sameThemes = reuseAllowed
     && JSON.stringify(previous.meta.theme_queries || {}) === JSON.stringify(THEME_QUERIES)
     && Object.keys(previous.meta.theme_vectors || {}).length === Object.keys(THEME_QUERIES).length
 
-  console.log(`Papers: ${papers.length}; reusing ${papers.length - todo.length} vectors; embedding ${todo.length}`)
+  console.log(
+    `Papers: ${papers.length}; reusing ${papers.length - todo.length} vectors; embedding ${todo.length}`
+      + ` (${todo.length - refresh.length} new/changed, ${refresh.length} stale refreshed,`
+      + ` ${stale.length - refresh.length} stale left for later runs)`
+  )
 
   let extractor = null
   if (todo.length > 0 || !sameThemes) {
@@ -138,6 +170,7 @@ async function main() {
     model: MODEL_NAME,
     generated_at: new Date().toISOString(),
     dimension: dim,
+    text_recipe: TEXT_RECIPE,
     theme_queries: THEME_QUERIES,
     theme_vectors: themeVectors,
     ids: papers.map((paper) => paper.id),

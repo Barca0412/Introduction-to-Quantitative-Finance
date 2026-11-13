@@ -2,9 +2,12 @@ name: arXiv Radar update and site deploy
 
 # One workflow for the whole site:
 # - schedule / manual run: restore full history -> fetch arXiv -> embed -> build site data
-#   -> deploy Pages -> publish full history (Hugging Face + GitHub Release `radar-data`).
+#   -> deploy Pages -> publish full history (GitHub Release `radar-data` + Hugging Face)
+#   -> commit the README status block (only after a successful deploy).
 # - push to main: rebuild and deploy the site from the stored history, no arXiv fetch.
 # Generated data is never committed. Only the README status block is.
+# restore picks the newest of Hugging Face / Release and, if neither has data yet,
+# fetches the legacy `guohao_vitepress` branch by itself for a one-time bootstrap.
 #
 # Requires Settings -> Pages -> Source = "GitHub Actions".
 
@@ -44,8 +47,8 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write # README status commit
+    # Embedding refresh is capped (RADAR_EMBED_REFRESH_LIMIT, ~3000 papers ≈ 5-10 min).
+    timeout-minutes: 60
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -68,18 +71,6 @@ jobs:
           pip install -r scripts/arxiv_radar/requirements.txt
           npm ci
 
-      - name: Make the legacy data branch available for a one-time bootstrap
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          if [ -n "${HF_DATASET_REPO}" ] || gh release view "${RADAR_RELEASE_TAG}" >/dev/null 2>&1; then
-            echo "External history exists; legacy branch not needed."
-          else
-            git fetch --no-tags --depth=1 origin \
-              guohao_vitepress:refs/remotes/origin/guohao_vitepress \
-              || echo "Legacy branch is not available."
-          fi
-
       - name: Restore full history
         run: npm run arxiv:restore
 
@@ -90,6 +81,9 @@ jobs:
         run: npm run arxiv:fetch
 
       - name: Update embeddings (incremental)
+        env:
+          # Site-only runs do not export, so refreshing stale vectors there is wasted time.
+          RADAR_EMBED_REFRESH_LIMIT: ${{ env.FETCH == 'true' && '3000' || '0' }}
         run: npm run arxiv:embeddings
 
       - name: Build light site data
@@ -107,21 +101,13 @@ jobs:
           path: data/export/
           retention-days: 7
 
-      - name: Commit README status to main
+      - name: Keep stats for the README job
         if: env.FETCH == 'true'
-        shell: bash
-        run: |
-          npm run arxiv:readme
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md
-          if git diff --cached --quiet; then
-            echo "README status is already current."
-            exit 0
-          fi
-          git commit -m "docs: sync arXiv radar README status ($(date -u +'%Y-%m-%d'))"
-          git pull --rebase origin main
-          git push origin HEAD:main
+        uses: actions/upload-artifact@v4
+        with:
+          name: radar-stats
+          path: data/stats.json
+          retention-days: 7
 
       - name: Build VitePress site
         run: npm run docs:build
@@ -185,11 +171,8 @@ jobs:
           name: radar-export
           path: data/export/
 
-      - name: Push to Hugging Face dataset
-        env:
-          HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: python -m scripts.arxiv_radar.data_store push-hf
-
+      # Release first, Hugging Face second; each runs even if the other failed,
+      # and the job still turns red if either one did.
       - name: Mirror to GitHub Release
         env:
           GH_TOKEN: ${{ github.token }}
@@ -201,3 +184,48 @@ jobs:
               --latest=false
           fi
           gh release upload "${RADAR_RELEASE_TAG}" data/export/* --clobber
+
+      - name: Push to Hugging Face dataset
+        if: ${{ !cancelled() }}
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: python -m scripts.arxiv_radar.data_store push-hf
+
+  commit-readme:
+    # Only after the site is live, so the README never advertises a deploy that failed.
+    needs: deploy
+    if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.fetch)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Download stats
+        uses: actions/download-artifact@v4
+        with:
+          name: radar-stats
+          path: data/
+
+      - name: Commit README status to main
+        shell: bash
+        run: |
+          node scripts/arxiv_radar/update_readme.mjs
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          if git diff --cached --quiet; then
+            echo "README status is already current."
+            exit 0
+          fi
+          git commit -m "docs: sync arXiv radar README status ($(date -u +'%Y-%m-%d'))"
+          git pull --rebase origin main
+          git push origin HEAD:main
