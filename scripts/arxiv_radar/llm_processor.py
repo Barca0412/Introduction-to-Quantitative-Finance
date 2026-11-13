@@ -1,6 +1,6 @@
 """
 LLM processing module for LLM-Finance-Radar.
-Handles paper analysis using DashScope API (通义千问).
+Handles paper analysis via an OpenAI-compatible chat API (DeepSeek by default).
 """
 
 import asyncio
@@ -14,8 +14,9 @@ from typing import Dict, Any, Optional, List
 import aiohttp
 
 from .config import (
-    DASHSCOPE_API_KEY,
-    DASHSCOPE_API_URL,
+    LLM_API_KEY,
+    LLM_API_URL,
+    THINKING_TOGGLE_PREFIXES,
     MODEL_NAME,
     DISABLE_THINKING,
     MAX_CONCURRENT,
@@ -253,12 +254,12 @@ def async_retry(max_retries: int = 3, base_delay: float = 2.0):
     return decorator
 
 
-class DashScopeClient:
-    """Async HTTP client for DashScope API."""
+class LLMClient:
+    """Async HTTP client for an OpenAI-compatible chat completions API."""
 
     def __init__(self, api_key: str, max_concurrent: int = MAX_CONCURRENT):
         if not api_key:
-            raise ValueError("DASHSCOPE_API_KEY is required for LLM processing")
+            raise ValueError("LLM_API_KEY is required for LLM processing")
         self.api_key = api_key
         self.max_concurrent = max_concurrent
         self.semaphore = asyncio.Semaphore(max_concurrent)
@@ -282,7 +283,7 @@ class DashScopeClient:
 
     @async_retry(max_retries=MAX_RETRIES, base_delay=2.0)
     async def call_llm(self, messages: List[Dict[str, str]]) -> str:
-        """Call DashScope API with retry logic.
+        """Call the chat completions API with retry logic.
 
         Args:
             messages: List of message dicts with 'role' and 'content'
@@ -295,7 +296,7 @@ class DashScopeClient:
         """
         async with self.semaphore:
             if self.session is None:
-                raise RuntimeError("DashScopeClient session has not been initialized")
+                raise RuntimeError("LLMClient session has not been initialized")
 
             headers = {
                 "Authorization": f"Bearer {self.api_key}",
@@ -309,11 +310,11 @@ class DashScopeClient:
                 "response_format": {"type": "json_object"},
             }
 
-            if DISABLE_THINKING and MODEL_NAME.startswith("glm-"):
+            if DISABLE_THINKING and MODEL_NAME.startswith(THINKING_TOGGLE_PREFIXES):
                 payload["thinking"] = {"type": "disabled"}
 
             async with self.session.post(
-                DASHSCOPE_API_URL,
+                LLM_API_URL,
                 headers=headers,
                 json=payload,
                 timeout=aiohttp.ClientTimeout(total=REQUEST_TIMEOUT),
@@ -400,14 +401,14 @@ def parse_llm_response(response_text: str) -> Dict[str, Any]:
 
 async def process_paper(
     paper: Dict[str, Any],
-    client: DashScopeClient
+    client: LLMClient
 ) -> Dict[str, Any]:
     """
     Process a single paper with LLM to extract tags, keywords, and Chinese summary.
 
     Args:
         paper: Paper dictionary with at least 'title' and 'abstract'
-        client: DashScopeClient instance
+        client: LLMClient instance
 
     Returns:
         Paper dictionary with added 'tags', 'keywords', and 'summary_zh'
@@ -464,9 +465,9 @@ async def process_papers_batch(
     Returns:
         List of processed papers
     """
-    if not DASHSCOPE_API_KEY:
+    if not LLM_API_KEY:
         logger.warning(
-            "DASHSCOPE_API_KEY is not configured; using deterministic fallback tags"
+            "LLM_API_KEY is not configured; using deterministic fallback tags"
         )
         return [
             {
@@ -478,7 +479,7 @@ async def process_papers_batch(
             for paper in papers
         ]
 
-    async with DashScopeClient(DASHSCOPE_API_KEY, concurrency) as client:
+    async with LLMClient(LLM_API_KEY, concurrency) as client:
         tasks = [process_paper(paper.copy(), client) for paper in papers]
         results = await asyncio.gather(*tasks)
 

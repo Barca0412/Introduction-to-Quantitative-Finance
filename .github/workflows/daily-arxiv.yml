@@ -77,6 +77,11 @@ jobs:
       - name: Fetch and tag new arXiv papers
         if: env.FETCH == 'true'
         env:
+          # Any OpenAI-compatible endpoint. Defaults to DeepSeek; override with
+          # repository variables LLM_BASE_URL / LLM_MODEL (e.g. DashScope + qwen).
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_BASE_URL: ${{ vars.LLM_BASE_URL }}
+          LLM_MODEL: ${{ vars.LLM_MODEL }}
           DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
         run: npm run arxiv:fetch
 

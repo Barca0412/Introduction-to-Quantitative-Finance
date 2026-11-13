@@ -13,8 +13,8 @@ from typing import Any, Dict, List, Sequence
 
 import aiohttp
 
-from .config import DASHSCOPE_API_KEY
-from .llm_processor import DashScopeClient
+from .config import LLM_API_KEY
+from .llm_processor import LLMClient
 
 
 logger = logging.getLogger(__name__)
@@ -239,7 +239,7 @@ def parse_affiliation_response(response_text: str) -> List[str]:
 
 
 async def normalize_affiliations_with_llm(
-    client: DashScopeClient,
+    client: LLMClient,
     paper: Dict[str, Any],
     raw_source: str,
 ) -> List[str]:
@@ -283,8 +283,8 @@ async def enrich_affiliations(
     concurrency: int = 4,
 ) -> List[Dict[str, Any]]:
     """Fill or clean affiliations for papers using HTML fetch + LLM normalization."""
-    if not DASHSCOPE_API_KEY:
-        logger.warning("DASHSCOPE_API_KEY is not configured; keeping deterministic affiliation cleanup only")
+    if not LLM_API_KEY:
+        logger.warning("LLM_API_KEY is not configured; keeping deterministic affiliation cleanup only")
         enriched: List[Dict[str, Any]] = []
         for paper in papers:
             current = normalize_affiliation_fields(paper.get("affiliation"), paper.get("affiliations"))
@@ -307,7 +307,7 @@ async def enrich_affiliations(
     async with aiohttp.ClientSession(
         connector=connector,
         timeout=aiohttp.ClientTimeout(total=30),
-    ) as session, DashScopeClient(DASHSCOPE_API_KEY, max(1, min(2, concurrency))) as client:
+    ) as session, LLMClient(LLM_API_KEY, max(1, min(2, concurrency))) as client:
 
         async def enrich_one(paper: Dict[str, Any]) -> Dict[str, Any]:
             current = normalize_affiliation_fields(paper.get("affiliation"), paper.get("affiliations"))

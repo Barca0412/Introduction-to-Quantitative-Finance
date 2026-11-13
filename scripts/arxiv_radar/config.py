@@ -529,18 +529,34 @@ PRIMARY_FOCUS_TAGS = [
 ]
 
 # ============================================
-# LLM API Configuration (DashScope)
+# LLM API Configuration (any OpenAI-compatible endpoint)
 # ============================================
-# DashScope API Key - Must be set via environment variable
-DASHSCOPE_API_KEY = os.getenv("DASHSCOPE_API_KEY", "")
+# LLM_* is the provider-neutral name; DASHSCOPE_* is still read for old setups.
+# Empty strings count as unset, because GitHub Actions passes missing secrets as "".
+def _env(*names: str, default: str = "") -> str:
+    for name in names:
+        value = os.getenv(name, "").strip()
+        if value:
+            return value
+    return default
 
-# Base URL - Can be overridden via environment variable
-DASHSCOPE_BASE_URL = os.getenv("DASHSCOPE_BASE_URL", "https://coding.dashscope.aliyuncs.com/v1")
-DASHSCOPE_API_URL = f"{DASHSCOPE_BASE_URL}/chat/completions"
-
-# Model name - Can be overridden via environment variable
-MODEL_NAME = os.getenv("DASHSCOPE_MODEL", "qwen3.5-plus")
-DISABLE_THINKING = os.getenv("DASHSCOPE_DISABLE_THINKING", "true").lower() == "true"
+# Defaults follow whichever key is present: LLM_API_KEY -> DeepSeek,
+# legacy DASHSCOPE_API_KEY only -> the DashScope endpoint it was issued for.
+_USING_LEGACY_DASHSCOPE = not _env("LLM_API_KEY") and bool(_env("DASHSCOPE_API_KEY"))
+LLM_API_KEY = _env("LLM_API_KEY", "DASHSCOPE_API_KEY")
+LLM_BASE_URL = _env(
+    "LLM_BASE_URL", "DASHSCOPE_BASE_URL",
+    default="https://coding.dashscope.aliyuncs.com/v1" if _USING_LEGACY_DASHSCOPE else "https://api.deepseek.com",
+).rstrip("/")
+LLM_API_URL = f"{LLM_BASE_URL}/chat/completions"
+MODEL_NAME = _env(
+    "LLM_MODEL", "DASHSCOPE_MODEL",
+    default="qwen3.5-plus" if _USING_LEGACY_DASHSCOPE else "deepseek-flash",
+)
+DISABLE_THINKING = _env("LLM_DISABLE_THINKING", "DASHSCOPE_DISABLE_THINKING", default="true").lower() == "true"
+# Model families that accept {"thinking": {"type": "disabled"}}.
+# DeepSeek turns thinking on by default; tagging does not need it.
+THINKING_TOGGLE_PREFIXES = ("glm-", "deepseek-")
 
 MAX_CONCURRENT = 20
 MAX_RETRIES = 3

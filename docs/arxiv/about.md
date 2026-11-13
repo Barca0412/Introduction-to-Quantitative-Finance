@@ -13,7 +13,7 @@ This subsection is a focused arXiv monitoring stack for the overlap of:
 ## What the pipeline does
 
 1. Pulls recent papers from 10 monitored arXiv categories.
-2. Uses DashScope / Qwen to assign research tags, extract keywords, and generate Chinese summaries.
+2. Uses an LLM (currently DeepSeek, via an OpenAI-compatible API) to assign research tags, extract keywords, and generate Chinese summaries. Without an API key it falls back to rule-based tags.
 3. Normalizes affiliations, computes trend statistics, generates embeddings, and publishes static JSON.
 4. Powers a VitePress browsing experience under `/arxiv/`.
 
