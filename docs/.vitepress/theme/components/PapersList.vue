@@ -18,10 +18,15 @@
             </div>
             <div class="stat-pill secondary">
               <strong>{{ allPapers.length }}</strong>
-              <span>total indexed</span>
+              <span>loaded</span>
             </div>
           </div>
         </div>
+
+        <p v-if="recentRange" class="window-note">
+          Loaded the last {{ recentRange.days }} days ({{ recentRange.since }} – {{ recentRange.until }}).
+          Older months are listed under <strong>Archive</strong> and load on demand.
+        </p>
 
         <div class="results-meta">
           <span>
@@ -38,6 +43,10 @@
 
         <div v-if="loading" class="loading-indicator">
           Loading papers...
+        </div>
+
+        <div v-else-if="loadError && allPapers.length === 0" class="no-results">
+          <p>{{ loadError }}</p>
         </div>
 
         <div v-else-if="filteredPapers.length === 0" class="no-results">
@@ -57,6 +66,7 @@
             @filter-tag="toggleTag"
             @filter-affiliation="applyAffiliationFilter"
             @find-similar="activateSimilarPapers"
+            @expand-abstract="expandAbstract"
           />
         </div>
 
@@ -102,6 +112,7 @@
                 class="search-input"
                 placeholder="Search title, abstract, keywords..."
               >
+              <small v-if="abstractStatus === 'loading'" class="search-hint">Loading full abstracts so search covers them...</small>
 
               <select v-model="selectedCategory" class="filter-select">
                 <option value="">All Categories</option>
@@ -194,6 +205,28 @@
             </div>
           </div>
 
+          <div v-if="archiveMonths.length > 0" class="sidebar-block">
+            <div class="sidebar-heading compact">
+              <h3>Archive</h3>
+              <p>Older papers are split by month. Load a month to add it to the list, filters and semantic search.</p>
+            </div>
+
+            <div class="archive-months">
+              <button
+                v-for="item in archiveMonths"
+                :key="item.month"
+                type="button"
+                class="tag-filter-btn"
+                :class="{ active: isMonthLoaded(item.month) }"
+                :disabled="isMonthLoaded(item.month) || Boolean(archiveLoading)"
+                @click="loadArchiveMonth(item.month)"
+              >
+                {{ item.month }} · {{ item.count }}
+                <template v-if="archiveLoading === item.month"> (loading...)</template>
+              </button>
+            </div>
+          </div>
+
           <div v-if="allTags.length > 0" class="sidebar-block">
             <div class="sidebar-heading compact">
               <h3>Tag Filters</h3>
@@ -220,7 +253,15 @@
 
 <script setup>
 import { computed, onMounted, ref, watch } from 'vue'
-import { withBase } from 'vitepress'
+
+import {
+  fillFullAbstracts,
+  loadGroupPapers,
+  loadGroupVectors,
+  loadManifest,
+  scoreAgainst,
+  vectorFor,
+} from '../radarData.js'
 
 import DateFilter from './DateFilter.vue'
 import PaperCard from './PaperCard.vue'
@@ -296,8 +337,14 @@ const allAffiliations = ref([])
 const semanticScores = ref({})
 const semanticStatus = ref('idle')
 const semanticError = ref('')
+const loadError = ref('')
+const recentRange = ref(null)
+const archiveMonths = ref([])
+const loadedGroups = ref([])
+const archiveLoading = ref('')
+const abstractStatus = ref('idle')
 
-let embeddingsIndex = null
+let manifest = null
 let semanticExtractorPromise = null
 
 const getCategoryName = (cat) => categoryNames[cat] || cat
@@ -410,25 +457,10 @@ const scoreForPaper = (paperId) => {
   return typeof score === 'number' ? score : Number.NEGATIVE_INFINITY
 }
 
-const dotProduct = (left, right) => {
-  let total = 0
-  for (let index = 0; index < left.length; index += 1) {
-    total += left[index] * right[index]
-  }
-  return total
-}
-
+// Int8 vectors are loaded per group (recent window, archive months) on first use.
 const ensureEmbeddingsIndex = async () => {
-  if (embeddingsIndex) return embeddingsIndex
-
   semanticStatus.value = 'loading-index'
-    const response = await fetch(withBase('/arxiv-data/embeddings_index.json'))
-  if (!response.ok) {
-    throw new Error('Embedding index is not available yet')
-  }
-
-  embeddingsIndex = await response.json()
-  return embeddingsIndex
+  return Promise.all(loadedGroups.value.map((group) => loadGroupVectors(group)))
 }
 
 const ensureSemanticExtractor = async () => {
@@ -457,13 +489,16 @@ const clearSemanticSearch = () => {
 
 const activateEmbeddingTheme = async (themeId) => {
   try {
-    const index = await ensureEmbeddingsIndex()
+    const groups = await ensureEmbeddingsIndex()
+    const themeVector = manifest?.embedding?.theme_vectors?.[themeId]
+    if (!themeVector) {
+      throw new Error('Theme vector is missing from the Radar manifest')
+    }
     selectedEmbeddingTheme.value = themeId
+    selectedSimilarPaperId.value = ''
     semanticQuery.value = ''
     semanticError.value = ''
-    semanticScores.value = Object.fromEntries(
-      (index.papers || []).map((paper) => [paper.id, Number(paper.theme_scores?.[themeId] ?? Number.NEGATIVE_INFINITY)])
-    )
+    semanticScores.value = scoreAgainst(themeVector, groups)
     semanticStatus.value = 'ready'
   } catch (error) {
     console.error('Failed to activate embedding theme:', error)
@@ -474,9 +509,9 @@ const activateEmbeddingTheme = async (themeId) => {
 
 const activateSimilarPapers = async (paper) => {
   try {
-    const index = await ensureEmbeddingsIndex()
-    const sourcePaper = (index.papers || []).find((item) => item.id === paper.id)
-    if (!sourcePaper?.vector) {
+    const groups = await ensureEmbeddingsIndex()
+    const sourceVector = vectorFor(paper.id, groups)
+    if (!sourceVector) {
       throw new Error('Embedding vector is missing for this paper')
     }
 
@@ -486,12 +521,9 @@ const activateSimilarPapers = async (paper) => {
     selectedSimilarPaperTitle.value = paper.title
     semanticError.value = ''
 
-    semanticScores.value = Object.fromEntries(
-      (index.papers || []).map((item) => [
-        item.id,
-        item.id === paper.id ? Number.NEGATIVE_INFINITY : dotProduct(sourcePaper.vector, item.vector || []),
-      ])
-    )
+    const scores = scoreAgainst(sourceVector, groups)
+    scores[paper.id] = Number.NEGATIVE_INFINITY
+    semanticScores.value = scores
     semanticStatus.value = 'ready'
   } catch (error) {
     console.error('Similar paper ranking failed:', error)
@@ -508,7 +540,7 @@ const runSemanticSearch = async () => {
   }
 
   try {
-    const [index, extractor] = await Promise.all([
+    const [groups, extractor] = await Promise.all([
       ensureEmbeddingsIndex(),
       ensureSemanticExtractor(),
     ])
@@ -516,12 +548,12 @@ const runSemanticSearch = async () => {
     semanticStatus.value = 'searching'
     semanticError.value = ''
     selectedEmbeddingTheme.value = ''
+    selectedSimilarPaperId.value = ''
+    selectedSimilarPaperTitle.value = ''
 
     const output = await extractor(query, { pooling: 'mean', normalize: true })
     const queryVector = output.tolist()[0]
-    semanticScores.value = Object.fromEntries(
-      (index.papers || []).map((paper) => [paper.id, dotProduct(queryVector, paper.vector || [])])
-    )
+    semanticScores.value = scoreAgainst(queryVector, groups)
     semanticStatus.value = 'ready'
   } catch (error) {
     console.error('Semantic search failed:', error)
@@ -595,53 +627,105 @@ const visiblePaperRows = computed(() => {
   }))
 })
 
+const rebuildFacets = () => {
+  const categorySet = new Set()
+  const tagSet = new Set()
+  const affiliationCounts = new Map()
+
+  allPapers.value.forEach((paper) => {
+    ;(paper.categories || []).forEach((category) => categorySet.add(category))
+    ;(paper.tags || []).forEach((tag) => tagSet.add(tag))
+    paperAffiliations(paper).forEach((affiliation) => {
+      affiliationCounts.set(affiliation, (affiliationCounts.get(affiliation) || 0) + 1)
+    })
+  })
+
+  categories.value = Array.from(categorySet).sort((left, right) => {
+    const leftLabel = getCategoryName(left)
+    const rightLabel = getCategoryName(right)
+    return leftLabel.localeCompare(rightLabel)
+  })
+
+  allTags.value = Array.from(tagSet).sort((left, right) => {
+    const leftIndex = preferredTagOrder.indexOf(left)
+    const rightIndex = preferredTagOrder.indexOf(right)
+
+    if (leftIndex !== -1 || rightIndex !== -1) {
+      return (leftIndex === -1 ? preferredTagOrder.length : leftIndex) - (rightIndex === -1 ? preferredTagOrder.length : rightIndex)
+    }
+
+    return left.localeCompare(right)
+  })
+
+  allAffiliations.value = Array.from(affiliationCounts.entries())
+    .sort((left, right) => {
+      if (right[1] !== left[1]) return right[1] - left[1]
+      return left[0].localeCompare(right[0])
+    })
+    .map(([affiliation]) => affiliation)
+}
+
+// First load: the manifest plus the recent window only (see build_site_data.py).
 const loadPapers = async () => {
   try {
     loading.value = true
-    const response = await fetch(withBase('/arxiv-data/papers.json'))
-    const data = await response.json()
-
-    allPapers.value = data.papers || []
-
-    const categorySet = new Set()
-    const tagSet = new Set()
-    const affiliationCounts = new Map()
-
-    allPapers.value.forEach((paper) => {
-      ;(paper.categories || []).forEach((category) => categorySet.add(category))
-      ;(paper.tags || []).forEach((tag) => tagSet.add(tag))
-      paperAffiliations(paper).forEach((affiliation) => {
-        affiliationCounts.set(affiliation, (affiliationCounts.get(affiliation) || 0) + 1)
-      })
-    })
-
-    categories.value = Array.from(categorySet).sort((left, right) => {
-      const leftLabel = getCategoryName(left)
-      const rightLabel = getCategoryName(right)
-      return leftLabel.localeCompare(rightLabel)
-    })
-
-    allTags.value = Array.from(tagSet).sort((left, right) => {
-      const leftIndex = preferredTagOrder.indexOf(left)
-      const rightIndex = preferredTagOrder.indexOf(right)
-
-      if (leftIndex !== -1 || rightIndex !== -1) {
-        return (leftIndex === -1 ? preferredTagOrder.length : leftIndex) - (rightIndex === -1 ? preferredTagOrder.length : rightIndex)
-      }
-
-      return left.localeCompare(right)
-    })
-
-    allAffiliations.value = Array.from(affiliationCounts.entries())
-      .sort((left, right) => {
-        if (right[1] !== left[1]) return right[1] - left[1]
-        return left[0].localeCompare(right[0])
-      })
-      .map(([affiliation]) => affiliation)
+    loadError.value = ''
+    manifest = await loadManifest()
+    recentRange.value = manifest.recent
+    archiveMonths.value = manifest.archive.map((item) => ({ month: item.month, count: item.count }))
+    allPapers.value = await loadGroupPapers('recent')
+    loadedGroups.value = ['recent']
+    rebuildFacets()
   } catch (error) {
     console.error('Failed to load papers:', error)
+    loadError.value = error.message || 'Failed to load papers'
   } finally {
     loading.value = false
+  }
+}
+
+const isMonthLoaded = (month) => loadedGroups.value.includes(`archive/${month}`)
+
+// Older months are only fetched when the reader asks for them.
+const loadArchiveMonth = async (month) => {
+  const group = `archive/${month}`
+  if (isMonthLoaded(month) || archiveLoading.value) return
+  try {
+    archiveLoading.value = month
+    const papers = await loadGroupPapers(group)
+    allPapers.value = allPapers.value.concat(papers)
+    loadedGroups.value = loadedGroups.value.concat(group)
+    rebuildFacets()
+    if (searchQuery.value.trim()) await ensureFullAbstracts()
+    // Re-run an active embedding ranking so the new month is included.
+    if (selectedEmbeddingTheme.value) await activateEmbeddingTheme(selectedEmbeddingTheme.value)
+  } catch (error) {
+    console.error(`Failed to load ${month}:`, error)
+    loadError.value = error.message || `Failed to load ${month}`
+  } finally {
+    archiveLoading.value = ''
+  }
+}
+
+// Cards ship with a short abstract snippet; full text comes from abstracts-N.json.
+const expandAbstract = async (paper) => {
+  try {
+    await fillFullAbstracts([paper])
+  } catch (error) {
+    console.error('Failed to load abstract:', error)
+  }
+}
+
+// Keyword search should cover full abstracts, so fetch them once a query is typed.
+const ensureFullAbstracts = async () => {
+  if (!allPapers.value.some((paper) => paper.abstract_truncated)) return
+  try {
+    abstractStatus.value = 'loading'
+    await fillFullAbstracts(allPapers.value)
+    abstractStatus.value = 'ready'
+  } catch (error) {
+    console.error('Failed to load abstracts for search:', error)
+    abstractStatus.value = 'error'
   }
 }
 
@@ -681,12 +765,37 @@ watch(filteredPapers, () => {
   visibleCount.value = 24
 })
 
+watch(searchQuery, (value) => {
+  if (value.trim()) ensureFullAbstracts()
+})
+
 onMounted(() => {
   loadPapers()
 })
 </script>
 
 <style scoped>
+.window-note {
+  margin: 0 0 0.75rem;
+  font-size: 0.85rem;
+  color: var(--vp-c-text-2);
+}
+
+.search-hint {
+  color: var(--vp-c-text-2);
+  font-size: 0.78rem;
+}
+
+.archive-months {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.archive-months button:disabled {
+  cursor: default;
+}
+
 :global(.VPDoc.has-sidebar .content-container) {
   max-width: 1500px;
 }

@@ -4,7 +4,6 @@ Creates HTML files that can be embedded in VitePress.
 """
 
 import json
-import shutil
 from pathlib import Path
 from typing import Dict, Any
 
@@ -15,23 +14,8 @@ BASE_DIR = Path(__file__).resolve().parents[2]
 DATA_DIR = BASE_DIR / "data"
 PUBLIC_DIR = BASE_DIR / "docs" / "public"
 CHARTS_DIR = PUBLIC_DIR / "arxiv-charts"
-DATA_PUBLIC_DIR = PUBLIC_DIR / "arxiv-data"
 
 CHARTS_DIR.mkdir(parents=True, exist_ok=True)
-DATA_PUBLIC_DIR.mkdir(parents=True, exist_ok=True)
-
-
-def copy_data_to_public():
-    """Copy data files to public directory for frontend access."""
-    try:
-        shutil.copy2(DATA_DIR / "papers.json", DATA_PUBLIC_DIR / "papers.json")
-        shutil.copy2(DATA_DIR / "stats.json", DATA_PUBLIC_DIR / "stats.json")
-        embeddings_file = DATA_DIR / "embeddings_index.json"
-        if embeddings_file.exists():
-            shutil.copy2(embeddings_file, DATA_PUBLIC_DIR / "embeddings_index.json")
-        print("Copied data files to public directory")
-    except Exception as e:
-        print(f"Warning: Could not copy data files: {e}")
 
 
 def load_stats() -> Dict[str, Any]:

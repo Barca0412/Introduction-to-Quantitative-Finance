@@ -10,7 +10,7 @@ import arxiv
 from .affiliations import enrich_affiliations
 from .compute_stats import compute_and_save_stats
 from .config import ARXIV_CATEGORIES, FETCH_DAYS, MAX_RESULTS_PER_CATEGORY
-from .generate_charts import copy_data_to_public, generate_all_charts, generate_combined_chart
+from .generate_charts import generate_all_charts, generate_combined_chart
 from .llm_processor import process_papers_batch
 from .storage import load_papers, merge_papers, save_papers
 from .utils import build_paper_record, get_target_dates
@@ -133,11 +133,12 @@ async def run_pipeline() -> Optional[Dict[str, Any]]:
     stats = compute_and_save_stats(merged["papers"])
     logger.info("Statistics saved. Tracked dates: %s", len(stats["tag_stats"]["_all"]["daily"]))
 
-    logger.info("\n[Step 7] Generating charts and public data...")
+    logger.info("\n[Step 7] Generating charts...")
     generate_all_charts(stats)
     generate_combined_chart(stats)
-    copy_data_to_public()
-    logger.info("Charts and public data refreshed")
+    # Site data (docs/public/arxiv-data) is built later by build_site_data.py,
+    # after embeddings exist; the full history is never copied to the site.
+    logger.info("Charts refreshed")
 
     logger.info("\n" + "=" * 60)
     logger.info("Pipeline completed successfully")

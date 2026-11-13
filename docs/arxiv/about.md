@@ -46,9 +46,16 @@ The automated pipeline runs daily. The displayed tags, summaries and affiliation
 - `rag`
 - `time-series`
 
-## Output locations
+## Data and storage
 
-- Raw generated data: `data/papers.json`, `data/stats.json`, `data/embeddings_index.json`
-- Public site data: `docs/public/arxiv-data/`
-- Public chart assets: `docs/public/arxiv-charts/`
+- The daily job restores the full history from external storage, adds the new papers, and never commits generated data to git.
+- Full history (metadata, abstracts, tags, embeddings) is published as Parquet to a Hugging Face dataset, with a mirror on the GitHub Release `radar-data`.
+- The site only ships light data in `docs/public/arxiv-data/`: the last ~90 days of metadata with short abstract snippets on first load; full abstracts, int8 embeddings and older months (split by month) load on demand.
+- Working files during a run: `data/papers.json`, `data/stats.json`, `data/embeddings.f32` (all git-ignored).
 - Pipeline code: `scripts/arxiv_radar/`
+
+## Use of arXiv data
+
+Thank you to arXiv for use of its open access interoperability.
+
+Radar uses the arXiv API for metadata only. It publishes titles, authors, abstracts, categories and links back to arXiv; it does not host full texts, PDFs or figures. Please follow each paper's own license when reusing it.

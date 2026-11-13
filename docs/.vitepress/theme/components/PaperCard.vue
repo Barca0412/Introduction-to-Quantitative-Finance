@@ -56,7 +56,17 @@
       </button>
     </div>
 
-    <p class="paper-abstract">{{ paper.abstract }}</p>
+    <p class="paper-abstract">
+      {{ paper.abstract }}
+      <button
+        v-if="paper.abstract_truncated"
+        type="button"
+        class="abstract-more"
+        @click="$emit('expand-abstract', paper)"
+      >
+        Full abstract
+      </button>
+    </p>
 
     <div v-if="paper.summary_zh" class="paper-summary-zh">
       <div class="summary-label">Chinese Summary</div>
@@ -117,7 +127,7 @@ const props = defineProps({
   }
 })
 
-defineEmits(['filter-tag', 'filter-affiliation', 'find-similar'])
+defineEmits(['filter-tag', 'filter-affiliation', 'find-similar', 'expand-abstract'])
 
 const authorNames = computed(() => {
   const authors = props.paper.authors || []
@@ -160,6 +170,16 @@ const cardClasses = computed(() => {
 </script>
 
 <style scoped>
+.abstract-more {
+  margin-left: 0.35rem;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--vp-c-brand-1);
+  font-size: 0.85em;
+  cursor: pointer;
+}
+
 .paper-card {
   background: white;
   border: 1px solid #e5e7eb;

@@ -267,5 +267,5 @@ onMounted(() => {
 
 - Fetch recent arXiv papers from monitored categories.
 - Enrich with LLM tags, keywords, Chinese summaries, and normalized affiliations.
-- Compute stats, generate charts, build embeddings, and copy public JSON into `docs/public/arxiv-data`.
+- Compute stats and embeddings, then build light site data (recent ~90 days first, older months on demand) into `docs/public/arxiv-data`; the full history goes to Hugging Face / GitHub Release as Parquet.
 - Update the README status block from the generated dataset.

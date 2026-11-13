@@ -161,7 +161,8 @@ def write_atomically(filepath: Path, data: Any) -> None:
         delete=False,
         suffix=".tmp",
     ) as tmp_file:
-        json.dump(data, tmp_file, ensure_ascii=False, indent=2)
+        # Compact JSON: indent=2 roughly doubled the file size.
+        json.dump(data, tmp_file, ensure_ascii=False, separators=(",", ":"))
         tmp_path = Path(tmp_file.name)
 
     tmp_path.replace(filepath)

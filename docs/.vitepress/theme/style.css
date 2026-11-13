@@ -442,3 +442,15 @@ body {
     padding-left: 0;
   }
 }
+
+/* arXiv acknowledgement shown at the bottom of every /arxiv/ page */
+.arxiv-attribution {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem 24px 1.5rem;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  text-align: center;
+  color: var(--vp-c-text-2);
+  border-top: 1px solid var(--vp-c-divider);
+}

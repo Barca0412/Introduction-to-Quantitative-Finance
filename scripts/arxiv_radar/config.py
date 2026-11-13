@@ -19,9 +19,50 @@ load_dotenv(BASE_DIR / ".env")
 DATA_DIR = BASE_DIR / "data"
 DATA_DIR.mkdir(exist_ok=True)
 
-# Data file paths
+# Data file paths (all generated, all git-ignored; history lives in external storage)
 PAPERS_FILE = DATA_DIR / "papers.json"
 STATS_FILE = DATA_DIR / "stats.json"
+# Full-precision embeddings: raw little-endian float32 matrix + JSON sidecar
+# (ids in row order, per-row text hash, model, theme vectors).
+EMBEDDINGS_BIN = DATA_DIR / "embeddings.f32"
+EMBEDDINGS_META = DATA_DIR / "embeddings.meta.json"
+# Parquet export pushed to Hugging Face / GitHub Release.
+EXPORT_DIR = DATA_DIR / "export"
+# Light-weight data served by the VitePress site.
+SITE_DATA_DIR = BASE_DIR / "docs" / "public" / "arxiv-data"
+
+
+def _env_int(name: str, default: int) -> int:
+    value = os.getenv(name, "").strip()
+    return int(value) if value else default
+
+
+def _env_list(name: str) -> List[str]:
+    return [item.strip() for item in os.getenv(name, "").split(",") if item.strip()]
+
+
+# ============================================
+# External storage for the full history
+# ============================================
+# Hugging Face dataset, e.g. "your-name/ai-finance-arxiv-radar". Empty = skip.
+HF_DATASET_REPO = os.getenv("HF_DATASET_REPO", "").strip()
+HF_TOKEN = os.getenv("HF_TOKEN", "").strip()
+# GitHub Release used as a mirror ("owner/repo" is provided by Actions).
+GITHUB_REPOSITORY = os.getenv("GITHUB_REPOSITORY", "Barca0412/Introduction-to-Quantitative-Finance").strip()
+RADAR_RELEASE_TAG = os.getenv("RADAR_RELEASE_TAG", "radar-data").strip()
+# One-time bootstrap source: the branch that still has data/papers.json in git.
+RADAR_LEGACY_GIT_REF = os.getenv("RADAR_LEGACY_GIT_REF", "origin/guohao_vitepress").strip()
+
+# ============================================
+# Site data budget
+# ============================================
+SITE_RECENT_DAYS = _env_int("RADAR_SITE_RECENT_DAYS", 90)
+SITE_MIN_RECENT_DAYS = 30
+# Hard cap per published file and soft cap for what the Papers page loads first.
+SITE_MAX_FILE_BYTES = _env_int("RADAR_SITE_MAX_FILE_BYTES", 9_500_000)
+SITE_FIRST_LOAD_BUDGET = _env_int("RADAR_SITE_FIRST_LOAD_BUDGET", 9_000_000)
+SITE_ABSTRACT_SNIPPET_CHARS = 220
+SITE_MAX_AUTHORS = 8
 
 # ============================================
 # arXiv Categories
@@ -505,8 +546,10 @@ REQUEST_TIMEOUT = 90
 # ============================================
 # Include the current UTC date and keep a full week of slack for arXiv's
 # weekday announcement cycle, weekends, and delayed submissions.
-FETCH_DAYS = 7
-MAX_RESULTS_PER_CATEGORY = 100
+# RADAR_FETCH_DAYS / RADAR_MAX_RESULTS / RADAR_CATEGORIES allow small local test runs.
+FETCH_DAYS = _env_int("RADAR_FETCH_DAYS", 7)
+MAX_RESULTS_PER_CATEGORY = _env_int("RADAR_MAX_RESULTS", 100)
+ARXIV_CATEGORIES = _env_list("RADAR_CATEGORIES") or ARXIV_CATEGORIES
 
 # ============================================
 # Statistics Configuration

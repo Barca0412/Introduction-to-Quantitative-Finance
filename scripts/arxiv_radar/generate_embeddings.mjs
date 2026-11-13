@@ -1,3 +1,14 @@
+// Incremental paper embeddings for the arXiv Radar.
+//
+// Input : data/papers.json            (full history, restored by data_store.py)
+//         data/embeddings.f32 + .meta.json  (previous vectors, optional)
+// Output: data/embeddings.f32         raw little-endian float32, one row per paper
+//         data/embeddings.meta.json   ids (row order), text hashes, model, theme vectors
+//
+// Only papers that are new, or whose embedded text changed, are re-embedded.
+// The site gets an int8 copy built by build_site_data.py; this full-precision
+// matrix only goes to the Parquet export (Hugging Face / GitHub Release).
+import crypto from 'node:crypto'
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -8,11 +19,11 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 const BASE_DIR = path.resolve(__dirname, '..', '..')
 const DATA_DIR = path.join(BASE_DIR, 'data')
-const PUBLIC_DATA_DIR = path.join(BASE_DIR, 'docs', 'public', 'arxiv-data')
 
 const MODEL_NAME = 'Xenova/all-MiniLM-L6-v2'
-const OUTPUT_FILE = path.join(DATA_DIR, 'embeddings_index.json')
-const PUBLIC_OUTPUT_FILE = path.join(PUBLIC_DATA_DIR, 'embeddings_index.json')
+const PAPERS_FILE = path.join(DATA_DIR, 'papers.json')
+const EMB_BIN = path.join(DATA_DIR, 'embeddings.f32')
+const EMB_META = path.join(DATA_DIR, 'embeddings.meta.json')
 const BATCH_SIZE = 24
 
 const THEME_QUERIES = {
@@ -41,94 +52,103 @@ function buildPaperText(paper) {
     .join('\n')
 }
 
-function dotProduct(left, right) {
-  let total = 0
-  for (let index = 0; index < left.length; index += 1) {
-    total += left[index] * right[index]
-  }
-  return Number(total.toFixed(6))
-}
+const textHash = (text) => crypto.createHash('sha1').update(text).digest('hex').slice(0, 16)
 
-function roundVector(vector) {
-  return vector.map((value) => Number(value.toFixed(6)))
+async function readPrevious() {
+  try {
+    const meta = JSON.parse(await fs.readFile(EMB_META, 'utf-8'))
+    const buffer = await fs.readFile(EMB_BIN)
+    const matrix = new Float32Array(buffer.buffer, buffer.byteOffset, buffer.byteLength / 4)
+    const dim = meta.dimension || 0
+    if (!dim || matrix.length !== dim * (meta.ids || []).length) {
+      console.warn('Previous embeddings are inconsistent; recomputing everything')
+      return null
+    }
+    return { meta, matrix, dim }
+  } catch {
+    return null
+  }
 }
 
 async function embedTexts(extractor, texts) {
   const output = await extractor(texts, { pooling: 'mean', normalize: true })
-  const vectors = output.tolist()
-  return Array.isArray(texts) ? vectors.map(roundVector) : [roundVector(vectors)]
+  return output.tolist()
 }
 
 async function main() {
-  const papersFile = path.join(DATA_DIR, 'papers.json')
-  const papersPayload = JSON.parse(await fs.readFile(papersFile, 'utf-8'))
-  const papers = papersPayload.papers || []
+  const papers = (JSON.parse(await fs.readFile(PAPERS_FILE, 'utf-8')).papers || []).filter((p) => p.id)
+  const previous = await readPrevious()
+  const reuseAllowed = previous && previous.meta.model === MODEL_NAME
 
-  await fs.mkdir(PUBLIC_DATA_DIR, { recursive: true })
+  const previousRows = new Map()
+  if (reuseAllowed) {
+    previous.meta.ids.forEach((id, row) => previousRows.set(id, { row, hash: previous.meta.text_hashes?.[row] ?? '' }))
+  }
 
-  if (papers.length === 0) {
-    const emptyPayload = {
-      model: MODEL_NAME,
-      generated_at: new Date().toISOString(),
-      dimension: 0,
-      theme_queries: THEME_QUERIES,
-      theme_vectors: {},
-      papers: [],
+  const hashes = papers.map((paper) => textHash(buildPaperText(paper)))
+  const todo = []
+  papers.forEach((paper, index) => {
+    const prior = previousRows.get(paper.id)
+    // An empty hash comes from the legacy JSON import: adopt that vector as-is.
+    if (!prior || (prior.hash !== '' && prior.hash !== hashes[index])) todo.push(index)
+  })
+
+  const sameThemes = reuseAllowed
+    && JSON.stringify(previous.meta.theme_queries || {}) === JSON.stringify(THEME_QUERIES)
+    && Object.keys(previous.meta.theme_vectors || {}).length === Object.keys(THEME_QUERIES).length
+
+  console.log(`Papers: ${papers.length}; reusing ${papers.length - todo.length} vectors; embedding ${todo.length}`)
+
+  let extractor = null
+  if (todo.length > 0 || !sameThemes) {
+    console.log(`Loading embedding model: ${MODEL_NAME}`)
+    extractor = await pipeline('feature-extraction', MODEL_NAME)
+  }
+
+  const fresh = new Map()
+  for (let start = 0; start < todo.length; start += BATCH_SIZE) {
+    const batch = todo.slice(start, start + BATCH_SIZE)
+    const vectors = await embedTexts(extractor, batch.map((index) => buildPaperText(papers[index])))
+    batch.forEach((index, offset) => fresh.set(index, vectors[offset]))
+    if ((start / BATCH_SIZE) % 20 === 0 || start + BATCH_SIZE >= todo.length) {
+      console.log(`Embedded ${Math.min(start + BATCH_SIZE, todo.length)}/${todo.length}`)
     }
-    await fs.writeFile(OUTPUT_FILE, JSON.stringify(emptyPayload))
-    await fs.writeFile(PUBLIC_OUTPUT_FILE, JSON.stringify(emptyPayload))
-    console.log(`No papers found in ${papersFile}; wrote empty embedding index`)
-    return
   }
 
-  console.log(`Loading embedding model: ${MODEL_NAME}`)
-  const extractor = await pipeline('feature-extraction', MODEL_NAME)
+  const dim = fresh.size ? fresh.values().next().value.length : previous?.dim || 384
+  const matrix = new Float32Array(papers.length * dim)
+  papers.forEach((paper, index) => {
+    const vector = fresh.get(index)
+    if (vector) {
+      matrix.set(vector, index * dim)
+    } else {
+      const { row } = previousRows.get(paper.id)
+      matrix.set(previous.matrix.subarray(row * dim, (row + 1) * dim), index * dim)
+    }
+  })
 
-  console.log(`Embedding ${papers.length} papers...`)
-  const paperEmbeddings = []
-
-  for (let index = 0; index < papers.length; index += BATCH_SIZE) {
-    const batch = papers.slice(index, index + BATCH_SIZE)
-    const texts = batch.map(buildPaperText)
-    const vectors = await embedTexts(extractor, texts)
-    batch.forEach((paper, batchIndex) => {
-      paperEmbeddings.push({
-        id: paper.id,
-        vector: vectors[batchIndex],
-      })
-    })
-    console.log(`Embedded ${Math.min(index + BATCH_SIZE, papers.length)}/${papers.length}`)
+  let themeVectors = previous?.meta?.theme_vectors || {}
+  if (!sameThemes) {
+    const entries = Object.entries(THEME_QUERIES)
+    const vectors = await embedTexts(extractor, entries.map(([, query]) => query))
+    themeVectors = Object.fromEntries(entries.map(([id], index) => [id, vectors[index].map((v) => Number(v.toFixed(6)))]))
   }
 
-  const themeEntries = Object.entries(THEME_QUERIES)
-  const themeVectorsList = await embedTexts(extractor, themeEntries.map(([, query]) => query))
-  const themeVectors = Object.fromEntries(
-    themeEntries.map(([themeId], index) => [themeId, themeVectorsList[index]])
-  )
-
-  const themeScores = {}
-  for (const embedding of paperEmbeddings) {
-    themeScores[embedding.id] = Object.fromEntries(
-      Object.entries(themeVectors).map(([themeId, vector]) => [themeId, dotProduct(embedding.vector, vector)])
-    )
-  }
-
-  const payload = {
+  const meta = {
     model: MODEL_NAME,
     generated_at: new Date().toISOString(),
-    dimension: paperEmbeddings[0]?.vector?.length || 0,
+    dimension: dim,
     theme_queries: THEME_QUERIES,
     theme_vectors: themeVectors,
-    papers: paperEmbeddings.map((embedding) => ({
-      id: embedding.id,
-      vector: embedding.vector,
-      theme_scores: themeScores[embedding.id],
-    })),
+    ids: papers.map((paper) => paper.id),
+    text_hashes: hashes,
   }
 
-  await fs.writeFile(OUTPUT_FILE, JSON.stringify(payload))
-  await fs.writeFile(PUBLIC_OUTPUT_FILE, JSON.stringify(payload))
-  console.log(`Saved embeddings index to ${OUTPUT_FILE}`)
+  await fs.mkdir(DATA_DIR, { recursive: true })
+  await fs.writeFile(`${EMB_BIN}.tmp`, Buffer.from(matrix.buffer))
+  await fs.rename(`${EMB_BIN}.tmp`, EMB_BIN)
+  await fs.writeFile(EMB_META, JSON.stringify(meta))
+  console.log(`Saved ${papers.length} x ${dim} embeddings to ${EMB_BIN}`)
 }
 
 main().catch((error) => {
