@@ -81,11 +81,12 @@
 <!-- ARXIV_RADAR_STATUS:START -->
 > [!NOTE]
 > FinPaperRadar（AI × 金融论文雷达）machine-updated status
-> - Latest update: 2026-11-06
-> - Indexed papers: 27813
-> - Focus papers: 16354
-> - Latest publication date: 2026-11-04
+> - Latest update: 2026-11-13
+> - Indexed papers: 28275
+> - Focus papers: 16631
+> - Latest publication date: 2026-11-12
 > - Monitored categories: 10
+> - Full dataset (CC BY 4.0 for FinPaperRadar additions): [Hugging Face](https://huggingface.co/datasets/Barca21412/FinPaperRadar) · [GitHub Release mirror](https://github.com/Barca0412/Introduction-to-Quantitative-Finance/releases/tag/radar-data)
 <!-- ARXIV_RADAR_STATUS:END -->
 
 如需刷新数据与 README 状态块，可运行：`npm run arxiv:update`
