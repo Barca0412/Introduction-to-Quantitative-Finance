@@ -1,3 +1,8 @@
+---
+title: 方法说明 · FinPaperRadar
+description: FinPaperRadar 的收录范围、10 个 arXiv 分类、标签体系、大模型打标签和中文摘要的生成方式、数据流程与授权，以及已知的局限。
+---
+
 # About FinPaperRadar
 
 ## Purpose and editorial scope

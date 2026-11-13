@@ -15,7 +15,7 @@
   <a href="https://github.com/Barca0412/Introduction-to-Quantitative-Finance/forks"><img src="https://img.shields.io/github/forks/Barca0412/Introduction-to-Quantitative-Finance?style=flat" alt="GitHub forks"></a>
   <a href="LICENSE"><img src="https://img.shields.io/github/license/Barca0412/Introduction-to-Quantitative-Finance" alt="MIT License"></a>
   <a href="https://huggingface.co/datasets/Barca21412/FinPaperRadar"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20dataset-FinPaperRadar-yellow" alt="FinPaperRadar dataset on Hugging Face"></a>
-  <a href="https://gitcode.com/Barca12345/Introduction-to-Quantitative-Finance"><img src="https://gitcode.com/Barca12345/Introduction-to-Quantitative-Finance/star/new_badge.svg" alt="AtomGit G-Star"></a>
+  <a href="https://atomgit.com/Barca12345/Introduction-to-Quantitative-Finance"><img src="https://atomgit.com/Barca12345/Introduction-to-Quantitative-Finance/star/new_badge.svg" alt="AtomGit G-Star"></a>
 </p>
 
 ## 这里有什么

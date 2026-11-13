@@ -1,0 +1,76 @@
+name: Mirror main to AtomGit
+
+# The AtomGit copy (Barca12345/Introduction-to-Quantitative-Finance, a G-Star project)
+# must not fall more than a month behind other platforms, so GitHub `main` is pushed
+# to AtomGit `main` after every change and once a day.
+#
+# AtomGit is a mirror: anything committed directly on AtomGit `main` is overwritten.
+# Make edits on GitHub instead. Only `main` is mirrored.
+#
+# Needs the repository secret ATOMGIT_TOKEN (an AtomGit access token with write access
+# to that repository). Without it the job skips with a notice.
+
+on:
+  push:
+    branches: [main]
+  # The daily Radar run commits README updates with GITHUB_TOKEN, and such pushes do not
+  # start other workflows; this schedule (after the 21:00 UTC Radar run) picks them up.
+  schedule:
+    - cron: '30 22 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: atomgit-mirror
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+env:
+  ATOMGIT_USER: ${{ vars.ATOMGIT_USER || 'Barca12345' }}
+  ATOMGIT_REPO: ${{ vars.ATOMGIT_REPO || 'Barca12345/Introduction-to-Quantitative-Finance' }}
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Decide whether to push
+        id: plan
+        env:
+          ATOMGIT_TOKEN: ${{ secrets.ATOMGIT_TOKEN }}
+        run: |
+          if [ -z "${ATOMGIT_TOKEN}" ]; then
+            echo "::notice::ATOMGIT_TOKEN is not set; skipping the AtomGit mirror."
+            echo "push=false" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          github_main="$(git ls-remote "https://github.com/${GITHUB_REPOSITORY}.git" refs/heads/main | cut -f1)"
+          atomgit_main="$(git ls-remote "https://atomgit.com/${ATOMGIT_REPO}.git" refs/heads/main | cut -f1 || true)"
+          echo "GitHub main:  ${github_main}"
+          echo "AtomGit main: ${atomgit_main:-<none>}"
+          if [ -n "${github_main}" ] && [ "${github_main}" = "${atomgit_main}" ]; then
+            echo "Already in sync."
+            echo "push=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "push=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      # Full history: the push only sends what AtomGit lacks, but Git needs the
+      # objects locally to work that out.
+      - name: Checkout main with full history
+        if: steps.plan.outputs.push == 'true'
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Push main to AtomGit
+        if: steps.plan.outputs.push == 'true'
+        env:
+          ATOMGIT_TOKEN: ${{ secrets.ATOMGIT_TOKEN }}
+        run: |
+          git push --force \
+            "https://${ATOMGIT_USER}:${ATOMGIT_TOKEN}@atomgit.com/${ATOMGIT_REPO}.git" \
+            HEAD:refs/heads/main
+          echo "AtomGit main is now $(git rev-parse HEAD)"

@@ -47,6 +47,10 @@ npm run docs:dev
 
 如果是你自己参与开发的项目，请在 PR 里说明。
 
+## AtomGit 镜像
+
+仓库在 AtomGit 上有一份镜像（[Barca12345/Introduction-to-Quantitative-Finance](https://atomgit.com/Barca12345/Introduction-to-Quantitative-Finance)），由 GitHub Actions 自动把 GitHub 的 `main` 推过去。请在 GitHub 上提交修改；直接在 AtomGit `main` 上的提交会在下一次同步时被覆盖。
+
 ## 研报与论文
 
 `资料/` 和 `论文/` 下的文件不要改名、不要移动，站点目录和外部链接都依赖这些路径。新增文件放进对应的系列或主题目录即可，目录页会在下次构建时自动更新。

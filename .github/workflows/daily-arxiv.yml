@@ -56,6 +56,11 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          # Full commit history (but no old file contents) so VitePress can read each
+          # page's real last-edit date for "最后更新" and the sitemap <lastmod>.
+          fetch-depth: 0
+          filter: blob:none
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -119,6 +124,11 @@ jobs:
           retention-days: 7
 
       - name: Build VitePress site
+        env:
+          # Search-console verification tokens (public by design); unset = no tag.
+          GOOGLE_SITE_VERIFICATION: ${{ vars.GOOGLE_SITE_VERIFICATION }}
+          BING_SITE_VERIFICATION: ${{ vars.BING_SITE_VERIFICATION }}
+          BAIDU_SITE_VERIFICATION: ${{ vars.BAIDU_SITE_VERIFICATION }}
         run: npm run docs:build
 
       - name: Check published file sizes

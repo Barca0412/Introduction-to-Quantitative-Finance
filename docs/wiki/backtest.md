@@ -1,3 +1,8 @@
+---
+title: 回测框架
+description: 主流量化回测框架对比：Backtrader、Qlib、QUANTAXIS、QuantLib 等的定位和适用场景，以及本仓库的技术指标回测示例代码。
+---
+
 # 回测框架
 
 ## 主流回测框架

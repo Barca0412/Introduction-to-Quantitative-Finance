@@ -1,6 +1,7 @@
 ---
 layout: home
-title: 量化研究入门
+titleTemplate: false
+title: 量化研究入门 · 项目式量化教程与 AI × 金融论文雷达
 hero:
   name: 量化研究入门
   text: 项目式量化教程 + AI × 金融论文雷达
@@ -38,6 +39,7 @@ features:
   - title: 关于与引用
     details: 署名与授权、如何引用本项目和数据集、合作与联系方式。
     link: /about
+description: 中文开源量化知识库：用免费数据跑通的项目式多因子量化教程、因子与回测知识库、194 份卖方金工研报目录，以及每天更新的 AI × 金融 arXiv 论文雷达 FinPaperRadar。
 ---
 
 ## 这是什么
