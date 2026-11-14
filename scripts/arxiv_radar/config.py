@@ -569,7 +569,13 @@ REQUEST_TIMEOUT = 90
 # weekday announcement cycle, weekends, and delayed submissions.
 # RADAR_FETCH_DAYS / RADAR_MAX_RESULTS / RADAR_CATEGORIES allow small local test runs.
 FETCH_DAYS = _env_int("RADAR_FETCH_DAYS", 7)
-MAX_RESULTS_PER_CATEGORY = _env_int("RADAR_MAX_RESULTS", 100)
+# Upper bound per category for the whole FETCH_DAYS window; the client pages through
+# it 100 at a time. 100 used to cap busy categories (cs.AI has ~800 papers a week).
+MAX_RESULTS_PER_CATEGORY = _env_int("RADAR_MAX_RESULTS", 3000)
+# Waits (seconds) before re-trying a category after HTTP 429 or another fetch error.
+FETCH_BACKOFF_SECONDS = tuple(
+    float(x) for x in os.getenv("RADAR_FETCH_BACKOFF", "30,90,180").split(",") if x.strip()
+)
 ARXIV_CATEGORIES = _env_list("RADAR_CATEGORIES") or ARXIV_CATEGORIES
 
 # ============================================
