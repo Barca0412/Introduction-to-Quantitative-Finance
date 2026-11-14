@@ -486,3 +486,65 @@ body {
 .vp-doc a img {
   cursor: pointer;
 }
+
+/* ---------------------------------------------------------------------------
+   Site-wide reading layout (2026-11 redesign)
+   VitePress centres the whole layout in a 1440px box, so on wide screens the
+   extra width went into an ever-wider sidebar (512px at 1920) while the text
+   column stayed at 688px. Here the layout spans the window, the sidebar keeps
+   a fixed, narrower width, and the reading column grows instead.
+   ------------------------------------------------------------------------- */
+:root {
+  --vp-sidebar-width: 248px;
+  --vp-layout-max-width: 100vw;
+}
+
+/* Reading column: 688px -> up to 900px (about 55-60 Chinese characters a line),
+   plus the outline on the right; total capped so lines stay readable at 2560px. */
+.VPContent .VPDoc.has-aside .content-container {
+  max-width: 900px;
+}
+.VPContent .VPDoc.has-sidebar .container {
+  max-width: 1240px;
+}
+.VPContent .VPDoc:not(.has-aside) .content-container {
+  max-width: 1000px;
+}
+@media (min-width: 960px) {
+  .VPContent .VPDoc:not(.has-sidebar) .container {
+    max-width: 1240px;
+  }
+  .VPContent .VPDoc:not(.has-sidebar) .content {
+    max-width: 1000px;
+  }
+}
+
+/* Type: a little smaller and tighter than the VitePress defaults (16px / 28px),
+   so more fits on screen without hurting readability. */
+.vp-doc {
+  font-size: 15px;
+}
+.vp-doc p,
+.vp-doc li {
+  line-height: 1.8;
+}
+.vp-doc blockquote > p {
+  font-size: 15px;
+}
+.vp-doc h1 {
+  font-size: 28px;
+  line-height: 1.35;
+}
+.vp-doc h2 {
+  font-size: 22px;
+  line-height: 1.4;
+  margin-top: 40px;
+  padding-top: 20px;
+}
+.vp-doc h3 {
+  font-size: 18px;
+  margin-top: 28px;
+}
+.vp-doc table {
+  font-size: 14px;
+}
