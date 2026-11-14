@@ -65,6 +65,13 @@ export default {
     })
   },
   enhanceApp({ app }) {
+    // Click any content image to open it full size in a new tab (lecture charts are dense).
+    if (typeof window !== 'undefined') {
+      document.addEventListener('click', (event) => {
+        const img = event.target.closest && event.target.closest('.vp-doc img')
+        if (img && !img.closest('a')) window.open(img.currentSrc || img.src, '_blank', 'noopener')
+      })
+    }
     app.component('PapersList', PapersList)
     app.component('PaperCard', PaperCard)
     app.component('TrendsChart', TrendsChart)
