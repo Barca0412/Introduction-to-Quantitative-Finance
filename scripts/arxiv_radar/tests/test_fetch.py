@@ -112,6 +112,9 @@ class FinanceFilteredCategoryTest(unittest.TestCase):
             ("Learned Monotone Recurrent Features in Governed Credit Scoring", ""),
             ("DPAL", "a test-time adaptation loss for stock return forecasting"),
             ("Expected Utility Regret Rule", "minimax optimal portfolio selection"),
+            ("Boosting insights in insurance tariff plans with tree-based machine learning methods", ""),
+            ("Heterogeneous Graph Neural Networks for Malicious Account Detection",
+             "detecting malicious accounts at Alipay, one of the world's leading mobile cashless payment platform"),
         ]
         drop = [
             ("On the Trade-off Between Information Loss and Generalization", ""),

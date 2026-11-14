@@ -606,6 +606,10 @@ FINANCE_QUERY_TERMS = [
     "banking", '"limit order"', '"market microstructure"', '"quantitative investment"',
     '"alpha factor*"', "earnings", "fintech", '"high-frequency trading"',
     '"volatility forecasting"', '"implied volatility"',
+    # Added after the third taxonomy trial (2026-11-15): insurance pricing (1904.10890)
+    # and Alipay account fraud (2002.12307) sit in stat.AP / cs.LG with none of the above.
+    "insurance", "actuarial", '"money laundering"', '"credit card"', '"payment platform"',
+    '"mobile payment"', '"transaction fraud"', '"financial fraud"',
 ]
 FINANCE_QUERY = " OR ".join(f"ti:{t} OR abs:{t}" for t in FINANCE_QUERY_TERMS)
 
@@ -621,6 +625,8 @@ FINANCE_TERM_PATTERN = re.compile(
     r"|central banks?|banking|limit order books?|market (?:making|microstructure)|earnings|fintech"
     r"|implied volatility|volatility forecasting"
     r"|portfolio (?:optimi[sz]ation|selection|management|allocation|construction)"
+    r"|insurance|insurers?|actuarial|(?:anti-)?money laundering|credit cards?"
+    r"|(?:mobile |cashless )?payment (?:platforms?|systems?|fraud)|mobile payments?|(?:transaction|financial) fraud"
     r")(?![a-z0-9])",
     re.IGNORECASE,
 )
