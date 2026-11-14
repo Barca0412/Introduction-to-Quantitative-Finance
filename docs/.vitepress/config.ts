@@ -343,8 +343,28 @@ export default defineConfig({
     },
 
     search: {
-      provider: 'local'
+      provider: 'local',
+      options: {
+        translations: {
+          button: { buttonText: '搜索', buttonAriaLabel: '搜索' },
+          modal: {
+            displayDetails: '显示详情',
+            resetButtonTitle: '清除',
+            backButtonTitle: '关闭',
+            noResultsText: '没有找到相关结果',
+            footer: { selectText: '选择', navigateText: '切换', closeText: '关闭' }
+          }
+        }
+      }
     },
+
+    // VitePress' own UI labels in Chinese.
+    sidebarMenuLabel: '菜单',
+    returnToTopLabel: '回到顶部',
+    darkModeSwitchLabel: '外观',
+    lightModeSwitchTitle: '切换到浅色模式',
+    darkModeSwitchTitle: '切换到深色模式',
+    langMenuLabel: '语言',
 
     lastUpdated: {
       text: '最后更新',
