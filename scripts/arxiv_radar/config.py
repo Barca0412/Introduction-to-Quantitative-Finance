@@ -4,6 +4,7 @@ Contains all settings for arXiv categories, tags, LLM API, and data paths.
 """
 
 import os
+import re
 from pathlib import Path
 from typing import List, Dict
 
@@ -580,6 +581,40 @@ FETCH_BACKOFF_SECONDS = tuple(
     float(x) for x in os.getenv("RADAR_FETCH_BACKOFF", "30,90,180").split(",") if x.strip()
 )
 ARXIV_CATEGORIES = _env_list("RADAR_CATEGORIES") or ARXIV_CATEGORIES
+
+# Big general-ML categories fetched only through a finance-term query. Finance papers
+# that are filed under cs.LG alone (e.g. 2610.09048 "Towards Financial World Modeling",
+# NeurIPS 2026) were otherwise never seen; adding cs.LG whole would bring in several
+# hundred off-topic papers a day. Set RADAR_FILTERED_CATEGORIES=none to switch off.
+_filtered = _env_list("RADAR_FILTERED_CATEGORIES")
+FINANCE_FILTERED_CATEGORIES = [] if _filtered == ["none"] else (_filtered or ["cs.LG", "stat.ML"])
+
+# Step 1, on arXiv's side: deliberately broad. arXiv stems words, so "trading" also
+# matches "trade-off"; the local check below removes that noise.
+FINANCE_QUERY_TERMS = [
+    "financ*", "stock", "stocks", "portfolio*", '"asset pricing"', "trading", "hedging",
+    '"option pricing"', "cryptocurrenc*", "bitcoin", '"credit risk"', '"credit scoring"',
+    "banking", '"limit order"', '"market microstructure"', '"quantitative investment"',
+    '"alpha factor*"', "earnings", "fintech", '"high-frequency trading"',
+    '"volatility forecasting"', '"implied volatility"',
+]
+FINANCE_QUERY = " OR ".join(f"ti:{t} OR abs:{t}" for t in FINANCE_QUERY_TERMS)
+
+# Step 2, locally: whole words in title + abstract. Plain "bank" is left out on purpose
+# (memory bank, filter bank); so is plain "portfolio" (model portfolios). Measured on
+# cs.LG 2026-10-01..10: 111 arXiv hits outside the monitored categories -> 22 kept.
+# Whether a kept paper is really about finance is still decided by the LLM (relevance).
+FINANCE_TERM_PATTERN = re.compile(
+    r"(?<![a-z0-9])("
+    r"financ(?:e|es|ial|ially)|stocks?|equity markets?|asset pricing"
+    r"|(?:algorithmic|quantitative|high-frequency|pairs) trading|trading (?:strateg\w+|agents?|signals?)"
+    r"|hedging|option pricing|cryptocurrenc(?:y|ies)|bitcoin|credit (?:risk|scoring)"
+    r"|central banks?|banking|limit order books?|market (?:making|microstructure)|earnings|fintech"
+    r"|implied volatility|volatility forecasting"
+    r"|portfolio (?:optimi[sz]ation|selection|management|allocation|construction)"
+    r")(?![a-z0-9])",
+    re.IGNORECASE,
+)
 
 # ============================================
 # Statistics Configuration

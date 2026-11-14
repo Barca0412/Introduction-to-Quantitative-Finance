@@ -11,7 +11,15 @@ import arxiv
 
 from .affiliations import enrich_affiliations
 from .compute_stats import compute_and_save_stats
-from .config import ARXIV_CATEGORIES, FETCH_BACKOFF_SECONDS, FETCH_DAYS, MAX_RESULTS_PER_CATEGORY
+from .config import (
+    ARXIV_CATEGORIES,
+    FETCH_BACKOFF_SECONDS,
+    FETCH_DAYS,
+    FINANCE_FILTERED_CATEGORIES,
+    FINANCE_QUERY,
+    FINANCE_TERM_PATTERN,
+    MAX_RESULTS_PER_CATEGORY,
+)
 from .generate_charts import generate_all_charts, generate_combined_chart
 from .llm_processor import fallback_tags_for_paper, process_papers_batch
 from .storage import load_papers, merge_papers, refresh_rule_tags, save_papers
@@ -32,8 +40,13 @@ def fetch_category_papers(
     client: Optional[arxiv.Client] = None,
     backoff: Tuple[float, ...] = FETCH_BACKOFF_SECONDS,
     sleep: Callable[[float], None] = time.sleep,
+    query_filter: str = "",
+    keep: Optional[Callable[[Dict[str, Any]], bool]] = None,
 ) -> Tuple[List[Dict[str, Any]], Optional[str]]:
     """Fetch every paper of one arXiv category submitted on the target dates.
+
+    ``query_filter`` narrows the arXiv query (ANDed with the category), and ``keep``
+    drops papers locally afterwards; both are used for the finance-only categories.
 
     Pages through the whole date window (up to ``max_results``). arXiv answers
     bursts with HTTP 429, and the arxiv client's own retries (3 s apart) are often
@@ -56,14 +69,14 @@ def fetch_category_papers(
         papers: List[Dict[str, Any]] = []
         try:
             search = arxiv.Search(
-                query=f"cat:{category} AND submittedDate:[{start_date} TO {end_date}]",
+                query=f"cat:{category}{f' AND ({query_filter})' if query_filter else ''} AND submittedDate:[{start_date} TO {end_date}]",
                 max_results=max_results,
                 sort_by=arxiv.SortCriterion.SubmittedDate,
                 sort_order=arxiv.SortOrder.Descending,
             )
             for result in client.results(search):
                 paper = build_paper_record(result)
-                if paper["published_date"] in target_date_set:
+                if paper["published_date"] in target_date_set and (keep is None or keep(paper)):
                     papers.append(paper)
             logger.info("Fetched %s papers from %s", len(papers), category)
             return papers, None
@@ -73,6 +86,11 @@ def fetch_category_papers(
                 best = papers
     logger.error("Giving up on %s after %s attempts: %s", category, len(backoff) + 1, error)
     return best, error
+
+
+def looks_financial(paper: Dict[str, Any]) -> bool:
+    """Whole-word finance terms in title or abstract (see FINANCE_TERM_PATTERN)."""
+    return bool(FINANCE_TERM_PATTERN.search(f"{paper.get('title', '')} {paper.get('abstract', '')}"))
 
 
 def report_fetch(report: List[Dict[str, Any]]) -> None:
@@ -96,14 +114,23 @@ async def fetch_all_categories(
     client: Optional[arxiv.Client] = None,
     backoff: Tuple[float, ...] = FETCH_BACKOFF_SECONDS,
     sleep: Callable[[float], None] = time.sleep,
+    filtered_categories: Optional[List[str]] = None,
 ) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]]]:
     """Fetch recent papers from all monitored categories within arXiv's rate limit.
 
-    Returns (papers, report) where report has one row per category.
+    ``categories`` are fetched whole; ``filtered_categories`` (default: cs.LG and
+    stat.ML) only through the finance-term query plus the local whole-word check.
+    Papers listed in several categories come back more than once; the caller dedups.
+
+    Returns (papers, report) where report has one row per fetched source.
     """
+    if filtered_categories is None:
+        filtered_categories = FINANCE_FILTERED_CATEGORIES
+    sources = [(c, c, "", None) for c in categories]
+    sources += [(f"{c} (finance terms)", c, FINANCE_QUERY, looks_financial) for c in filtered_categories if c not in categories]
     target_dates = get_target_dates(days)
     logger.info("Fetching papers for target dates: %s", ", ".join(target_dates))
-    logger.info("Fetching papers from %s categories...", len(categories))
+    logger.info("Fetching papers from %s sources...", len(sources))
 
     loop = asyncio.get_running_loop()
     # One shared client serializes requests and enforces arXiv's 3-second
@@ -111,13 +138,15 @@ async def fetch_all_categories(
     client = client or arxiv.Client(page_size=100, delay_seconds=3.0, num_retries=3)
     all_papers: List[Dict[str, Any]] = []
     report: List[Dict[str, Any]] = []
-    for category in categories:
+    for label, category, query_filter, keep in sources:
         papers, error = await loop.run_in_executor(
             None,
-            lambda c=category: fetch_category_papers(c, target_dates, MAX_RESULTS_PER_CATEGORY, client, backoff, sleep),
+            lambda c=category, q=query_filter, k=keep: fetch_category_papers(
+                c, target_dates, MAX_RESULTS_PER_CATEGORY, client, backoff, sleep, q, k
+            ),
         )
         all_papers.extend(papers)
-        report.append({"category": category, "papers": len(papers), "error": error})
+        report.append({"category": label, "papers": len(papers), "error": error})
 
     logger.info("Total raw papers fetched: %s", len(all_papers))
     failed = [r["category"] for r in report if r["error"]]
