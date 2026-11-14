@@ -13,7 +13,7 @@ from typing import Any, Dict, List, Sequence
 
 import aiohttp
 
-from .config import LLM_API_KEY
+from .config import AFFILIATION_LLM_CONCURRENCY, LLM_API_KEY
 from .llm_processor import LLMClient
 
 
@@ -307,7 +307,7 @@ async def enrich_affiliations(
     async with aiohttp.ClientSession(
         connector=connector,
         timeout=aiohttp.ClientTimeout(total=30),
-    ) as session, LLMClient(LLM_API_KEY, max(1, min(2, concurrency))) as client:
+    ) as session, LLMClient(LLM_API_KEY, AFFILIATION_LLM_CONCURRENCY) as client:
 
         async def enrich_one(paper: Dict[str, Any]) -> Dict[str, Any]:
             current = normalize_affiliation_fields(paper.get("affiliation"), paper.get("affiliations"))

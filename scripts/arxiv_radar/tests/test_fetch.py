@@ -130,5 +130,18 @@ class NeedsEnrichmentTest(unittest.TestCase):
         self.assertEqual([p["id"] for p in todo], ["2611.00003", "2611.00004"])
 
 
+class BackfillWindowTest(unittest.TestCase):
+    def test_since_until_replace_the_rolling_window(self):
+        from scripts.arxiv_radar.utils import get_target_dates
+
+        with mock.patch.dict(os.environ, {"RADAR_FETCH_SINCE": "2026-10-30", "RADAR_FETCH_UNTIL": "2026-11-02"}):
+            self.assertEqual(get_target_dates(7), ["2026-10-30", "2026-10-31", "2026-11-01", "2026-11-02"])
+        with mock.patch.dict(os.environ, {"RADAR_FETCH_SINCE": "", "RADAR_FETCH_UNTIL": ""}):
+            self.assertEqual(len(get_target_dates(7)), 7)
+        with mock.patch.dict(os.environ, {"RADAR_FETCH_SINCE": "2026-11-05", "RADAR_FETCH_UNTIL": "2026-11-01"}):
+            with self.assertRaises(ValueError):
+                get_target_dates(7)
+
+
 if __name__ == "__main__":
     unittest.main()
