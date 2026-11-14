@@ -1,6 +1,8 @@
 import { defineConfig } from 'vitepress'
 import { mkdirSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
+// Resource pages are generated from data/registry/; the sidebar lists the same pages.
+import { loadRegistry, publishedPages } from '../../scripts/site/registry.mjs'
 
 const BASE = '/Introduction-to-Quantitative-Finance/'
 const SITE = `https://barca0412.github.io${BASE}`
@@ -55,13 +57,18 @@ const pagePath = (relativePath: string) =>
   relativePath.replace(/(^|\/)index\.md$/, '$1').replace(/\.md$/, '')
 
 // Breadcrumb labels for the top-level sections.
+// Resource pages with at least one reviewed entry (same rule as gen_resources.mjs).
+const REGISTRY = loadRegistry()
+const RESOURCE_PAGES = publishedPages(REGISTRY)
+
 const SECTION_NAMES: Record<string, string> = {
   tutorials: '教程',
   wiki: '知识库',
   library: '研报与论文',
   arxiv: '论文雷达',
   resources: '资源',
-  about: '关于'
+  about: '关于',
+  careers: '求职'
 }
 
 // Search-console verification tokens come from repository variables at build time;
@@ -88,6 +95,10 @@ export default defineConfig({
   title: SITE_NAME,
   titleTemplate: `:title | ${SITE_NAME}`,
   description: '中文开源量化知识库：项目式多因子量化教程、因子与回测知识库、研报与论文目录，以及每天更新的 AI × 金融论文雷达。',
+  // LaTeX in markdown ($…$ and $$…$$), rendered at build time by markdown-it-mathjax3.
+  markdown: {
+    math: true
+  },
   // URLs without .html; canonical, og:url and the sitemap all use this form.
   cleanUrls: true,
   // Per-page "last updated" from git history; also feeds <lastmod> in the sitemap.
@@ -153,6 +164,22 @@ export default defineConfig({
       graph.push({
         '@type': 'BreadcrumbList',
         itemListElement: crumbs.map((c, k) => ({ '@type': 'ListItem', position: k + 1, name: c.name, item: c.url }))
+      })
+    }
+    // Knowledge-base concept pages with a `wiki:` block are TechArticles too.
+    const wiki = pageData.frontmatter.wiki
+    if (wiki && path.startsWith('wiki/')) {
+      graph.push({
+        '@type': 'TechArticle',
+        headline: pageData.title,
+        description,
+        url,
+        inLanguage: 'zh-CN',
+        author: { '@type': 'Organization', name: '湖南大学金融科技协会 Quant Group' },
+        license: 'https://creativecommons.org/licenses/by/4.0/',
+        ...(wiki.level ? { proficiencyLevel: wiki.level } : {}),
+        ...(pageData.lastUpdated ? { dateModified: new Date(pageData.lastUpdated).toISOString() } : {}),
+        isPartOf: { '@type': 'WebSite', name: SITE_NAME, url: SITE }
       })
     }
     // Lectures are TechArticles with their author, level and dates.
@@ -274,10 +301,13 @@ export default defineConfig({
       ],
       '/resources/': [
         {
-          text: '公开资源',
+          text: '资源',
           link: '/resources/',
           collapsed: false,
-          items: []
+          items: [
+            ...RESOURCE_PAGES.map((p) => ({ text: p.title, link: `/resources/${p.key}` })),
+            ...(RESOURCE_PAGES.length && REGISTRY.options.credits_page ? [{ text: '致谢与来源', link: '/resources/credits' }] : [])
+          ]
         },
         quickNav
       ],

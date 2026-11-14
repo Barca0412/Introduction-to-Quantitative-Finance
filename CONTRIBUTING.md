@@ -12,8 +12,9 @@
 | `docs/arxiv/` | FinPaperRadar 论文雷达页面 |
 | `docs/resources/` | 资源清单 |
 | `资料/`、`论文/` | 研报、论文和代码原文件 |
-| `templates/tutorial/` | 讲义模板 |
-| `scripts/` | 论文雷达流水线（`arxiv_radar/`）和站点脚本（`site/`） |
+| `data/registry/` | 资源清单的数据（YAML），站点资源页和 README 精选由它生成 |
+| `templates/tutorial/`、`templates/wiki-page.md` | 讲义模板、知识库概念页模板 |
+| `scripts/` | 论文雷达流水线（`arxiv_radar/`）和站点生成脚本（`site/`） |
 
 本地预览：
 
@@ -39,13 +40,22 @@ npm run docs:dev
 
 ## 往资源清单里加项目
 
-我们希望清单里的每一项都值得推荐。提交时请写清：
+资源清单由 `data/registry/` 里的 YAML 生成，站点页面和 README 精选都不要手改。字段和命令见 [data/registry/README.md](./data/registry/README.md)。
 
-- 一句话说明它解决什么问题、适合谁；
+两种方式都可以：
+
+- **提 issue**：用"推荐一个资源"模板填写，维护者整理后加入。
+- **直接提 PR**：在 `data/registry/items/<页面>.yaml` 里新增一条，`reviewed` 留空，运行 `npm run registry:check` 通过后提交。
+
+我们希望清单里的每一项都值得推荐，提交时请写清：
+
+- 一句话说明它解决什么问题、适合谁（`why_zh`，60 字以内，自己写，不要照搬别处的描述）；
 - 它和清单里已有的同类项目有什么不同；
 - 项目仍在维护（近一年有更新）。
 
-如果是你自己参与开发的项目，请在 PR 里说明。
+**商业产品和自荐**：可以推荐，但必须在 PR 或 issue 里说明你和项目的关系，收费产品要标明 `pricing`。纯广告或和量化研究关系不大的会被婉拒。
+
+维护者会在 **7 天内** 首次回复每个 PR 和 issue。
 
 ## AtomGit 镜像
 

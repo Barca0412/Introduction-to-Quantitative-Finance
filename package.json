@@ -4,8 +4,8 @@
   "type": "module",
   "description": "量化研究入门资料 - VitePress 文档站",
   "scripts": {
-    "docs:dev": "npm run docs:library && vitepress dev docs",
-    "docs:build": "npm run docs:library && vitepress build docs",
+    "docs:dev": "npm run docs:gen && vitepress dev docs",
+    "docs:build": "npm run docs:gen && vitepress build docs",
     "docs:preview": "vitepress preview docs",
     "arxiv:fetch": "python3 -m scripts.arxiv_radar.fetch_papers",
     "arxiv:readme": "node scripts/arxiv_radar/update_readme.mjs",
@@ -16,13 +16,20 @@
     "arxiv:export": "python3 -m scripts.arxiv_radar.data_store export",
     "arxiv:push-hf": "python3 -m scripts.arxiv_radar.data_store push-hf",
     "arxiv:site-only": "npm run arxiv:restore && npm run arxiv:embeddings && npm run arxiv:site-data",
-    "docs:library": "node scripts/site/gen_library.mjs"
+    "docs:gen": "node scripts/site/gen_library.mjs && node scripts/site/gen_resources.mjs",
+    "docs:library": "node scripts/site/gen_library.mjs",
+    "registry:check": "node scripts/site/gen_resources.mjs --check",
+    "registry:stats": "node scripts/site/refresh_stats.mjs",
+    "registry:urls": "node scripts/site/gen_resources.mjs --urls",
+    "test:site": "node --test scripts/site/test/*.test.mjs"
   },
   "devDependencies": {
     "@xenova/transformers": "^2.17.2",
     "echarts": "^5.5.0",
     "lucide-vue-next": "^0.400.0",
+    "markdown-it-mathjax3": "^4.3.2",
     "vitepress": "^1.5.0",
-    "vue": "^3.4.0"
+    "vue": "^3.4.0",
+    "yaml": "^2.9.1"
   }
 }
