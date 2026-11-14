@@ -101,6 +101,7 @@ def convert(n: str) -> str:
     # 2. header: drop <title>, the TRAE logo (first image), promo line and bookmark
     text = re.sub(r"<title>.*?</title>\s*", "", text, count=1, flags=re.S)
     text = re.sub(r"^!\[[^\]]*\]\(\./images/01\.webp\)\s*", "", text, count=1)
+    (img_dir / "01.webp").unlink(missing_ok=True)  # the sponsor logo is not published
     text = re.sub(r"TRAE 高校扶持计划：[^\n]*\n", "", text, count=1)
     text = re.sub(r"<bookmark[^>]*></bookmark>\s*", "", text)
     m = re.search(r"以下内容根据唐国豪教授量化投资课程整理，作者：([^\n]+)\n", text)
