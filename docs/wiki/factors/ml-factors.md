@@ -1,6 +1,6 @@
 ---
 title: 机器学习因子挖掘
-description: 用遗传规划、神经网络等机器学习方法自动挖掘量化因子：GPlearn、DEAP 等开源工具和相关开源项目。
+description: 用遗传规划等机器学习方法自动挖掘量化因子：GPlearn、DEAP 等开源工具、相关开源项目和券商金工研报。
 ---
 
 # 机器学习因子挖掘
@@ -31,7 +31,3 @@ description: 用遗传规划、神经网络等机器学习方法自动挖掘量�
 - [开源金工 | 遗传算法赋能交易行为因子](https://mp.weixin.qq.com/s/RNibl2W1CjK4tr7KlMWBbw)
 - [国君金工 | 决胜样本外：因子挖掘算法革新](https://mp.weixin.qq.com/s/Z7knUG0h4N89uCJLpwnZQQ)
 - [浙商金工 | 机器学习与因子（四）: 遗传规划](https://mp.weixin.qq.com/s/Bm6vLfVsPoGz5Ch0yC0utg)
-
-## 神经网络因子挖掘
-
-欢迎阅读：[使用神经网络挖掘选股End-to-End因子](https://xwfixqlhmsm.feishu.cn/wiki/AVbfw2uOjiMXCkklmnRcyFlInYc)（@湖南大学金融科技协会）

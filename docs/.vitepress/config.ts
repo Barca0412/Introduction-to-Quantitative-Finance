@@ -58,7 +58,8 @@ const pagePath = (relativePath: string) =>
 
 // Breadcrumb labels for the top-level sections.
 // Resource pages with at least one reviewed entry (same rule as gen_resources.mjs).
-const RESOURCE_PAGES = publishedPages(loadRegistry())
+const REGISTRY = loadRegistry()
+const RESOURCE_PAGES = publishedPages(REGISTRY)
 
 const SECTION_NAMES: Record<string, string> = {
   tutorials: '教程',
@@ -305,7 +306,7 @@ export default defineConfig({
           collapsed: false,
           items: [
             ...RESOURCE_PAGES.map((p) => ({ text: p.title, link: `/resources/${p.key}` })),
-            ...(RESOURCE_PAGES.length ? [{ text: '致谢与来源', link: '/resources/credits' }] : [])
+            ...(RESOURCE_PAGES.length && REGISTRY.options.credits_page ? [{ text: '致谢与来源', link: '/resources/credits' }] : [])
           ]
         },
         quickNav

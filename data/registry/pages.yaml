@@ -1,6 +1,9 @@
 # 资源页定义。每个页面的条目写在 items/<key>.yaml 里。
 # kind 决定表格的列和必填字段：project / data / book / course / community。
 # 只有至少一条已审（reviewed 有日期）的页面才会生成，并出现在侧栏里。
+# 全局开关
+options:
+  credits_page: false   # 致谢页（列出参考过的上游清单）。先不展示；sources.yaml 照常维护
 pages:
   - key: data
     kind: data

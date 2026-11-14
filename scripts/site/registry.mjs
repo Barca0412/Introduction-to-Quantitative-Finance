@@ -61,13 +61,15 @@ function checkUrl(value, where, errors) {
 export function loadRegistry(dir = DEFAULT_DIR) {
   const errors = []
   const warnings = []
-  const result = { dir, sources: [], pages: [], items: [], stats: { repos: {} }, errors, warnings }
+  const result = { dir, options: { credits_page: true }, sources: [], pages: [], items: [], stats: { repos: {} }, errors, warnings }
   if (!existsSync(dir)) return result
 
   const sourcesFile = join(dir, 'sources.yaml')
   const pagesFile = join(dir, 'pages.yaml')
   result.sources = existsSync(sourcesFile) ? asList(readYaml(sourcesFile).sources) : []
-  result.pages = existsSync(pagesFile) ? asList(readYaml(pagesFile).pages) : []
+  const pagesDoc = existsSync(pagesFile) ? readYaml(pagesFile) : {}
+  result.pages = asList(pagesDoc.pages)
+  result.options = { ...result.options, ...(pagesDoc.options ?? {}) }
   const statsFile = join(dir, 'stats.json')
   if (existsSync(statsFile)) result.stats = JSON.parse(readFileSync(statsFile, 'utf8'))
   result.stats.repos ??= {}

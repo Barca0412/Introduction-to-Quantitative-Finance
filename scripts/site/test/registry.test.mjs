@@ -150,3 +150,10 @@ test('book entries need authors and render a book table', () => {
   assert.equal(bad.status, 1)
   assert.match(bad.stderr, /book 类条目必须填 authors/)
 })
+
+test('credits page can be switched off', () => {
+  const res = run(makeRegistry({ pages: `options:\n  credits_page: false\n${PAGES}` }))
+  assert.equal(res.status, 0, res.stderr)
+  assert.ok(!existsSync(join(res.out, 'credits.md')))
+  assert.doesNotMatch(readFileSync(join(res.out, 'backtest.md'), 'utf8'), /resources\/credits/)
+})
