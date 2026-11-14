@@ -144,7 +144,7 @@ test('book entries need authors and render a book table', () => {
   const ok = run(makeRegistry({ books }))
   assert.equal(ok.status, 0, ok.stderr)
   const page = readFileSync(join(ok.out, 'books.md'), 'utf8')
-  assert.match(page, /\| 书 \| 作者 \| 年份 \| 推荐理由 \| 免费版 \|/)
+  assert.match(page, /\| 书 \| 作者 \| 年份 \| 推荐理由 \|/)
   assert.match(page, /\[免费版\]/)
   const bad = run(makeRegistry({ books: books.replace('authors: [James, Witten, Hastie, Tibshirani], ', '') }), ['--check'])
   assert.equal(bad.status, 1)

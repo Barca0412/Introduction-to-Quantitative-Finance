@@ -72,11 +72,10 @@ function row(item, kind) {
   switch (kind) {
     case 'book':
       return [
-        nameCell(item),
+        `${nameCell(item)}${item.free_url ? `<br>[免费版](${item.free_url})` : ''}`,
         cell([].concat(item.authors).join('、')),
         item.year ?? '',
         cell(item.why_zh ?? ''),
-        item.free_url ? `[免费版](${item.free_url})` : '',
       ]
     case 'course':
       return [nameCell(item), cell(item.provider), cell(item.why_zh ?? ''), item.free === false ? '收费' : '免费']
@@ -88,7 +87,7 @@ function row(item, kind) {
 }
 
 const HEADERS = {
-  book: ['书', '作者', '年份', '推荐理由', '免费版'],
+  book: ['书', '作者', '年份', '推荐理由'],
   course: ['课程', '提供方', '推荐理由', '费用'],
   community: ['名称', '推荐理由'],
   project: ['项目', '推荐理由', '★'],
