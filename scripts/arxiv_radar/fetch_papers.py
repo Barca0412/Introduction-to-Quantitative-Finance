@@ -13,8 +13,8 @@ from .affiliations import enrich_affiliations
 from .compute_stats import compute_and_save_stats
 from .config import ARXIV_CATEGORIES, FETCH_BACKOFF_SECONDS, FETCH_DAYS, MAX_RESULTS_PER_CATEGORY
 from .generate_charts import generate_all_charts, generate_combined_chart
-from .llm_processor import process_papers_batch
-from .storage import load_papers, merge_papers, save_papers
+from .llm_processor import fallback_tags_for_paper, process_papers_batch
+from .storage import load_papers, merge_papers, refresh_rule_tags, save_papers
 from .utils import build_paper_record, get_target_dates, normalize_arxiv_id
 
 
@@ -182,6 +182,9 @@ async def run_pipeline() -> Optional[Dict[str, Any]]:
     logger.info("\n[Step 4] Merging with existing data...")
     merged = merge_papers(existing, enriched_papers)
     logger.info("Total papers after merge: %s", merged["total_count"])
+    # Papers never seen by the LLM carry rule-based tags; keep them in step with the rules.
+    retagged = refresh_rule_tags(merged["papers"], fallback_tags_for_paper)
+    logger.info("Re-applied keyword-rule tags to %s papers without an LLM summary", retagged)
 
     logger.info("\n[Step 5] Saving papers data...")
     save_papers(merged)

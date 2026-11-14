@@ -86,6 +86,9 @@ def merge_duplicate_paper(existing: Dict[str, Any], incoming: Dict[str, Any]) ->
     """Merge two records of the same paper, preferring richer fields."""
     merged = normalize_paper(existing)
     candidate = normalize_paper(incoming)
+    # The incoming record was enriched by the LLM and the stored one never was: its
+    # tags/keywords came from the keyword rules, so replace them instead of merging.
+    llm_upgrade = bool(candidate["summary_zh"]) and not merged["summary_zh"]
 
     merged["title"] = candidate["title"] or merged["title"]
     merged["abstract"] = candidate["abstract"] or merged["abstract"]
@@ -100,8 +103,12 @@ def merge_duplicate_paper(existing: Dict[str, Any], incoming: Dict[str, Any]) ->
     merged["pdf_link"] = candidate["pdf_link"] or merged["pdf_link"]
     merged["abs_link"] = candidate["abs_link"] or merged["abs_link"]
     merged["categories"] = merge_unique_strings(merged["categories"], candidate["categories"])
-    merged["tags"] = merge_unique_strings(merged["tags"], candidate["tags"])
-    merged["keywords"] = merge_unique_strings(merged["keywords"], candidate["keywords"])
+    if llm_upgrade:
+        merged["tags"] = candidate["tags"]
+        merged["keywords"] = candidate["keywords"]
+    else:
+        merged["tags"] = merge_unique_strings(merged["tags"], candidate["tags"])
+        merged["keywords"] = merge_unique_strings(merged["keywords"], candidate["keywords"])
 
     merged["authors"] = (
         candidate["authors"]
@@ -166,3 +173,21 @@ def write_atomically(filepath: Path, data: Any) -> None:
         tmp_path = Path(tmp_file.name)
 
     tmp_path.replace(filepath)
+
+
+def refresh_rule_tags(papers: List[Dict[str, Any]], tagger) -> int:
+    """Re-run the keyword rules on papers the LLM never enriched (no summary_zh).
+
+    Their tags came from the rules alone, so a rule fix should reach them too.
+    Returns how many papers changed.
+    """
+    changed = 0
+    for paper in papers:
+        if str(paper.get("summary_zh", "")).strip():
+            continue
+        tags = tagger(paper)
+        if tags != paper.get("tags", []):
+            paper["tags"] = tags
+            paper["focus"] = build_focus_metadata(paper)
+            changed += 1
+    return changed

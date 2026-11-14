@@ -7,6 +7,7 @@ import asyncio
 import ast
 import functools
 import json
+import re
 import logging
 import socket
 from typing import Dict, Any, Optional, List
@@ -141,8 +142,6 @@ TAG_SIGNALS = {
         "graph rag",
         "graphrag",
         "retriever",
-        "retrieval",
-        "knowledge graph",
         "vector search",
     ],
     "reasoning": [
@@ -177,8 +176,15 @@ def _paper_text(paper: Dict[str, Any]) -> str:
     ).lower()
 
 
+@functools.lru_cache(maxsize=None)
+def _term_pattern(term: str) -> "re.Pattern[str]":
+    # Whole words/phrases only, with an optional plural ending: "rag" must not match
+    # "average" or "storage", "api" not "capital", "cot" not "scotland".
+    return re.compile(r"(?<![a-z0-9])" + re.escape(term.lower()) + r"(?:s|es)?(?![a-z0-9])")
+
+
 def _has_any(text: str, terms: List[str]) -> bool:
-    return any(term in text for term in terms)
+    return any(_term_pattern(term).search(text) for term in terms)
 
 
 def validate_tags_for_paper(paper: Dict[str, Any], tags: List[str]) -> List[str]:
