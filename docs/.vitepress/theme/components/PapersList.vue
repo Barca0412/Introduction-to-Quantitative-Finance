@@ -274,7 +274,7 @@ const quickFilters = [
   { id: 'multi-agent', label: 'Multi-Agent', description: 'Coordination and agent teams' },
   { id: 'tool-use', label: 'Tool Use', description: 'Function calling and tools' },
   { id: 'reasoning', label: 'Reasoning', description: 'Inference and multi-step thought' },
-  { id: 'all', label: 'All Papers', description: 'Everything from the 10 categories' }
+  { id: 'all', label: 'All Papers', description: 'Everything from all monitored categories' }
 ]
 
 const embeddingThemeOptions = [
