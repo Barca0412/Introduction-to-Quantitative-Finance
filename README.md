@@ -47,7 +47,7 @@
 
 ## FinPaperRadar · AI × 金融论文雷达
 
-每天从 arXiv 的 10 个分类抓取新论文，用大模型打研究标签、提取关键词、写中文摘要，并提供趋势图、机构筛选和语义检索。入口：[barca0412.github.io/Introduction-to-Quantitative-Finance/arxiv/](https://barca0412.github.io/Introduction-to-Quantitative-Finance/arxiv/)。
+每天从 arXiv 的 15 个分类抓取新论文（cs.LG、stat.ML 只收金融相关的），用大模型打研究标签、提取关键词、写中文摘要，并提供趋势图、机构筛选和语义检索。入口：[barca0412.github.io/Introduction-to-Quantitative-Finance/arxiv/](https://barca0412.github.io/Introduction-to-Quantitative-Finance/arxiv/)。
 
 完整历史数据以 Parquet 格式发布在 [Hugging Face 数据集](https://huggingface.co/datasets/Barca21412/FinPaperRadar)，GitHub Release [`radar-data`](https://github.com/Barca0412/Introduction-to-Quantitative-Finance/releases/tag/radar-data) 留有镜像，都不进 git。我们生成的标签、中文摘要、评分和向量按 CC BY 4.0 授权，arXiv 元数据本身是 CC0。流水线代码在 `scripts/arxiv_radar/`。
 

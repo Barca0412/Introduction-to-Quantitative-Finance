@@ -84,6 +84,15 @@ ARXIV_CATEGORIES = [
     "q-fin.CP",   # Computational Finance
     "q-fin.PM",   # Portfolio Management
     "q-fin.TR",   # Trading and Market Microstructure
+    # Added 2026-11-15. Small categories (Oct 2026: MF 70, RM 47, PR 19, GN 15,
+    # econ.EM 139 papers) that held papers we were missing, e.g. 1901.09647
+    # "Deep Learning Volatility" (q-fin.MF only). q-fin.EC is left out: arXiv
+    # folded it into econ.GN and it returns nothing (0 papers in Oct 2026).
+    "q-fin.MF",   # Mathematical Finance
+    "q-fin.RM",   # Risk Management
+    "q-fin.PR",   # Pricing of Securities
+    "q-fin.GN",   # General Finance
+    "econ.EM",    # Econometrics
 ]
 
 # # ============================================

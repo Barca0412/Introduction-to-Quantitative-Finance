@@ -296,7 +296,14 @@ const categoryNames = {
   'q-fin.ST': 'Statistical Finance',
   'q-fin.CP': 'Computational Finance',
   'q-fin.PM': 'Portfolio Management',
-  'q-fin.TR': 'Trading and Market Microstructure'
+  'q-fin.TR': 'Trading and Market Microstructure',
+  'q-fin.MF': 'Mathematical Finance',
+  'q-fin.RM': 'Risk Management',
+  'q-fin.PR': 'Pricing of Securities',
+  'q-fin.GN': 'General Finance',
+  'econ.EM': 'Econometrics',
+  'cs.LG': 'Machine Learning',
+  'stat.ML': 'Machine Learning (Statistics)'
 }
 
 const preferredTagOrder = [

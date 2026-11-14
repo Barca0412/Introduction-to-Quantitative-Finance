@@ -23,8 +23,9 @@ configs:
 
 # FinPaperRadar · AI × 金融论文雷达
 
-FinPaperRadar is a daily-updated index of recent arXiv papers from 10 categories (cs.AI, cs.CL,
-cs.MA, cs.IR, cs.SE, cs.CE, q-fin.ST, q-fin.CP, q-fin.PM, q-fin.TR), with machine-generated
+FinPaperRadar is a daily-updated index of recent arXiv papers from 15 categories (cs.AI, cs.CL,
+cs.MA, cs.IR, cs.SE, cs.CE, q-fin.ST, q-fin.CP, q-fin.PM, q-fin.TR, q-fin.MF, q-fin.RM, q-fin.PR,
+q-fin.GN, econ.EM), plus finance-related papers from cs.LG and stat.ML, with machine-generated
 research tags, focus scores and embeddings for AI + Finance, agent planning and deep research.
 It is the full history behind the [FinPaperRadar pages](https://barca0412.github.io/Introduction-to-Quantitative-Finance/arxiv/)
 of [Introduction-to-Quantitative-Finance](https://github.com/Barca0412/Introduction-to-Quantitative-Finance).
