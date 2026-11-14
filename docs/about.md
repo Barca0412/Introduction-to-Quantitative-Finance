@@ -13,7 +13,8 @@ description: 量化研究入门由湖南大学金融科技协会 Quant Group 维
 
 ## 授权
 
-- 仓库代码和整体项目：[MIT](https://github.com/Barca0412/Introduction-to-Quantitative-Finance/blob/main/LICENSE)。
+- 代码：[MIT](https://github.com/Barca0412/Introduction-to-Quantitative-Finance/blob/main/LICENSE)。
+- 知识库页面和资源点评（本项目自己撰写的文字）：[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.zh-hans)。转载、改编、用于课程或商业用途都可以，注明来自"量化研究入门"并附上原页面链接即可。
 - 讲义：每一讲在开头注明授权方式。
 - FinPaperRadar 数据集：我们生成的标签、中文摘要、评分和向量按 CC BY 4.0 授权；arXiv 元数据本身是 CC0。
 - 研报和论文：版权归原作者和原机构所有，本项目只做学习研究用的索引。

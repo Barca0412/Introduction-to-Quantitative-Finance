@@ -5,32 +5,11 @@
 //   docs/library/papers.md   <- 论文/<topic>/**/<file>.pdf
 //
 // Both outputs are git-ignored and rebuilt by `npm run docs:dev|docs:build`.
-import { readdirSync, statSync, writeFileSync, existsSync } from 'node:fs'
-import { join, relative, sep, basename, extname } from 'node:path'
-import { fileURLToPath } from 'node:url'
+import { writeFileSync } from 'node:fs'
+import { join, basename, extname } from 'node:path'
+import { ROOT, collator, walk, repoPath, githubUrl, escapeText, anchor } from './lib.mjs'
 
-const ROOT = join(fileURLToPath(new URL('.', import.meta.url)), '..', '..')
-const REPO = process.env.GITHUB_REPOSITORY || 'Barca0412/Introduction-to-Quantitative-Finance'
-const BRANCH = process.env.LIBRARY_BRANCH || 'main'
 const OUT_DIR = join(ROOT, 'docs', 'library')
-
-const collator = new Intl.Collator('zh-CN', { numeric: true })
-
-function walk(dir) {
-  if (!existsSync(dir)) return []
-  return readdirSync(dir).flatMap((name) => {
-    if (name.startsWith('.')) return []
-    const full = join(dir, name)
-    return statSync(full).isDirectory() ? walk(full) : [full]
-  })
-}
-
-const repoPath = (full) => relative(ROOT, full).split(sep)
-const githubUrl = (kind, parts) =>
-  `https://github.com/${REPO}/${kind}/${BRANCH}/${parts.map(encodeURIComponent).join('/')}`
-
-// Markdown link text must not break the table/list syntax.
-const escapeText = (text) => text.replace(/([\\[\]|*_`<>])/g, '\\$1')
 
 function group(files, depth) {
   const groups = new Map()
@@ -79,19 +58,6 @@ function writePage(file, { title, description, intro, root, depth }) {
   ].join('\n')
   writeFileSync(join(OUT_DIR, file), body)
   return pdfs.length
-}
-
-// Same slug rule as VitePress' default markdown-it anchor for CJK headings.
-function anchor(text) {
-  return text
-    .normalize('NFKD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .replace(/[\u0000-\u001f]/g, '')
-    .replace(/[\s~`!@#$%^&*()\-_+=[\]{}|\\;:"'“”‘’<>,.?/]+/g, '-')
-    .replace(/-{2,}/g, '-')
-    .replace(/^-+|-+$/g, '')
-    .replace(/^(\d)/, '_$1')
-    .toLowerCase()
 }
 
 const notice =

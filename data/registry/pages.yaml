@@ -1,0 +1,130 @@
+# 资源页定义。每个页面的条目写在 items/<key>.yaml 里。
+# kind 决定表格的列和必填字段：project / data / book / course / community。
+# 只有至少一条已审（reviewed 有日期）的页面才会生成，并出现在侧栏里。
+pages:
+  - key: data
+    kind: data
+    title: 数据接口与数据源
+    description: A 股和全球市场的免费与收费数据接口对比：AKShare、Tushare、BaoStock、efinance 等，以及 Ken French、AQR 等学术因子数据和宏观数据。
+    intro: 按市场和用途整理的数据来源。每条标出免费、部分免费或收费；学术研究常用的因子数据单独列出。
+    subs:
+      - { key: cn-open, title: A 股开源数据接口 }
+      - { key: cn-commercial, title: 国内商业与学术数据库 }
+      - { key: global, title: 海外与全球市场 }
+      - { key: academic-factors, title: 学术因子数据 }
+      - { key: macro, title: 宏观与公告数据 }
+      - { key: alternative, title: 另类数据 }
+  - key: backtest
+    kind: project
+    title: 回测与研究框架
+    description: 主流量化回测框架对比：Qlib、RQAlpha、vectorbt、backtrader、NautilusTrader、Lean 等，以及绩效与风险分析报告工具。
+    intro: 从轻量的向量化回测到研究、实盘一体的事件驱动引擎。选型时先看自己的市场、频率和是否需要实盘。
+    subs:
+      - { key: vectorized, title: 向量化与轻量回测 }
+      - { key: event-driven, title: 事件驱动与实盘一体 }
+      - { key: cn-frameworks, title: 国内 A 股与期货框架 }
+      - { key: research-platforms, title: 研究平台 }
+      - { key: performance, title: 绩效与风险分析 }
+  - key: trading
+    kind: project
+    title: 交易接口与实盘
+    description: 国内券商、期货和海外券商的程序化交易接口：easytrader、TqSdk、CTP、富途、IB 等，以及实盘系统。
+    subs:
+      - { key: cn-stock, title: A 股交易接口 }
+      - { key: cn-futures, title: 国内期货与期权 }
+      - { key: global-brokers, title: 海外券商接口 }
+      - { key: live-systems, title: 实盘交易系统 }
+  - key: factors-ml
+    kind: project
+    title: 因子挖掘与机器学习
+    description: 因子研究和机器学习选股的开源工具：alphalens-reloaded、遗传规划、时间序列特征、深度学习与强化学习交易框架、研报复现代码。
+    subs:
+      - { key: factor-analysis, title: 因子分析与检验 }
+      - { key: factor-mining, title: 因子挖掘 }
+      - { key: indicators, title: 技术指标库 }
+      - { key: ml-dl, title: 机器学习与深度学习 }
+      - { key: time-series, title: 时间序列模型 }
+      - { key: rl, title: 强化学习交易 }
+      - { key: replications, title: 研报与书籍复现代码 }
+  - key: llm-agents
+    kind: project
+    title: 大模型与智能体
+    description: 金融大模型、交易智能体（Agent）、MCP 与 Agent Skills 相关的开源项目，例如 TradingAgents、FinGPT、FinRobot。
+    subs:
+      - { key: agents, title: 交易与投研智能体 }
+      - { key: fin-llm, title: 金融大模型与评测 }
+      - { key: mcp-skills, title: MCP 与 Agent Skills }
+  - key: portfolio-risk
+    kind: project
+    title: 组合优化与风险
+    description: 投资组合优化与风险建模工具：cvxpy、Riskfolio-Lib、PyPortfolioOpt、skfolio，以及波动率与风险模型库。
+    subs:
+      - { key: optimization, title: 组合优化 }
+      - { key: risk-models, title: 风险模型与波动率 }
+  - key: derivatives
+    kind: project
+    title: 衍生品、固收与定价
+    description: 期权、期货、利率和固定收益的定价与分析库：QuantLib、FinancePy、tf-quant-finance 等。
+    subs:
+      - { key: pricing, title: 定价库 }
+      - { key: options, title: 期权与波动率 }
+      - { key: rates, title: 利率与固定收益 }
+  - key: hft
+    kind: project
+    title: 高频与市场微观结构
+    description: 高频交易与做市的回测框架、盘口数据和微观结构分析工具，例如 hftbacktest。
+    subs:
+      - { key: backtest, title: 高频回测 }
+      - { key: market-data, title: 盘口与行情数据 }
+      - { key: market-making, title: 做市 }
+  - key: crypto
+    kind: project
+    title: 加密资产
+    description: 加密资产量化交易的开源工具：统一交易所接口 CCXT、行情采集、策略框架与做市机器人。
+    subs:
+      - { key: exchange-api, title: 交易所接口与行情 }
+      - { key: bots, title: 策略框架与交易机器人 }
+  - key: infra
+    kind: project
+    title: 数据存储与工程工具
+    description: 量化研究的工程基础设施：时序数据存储、交易日历、金融可视化、数据分析与性能工具。
+    subs:
+      - { key: storage, title: 时序数据存储 }
+      - { key: calendars, title: 交易日历 }
+      - { key: visualization, title: 金融可视化 }
+      - { key: analysis, title: 数据分析与统计 }
+  - key: books
+    kind: book
+    title: 量化书单
+    description: 量化研究与求职的经典书单：概率统计、随机微积分、衍生品、计量与机器学习、因子与组合、面试，以及中文好书，附合法免费版链接。
+    intro: 只链接出版社页面或作者、出版社提供的合法免费版本。
+    subs:
+      - { key: start, title: 入门与行业 }
+      - { key: math, title: 数学、概率与统计 }
+      - { key: derivatives, title: 衍生品与随机微积分 }
+      - { key: econometrics-ml, title: 计量、时序与机器学习 }
+      - { key: factors-portfolio, title: 因子、策略与组合管理 }
+      - { key: options, title: 期权与波动率 }
+      - { key: programming, title: 编程 }
+      - { key: interview, title: 面试 }
+      - { key: zh, title: 中文书 }
+  - key: courses
+    kind: course
+    title: 课程与公开课
+    description: 量化金融的大学公开课、MOOC 和开源课程：MIT OCW、Georgia Tech ML4T、QuantEcon、Datawhale 等。
+    subs:
+      - { key: university, title: 大学公开课 }
+      - { key: mooc, title: MOOC 与在线课程 }
+      - { key: open-source, title: 开源课程与教程 }
+  - key: community
+    kind: community
+    title: 社区与信息源
+    description: 量化论坛、问答社区、博客、通讯、播客和公众号，以及研究机构、交易所和监管机构入口。
+    subs:
+      - { key: forums, title: 论坛与问答 }
+      - { key: blogs, title: 博客与通讯 }
+      - { key: podcasts, title: 播客与视频 }
+      - { key: wechat, title: 公众号与中文博主 }
+      - { key: research, title: 研究机构与论文库 }
+      - { key: lists, title: 其他资源清单 }
+      - { key: market-regulators, title: 交易所与监管 }

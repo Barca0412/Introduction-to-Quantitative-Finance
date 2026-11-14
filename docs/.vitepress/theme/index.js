@@ -6,6 +6,7 @@ import './style.css'
 import TutorialMeta from './components/TutorialMeta.vue'
 import TutorialList from './components/TutorialList.vue'
 import WikiBacklinks from './components/WikiBacklinks.vue'
+import WikiMeta from './components/WikiMeta.vue'
 
 // Radar components (and echarts / the data loader they pull in) are split into
 // their own chunks, so non-Radar pages never download them.
@@ -58,7 +59,7 @@ export default {
   extends: DefaultTheme,
   Layout() {
     return h(DefaultTheme.Layout, null, {
-      'doc-before': () => h(TutorialMeta),
+      'doc-before': () => [h(TutorialMeta), h(WikiMeta)],
       'doc-after': () => h(WikiBacklinks),
       'layout-bottom': () => h(RadarAttribution),
     })

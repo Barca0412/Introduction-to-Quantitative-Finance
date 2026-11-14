@@ -1,0 +1,69 @@
+name: 推荐一个资源
+description: 推荐开源项目、数据源、书、课程或社区，加入站点的资源清单
+title: "[资源] "
+labels: ["resource"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢推荐！收录标准见 [CONTRIBUTING.md](https://github.com/Barca0412/Introduction-to-Quantitative-Finance/blob/main/CONTRIBUTING.md#往资源清单里加项目)。维护者会在 7 天内回复。
+  - type: input
+    id: name
+    attributes:
+      label: 名称
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: 链接
+      description: 项目主页或 GitHub 仓库地址
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: 分类
+      options:
+        - 数据接口与数据源
+        - 回测与研究框架
+        - 交易接口与实盘
+        - 因子挖掘与机器学习
+        - 大模型与智能体
+        - 组合优化与风险
+        - 衍生品、固收与定价
+        - 高频与市场微观结构
+        - 加密资产
+        - 数据存储与工程工具
+        - 书
+        - 课程
+        - 社区与信息源
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: 推荐理由
+      description: 它解决什么问题、适合谁、和清单里已有的同类项目有什么不同
+    validations:
+      required: true
+  - type: dropdown
+    id: relation
+    attributes:
+      label: 你和这个项目的关系
+      options:
+        - 没有关系，只是用户
+        - 我是作者或参与开发
+        - 我所在的公司或机构
+    validations:
+      required: true
+  - type: dropdown
+    id: pricing
+    attributes:
+      label: 费用
+      options:
+        - 免费
+        - 部分免费
+        - 收费
+    validations:
+      required: true

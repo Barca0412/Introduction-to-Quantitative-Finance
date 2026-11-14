@@ -1,0 +1,33 @@
+# 资源清单参考过的上游清单与站点。条目的 sources 字段引用这里的 id。
+# use:
+#   link-only          只沿用名称和链接这类事实，说明文字必须自己写（无许可证、NC 许可或受版权保护的文章）
+#   adapt-with-credit  许可证允许改编（CC0 / MIT / Apache 等），在致谢页署名
+# 无论哪种，why_zh 都由本项目自己撰写。
+sources:
+  # 英文资源清单
+  - { id: wilsonfreitas-awesome-quant, name: wilsonfreitas/awesome-quant, url: https://github.com/wilsonfreitas/awesome-quant, license: 未声明, use: link-only }
+  - { id: pwb-awesome-systematic-trading, name: paperswithbacktest/awesome-systematic-trading, url: https://github.com/paperswithbacktest/awesome-systematic-trading, license: 未声明, use: link-only }
+  - { id: wangzhe-awesome-systematic-trading, name: wangzhe3224/awesome-systematic-trading, url: https://github.com/wangzhe3224/awesome-systematic-trading, license: MIT, use: adapt-with-credit }
+  - { id: awesome-ai-in-finance, name: georgezouq/awesome-ai-in-finance, url: https://github.com/georgezouq/awesome-ai-in-finance, license: CC0-1.0, use: adapt-with-credit }
+  - { id: financial-machine-learning, name: firmai/financial-machine-learning, url: https://github.com/firmai/financial-machine-learning, license: 未声明, use: link-only }
+  - { id: quant-developers-resources, name: cybergeekgyan/Quant-Developers-Resources, url: https://github.com/cybergeekgyan/Quant-Developers-Resources, license: 未声明, use: link-only }
+  - { id: awesome-quant-ml-trading, name: grananqvist/Awesome-Quant-Machine-Learning-Trading, url: https://github.com/grananqvist/Awesome-Quant-Machine-Learning-Trading, license: 未声明, use: link-only }
+  - { id: awesome-quant-ai, name: leoncuhk/awesome-quant-ai, url: https://github.com/leoncuhk/awesome-quant-ai, license: Apache-2.0, use: adapt-with-credit }
+  - { id: awesome-trading-agents, name: LLMQuant/awesome-trading-agents, url: https://github.com/LLMQuant/awesome-trading-agents, license: CC0-1.0, use: adapt-with-credit }
+  - { id: elitequant, name: EliteQuant/EliteQuant, url: https://github.com/EliteQuant/EliteQuant, license: Apache-2.0, use: adapt-with-credit }
+  - { id: awesome-deep-trading, name: cbailes/awesome-deep-trading, url: https://github.com/cbailes/awesome-deep-trading, license: MIT, use: adapt-with-credit }
+  # 中文资源清单
+  - { id: thuquant-awesome-quant, name: thuquant/awesome-quant, url: https://github.com/thuquant/awesome-quant, license: MIT, use: adapt-with-credit }
+  - { id: quant-wiki, name: LLMQuant/quant-wiki, url: https://github.com/LLMQuant/quant-wiki, license: CC BY-NC-SA 4.0, use: link-only }
+  - { id: awesome-quant-interview, name: SoYuCry/awesome-quant-interview, url: https://github.com/SoYuCry/awesome-quant-interview, license: MIT, use: adapt-with-credit }
+  - { id: akhub, name: akfamily/akhub, url: https://github.com/akfamily/akhub, license: MIT, use: adapt-with-credit }
+  - { id: quantsplaybook, name: hugo2046/QuantsPlaybook, url: https://github.com/hugo2046/QuantsPlaybook, license: 未声明, use: link-only }
+  - { id: whale-quant, name: datawhalechina/whale-quant, url: https://github.com/datawhalechina/whale-quant, license: 未声明, use: link-only }
+  - { id: quantml, name: QuantMLResearch/QuantML, url: https://github.com/QuantMLResearch/QuantML, license: 未声明, use: link-only }
+  - { id: awesome-trade, name: hstcscolor/awesome-trade, url: https://github.com/hstcscolor/awesome-trade, license: 未声明, use: link-only }
+  - { id: awesome-quant-cn, name: rchardzhu/awesome-quant-cn, url: https://github.com/rchardzhu/awesome-quant-cn, license: Apache-2.0, use: adapt-with-credit }
+  # 英文站点与经验帖
+  - { id: reddit-quant-wiki, name: r/quant wiki 与 FAQ, url: https://www.reddit.com/r/quant/wiki/index, license: Reddit 用户协议, use: link-only }
+  - { id: quantstart, name: QuantStart 书单与学习计划, url: https://www.quantstart.com/, license: 版权所有, use: link-only }
+  - { id: quantocracy, name: Quantocracy, url: https://quantocracy.com/, license: 版权所有, use: link-only }
+  - { id: pyquant-news-books, name: PyQuant News 量化书单, url: https://www.pyquantnews.com/the-pyquant-newsletter/46-books-quant-finance-algo-trading-market-data, license: 版权所有, use: link-only }

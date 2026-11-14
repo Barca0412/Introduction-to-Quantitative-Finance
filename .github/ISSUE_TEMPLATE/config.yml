@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 提问与交流
+    url: https://github.com/Barca0412/Introduction-to-Quantitative-Finance/discussions
+    about: 学习问题、想法和经验分享请到 Discussions

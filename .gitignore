@@ -24,6 +24,10 @@ docs/public/arxiv-charts/
 docs/library/reports.md
 docs/library/papers.md
 
+# Resource pages, generated from data/registry/ by scripts/site/gen_resources.mjs
+docs/resources/*.md
+!docs/resources/index.md
+
 # OS
 .DS_Store
 Thumbs.db
