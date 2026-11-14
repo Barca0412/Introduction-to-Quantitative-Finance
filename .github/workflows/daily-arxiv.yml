@@ -13,8 +13,10 @@ name: arXiv Radar update and site deploy
 
 on:
   schedule:
-    # 05:00 Beijing time, every day (Friday papers would otherwise fall into a gap).
-    - cron: '0 21 * * *'
+    # 03:00 UTC (11:00 Beijing), every day: after arXiv's daily announcement
+    # (20:00 US Eastern = 00:00/01:00 UTC), so each run sees the newest batch.
+    # The fetch looks back 7 days, so a missed or failed day is picked up later.
+    - cron: '0 3 * * *'
   push:
     branches:
       - main
@@ -34,6 +36,14 @@ on:
         description: 'Fetch new arXiv papers (off = only rebuild the site from stored data)'
         type: boolean
         default: true
+      since:
+        description: 'Backfill from this date, YYYY-MM-DD (empty = the usual last 7 days)'
+        type: string
+        default: ''
+      until:
+        description: 'Backfill up to this date, YYYY-MM-DD (empty = today)'
+        type: string
+        default: ''
 
 permissions:
   contents: read
@@ -52,7 +62,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     # Embedding refresh is capped (RADAR_EMBED_REFRESH_LIMIT, ~3000 papers ≈ 5-10 min).
-    timeout-minutes: 60
+    # Backfill runs (inputs.since) tag and embed ~1,500 new papers per half month.
+    timeout-minutes: 120
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -88,6 +99,11 @@ jobs:
         env:
           # Any OpenAI-compatible endpoint. Defaults to DeepSeek; override with
           # repository variables LLM_BASE_URL / LLM_MODEL (e.g. DashScope + qwen).
+          # Backfill window (workflow_dispatch only); empty on scheduled runs.
+          RADAR_FETCH_SINCE: ${{ inputs.since }}
+          RADAR_FETCH_UNTIL: ${{ inputs.until }}
+          # Backfills bring thousands of new papers at once; clean up affiliations faster.
+          RADAR_AFFILIATION_LLM_CONCURRENCY: ${{ inputs.since != '' && '8' || '2' }}
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
           LLM_BASE_URL: ${{ vars.LLM_BASE_URL }}
           LLM_MODEL: ${{ vars.LLM_MODEL }}

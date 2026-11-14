@@ -14,9 +14,9 @@ on:
   push:
     branches: [main]
   # The daily Radar run commits README updates with GITHUB_TOKEN, and such pushes do not
-  # start other workflows; this schedule (after the 21:00 UTC Radar run) picks them up.
+  # start other workflows; this schedule (after the 03:00 UTC Radar run) picks them up.
   schedule:
-    - cron: '30 22 * * *'
+    - cron: '30 4 * * *'
   workflow_dispatch:
 
 concurrency:

@@ -2,8 +2,9 @@
 
 import asyncio
 import functools
+import os
 import re
-from datetime import datetime, timedelta
+from datetime import date, datetime, timedelta
 from typing import Any, Dict, List, Tuple
 
 from dateutil import parser as date_parser
@@ -24,6 +25,17 @@ def get_target_dates(days: int = 2) -> List[str]:
     current UTC date meant the newest API results were routinely discarded;
     a wider inclusive window also covers weekends and announcement delays.
     """
+    # Backfill: RADAR_FETCH_SINCE / RADAR_FETCH_UNTIL (YYYY-MM-DD, inclusive) replace
+    # the rolling window. UNTIL defaults to today.
+    since = os.getenv("RADAR_FETCH_SINCE", "").strip()
+    if since:
+        start = date.fromisoformat(since)
+        until = os.getenv("RADAR_FETCH_UNTIL", "").strip()
+        end = date.fromisoformat(until) if until else datetime.utcnow().date()
+        if end < start:
+            raise ValueError(f"RADAR_FETCH_UNTIL {end} is before RADAR_FETCH_SINCE {start}")
+        return [(start + timedelta(days=i)).isoformat() for i in range((end - start).days + 1)]
+
     if days < 1:
         raise ValueError("days must be at least 1")
 
