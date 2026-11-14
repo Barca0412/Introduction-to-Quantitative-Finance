@@ -9,6 +9,9 @@ const props = defineProps({
   mode: { type: String, default: 'list' },
 })
 
+const showLevel = computed(() => tutorials.some((t) => t.level))
+const showDuration = computed(() => tutorials.some((t) => t.duration))
+
 const reproductions = computed(() =>
   tutorials.flatMap((t) =>
     t.reports.map((report) => ({
@@ -40,12 +43,19 @@ const reproductions = computed(() =>
 
     <template v-else>
       <table v-if="tutorials.length">
-        <thead><tr><th>讲义</th><th>难度</th><th>时长</th><th>你会做出什么</th></tr></thead>
+        <thead>
+          <tr>
+            <th class="tutorial-list-title">讲义</th>
+            <th v-if="showLevel">难度</th>
+            <th v-if="showDuration">时长</th>
+            <th>你会做出什么</th>
+          </tr>
+        </thead>
         <tbody>
           <tr v-for="t in tutorials" :key="t.slug">
-            <td><a :href="withBase(t.url)">{{ t.title }}</a></td>
-            <td>{{ t.level }}</td>
-            <td>{{ t.duration }}</td>
+            <td class="tutorial-list-title"><a :href="withBase(t.url)">{{ t.title }}</a></td>
+            <td v-if="showLevel" class="tutorial-list-nowrap">{{ t.level }}</td>
+            <td v-if="showDuration" class="tutorial-list-nowrap">{{ t.duration }}</td>
             <td>{{ t.description }}</td>
           </tr>
         </tbody>
@@ -58,5 +68,11 @@ const reproductions = computed(() =>
 <style scoped>
 .tutorial-list-empty {
   color: var(--vp-c-text-2);
+}
+.tutorial-list-title {
+  min-width: 11em;
+}
+.tutorial-list-nowrap {
+  white-space: nowrap;
 }
 </style>

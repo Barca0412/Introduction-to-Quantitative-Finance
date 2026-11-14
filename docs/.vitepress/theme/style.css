@@ -454,3 +454,35 @@ body {
   color: var(--vp-c-text-2);
   border-top: 1px solid var(--vp-c-divider);
 }
+
+/* Side-by-side images in lectures (Feishu grid blocks); stacks on narrow screens. */
+.vp-doc .lecture-grid {
+  display: grid;
+  gap: 12px;
+  align-items: start;
+  margin: 16px 0;
+}
+.vp-doc .lecture-grid > div > p {
+  margin: 0;
+}
+.vp-doc .lecture-grid img {
+  width: 100%;
+  border-radius: 4px;
+}
+@media (max-width: 640px) {
+  .vp-doc .lecture-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+/* Lecture screenshots and charts: keep them readable, never wider than the column. */
+.vp-doc img {
+  max-width: 100%;
+  height: auto;
+}
+.vp-doc a img,
+.vp-doc img {
+  cursor: zoom-in;
+}
+.vp-doc a img {
+  cursor: pointer;
+}

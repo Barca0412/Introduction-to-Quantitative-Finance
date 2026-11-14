@@ -34,7 +34,14 @@
 
 ## 讲义
 
-首批因子投资讲义正在整理，上线后会列在这里和[教程页](https://barca0412.github.io/Introduction-to-Quantitative-Finance/tutorials/)。每一讲都按同样的结构写：要解决的问题、你会做出什么、数据与环境、分步实现、结果与解读、常见的坑（前视偏差、幸存者偏差、交易成本）、延伸阅读、练习。
+讲义根据湖南大学金融与统计学院唐国豪教授《量化投资》课程整理，每一讲是一个完整的实战项目，附用 AI 编程工具辅助写代码的参考提示词：
+
+| 讲义 | 内容 |
+| --- | --- |
+| [实战一：计算 A 股个股与行业的 CAPM Beta](https://barca0412.github.io/Introduction-to-Quantitative-Finance/tutorials/01-capm-beta/) | 按证监会行业估计行业和个股 Beta，画时变 Beta，比较个股与行业的差异 |
+| [实战二：中国股票市场的价值效应与规模效应](https://barca0412.github.io/Introduction-to-Quantitative-Finance/tutorials/02-size-value-effects/) | 按账面市值比和市值分十组，检验价值效应与规模效应，讨论壳价值的影响 |
+
+这两讲使用 CSMAR 国泰安数据库（需要高校或机构账号）。更多讲义会陆续上线，见[教程页](https://barca0412.github.io/Introduction-to-Quantitative-Finance/tutorials/)。
 
 <a id="section-arxiv"></a>
 
@@ -71,6 +78,7 @@
 - [数据源与另类数据](./资料/数据源与另类数据.md)
 - [回测框架](./资料/回测.md)
 - [因子挖掘与评估](./资料/因子挖掘.md)
+- [使用神经网络挖掘（飞书文档）](https://hnufintech.feishu.cn/wiki/PkCdw7MpKixStVkyIHwcTVhKngh)
 - [投资组合优化与风控](./资料/投资组合优化与风控.md)
 
 ### 开源项目

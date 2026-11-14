@@ -1,8 +1,9 @@
 import { defineConfig } from 'vitepress'
-import { mkdirSync, writeFileSync } from 'node:fs'
+import { mkdirSync, writeFileSync, readdirSync, readFileSync, existsSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 // Resource pages are generated from data/registry/; the sidebar lists the same pages.
 import { loadRegistry, publishedPages } from '../../scripts/site/registry.mjs'
+import { parse as parseYaml } from 'yaml'
 
 const BASE = '/Introduction-to-Quantitative-Finance/'
 const SITE = `https://barca0412.github.io${BASE}`
@@ -57,6 +58,19 @@ const pagePath = (relativePath: string) =>
   relativePath.replace(/(^|\/)index\.md$/, '$1').replace(/\.md$/, '')
 
 // Breadcrumb labels for the top-level sections.
+// Lectures for the /tutorials/ sidebar, read from each lecture's frontmatter
+// (same rule as tutorials.data.js: a `tutorial:` block and not draft).
+const TUTORIALS_DIR = join(dirname(new URL(import.meta.url).pathname), '..', 'tutorials')
+const LECTURES = (existsSync(TUTORIALS_DIR) ? readdirSync(TUTORIALS_DIR) : [])
+  .filter((name) => existsSync(join(TUTORIALS_DIR, name, 'index.md')))
+  .map((name) => {
+    const fm = readFileSync(join(TUTORIALS_DIR, name, 'index.md'), 'utf8').match(/^---\n([\s\S]*?)\n---/)
+    const data = fm ? parseYaml(fm[1]) ?? {} : {}
+    return { name, title: data.title ?? name, t: data.tutorial }
+  })
+  .filter((l) => l.t && !l.t.draft)
+  .sort((a, b) => (a.t.order ?? 999) - (b.t.order ?? 999) || a.name.localeCompare(b.name))
+
 // Resource pages with at least one reviewed entry (same rule as gen_resources.mjs).
 const REGISTRY = loadRegistry()
 const RESOURCE_PAGES = publishedPages(REGISTRY)
@@ -243,7 +257,7 @@ export default defineConfig({
           text: '教程',
           link: '/tutorials/',
           collapsed: false,
-          items: []
+          items: LECTURES.map((l) => ({ text: l.title, link: `/tutorials/${l.name}/` }))
         },
         quickNav
       ],
