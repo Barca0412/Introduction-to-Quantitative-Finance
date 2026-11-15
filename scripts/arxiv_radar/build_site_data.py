@@ -48,6 +48,7 @@ from .config import (
 )
 from .compute_stats import build_stats
 from . import leaders, trends
+from .enrich import ENRICH_VERSION, taxonomy
 from .site_filter import site_visible
 from .utils import is_arxiv_id
 from .data_store import load_local_embeddings
@@ -69,6 +70,28 @@ SCHEMA = {
     "ac": "index of the abstracts-N.json chunk holding the full abstract",
     "u": "link for papers not on arXiv (else https://arxiv.org/abs/<id>)",
     "fo": "focus: s=score, f=is_focus(0/1), p=primary topic, t=topics, r=reasons",
+    # S3 v2 enrichment and P2 fields; ids are explained in taxonomy.json.
+    "r": "relevance to AI x finance, 2 or 3 on the site (3 = core)",
+    "pt": "paper type id",
+    "tt": "task type ids",
+    "fd": "finance domain ids",
+    "m": "method ids",
+    "dm": "data market ids (omitted when not stated)",
+    "tl": "one-sentence Chinese summary (tldr_zh)",
+    "kn": "standard keywords: [id, Chinese name or English, kind f|t]",
+    "v": "venue: n=name, k=kind, s=status, y=year (only when recognised)",
+    "vm": "venue as the authors wrote it, when not recognised",
+    "ds": "discipline: cs | finance-econ | interdisciplinary | other (omitted when unknown)",
+    "cd": "1 when the code is said to be released",
+    "dc": "index of the details-N.json chunk for this paper",
+}
+
+# details-N.json: {paper id: {...}}, loaded when a paper is opened.
+DETAIL_SCHEMA = {
+    "pz": "Chinese key points: problem, method, result, limitation",
+    "rr": "one-line Chinese reason for the relevance score",
+    "ins": "institutions: n=name, c=country code, t=type (education/company/...)",
+    "aa": "per author (same order as 'a'), indices into ins",
 }
 
 
@@ -122,7 +145,64 @@ def slim_paper(paper: Dict[str, Any]) -> Tuple[Dict[str, Any], Optional[str]]:
         record["z"] = paper["summary_zh"]
     if paper.get("affiliations"):
         record["f"] = paper["affiliations"]
+    record.update(_v2_fields(paper))
     return record, (paper.get("abstract", "").strip() if truncated else None)
+
+
+def _v2_fields(paper: Dict[str, Any]) -> Dict[str, Any]:
+    """List-level fields from the S3 v2 enrichment and P2; empty ones are left out."""
+    out: Dict[str, Any] = {}
+    relevance = paper.get("relevance")
+    if isinstance(relevance, int) and not isinstance(relevance, bool):
+        out["r"] = relevance
+    if paper.get("paper_type"):
+        out["pt"] = paper["paper_type"]
+    for key, field in (("tt", "task_types"), ("fd", "finance_domains"), ("m", "methods")):
+        if paper.get(field):
+            out[key] = list(paper[field])
+    markets = [m for m in paper.get("data_market") or [] if m != "none"]
+    if markets:
+        out["dm"] = markets
+    if paper.get("tldr_zh"):
+        out["tl"] = paper["tldr_zh"]
+    keywords = [
+        [k.get("id", ""), k.get("zh") or k.get("en") or k.get("raw", ""), "f" if k.get("kind") == "finance" else "t"]
+        for k in paper.get("keywords_norm") or []
+        if isinstance(k, dict) and (k.get("zh") or k.get("en") or k.get("raw"))
+    ]
+    if keywords:
+        out["kn"] = keywords
+    venue = paper.get("venue")
+    if isinstance(venue, dict) and venue.get("name"):
+        out["v"] = {key: venue[field] for key, field in (("n", "name"), ("k", "kind"), ("s", "status"), ("y", "year")) if venue.get(field)}
+    elif paper.get("venue_mention"):
+        out["vm"] = str(paper["venue_mention"])[:120]
+    if paper.get("discipline") and paper["discipline"] != "unknown":
+        out["ds"] = paper["discipline"]
+    if (paper.get("reproducibility") or {}).get("code") is True:
+        out["cd"] = 1
+    return out
+
+
+def paper_detail(paper: Dict[str, Any]) -> Dict[str, Any]:
+    """What the detail drawer needs beyond the list record (see DETAIL_SCHEMA)."""
+    out: Dict[str, Any] = {}
+    points = paper.get("points_zh")
+    if isinstance(points, dict) and any(points.values()):
+        out["pz"] = {key: points.get(key, "") for key in ("problem", "method", "result", "limitation")}
+    if paper.get("relevance_reason_zh"):
+        out["rr"] = paper["relevance_reason_zh"]
+    institutions = [
+        {key: inst[field] for key, field in (("n", "name"), ("c", "country"), ("t", "type")) if inst.get(field)}
+        for inst in paper.get("institutions") or []
+        if isinstance(inst, dict) and inst.get("name")
+    ]
+    if institutions:
+        out["ins"] = institutions
+        links = paper.get("author_affiliations") or []
+        if any(links):
+            out["aa"] = [list(item or []) for item in links[:SITE_MAX_AUTHORS]]
+    return out
 
 
 def _chunk(items: Iterable[Any], max_bytes: int, overhead: int = 64) -> List[List[Any]]:
@@ -159,7 +239,7 @@ def _quantize(matrix):
 class SlimCache:
     """slim_paper() results and their serialized sizes, computed once per paper."""
 
-    # `,"ac":N` added to records whose full abstract lives in a chunk file.
+    # `,"ac":N` / `,"dc":N` added to records that point at a chunk file.
     AC_FIELD_BYTES = 8
 
     def __init__(self) -> None:
@@ -176,7 +256,7 @@ class SlimCache:
         paper_id = paper["id"]
         if paper_id not in self._items:
             record, full = slim_paper(paper)
-            size = len(_dumps(record)) + 1 + (self.AC_FIELD_BYTES if full else 0)
+            size = len(_dumps(record)) + 1 + (self.AC_FIELD_BYTES if full else 0) + self.AC_FIELD_BYTES
             self._items[paper_id] = (record, full, size)
         return self._items[paper_id]
 
@@ -210,10 +290,21 @@ def build_group(
             chunk_of[paper_id] = index
         abstract_files.append(_write(SITE_DATA_DIR / name / f"abstracts-{index}.json", _dumps(dict(chunk)), max_bytes))
 
+    # Detail chunks (key points, institutions per author), loaded when a paper is opened.
+    details = [(p["id"], detail) for p in papers for detail in [paper_detail(p)] if detail]
+    detail_of: Dict[str, int] = {}
+    detail_files = []
+    for index, chunk in enumerate(_chunk(details, max_bytes)):
+        for paper_id, _ in chunk:
+            detail_of[paper_id] = index
+        detail_files.append(_write(SITE_DATA_DIR / name / f"details-{index}.json", _dumps(dict(chunk)), max_bytes))
+
     records = []
     for record, _ in slim_and_full:
         if record["id"] in chunk_of:
             record["ac"] = chunk_of[record["id"]]
+        if record["id"] in detail_of:
+            record["dc"] = detail_of[record["id"]]
         records.append(record)
     paper_files = [
         _write(SITE_DATA_DIR / name / f"papers-{index}.json", _dumps({"papers": chunk}), max_bytes)
@@ -241,6 +332,7 @@ def build_group(
         "count": len(papers),
         "papers": paper_files,
         "abstracts": abstract_files,
+        "details": detail_files,
         "vectors": vector_files,
         "first_load_bytes": sum(f["bytes"] for f in paper_files),
     }
@@ -248,6 +340,19 @@ def build_group(
 
 def _round_vector(values: List[float]) -> List[float]:
     return [round(float(v), 5) for v in values]
+
+
+def site_taxonomy() -> Dict[str, Any]:
+    """Chinese names for every classification id, from vocab/taxonomy.yaml: the site
+    reads this one file instead of keeping its own copy of the labels."""
+    tax = taxonomy()
+    out: Dict[str, Any] = {
+        key: [{"id": item["id"], "zh": item["zh"]} for item in tax[key]]
+        for key in ("paper_types", "task_types", "finance_domains", "methods", "data_markets")
+    }
+    out["relevance"] = {str(score): value["zh"] for score, value in tax["relevance"].items()}
+    out["version"] = ENRICH_VERSION
+    return out
 
 
 def build(today: Optional[date] = None) -> Dict[str, Any]:
@@ -321,6 +426,7 @@ def build(today: Optional[date] = None) -> Dict[str, Any]:
     agg_info = trends.build(papers, SITE_DATA_DIR / "agg")
     # Leaderboards and institution / author pages (leaders.py).
     agg_info["leaders"] = leaders.build(papers, SITE_DATA_DIR / "agg")
+    taxonomy_info = _write(SITE_DATA_DIR / "taxonomy.json", _dumps(site_taxonomy()), SITE_MAX_FILE_BYTES)
 
     manifest = {
         "version": 2,
@@ -343,6 +449,8 @@ def build(today: Optional[date] = None) -> Dict[str, Any]:
         "archive": archive,
         "stats": stats_info,
         "agg": agg_info,
+        "taxonomy": taxonomy_info,
+        "detail_schema": DETAIL_SCHEMA,
         "schema": SCHEMA,
         "limits": {"max_file_bytes": SITE_MAX_FILE_BYTES, "first_load_budget": SITE_FIRST_LOAD_BUDGET},
         "attribution": "Thank you to arXiv for use of its open access interoperability.",

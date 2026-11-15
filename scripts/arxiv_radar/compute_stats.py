@@ -1,10 +1,11 @@
 """Statistics computation for tags, keywords, and site summaries."""
 
 from collections import Counter, defaultdict
-from datetime import datetime
+from datetime import date, datetime, timedelta
 from typing import Dict, Any, List
 
 from .config import MIN_KEYWORD_COUNT, PREDEFINED_TAGS, PRIMARY_FOCUS_TAGS, ARXIV_CATEGORIES
+from .enrich import ids as taxonomy_ids
 from .storage import save_stats
 
 
@@ -141,6 +142,85 @@ def compute_and_save_stats(papers: List[Dict[str, Any]]) -> Dict[str, Any]:
     return stats
 
 
+FACET_DIMENSIONS = (
+    # stats key, paper field, taxonomy key
+    ("finance_domains", "finance_domains", "finance_domains"),
+    ("task_types", "task_types", "task_types"),
+    ("methods", "methods", "methods"),
+    ("paper_types", "paper_type", "paper_types"),
+    ("data_markets", "data_market", "data_markets"),
+)
+
+
+def _week_start(day: str) -> str:
+    """Monday of the ISO week of a YYYY-MM-DD date."""
+    parsed = date.fromisoformat(day)
+    return (parsed - timedelta(days=parsed.weekday())).isoformat()
+
+
+def compute_facet_stats(papers: List[Dict[str, Any]]) -> Dict[str, Any]:
+    """Counts by the S3 v2 classification, for the trends page and the overview grid.
+
+    Only papers enriched with v2 (they have a paper_type) are counted. A paper with two
+    finance domains counts once in each; totals per dimension can therefore exceed the
+    number of papers. Series are aligned to ``dates`` (days with papers) and ``weeks``
+    (Mondays). ``grid`` is finance domain x task type, in taxonomy order.
+    """
+    scored = [p for p in papers if p.get("paper_type") and p.get("published_date")]
+    dates = sorted({p["published_date"] for p in scored})
+    weeks = sorted({_week_start(d) for d in dates})
+    day_index = {d: i for i, d in enumerate(dates)}
+    week_index = {w: i for i, w in enumerate(weeks)}
+
+    def series() -> Dict[str, List[int]]:
+        return {"daily": [0] * len(dates), "weekly": [0] * len(weeks)}
+
+    def bump(target: Dict[str, List[int]], day: str) -> None:
+        target["daily"][day_index[day]] += 1
+        target["weekly"][week_index[_week_start(day)]] += 1
+
+    total, core = series(), series()
+    dims: Dict[str, Any] = {}
+    for key, field, tax_key in FACET_DIMENSIONS:
+        order = taxonomy_ids(tax_key)
+        counted: Dict[str, Dict[str, List[int]]] = {}
+        for paper in scored:
+            values = paper.get(field) or []
+            values = [values] if isinstance(values, str) else values
+            for value in dict.fromkeys(values):
+                if value not in order:
+                    continue
+                bump(counted.setdefault(value, series()), paper["published_date"])
+        dims[key] = {
+            "total": {v: sum(counted[v]["daily"]) for v in order if v in counted},
+            "daily": {v: counted[v]["daily"] for v in order if v in counted},
+            "weekly": {v: counted[v]["weekly"] for v in order if v in counted},
+        }
+
+    for paper in scored:
+        bump(total, paper["published_date"])
+        if paper.get("relevance") == 3:
+            bump(core, paper["published_date"])
+
+    rows, cols = taxonomy_ids("finance_domains"), taxonomy_ids("task_types")
+    cells = [[0] * len(cols) for _ in rows]
+    for paper in scored:
+        for domain in dict.fromkeys(paper.get("finance_domains") or []):
+            for task in dict.fromkeys(paper.get("task_types") or []):
+                if domain in rows and task in cols:
+                    cells[rows.index(domain)][cols.index(task)] += 1
+
+    return {
+        "papers": len(scored),
+        "dates": dates,
+        "weeks": weeks,
+        "total": total,
+        "core": core,
+        "dims": dims,
+        "grid": {"rows": rows, "cols": cols, "cells": cells},
+    }
+
+
 def build_stats(papers: List[Dict[str, Any]]) -> Dict[str, Any]:
     """All statistics for a set of papers (the full history, or the site's subset)."""
     tag_stats = compute_tag_stats(papers)
@@ -156,6 +236,7 @@ def build_stats(papers: List[Dict[str, Any]]) -> Dict[str, Any]:
             "_all": keyword_stats
         },
         "summary": summary,
+        "facets": compute_facet_stats(papers),
     }
     return stats
 

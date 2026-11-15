@@ -81,6 +81,23 @@ export function hydratePaper(record, groupKey) {
     abstract_truncated: record.ac !== undefined,
     abstract_chunk: record.ac,
     group: groupKey,
+    // S3 v2 enrichment and P2 fields (ids are named in taxonomy.json, see loadTaxonomy).
+    relevance: record.r ?? null,
+    is_core: record.r === 3,
+    paper_type: record.pt || '',
+    task_types: record.tt || [],
+    finance_domains: record.fd || [],
+    methods: record.m || [],
+    data_market: record.dm || [],
+    tldr_zh: record.tl || '',
+    keywords_std: (record.kn || []).map(([id, label, kind]) => ({ id, label, kind: kind === 'f' ? 'finance' : 'tech' })),
+    venue: record.v ? { name: record.v.n, kind: record.v.k || '', status: record.v.s || '', year: record.v.y || null } : null,
+    venue_mention: record.vm || '',
+    discipline: record.ds || '',
+    has_code: record.cd === 1,
+    detail_chunk: record.dc,
+    detail: null,
+    is_arxiv: !record.u,
     // u: link for papers that are not on arXiv (added from the top-venue library).
     abs_link: record.u || `https://arxiv.org/abs/${record.id}`,
     pdf_link: record.u ? '' : `https://arxiv.org/pdf/${record.id}`,
@@ -108,6 +125,39 @@ export async function loadGroupPapers(groupKey) {
     }))
   }
   return groupPapersCache.get(groupKey)
+}
+
+/** Chinese names of the classification ids: { paper_types: Map(id -> zh), ..., relevance }. */
+export async function loadTaxonomy() {
+  const manifest = await loadManifest()
+  if (!manifest.taxonomy) return null
+  const raw = await fetchJson(manifest.taxonomy.file, manifest.generated_at)
+  const out = { relevance: raw.relevance || {}, order: {} }
+  for (const key of ['paper_types', 'task_types', 'finance_domains', 'methods', 'data_markets']) {
+    out[key] = new Map((raw[key] || []).map((item) => [item.id, item.zh]))
+    out.order[key] = (raw[key] || []).map((item) => item.id)
+  }
+  return out
+}
+
+/**
+ * Key points, relevance reason and institutions for one paper (mutates and returns it).
+ * paper.detail = { points: {problem, method, result, limitation}, reason,
+ *                  institutions: [{name, country, type}], author_institutions: [[index]] }
+ */
+export async function loadPaperDetail(paper) {
+  if (paper.detail || paper.detail_chunk === undefined) return paper
+  const manifest = await loadManifest()
+  const part = (groupInfo(manifest, paper.group).details || [])[paper.detail_chunk]
+  if (!part) return paper
+  const raw = (await fetchJson(part.file, manifest.generated_at))[paper.id] || {}
+  paper.detail = {
+    points: raw.pz || null,
+    reason: raw.rr || '',
+    institutions: (raw.ins || []).map((item) => ({ name: item.n, country: item.c || '', type: item.t || '' })),
+    author_institutions: raw.aa || [],
+  }
+  return paper
 }
 
 export async function loadAbstractChunk(groupKey, chunkIndex) {
