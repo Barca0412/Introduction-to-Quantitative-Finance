@@ -212,6 +212,19 @@ def _abstract(inverted: Optional[Dict[str, List[int]]]) -> str:
     return " ".join(word for _, word in words)
 
 
+def _track_by_pages(biblio: Optional[Dict[str, Any]]) -> str:
+    """Proceedings indexed in OpenAlex mix papers with 1-2 page items (keynotes, tutorial
+    and workshop descriptions, student abstracts). >= 5 pages: full paper; 3-4: short
+    paper; <= 2: abstract (not an accepted paper, not used for tagging); no pages: unknown."""
+    try:
+        pages = int((biblio or {}).get("last_page")) - int((biblio or {}).get("first_page")) + 1
+    except (TypeError, ValueError):
+        return "unknown"
+    if pages <= 0:
+        return "unknown"
+    return "full" if pages >= 5 else "short" if pages >= 3 else "abstract"
+
+
 def fetch_openalex_source(venue_id: str, year: int, cfg: Dict[str, Any]) -> List[Dict[str, Any]]:
     # Numbered pages: since 2026 OpenAlex wants an API key for cursor paging, while
     # page=N works without one up to 10,000 results (the largest venue-year here,
@@ -222,7 +235,7 @@ def fetch_openalex_source(venue_id: str, year: int, cfg: Dict[str, Any]) -> List
         query = urlencode({
             "filter": f"primary_location.source.id:{cfg['source']},publication_year:{year}",
             "per-page": 200, "page": page,
-            "select": "id,doi,title,authorships,locations,ids,abstract_inverted_index,type",
+            "select": "id,doi,title,authorships,locations,ids,abstract_inverted_index,type,biblio",
         })
         data = _json(openalex_url(f"https://api.openalex.org/works?{query}"))
         if not data or not data.get("results"):
@@ -236,6 +249,7 @@ def fetch_openalex_source(venue_id: str, year: int, cfg: Dict[str, Any]) -> List
                 venue_id, year, "openalex_source", work.get("title") or "",
                 [((a.get("author") or {}).get("display_name") or "") for a in work.get("authorships") or []],
                 _abstract(work.get("abstract_inverted_index")),
+                track=_track_by_pages(work.get("biblio")),
                 decision="published", doi=(work.get("doi") or "").replace("https://doi.org/", ""),
                 url=work.get("id", ""), arxiv_id=arxiv_id_in(locations, work.get("doi") or ""),
             ))
@@ -294,10 +308,34 @@ def path_for(venue_id: str, year: int) -> Path:
     return LIBRARY_DIR / f"{venue_id}-{year}.parquet"
 
 
+def dedupe(records: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """One row per paper: the official conference JSON lists an oral paper twice (oral and
+    poster session), OpenAlex sometimes has two works for one paper. Same title_key = same
+    paper; the first row is kept and filled with the others' links and flags."""
+    kept: Dict[str, Dict[str, Any]] = {}
+    out: List[Dict[str, Any]] = []
+    for rec in records:
+        key = rec.get("title_key") or ""
+        first = kept.get(key) if key else None
+        if first is None:
+            rec = dict(rec)
+            if key:
+                kept[key] = rec
+            out.append(rec)
+            continue
+        for field in ("doi", "url", "arxiv_id"):
+            if not first.get(field) and rec.get(field):
+                first[field] = rec[field]
+        first["fin_flag"] = bool(first.get("fin_flag") or rec.get("fin_flag"))
+        first["ai_flag"] = bool(first.get("ai_flag") or rec.get("ai_flag"))
+    return out
+
+
 def save(venue_id: str, year: int, records: List[Dict[str, Any]]) -> Path:
     import pyarrow as pa
     import pyarrow.parquet as pq
 
+    records = dedupe(records)
     LIBRARY_DIR.mkdir(parents=True, exist_ok=True)
     path = path_for(venue_id, year)
     pq.write_table(pa.Table.from_pylist(records, schema=_schema()), path, compression="zstd")
@@ -315,7 +353,7 @@ def load_all() -> List[Dict[str, Any]]:
 
 def fetch(venue_id: str, year: int) -> int:
     cfg = SOURCES[venue_id]
-    records = ADAPTERS[cfg["adapter"]](venue_id, year, cfg)
+    records = dedupe(ADAPTERS[cfg["adapter"]](venue_id, year, cfg))
     if records:
         save(venue_id, year, records)
     logger.info("%s %s: %s papers (%s finance-flagged)", venue_id, year, len(records), sum(r["fin_flag"] for r in records))
@@ -348,6 +386,8 @@ class LibraryIndex:
         self.by_title: Dict[str, Dict[str, Any]] = {}
         self.buckets: Dict[str, List[Dict[str, Any]]] = {}
         for row in rows:
+            if row.get("track") == "abstract":  # keynotes, tutorials, 2-page abstracts
+                continue
             row["_surnames"] = _surnames(row.get("authors") or [])
             if row.get("arxiv_id"):
                 self.by_arxiv.setdefault(row["arxiv_id"], row)
@@ -441,6 +481,62 @@ def years(since: int = FIRST_YEAR) -> List[int]:
     return list(range(since, datetime.now(timezone.utc).year + 1))
 
 
+def _arxiv_title_query(title: str) -> str:
+    words = re.sub(r"[^A-Za-z0-9 ]+", " ", unicodedata.normalize("NFKD", title)).split()
+    return 'ti:"' + " ".join(words[:14]) + '"' if len(words) >= 3 else ""
+
+
+def arxiv_flags(venue_id: str, year: int, batch: int = 20) -> Dict[str, int]:
+    """Rule flags from arXiv abstracts for library rows that came without an abstract.
+
+    The 2026 NeurIPS / ICML / ICLR files have no abstracts, so their finance flag only
+    saw the title (NeurIPS 2026: 11 of 9,114 flagged; 2025 with abstracts: 61). This asks
+    the arXiv API by title, 20 titles per request, 3 s apart (arXiv's rule), keeps hits
+    whose title matches (ratio >= 0.9), records the arXiv id and ORs the flags."""
+    import arxiv
+    from difflib import SequenceMatcher
+
+    path = path_for(venue_id, year)
+    import pyarrow.parquet as pq
+
+    rows = pq.read_table(path).to_pylist()
+    todo = [r for r in rows if not r.get("arxiv_id") and _arxiv_title_query(r["title"])]
+    client = arxiv.Client(page_size=100, delay_seconds=3.0, num_retries=3)
+    found = flagged = 0
+    for start in range(0, len(todo), batch):
+        group = todo[start:start + batch]
+        query = " OR ".join(_arxiv_title_query(r["title"]) for r in group)
+        try:
+            results = list(client.results(arxiv.Search(query=query, max_results=batch * 2)))
+        except Exception as exc:  # one failed batch only leaves those rows as they were
+            logger.warning("arXiv batch %s failed: %s", start // batch, exc)
+            continue
+        for row in group:
+            best, ratio = None, 0.9
+            for res in results:
+                r = SequenceMatcher(None, row["title_key"], title_key(res.title)).ratio()
+                if r >= ratio:
+                    best, ratio = res, r
+            if best is None:
+                continue
+            found += 1
+            row["arxiv_id"] = best.get_short_id().split("v")[0]
+            text = f"{row['title']} {best.summary}"
+            fin = bool(FINANCE_TERM_PATTERN.search(text))
+            flagged += fin and not row["fin_flag"]
+            row["fin_flag"] = row["fin_flag"] or fin
+            row["ai_flag"] = row["ai_flag"] or bool(AI_TERM_PATTERN.search(text))
+        if (start // batch) % 25 == 24:
+            save(venue_id, year, rows)
+            logger.info("%s %s: %s/%s asked, %s on arXiv, %s newly finance-flagged",
+                        venue_id, year, start + len(group), len(todo), found, flagged)
+    save(venue_id, year, rows)
+    summary = {"rows": len(rows), "asked": len(todo), "on_arxiv": found, "newly_flagged": flagged,
+               "finance_flagged": sum(r["fin_flag"] for r in rows)}
+    logger.info("%s %s arXiv flags: %s", venue_id, year, summary)
+    return summary
+
+
 def main(argv: Optional[Iterable[str]] = None) -> None:
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(message)s")
     parser = argparse.ArgumentParser(description="Top-venue accepted-paper library (S11)")
@@ -451,6 +547,9 @@ def main(argv: Optional[Iterable[str]] = None) -> None:
     f.add_argument("--since", type=int, default=FIRST_YEAR)
     f.add_argument("--missing-only", action="store_true", help="skip venue-years already on disk")
     sub.add_parser("status")
+    a = sub.add_parser("arxiv-flags", help="finance/AI flags from arXiv abstracts for rows without one")
+    a.add_argument("--venue", action="append", required=True, choices=sorted(SOURCES))
+    a.add_argument("--year", type=int, required=True)
     args = parser.parse_args(list(argv) if argv is not None else None)
 
     if args.cmd == "status":
@@ -462,6 +561,11 @@ def main(argv: Optional[Iterable[str]] = None) -> None:
             fin = sum(1 for r in rows if r["venue_id"] == venue and r["year"] == year and r["fin_flag"])
             print(f"{venue:8} {year}  {count:6}  finance-flagged {fin}")
         print(f"total {len(rows)} papers, {sum(r['fin_flag'] for r in rows)} finance-flagged")
+        return
+
+    if args.cmd == "arxiv-flags":
+        for venue in args.venue:
+            print(json.dumps({venue: arxiv_flags(venue, args.year)}))
         return
 
     failed = []

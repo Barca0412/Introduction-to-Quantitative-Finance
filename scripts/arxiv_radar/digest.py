@@ -28,6 +28,7 @@ from typing import Any, Dict, List, Optional
 
 from .config import BASE_DIR, DATA_DIR, LLM_API_KEY
 from .enrich import taxonomy
+from . import leaders
 from .site_filter import site_visible
 from .storage import load_papers
 from .trends import TRENDS_SINCE, representative_score, rising, week_of
@@ -61,7 +62,9 @@ def collect_facts(papers: List[Dict[str, Any]], week: str) -> Dict[str, Any]:
     shown = [p for p in papers if site_visible(p)]
     this = [p for p in shown if week_of(p["published_date"]) == week]
     prev_week = (date.fromisoformat(week) - timedelta(days=7)).isoformat()
-    before = [p for p in shown if week_of(p["published_date"]) == prev_week]
+    # The week before counts only if it is a whole week of collected data.
+    before = ([p for p in shown if week_of(p["published_date"]) == prev_week]
+              if prev_week >= first_complete_week() else None)
     newest = max((p["published_date"][:10] for p in this), default=week)
 
     # History for the risers: only whole weeks since the data is complete (trends.py),
@@ -85,15 +88,48 @@ def collect_facts(papers: List[Dict[str, Any]], week: str) -> Dict[str, Any]:
             "institutions": [i.get("zh") or i.get("name") for i in (p.get("institutions") or [])][:3],
         } for p in group]
 
+    who = who_facts(this)
     return {
         "week": week, "week_end": (date.fromisoformat(week) + timedelta(days=6)).isoformat(),
-        "papers": len(this), "papers_previous_week": len(before),
+        "papers": len(this), "papers_previous_week": len(before) if before is not None else None,
         "core_papers": sum(1 for p in this if p.get("relevance") == 3),
         "domains": {_zh(k, "finance_domains"): n for k, n in Counter(d for p in this for d in p.get("finance_domains") or []).most_common()},
         "methods": {_zh(k, "methods"): n for k, n in Counter(m for p in this for m in p.get("methods") or []).most_common()},
         "rising_domains": [{**r, "name": _zh(r["id"], "finance_domains")} for r in rising(weekly_domain, weeks, {})],
         "history_weeks": len(weeks) - 1,
+        "who": who,
         "candidates": candidates,
+    }
+
+
+def who_facts(papers: List[Dict[str, Any]]) -> Dict[str, Any]:
+    """Institutions, companies, countries and active authors of the week (leaders.py rules)."""
+    if not papers:
+        return {}
+    people = leaders.People()
+    rows = leaders._per_paper(papers, people)
+    names: Dict[str, Counter] = {}
+    person_inst: Dict[str, Counter] = {}
+    info: Dict[str, Dict[str, Any]] = {}
+    for row in rows:
+        for key, inst in row["inst_records"].items():
+            info.setdefault(key, {"label": leaders._institution_label(inst), "name": inst.get("name", ""),
+                                  "type": inst.get("type", ""), "country": inst.get("country", "")})
+        for person, name, own in row["authors"]:
+            names.setdefault(person, Counter())[name] += 1
+            person_inst.setdefault(person, Counter()).update(info[k]["label"] for k in own)
+    lists = leaders._leader_lists(rows, names, person_inst, info)
+    return {
+        "papers_with_institutions": sum(1 for r in rows if r["inst_records"]),
+        "institutions": [{"name": i["name"], "type": i["type_zh"], "n": i["n"]} for i in lists["institutions"] if i["n"] >= 2][:8],
+        "companies": [{"name": i["name"], "n": i["n"]} for i in lists["companies"]][:6],
+        "countries": [{"name": c["name"], "n": c["n"]} for c in lists["countries"]][:6],
+        "authors_with_2_or_more": [{"name": a["name"], "institution": a["institution"], "n": a["n"]}
+                                   for a in lists["authors"] if a["n"] >= 2][:6],
+        "collaboration": {"只有高校": lists["collaboration"]["education"], "只有企业": lists["collaboration"]["company"],
+                          "校企合作": lists["collaboration"]["mixed"], "其他类型机构": lists["collaboration"]["other"],
+                          "未查到机构": lists["collaboration"]["unknown"]},
+        "cross_country_papers": lists["cross_country"]["papers"],
     }
 
 
@@ -102,12 +138,16 @@ PROMPT = """你在为中文的金融从业者和学生写一份 AI × 金融论�
 只用这些材料写，不要补充材料里没有的事实、数字、论文或机构。写成 Markdown：
 
 ## 本周概况
-用 2–3 句话：本周网站收录多少篇、上周多少篇、相关度 3 的核心论文多少篇、哪几个金融领域最多。
+用 2–3 句话：本周网站收录多少篇、上周多少篇（papers_previous_week 为 null 时说明"上周数据不完整，不作比较"）、相关度 3 的核心论文多少篇、哪几个金融领域最多。
 如果 history_weeks 少于 4，说明"数据刚开始积累，趋势仅供参考"，不要写"升温"。
 
 ## 值得关注的方向
 2–3 个方向（来自 domains 或 rising_domains），每个方向一段，引用 1–2 篇该方向候选论文，
 用 [论文标题](链接) 的格式，链接只能用材料里的 link。
+
+## 谁在做
+2–3 句，只用材料里 who 的数字：本周最活跃的机构（篇数 ≥2 的）、有哪些企业、主要来自哪些国家和地区、
+校企合作有几篇。机构用材料里的中文名。不要评价机构水平。
 
 ## 本周必读
 3–5 篇，从候选论文里选。每篇一个小标题 `### [论文标题](链接)`，下面 2–3 句：做了什么、结论是什么、为什么值得读。
@@ -123,8 +163,15 @@ def check_draft(draft: str, facts: Dict[str, Any]) -> List[str]:
     """Problems that make the draft unusable: links not in the facts, numbers not in them."""
     links = {c["link"] for group in facts["candidates"].values() for c in group}
     problems = [f"unknown link {url}" for url in re.findall(r"\]\((https?://[^)\s]+)\)", draft) if url not in links]
-    allowed = {str(v) for v in (facts["papers"], facts["papers_previous_week"], facts["core_papers"])}
+    allowed = {str(v) for v in (facts["papers"], facts["papers_previous_week"], facts["core_papers"]) if v is not None}
     allowed |= {str(n) for n in list(facts["domains"].values()) + list(facts["methods"].values())}
+    who = facts.get("who") or {}
+    allowed |= {str(x["n"]) for key in ("institutions", "companies", "countries", "authors_with_2_or_more")
+                for x in who.get(key) or []}
+    allowed |= {str(v) for v in (who.get("collaboration") or {}).values()}
+    for key in ("papers_with_institutions", "cross_country_papers"):
+        if who.get(key) is not None:
+            allowed.add(str(who[key]))
     for text in re.findall(r"(\d+)\s*篇", draft):
         if text not in allowed:
             problems.append(f"number {text} 篇 not in the facts")
@@ -159,8 +206,17 @@ async def draft_with_llm(facts: Dict[str, Any]) -> Optional[str]:
 def facts_markdown(facts: Dict[str, Any]) -> str:
     """A plain listing when there is no LLM draft (or for --facts-only)."""
     lines = ["## 本周概况", "",
-             f"本周收录 {facts['papers']} 篇（上周 {facts['papers_previous_week']} 篇），其中核心论文 {facts['core_papers']} 篇。", "",
-             "## 候选论文", ""]
+             f"本周收录 {facts['papers']} 篇（" + (f"上周 {facts['papers_previous_week']} 篇" if facts["papers_previous_week"] is not None
+                                              else "上周数据不完整，不作比较") + f"），其中核心论文 {facts['core_papers']} 篇。", "",
+             ""]
+    who = facts.get("who") or {}
+    if who:
+        inst = "、".join(f"{i['name']}（{i['n']} 篇）" for i in who.get("institutions") or []) or "没有机构超过 1 篇"
+        comp = "、".join(f"{i['name']}（{i['n']} 篇）" for i in who.get("companies") or []) or "无"
+        ctry = "、".join(f"{c['name']} {c['n']} 篇" for c in who.get("countries") or [])
+        lines += ["## 谁在做", "", f"- 机构：{inst}", f"- 企业：{comp}", f"- 国家和地区：{ctry}",
+                  f"- 合作方式：" + "，".join(f"{k} {v} 篇" for k, v in who["collaboration"].items()), ""]
+    lines += ["## 候选论文", ""]
     for domain, group in facts["candidates"].items():
         lines += [f"### {domain}", ""]
         lines += [f"- [{c['title']}]({c['link']})：{c['tldr_zh']}" for c in group]

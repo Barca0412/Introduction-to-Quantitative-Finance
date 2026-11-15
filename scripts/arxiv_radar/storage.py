@@ -104,6 +104,7 @@ V2_FIELDS = (
     "venue_mention", "withdrawn", "schema_version", "stage_versions", "attempts",
     "last_error", "enrich_warnings", "quality_flags", "keywords_norm",
     "venue", "team_background", "discipline", "discipline_basis", "venue_list",
+    "nber_programs",
 )
 
 

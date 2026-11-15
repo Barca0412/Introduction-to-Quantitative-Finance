@@ -120,6 +120,7 @@ def _papers_schema():
             ("methods", strings),
             ("keywords_raw", pa.list_(pa.struct([("text", pa.string()), ("kind", pa.string())]))),
             ("data_market", strings),
+            ("nber_programs", strings),
             ("reproducibility", pa.struct([("code", pa.bool_()), ("data_public", pa.bool_())])),
             ("tldr_zh", pa.string()),
             ("points_zh", pa.struct([(k, pa.string()) for k in ("problem", "method", "result", "limitation")])),
@@ -155,7 +156,8 @@ def _papers_schema():
     )
 
 
-_V2_LIST_FIELDS = ("task_types", "finance_domains", "methods", "data_market", "enrich_warnings", "quality_flags")
+_V2_LIST_FIELDS = ("task_types", "finance_domains", "methods", "data_market", "enrich_warnings", "quality_flags",
+                   "nber_programs")
 
 
 def _clean_paper_for_parquet(paper: Dict[str, Any]) -> Dict[str, Any]:

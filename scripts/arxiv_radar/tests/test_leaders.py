@@ -74,6 +74,36 @@ class LeadersTest(unittest.TestCase):
         self.assertEqual(data["periods"]["30d"]["collaboration"]["mixed"], 1)
         self.assertEqual(data["periods"]["all"]["institutions"][0]["core"], 1)
         self.assertEqual({c["code"] for c in data["periods"]["all"]["countries"]}, {"CN", "SG"})
+        self.assertEqual(data["periods"]["all"]["totals"]["institutions"], 2)
+        self.assertEqual(data["periods"]["all"]["cross_country"]["papers"], 1)
+        self.assertEqual(data["periods"]["all"]["cross_country"]["pairs"][0]["pair"], "CN-SG")
+
+    def test_unknown_split_and_ids_next_to_names(self):
+        papers = [
+            paper("a", "2026-11-10", ["Wei Zhang", "Li Na"], [{"openalex": "A1"}, {"openalex": "A2"}], [NTU], [[0], [0]]),
+            paper("b", "2026-11-11", ["Wei Zhang", "Li Na"], [{"openalex": "A1"}, {"openalex": "A2"}], [NTU], [[0], [0]]),
+            paper("c", "2026-11-12", ["Q"], [{}], [], []),
+        ]
+        out, _, data = self.build(papers)
+        self.assertEqual(data["periods"]["all"]["collaboration"]["unknown"], 1)
+        self.assertEqual(data["periods"]["all"]["authors"][0]["institution_id"], "02e7b5302")
+        page = json.loads((out / "author" / "a1.json").read_text())
+        self.assertEqual(page["coauthors"][0], {"id": "A2", "name": "Li Na", "n": 2, "page": "a2"})
+        self.assertEqual(page["institutions"][0]["id"], "02e7b5302")
+
+    def test_teams_and_grid(self):
+        trio = ["X A", "Y B", "Z C"]
+        ids = [{"openalex": "A1"}, {"openalex": "A2"}, {"openalex": "A3"}]
+        papers = [paper(str(i), f"2026-11-1{i}", trio, ids, [NTU], [[0], [0], [0]]) for i in range(2)]
+        papers.append(paper("9", "2026-11-12", ["X A", "W D"], [{"openalex": "A1"}, {"openalex": "A4"}], [ANT], [[0], [0]]))
+        out, info, data = self.build(papers)
+        teams = json.loads((out / "teams.json").read_text())["teams"]
+        self.assertEqual(info["teams"], 1)
+        self.assertEqual(sorted(m["id"] for m in teams[0]["members"]), ["A1", "A2", "A3"])
+        self.assertEqual(teams[0]["papers"], 2)  # paper 9 has only one member
+        grid = data["periods"]["all"]["institution_domain"]
+        self.assertEqual(grid["domains"], ["asset_pricing"])
+        self.assertEqual(grid["rows"][0], {"id": "02e7b5302", "name": "南洋理工大学", "counts": [2]})
 
 
 if __name__ == "__main__":

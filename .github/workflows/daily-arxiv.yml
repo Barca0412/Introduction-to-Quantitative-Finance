@@ -118,6 +118,16 @@ jobs:
           LLM_MODEL: ${{ vars.LLM_MODEL }}
         run: python -m scripts.arxiv_radar.discover --since-year "$(date -u +%Y)"
 
+      # NBER working papers of the last ~5 weeks (the seen-list is not kept between runs,
+      # so a short window keeps the daily reading to ~100 pages, 1 s apart).
+      - name: Add new NBER working papers
+        env:
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
+          LLM_BASE_URL: ${{ vars.LLM_BASE_URL }}
+          LLM_MODEL: ${{ vars.LLM_MODEL }}
+        run: python -m scripts.arxiv_radar.nber --since "$(date -u -d '35 days ago' +%Y-%m-%d)" || echo "::warning title=NBER::NBER step failed; see the log"
+
       - name: Update embeddings (incremental)
         env:
           # Only new or changed papers; old stale vectors are not refreshed (2026-11-15).
