@@ -4,9 +4,7 @@ Handles paper analysis via an OpenAI-compatible chat API (DeepSeek by default).
 """
 
 import asyncio
-import ast
 import functools
-import json
 import logging
 import socket
 from typing import Dict, Any, Optional, List
@@ -23,8 +21,8 @@ from .config import (
     MAX_RETRIES,
     REQUEST_TIMEOUT,
     PREDEFINED_TAGS,
-    PAPER_ANALYSIS_PROMPT,
 )
+from . import enrich
 from .utils import has_any_term
 
 # Configure logging
@@ -326,127 +324,47 @@ class LLMClient:
                 return data["choices"][0]["message"]["content"]
 
 
-def parse_llm_response(response_text: str) -> Dict[str, Any]:
-    """
-    Parse LLM JSON response and validate fields.
-
-    Args:
-        response_text: Raw LLM response
-
-    Returns:
-        Parsed dictionary with tags, keywords, and summary_zh
-
-    Raises:
-        ValueError: If response cannot be parsed or is invalid
-    """
-    # Try to extract JSON from response
-    response_text = response_text.strip()
-    response_text = response_text.removeprefix("```json").removeprefix("```")
-    response_text = response_text.removesuffix("```").strip()
-
-    # Find JSON in case there's extra text
-    start_idx = response_text.find("{")
-    end_idx = response_text.rfind("}")
-
-    if start_idx != -1 and end_idx != -1:
-        json_str = response_text[start_idx:end_idx + 1]
-    else:
-        json_str = response_text
-
-    try:
-        parsed = json.loads(json_str)
-    except json.JSONDecodeError as e:
-        repaired = (
-            json_str.replace("\n", " ")
-            .replace("\t", " ")
-            .replace(" null", " None")
-            .replace(": null", ": None")
-            .replace(" true", " True")
-            .replace(": true", ": True")
-            .replace(" false", " False")
-            .replace(": false", ": False")
-        )
-        try:
-            parsed = ast.literal_eval(repaired)
-        except Exception:
-            raise ValueError(f"Failed to parse JSON: {e}")
-
-    # Validate required fields
-    result = {
-        "tags": parsed.get("tags", []),
-        "keywords": parsed.get("keywords", []),
-        "summary_zh": parsed.get("summary_zh", ""),
-    }
-
-    # Validate tags
-    if not isinstance(result["tags"], list):
-        result["tags"] = []
-    # Filter to only valid tags
-    valid_tags = set(PREDEFINED_TAGS.keys())
-    result["tags"] = [t for t in result["tags"] if t in valid_tags]
-
-    # Validate keywords
-    if not isinstance(result["keywords"], list):
-        result["keywords"] = []
-    result["keywords"] = [str(k).strip() for k in result["keywords"] if str(k).strip()]
-    result["keywords"] = result["keywords"][:5]
-
-    # Validate summary
-    if not isinstance(result["summary_zh"], str):
-        result["summary_zh"] = ""
-
-    return result
+# How many times one paper is re-asked when its answer fails validation (S3, 4.3.7).
+VALIDATION_RETRIES = 2
 
 
 async def process_paper(
     paper: Dict[str, Any],
     client: LLMClient
 ) -> Dict[str, Any]:
+    """Enrich one paper with the v2 format (enrich.py): relevance, classification,
+    Chinese TL;DR and points, keywords and more.
+
+    An answer that fails validation is re-asked up to VALIDATION_RETRIES times with the
+    reason attached. If it still fails, the paper keeps what it already had (an older
+    enrichment, or rule tags), and the failure is counted so it is retried later.
     """
-    Process a single paper with LLM to extract tags, keywords, and Chinese summary.
-
-    Args:
-        paper: Paper dictionary with at least 'title' and 'abstract'
-        client: LLMClient instance
-
-    Returns:
-        Paper dictionary with added 'tags', 'keywords', and 'summary_zh'
-    """
-    title = paper.get("title", "")
-    abstract = paper.get("abstract", "")
-
-    if not title or not abstract:
+    if not paper.get("title") or not paper.get("abstract"):
         return paper
 
-    # Build prompt using the improved template from config
-    prompt = PAPER_ANALYSIS_PROMPT.format(
-        title=title,
-        abstract=abstract
-    )
+    error_hint: Optional[str] = None
+    for _ in range(VALIDATION_RETRIES + 1):
+        try:
+            response_text = await client.call_llm(enrich.build_messages(paper, error_hint))
+            result, warnings = enrich.validate(enrich.extract_json(response_text), paper)
+        except enrich.EnrichError as exc:
+            error_hint = str(exc)
+            continue
+        except Exception as exc:  # HTTP errors after call_llm's own retries
+            logger.error("LLM call failed for %s: %s: %r", paper.get("id", "unknown"), type(exc).__name__, exc)
+            error_hint = f"{type(exc).__name__}: {exc}"
+            break
+        result["tags"] = validate_tags_for_paper(paper, result["tags"])
+        if result["relevance"] >= 2 and "ai-finance" not in result["tags"]:
+            result["tags"] = ["ai-finance"] + result["tags"][:2]
+        enrich.apply_result(paper, result, warnings)
+        logger.info("Processed paper %s: relevance %s", paper["id"], result["relevance"])
+        return paper
 
-    messages = [
-        {"role": "system", "content": "You are an expert AI/Finance research analyst who carefully evaluates whether papers actually focus on financial applications of AI."},
-        {"role": "user", "content": prompt}
-    ]
-
-    try:
-        response_text = await client.call_llm(messages)
-        llm_data = parse_llm_response(response_text)
-        llm_data["tags"] = validate_tags_for_paper(paper, llm_data["tags"])
-
-        # Update paper with LLM extracted data
-        paper["tags"] = llm_data["tags"]
-        paper["keywords"] = llm_data["keywords"]
-        paper["summary_zh"] = llm_data["summary_zh"]
-
-        logger.info(f"Processed paper: {paper['id']}")
-    except Exception as e:
-        logger.error(f"Error processing paper {paper.get('id', 'unknown')}: {type(e).__name__}: {e!r}")
-        # Set default values on error
-        paper["tags"] = []
-        paper["keywords"] = []
-        paper["summary_zh"] = ""
-
+    logger.error("Enrichment failed for %s: %s", paper.get("id", "unknown"), error_hint)
+    enrich.record_failure(paper, error_hint or "unknown error")
+    if not paper.get("tags"):
+        paper["tags"] = fallback_tags_for_paper(paper)
     return paper
 
 

@@ -1,0 +1,45 @@
+name: Radar enrichment trial
+
+# Manual only. Runs the current S3 prompt (scripts/arxiv_radar/enrich.py) on the 46
+# hand-labelled trial papers and reports agreement per dimension in the job summary.
+# It stores nothing and publishes nothing: no Hugging Face, no Release, no site.
+# Cost: one LLM call per paper (46, plus retries for rejected answers).
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  trial:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+          cache-dependency-path: scripts/arxiv_radar/requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r scripts/arxiv_radar/requirements.txt
+
+      - name: Run the trial
+        env:
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_BASE_URL: ${{ vars.LLM_BASE_URL }}
+          LLM_MODEL: ${{ vars.LLM_MODEL }}
+        run: python -m scripts.arxiv_radar.enrich_trial --out data/enrich-trial
+
+      - name: Keep the answers
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: enrich-trial
+          path: data/enrich-trial/
+          retention-days: 30

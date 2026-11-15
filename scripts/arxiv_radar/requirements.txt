@@ -6,3 +6,4 @@ python-dotenv
 huggingface_hub
 numpy
 pyarrow
+pyyaml

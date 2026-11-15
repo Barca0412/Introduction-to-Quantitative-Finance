@@ -203,17 +203,19 @@ class ReportTest(unittest.TestCase):
 
 
 class NeedsEnrichmentTest(unittest.TestCase):
-    def test_skips_only_papers_with_a_stored_summary(self):
+    def test_redoes_papers_without_a_current_v2_enrichment(self):
+        from scripts.arxiv_radar.enrich import ENRICH_VERSION
+
         existing = {
             "papers": [
-                {"id": "2611.00001", "summary_zh": "已有摘要"},
-                {"id": "2611.00002v2", "summary_zh": "带版本号也算同一篇"},
-                {"id": "2611.00003", "summary_zh": ""},  # earlier LLM failure: retry
+                {"id": "2611.00001", "summary_zh": "v1 摘要"},  # old format: redo
+                {"id": "2611.00002v2", "stage_versions": {"enrich": ENRICH_VERSION}},  # current: skip
+                {"id": "2611.00003", "attempts": {"enrich": 3, "enrich_version": ENRICH_VERSION}},  # gave up
             ]
         }
         fetched = [paper("2611.00001"), paper("2611.00002"), paper("2611.00003"), paper("2611.00004")]
         todo = fp.needs_enrichment(fetched, existing)
-        self.assertEqual([p["id"] for p in todo], ["2611.00003", "2611.00004"])
+        self.assertEqual([p["id"] for p in todo], ["2611.00001", "2611.00004"])
 
 
 class BackfillWindowTest(unittest.TestCase):

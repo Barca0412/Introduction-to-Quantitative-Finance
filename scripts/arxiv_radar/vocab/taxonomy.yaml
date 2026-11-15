@@ -1,0 +1,85 @@
+# FinPaperRadar classification (S3 enrichment, version s3-v2.0).
+#
+# Single source for the LLM prompt, the output validation and (later) the site labels.
+# Settled 2026-11-15 after three trial rounds on 55 well-known papers; the reasoning and
+# the trial tables are in the pipeline design doc (appendix A to A.4).
+# Changing ids or rules here means bumping ENRICH_VERSION in enrich.py.
+
+relevance:
+  3: {zh: 核心, en: "The research question is itself a finance problem and AI/ML is the method. Example: LLM-mined A-share factors; RL portfolio optimisation; predicting default from financial text."}
+  2: {zh: 主要应用, en: "A general method, but finance is the main or first validation setting AND there is finance-specific design. Example: a time-series foundation model designed and evaluated for stock-return prediction."}
+  1: {zh: 顺带, en: "Finance data is only one of several evaluation sets, with no finance-specific design. Example: a general agent benchmark where one task is reading an annual report."}
+  0: {zh: 无关, en: "Not about finance. Example: code generation, medical QA, a general time-series model whose abstract never mentions finance."}
+
+paper_types:
+  - {id: method, zh: 新方法与模型, en: "Proposes a new method or model."}
+  - {id: benchmark, zh: 基准与数据资源, en: "Releases a NEW benchmark, dataset, word list or corpus. Evaluating existing models on existing questions is 'empirical', not this."}
+  - {id: empirical, zh: 实证研究, en: "Measures or evaluates something with data, including evaluating existing models without releasing new data."}
+  - {id: system, zh: 系统与工具, en: "Software library, platform or framework (e.g. FinRL, Qlib)."}
+  - {id: survey, zh: 综述, en: "Literature survey."}
+  - {id: theory, zh: 理论分析, en: "Main contribution is a theoretical result; data only illustrates it."}
+
+task_types:
+  - {id: forecasting, zh: 预测, en: "Returns or prices, volatility, macro indicators, company results."}
+  - {id: pricing, zh: 定价与模型估计, en: "Derivative pricing, model calibration, estimating asset-pricing models or the SDF, testing or selecting existing factors, valuation, insurance premium pricing."}
+  - {id: decision, zh: 交易与配置决策, en: "Trading strategies, portfolio rebalancing, hedging, market making, execution."}
+  - {id: signal-mining, zh: 因子与信号挖掘, en: "Discovering NEW formulaic factors or alpha signals."}
+  - {id: understanding, zh: 理解与问答, en: "Sentiment, information extraction, report QA, numerical reasoning, measuring something from text."}
+  - {id: risk-assessment, zh: 风险识别与评估, en: "Credit scoring, default, fraud, AML, compliance review."}
+  - {id: generation, zh: 生成, en: "Writing reports, generating synthetic financial data."}
+  - {id: simulation, zh: 市场模拟, en: "Order-flow simulation, agent-based market simulation."}
+  - {id: multi-task, zh: 多任务综合, en: "Benchmarks or surveys covering many tasks."}
+
+finance_domains:
+  - {id: asset-pricing, zh: 资产定价与因子, en: "Factors, cross-sectional stock selection or ranking, medium/long-horizon returns, monthly/annual market-return (equity premium) prediction."}
+  - {id: trading, zh: 交易与执行, en: "Intraday/daily timing of a single asset, high frequency, market making, order books, execution."}
+  - {id: portfolio-risk, zh: 组合与风险管理, en: "Portfolio optimisation, risk models, volatility, VaR, hedging, synthetic data for risk scenarios or backtests."}
+  - {id: derivatives, zh: 衍生品与定价, en: "Option pricing, implied volatility, calibration, rates models."}
+  - {id: credit-banking, zh: 信用、银行与支付, en: "Credit scoring, default, anti-fraud, AML, payment risk control."}
+  - {id: corporate-finance, zh: 公司金融与会计, en: "Financial statements, earnings, M&A, disclosure, ESG and climate disclosure."}
+  - {id: fin-nlp, zh: 金融文本与舆情, en: "ONLY when understanding financial text is itself the research goal (news, reports, calls, social media)."}
+  - {id: crypto-defi, zh: 加密资产与 DeFi, en: "Cryptocurrencies, blockchains, DeFi."}
+  - {id: macro-policy, zh: 宏观与政策, en: "Macro forecasting, central banks, regulation."}
+  - {id: insurance-household, zh: 保险与个人金融, en: "Insurance pricing and claims, robo-advising, household finance."}
+  - {id: market-structure, zh: 市场结构与行为, en: "Microstructure, behavioural finance, market simulation, order-book simulation data."}
+  - {id: general, zh: 通用金融（多领域）, en: "Not one area: general financial LLMs, multi-area benchmarks, surveys. Use ALONE, never with another domain."}
+
+methods:
+  - {id: llm-agent, zh: 大模型智能体, en: "Multi-agent, tool use, deep-research agents."}
+  - {id: llm, zh: 大模型与语言模型, en: "Pre-training or fine-tuning (financial) LLMs, prompting, BERT-style models."}
+  - {id: rl, zh: 强化学习, en: "Reinforcement learning."}
+  - {id: deep-ts, zh: 神经网络与深度学习（含时序模型）, en: "Any neural network incl. early shallow ones, CNN/LSTM/Transformer time-series models, time-series foundation models."}
+  - {id: graph, zh: 图模型, en: "Graph neural networks, graph learning."}
+  - {id: generative, zh: 生成模型与仿真, en: "Diffusion, GANs, generative or agent-based market simulation."}
+  - {id: classic-ml, zh: 传统机器学习, en: "Trees, boosting, SVM, LASSO, random features, genetic programming."}
+  - {id: econometrics, zh: 计量与统计方法, en: "Econometric or statistical methods."}
+  - {id: other, zh: 其他, en: "Dictionaries, rules, optimisers or anything else."}
+
+data_markets:
+  - {id: a-share, zh: A股}
+  - {id: hk, zh: 港股}
+  - {id: us, zh: 美股}
+  - {id: europe, zh: 欧洲股市}
+  - {id: other-equity, zh: 其他股市}
+  - {id: crypto, zh: 加密资产}
+  - {id: fx, zh: 外汇}
+  - {id: bond, zh: 债券}
+  - {id: futures-commodity, zh: 期货与商品}
+  - {id: options, zh: 期权}
+  - {id: multi-market, zh: 跨市场}
+  - {id: chinese-text, zh: 中文金融文本}
+  - {id: none, zh: 无或未说明}
+
+# Disambiguation rules, copied into the prompt verbatim.
+rules:
+  - "Prediction papers: choose the domain by WHAT is predicted. Cross-sectional stock selection or ranking -> asset-pricing even if the horizon is one day. Monthly/annual market return -> asset-pricing. Intraday/daily timing of one asset or order books -> trading. Volatility -> portfolio-risk (implied volatility -> derivatives). Macro indicators -> macro-policy. Company results -> corporate-finance."
+  - "News-to-returns papers: domain asset-pricing (or trading), task forecasting. Add fin-nlp only if understanding the text itself is the goal."
+  - "General financial LLMs, multi-area benchmarks and surveys: domain general (alone), task understanding or multi-task."
+  - "Factor papers: proposing NEW factors -> signal-mining; testing or selecting EXISTING factors -> pricing."
+  - "Benchmark papers: paper_type benchmark; task and domain follow what is tested; methods = the techniques being evaluated."
+  - "Several contributions listed in the title (e.g. model, data and benchmark): paper_type = the FIRST one listed."
+  - "Synthetic financial time series: domain by what the data is for (risk scenarios or backtests -> portfolio-risk; order-book simulation -> market-structure)."
+  - "Climate/ESG papers count as finance only when tied to corporate disclosure, investment or risk pricing; generic climate text -> relevance 1."
+  - "Non-ML automated methods (dictionaries, rules, optimisers such as rule-based robo-advisers) can be relevant, but relevance is at most 2 and methods = other. Papers that STUDY trading bots or algorithms without using AI methods -> relevance 1."
+  - "If relevance <= 1 and no task type fits, task_types may be empty. If relevance is 0, finance_domains must be empty."
+  - "withdrawn = true when the arXiv comment says the paper is withdrawn or temporarily withdrawn."

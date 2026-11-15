@@ -158,8 +158,21 @@ def build_focus_metadata(paper: Dict[str, Any]) -> Dict[str, Any]:
     if "deep-research" in tags or deep_research_signal:
         topics.append("deep-research")
 
+    relevance = paper.get("relevance")
+    if isinstance(relevance, int) and not isinstance(relevance, bool):
+        # Enriched with S3 v2: the LLM's AI x finance relevance decides (design 3.4).
+        score += 10 * relevance
+        reasons.insert(0, f"relevance {relevance}")
+        if relevance >= 2 and "ai-finance" not in topics:
+            topics.insert(0, "ai-finance")
+        if relevance < 2 and "ai-finance" in topics:
+            topics.remove("ai-finance")
+        is_focus = relevance >= 2 and not paper.get("withdrawn")
+        if paper.get("withdrawn"):
+            reasons.insert(0, "withdrawn")
+    else:
+        is_focus = score >= 10 or bool(topics) or bool(matched_tags)
     primary_topic = topics[0] if topics else (matched_tags[0] if matched_tags else None)
-    is_focus = score >= 10 or bool(topics) or bool(matched_tags)
 
     return {
         "score": score,

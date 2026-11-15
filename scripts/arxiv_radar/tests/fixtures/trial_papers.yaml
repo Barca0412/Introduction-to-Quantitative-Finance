@@ -1,0 +1,57 @@
+# Hand labels for the 46 arXiv papers of the three taxonomy trial rounds (2026-11-15),
+# design doc appendix A, A.3 and A.4, written with the final ids of vocab/taxonomy.yaml.
+# The 9 non-arXiv papers of those rounds (NBER/SSRN/journal only) are not here.
+#
+# relevance: accepted scores (a list when the trial marked it as a borderline case).
+# Lists for task_types / finance_domains / methods count as agreeing when they overlap.
+# in_prompt: the paper is one of the few-shot examples in enrich.py, so agreement on it
+# says little; the trial report lists those separately.
+
+- {id: "2303.17564", name: BloombergGPT, relevance: [3], paper_type: method, task_types: [understanding], finance_domains: [general], methods: [llm]}
+- {id: "2306.06031", name: FinGPT, relevance: [3], paper_type: system, task_types: [understanding], finance_domains: [general], methods: [llm]}
+- {id: "1908.10063", name: FinBERT, relevance: [3], paper_type: method, task_types: [understanding], finance_domains: [fin-nlp], methods: [llm]}
+- {id: "2412.20138", name: TradingAgents, relevance: [3], paper_type: method, task_types: [decision], finance_domains: [trading], methods: [llm-agent]}
+- {id: "2011.09607", name: FinRL, relevance: [3], paper_type: system, task_types: [decision], finance_domains: [trading, portfolio-risk], methods: [rl]}
+- {id: "2311.13743", name: FinMem, relevance: [3], paper_type: method, task_types: [decision], finance_domains: [trading], methods: [llm-agent]}
+- {id: "2308.00016", name: Alpha-GPT, relevance: [3], paper_type: method, task_types: [signal-mining], finance_domains: [asset-pricing], methods: [llm, llm-agent]}
+- {id: "2306.12964", name: AlphaGen, relevance: [3], paper_type: method, task_types: [signal-mining], finance_domains: [asset-pricing], methods: [rl], in_prompt: true}
+- {id: "2508.02739", name: Kronos, relevance: [3], paper_type: method, task_types: [forecasting, generation], finance_domains: [trading, portfolio-risk], methods: [deep-ts]}
+- {id: "1802.03042", name: Deep Hedging, relevance: [3], paper_type: method, task_types: [decision], finance_domains: [derivatives, portfolio-risk], methods: [rl, deep-ts]}
+- {id: "1808.03668", name: DeepLOB, relevance: [3], paper_type: method, task_types: [forecasting], finance_domains: [trading], methods: [deep-ts]}
+- {id: "2109.00122", name: FinQA, relevance: [3], paper_type: benchmark, task_types: [understanding], finance_domains: [corporate-finance], methods: [llm]}
+- {id: "2311.11944", name: FinanceBench, relevance: [3], paper_type: benchmark, task_types: [understanding], finance_domains: [corporate-finance], methods: [llm]}
+- {id: "2402.12659", name: FinBen, relevance: [3], paper_type: benchmark, task_types: [multi-task], finance_domains: [general], methods: [llm, llm-agent]}
+- {id: "2304.07619", name: Can ChatGPT Forecast Stock Price Movements, relevance: [3], paper_type: empirical, task_types: [forecasting], finance_domains: [asset-pricing, fin-nlp], methods: [llm]}
+- {id: "2409.07486", name: MarS, relevance: [3], paper_type: method, task_types: [simulation], finance_domains: [market-structure, trading], methods: [generative]}
+- {id: "2601.05039", name: FinDeepForecast, relevance: [3], paper_type: benchmark, task_types: [forecasting], finance_domains: [corporate-finance, macro-policy], methods: [llm-agent]}
+- {id: "2402.02315", name: Survey of LLMs in Finance, relevance: [3], paper_type: survey, task_types: [multi-task], finance_domains: [general], methods: [llm]}
+- {id: "2310.00566", name: CALM credit scoring, relevance: [3], paper_type: method, task_types: [risk-assessment], finance_domains: [credit-banking], methods: [llm]}
+- {id: "2407.09546", name: CryptoTrade, relevance: [3], paper_type: method, task_types: [decision], finance_domains: [crypto-defi], methods: [llm-agent]}
+
+- {id: "1904.00745", name: Deep Learning in Asset Pricing, relevance: [3], paper_type: method, task_types: [pricing], finance_domains: [asset-pricing], methods: [deep-ts]}
+- {id: "2407.17866", name: Financial Statement Analysis with LLMs, relevance: [3], paper_type: empirical, task_types: [forecasting], finance_domains: [corporate-finance], methods: [llm], withdrawn: true}
+- {id: "1901.09647", name: Deep Learning Volatility, relevance: [3], paper_type: method, task_types: [pricing], finance_domains: [derivatives], methods: [deep-ts]}
+- {id: "1907.06673", name: Quant GANs, relevance: [3], paper_type: method, task_types: [generation], finance_domains: [portfolio-risk], methods: [generative]}
+- {id: "1809.09441", name: Temporal Relational Ranking, relevance: [3], paper_type: method, task_types: [forecasting], finance_domains: [asset-pricing], methods: [graph, deep-ts], in_prompt: true}
+- {id: "2009.11189", name: Qlib, relevance: [3], paper_type: system, task_types: [forecasting, decision], finance_domains: [asset-pricing, portfolio-risk], methods: [other, deep-ts, classic-ml]}
+- {id: "2505.15155", name: R&D-Agent-Quant, relevance: [3], paper_type: method, task_types: [signal-mining, forecasting], finance_domains: [asset-pricing], methods: [llm-agent]}
+- {id: "2407.06567", name: FinCon, relevance: [3], paper_type: method, task_types: [decision], finance_domains: [trading, portfolio-risk], methods: [llm-agent]}
+- {id: "2105.07624", name: TAT-QA, relevance: [3], paper_type: benchmark, task_types: [understanding], finance_domains: [corporate-finance], methods: [llm]}
+- {id: "1908.02591", name: Elliptic AML in Bitcoin, relevance: [3], paper_type: benchmark, task_types: [risk-assessment], finance_domains: [credit-banking, crypto-defi], methods: [graph, classic-ml]}
+- {id: "2008.12477", name: ML for Macroeconomic Forecasting, relevance: [3, 2], paper_type: empirical, task_types: [forecasting], finance_domains: [macro-policy], methods: [classic-ml, econometrics]}
+- {id: "2110.12010", name: ClimateBERT, relevance: [1, 2], paper_type: method, task_types: [understanding], finance_domains: [corporate-finance], methods: [llm], in_prompt: true}
+
+- {id: "1904.05234", name: Flash Boys 2.0, relevance: [1, 0], paper_type: empirical, task_types: [], finance_domains: [crypto-defi, market-structure], methods: [other]}
+- {id: "2403.07815", name: Chronos, relevance: [0, 1], paper_type: method, task_types: [forecasting], finance_domains: [], methods: [deep-ts, llm], in_prompt: true}
+- {id: "2310.15205", name: DISC-FinLLM, relevance: [3], paper_type: method, task_types: [multi-task, understanding], finance_domains: [general], methods: [llm]}
+- {id: "2312.15235", name: MASTER, relevance: [3], paper_type: method, task_types: [forecasting], finance_domains: [asset-pricing], methods: [deep-ts]}
+- {id: "2306.09862", name: DoubleAdapt, relevance: [3], paper_type: method, task_types: [forecasting], finance_domains: [asset-pricing], methods: [deep-ts]}
+- {id: "2309.13064", name: InvestLM, relevance: [3], paper_type: method, task_types: [understanding, multi-task], finance_domains: [general], methods: [llm]}
+- {id: "2306.05443", name: PIXIU, relevance: [3], paper_type: method, task_types: [multi-task], finance_domains: [general], methods: [llm]}
+- {id: "2310.08678", name: GPT on mock CFA exams, relevance: [3], paper_type: empirical, task_types: [understanding], finance_domains: [general], methods: [llm], in_prompt: true}
+- {id: "2002.12307", name: GEM Alipay malicious accounts, relevance: [3], paper_type: method, task_types: [risk-assessment], finance_domains: [credit-banking], methods: [graph]}
+- {id: "1812.06600", name: Double DQN Optimal Execution, relevance: [3], paper_type: method, task_types: [decision], finance_domains: [trading], methods: [rl]}
+- {id: "1804.04216", name: Market Making via RL, relevance: [3], paper_type: method, task_types: [decision], finance_domains: [trading], methods: [rl]}
+- {id: "2005.13665", name: Deep Learning for Portfolio Optimization, relevance: [3], paper_type: method, task_types: [decision], finance_domains: [portfolio-risk], methods: [deep-ts]}
+- {id: "1904.10890", name: Insurance tariff with tree models, relevance: [3], paper_type: method, task_types: [pricing], finance_domains: [insurance-household], methods: [classic-ml]}
+- {id: "1904.12066", name: ABIDES, relevance: [3], paper_type: system, task_types: [simulation], finance_domains: [market-structure], methods: [generative]}
