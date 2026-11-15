@@ -132,7 +132,7 @@ def _papers_schema():
             ("enrich_warnings", strings),
             ("quality_flags", strings),
             # S6 institutions (institutions.py).
-            ("institutions", pa.list_(pa.struct([(k, pa.string()) for k in ("name", "ror", "country", "type", "source", "confidence")]))),
+            ("institutions", pa.list_(pa.struct([(k, pa.string()) for k in ("name", "ror", "country", "type", "source", "confidence", "zh", "short")]))),
             ("author_affiliations", pa.list_(pa.list_(pa.int32()))),
             ("affiliation_source", pa.string()),
             ("affiliation_checked_at", pa.string()),
@@ -213,7 +213,7 @@ def _clean_paper_for_parquet(paper: Dict[str, Any]) -> Dict[str, Any]:
         } if paper.get("attempts") else None,
         "last_error": paper.get("last_error"),
         "institutions": [
-            {k: str(i.get(k) or "") for k in ("name", "ror", "country", "type", "source", "confidence")}
+            {k: str(i.get(k) or "") for k in ("name", "ror", "country", "type", "source", "confidence", "zh", "short")}
             for i in paper.get("institutions") or [] if isinstance(i, dict)
         ],
         "author_affiliations": [[int(x) for x in row] for row in paper.get("author_affiliations") or []],

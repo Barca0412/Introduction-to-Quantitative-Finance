@@ -441,3 +441,78 @@ async def enrich_institutions(papers: List[Dict[str, Any]], today: Optional[date
             counts["html_used"] += 1
     logger.info("Institutions: %s", counts)
     return counts
+
+
+# --------------------------------------------------------------------------
+# Canonical names (design doc 4.6.3)
+# --------------------------------------------------------------------------
+
+INSTITUTIONS_FILE = __import__("pathlib").Path(__file__).resolve().parent / "vocab" / "institutions.yaml"
+
+
+def _name_index_key(name: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "", unicodedata.normalize("NFKD", name or "").encode("ascii", "ignore").decode().lower())
+
+
+def load_institution_table() -> Dict[str, Dict[str, Any]]:
+    import yaml
+
+    with open(INSTITUTIONS_FILE, encoding="utf-8") as fh:
+        rows = yaml.safe_load(fh) or []
+    table = {}
+    for row in rows:
+        if row["ror"] in table:
+            raise ValueError(f"duplicate ror {row['ror']} in institutions.yaml")
+        table[row["ror"]] = row
+    return table
+
+
+def canonicalize(papers: List[Dict[str, Any]]) -> Dict[str, int]:
+    """Give HTML-only institutions the ROR id of the same institution seen elsewhere
+    (OpenAlex names in the corpus, or aliases in vocab/institutions.yaml), merge the
+    duplicates this creates inside a paper, and add Chinese / short display names.
+    Returns how many entries got a ROR id and how many got a Chinese name."""
+    table = load_institution_table()
+    by_name: Dict[str, Dict[str, Any]] = {}
+    for paper in papers:
+        for inst in paper.get("institutions") or []:
+            if inst.get("ror") and inst.get("source") == "openalex":
+                by_name.setdefault(_name_index_key(inst["name"]), inst)
+    for ror, row in table.items():
+        for alias in [row.get("name", "")] + list(row.get("aliases") or []):
+            by_name.setdefault(_name_index_key(alias), {"ror": ror, "name": row.get("name", ""), "type": "", "country": ""})
+
+    linked = named = 0
+    for paper in papers:
+        insts = paper.get("institutions") or []
+        if not insts:
+            continue
+        for inst in insts:
+            if not inst.get("ror"):
+                hit = by_name.get(_name_index_key(inst.get("name", "")))
+                if hit:
+                    inst["ror"] = hit["ror"]
+                    inst["type"] = inst.get("type") or hit.get("type", "")
+                    inst["country"] = inst.get("country") or hit.get("country", "")
+                    linked += 1
+            row = table.get(inst.get("ror", ""))
+            if row:
+                inst["zh"], inst["short"] = row.get("zh", ""), row.get("name", "")
+                named += 1
+        # Merge entries that now share a ROR id; remap the author -> institution indices.
+        merged: List[Dict[str, Any]] = []
+        position: Dict[str, int] = {}
+        remap: Dict[int, int] = {}
+        for i, inst in enumerate(insts):
+            key = inst.get("ror") or _name_index_key(inst.get("name", ""))
+            if key not in position:
+                position[key] = len(merged)
+                merged.append(inst)
+            remap[i] = position[key]
+        if len(merged) != len(insts):
+            paper["institutions"] = merged
+            paper["author_affiliations"] = [sorted({remap[i] for i in row if i in remap})
+                                            for row in paper.get("author_affiliations") or []]
+            paper["affiliations"] = [m["name"] for m in merged]
+            paper["affiliation"] = "; ".join(paper["affiliations"])
+    return {"linked": linked, "named": named}

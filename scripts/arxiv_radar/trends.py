@@ -47,7 +47,7 @@ def _institutions(paper: Dict[str, Any]) -> List[Tuple[str, str]]:
     for inst in paper.get("institutions") or []:
         key = inst.get("ror") or inst.get("name", "")
         if key:
-            out.append((key, inst.get("name", "")))
+            out.append((key, inst.get("zh") or inst.get("short") or inst.get("name", "")))
     return list(dict.fromkeys(out))
 
 

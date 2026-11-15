@@ -9,7 +9,7 @@ from typing import Any, Callable, Dict, List, Optional, Tuple
 
 import arxiv
 
-from .institutions import enrich_institutions
+from .institutions import canonicalize, enrich_institutions
 from .keywords import normalize_all
 from .venue_library import tag_papers
 from .venues import classify_all
@@ -369,6 +369,7 @@ async def run_pipeline(fetched: Optional[List[Dict[str, Any]]] = None) -> Option
     # covered yet). OpenAlex + arXiv HTML, no LLM. Replaces the old LLM affiliation clean-up.
     logger.info("\n[Step 4b] Authors and institutions...")
     institution_counts = await enrich_institutions(merged["papers"])
+    institution_counts.update(canonicalize(merged["papers"]))
     report_institutions(institution_counts)
 
     # S11: official accepted lists of the top venues, when the library is on disk.

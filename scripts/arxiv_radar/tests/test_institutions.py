@@ -142,3 +142,28 @@ class NeedsLookupTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class CanonicalTest(unittest.TestCase):
+    def test_html_name_gets_ror_zh_and_duplicates_merge(self):
+        papers = [
+            {"institutions": [{"name": "Nanyang Technological University", "ror": "02e7b5302", "source": "openalex", "type": "education", "country": "SG"}],
+             "author_affiliations": [[0]]},
+            {"institutions": [
+                {"name": "Nanyang Technological University", "ror": "02e7b5302", "source": "openalex"},
+                {"name": "Nanyang Technological University", "ror": "", "source": "html"},
+                {"name": "Some Startup", "ror": "", "source": "html"}],
+             "author_affiliations": [[0], [1], [2]]},
+        ]
+        counts = inst.canonicalize(papers)
+        self.assertEqual(counts["linked"], 1)
+        p = papers[1]
+        self.assertEqual([i["name"] for i in p["institutions"]], ["Nanyang Technological University", "Some Startup"])
+        self.assertEqual(p["author_affiliations"], [[0], [0], [1]])
+        self.assertEqual(p["institutions"][0]["zh"], "南洋理工大学")
+        self.assertEqual(papers[0]["institutions"][0]["short"], "Nanyang Technological University")
+
+    def test_table_has_unique_ror(self):
+        table = inst.load_institution_table()
+        self.assertGreater(len(table), 100)
+        self.assertEqual(table["03cve4549"]["zh"], "清华大学")
