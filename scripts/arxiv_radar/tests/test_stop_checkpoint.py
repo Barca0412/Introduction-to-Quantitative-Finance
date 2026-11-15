@@ -109,7 +109,7 @@ class PipelineStopTest(unittest.TestCase):
              mock.patch.object(fp, "report_fetch", lambda r: None), \
              mock.patch.object(fp, "load_papers", lambda: existing), \
              mock.patch.object(fp, "save_papers", lambda data: saved.append(data)), \
-             mock.patch.object(fp, "enrich_affiliations", self.no_affiliations), \
+             mock.patch.object(fp, "enrich_institutions", self.no_institutions), \
              mock.patch.object(fp, "compute_and_save_stats", lambda papers: {"tag_stats": {"_all": {"daily": {}}}}), \
              mock.patch.object(fp, "generate_all_charts", lambda stats: None), \
              mock.patch.object(fp, "generate_combined_chart", lambda stats: None), \
@@ -127,8 +127,8 @@ class PipelineStopTest(unittest.TestCase):
         return saved, error
 
     @staticmethod
-    async def no_affiliations(papers):
-        return papers
+    async def no_institutions(papers):
+        return {"looked_up": 0}
 
     def setUp(self):
         FakeClient.calls = 0

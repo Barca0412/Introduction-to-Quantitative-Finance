@@ -9,7 +9,8 @@ from typing import Any, Callable, Dict, List, Optional, Tuple
 
 import arxiv
 
-from .affiliations import enrich_affiliations
+from .institutions import enrich_institutions
+from .keywords import normalize_all
 from .compute_stats import compute_and_save_stats
 from .config import (
     ARXIV_CATEGORIES,
@@ -135,6 +136,36 @@ def report_enrichment(papers: List[Dict[str, Any]]) -> Dict[str, Any]:
         with open(path, "a", encoding="utf-8") as fh:
             fh.write("\n".join(lines) + "\n\n")
     return summary
+
+
+def report_keywords(report: Dict[str, Any]) -> None:
+    """Coverage and the most frequent new terms, for the weekly vocabulary review."""
+    if not report.get("keywords"):
+        return
+    lines = [
+        "### Keywords", "",
+        f"- {report['matched']} of {report['keywords']} keywords matched a standard keyword ({report['coverage']:.0%})",
+        "- most frequent new terms (candidates for vocab/keywords.yaml): "
+        + ", ".join(f"{term} ({n})" for term, n in report["top_new_terms"][:20]),
+        "",
+    ]
+    path = os.getenv("GITHUB_STEP_SUMMARY")
+    if path:
+        with open(path, "a", encoding="utf-8") as fh:
+            fh.write("\n".join(lines) + "\n")
+
+
+def report_institutions(counts: Dict[str, int]) -> None:
+    looked = counts.get("looked_up", 0)
+    if not looked:
+        return
+    line = (f"### Authors and institutions\n\n- looked up {looked} relevant papers; "
+            f"{counts['with_institution']} with an institution, {counts['all_authors']} with every author covered, "
+            f"{counts['html_used']} needed the arXiv page\n\n")
+    path = os.getenv("GITHUB_STEP_SUMMARY")
+    if path:
+        with open(path, "a", encoding="utf-8") as fh:
+            fh.write(line)
 
 
 def report_fetch(report: List[Dict[str, Any]]) -> None:
@@ -287,8 +318,7 @@ async def run_pipeline() -> Optional[Dict[str, Any]]:
         if LLM_API_KEY:
             report_enrichment(processed_papers)
 
-        logger.info("\n[Step 3] Normalizing affiliations...")
-        enriched_papers = await enrich_affiliations(processed_papers)
+        enriched_papers = processed_papers
     else:
         logger.info("\n[Step 2-3] Nothing new to enrich")
         enriched_papers = []
@@ -299,6 +329,18 @@ async def run_pipeline() -> Optional[Dict[str, Any]]:
     # Papers never seen by the LLM carry rule-based tags; keep them in step with the rules.
     retagged = refresh_rule_tags(merged["papers"], fallback_tags_for_paper)
     logger.info("Re-applied keyword-rule tags to %s papers without an LLM summary", retagged)
+
+    # S5: map the LLM's keywords to the standard vocabulary (vocab/keywords.yaml).
+    keyword_report = normalize_all(merged["papers"])
+    logger.info("Keywords: %s of %s matched a standard keyword (%.0f%%)", keyword_report["matched"],
+                keyword_report["keywords"], 100 * keyword_report["coverage"])
+    report_keywords(keyword_report)
+
+    # S6: institutions for relevant papers (new ones, and young ones OpenAlex had not
+    # covered yet). OpenAlex + arXiv HTML, no LLM. Replaces the old LLM affiliation clean-up.
+    logger.info("\n[Step 4b] Authors and institutions...")
+    institution_counts = await enrich_institutions(merged["papers"])
+    report_institutions(institution_counts)
 
     logger.info("\n[Step 5] Saving papers data...")
     save_papers(merged)

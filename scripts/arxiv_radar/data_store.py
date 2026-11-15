@@ -128,6 +128,15 @@ def _papers_schema():
             ("last_error", pa.string()),
             ("enrich_warnings", strings),
             ("quality_flags", strings),
+            # S6 institutions (institutions.py).
+            ("institutions", pa.list_(pa.struct([(k, pa.string()) for k in ("name", "ror", "country", "type", "source", "confidence")]))),
+            ("author_affiliations", pa.list_(pa.list_(pa.int32()))),
+            ("affiliation_source", pa.string()),
+            ("affiliation_checked_at", pa.string()),
+            ("affiliation_raw", strings),
+            # S5 keywords (keywords.py).
+            ("keywords_norm", pa.list_(pa.struct([("id", pa.string()), ("en", pa.string()), ("zh", pa.string()),
+                                                   ("kind", pa.string()), ("raw", pa.string()), ("new", pa.bool_())]))),
         ]
     )
 
@@ -190,6 +199,19 @@ def _clean_paper_for_parquet(paper: Dict[str, Any]) -> Dict[str, Any]:
             "enrich_version": (paper.get("attempts") or {}).get("enrich_version"),
         } if paper.get("attempts") else None,
         "last_error": paper.get("last_error"),
+        "institutions": [
+            {k: str(i.get(k) or "") for k in ("name", "ror", "country", "type", "source", "confidence")}
+            for i in paper.get("institutions") or [] if isinstance(i, dict)
+        ],
+        "author_affiliations": [[int(x) for x in row] for row in paper.get("author_affiliations") or []],
+        "affiliation_source": paper.get("affiliation_source"),
+        "affiliation_checked_at": paper.get("affiliation_checked_at"),
+        "affiliation_raw": list(paper.get("affiliation_raw") or []),
+        "keywords_norm": [
+            {"id": str(k.get("id", "")), "en": str(k.get("en", "")), "zh": str(k.get("zh", "")),
+             "kind": str(k.get("kind", "")), "raw": str(k.get("raw", "")), "new": bool(k.get("new"))}
+            for k in paper.get("keywords_norm") or [] if isinstance(k, dict)
+        ],
     }
 
 
