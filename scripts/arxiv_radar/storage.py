@@ -92,7 +92,7 @@ def normalize_paper(paper: Dict[str, Any]) -> Dict[str, Any]:
 
 # arXiv metadata kept since 2026-11-15, plus the S3 v2 enrichment (enrich.py). Old
 # records have none of these; they read as "not enriched with v2 yet".
-ARXIV_EXTRA_FIELDS = ("primary_category", "comment", "journal_ref", "doi")
+ARXIV_EXTRA_FIELDS = ("primary_category", "comment", "journal_ref", "doi", "source")
 # S6 institutions (institutions.py).
 INSTITUTION_FIELDS = (
     "institutions", "author_affiliations", "affiliation_source", "affiliation_checked_at", "affiliation_raw",

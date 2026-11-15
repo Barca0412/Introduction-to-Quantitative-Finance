@@ -81,8 +81,9 @@ export function hydratePaper(record, groupKey) {
     abstract_truncated: record.ac !== undefined,
     abstract_chunk: record.ac,
     group: groupKey,
-    abs_link: `https://arxiv.org/abs/${record.id}`,
-    pdf_link: `https://arxiv.org/pdf/${record.id}`,
+    // u: link for papers that are not on arXiv (added from the top-venue library).
+    abs_link: record.u || `https://arxiv.org/abs/${record.id}`,
+    pdf_link: record.u ? '' : `https://arxiv.org/pdf/${record.id}`,
     focus: {
       score: focus.s || 0,
       is_focus: Boolean(focus.f),

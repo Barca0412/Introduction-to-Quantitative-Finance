@@ -48,6 +48,7 @@ from .config import (
 )
 from .compute_stats import build_stats
 from .site_filter import site_visible
+from .utils import is_arxiv_id
 from .data_store import load_local_embeddings
 
 logger = logging.getLogger("arxiv_radar.build_site_data")
@@ -65,6 +66,7 @@ SCHEMA = {
     "f": "affiliations",
     "s": "abstract (snippet when 'ac' is present)",
     "ac": "index of the abstracts-N.json chunk holding the full abstract",
+    "u": "link for papers not on arXiv (else https://arxiv.org/abs/<id>)",
     "fo": "focus: s=score, f=is_focus(0/1), p=primary topic, t=topics, r=reasons",
 }
 
@@ -109,6 +111,9 @@ def slim_paper(paper: Dict[str, Any]) -> Tuple[Dict[str, Any], Optional[str]]:
     }
     if len(authors) > SITE_MAX_AUTHORS:
         record["an"] = len(authors)
+    if not is_arxiv_id(paper["id"]):
+        # Not on arXiv (added from the top-venue library): the site links here instead.
+        record["u"] = paper.get("abs_link", "")
     # Optional fields are omitted when empty to keep the first load small.
     if paper.get("keywords"):
         record["k"] = paper["keywords"]

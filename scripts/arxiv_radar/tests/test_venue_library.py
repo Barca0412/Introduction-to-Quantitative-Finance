@@ -108,3 +108,35 @@ class OpenAlexKeyTest(unittest.TestCase):
             self.assertNotIn("SECRET123", config.redact("Giving up on https://x?api_key=SECRET123"))
         with mock.patch.object(config, "OPENALEX_API_KEY", ""):
             self.assertEqual(config.openalex_url("https://a?b=1"), "https://a?b=1")
+
+
+class NonArxivTest(unittest.TestCase):
+    def test_record_from_openalex_abstract(self):
+        from scripts.arxiv_radar import discover
+        from scripts.arxiv_radar.build_site_data import slim_paper
+        from scripts.arxiv_radar.storage import normalize_paper
+
+        row = L.make_record("kdd", 2026, "openalex_source", "Graph Default Prediction", ["Ana Lee"],
+                            doi="10.1145/123.456", url="https://openalex.org/W42")
+        work = {"title": "Graph Default Prediction", "publication_date": "2026-08-03", "doi": "https://doi.org/10.1145/123.456",
+                "abstract_inverted_index": {"We": [0], "predict": [1], "corporate": [2], "default": [3], "with": [4], "graphs": [5],
+                                            "and": [6], "test": [7], "on": [8], "ten": [9], "years": [10], "of": [11], "commercial": [12],
+                                            "loans": [13], "from": [14], "three": [15], "banks.": [16]}}
+        with mock.patch.object(discover, "_openalex_work", lambda path: work if path == "W42" else {}):
+            rec = discover.non_arxiv_record(row)
+        self.assertEqual(rec["id"], "doi:10.1145/123.456")
+        self.assertEqual((rec["published_date"], rec["source"], rec["pdf_link"]), ("2026-08-03", "venue_list", ""))
+        self.assertTrue(rec["abstract"].startswith("We predict corporate default"))
+        paper = normalize_paper(rec)
+        self.assertEqual(paper["abs_link"], "https://doi.org/10.1145/123.456")  # not an arXiv link
+        self.assertEqual(paper["pdf_link"], "")
+        slim, _ = slim_paper(paper)
+        self.assertEqual(slim["u"], "https://doi.org/10.1145/123.456")
+
+    def test_no_abstract_is_skipped(self):
+        from scripts.arxiv_radar import discover
+
+        row = L.make_record("acl", 2026, "acl_anthology", "Short Title Here For Test", ["A B"], doi="10.18653/x")
+        with mock.patch.object(discover, "_openalex_work", lambda path: {}), \
+             mock.patch.object(discover, "_crossref_abstract", lambda doi: ""):
+            self.assertIsNone(discover.non_arxiv_record(row))

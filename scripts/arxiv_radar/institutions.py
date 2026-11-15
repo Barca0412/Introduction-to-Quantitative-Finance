@@ -31,7 +31,7 @@ from typing import Any, Dict, List, Optional, Tuple
 import aiohttp
 
 from .config import openalex_url, redact
-from .utils import Progress
+from .utils import Progress, is_arxiv_id, normalize_arxiv_id
 
 logger = logging.getLogger(__name__)
 
@@ -390,14 +390,21 @@ async def _get(session: aiohttp.ClientSession, url: str, pacer: _Pacer, as_json:
 
 
 async def lookup_paper(session, paper, oa_pacer, html_pacer) -> Dict[str, Any]:
-    arxiv_id = str(paper.get("id", "")).split("v")[0]
-    work = await _get(session, openalex_url(OPENALEX_WORK.format(id=arxiv_id)), oa_pacer, as_json=True) or {}
+    paper_id = str(paper.get("id", ""))
+    arxiv = is_arxiv_id(paper_id)
+    if arxiv:
+        url = OPENALEX_WORK.format(id=normalize_arxiv_id(paper_id))
+    elif paper.get("doi"):  # papers added from the top-venue library (discover.py)
+        url = f"https://api.openalex.org/works/doi:{paper['doi']}?select=id,authorships"
+    else:
+        return combine(paper, [], None)
+    work = await _get(session, openalex_url(url), oa_pacer, as_json=True) or {}
     openalex = parse_openalex(work)
     names = _paper_authors(paper)
     covered = sum(1 for name in names if any(names_match(a["name"], name) and a["institutions"] for a in openalex))
     html_authors = None
-    if covered < len(names):
-        page = await _get(session, ARXIV_HTML.format(id=arxiv_id), html_pacer, as_json=False)
+    if covered < len(names) and arxiv:
+        page = await _get(session, ARXIV_HTML.format(id=normalize_arxiv_id(paper_id)), html_pacer, as_json=False)
         html_authors = parse_arxiv_html(page) if page else None
     return combine(paper, openalex, html_authors)
 
