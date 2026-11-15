@@ -24,7 +24,7 @@ from .config import (
     PREDEFINED_TAGS,
 )
 from . import enrich
-from .utils import has_any_term
+from .utils import Progress, has_any_term
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -430,6 +430,8 @@ async def process_papers_batch(
     for index in range(len(papers)):
         queue.put_nowait(index)
 
+    progress = Progress("LLM enrichment", len(papers), logger)
+
     async with LLMClient(LLM_API_KEY, concurrency) as client:
 
         async def worker() -> None:
@@ -446,6 +448,7 @@ async def process_papers_batch(
                     return
                 results[index] = result
                 finished.append(result)
+                progress.update(ok=not result.get("last_error"))
                 if checkpoint and len(finished) % every == 0:
                     await checkpoint(list(finished))
 

@@ -15,6 +15,7 @@ import aiohttp
 
 from .config import AFFILIATION_LLM_CONCURRENCY, LLM_API_KEY
 from .llm_processor import FatalLLMError, LLMClient
+from .utils import Progress
 
 
 logger = logging.getLogger(__name__)
@@ -353,5 +354,12 @@ async def enrich_affiliations(
 
             return paper
 
-        tasks = [enrich_one(paper.copy()) for paper in papers]
+        progress = Progress("affiliations", len(papers), logger)
+
+        async def tracked(paper: Dict[str, Any]) -> Dict[str, Any]:
+            result = await enrich_one(paper)
+            progress.update()
+            return result
+
+        tasks = [tracked(paper.copy()) for paper in papers]
         return await asyncio.gather(*tasks)
