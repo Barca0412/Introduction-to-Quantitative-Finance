@@ -1,0 +1,11 @@
+<script setup>
+import { data as meta } from '../library.data.js'
+import { withBase } from 'vitepress'
+import { data as tutorials } from '../tutorials.data.js'
+import TutorialList from './TutorialList.vue'
+const reproduced = tutorials.reduce((n,t)=>n+t.reports.length,0)
+</script>
+<template><div class="content-view"><main class="page index-page" id="main"><header class="read-head"><h1>研报与论文</h1><div class="prose index-intro"><p>仓库里收藏了一批卖方金融工程研报和学术论文。这一栏不搬动任何文件，只按系列和主题建目录，点进去就是 GitHub 上的原文件。</p><p>另外，仓库的 <a href="https://github.com/Barca0412/Introduction-to-Quantitative-Finance/tree/main/%E8%AE%BA%E6%96%87/AI%E9%87%91%E8%9E%8D%E8%AE%BA%E6%96%87%E6%95%B4%E7%90%86" target="_blank" rel="noopener">论文/AI金融论文整理</a> 目录保存了论文雷达早期按日和按主题整理的笔记。</p></div><nav class="jump"><a class="text-link" href="#reports">卖方金工研报 <span class="num">{{meta.reports.count}}</span> 份</a><a class="text-link" href="#papers">论文 <span class="num">{{meta.papers.count}}</span> 篇</a><a class="text-link" href="#reproduced">讲义复现的研报 <span class="num">{{ reproduced }}</span> 份</a><a class="text-link" :href="withBase('/arxiv/')">AI × 金融论文雷达</a></nav></header>
+<section v-for="[key,label,unit] in [['reports','卖方金工研报','份'],['papers','论文','篇']]" :key="key" :id="key" class="cat"><header class="cat-head"><h2>{{label}}</h2><span class="cat-count num">{{meta[key].count}} {{unit}}</span></header><p class="cat-lead">{{key==='reports'?'按券商和系列整理。点开一组，看里面的文件。':'按主题整理。每天更新的 AI × 金融论文另见论文雷达。'}}</p><div class="ledger"><details v-for="g in meta[key].groups" :key="g.name" class="group"><summary><span class="lr-name">{{g.name}}</span><span class="lr-num num">{{g.items.length}} {{unit}}</span></summary><ul class="files"><li v-for="f in g.items" :key="f.url"><a :href="f.url" target="_blank" rel="noopener">{{f.title}}</a></li></ul><a class="text-link" :href="g.url" target="_blank" rel="noopener">在 GitHub 打开这一组</a></details></div></section>
+<section class="cat" id="reproduced"><header class="cat-head"><h2>讲义复现的研报</h2><span class="cat-count num">{{ reproduced }} 份</span></header><p class="cat-lead">讲义里复现过的研报，方便从原始研究找到对应的讲义。</p><div class="prose wide"><TutorialList mode="reports" /></div></section>
+<p class="fine">研报和论文的版权归原作者和原机构所有，这里只做学习研究用的索引。如果权利人认为某份文件不宜公开，请通过<a :href="withBase('/contact')">投稿与联系</a>联系我们处理。</p></main></div></template>

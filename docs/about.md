@@ -1,11 +1,13 @@
 ---
-title: 关于
+layout: page
+sidebar: false
+title: 关于与引用
 description: 量化研究入门由湖南大学金融科技协会 Quant Group 维护。这里说明内容署名、授权、如何引用本项目和 FinPaperRadar 数据集，以及合作与联系方式。
 ---
 
-# 关于
+<SiteArticle>
 
-**量化研究入门**是一个中文开源量化知识库，由湖南大学金融科技协会 Quant Group 维护。它包括项目式教程、概念知识库、研报与论文目录，以及每天更新的 FinPaperRadar（AI × 金融论文雷达）。
+**量化研究入门**是一个中文开源量化资源站，由湖南大学金融科技协会 Quant Group 维护。它包括量化研究教程、开源资源清单和研究方法笔记、研报与论文目录，以及每天更新的 FinPaperRadar（AI × 金融论文雷达）。
 
 ## 内容署名
 
@@ -53,3 +55,5 @@ description: 量化研究入门由湖南大学金融科技协会 Quant Group 维
 - 问题和建议：[GitHub Discussions](https://github.com/Barca0412/Introduction-to-Quantitative-Finance/discussions)
 
 本项目用于教育与研究，不构成投资建议。
+
+</SiteArticle>

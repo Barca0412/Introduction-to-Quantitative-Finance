@@ -14,7 +14,7 @@ const current = computed(() => {
 })
 
 const linked = computed(() =>
-  current.value.startsWith('/wiki') ? tutorials.filter((t) => t.wiki.includes(current.value)) : [],
+  current.value.startsWith('/resources/method-') ? tutorials.filter((t) => t.wiki.includes(current.value)) : [],
 )
 </script>
 

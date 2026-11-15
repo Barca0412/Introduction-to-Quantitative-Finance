@@ -207,6 +207,8 @@ jobs:
       pages: write
       id-token: write
     uses: ./.github/workflows/deploy-site.yml
+    secrets:
+      DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
     with:
       ref: main
 

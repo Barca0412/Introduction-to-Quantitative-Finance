@@ -22,7 +22,11 @@ async function fetchJson(file, version) {
   const key = `${file}?${version || ''}`
   if (!jsonCache.has(key)) {
     jsonCache.set(key, fetch(dataUrl(file, version)).then((response) => {
-      if (!response.ok) throw new Error(`Failed to load ${file} (${response.status})`)
+      if (!response.ok) {
+        const error = new Error(`Failed to load ${file} (${response.status})`)
+        error.status = response.status
+        throw error
+      }
       return response.json()
     }).catch((error) => {
       jsonCache.delete(key)
@@ -77,13 +81,30 @@ export function hydratePaper(record, groupKey) {
     summary_zh: record.z || '',
     affiliations,
     affiliation: affiliations.join('; '),
-    abstract: record.s || '',
-    abstract_truncated: record.ac !== undefined,
-    abstract_chunk: record.ac,
     group: groupKey,
-    // u: link for papers that are not on arXiv (added from the top-venue library).
-    abs_link: record.u || `https://arxiv.org/abs/${record.id}`,
-    pdf_link: record.u ? '' : `https://arxiv.org/pdf/${record.id}`,
+    // S3 v2 enrichment and P2 fields (ids are named in taxonomy.json, see loadTaxonomy).
+    relevance: record.r ?? null,
+    is_core: record.r === 3,
+    paper_type: record.pt || '',
+    task_types: record.tt || [],
+    finance_domains: record.fd || [],
+    methods: record.m || [],
+    data_market: record.dm || [],
+    tldr_zh: record.tl || '',
+    keywords_std: (record.kn || []).map(([id, label, kind]) => ({ id, label, kind: kind === 'f' ? 'finance' : 'tech' })),
+    // official: confirmed by the venue's accepted-paper list; note: its track or decision.
+    venue: record.v
+      ? { name: record.v.n, kind: record.v.k || '', status: record.v.s || '', year: record.v.y || null,
+          official: record.v.o === 1, note: record.v.t || '' }
+      : null,
+    venue_mention: record.vm || '',
+    discipline: record.ds || '',
+    has_code: record.cd === 1,
+    detail_chunk: record.dc,
+    detail: null,
+    is_arxiv: record.ar === 1,
+    abs_link: record.u || '',
+    pdf_link: record.p || '',
     focus: {
       score: focus.s || 0,
       is_focus: Boolean(focus.f),
@@ -110,32 +131,76 @@ export async function loadGroupPapers(groupKey) {
   return groupPapersCache.get(groupKey)
 }
 
-export async function loadAbstractChunk(groupKey, chunkIndex) {
+/** Load history only when the selected range needs it. */
+export async function loadAllPapers() {
   const manifest = await loadManifest()
-  const info = groupInfo(manifest, groupKey)
-  const part = info.abstracts[chunkIndex]
-  if (!part) return {}
-  return fetchJson(part.file, manifest.generated_at)
+  const groups = ['recent', ...manifest.archive.map((item) => `archive/${item.month}`)]
+  return (await Promise.all(groups.map(loadGroupPapers))).flat()
+    .sort((a, b) => b.published_date.localeCompare(a.published_date) || b.id.localeCompare(a.id))
 }
 
-/** Replace snippets with full abstracts for the given papers (mutates them). */
-export async function fillFullAbstracts(papers) {
-  const needed = new Map()
-  for (const paper of papers) {
-    if (!paper.abstract_truncated) continue
-    const key = `${paper.group}#${paper.abstract_chunk}`
-    if (!needed.has(key)) needed.set(key, { group: paper.group, chunk: paper.abstract_chunk, papers: [] })
-    needed.get(key).papers.push(paper)
+/** Resolve explicit paper IDs without guessing their date from their identifier. */
+export async function loadPapersByIds(ids) {
+  const manifest = await loadManifest()
+  const index = manifest.paper_index
+    ? await fetchJson(manifest.paper_index.file, manifest.generated_at) : null
+  const papers = index
+    ? (await Promise.all([...new Set(ids.map((id) => index[id]).filter(Boolean))].map(loadGroupPapers))).flat()
+    : await loadAllPapers()
+  const byId = new Map(papers.map((paper) => [paper.id, paper]))
+  return ids.map((id) => byId.get(id)).filter(Boolean)
+}
+
+/**
+ * S8 trend aggregates written by scripts/arxiv_radar/trends.py into /arxiv-data/agg/:
+ * 'weekly_keywords', 'weekly_institutions', 'rising', `topic/<domain or method id>`,
+ * `keyword/<id>`. Returns null when the site data has no aggregates or the file is missing.
+ * rising.enough_history is false until four earlier weeks exist: say so on the page.
+ */
+export async function loadAggregate(name) {
+  if (!/^[a-zA-Z0-9_-]+(?:\/[a-zA-Z0-9_-]+)?$/.test(name)) throw new Error('Invalid aggregate name')
+  const manifest = await loadManifest()
+  if (!manifest.agg) return null
+  try {
+    return await fetchJson(`agg/${name}.json`, manifest.generated_at)
+  } catch (error) {
+    if (error.status === 404) return null
+    throw error
   }
-  await Promise.all([...needed.values()].map(async ({ group, chunk, papers: targets }) => {
-    const abstracts = await loadAbstractChunk(group, chunk)
-    for (const paper of targets) {
-      if (abstracts[paper.id]) {
-        paper.abstract = abstracts[paper.id]
-        paper.abstract_truncated = false
-      }
-    }
-  }))
+}
+
+/** Chinese names of the classification ids: { paper_types: Map(id -> zh), ..., relevance }. */
+export async function loadTaxonomy() {
+  const manifest = await loadManifest()
+  if (!manifest.taxonomy) return null
+  const raw = await fetchJson(manifest.taxonomy.file, manifest.generated_at)
+  const out = { relevance: raw.relevance || {}, order: {} }
+  for (const key of ['paper_types', 'task_types', 'finance_domains', 'methods', 'data_markets']) {
+    out[key] = new Map((raw[key] || []).map((item) => [item.id, item.zh]))
+    out.order[key] = (raw[key] || []).map((item) => item.id)
+  }
+  return out
+}
+
+/**
+ * Key points, relevance reason and institutions for one paper (mutates and returns it).
+ * paper.detail = { points: {problem, method, result, limitation}, reason,
+ *                  institutions: [{name, country, type}], author_institutions: [[index]] }
+ */
+export async function loadPaperDetail(paper) {
+  if (paper.detail || paper.detail_chunk === undefined) return paper
+  const manifest = await loadManifest()
+  const part = (groupInfo(manifest, paper.group).details || [])[paper.detail_chunk]
+  if (!part) return paper
+  const raw = (await fetchJson(part.file, manifest.generated_at))[paper.id] || {}
+  paper.detail = {
+    points: raw.pz || null,
+    reason: raw.rr || '',
+    institutions: (raw.ins || []).map((item) => ({ id: item.id || '', name: item.n, page: item.page || '', country: item.c || '', type: item.t || '' })),
+    authors: (raw.au || []).map((item) => ({ id: item.id, name: item.n, page: item.page || '' })),
+    author_institutions: raw.aa || [],
+  }
+  return paper
 }
 
 /**

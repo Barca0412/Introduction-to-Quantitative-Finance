@@ -4,16 +4,21 @@ import { dirname, join } from 'node:path'
 // Resource pages are generated from data/registry/; the sidebar lists the same pages.
 import { loadRegistry, publishedPages } from '../../scripts/site/registry.mjs'
 import { parse as parseYaml } from 'yaml'
+import { siteBase, siteOrigin, writeSeoFiles } from '../../scripts/site/seo.mjs'
+import { METHOD_NAV } from '../../scripts/site/routes.mjs'
 
-const BASE = '/Introduction-to-Quantitative-Finance/'
-const SITE = `https://barca0412.github.io${BASE}`
+const BASE = siteBase(process.env.SITE_BASE)
+const ORIGIN = siteOrigin(process.env.SITE_URL)
+const SITE = `${ORIGIN}/`
+let stars: number | null = null
+try { stars = JSON.parse(readFileSync(new URL('../../.site-build/github.json', import.meta.url), 'utf8')).stars ?? null } catch {}
 
 // Sidebar block shared by every section.
 const quickNav = {
   text: '全部栏目',
   items: [
     { text: '教程', link: '/tutorials/' },
-    { text: '知识库', link: '/wiki/' },
+    { text: '研究方法', link: '/resources/method-framework' },
     { text: '研报与论文', link: '/library/' },
     { text: 'FinPaperRadar 论文雷达', link: '/arxiv/' },
     { text: '资源', link: '/resources/' },
@@ -21,36 +26,7 @@ const quickNav = {
   ]
 }
 
-// Pages that moved into /wiki/ in the 2026-11 restructure. Old URLs keep
-// working through static redirect pages written in buildEnd below.
-// Keys are old paths (without base): 'x/' was x/index.md, 'x/y' was x/y.md.
-const MOVED_PAGES: Record<string, string> = {
-  'guide/': 'wiki/',
-  'guide/framework': 'wiki/framework',
-  'data/': 'wiki/data',
-  'factors/': 'wiki/factors/',
-  'factors/fundamental': 'wiki/factors/fundamental',
-  'factors/technical': 'wiki/factors/technical',
-  'factors/ml-factors': 'wiki/factors/ml-factors',
-  'factors/llm-factors': 'wiki/factors/llm-factors',
-  'backtest/': 'wiki/backtest',
-  'portfolio/': 'wiki/portfolio',
-  'sentiment/': 'wiki/sentiment'
-}
-
-function redirectPage(target: string) {
-  const url = `${SITE}${target}`
-  return `<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
-<title>页面已移动</title>
-<link rel="canonical" href="${url}">
-<meta name="robots" content="noindex">
-<meta http-equiv="refresh" content="0; url=${url}">
-<script>location.replace(${JSON.stringify(url)} + location.hash)</script>
-</head><body><p>页面已移动到 <a href="${url}">${url}</a>。</p></body></html>
-`
-}
-
-const SITE_NAME = '量化研究入门'
+const SITE_NAME = '量化研究入门与AI+金融'
 const OG_IMAGE = `${SITE}og-cover.png`
 
 // docs/wiki/factors/index.md -> 'wiki/factors/', docs/about.md -> 'about' (cleanUrls form)
@@ -80,7 +56,8 @@ const SECTION_NAMES: Record<string, string> = {
   wiki: '知识库',
   library: '研报与论文',
   arxiv: '论文雷达',
-  resources: '资源',
+  resources: '开源资源清单',
+  contact: '投稿与联系',
   about: '关于',
   careers: '求职'
 }
@@ -98,6 +75,7 @@ const siteVerification = [
 export default defineConfig({
   vite: {
     define: {
+      __SITE_GITHUB_STARS__: JSON.stringify(stars),
       // Full-dataset location for the FinPaperRadar pages, read at build time.
       // Empty (the default) hides the Hugging Face link.
       __HF_DATASET_REPO__: JSON.stringify((process.env.HF_DATASET_REPO || '').trim()),
@@ -108,10 +86,19 @@ export default defineConfig({
   },
   title: SITE_NAME,
   titleTemplate: `:title | ${SITE_NAME}`,
-  description: '中文开源量化知识库：项目式多因子量化教程、因子与回测知识库、研报与论文目录，以及每天更新的 AI × 金融论文雷达。',
+  description: '量化研究的开源资源与研报论文、AI × 金融前沿论文，以及和 AI 一起学的量化研究教程。',
   // LaTeX in markdown ($…$ and $$…$$), rendered at build time by markdown-it-mathjax3.
   markdown: {
-    math: true
+    math: true,
+    headers: { level: [2, 3] },
+    config(md) {
+      const renderText = md.renderer.rules.text
+      md.renderer.rules.text = (tokens, idx, options, env, self) => {
+        const text = renderText ? renderText(tokens, idx, options, env, self) : md.utils.escapeHtml(tokens[idx].content)
+        if (!String(env.path || env.relativePath || '').includes('tutorials/')) return text
+        return text.replace(/\*\*([^*]+?)\*\*/g, '<strong>$1</strong>').replace(/\*\*/g, '')
+      }
+    }
   },
   // URLs without .html; canonical, og:url and the sitemap all use this form.
   cleanUrls: true,
@@ -122,30 +109,19 @@ export default defineConfig({
   ignoreDeadLinks: true,
   base: BASE,
   // Lecture code/ and data/ folders hold notebooks and sample data, not pages.
-  srcExclude: ['tutorials/*/code/**', 'tutorials/*/data/**'],
+  srcExclude: ['tutorials/*/code/**', 'tutorials/*/data/**', 'wiki/**'],
 
   // Old URL -> new URL. Both 'old.html' and 'old/index.html' are written so the
   // redirect also works once cleanUrls is turned on.
   buildEnd({ outDir }) {
-    for (const [from, to] of Object.entries(MOVED_PAGES)) {
-      const files = from.endsWith('/')
-        ? [join(outDir, from, 'index.html')]
-        : [join(outDir, `${from}.html`), join(outDir, from, 'index.html')]
-      for (const file of files) {
-        mkdirSync(dirname(file), { recursive: true })
-        writeFileSync(file, redirectPage(to))
-      }
-    }
+    writeSeoFiles(outDir, BASE, ORIGIN)
   },
   sitemap: {
-    hostname: 'https://barca0412.github.io',
+    hostname: ORIGIN,
     transformItems: (items) => items.map((item) => ({
       ...item,
-      url: `/Introduction-to-Quantitative-Finance/${item.url}`,
-      links: item.links?.map((link) => ({
-        ...link,
-        url: `/Introduction-to-Quantitative-Finance/${link.url}`
-      }))
+      url: item.url.replace(/^\//, ''),
+      links: item.links?.map((link) => ({ ...link, url: link.url.replace(/^\//, '') }))
     }))
   },
   transformHead: ({ pageData, title, description }) => {
@@ -161,7 +137,7 @@ export default defineConfig({
       ['meta', { property: 'og:description', content: description }],
       ['meta', { property: 'og:url', content: url }],
       ['meta', { property: 'og:image', content: OG_IMAGE }],
-      ['meta', { property: 'og:image:alt', content: `${SITE_NAME}：项目式量化教程与 AI × 金融论文雷达` }],
+      ['meta', { property: 'og:image:alt', content: `${SITE_NAME}：量化研究资源与 AI × 金融论文雷达` }],
       ['meta', { property: 'og:locale', content: 'zh_CN' }],
       ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
       ['meta', { name: 'twitter:title', content: title }],
@@ -182,7 +158,7 @@ export default defineConfig({
     }
     // Knowledge-base concept pages with a `wiki:` block are TechArticles too.
     const wiki = pageData.frontmatter.wiki
-    if (wiki && path.startsWith('wiki/')) {
+    if (wiki && path.startsWith('resources/method-')) {
       graph.push({
         '@type': 'TechArticle',
         headline: pageData.title,
@@ -226,13 +202,13 @@ export default defineConfig({
         {
           '@type': 'Organization',
           name: '湖南大学金融科技协会 Quant Group',
-          url: 'https://barca0412.github.io/Introduction-to-Quantitative-Finance/',
+          url: SITE,
           sameAs: ['https://github.com/Barca0412/Introduction-to-Quantitative-Finance']
         },
         {
           '@type': 'WebSite',
-          name: '量化研究入门',
-          url: 'https://barca0412.github.io/Introduction-to-Quantitative-Finance/',
+          name: SITE_NAME,
+          url: SITE,
           inLanguage: 'zh-CN',
           description: '基于多因子股票量化投研框架的开源教程，并提供每日更新的 FinPaperRadar（AI × 金融论文雷达）。'
         }
@@ -244,11 +220,11 @@ export default defineConfig({
     
     nav: [
       { text: '首页', link: '/' },
-      { text: '教程', link: '/tutorials/', activeMatch: '^/tutorials/' },
-      { text: '知识库', link: '/wiki/', activeMatch: '^/wiki/' },
-      { text: '研报与论文', link: '/library/', activeMatch: '^/library/' },
-      { text: '论文雷达', link: '/arxiv/', activeMatch: '^/arxiv/' },
-      { text: '资源', link: '/resources/', activeMatch: '^/resources/' }
+      { text: '教程', link: '/tutorials/' },
+      { text: '开源资源清单', link: '/resources/' },
+      { text: '研报与论文', link: '/library/' },
+      { text: 'AI × 金融论文雷达 FinPaperRadar', link: '/arxiv/' },
+      { text: '投稿与联系', link: '/contact' }
     ],
 
     sidebar: {
@@ -258,32 +234,6 @@ export default defineConfig({
           link: '/tutorials/',
           collapsed: false,
           items: LECTURES.map((l) => ({ text: l.title, link: `/tutorials/${l.name}/` }))
-        },
-        quickNav
-      ],
-      '/wiki/': [
-        {
-          text: '知识库',
-          link: '/wiki/',
-          collapsed: false,
-          items: [
-            { text: '多因子投研框架', link: '/wiki/framework' },
-            { text: '数据源与另类数据', link: '/wiki/data' },
-            {
-              text: '因子挖掘',
-              link: '/wiki/factors/',
-              collapsed: false,
-              items: [
-                { text: '基本面因子', link: '/wiki/factors/fundamental' },
-                { text: '技术因子', link: '/wiki/factors/technical' },
-                { text: '机器学习因子', link: '/wiki/factors/ml-factors' },
-                { text: 'LLM 因子挖掘', link: '/wiki/factors/llm-factors' }
-              ]
-            },
-            { text: '回测框架', link: '/wiki/backtest' },
-            { text: '投资组合优化', link: '/wiki/portfolio' },
-            { text: '投资者情绪与行为金融', link: '/wiki/sentiment' }
-          ]
         },
         quickNav
       ],
@@ -315,15 +265,15 @@ export default defineConfig({
       ],
       '/resources/': [
         {
-          text: '资源',
-          link: '/resources/',
-          collapsed: false,
+          text: '开源资源', link: '/resources/', collapsed: false,
           items: [
+            { text: '开源资源清单', link: '/resources/' },
+            { text: '研报与论文', link: '/library/' },
             ...RESOURCE_PAGES.map((p) => ({ text: p.title, link: `/resources/${p.key}` })),
             ...(RESOURCE_PAGES.length && REGISTRY.options.credits_page ? [{ text: '致谢与来源', link: '/resources/credits' }] : [])
           ]
         },
-        quickNav
+        { text: '研究方法', collapsed: false, items: METHOD_NAV }
       ],
       '/about': [quickNav]
     },

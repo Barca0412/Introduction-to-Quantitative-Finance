@@ -99,7 +99,13 @@ def build(papers: Iterable[Dict[str, Any]], out_dir: Path) -> Dict[str, Any]:
         return summary
 
     newest = max(p["published_date"][:10] for p in papers)
-    weeks = sorted({week_of(p["published_date"]) for p in papers})
+    # A week without matching papers is still part of the observation period.
+    # Otherwise charts close calendar gaps and "the previous 4 weeks" silently
+    # becomes the previous 4 non-empty weeks, distorting the rising baseline.
+    start = date.fromisoformat(first_week)
+    last = date.fromisoformat(week_of(newest))
+    weeks = [(start + timedelta(days=offset)).isoformat()
+             for offset in range(0, (last - start).days + 1, 7)]
     totals = Counter(week_of(p["published_date"]) for p in papers)
 
     dims = {

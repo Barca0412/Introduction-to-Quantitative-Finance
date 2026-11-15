@@ -1,0 +1,54 @@
+{
+  "model": "Xenova/all-MiniLM-L6-v2",
+  "revision": "751bff37182d3f1213fa05d7196b954e230abad9",
+  "transformers": "2.17.2",
+  "dimension": 384,
+  "license": "Apache-2.0",
+  "files": {
+    "config.json": {
+      "bytes": 650,
+      "sha256": "7135149f7cffa1a573466c6e4d8423ed73b62fd2332c575bf738a0d033f70df7"
+    },
+    "tokenizer.json": {
+      "bytes": 711661,
+      "sha256": "da0e79933b9ed51798a3ae27893d3c5fa4a201126cef75586296df9b4d2c62a0"
+    },
+    "tokenizer_config.json": {
+      "bytes": 366,
+      "sha256": "9261e7d79b44c8195c1cada2b453e55b00aeb81e907a6664974b4d7776172ab3"
+    },
+    "onnx/model_quantized.onnx": {
+      "bytes": 22972370,
+      "sha256": "afdb6f1a0e45b715d0bb9b11772f032c399babd23bfc31fed1c170afc848bdb1"
+    }
+  },
+  "modelCard": {
+    "url": "https://huggingface.co/Xenova/all-MiniLM-L6-v2/resolve/751bff37182d3f1213fa05d7196b954e230abad9/README.md",
+    "bytes": 1767,
+    "sha256": "63ea99bf681a2e9eda4f6a537d5ed8fda95d1677111656da37e9cfd080c3af02"
+  },
+  "wasmFiles": [
+    "ort-wasm.wasm",
+    "ort-wasm-simd.wasm",
+    "ort-wasm-threaded.wasm",
+    "ort-wasm-simd-threaded.wasm"
+  ],
+  "runtimeFiles": {
+    "ort-wasm.wasm": {
+      "bytes": 9223228,
+      "sha256": "bbdcb6b3c7d294577d806077630460be4e13ca35a345acb5e81188e9649fa74a"
+    },
+    "ort-wasm-simd.wasm": {
+      "bytes": 10014674,
+      "sha256": "9bd07bababc65f53d061f457233eeae501be7ceb8a2adb9eef52d87fe776d865"
+    },
+    "ort-wasm-threaded.wasm": {
+      "bytes": 9149637,
+      "sha256": "2ee2f715093aaacc0344bfb1610313eb49a3474e8afde5e4635f30ddfc7615c8"
+    },
+    "ort-wasm-simd-threaded.wasm": {
+      "bytes": 9960821,
+      "sha256": "ac23f2f3cbd519a65a0796f7c79eb34ead4c1f6f31eb06e14ed8a9579d697ef6"
+    }
+  }
+}

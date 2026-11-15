@@ -246,7 +246,8 @@ def _top(counter: Counter) -> str:
     return _ranked(counter, 1)[0][0] if counter else ""
 
 
-def build(papers: Iterable[Dict[str, Any]], out_dir: Path, today: Optional[date] = None) -> Dict[str, Any]:
+def build(papers: Iterable[Dict[str, Any]], out_dir: Path, today: Optional[date] = None,
+          paper_refs: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
     papers = [p for p in papers if p.get("published_date")]
     out_dir.mkdir(parents=True, exist_ok=True)
     people = People()
@@ -276,7 +277,6 @@ def build(papers: Iterable[Dict[str, Any]], out_dir: Path, today: Optional[date]
                "periods": {name: {"since": since, **_leader_lists(
                    [r for r in rows if r["paper"]["published_date"][:10] >= since], names, person_inst, inst_info)}
                    for name, since in periods.items()}}
-    (out_dir / "leaders.json").write_text(json.dumps(leaders, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 
     # Detail pages for institutions and authors with >= DETAIL_MIN_PAPERS papers.
     by_inst: Dict[str, List[Dict[str, Any]]] = defaultdict(list)
@@ -304,6 +304,39 @@ def build(papers: Iterable[Dict[str, Any]], out_dir: Path, today: Optional[date]
     def person_ref(person: str, n: int) -> Dict[str, Any]:
         return {"id": person, "name": _ranked(names[person], 1)[0][0], "n": n,
                 "page": _slug(person) if len(by_person[person]) >= DETAIL_MIN_PAPERS else ""}
+
+    # Explicit page availability prevents links to one-paper entities and avoids
+    # client-side guesses based on names. Use the same resolved identities in drawers.
+    for period in leaders["periods"].values():
+        for entry in period["institutions"] + period["companies"] + period["institution_domain"]["rows"]:
+            entry["page"] = inst_ref(entry["id"], 0)["page"]
+        for entry in period["authors"]:
+            entry["page"] = person_ref(entry["id"], 0)["page"]
+            entry["institution_page"] = inst_ref(entry["institution_id"], 0)["page"] if entry["institution_id"] else ""
+
+    since = (end - timedelta(days=13)).isoformat()
+    recent = _leader_lists([r for r in rows if since <= r["paper"]["published_date"][:10] <= newest], names, person_inst, inst_info)
+    grid = recent["institution_domain"]
+    grid_rows = {r["id"]: r["counts"] for r in grid["rows"]}
+    leaders["overview"] = {"since": since, "until": newest, "papers": recent["papers"],
+                           "domains": grid["domains"], "institutions": [
+                               {**entry, "page": inst_ref(entry["id"], 0)["page"], "cells": grid_rows[entry["id"]]}
+                               for entry in recent["institutions"][:5]]}
+    (out_dir / "leaders.json").write_text(json.dumps(leaders, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+
+    if paper_refs is not None:
+        for row in rows:
+            # Preserve the input institution order: author_affiliations indexes it.
+            institutions = []
+            for inst in row["paper"].get("institutions") or []:
+                key = inst.get("ror") or "name:" + _slug(inst.get("name", ""))
+                institutions.append({**inst_ref(key, len(by_inst[key])),
+                                     "country": inst.get("country", ""), "type": inst.get("type", "")})
+            paper_refs[row["paper"]["id"]] = {
+                "institutions": institutions,
+                "authors": [{**person_ref(person, len(by_person[person])), "name": name}
+                            for person, name, _ in row["authors"]],
+            }
 
     written = {"institution": 0, "author": 0}
     for sub in written:  # drop pages of earlier builds (people merged, papers dropped)
@@ -338,6 +371,9 @@ def build(papers: Iterable[Dict[str, Any]], out_dir: Path, today: Optional[date]
         written["author"] += 1
 
     teams = build_teams(rows, names, person_inst, inst_info, by_person)
+    for team in teams:
+        for entry in team["institutions"]:
+            entry["page"] = inst_ref(entry["id"], entry["n"])["page"]
     (out_dir / "teams.json").write_text(json.dumps(
         {"rule": f"authors with >= {TEAM_MIN_PAPERS} papers, linked when two wrote >= {TEAM_MIN_PAPERS} papers "
                  f"together; groups of >= {TEAM_MIN_SIZE}", "teams": teams},

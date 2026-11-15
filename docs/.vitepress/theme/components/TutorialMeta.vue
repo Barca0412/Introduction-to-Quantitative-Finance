@@ -2,13 +2,16 @@
 // Lecture header card, shown above any page whose frontmatter has `tutorial:`.
 // Keeps every lecture's "level / duration / prerequisites / data / code" block identical.
 import { computed } from 'vue'
-import { useData } from 'vitepress'
+import { useData, withBase } from 'vitepress'
+import { normalizePath } from '../paths.js'
+import { METHOD_NAV } from '../../../../scripts/site/routes.mjs'
 
 const REPO = 'https://github.com/Barca0412/Introduction-to-Quantitative-Finance'
 const { frontmatter, page } = useData()
 
 const asList = (value) => (Array.isArray(value) ? value : value ? [value] : [])
 const meta = computed(() => frontmatter.value.tutorial || null)
+const concepts = computed(() => asList(meta.value?.wiki).map(normalizePath).map(link => ({ link, text: METHOD_NAV.find(item => item.link === link)?.text || link })))
 
 // docs/tutorials/01-factor-ic-test/index.md -> .../tree/main/docs/tutorials/01-factor-ic-test/code
 const codeUrl = computed(() => {
@@ -24,9 +27,10 @@ const rows = computed(() => {
   return [
     ['难度', t.level],
     ['预计时长', t.duration],
-    ['前置知识', asList(t.prerequisites).join('、')],
+    ['先修', asList(t.prerequisites).join('、')],
     ['数据', asList(t.data).join('、')],
-    ['署名', t.author],
+    ['整理', t.author],
+    ['授权', t.license],
   ].filter(([, value]) => value)
 })
 </script>
@@ -34,14 +38,14 @@ const rows = computed(() => {
 <template>
   <div v-if="meta" class="tutorial-meta">
     <dl>
-      <template v-for="[label, value] in rows" :key="label">
+      <div v-for="[label, value] in rows" :key="label">
         <dt>{{ label }}</dt>
         <dd>{{ value }}</dd>
-      </template>
+      </div>
+      <div v-if="concepts.length"><dt>用到的概念</dt><dd><template v-for="(concept, index) in concepts" :key="concept.link"><span v-if="index">、</span><a :href="withBase(concept.link)">{{ concept.text }}</a></template></dd></div>
     </dl>
-    <p class="tutorial-meta-links">
+    <p v-if="codeUrl" class="tutorial-meta-links">
       <a v-if="codeUrl" :href="codeUrl" target="_blank" rel="noopener">查看本讲代码</a>
-      <span v-if="meta.license" class="tutorial-meta-license">{{ meta.license }}</span>
     </p>
   </div>
 </template>
@@ -49,23 +53,38 @@ const rows = computed(() => {
 <style scoped>
 .tutorial-meta {
   margin: 0 0 24px;
-  padding: 12px 16px;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 8px;
-  background: var(--vp-c-bg-soft);
+  padding: 0 0 24px;
+  min-width: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
   font-size: 14px;
 }
 .tutorial-meta dl {
-  display: grid;
-  grid-template-columns: max-content 1fr;
-  gap: 4px 16px;
+  display: block;
   margin: 0;
+  border-top: 1px solid var(--rule);
+}
+.tutorial-meta dl > div {
+  display: grid;
+  grid-template-columns: 5.5em minmax(0, 1fr);
+  min-width: 0;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--rule);
 }
 .tutorial-meta dt {
   color: var(--vp-c-text-2);
+  margin: 0;
+  padding-top: 2px;
+  line-height: 1.55;
 }
 .tutorial-meta dd {
   margin: 0;
+  min-width: 0;
+  font-size: 15px;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
 }
 .tutorial-meta-links {
   display: flex;

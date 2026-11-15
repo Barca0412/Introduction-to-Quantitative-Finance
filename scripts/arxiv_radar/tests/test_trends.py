@@ -65,6 +65,43 @@ class TrendsTest(unittest.TestCase):
             self.assertEqual(trends.build([], Path(tmp))["papers"], 0)
             self.assertTrue((Path(tmp) / "rising.json").exists())
 
+    def test_zero_weeks_remain_aligned_across_year_boundary(self):
+        papers = [paper("early", "2026-12-28", ["llm-agent"], insts=["Example University"])]
+        papers += [paper(f"now-{n}", "2027-01-11", ["llm-agent"], insts=["Example University"])
+                   for n in range(3)]
+        with tempfile.TemporaryDirectory() as tmp, mock.patch.object(trends, "TRENDS_SINCE", "2026-12-14"):
+            out = Path(tmp)
+            summary = trends.build(papers, out)
+            kw = json.loads((out / "weekly_keywords.json").read_text())
+            topic = json.loads((out / "topic" / "trading.json").read_text())
+            inst = json.loads((out / "weekly_institutions.json").read_text())
+            rising = json.loads((out / "rising.json").read_text())
+        weeks = ["2026-12-14", "2026-12-21", "2026-12-28", "2027-01-04", "2027-01-11"]
+        self.assertEqual(summary["weeks"], weeks)
+        self.assertEqual(kw["weeks"], weeks)
+        self.assertEqual(kw["totals"], [0, 0, 1, 0, 3])
+        self.assertEqual(kw["keywords"]["llm-agent"]["counts"], [0, 0, 1, 0, 3])
+        self.assertEqual(topic["counts"], [0, 0, 1, 0, 3])
+        self.assertEqual(inst["institutions"]["Example University"]["counts"], [0, 0, 1, 0, 3])
+        self.assertTrue(rising["enough_history"])
+        self.assertEqual(rising["weeks_compared"], weeks[:4])
+        keyword_riser = next(row for row in rising["lists"]["keyword"] if row["id"] == "llm-agent")
+        self.assertEqual(keyword_riser["mean_before"], 0.25)
+        self.assertFalse(keyword_riser["new"])
+
+    def test_rising_does_not_reuse_older_nonempty_weeks(self):
+        papers = [paper("old", "2026-11-03", ["llm-agent"])]
+        papers += [paper(f"now-{n}", "2026-12-07", ["llm-agent"]) for n in range(3)]
+        with tempfile.TemporaryDirectory() as tmp, mock.patch.object(trends, "TRENDS_SINCE", "2026-11-01"):
+            out = Path(tmp)
+            trends.build(papers, out)
+            rising = json.loads((out / "rising.json").read_text())
+        self.assertEqual(rising["weeks_compared"], ["2026-11-09", "2026-11-16", "2026-11-23", "2026-11-30"])
+        self.assertTrue(rising["enough_history"])
+        keyword_riser = next(row for row in rising["lists"]["keyword"] if row["id"] == "llm-agent")
+        self.assertEqual(keyword_riser["mean_before"], 0)
+        self.assertTrue(keyword_riser["new"])
+
 
 if __name__ == "__main__":
     unittest.main()
