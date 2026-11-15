@@ -144,6 +144,9 @@ def _papers_schema():
             ("team_background", pa.string()),
             ("discipline", pa.string()),
             ("discipline_basis", pa.string()),
+            # S11: match in the top-venue accepted-paper library (venue_library.py).
+            ("venue_list", pa.struct([("venue_id", pa.string()), ("year", pa.int32()), ("track", pa.string()),
+                                      ("decision", pa.string()), ("match_method", pa.string())])),
         ]
     )
 
@@ -225,6 +228,8 @@ def _clean_paper_for_parquet(paper: Dict[str, Any]) -> Dict[str, Any]:
         "team_background": paper.get("team_background"),
         "discipline": paper.get("discipline"),
         "discipline_basis": paper.get("discipline_basis"),
+        "venue_list": {k: paper["venue_list"].get(k) for k in ("venue_id", "year", "track", "decision", "match_method")}
+                      if isinstance(paper.get("venue_list"), dict) else None,
     }
 
 

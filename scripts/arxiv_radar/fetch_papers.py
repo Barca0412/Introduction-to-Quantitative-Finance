@@ -11,6 +11,7 @@ import arxiv
 
 from .institutions import enrich_institutions
 from .keywords import normalize_all
+from .venue_library import tag_papers
 from .venues import classify_all
 from .compute_stats import compute_and_save_stats
 from .config import (
@@ -162,6 +163,8 @@ def report_venues(report: Dict[str, Any]) -> None:
     lines = [
         "### Venue and discipline", "",
         f"- {report['with_venue']} of {report['papers']} enriched papers name a venue",
+        f"- top-venue library: {report.get('library', {}).get('library_papers', 0)} accepted papers on disk, "
+        f"{report.get('library', {}).get('matched', 0)} radar papers found in it",
         "- discipline: " + ", ".join(f"{k} {v}" for k, v in sorted(report["discipline"].items())),
         "- based on: " + ", ".join(f"{k} {v}" for k, v in sorted(report["basis"].items())),
     ]
@@ -360,8 +363,13 @@ async def run_pipeline() -> Optional[Dict[str, Any]]:
     institution_counts = await enrich_institutions(merged["papers"])
     report_institutions(institution_counts)
 
+    # S11: official accepted lists of the top venues, when the library is on disk.
+    library_report = tag_papers(merged["papers"])
+    logger.info("Top-venue library: %s", library_report)
+
     # Venue and discipline (4.3.6): needs the institutions above for the team guess.
     venue_report = classify_all(merged["papers"])
+    venue_report["library"] = library_report
     report_venues(venue_report)
 
     logger.info("\n[Step 5] Saving papers data...")

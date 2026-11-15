@@ -105,8 +105,25 @@ def team_background(paper: Dict[str, Any]) -> str:
 _TEAM_TO_DISCIPLINE = {"cs": "cs", "finance-econ": "finance-econ", "mixed": "interdisciplinary"}
 
 
+def venue_from_library(listed: Optional[Dict[str, Any]]) -> Optional[Dict[str, Any]]:
+    """The S11 library hit (official accepted list) as a venue; most reliable source."""
+    if not listed:
+        return None
+    entry = next((e for e in venue_table() if e["id"] == listed.get("venue_id")), None)
+    if entry is None:
+        return None
+    track = str(listed.get("track") or "")
+    return {
+        "id": entry["id"], "name": entry["name"], "kind": entry["kind"], "discipline": entry["discipline"],
+        "status": "published" if entry["kind"] == "journal" else "accepted", "year": listed.get("year"),
+        "source": "venue_list", "text": ", ".join(x for x in (track if track not in ("", "main") else "", str(listed.get("decision") or "")) if x),
+    }
+
+
 def classify_paper(paper: Dict[str, Any]) -> None:
-    venue = detect_venue(paper.get("journal_ref", ""), "journal-ref") or detect_venue(paper.get("venue_mention", ""), "comment")
+    venue = (venue_from_library(paper.get("venue_list"))
+             or detect_venue(paper.get("journal_ref", ""), "journal-ref")
+             or detect_venue(paper.get("venue_mention", ""), "comment"))
     team = team_background(paper)
     paper["venue"] = venue
     paper["team_background"] = team
