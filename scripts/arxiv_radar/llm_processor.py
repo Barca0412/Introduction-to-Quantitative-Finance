@@ -7,7 +7,7 @@ import asyncio
 import functools
 import logging
 import socket
-from typing import Dict, Any, Optional, List
+from typing import Any, Awaitable, Callable, Dict, List, Optional
 
 import aiohttp
 
@@ -20,6 +20,7 @@ from .config import (
     MAX_CONCURRENT,
     MAX_RETRIES,
     REQUEST_TIMEOUT,
+    CHECKPOINT_EVERY,
     PREDEFINED_TAGS,
 )
 from . import enrich
@@ -220,6 +221,24 @@ def fallback_tags_for_paper(paper: Dict[str, Any]) -> List[str]:
     return validate_tags_for_paper(paper, tags)
 
 
+# The API refuses every request with these (no balance, bad or revoked key): retrying
+# a paper, or moving on to the next one, cannot help. Stop the batch instead.
+FATAL_STATUSES = (401, 402, 403)
+
+
+class FatalLLMError(Exception):
+    """The LLM API refuses all requests (e.g. HTTP 402 Insufficient Balance)."""
+
+
+class LLMBudgetExhausted(RuntimeError):
+    """A batch stopped early on a FatalLLMError. ``papers`` holds the papers that were
+    finished before the stop (enriched, or failed for their own reasons)."""
+
+    def __init__(self, message: str, papers: List[Dict[str, Any]]):
+        super().__init__(message)
+        self.papers = papers
+
+
 def async_retry(max_retries: int = 3, base_delay: float = 2.0):
     """
     Decorator for async function retry with exponential backoff.
@@ -238,6 +257,8 @@ def async_retry(max_retries: int = 3, base_delay: float = 2.0):
             for attempt in range(max_retries):
                 try:
                     return await func(*args, **kwargs)
+                except FatalLLMError:
+                    raise
                 except Exception as e:
                     last_exception = e
                     if attempt < max_retries - 1:
@@ -316,6 +337,8 @@ class LLMClient:
                 json=payload,
                 timeout=aiohttp.ClientTimeout(total=REQUEST_TIMEOUT),
             ) as response:
+                if response.status in FATAL_STATUSES:
+                    raise FatalLLMError(f"API error {response.status}: {(await response.text())[:300]}")
                 if response.status != 200:
                     error_text = await response.text()
                     raise Exception(f"API error {response.status}: {error_text}")
@@ -350,6 +373,8 @@ async def process_paper(
         except enrich.EnrichError as exc:
             error_hint = str(exc)
             continue
+        except FatalLLMError:
+            raise  # not this paper's fault: the batch stops, nothing is counted
         except Exception as exc:  # HTTP errors after call_llm's own retries
             logger.error("LLM call failed for %s: %s: %r", paper.get("id", "unknown"), type(exc).__name__, exc)
             error_hint = f"{type(exc).__name__}: {exc}"
@@ -370,17 +395,18 @@ async def process_paper(
 
 async def process_papers_batch(
     papers: List[Dict[str, Any]],
-    concurrency: int = MAX_CONCURRENT
+    concurrency: int = MAX_CONCURRENT,
+    checkpoint: Optional[Callable[[List[Dict[str, Any]]], Awaitable[None]]] = None,
+    checkpoint_every: Optional[int] = None,
 ) -> List[Dict[str, Any]]:
-    """
-    Process a batch of papers concurrently.
+    """Process a batch of papers concurrently; returns them in input order.
 
-    Args:
-        papers: List of papers to process
-        concurrency: Maximum number of concurrent LLM calls
+    ``checkpoint`` is awaited with all papers finished so far after every
+    ``checkpoint_every`` of them, so a crash or a stop loses at most that many.
 
-    Returns:
-        List of processed papers
+    On a FatalLLMError (e.g. HTTP 402, no balance) no further calls are started and
+    LLMBudgetExhausted is raised with the papers finished before the stop. Papers that
+    were not reached are left untouched and get no failure count.
     """
     if not LLM_API_KEY:
         logger.warning(
@@ -396,11 +422,38 @@ async def process_papers_batch(
             for paper in papers
         ]
 
-    async with LLMClient(LLM_API_KEY, concurrency) as client:
-        tasks = [process_paper(paper.copy(), client) for paper in papers]
-        results = await asyncio.gather(*tasks)
+    every = checkpoint_every or CHECKPOINT_EVERY
+    fatal: List[str] = []
+    finished: List[Dict[str, Any]] = []
+    results: List[Optional[Dict[str, Any]]] = [None] * len(papers)
+    queue: "asyncio.Queue[int]" = asyncio.Queue()
+    for index in range(len(papers)):
+        queue.put_nowait(index)
 
-    return results
+    async with LLMClient(LLM_API_KEY, concurrency) as client:
+
+        async def worker() -> None:
+            # A fixed pool of workers, each taking the next paper only while no fatal
+            # error has been seen: after a 402 nothing new is sent.
+            while not fatal and not queue.empty():
+                index = queue.get_nowait()
+                try:
+                    result = await process_paper(papers[index].copy(), client)
+                except FatalLLMError as exc:
+                    if not fatal:
+                        fatal.append(str(exc))
+                        logger.error("Stopping the LLM batch: %s", exc)
+                    return
+                results[index] = result
+                finished.append(result)
+                if checkpoint and len(finished) % every == 0:
+                    await checkpoint(list(finished))
+
+        await asyncio.gather(*(worker() for _ in range(max(1, concurrency))))
+
+    if fatal:
+        raise LLMBudgetExhausted(fatal[0], finished)
+    return [result for result in results if result is not None]
 
 
 def process_papers_sync(papers: List[Dict[str, Any]]) -> List[Dict[str, Any]]:

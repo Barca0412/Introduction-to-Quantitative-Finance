@@ -23,8 +23,16 @@ from .config import (
 )
 from .generate_charts import generate_all_charts, generate_combined_chart
 from .enrich import ENRICH_VERSION, needs_enrich
-from .llm_processor import fallback_tags_for_paper, process_papers_batch
-from .storage import load_papers, merge_papers, refresh_rule_tags, save_papers
+from .llm_processor import LLMBudgetExhausted, fallback_tags_for_paper, process_papers_batch
+from .storage import (
+    append_checkpoint,
+    clear_checkpoint,
+    load_papers,
+    merge_papers,
+    read_checkpoint,
+    refresh_rule_tags,
+    save_papers,
+)
 from .utils import build_paper_record, get_target_dates, normalize_arxiv_id
 
 
@@ -232,6 +240,11 @@ async def run_pipeline() -> Optional[Dict[str, Any]]:
         )
 
     existing = load_papers()
+    recovered = read_checkpoint()
+    if recovered:
+        # An earlier run was interrupted after enriching these: keep its work.
+        existing = merge_papers(existing, recovered)
+        logger.info("Recovered %s enriched papers from the checkpoint of an interrupted run", len(recovered))
     new_batch = needs_enrichment(deduped_batch, existing)
     logger.info(
         "%s fetched papers are already stored with a summary; %s are new or need another try",
@@ -241,7 +254,35 @@ async def run_pipeline() -> Optional[Dict[str, Any]]:
 
     if new_batch:
         logger.info("\n[Step 2] Processing %s papers with LLM...", len(new_batch))
-        processed_papers = await process_papers_batch(new_batch)
+        written = 0
+
+        async def checkpoint(done: List[Dict[str, Any]]) -> None:
+            # Append only what is new since the last checkpoint: milliseconds, whereas
+            # rewriting the 30k-paper history takes ~10 s. Merged back on the next run.
+            nonlocal written
+            append_checkpoint(done[written:])
+            written = len(done)
+            logger.info("Checkpoint: %s of %s papers enriched and kept", written, len(new_batch))
+
+        try:
+            processed_papers = await process_papers_batch(new_batch, checkpoint=checkpoint)
+        except LLMBudgetExhausted as exc:
+            save_papers(merge_papers(existing, exc.papers))
+            clear_checkpoint()
+            if LLM_API_KEY:
+                report_enrichment(exc.papers)
+            untouched = len(new_batch) - len(exc.papers)
+            message = (
+                f"LLM API refused requests ({exc}). Saved {len(exc.papers)} finished papers; "
+                f"{untouched} were not attempted and keep no failure count. "
+                "Top up / fix the key, then run again (locally: RESUME=1)."
+            )
+            print(f"::error title=LLM stopped::{message}", flush=True)
+            summary_path = os.getenv("GITHUB_STEP_SUMMARY")
+            if summary_path:
+                with open(summary_path, "a", encoding="utf-8") as fh:
+                    fh.write(f"**Stopped early:** {message}\n\n")
+            raise SystemExit(message) from exc
 
         if LLM_API_KEY:
             report_enrichment(processed_papers)
@@ -261,6 +302,7 @@ async def run_pipeline() -> Optional[Dict[str, Any]]:
 
     logger.info("\n[Step 5] Saving papers data...")
     save_papers(merged)
+    clear_checkpoint()
     logger.info("Papers saved successfully")
 
     logger.info("\n[Step 6] Computing statistics...")

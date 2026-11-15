@@ -8,7 +8,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 from .affiliations import normalize_affiliation_fields
-from .config import PAPERS_FILE, STATS_FILE
+from .config import ENRICH_CHECKPOINT_FILE, PAPERS_FILE, STATS_FILE
 from .focus import build_focus_metadata
 from .utils import (
     build_arxiv_abs_link,
@@ -233,3 +233,30 @@ def refresh_rule_tags(papers: List[Dict[str, Any]], tagger) -> int:
             paper["focus"] = build_focus_metadata(paper)
             changed += 1
     return changed
+
+
+def append_checkpoint(papers: List[Dict[str, Any]]) -> None:
+    """Append freshly enriched papers to the checkpoint file (fast: no full rewrite)."""
+    ENRICH_CHECKPOINT_FILE.parent.mkdir(parents=True, exist_ok=True)
+    with open(ENRICH_CHECKPOINT_FILE, "a", encoding="utf-8") as fh:
+        for paper in papers:
+            fh.write(json.dumps(paper, ensure_ascii=False) + "\n")
+        fh.flush()
+
+
+def read_checkpoint() -> List[Dict[str, Any]]:
+    """Papers left by an interrupted run; a torn last line (crash mid-write) is skipped."""
+    if not ENRICH_CHECKPOINT_FILE.exists():
+        return []
+    papers = []
+    with open(ENRICH_CHECKPOINT_FILE, encoding="utf-8") as fh:
+        for line in fh:
+            try:
+                papers.append(json.loads(line))
+            except json.JSONDecodeError:
+                continue
+    return papers
+
+
+def clear_checkpoint() -> None:
+    ENRICH_CHECKPOINT_FILE.unlink(missing_ok=True)

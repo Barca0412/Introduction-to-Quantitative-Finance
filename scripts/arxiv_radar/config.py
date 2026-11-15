@@ -22,6 +22,9 @@ DATA_DIR.mkdir(exist_ok=True)
 
 # Data file paths (all generated, all git-ignored; history lives in external storage)
 PAPERS_FILE = DATA_DIR / "papers.json"
+# Papers enriched during a run that has not saved yet (one JSON per line). Merged back
+# into the history at the start of the next run, deleted after a successful save.
+ENRICH_CHECKPOINT_FILE = DATA_DIR / "enrich_checkpoint.jsonl"
 STATS_FILE = DATA_DIR / "stats.json"
 # Full-precision embeddings: raw little-endian float32 matrix + JSON sidecar
 # (ids in row order, per-row text hash, model, theme vectors).
@@ -571,6 +574,9 @@ THINKING_TOGGLE_PREFIXES = ("glm-", "deepseek-")
 MAX_CONCURRENT = 20
 MAX_RETRIES = 3
 REQUEST_TIMEOUT = 90
+# Save the history after every N papers enriched in a run, so a crash, Ctrl+C or a
+# stop on HTTP 402 loses at most N papers' worth of LLM calls.
+CHECKPOINT_EVERY = max(1, int(os.getenv("RADAR_CHECKPOINT_EVERY", "100") or 100))
 
 # ============================================
 # arXiv Fetching Configuration
