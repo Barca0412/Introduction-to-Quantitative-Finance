@@ -137,6 +137,13 @@ def _papers_schema():
             # S5 keywords (keywords.py).
             ("keywords_norm", pa.list_(pa.struct([("id", pa.string()), ("en", pa.string()), ("zh", pa.string()),
                                                    ("kind", pa.string()), ("raw", pa.string()), ("new", pa.bool_())]))),
+            # Venue and discipline (venues.py).
+            ("venue", pa.struct([("id", pa.string()), ("name", pa.string()), ("kind", pa.string()),
+                                 ("discipline", pa.string()), ("status", pa.string()), ("year", pa.int32()),
+                                 ("source", pa.string()), ("text", pa.string())])),
+            ("team_background", pa.string()),
+            ("discipline", pa.string()),
+            ("discipline_basis", pa.string()),
         ]
     )
 
@@ -212,6 +219,12 @@ def _clean_paper_for_parquet(paper: Dict[str, Any]) -> Dict[str, Any]:
              "kind": str(k.get("kind", "")), "raw": str(k.get("raw", "")), "new": bool(k.get("new"))}
             for k in paper.get("keywords_norm") or [] if isinstance(k, dict)
         ],
+        "venue": {k: (paper["venue"].get(k) if k != "year" else (int(paper["venue"]["year"]) if paper["venue"].get("year") else None))
+                  for k in ("id", "name", "kind", "discipline", "status", "year", "source", "text")}
+                 if isinstance(paper.get("venue"), dict) else None,
+        "team_background": paper.get("team_background"),
+        "discipline": paper.get("discipline"),
+        "discipline_basis": paper.get("discipline_basis"),
     }
 
 
