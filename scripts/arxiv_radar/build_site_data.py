@@ -79,7 +79,8 @@ SCHEMA = {
     "dm": "data market ids (omitted when not stated)",
     "tl": "one-sentence Chinese summary (tldr_zh)",
     "kn": "standard keywords: [id, Chinese name or English, kind f|t]",
-    "v": "venue: n=name, k=kind, s=status, y=year (only when recognised)",
+    "v": "venue: n=name, k=kind, s=status, y=year (only when recognised); o=1 when it comes from the"
+         " venue's official accepted list, t=track/decision from that list (e.g. Spotlight)",
     "vm": "venue as the authors wrote it, when not recognised",
     "ds": "discipline: cs | finance-econ | interdisciplinary | other (omitted when unknown)",
     "cd": "1 when the code is said to be released",
@@ -175,6 +176,10 @@ def _v2_fields(paper: Dict[str, Any]) -> Dict[str, Any]:
     venue = paper.get("venue")
     if isinstance(venue, dict) and venue.get("name"):
         out["v"] = {key: venue[field] for key, field in (("n", "name"), ("k", "kind"), ("s", "status"), ("y", "year")) if venue.get(field)}
+        if venue.get("source") == "venue_list":
+            out["v"]["o"] = 1
+            if venue.get("text"):
+                out["v"]["t"] = venue["text"]
     elif paper.get("venue_mention"):
         out["vm"] = str(paper["venue_mention"])[:120]
     if paper.get("discipline") and paper["discipline"] != "unknown":

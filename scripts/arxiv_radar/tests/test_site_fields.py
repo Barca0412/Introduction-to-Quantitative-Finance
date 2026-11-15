@@ -72,6 +72,20 @@ class ListFieldsTest(unittest.TestCase):
             self.assertNotIn(key, record)
         self.assertEqual(record["vm"], "NeurIPS workshop on X")
 
+    def test_paper_not_on_arxiv_keeps_its_own_link(self):
+        paper = enriched(
+            id="doi:10.1145/3711896.3737000", abs_link="https://doi.org/10.1145/3711896.3737000", pdf_link="",
+            venue={"id": "kdd", "name": "KDD", "kind": "conference", "discipline": "cs", "status": "accepted",
+                   "year": 2026, "source": "venue_list", "text": "ADS, oral"},
+        )
+        record, _ = bsd.slim_paper(paper)
+        self.assertEqual(record["u"], "https://doi.org/10.1145/3711896.3737000")
+        self.assertEqual(record["v"], {"n": "KDD", "k": "conference", "s": "accepted", "y": 2026, "o": 1, "t": "ADS, oral"})
+        self.assertEqual(record["r"], 3)
+        arxiv_record, _ = bsd.slim_paper(enriched())
+        self.assertNotIn("u", arxiv_record)
+        self.assertNotIn("o", arxiv_record["v"])
+
     def test_old_format_paper_gets_no_v2_keys(self):
         record, _ = bsd.slim_paper(make_papers(1)[0])
         self.assertFalse({"r", "pt", "tt", "fd", "m", "tl"} & set(record))

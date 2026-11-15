@@ -91,7 +91,11 @@ export function hydratePaper(record, groupKey) {
     data_market: record.dm || [],
     tldr_zh: record.tl || '',
     keywords_std: (record.kn || []).map(([id, label, kind]) => ({ id, label, kind: kind === 'f' ? 'finance' : 'tech' })),
-    venue: record.v ? { name: record.v.n, kind: record.v.k || '', status: record.v.s || '', year: record.v.y || null } : null,
+    // official: confirmed by the venue's accepted-paper list; note: its track or decision.
+    venue: record.v
+      ? { name: record.v.n, kind: record.v.k || '', status: record.v.s || '', year: record.v.y || null,
+          official: record.v.o === 1, note: record.v.t || '' }
+      : null,
     venue_mention: record.vm || '',
     discipline: record.ds || '',
     has_code: record.cd === 1,
