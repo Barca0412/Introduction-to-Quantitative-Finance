@@ -4,6 +4,8 @@ from __future__ import annotations
 
 from typing import Any, Dict, List
 
+from .llm_processor import _has_any
+
 
 FOCUS_TAG_ORDER = [
     "ai-finance",
@@ -47,16 +49,20 @@ FOCUS_CATEGORY_WEIGHTS = {
     "cs.CL": 2,
 }
 
+# Whole words only (see _contains_any). "market", "asset", "risk", "alpha" and "credit"
+# alone were dropped on 2026-11-15: they are everyday words in ML papers ("risk"
+# bounds, "credit" assignment) and marked ~2,500 non-finance papers as AI + Finance.
 FINANCE_TERMS = [
     "finance",
     "financial",
     "trading",
-    "market",
     "portfolio",
-    "asset",
-    "credit",
-    "risk",
-    "alpha",
+    "asset pricing",
+    "credit risk",
+    "credit scoring",
+    "stock market",
+    "financial market",
+    "alpha factor",
     "return prediction",
     "stock",
     "order book",
@@ -118,7 +124,9 @@ def _paper_text(paper: Dict[str, Any]) -> str:
 
 
 def _contains_any(text: str, terms: List[str]) -> bool:
-    return any(term in text for term in terms)
+    # Whole words/phrases (plural allowed): "react" no longer matches "reaction",
+    # "defi" no longer matches "definition", "agent" no longer matches "reagent".
+    return _has_any(text, terms)
 
 
 def build_focus_metadata(paper: Dict[str, Any]) -> Dict[str, Any]:
