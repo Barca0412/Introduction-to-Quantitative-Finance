@@ -47,6 +47,7 @@ from .config import (
     PAPERS_FILE,
 )
 from .compute_stats import build_stats
+from . import trends
 from .site_filter import site_visible
 from .utils import is_arxiv_id
 from .data_store import load_local_embeddings
@@ -316,6 +317,8 @@ def build(today: Optional[date] = None) -> Dict[str, Any]:
     site_stats["summary"]["min_relevance"] = SITE_MIN_RELEVANCE
     site_stats["summary"]["core_papers"] = sum(1 for p in papers if p.get("relevance") == 3)
     stats_info = _write(SITE_DATA_DIR / "stats.json", _dumps(site_stats), SITE_MAX_FILE_BYTES)
+    # S8 aggregates for the trends / keyword / institution pages (trends.py).
+    agg_info = trends.build(papers, SITE_DATA_DIR / "agg")
 
     manifest = {
         "version": 2,
@@ -337,6 +340,7 @@ def build(today: Optional[date] = None) -> Dict[str, Any]:
         "recent": {"since": cutoff, "until": anchor.isoformat(), "days": days, **recent_info},
         "archive": archive,
         "stats": stats_info,
+        "agg": agg_info,
         "schema": SCHEMA,
         "limits": {"max_file_bytes": SITE_MAX_FILE_BYTES, "first_load_budget": SITE_FIRST_LOAD_BUDGET},
         "attribution": "Thank you to arXiv for use of its open access interoperability.",
