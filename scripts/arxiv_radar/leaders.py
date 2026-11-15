@@ -190,7 +190,7 @@ def _leader_lists(rows: List[Dict[str, Any]], names: Dict[str, Counter], person_
                 "type_zh": TYPE_ZH.get(info["type"], ""), "country": info["country"],
                 "n": inst_n[key], "core": inst_core[key]}
 
-    ranked = sorted(inst_n, key=lambda k: (-inst_n[k], -inst_core[k], inst_info[k]["label"], k))
+    ranked = sorted(inst_n, key=lambda k: (-inst_n[k], -inst_core[k], inst_info[k]["label"].lower(), k))
     grid_rows = ranked[:GRID_INSTITUTIONS]
     grid = {k: Counter() for k in grid_rows}
     for row in rows:
