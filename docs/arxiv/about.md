@@ -38,6 +38,12 @@ The automated pipeline runs daily. The displayed tags, summaries and affiliation
 - `q-fin.CP`
 - `q-fin.PM`
 - `q-fin.TR`
+- `q-fin.MF`
+- `q-fin.RM`
+- `q-fin.PR`
+- `q-fin.GN`
+- `econ.EM`
+- `cs.LG`、`stat.ML`：只收标题或摘要里带金融词的论文
 
 ## Main research tags
 

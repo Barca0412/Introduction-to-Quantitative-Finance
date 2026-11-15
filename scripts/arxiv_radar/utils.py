@@ -190,3 +190,14 @@ def build_paper_record(result: Any) -> Dict[str, Any]:
         "summary_zh": "",
         "affiliation": "",
     }
+
+
+@functools.lru_cache(maxsize=None)
+def term_pattern(term: str) -> "re.Pattern[str]":
+    """Whole words/phrases only, with an optional plural ending: "rag" must not match
+    "average" or "storage", "api" not "capital", "cot" not "scotland"."""
+    return re.compile(r"(?<![a-z0-9])" + re.escape(term.lower()) + r"(?:s|es)?(?![a-z0-9])")
+
+
+def has_any_term(text: str, terms: List[str]) -> bool:
+    return any(term_pattern(term).search(text) for term in terms)

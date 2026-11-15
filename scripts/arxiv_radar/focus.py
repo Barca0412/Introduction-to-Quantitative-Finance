@@ -4,6 +4,9 @@ from __future__ import annotations
 
 from typing import Any, Dict, List
 
+from .config import FINANCE_TERM_PATTERN
+from .utils import has_any_term
+
 
 FOCUS_TAG_ORDER = [
     "ai-finance",
@@ -36,30 +39,20 @@ FOCUS_CATEGORY_WEIGHTS = {
     "q-fin.CP": 5,
     "q-fin.PM": 5,
     "q-fin.TR": 5,
+    "q-fin.MF": 5,
+    "q-fin.RM": 5,
+    "q-fin.PR": 5,
+    "q-fin.GN": 5,
+    "econ.EM": 2,
     "cs.CE": 3,
     "cs.MA": 3,
     "cs.AI": 2,
     "cs.CL": 2,
 }
 
-FINANCE_TERMS = [
-    "finance",
-    "financial",
-    "trading",
-    "market",
-    "portfolio",
-    "asset",
-    "credit",
-    "risk",
-    "alpha",
-    "return prediction",
-    "stock",
-    "order book",
-    "quantitative finance",
-    "cryptocurrency",
-    "defi",
-]
-
+# "Is this finance?" uses the same whole-word pattern as the cs.LG / stat.ML fetch
+# filter (config.FINANCE_TERM_PATTERN), so the two can no longer drift apart. Bare
+# "market", "risk", "trading" or "portfolio" are not finance on their own there.
 AGENT_TERMS = [
     "agent",
     "agentic",
@@ -113,7 +106,9 @@ def _paper_text(paper: Dict[str, Any]) -> str:
 
 
 def _contains_any(text: str, terms: List[str]) -> bool:
-    return any(term in text for term in terms)
+    # Whole words/phrases (plural allowed): "react" no longer matches "reaction",
+    # "defi" no longer matches "definition", "agent" no longer matches "reagent".
+    return has_any_term(text, terms)
 
 
 def build_focus_metadata(paper: Dict[str, Any]) -> Dict[str, Any]:
@@ -127,7 +122,7 @@ def build_focus_metadata(paper: Dict[str, Any]) -> Dict[str, Any]:
         category for category in categories if category in FOCUS_CATEGORY_WEIGHTS
     ]
 
-    finance_signal = _contains_any(text, FINANCE_TERMS) or any(
+    finance_signal = bool(FINANCE_TERM_PATTERN.search(text)) or any(
         category.startswith("q-fin.") for category in categories
     )
     agent_signal = _contains_any(text, AGENT_TERMS)

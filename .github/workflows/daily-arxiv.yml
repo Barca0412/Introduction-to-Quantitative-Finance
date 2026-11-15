@@ -1,15 +1,15 @@
-name: arXiv Radar update and site deploy
+name: arXiv Radar data update
 
-# One workflow for the whole site:
-# - schedule / manual run: restore full history -> fetch arXiv -> embed -> build site data
-#   -> deploy Pages -> publish full history (GitHub Release `radar-data` + Hugging Face)
-#   -> commit the README status block (only after a successful deploy).
-# - push to main: rebuild and deploy the site from the stored history, no arXiv fetch.
+# Data only: restore full history -> fetch arXiv -> LLM tags -> embed -> export
+# -> publish full history (GitHub Release `radar-data` + Hugging Face)
+# -> rebuild the site from that data (calls deploy-site.yml)
+# -> commit the README status block (only after a successful deploy).
+#
+# The site itself is built and deployed by deploy-site.yml, which also runs on every
+# push to main. So this workflow can be disabled without stopping site updates.
 # Generated data is never committed. Only the README status block is.
 # restore picks the newest of Hugging Face / Release and, if neither has data yet,
 # fetches the legacy `guohao_vitepress` branch by itself for a one-time bootstrap.
-#
-# Requires Settings -> Pages -> Source = "GitHub Actions".
 
 on:
   schedule:
@@ -17,25 +17,8 @@ on:
     # (20:00 US Eastern = 00:00/01:00 UTC), so each run sees the newest batch.
     # The fetch looks back 7 days, so a missed or failed day is picked up later.
     - cron: '0 3 * * *'
-  push:
-    branches:
-      - main
-    paths:
-      - 'docs/**'
-      - 'scripts/arxiv_radar/**'
-      - 'scripts/site/**'
-      # The /library/ index is generated from these folders at build time.
-      - '资料/**'
-      - '论文/**'
-      - 'package.json'
-      - 'package-lock.json'
-      - '.github/workflows/daily-arxiv.yml'
   workflow_dispatch:
     inputs:
-      fetch:
-        description: 'Fetch new arXiv papers (off = only rebuild the site from stored data)'
-        type: boolean
-        default: true
       since:
         description: 'Backfill from this date, YYYY-MM-DD (empty = the usual last 7 days)'
         type: string
@@ -49,14 +32,13 @@ permissions:
   contents: read
 
 concurrency:
-  group: radar-pages
+  group: radar-data
   cancel-in-progress: false
 
 env:
   # Repository variable, e.g. "Barca21412/FinPaperRadar". Empty = skip Hugging Face.
   HF_DATASET_REPO: ${{ vars.HF_DATASET_REPO }}
   RADAR_RELEASE_TAG: radar-data
-  FETCH: ${{ github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.fetch) }}
 
 jobs:
   build:
@@ -67,11 +49,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          # Full commit history (but no old file contents) so VitePress can read each
-          # page's real last-edit date for "最后更新" and the sitemap <lastmod>.
-          fetch-depth: 0
-          filter: blob:none
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -95,7 +72,6 @@ jobs:
         run: npm run arxiv:restore
 
       - name: Fetch and tag new arXiv papers
-        if: env.FETCH == 'true'
         env:
           # Any OpenAI-compatible endpoint. Defaults to DeepSeek; override with
           # repository variables LLM_BASE_URL / LLM_MODEL (e.g. DashScope + qwen).
@@ -112,19 +88,13 @@ jobs:
 
       - name: Update embeddings (incremental)
         env:
-          # Site-only runs do not export, so refreshing stale vectors there is wasted time.
-          RADAR_EMBED_REFRESH_LIMIT: ${{ env.FETCH == 'true' && '3000' || '0' }}
+          RADAR_EMBED_REFRESH_LIMIT: '3000'
         run: npm run arxiv:embeddings
 
-      - name: Build light site data
-        run: npm run arxiv:site-data
-
       - name: Export full history as Parquet
-        if: env.FETCH == 'true'
         run: npm run arxiv:export
 
       - name: Keep the export for the publish job
-        if: env.FETCH == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: radar-export
@@ -132,57 +102,15 @@ jobs:
           retention-days: 7
 
       - name: Keep stats for the README job
-        if: env.FETCH == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: radar-stats
           path: data/stats.json
           retention-days: 7
 
-      - name: Build VitePress site
-        env:
-          # Search-console verification tokens (public by design); unset = no tag.
-          GOOGLE_SITE_VERIFICATION: ${{ vars.GOOGLE_SITE_VERIFICATION }}
-          BING_SITE_VERIFICATION: ${{ vars.BING_SITE_VERIFICATION }}
-          BAIDU_SITE_VERIFICATION: ${{ vars.BAIDU_SITE_VERIFICATION }}
-        run: npm run docs:build
-
-      - name: Check published file sizes
-        run: |
-          big="$(find docs/.vitepress/dist -type f -size +10M)"
-          if [ -n "${big}" ]; then
-            echo "::error::Files above 10 MB in the site build:"
-            echo "${big}"
-            exit 1
-          fi
-
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: docs/.vitepress/dist
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-
   publish-data:
-    # Runs beside the deploy: a Hugging Face or Release hiccup must not block the site.
     # The next run restores from whichever copy is newest available; FETCH_DAYS=7 covers gaps.
     needs: build
-    if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.fetch)
     runs-on: ubuntu-latest
     permissions:
       contents: write # GitHub Release mirror
@@ -226,10 +154,24 @@ jobs:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: python -m scripts.arxiv_radar.data_store push-hf
 
+  deploy-site:
+    # Rebuild the site from the data just published. Runs even if one of the two
+    # copies failed to upload: restore then uses whichever copy is newest.
+    needs: publish-data
+    if: ${{ !cancelled() && needs.publish-data.result != 'skipped' }}
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/deploy-site.yml
+    with:
+      ref: main
+
   commit-readme:
-    # Only after the site is live, so the README never advertises a deploy that failed.
-    needs: deploy
-    if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.fetch)
+    # Only after the new data is published and the site is live, so the README never
+    # advertises numbers the site does not show.
+    needs: [publish-data, deploy-site]
+    if: needs.publish-data.result == 'success' && needs.deploy-site.result == 'success'
     runs-on: ubuntu-latest
     permissions:
       contents: write

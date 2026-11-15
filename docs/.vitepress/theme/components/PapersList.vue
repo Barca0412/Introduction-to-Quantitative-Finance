@@ -274,7 +274,7 @@ const quickFilters = [
   { id: 'multi-agent', label: 'Multi-Agent', description: 'Coordination and agent teams' },
   { id: 'tool-use', label: 'Tool Use', description: 'Function calling and tools' },
   { id: 'reasoning', label: 'Reasoning', description: 'Inference and multi-step thought' },
-  { id: 'all', label: 'All Papers', description: 'Everything from the 10 categories' }
+  { id: 'all', label: 'All Papers', description: 'Everything from all monitored categories' }
 ]
 
 const embeddingThemeOptions = [
@@ -296,7 +296,14 @@ const categoryNames = {
   'q-fin.ST': 'Statistical Finance',
   'q-fin.CP': 'Computational Finance',
   'q-fin.PM': 'Portfolio Management',
-  'q-fin.TR': 'Trading and Market Microstructure'
+  'q-fin.TR': 'Trading and Market Microstructure',
+  'q-fin.MF': 'Mathematical Finance',
+  'q-fin.RM': 'Risk Management',
+  'q-fin.PR': 'Pricing of Securities',
+  'q-fin.GN': 'General Finance',
+  'econ.EM': 'Econometrics',
+  'cs.LG': 'Machine Learning',
+  'stat.ML': 'Machine Learning (Statistics)'
 }
 
 const preferredTagOrder = [

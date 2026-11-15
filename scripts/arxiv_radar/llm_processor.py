@@ -25,6 +25,7 @@ from .config import (
     PREDEFINED_TAGS,
     PAPER_ANALYSIS_PROMPT,
 )
+from .utils import has_any_term
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -141,8 +142,6 @@ TAG_SIGNALS = {
         "graph rag",
         "graphrag",
         "retriever",
-        "retrieval",
-        "knowledge graph",
         "vector search",
     ],
     "reasoning": [
@@ -178,7 +177,7 @@ def _paper_text(paper: Dict[str, Any]) -> str:
 
 
 def _has_any(text: str, terms: List[str]) -> bool:
-    return any(term in text for term in terms)
+    return has_any_term(text, terms)
 
 
 def validate_tags_for_paper(paper: Dict[str, Any], tags: List[str]) -> List[str]:

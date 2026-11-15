@@ -87,12 +87,98 @@ class FetchCategoryTest(unittest.TestCase):
 
         with mock.patch.object(fp, "get_target_dates", return_value=DATES):
             papers, report = asyncio.run(
-                fp.fetch_all_categories(["cs.AI", "cs.CL"], client=PerCategory([]), backoff=(0,), sleep=lambda s: None)
+                fp.fetch_all_categories(
+                    ["cs.AI", "cs.CL"], client=PerCategory([]), backoff=(0,), sleep=lambda s: None, filtered_categories=[]
+                )
             )
         self.assertEqual(len(papers), 1)
         self.assertEqual([r["category"] for r in report], ["cs.AI", "cs.CL"])
         self.assertIsNone(report[0]["error"])
         self.assertIn("429", report[1]["error"])
+
+
+class FinanceFilteredCategoryTest(unittest.TestCase):
+    """cs.LG / stat.ML are fetched only through the finance-term query."""
+
+    def setUp(self):
+        patcher = mock.patch.object(fp, "build_paper_record", side_effect=lambda r: r)
+        patcher.start()
+        self.addCleanup(patcher.stop)
+
+    def test_whole_word_check_keeps_finance_and_drops_stemming_noise(self):
+        keep = [
+            ("Towards Financial World Modeling", ""),
+            ("Optimal Regret for Online Market Making with Limit Order Book", ""),
+            ("Learned Monotone Recurrent Features in Governed Credit Scoring", ""),
+            ("DPAL", "a test-time adaptation loss for stock return forecasting"),
+            ("Expected Utility Regret Rule", "minimax optimal portfolio selection"),
+            ("Boosting insights in insurance tariff plans with tree-based machine learning methods", ""),
+            ("Heterogeneous Graph Neural Networks for Malicious Account Detection",
+             "detecting malicious accounts at Alipay, one of the world's leading mobile cashless payment platform"),
+        ]
+        drop = [
+            ("On the Trade-off Between Information Loss and Generalization", ""),
+            ("DeltaNet-PC: Test-Time Memory", "uses a memory bank of past states"),
+            ("Small Model Portfolios for Many Deployment Profiles", ""),
+            ("MJ: Multi-turn LLM Jailbreaking via Decomposed Credit Assignment", ""),
+            ("Unelicitable Backdoors via Cryptographic Transformer Circuits", ""),
+            ("Trading off Consistency and Dimensionality of Convex Surrogates", ""),
+        ]
+        for title, abstract in keep:
+            self.assertTrue(fp.looks_financial({"title": title, "abstract": abstract}), title)
+        for title, abstract in drop:
+            self.assertFalse(fp.looks_financial({"title": title, "abstract": abstract}), title)
+
+    def test_filtered_categories_use_finance_query_and_local_check(self):
+        queries = []
+
+        class Recording(FakeClient):
+            def results(self, search):
+                queries.append(search.query)
+                if "cs.LG" in search.query:
+                    yield paper("2610.09048", title="Towards Financial World Modeling", abstract="")
+                    yield paper("2610.04424", title="On the Trade-off Between Information Loss", abstract="")
+                else:
+                    yield paper("2611.00001", title="anything", abstract="")
+
+        with mock.patch.object(fp, "get_target_dates", return_value=["2026-11-13"]):
+            papers, report = asyncio.run(
+                fp.fetch_all_categories(
+                    ["cs.AI", "stat.ML"],
+                    client=Recording([]),
+                    backoff=(),
+                    sleep=lambda s: None,
+                    filtered_categories=["cs.LG", "stat.ML"],
+                )
+            )
+        # stat.ML is already fetched whole, so it is not fetched a second time.
+        self.assertEqual([r["category"] for r in report], ["cs.AI", "stat.ML", "cs.LG (finance terms)"])
+        self.assertEqual(len(queries), 3)
+        self.assertNotIn("financ*", queries[0])
+        self.assertIn("cat:cs.LG AND (ti:financ* OR abs:financ*", queries[2])
+        self.assertIn("submittedDate:", queries[2])
+        lg = [p["id"] for p in papers if p["id"].startswith("2610")]
+        self.assertEqual(lg, ["2610.09048"])
+
+
+class FilteredDefaultTest(unittest.TestCase):
+    def _reload(self, env):
+        import importlib
+        from scripts.arxiv_radar import config
+        with mock.patch.dict(os.environ, env, clear=False):
+            return importlib.reload(config).FINANCE_FILTERED_CATEGORIES
+
+    def tearDown(self):
+        import importlib
+        from scripts.arxiv_radar import config
+        with mock.patch.dict(os.environ, {"RADAR_CATEGORIES": "", "RADAR_FILTERED_CATEGORIES": ""}):
+            importlib.reload(config)
+
+    def test_default_and_overrides(self):
+        self.assertEqual(self._reload({"RADAR_CATEGORIES": "", "RADAR_FILTERED_CATEGORIES": ""}), ["cs.LG", "stat.ML"])
+        self.assertEqual(self._reload({"RADAR_CATEGORIES": "q-fin.ST", "RADAR_FILTERED_CATEGORIES": ""}), [])
+        self.assertEqual(self._reload({"RADAR_CATEGORIES": "", "RADAR_FILTERED_CATEGORIES": "none"}), [])
+        self.assertEqual(self._reload({"RADAR_CATEGORIES": "q-fin.ST", "RADAR_FILTERED_CATEGORIES": "cs.LG"}), ["cs.LG"])
 
 
 class ReportTest(unittest.TestCase):

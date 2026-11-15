@@ -1,0 +1,136 @@
+name: Site build and deploy
+
+# Builds the VitePress site from the stored Radar history and deploys GitHub Pages.
+# It never fetches arXiv and never calls the LLM, so it keeps working while the
+# "arXiv Radar data update" workflow is disabled.
+#
+# Triggers:
+# - push to main that touches the site or the Radar site-data builder;
+# - manual run;
+# - called by the Radar data workflow after it has published new data
+#   (restore then picks up that fresh copy from Hugging Face / the Release).
+#
+# Requires Settings -> Pages -> Source = "GitHub Actions".
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'docs/**'
+      - 'scripts/arxiv_radar/**'
+      - 'scripts/site/**'
+      # The /library/ index is generated from these folders at build time.
+      - '资料/**'
+      - '论文/**'
+      - 'data/registry/**'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/deploy-site.yml'
+  workflow_dispatch:
+  workflow_call:
+    inputs:
+      ref:
+        description: 'Branch to build (the Radar workflow passes main)'
+        type: string
+        default: main
+
+permissions:
+  contents: read
+
+env:
+  # Repository variable, e.g. "Barca21412/FinPaperRadar". Empty = skip Hugging Face.
+  HF_DATASET_REPO: ${{ vars.HF_DATASET_REPO }}
+  RADAR_RELEASE_TAG: radar-data
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    # One Pages build at a time; a newer push waits instead of cancelling a deploy.
+    concurrency:
+      group: site-pages
+      cancel-in-progress: false
+    timeout-minutes: 30
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # Called from the Radar run: build main as it is now (after README commits).
+          # Push / manual run: the triggering branch (Pages only accepts main).
+          ref: ${{ inputs.ref || github.ref }}
+          # Full commit history (but no old file contents) so VitePress can read each
+          # page's real last-edit date for "最后更新" and the sitemap <lastmod>.
+          fetch-depth: 0
+          filter: blob:none
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+          cache-dependency-path: scripts/arxiv_radar/requirements.txt
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: |
+          pip install -r scripts/arxiv_radar/requirements.txt
+          npm ci
+
+      - name: Restore full history
+        run: npm run arxiv:restore
+
+      - name: Load stored embeddings
+        env:
+          # Site-only build: reuse stored vectors, do not compute new ones.
+          RADAR_EMBED_REFRESH_LIMIT: '0'
+        run: npm run arxiv:embeddings
+
+      - name: Build light site data
+        run: npm run arxiv:site-data
+
+      - name: Build VitePress site
+        env:
+          # Search-console verification tokens (public by design); unset = no tag.
+          GOOGLE_SITE_VERIFICATION: ${{ vars.GOOGLE_SITE_VERIFICATION }}
+          BING_SITE_VERIFICATION: ${{ vars.BING_SITE_VERIFICATION }}
+          BAIDU_SITE_VERIFICATION: ${{ vars.BAIDU_SITE_VERIFICATION }}
+        run: npm run docs:build
+
+      - name: Check published file sizes
+        run: |
+          big="$(find docs/.vitepress/dist -type f -size +10M)"
+          if [ -n "${big}" ]; then
+            echo "::error::Files above 10 MB in the site build:"
+            echo "${big}"
+            exit 1
+          fi
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/.vitepress/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    concurrency:
+      group: site-pages-deploy
+      cancel-in-progress: false
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
