@@ -90,14 +90,19 @@ def _get(url: str, attempts: int = 4, timeout: int = 300) -> Optional[bytes]:
     return None
 
 
-def _json(url: str) -> Optional[Any]:
-    body = _get(url)
-    if body is None:
-        return None
-    try:
-        return json.loads(body.decode("utf-8", "ignore"), strict=False)
-    except json.JSONDecodeError:
-        return None
+def _json(url: str, attempts: int = 3) -> Optional[Any]:
+    """Parsed JSON, or None for 404. A truncated download (the conference JSON files
+    are 15-25 MB) is fetched again; still broken after ``attempts`` raises."""
+    for attempt in range(attempts):
+        body = _get(url)
+        if body is None:
+            return None
+        try:
+            return json.loads(body.decode("utf-8", "ignore"), strict=False)
+        except json.JSONDecodeError:
+            logger.warning("Broken JSON from %s (%s bytes), retrying", redact(url.split("?")[0]), len(body))
+            time.sleep(5 * (attempt + 1))
+    raise RuntimeError(f"broken JSON after {attempts} downloads: {redact(url.split('?')[0])}")
 
 
 # --------------------------------------------------------------------------
@@ -143,8 +148,8 @@ def make_record(venue_id: str, year: int, adapter: str, title: str, authors: Lis
 def fetch_virtual_site(venue_id: str, year: int, cfg: Dict[str, Any]) -> List[Dict[str, Any]]:
     url = f"https://{cfg['host']}/static/virtual/data/{cfg['slug']}-{year}-orals-posters.json"
     data = _json(url)
-    if not data:
-        return []
+    if not data or not data.get("results"):
+        raise RuntimeError(f"no papers in {url}")
     out = []
     for item in data.get("results", []):
         if str(item.get("eventtype") or item.get("event_type") or "").lower() not in ("poster", "oral", "spotlight", ""):
@@ -343,6 +348,7 @@ class LibraryIndex:
         self.by_title: Dict[str, Dict[str, Any]] = {}
         self.buckets: Dict[str, List[Dict[str, Any]]] = {}
         for row in rows:
+            row["_surnames"] = _surnames(row.get("authors") or [])
             if row.get("arxiv_id"):
                 self.by_arxiv.setdefault(row["arxiv_id"], row)
             if row.get("doi"):
@@ -370,13 +376,26 @@ class LibraryIndex:
         if key in self.by_title:
             return {**self.by_title[key], "match_method": "title_exact"}
         authors = _surnames(a.get("name", "") if isinstance(a, dict) else a for a in paper.get("authors") or [])
+        if not authors:
+            return None
         best, best_ratio = None, self.FUZZY
         candidates = {id(r): r for b in ("^" + key[:8], "$" + key[-8:]) for r in self.buckets.get(b, [])}
         for row in candidates.values():
-            ratio = SequenceMatcher(None, key, row["title_key"]).ratio()
-            if ratio >= best_ratio and authors & _surnames(row.get("authors") or []):
+            other = row["title_key"]
+            # Cheap filters first: a shared author, similar length, then difflib.
+            if abs(len(other) - len(key)) > 0.2 * max(len(key), len(other)):
+                continue
+            if not authors & row["_surnames"]:
+                continue
+            matcher = SequenceMatcher(None, key, other)
+            if matcher.real_quick_ratio() < best_ratio or matcher.quick_ratio() < best_ratio:
+                continue
+            ratio = matcher.ratio()
+            if ratio >= best_ratio:
                 best, best_ratio = row, ratio
-        return {**best, "match_method": "title_fuzzy"} if best else None
+        if best is None:
+            return None
+        return {**{k: v for k, v in best.items() if k != "_surnames"}, "match_method": "title_fuzzy"}
 
 
 def tag_papers(papers: List[Dict[str, Any]], rows: Optional[List[Dict[str, Any]]] = None) -> Dict[str, Any]:
