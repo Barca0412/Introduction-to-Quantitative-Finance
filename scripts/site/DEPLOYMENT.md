@@ -38,7 +38,7 @@ npm run docs:build:dual
 
 1. 本地准备可审查的提交、双站产物和验证记录。
 2. 分别取得推送、开 PR、仓库配置修改、线上部署的明确授权；PR 由用户合并。
-3. 只写部署密钥不能下载旧站备份。管理员须先把 `/var/www/quant` 备份到站点目录之外，提供备份路径、时间和 SHA256。例如管理员可执行 `sudo tar -C /var/www -czf /var/backups/quant-before-redesign-20261116.tar.gz quant`，然后核对文件校验值。备份不得放进 webroot，以免 rsync --delete 删除。
+3. 先保存旧站完整备份、文件清单及 SHA256，备份放在 webroot 之外。只写部署密钥不能直接通过 SSH 下载旧站，但可以从公开 HTTPS 保存静态文件：先用本地空目录作源执行 `rsync --dry-run --delete` 获取完整清单，逐项下载，再从备份向服务器执行 `rsync --checksum --dry-run --delete`。只有内容差异、新增和删除均为零，才能将该本地副本归档为可回滚版本。文件无法公开读取或校验不一致时，须由管理员归档 `/var/www/quant`；不能将部分下载视为完整备份。
 4. 用同一份候选产物执行 GNU rsync `--dry-run --delete --delay-updates --itemize-changes`，展示新增、覆盖和删除清单。预演不代表已经部署。
 5. 确认备份和具体部署授权后，再运行工作流。工作流日志保留一次同参数 dry-run，随后才上传。
 6. `verify_deployment.py` 校验关键页面 HTML 的 SHA256、manifest 和 build-info，防止相同数据下旧 UI 被误认为发布成功。
@@ -51,9 +51,9 @@ npm run docs:build:dual
 
 ## 回滚
 
-- 首次改版回滚：管理员将已核验的旧站压缩包解压到临时目录，先对该副本和 `/var/www/quant/` 做 rsync dry-run，经授权后恢复。不要把备份压缩包直接展开到当前站点并保留新文件。
+- 首次改版回滚：将已核验的旧站压缩包解压到本地临时目录，先确认文件哈希，再以其中 `site/` 为源向 rrsync 目标 `/` 做 dry-run，经授权后恢复。管理员保存的服务器归档也可由管理员恢复。不要直接叠加解压到当前站点并保留新文件。
 - 后续回滚：每次 Actions 通用双站 artifact 保留 30 天。选择已验证版本下载并检查哈希；批准后用相应站点目录恢复。回滚是明确的人工操作，不能通过重跑旧任务绕过防旧覆盖检查。
-- 恢复后核验旧版本 manifest、build-info、关键页面；记录恢复版本和时间。需要暂停每日发布时，另行取得停用工作流授权。
+- 恢复后核验旧版本 manifest、关键页面和文件哈希；有 build-info 时一并核对，旧站没有该文件时以备份清单和全量 checksum dry-run 为准。记录恢复版本和时间。需要暂停每日发布时，另行取得停用工作流授权。
 
 ## 日常检查
 
