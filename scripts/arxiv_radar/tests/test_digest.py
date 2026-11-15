@@ -57,3 +57,40 @@ class WhoFactsTest(unittest.TestCase):
         who = who_facts(papers)
         self.assertEqual(who["institutions"][0], {"name": "曼彻斯特大学", "type": "高校", "n": 2})
         self.assertEqual(who["authors_with_2_or_more"][0]["institution"], "曼彻斯特大学")
+
+
+class DigestLayoutTest(unittest.TestCase):
+    FACTS = {
+        "papers": 3,
+        "who": {"institutions": [{"name": "南洋理工大学", "type": "高校", "n": 2}],
+                "countries": [{"name": "新加坡", "n": 2}],
+                "collaboration": {"只有高校": 2, "校企合作": 0, "只有企业": 0, "其他类型机构": 0, "未查到机构": 1},
+                "cross_country_papers": 0},
+        "candidates": {"交易与执行": [{
+            "title": "StockASkill: A Local-First AgentSkill for Intelligent Stock Selection",
+            "link": "https://arxiv.org/abs/2611.09528", "short": "StockASkill",
+            "authors": ["A One", "B Two", "C Three", "D Four"], "institutions": ["南洋理工大学"]}]},
+    }
+
+    def test_short_name(self):
+        from scripts.arxiv_radar.digest import short_name
+        self.assertEqual(short_name("StockASkill: A Local-First AgentSkill"), "StockASkill")
+        self.assertEqual(short_name("A title without a colon"), "")
+
+    def test_finish_adds_chart_and_byline(self):
+        from scripts.arxiv_radar.digest import finish
+        body = "## 谁在做\n\n一句结论。\n\n## 本周必读\n\n### [StockASkill: A Local-First AgentSkill for Intelligent Stock Selection](https://arxiv.org/abs/2611.09528)\n\n正文。"
+        out = finish(body, self.FACTS)
+        svg = next(line for line in out.splitlines() if line.startswith("<svg"))
+        self.assertIn("南洋理工大学", svg)
+        self.assertIn("未查到机构 1", svg)
+        self.assertNotIn("\n", svg)  # one line: Markdown keeps it as one HTML block
+        self.assertIn("<small>作者：A One、B Two、C Three 等 4 人　·　机构：南洋理工大学</small>", out)
+
+    def test_full_title_in_directions_is_rejected(self):
+        from scripts.arxiv_radar.digest import check_draft
+        facts = {**self.FACTS, "papers_previous_week": None, "core_papers": 1, "domains": {}, "methods": {}}
+        long = "## 值得关注的方向\n\n见 [StockASkill: A Local-First AgentSkill for Intelligent Stock Selection](https://arxiv.org/abs/2611.09528)。\n\n## 本周必读\n"
+        short = long.replace("[StockASkill: A Local-First AgentSkill for Intelligent Stock Selection]", "[StockASkill]")
+        self.assertTrue(any("full title" in p for p in check_draft(long, facts)))
+        self.assertFalse(any("full title" in p for p in check_draft(short, facts)))

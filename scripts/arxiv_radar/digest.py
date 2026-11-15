@@ -85,7 +85,9 @@ def collect_facts(papers: List[Dict[str, Any]], week: str) -> Dict[str, Any]:
             "title": p["title"], "link": link_of(p), "relevance": p.get("relevance"),
             "tldr_zh": p.get("tldr_zh", ""), "points_zh": p.get("points_zh") or {},
             "venue": (p.get("venue") or {}).get("name"), "code": bool((p.get("reproducibility") or {}).get("code")),
-            "institutions": [i.get("zh") or i.get("name") for i in (p.get("institutions") or [])][:3],
+            "institutions": [leaders._institution_label(i) for i in (p.get("institutions") or [])][:3],
+            "authors": [a.get("name", "") if isinstance(a, dict) else str(a) for a in p.get("authors") or []],
+            "short": short_name(p["title"]),
         } for p in group]
 
     who = who_facts(this)
@@ -100,6 +102,12 @@ def collect_facts(papers: List[Dict[str, Any]], week: str) -> Dict[str, Any]:
         "who": who,
         "candidates": candidates,
     }
+
+
+def short_name(title: str) -> str:
+    """The name before the colon ("StockASkill: A Local-First ..." -> "StockASkill"), when short."""
+    head = title.split(":", 1)[0].strip()
+    return head if ":" in title and 2 <= len(head) <= 30 else ""
 
 
 def who_facts(papers: List[Dict[str, Any]]) -> Dict[str, Any]:
@@ -142,15 +150,17 @@ PROMPT = """你在为中文的金融从业者和学生写一份 AI × 金融论�
 如果 history_weeks 少于 4，说明"数据刚开始积累，趋势仅供参考"，不要写"升温"。
 
 ## 值得关注的方向
-2–3 个方向（来自 domains 或 rising_domains），每个方向一段，引用 1–2 篇该方向候选论文，
-用 [论文标题](链接) 的格式，链接只能用材料里的 link。
+2–3 个方向（来自 domains 或 rising_domains），每个方向一段，引用 1–2 篇该方向候选论文。
+引用时不要写完整的英文标题：有 short 的用 [short](链接)，没有的用几个字的中文概括作链接文字，
+例如 [一个催收策略评估基准](链接)。链接只能用材料里的 link。
 
 ## 谁在做
-2–3 句，只用材料里 who 的数字：本周最活跃的机构（篇数 ≥2 的）、有哪些企业、主要来自哪些国家和地区、
-校企合作有几篇。机构用材料里的中文名。不要评价机构水平。
+这一节下面会自动放一张图（机构、国家和地区、团队构成），你只写 1–2 句看图得出的结论，不要逐个列举机构和数字。
+例如哪类团队最多、企业参与多不多、哪几个国家和地区为主。只用材料里 who 的信息，不要评价机构水平。
 
 ## 本周必读
-3–5 篇，从候选论文里选。每篇一个小标题 `### [论文标题](链接)`，下面 2–3 句：做了什么、结论是什么、为什么值得读。
+3–5 篇，从候选论文里选。每篇一个小标题 `### [论文标题](链接)`（这里用完整标题），下面 2–3 句：做了什么、结论是什么、为什么值得读。
+作者和机构会由程序自动加在标题下面，你不用写。
 有发表去向的写上（如"KDD 2026"），有开源代码的说明。
 
 要求：讲人话，不用"本文"开头，不写宣传腔；数字一律照抄材料。只输出 Markdown 正文，不要前言。
@@ -175,6 +185,12 @@ def check_draft(draft: str, facts: Dict[str, Any]) -> List[str]:
     for text in re.findall(r"(\d+)\s*篇", draft):
         if text not in allowed:
             problems.append(f"number {text} 篇 not in the facts")
+    # In 值得关注的方向 papers are cited by a short name, not the full English title.
+    section = draft.split("## 值得关注的方向", 1)[-1].split("## 谁在做", 1)[0] if "## 值得关注的方向" in draft else ""
+    titles = {c["title"] for group in facts["candidates"].values() for c in group}
+    for text in re.findall(r"\[([^\]]+)\]\(", section):
+        if text in titles and len(text) > 30:
+            problems.append(f"full title used in 值得关注的方向: {text[:40]}… (use the short name or a Chinese phrase)")
     if "## 本周必读" not in draft:
         problems.append("missing section 本周必读")
     return problems
@@ -209,19 +225,41 @@ def facts_markdown(facts: Dict[str, Any]) -> str:
              f"本周收录 {facts['papers']} 篇（" + (f"上周 {facts['papers_previous_week']} 篇" if facts["papers_previous_week"] is not None
                                               else "上周数据不完整，不作比较") + f"），其中核心论文 {facts['core_papers']} 篇。", "",
              ""]
-    who = facts.get("who") or {}
-    if who:
-        inst = "、".join(f"{i['name']}（{i['n']} 篇）" for i in who.get("institutions") or []) or "没有机构超过 1 篇"
-        comp = "、".join(f"{i['name']}（{i['n']} 篇）" for i in who.get("companies") or []) or "无"
-        ctry = "、".join(f"{c['name']} {c['n']} 篇" for c in who.get("countries") or [])
-        lines += ["## 谁在做", "", f"- 机构：{inst}", f"- 企业：{comp}", f"- 国家和地区：{ctry}",
-                  f"- 合作方式：" + "，".join(f"{k} {v} 篇" for k, v in who["collaboration"].items()), ""]
+    if facts.get("who"):
+        lines += ["## 谁在做", ""]
     lines += ["## 候选论文", ""]
     for domain, group in facts["candidates"].items():
         lines += [f"### {domain}", ""]
-        lines += [f"- [{c['title']}]({c['link']})：{c['tldr_zh']}" for c in group]
+        for c in group:
+            lines += [f"- [{c['title']}]({c['link']})：{c['tldr_zh']}", f"  {byline(c)}"]
         lines.append("")
     return "\n".join(lines)
+
+
+def byline(candidate: Dict[str, Any]) -> str:
+    """作者 · 机构, written by the program (the LLM never writes names)."""
+    names = [a for a in candidate.get("authors") or [] if a]
+    who = "、".join(names[:3]) + (f" 等 {len(names)} 人" if len(names) > 3 else "")
+    insts = "、".join(candidate.get("institutions") or [])
+    return "　·　".join(x for x in (f"作者：{who}" if who else "", f"机构：{insts}" if insts else "") if x)
+
+
+def finish(body: str, facts: Dict[str, Any]) -> str:
+    """Add what the program writes: the "谁在做" chart and the byline under each must-read."""
+    from .digest_chart import who_svg
+
+    by_link = {c["link"]: c for group in facts["candidates"].values() for c in group}
+    out: List[str] = []
+    for line in body.splitlines():
+        out.append(line)
+        if line.strip() == "## 谁在做" and facts.get("who"):
+            out += ["", who_svg(facts["who"], facts["papers"])]
+        match = re.match(r"###\s*\[[^\]]*\]\((https?://[^)\s]+)\)", line.strip())
+        if match and match.group(1) in by_link:
+            meta = byline(by_link[match.group(1)])
+            if meta:
+                out += ["", f"<small>{meta}</small>"]
+    return "\n".join(out)
 
 
 def write(week: str, body: str, facts: Dict[str, Any], drafted: bool) -> Path:
@@ -234,7 +272,7 @@ def write(week: str, body: str, facts: Dict[str, Any], drafted: bool) -> Path:
               f"# AI × 金融论文周报 · {year} 年第 {number} 周\n\n"
               f"> {facts['week']} 至 {facts['week_end']}。{note}。统计口径：网站收录的论文"
               f"（大模型判定相关度 ≥2、用了 AI 方法）。\n\n")
-    path.write_text(header + body.strip() + "\n", encoding="utf-8")
+    path.write_text(header + finish(body.strip(), facts) + "\n", encoding="utf-8")
     return path
 
 
