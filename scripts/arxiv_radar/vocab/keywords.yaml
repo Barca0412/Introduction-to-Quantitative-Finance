@@ -10,21 +10,23 @@
 # ---------- finance: markets and trading ----------
 - {id: limit-order-book, en: limit order book, zh: 限价订单簿, kind: finance, patterns: ['limit order book', '\blob\b', 'order book']}
 - {id: market-making, en: market making, zh: 做市, kind: finance, patterns: ['market mak', 'automated market maker', '\bamm\b']}
-- {id: optimal-execution, en: optimal execution, zh: 最优执行, kind: finance, patterns: ['optimal execution', 'trade execution', 'execution algorithm', 'order execution']}
+- {id: optimal-execution, en: optimal execution, zh: 最优执行, kind: finance, patterns: ['optimal execution', 'trade execution', 'execution algorithm', 'order execution', 'optimal liquidation']}
 - {id: market-impact, en: market impact, zh: 市场冲击, kind: finance, patterns: ['market impact', 'price impact']}
 - {id: high-frequency-trading, en: high-frequency trading, zh: 高频交易, kind: finance, patterns: ['high frequency', '\bhft\b', 'intraday']}
-- {id: market-microstructure, en: market microstructure, zh: 市场微观结构, kind: finance, patterns: ['microstructure']}
-- {id: algorithmic-trading, en: algorithmic trading, zh: 算法交易, kind: finance, patterns: ['algorithmic trading', 'quantitative trading', 'trading strateg', 'trading agent', 'trading system', 'automated trading']}
-- {id: backtesting, en: backtesting, zh: 回测, kind: finance, patterns: ['backtest']}
+- {id: market-microstructure, en: market microstructure, zh: 市场微观结构, kind: finance, patterns: ['microstructure', 'order flow', 'microprice', 'liquidity (prediction|provision)']}
+- {id: algorithmic-trading, en: algorithmic trading, zh: 算法交易, kind: finance, patterns: ['algorithmic trading', 'quantitative trading', 'trading strateg', 'trading agent', 'trading system', 'automated trading', 'stock trading', 'trading decision', 'futures trading']}
+- {id: backtesting, en: backtesting, zh: 回测, kind: finance, patterns: ['backtest', 'look ahead bias', 'walk forward', 'out of sample (test|performance)', 'multiple testing', 'overfitting']}
 - {id: market-simulation, en: market simulation, zh: 市场模拟, kind: finance, patterns: ['market simulat', 'agent based market', 'exchange simulat']}
 - {id: prediction-markets, en: prediction markets, zh: 预测市场, kind: finance, patterns: ['prediction market', 'polymarket', 'kalshi']}
 - {id: auctions, en: auctions, zh: 拍卖, kind: finance, patterns: ['auction']}
 
 # ---------- finance: asset pricing and returns ----------
 - {id: alpha-factor-mining, en: alpha factor mining, zh: 因子挖掘, kind: finance, patterns: ['factor mining', 'alpha mining', 'formulaic alpha', 'alpha factor', 'alpha discovery', 'factor discovery']}
+- {id: performance-metrics, en: 'performance metrics (Sharpe, IC, drawdown)', zh: 绩效指标（夏普、IC、回撤）, kind: finance, patterns: ['sharpe', 'information coefficient', '\bic\b', 'drawdown', 'abnormal return', 'transaction cost', 'alpha decay']}
+- {id: regime-shift, en: market regimes, zh: 市场状态与结构突变, kind: finance, patterns: ['regime', 'structural break', 'non ?stationar']}
 - {id: factor-models, en: factor models, zh: 因子模型, kind: finance, patterns: ['factor model', 'factor investing', 'factor zoo', 'risk premi', '(return|market|pricing) anomal']}
 - {id: asset-pricing, en: asset pricing, zh: 资产定价, kind: finance, patterns: ['asset pricing', 'stochastic discount factor', '\bsdf\b', 'cross section of (stock )?returns', 'equity premium']}
-- {id: return-prediction, en: return prediction, zh: 收益预测, kind: finance, patterns: ['return predict', 'return forecast', 'stock predict', 'stock return', 'price predict', 'price forecast', 'stock movement', 'stock trend', 'return predictability']}
+- {id: return-prediction, en: return prediction, zh: 收益预测, kind: finance, patterns: ['return predict', 'return forecast', 'stock predict', 'stock return', 'price predict', 'price forecast', 'stock movement', 'stock trend', 'return predictability', 'stock selection', 'stock ranking', 'cross sectional stock', 'stock market prediction', 'return sign']}
 - {id: momentum, en: momentum, zh: 动量, kind: finance, patterns: ['momentum']}
 
 # ---------- finance: portfolio and risk ----------
@@ -43,15 +45,18 @@
 - {id: crypto, en: cryptocurrency and DeFi, zh: 加密资产与 DeFi, kind: finance, patterns: ['crypto', 'bitcoin', 'ethereum', '\bdefi\b', 'decentralized finance', 'blockchain', 'stablecoin', 'perpetual', 'on ?chain', 'tokeni[sz]ed']}
 - {id: credit-scoring, en: credit scoring, zh: 信用评分, kind: finance, patterns: ['credit scor', 'credit risk', 'default predict', 'loan default', 'credit rating', 'probability of default', 'lending']}
 - {id: anti-money-laundering, en: anti-money laundering, zh: 反洗钱, kind: finance, patterns: ['money laundering', '\baml\b']}
-- {id: fraud-detection, en: fraud detection, zh: 欺诈检测, kind: finance, patterns: ['fraud']}
+- {id: fraud-detection, en: fraud detection, zh: 欺诈检测, kind: finance, patterns: ['fraud', 'illicit (account|transaction)', 'transaction network', 'phishing']}
 - {id: payments, en: payments, zh: 支付, kind: finance, patterns: ['payment', 'transaction monitoring']}
 - {id: banking, en: banking, zh: 银行业, kind: finance, patterns: ['bank']}
 - {id: insurance, en: insurance, zh: 保险, kind: finance, patterns: ['insurance', 'actuar', 'claims', 'premium pricing', 'reserving', 'underwriting']}
 - {id: regulatory-compliance, en: regulatory compliance, zh: 合规, kind: finance, patterns: ['complian', 'regulat', '\bkyc\b', 'financial audit', 'auditing of (financial|firms)', 'supervis(ory|ion) of bank']}
 
 # ---------- finance: corporate, text, macro ----------
+- {id: financial-documents, en: financial document understanding, zh: 金融文档理解, kind: finance, patterns: ['financial document', 'information extraction', 'financial filing', 'disclosure', 'financial table']}
 - {id: financial-statements, en: financial statement analysis, zh: 财报分析, kind: finance, patterns: ['financial statement', 'financial report', 'annual report', '10 k', 'sec filing', 'earnings(?! call)', 'accounting']}
 - {id: financial-qa, en: financial question answering, zh: 金融问答, kind: finance, patterns: ['financial question', 'financial qa', 'finqa', 'financial reasoning']}
+- {id: financial-misinformation, en: financial misinformation and fact-checking, zh: 金融虚假信息与事实核查, kind: finance, patterns: ['misinformation', 'claim verification', 'fact check', 'fake news']}
+- {id: financial-nlp, en: financial NLP, zh: 金融自然语言处理, kind: finance, patterns: ['financial nlp', 'financial terminology', 'financial text', 'financial language']}
 - {id: financial-sentiment, en: financial sentiment analysis, zh: 金融情绪分析, kind: finance, patterns: ['sentiment', 'financial news', 'news (sentiment|driven|analytics|signals?)', 'stock news', 'earnings call', 'analyst report']}
 - {id: esg-climate, en: ESG and climate finance, zh: ESG 与气候金融, kind: finance, patterns: ['\besg\b', 'climate', 'sustainab', 'carbon']}
 - {id: macro-forecasting, en: macroeconomic forecasting, zh: 宏观预测, kind: finance, patterns: ['macro', 'inflation', 'gdp', 'nowcast', 'central bank', 'monetary policy', 'business cycle']}
@@ -71,17 +76,21 @@
 - {id: benchmarks, en: benchmarks, zh: 评测基准, kind: tech, patterns: ['benchmark']}
 - {id: llm-evaluation, en: LLM evaluation, zh: 大模型评测, kind: tech, patterns: ['llm evaluation', 'evaluation of (llm|large language)', 'llm as a judge', 'llm judge', 'agent evaluation']}
 - {id: llm-annotation, en: LLM annotation, zh: 大模型标注, kind: tech, patterns: ['annotation', 'llm label']}
-- {id: llm-safety, en: LLM safety, zh: 大模型安全, kind: tech, patterns: ['prompt injection', 'jailbreak', 'hallucination', 'alignment', 'safety', 'red team']}
-- {id: large-language-models, en: large language models, zh: 大语言模型, kind: tech, patterns: ['large language model', '\bllms?\b', 'language model', '\bgpt', 'foundation model(?! for time)', 'prompt']}
+- {id: llm-safety, en: LLM safety, zh: 大模型安全, kind: tech, patterns: ['prompt injection', 'jailbreak', 'hallucination', 'alignment', 'safety', 'red team', 'guardrail', 'abstention', 'attack success', 'data contamination', 'red teaming']}
+- {id: text-to-sql, en: text-to-SQL, zh: 文本转 SQL, kind: tech, patterns: ['text to sql', 'sql generation', 'nl2sql']}
+- {id: large-language-models, en: large language models, zh: 大语言模型, kind: tech, patterns: ['large language model', '\bllms?\b', 'language model', '\bgpt', 'foundation model(?! for time)', 'prompt', 'in context learning']}
 
 # ---------- tech: other methods ----------
 - {id: reinforcement-learning, en: reinforcement learning, zh: 强化学习, kind: tech, patterns: ['reinforcement', '\brl\b', 'policy gradient', 'q learning', 'bandit']}
+- {id: self-supervised, en: self-supervised and contrastive learning, zh: 自监督与对比学习, kind: tech, patterns: ['contrastive', 'self supervised', 'joint embedding predictive']}
+- {id: multimodal, en: multimodal learning, zh: 多模态学习, kind: tech, patterns: ['multimodal', 'multi modal', 'vision language']}
+- {id: continual-learning, en: continual learning, zh: 持续学习, kind: tech, patterns: ['continual learning', 'catastrophic forgetting', 'online learning', 'concept drift']}
 - {id: time-series-foundation-model, en: time-series foundation models, zh: 时序基础模型, kind: tech, patterns: ['time series foundation', 'foundation model for time', 'tabular foundation']}
 - {id: time-series-forecasting, en: time-series forecasting, zh: 时间序列预测, kind: tech, patterns: ['time series', 'forecast']}
 - {id: graph-neural-networks, en: graph neural networks, zh: 图神经网络, kind: tech, patterns: ['graph neural', '\bgnn', 'graph', 'knowledge graph']}
 - {id: transformers, en: transformers, zh: Transformer, kind: tech, patterns: ['transformer', 'attention']}
 - {id: diffusion-generative, en: diffusion and generative models, zh: 扩散与生成模型, kind: tech, patterns: ['diffusion', '\bgan\b', 'generative', 'synthetic data', 'variational']}
-- {id: deep-learning, en: deep learning, zh: 深度学习, kind: tech, patterns: ['neural network', 'deep learning', 'lstm', '\bcnn\b', 'recurrent']}
+- {id: deep-learning, en: deep learning, zh: 深度学习, kind: tech, patterns: ['neural network', 'deep learning', 'lstm', '\bcnn\b', 'recurrent', 'mixture of experts', 'state space model', 'temporal convolutional', '\bgru\b', '\bmamba\b']}
 - {id: gradient-boosting, en: gradient boosting and trees, zh: 梯度提升与树模型, kind: tech, patterns: ['boost', 'random forest', 'decision tree', 'xgboost', 'lightgbm', 'tree based']}
 - {id: conformal-prediction, en: conformal prediction, zh: 共形预测, kind: tech, patterns: ['conformal']}
 - {id: causal-inference, en: causal inference, zh: 因果推断, kind: tech, patterns: ['causal', 'instrumental variable', 'difference in difference', 'treatment effect', 'partial identification', 'identification']}

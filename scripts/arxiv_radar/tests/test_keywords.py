@@ -22,6 +22,8 @@ class KeywordTest(unittest.TestCase):
             ("gradient-boosted decision trees", "gradient boosting and trees"), ("DeFi lending", "cryptocurrency and DeFi"),
             ("multi-agent reinforcement learning", "multi-agent reinforcement learning"),
             ("agent-based model", "agent-based models"), ("earnings calls", "financial sentiment analysis"),
+            ("maximum drawdown", "performance metrics (Sharpe, IC, drawdown)"), ("regime shift", "market regimes"),
+            ("contrastive learning", "self-supervised and contrastive learning"), ("look-ahead bias", "backtesting"),
         ]:
             entry, _ = K.match(raw)
             self.assertIsNotNone(entry, raw)
