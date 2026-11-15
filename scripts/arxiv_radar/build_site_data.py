@@ -41,13 +41,13 @@ from .config import (
     SITE_MAX_AUTHORS,
     SITE_MAX_FILE_BYTES,
     SITE_MIN_RECENT_DAYS,
-    AI_METHODS,
     SITE_MIN_RELEVANCE,
     SITE_REQUIRE_AI_METHOD,
     SITE_RECENT_DAYS,
     PAPERS_FILE,
 )
 from .compute_stats import build_stats
+from .site_filter import site_visible
 from .data_store import load_local_embeddings
 
 logger = logging.getLogger("arxiv_radar.build_site_data")
@@ -242,22 +242,6 @@ def build_group(
 
 def _round_vector(values: List[float]) -> List[float]:
     return [round(float(v), 5) for v in values]
-
-
-def site_visible(
-    paper: Dict[str, Any],
-    min_relevance: int = SITE_MIN_RELEVANCE,
-    require_ai: bool = SITE_REQUIRE_AI_METHOD,
-) -> bool:
-    """Scored by the LLM as relevant enough, uses an AI/ML method, not withdrawn."""
-    relevance = paper.get("relevance")
-    return (
-        isinstance(relevance, int)
-        and not isinstance(relevance, bool)
-        and relevance >= min_relevance
-        and not paper.get("withdrawn")
-        and (not require_ai or any(m in AI_METHODS for m in paper.get("methods") or []))
-    )
 
 
 def build(today: Optional[date] = None) -> Dict[str, Any]:

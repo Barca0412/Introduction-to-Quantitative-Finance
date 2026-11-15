@@ -32,6 +32,7 @@ function datasetLine() {
 
 function buildStatusBlock(statsPayload, papersPayload) {
   const summary = statsPayload.summary || {}
+  const site = statsPayload.site_summary || {}
   const papers = papersPayload.papers || []
   const latestPaperDate = summary.latest_published_date || papers[0]?.published_date || 'N/A'
   const latestUpdate = formatDate(statsPayload.last_updated || papersPayload.last_updated)
@@ -41,10 +42,10 @@ function buildStatusBlock(statsPayload, papersPayload) {
     '> [!NOTE]',
     '> FinPaperRadar（AI × 金融论文雷达）machine-updated status',
     `> - Latest update: ${latestUpdate}`,
-    `> - Indexed papers: ${summary.total_papers ?? papers.length}`,
-    `> - Focus papers: ${summary.focus_papers ?? 0}`,
-    `> - Latest publication date: ${latestPaperDate}`,
-    `> - Monitored categories: ${summary.monitored_categories ?? 10}`,
+    `> - AI × finance papers on the site: ${site.papers ?? 0} (core ${site.core_papers ?? 0}; relevance ≥ 2 with an AI/ML method, since ${site.since || 'N/A'})`,
+    `> - Latest publication date: ${site.latest || latestPaperDate}`,
+    `> - Monitored arXiv categories: ${summary.monitored_categories ?? 15} (plus finance papers from cs.LG and stat.ML)`,
+    `> - Papers in the open dataset (all fetched, incl. not relevant): ${summary.total_papers ?? papers.length}`,
     datasetLine(),
     END_MARKER,
   ].join('\n')
