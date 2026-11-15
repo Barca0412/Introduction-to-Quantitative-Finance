@@ -131,6 +131,22 @@ export async function loadGroupPapers(groupKey) {
   return groupPapersCache.get(groupKey)
 }
 
+/**
+ * S8 trend aggregates written by scripts/arxiv_radar/trends.py into /arxiv-data/agg/:
+ * 'weekly_keywords', 'weekly_institutions', 'rising', `topic/<domain or method id>`,
+ * `keyword/<id>`. Returns null when the site data has no aggregates or the file is missing.
+ * rising.enough_history is false until four earlier weeks exist: say so on the page.
+ */
+export async function loadAggregate(name) {
+  const manifest = await loadManifest()
+  if (!manifest.agg) return null
+  try {
+    return await fetchJson(`agg/${name}.json`, manifest.generated_at)
+  } catch (error) {
+    return null
+  }
+}
+
 /** Chinese names of the classification ids: { paper_types: Map(id -> zh), ..., relevance }. */
 export async function loadTaxonomy() {
   const manifest = await loadManifest()
