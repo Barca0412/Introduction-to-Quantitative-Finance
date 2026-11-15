@@ -270,15 +270,23 @@ def needs_enrichment(fetched: List[Dict[str, Any]], existing: Dict[str, Any]) ->
     return todo
 
 
-async def run_pipeline() -> Optional[Dict[str, Any]]:
-    """Run the daily fetch -> enrich -> persist -> stats pipeline."""
+async def run_pipeline(fetched: Optional[List[Dict[str, Any]]] = None) -> Optional[Dict[str, Any]]:
+    """Run the daily fetch -> enrich -> persist -> stats pipeline.
+
+    ``fetched``: papers to process instead of the arXiv date window (used by
+    discover.py to add papers found in the top-venue library).
+    """
     logger.info("=" * 60)
     logger.info("Starting LLM-Finance-Radar paper fetch pipeline")
     logger.info("=" * 60)
 
-    logger.info("\n[Step 1] Fetching papers from arXiv...")
-    fetched_papers, fetch_report = await fetch_all_categories(ARXIV_CATEGORIES)
-    report_fetch(fetch_report)
+    if fetched is None:
+        logger.info("\n[Step 1] Fetching papers from arXiv...")
+        fetched_papers, fetch_report = await fetch_all_categories(ARXIV_CATEGORIES)
+        report_fetch(fetch_report)
+    else:
+        logger.info("\n[Step 1] %s papers given by the caller (no date-window fetch)", len(fetched))
+        fetched_papers, fetch_report = fetched, []
     if not fetched_papers:
         raise RuntimeError(
             "No papers matched the arXiv date window. Refusing to publish stale Radar data."
