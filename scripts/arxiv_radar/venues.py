@@ -25,6 +25,8 @@ import yaml
 
 VENUES_FILE = Path(__file__).resolve().parent / "vocab" / "venues.yaml"
 
+# Not a venue yet: submitted or under review.
+_NOT_YET = re.compile(r"^\W*(submitted|under review|in submission|under submission|preprint)|\bsubmitted to\b|\bunder review\b", re.I)
 _WORKSHOP = re.compile(r"\bworkshop\b|\bsymposium\b|\bw/s\b", re.I)
 _ACCEPTED = re.compile(r"accepted|to appear|forthcoming|camera.?ready|in press", re.I)
 _PUBLISHED = re.compile(r"published|proceedings|\bvol(ume)?\.?\s*\d|\bpp\.|\bpages?\s+\d|\bno\.\s*\d", re.I)
@@ -64,7 +66,7 @@ def _year(text: str) -> Optional[int]:
 def detect_venue(text: str, source: str) -> Optional[Dict[str, Any]]:
     """Venue from one piece of text. ``source``: comment | journal-ref."""
     text = " ".join(str(text or "").split())
-    if not text:
+    if not text or _NOT_YET.search(text):
         return None
     entry = next((e for e in venue_table() if e["_re"].search(text)), None)
     workshop = bool(_WORKSHOP.search(text))

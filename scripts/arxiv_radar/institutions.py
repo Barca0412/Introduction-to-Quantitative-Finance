@@ -205,6 +205,10 @@ _SENTENCE = re.compile(r"\b(work (was )?done|while (the author )?(was )?(at|visi
                        r"equal contribution|corresponding author)\b", re.I)
 
 
+# A legal suffix on its own ("Ltd"), or a sentence about a person, is not an institution.
+_NOT_A_NAME = re.compile(r"^(ltd|inc|llc|gmbh|co|corp|plc|s\.?a|ag)\.?$|\b(is|was|are) (an?|the)\b|independent researcher", re.I)
+
+
 def _level(segment: str) -> int:
     for rank, pattern in enumerate(_LEVELS):
         if pattern.search(segment):
@@ -239,7 +243,7 @@ def split_raw_affiliations(raw: str) -> List[str]:
         if len(line) < 4 or not re.search(r"[A-Za-z一-鿿]", line):
             continue
         name, level = institution_from_line(line)
-        if len(name) < 3 or len(name.split()) > 12:
+        if len(name) < 3 or len(name.split()) > 12 or _NOT_A_NAME.search(name):
             continue
         if level == len(_LEVELS) and len(found) and found[-1][1] < len(_LEVELS):
             continue  # stray fragment next to a real institution

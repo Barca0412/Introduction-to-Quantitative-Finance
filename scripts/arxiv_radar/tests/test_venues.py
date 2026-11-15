@@ -30,7 +30,8 @@ class VenueTest(unittest.TestCase):
             self.assertEqual((v["name"], v["kind"], v["discipline"], v["status"], v["year"]), want, text)
 
     def test_no_venue(self):
-        for text in ["12 pages, 5 figures", "Code at https://www.github.com/x", ""]:
+        for text in ["12 pages, 5 figures", "Code at https://www.github.com/x", "",
+                     "Submitted to IEEE Transactions on Audio, Speech and Language Processing", "Under review at ICLR 2027"]:
             self.assertIsNone(V.detect_venue(text, "comment"), text)
 
     def test_unknown_venue_is_kept_for_review(self):
