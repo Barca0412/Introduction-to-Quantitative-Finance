@@ -94,3 +94,17 @@ class MatchTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class OpenAlexKeyTest(unittest.TestCase):
+    def test_key_added_and_redacted(self):
+        from scripts.arxiv_radar import config
+
+        with mock.patch.object(config, "OPENALEX_API_KEY", "SECRET123"):
+            self.assertEqual(config.openalex_url("https://api.openalex.org/works?x=1"),
+                             "https://api.openalex.org/works?x=1&api_key=SECRET123")
+            self.assertEqual(config.openalex_url("https://api.openalex.org/works/doi:1"),
+                             "https://api.openalex.org/works/doi:1?api_key=SECRET123")
+            self.assertNotIn("SECRET123", config.redact("Giving up on https://x?api_key=SECRET123"))
+        with mock.patch.object(config, "OPENALEX_API_KEY", ""):
+            self.assertEqual(config.openalex_url("https://a?b=1"), "https://a?b=1")

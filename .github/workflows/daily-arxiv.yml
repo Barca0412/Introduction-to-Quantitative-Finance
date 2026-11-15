@@ -80,6 +80,8 @@ jobs:
           # Backfills bring thousands of new papers at once; clean up affiliations faster.
           RADAR_AFFILIATION_LLM_CONCURRENCY: ${{ inputs.since != '' && '8' || '2' }}
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          # Optional; OpenAlex lookups (institutions, venue library) work without it.
+          OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
           LLM_BASE_URL: ${{ vars.LLM_BASE_URL }}
           LLM_MODEL: ${{ vars.LLM_MODEL }}
           DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}

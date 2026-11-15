@@ -30,6 +30,7 @@ from typing import Any, Dict, List, Optional, Tuple
 
 import aiohttp
 
+from .config import openalex_url, redact
 from .utils import Progress
 
 logger = logging.getLogger(__name__)
@@ -390,7 +391,7 @@ async def _get(session: aiohttp.ClientSession, url: str, pacer: _Pacer, as_json:
 
 async def lookup_paper(session, paper, oa_pacer, html_pacer) -> Dict[str, Any]:
     arxiv_id = str(paper.get("id", "")).split("v")[0]
-    work = await _get(session, OPENALEX_WORK.format(id=arxiv_id), oa_pacer, as_json=True) or {}
+    work = await _get(session, openalex_url(OPENALEX_WORK.format(id=arxiv_id)), oa_pacer, as_json=True) or {}
     openalex = parse_openalex(work)
     names = _paper_authors(paper)
     covered = sum(1 for name in names if any(names_match(a["name"], name) and a["institutions"] for a in openalex))
@@ -419,7 +420,7 @@ async def enrich_institutions(papers: List[Dict[str, Any]], today: Optional[date
                 try:
                     paper.update(await lookup_paper(session, paper, oa_pacer, html_pacer))
                 except Exception as exc:  # one paper must not stop the run
-                    logger.warning("Institution lookup failed for %s: %r", paper.get("id"), exc)
+                    logger.warning("Institution lookup failed for %s: %s", paper.get("id"), redact(repr(exc)))
             progress.update(ok=bool(paper.get("institutions")))
 
         await asyncio.gather(*(one(p) for p in todo))

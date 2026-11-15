@@ -31,7 +31,7 @@ from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional
 from urllib.parse import urlencode
 
-from .config import DATA_DIR, FINANCE_TERM_PATTERN
+from .config import DATA_DIR, FINANCE_TERM_PATTERN, openalex_url, redact
 
 logger = logging.getLogger(__name__)
 
@@ -86,7 +86,7 @@ def _get(url: str, attempts: int = 4, timeout: int = 300) -> Optional[bytes]:
         if code == b"404":
             return None
         time.sleep(3 * (attempt + 1))
-    logger.warning("Giving up on %s", url)
+    logger.warning("Giving up on %s", redact(url))
     return None
 
 
@@ -219,7 +219,7 @@ def fetch_openalex_source(venue_id: str, year: int, cfg: Dict[str, Any]) -> List
             "per-page": 200, "page": page,
             "select": "id,doi,title,authorships,locations,ids,abstract_inverted_index,type",
         })
-        data = _json(f"https://api.openalex.org/works?{query}")
+        data = _json(openalex_url(f"https://api.openalex.org/works?{query}"))
         if not data or not data.get("results"):
             if total is not None and len(out) < total:
                 raise RuntimeError(f"{venue_id} {year}: OpenAlex stopped at {len(out)} of {total}")
