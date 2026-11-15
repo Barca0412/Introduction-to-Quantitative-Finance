@@ -17,6 +17,7 @@ data/embeddings.meta.json
 data/restore_record.json
 data/export/
 data/*.tmp
+data/enrich-trial/
 docs/public/arxiv-data/
 docs/public/arxiv-charts/
 

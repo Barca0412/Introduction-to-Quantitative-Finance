@@ -8,7 +8,7 @@
 # says little; the trial report lists those separately.
 
 - {id: "2303.17564", name: BloombergGPT, relevance: [3], paper_type: method, task_types: [understanding], finance_domains: [general], methods: [llm]}
-- {id: "2306.06031", name: FinGPT, relevance: [3], paper_type: system, task_types: [understanding], finance_domains: [general], methods: [llm]}
+- {id: "2306.06031", name: FinGPT, relevance: [3], paper_type: system, task_types: [understanding], finance_domains: [general], methods: [llm], in_prompt: true}
 - {id: "1908.10063", name: FinBERT, relevance: [3], paper_type: method, task_types: [understanding], finance_domains: [fin-nlp], methods: [llm]}
 - {id: "2412.20138", name: TradingAgents, relevance: [3], paper_type: method, task_types: [decision], finance_domains: [trading], methods: [llm-agent]}
 - {id: "2011.09607", name: FinRL, relevance: [3], paper_type: system, task_types: [decision], finance_domains: [trading, portfolio-risk], methods: [rl]}
@@ -54,4 +54,4 @@
 - {id: "1804.04216", name: Market Making via RL, relevance: [3], paper_type: method, task_types: [decision], finance_domains: [trading], methods: [rl]}
 - {id: "2005.13665", name: Deep Learning for Portfolio Optimization, relevance: [3], paper_type: method, task_types: [decision], finance_domains: [portfolio-risk], methods: [deep-ts]}
 - {id: "1904.10890", name: Insurance tariff with tree models, relevance: [3], paper_type: method, task_types: [pricing], finance_domains: [insurance-household], methods: [classic-ml]}
-- {id: "1904.12066", name: ABIDES, relevance: [3], paper_type: system, task_types: [simulation], finance_domains: [market-structure], methods: [generative]}
+- {id: "1904.12066", name: ABIDES, relevance: [3], paper_type: system, task_types: [simulation], finance_domains: [market-structure], methods: [generative], in_prompt: true}

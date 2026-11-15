@@ -22,7 +22,10 @@ from .config import PREDEFINED_TAGS
 
 # Bump when the prompt, the taxonomy or the validation rules change: papers enriched
 # with an older version are redone the next time they are fetched.
-ENRICH_VERSION = "s3-v2.0"
+ENRICH_VERSION = "s3-v2.1"
+# s3-v2.1 (2026-11-15): after the first real-model trial: method vs system, finance-only
+# models and benchmarks are relevance 3, "general" never for price models, report QA
+# is corporate-finance.
 SCHEMA_VERSION = 2
 # Give up on a paper after this many failed enrichments with the current version.
 MAX_ENRICH_ATTEMPTS = 3
