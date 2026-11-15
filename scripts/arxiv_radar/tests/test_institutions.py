@@ -71,7 +71,7 @@ class HtmlParseTest(unittest.TestCase):
         self.assertIn("Department of Mathematics & Statistics", authors[0]["raw"])  # kept for team background
 
     def test_no_affiliation_in_page(self):
-        self.assertEqual(inst.parse_arxiv_html(HTML_NONE), [{"name": "Yuxuan Gu", "institutions": [], "raw": []}])
+        self.assertEqual(inst.parse_arxiv_html(HTML_NONE), [{"name": "Yuxuan Gu", "institutions": [], "raw": [], "email_hashes": []}])
 
     def test_cleanup_cases(self):
         cases = {
@@ -167,3 +167,28 @@ class CanonicalTest(unittest.TestCase):
         table = inst.load_institution_table()
         self.assertGreater(len(table), 100)
         self.assertEqual(table["03cve4549"]["zh"], "清华大学")
+
+
+class AuthorIdentityTest(unittest.TestCase):
+    def test_openalex_ids_and_keyed_email(self):
+        import os
+        from unittest import mock
+
+        work = {"authorships": [{"author": {"display_name": "Yan Wang", "id": "https://openalex.org/A111",
+                                            "orcid": "https://orcid.org/0000-0001"}, "institutions": []}]}
+        oa = inst.parse_openalex(work)
+        self.assertEqual((oa[0]["openalex"], oa[0]["orcid"]), ("A111", "0000-0001"))
+        with mock.patch.dict(os.environ, {"RADAR_ID_SALT": ""}):
+            self.assertEqual(inst.email_hash("a@b.com"), "")  # no secret: e-mails unused
+            self.assertEqual(inst.parse_arxiv_html(HTML_ACM)[0]["email_hashes"], [])
+        with mock.patch.dict(os.environ, {"RADAR_ID_SALT": "s3cret"}):
+            h = inst.email_hash("Z@ICT.ac.cn ")
+            self.assertEqual(h, inst.email_hash("z@ict.ac.cn"))
+            self.assertEqual(len(h), 16)
+            self.assertNotIn("ict", h)
+            html = inst.parse_arxiv_html(HTML_ACM)
+            self.assertEqual(html[0]["email_hashes"], [h])
+            paper = {"authors": [{"name": "Yan Wang"}, {"name": "Bingdian Zhang"}]}
+            out = inst.combine(paper, oa, html)
+        self.assertEqual(out["author_ids"][0], {"openalex": "A111", "orcid": "0000-0001"})
+        self.assertEqual(out["author_ids"][1], {"email_hash": h})

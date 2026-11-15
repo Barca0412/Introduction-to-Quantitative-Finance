@@ -47,7 +47,7 @@ from .config import (
     PAPERS_FILE,
 )
 from .compute_stats import build_stats
-from . import trends
+from . import leaders, trends
 from .site_filter import site_visible
 from .utils import is_arxiv_id
 from .data_store import load_local_embeddings
@@ -319,6 +319,8 @@ def build(today: Optional[date] = None) -> Dict[str, Any]:
     stats_info = _write(SITE_DATA_DIR / "stats.json", _dumps(site_stats), SITE_MAX_FILE_BYTES)
     # S8 aggregates for the trends / keyword / institution pages (trends.py).
     agg_info = trends.build(papers, SITE_DATA_DIR / "agg")
+    # Leaderboards and institution / author pages (leaders.py).
+    agg_info["leaders"] = leaders.build(papers, SITE_DATA_DIR / "agg")
 
     manifest = {
         "version": 2,

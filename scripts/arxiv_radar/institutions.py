@@ -8,6 +8,8 @@ Per paper this writes:
   affiliations          institution names (old field, kept for the current pages)
   affiliation           "; ".join(affiliations)
   affiliation_source    "openalex" | "openalex+html" | "html" | "none"
+  author_ids            per author {openalex, orcid, email_hash} when known (same order as
+                        ``authors``); e-mails themselves are never stored
   affiliation_raw       the affiliation text as written (departments included), for the
                         team-background guess in venues.py
   affiliation_checked_at  ISO date of this lookup (newer OpenAlex data is fetched again
@@ -21,6 +23,7 @@ from __future__ import annotations
 
 import asyncio
 import logging
+import os
 import re
 import unicodedata
 from datetime import date, timedelta
@@ -53,6 +56,22 @@ def name_key(name: str) -> str:
     text = unicodedata.normalize("NFKD", name or "").encode("ascii", "ignore").decode()
     parts = [p for p in re.split(r"[^a-z]+", text.lower()) if len(p) > 1]
     return " ".join(parts)
+
+
+def email_hash(email: str) -> str:
+    """Keyed fingerprint of an e-mail address (HMAC with RADAR_ID_SALT), or ''.
+
+    Only this is kept: it tells two people with the same name apart, and the address
+    is never stored. A plain hash could be reversed by hashing guessed addresses, so
+    without the secret salt (a repository secret / local env) e-mails are not used.
+    """
+    import hashlib
+    import hmac
+
+    salt = os.getenv("RADAR_ID_SALT", "").strip()
+    if not salt:
+        return ""
+    return hmac.new(salt.encode(), email.strip().lower().encode("utf-8"), hashlib.sha256).hexdigest()[:16]
 
 
 def _tokens(name: str) -> List[str]:
@@ -92,10 +111,13 @@ def parse_openalex(work: Dict[str, Any]) -> List[Dict[str, Any]]:
                 "country": inst.get("country_code") or "",
                 "type": inst.get("type") or "",
             })
+        author = authorship.get("author") or {}
         authors.append({
-            "name": (authorship.get("author") or {}).get("display_name") or authorship.get("raw_author_name") or "",
+            "name": author.get("display_name") or authorship.get("raw_author_name") or "",
             "institutions": institutions,
             "raw": [str(r) for r in authorship.get("raw_affiliation_strings") or []],
+            "openalex": (author.get("id") or "").rsplit("/", 1)[-1],
+            "orcid": (author.get("orcid") or "").rsplit("/", 1)[-1],
         })
     return authors
 
@@ -140,9 +162,12 @@ class _AuthorsParser(HTMLParser):
         if "ltx_authors" in classes and not self.in_authors:
             self.in_authors, self.authors_depth = True, len(self.stack)
         if self.in_authors and "ltx_creator" in classes and "ltx_role_author" in classes:
-            self.current = {"name": [], "aff": []}
+            self.current = {"name": [], "aff": [], "emails": []}
             self.creator_depth = len(self.stack)
             self.after_break = False
+        href = dict(attrs).get("href") or ""
+        if self.current is not None and href.lower().startswith("mailto:"):
+            self.current["emails"].append(href[7:].split("?")[0])
         if tag in ("sup", "sub") and self.current is not None:
             classes = classes | {"ltx_note_mark"}  # footnote markers, not text
         self.stack.append((tag, classes))
@@ -159,6 +184,7 @@ class _AuthorsParser(HTMLParser):
             self.authors.append({
                 "name": " ".join("".join(self.current["name"]).split()),
                 "raw": "".join(self.current["aff"]),
+                "emails": self.current["emails"],
             })
             self.current = None
         if self.in_authors and len(self.stack) <= self.authors_depth:
@@ -265,7 +291,8 @@ def parse_arxiv_html(html: str) -> List[Dict[str, Any]]:
         pass
     return [
         {"name": a["name"], "institutions": split_raw_affiliations(a["raw"]),
-         "raw": [line for line in (" ".join(l.split()) for l in a["raw"].split("\n")) if line]}
+         "raw": [line for line in (" ".join(l.split()) for l in a["raw"].split("\n")) if line],
+         "email_hashes": [h for h in (email_hash(e) for e in a.get("emails", []) if "@" in e) if h]}
         for a in parser.authors if a["name"]
     ]
 
@@ -298,6 +325,7 @@ def combine(paper: Dict[str, Any], openalex: List[Dict[str, Any]], html: Optiona
 
     names = _paper_authors(paper)
     per_author: List[List[int]] = []
+    identities: List[Dict[str, str]] = []  # per author: OpenAlex id, ORCID, e-mail hash
     raw_lines: List[str] = []  # departments etc., kept for the team-background guess
     used_html = False
     for position, name in enumerate(names):
@@ -305,6 +333,10 @@ def combine(paper: Dict[str, Any], openalex: List[Dict[str, Any]], html: Optiona
         oa = next((a for a in openalex if names_match(a["name"], name)), None)
         if oa is None and position < len(openalex) and len(openalex) == len(names):
             oa = openalex[position]  # same author count: trust the order
+        ha_for_id = next((a for a in html or [] if names_match(a["name"], name)), None)
+        identity = {"openalex": (oa or {}).get("openalex", ""), "orcid": (oa or {}).get("orcid", ""),
+                    "email_hash": ((ha_for_id or {}).get("email_hashes") or [""])[0]}
+        identities.append({k: v for k, v in identity.items() if v})
         if oa and oa["institutions"]:
             found = [add({**inst, "source": "openalex", "confidence": "high"}) for inst in oa["institutions"]]
             raw_lines += oa.get("raw", [])
@@ -324,6 +356,7 @@ def combine(paper: Dict[str, Any], openalex: List[Dict[str, Any]], html: Optiona
     return {
         "institutions": institutions,
         "author_affiliations": per_author,
+        "author_ids": identities,
         "affiliations": [i["name"] for i in institutions],
         "affiliation": "; ".join(i["name"] for i in institutions),
         "affiliation_source": source,
@@ -516,3 +549,41 @@ def canonicalize(papers: List[Dict[str, Any]]) -> Dict[str, int]:
             paper["affiliations"] = [m["name"] for m in merged]
             paper["affiliation"] = "; ".join(paper["affiliations"])
     return {"linked": linked, "named": named}
+
+
+async def fill_author_ids(papers: List[Dict[str, Any]]) -> int:
+    """One-off backfill: OpenAlex author ids / ORCID for relevant papers looked up before
+    author_ids existed (institutions are left as they are). Returns papers filled."""
+    todo = [p for p in papers if p.get("affiliation_checked_at") and "author_ids" not in p
+            and isinstance(p.get("relevance"), int) and p["relevance"] >= MIN_RELEVANCE]
+    if not todo:
+        return 0
+    progress = Progress("author ids", len(todo), logger)
+    pacer = _Pacer(1 / OPENALEX_RATE)
+    async with aiohttp.ClientSession(timeout=aiohttp.ClientTimeout(total=40),
+                                     headers={"User-Agent": USER_AGENT}, trust_env=True) as session:
+        semaphore = asyncio.Semaphore(8)
+
+        async def one(paper: Dict[str, Any]) -> None:
+            paper_id = str(paper.get("id", ""))
+            if is_arxiv_id(paper_id):
+                url = OPENALEX_WORK.format(id=normalize_arxiv_id(paper_id))
+            elif paper.get("doi"):
+                url = f"https://api.openalex.org/works/doi:{paper['doi']}?select=id,authorships"
+            else:
+                return
+            async with semaphore:
+                work = await _get(session, openalex_url(url), pacer, as_json=True) or {}
+            openalex = parse_openalex(work)
+            ids = []
+            for position, name in enumerate(_paper_authors(paper)):
+                oa = next((a for a in openalex if names_match(a["name"], name)), None)
+                if oa is None and len(openalex) == len(paper.get("authors") or []):
+                    oa = openalex[position]
+                ids.append({k: v for k, v in (("openalex", (oa or {}).get("openalex", "")),
+                                               ("orcid", (oa or {}).get("orcid", ""))) if v})
+            paper["author_ids"] = ids
+            progress.update(ok=any(ids))
+
+        await asyncio.gather(*(one(p) for p in todo))
+    return len(todo)

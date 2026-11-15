@@ -134,6 +134,7 @@ def _papers_schema():
             # S6 institutions (institutions.py).
             ("institutions", pa.list_(pa.struct([(k, pa.string()) for k in ("name", "ror", "country", "type", "source", "confidence", "zh", "short")]))),
             ("author_affiliations", pa.list_(pa.list_(pa.int32()))),
+            ("author_ids", pa.list_(pa.struct([("openalex", pa.string()), ("orcid", pa.string()), ("email_hash", pa.string())]))),
             ("affiliation_source", pa.string()),
             ("affiliation_checked_at", pa.string()),
             ("affiliation_raw", strings),
@@ -217,6 +218,8 @@ def _clean_paper_for_parquet(paper: Dict[str, Any]) -> Dict[str, Any]:
             for i in paper.get("institutions") or [] if isinstance(i, dict)
         ],
         "author_affiliations": [[int(x) for x in row] for row in paper.get("author_affiliations") or []],
+        "author_ids": [{k: str((a or {}).get(k) or "") for k in ("openalex", "orcid", "email_hash")}
+                       for a in paper.get("author_ids") or []],
         "affiliation_source": paper.get("affiliation_source"),
         "affiliation_checked_at": paper.get("affiliation_checked_at"),
         "affiliation_raw": list(paper.get("affiliation_raw") or []),

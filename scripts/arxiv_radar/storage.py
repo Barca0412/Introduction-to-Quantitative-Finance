@@ -96,6 +96,7 @@ ARXIV_EXTRA_FIELDS = ("primary_category", "comment", "journal_ref", "doi", "sour
 # S6 institutions (institutions.py).
 INSTITUTION_FIELDS = (
     "institutions", "author_affiliations", "affiliation_source", "affiliation_checked_at", "affiliation_raw",
+    "author_ids",
 )
 V2_FIELDS = (
     "relevance", "relevance_reason_zh", "paper_type", "task_types", "finance_domains",
