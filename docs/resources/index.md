@@ -1,19 +1,12 @@
 ---
-title: 量化金融开源资源清单
+title: 开源资源清单
+outline: 2
 description: 精选的量化金融开源项目和资料：多因子框架、回测引擎、因子挖掘、机器学习与强化学习交易、组合优化、高频交易、金融数据接口和课程，每项附一句推荐理由。
 ---
 
-# 量化金融GitHub资源推荐清单
+# 开源资源清单
 
-*基于 Introduction-to-Quantitative-Finance repo 补充的开源项目和资料 (63个项目)*
-
----
-
-## 目录
-
-[[toc]]
-
----
+精选量化研究的开源项目和资料，按用途整理，每项附一句推荐理由。
 
 ## 多因子量化框架
 
@@ -23,7 +16,6 @@ description: 精选的量化金融开源项目和资料：多因子框架、回�
 | [HUANG-NI-YUAN/Multi-Factor_Model](https://github.com/HUANG-NI-YUAN/Multi-Factor_Model) | 量化投资中的多因子框架，包含15个因子，生成回测报告 |
 | [microsoft/qlib](https://github.com/microsoft/qlib) | AI导向的量化投资平台，支持多种机器学习范式、市场动态建模、强化学习、自动因子挖掘，含RD-Agent自动R&D |
 
----
 
 ## 回测框架与系统
 
@@ -34,7 +26,6 @@ description: 精选的量化金融开源项目和资料：多因子框架、回�
 | [polakowo/vectorbt](https://github.com/polakowo/vectorbt) | 极速向量化回测库，基于NumPy和Numba，支持超大规模参数优化，集成Plotly可视化 |
 | [stefan-jansen/zipline-reloaded](https://github.com/stefan-jansen/zipline-reloaded) | Quantopian事件驱动回测框架的维护版本，支持多个市场，Pandas集成 |
 
----
 
 ## 因子挖掘与机器学习
 
@@ -45,7 +36,6 @@ description: 精选的量化金融开源项目和资料：多因子框架、回�
 | [microsoft/RD-Agent](https://github.com/microsoft/RD-Agent) | 多Agent框架用于因子挖掘和模型优化，自动化R&D流程 |
 | [ezphuang/rf_stock](https://github.com/ezphuang/rf_stock) | 基于随机森林和多因子模型的选股模型 |
 
----
 
 ## 投资组合优化与风险管理
 
@@ -56,7 +46,6 @@ description: 精选的量化金融开源项目和资料：多因子框架、回�
 | [Gouldh/ML-Portfolio-Optimization](https://github.com/Gouldh/ML-Portfolio-Optimization) | 机器学习和金融理论结合的投资组合优化，因子分析、Black-Litterman模型 |
 | [domokane/FinancePy](https://github.com/domokane/FinancePy) | 衍生品定价和风险管理库，期权/期货定价，使用Numba实现C++级性能 |
 
----
 
 ## 数据获取与处理
 
@@ -66,7 +55,6 @@ description: 精选的量化金融开源项目和资料：多因子框架、回�
 | [Ravdar/yfinance-downloader](https://github.com/Ravdar/yfinance-downloader) | 可视化界面的Yahoo Finance数据下载工具，GUI界面、支持Excel输出 |
 | [maxisoft/yahoo-finance-data-downloader](https://github.com/maxisoft/yahoo-finance-data-downloader) | 自动化高效OHLCV数据下载脚本，多线程支持 |
 
----
 
 ## 技术指标与信号
 
@@ -76,7 +64,6 @@ description: 精选的量化金融开源项目和资料：多因子框架、回�
 | [elkingarcia11/indicator-calculator](https://github.com/elkingarcia11/indicator-calculator) | 技术指标计算模块，RSI、Stochastic RSI、MACD、ROC、ATR、Bollinger Bands |
 | [ubc-mds/stocksignalsr](https://github.com/ubc-mds/stocksignalsr) | 股票买卖信号计算工具(R包)，200日均线、10vs20日交叉、Bollinger Bands |
 
----
 
 ## 衍生品定价
 
@@ -87,7 +74,6 @@ description: 精选的量化金融开源项目和资料：多因子框架、回�
 | [AmirDehkordi/OptionGreeks](https://github.com/AmirDehkordi/OptionGreeks) | 期权希腊字母计算和可视化，Delta、Gamma、Theta、Vega等2D和3D可视化 |
 | [JRCon1/greeks-package](https://pypi.org/project/greeks/) | 完整希腊字母计算包(一、二、三阶)，无外部依赖，集成Yahoo Finance期权链 |
 
----
 
 ## 深度学习与时间序列
 
@@ -98,7 +84,6 @@ description: 精选的量化金融开源项目和资料：多因子框架、回�
 | [A-safarji/Time-series-deep-learning](https://github.com/A-safarji/Time-series-deep-learning) | 多模型时间序列预测(LSTM、BiLSTM、NeuralProphet)，PyTorch实现 |
 | [gonzalopezgil/xlstm-ts](https://github.com/gonzalopezgil/xlstm-ts) | 扩展LSTM用于时间序列预测，集成小波去噪，股票趋势预测 |
 
----
 
 ## 强化学习交易
 
@@ -111,7 +96,6 @@ description: 精选的量化金融开源项目和资料：多因子框架、回�
 | [Albert-Z-Guo/Deep-Reinforcement-Stock-Trading](https://github.com/Albert-Z-Guo/Deep-Reinforcement-Stock-Trading) | DRL投资组合管理，模块化可扩展框架 |
 | [ICAIF-2020集成策略](https://github.com/Jung132914/Deep-Reinforcement-Learning-for-Automated-Stock-Trading-Ensemble-Strategy-ICAIF-2020) | 集成DRL策略(PPO、A2C、DDPG)，ICAIF 2020论文 |
 
----
 
 ## 高频交易与市场微观结构
 
@@ -121,7 +105,6 @@ description: 精选的量化金融开源项目和资料：多因子框架、回�
 | [sohaibelkarmi/High-Frequency-Trading-Simulator](https://github.com/sohaibelkarmi/High-Frequency-Trading-Simulator) | 市场微观结构研究沙盒，C++17限价簿、Hawkes过程、Streamlit前端 |
 | [visualHFT/VisualHFT](https://github.com/visualHFT/VisualHFT) | 实时市场微观结构分析的WPF/C#桌面应用，限价簿可视化、VPIN等微观结构指标 |
 
----
 
 ## 情感分析与新闻处理
 
@@ -133,7 +116,6 @@ description: 精选的量化金融开源项目和资料：多因子框架、回�
 | [sandesha21/Stock-Market-News-Sentiment](https://github.com/sandesha21/Stock-Market-News-Sentiment-Analysis-and-Summarization) | 股市新闻情感分析和摘要生成，NLP、AI技术识别市场移动事件 |
 | [Kanishk1420/FinReport](https://github.com/Kanishk1420/FinReport-Explainable-Stock-Earnings-Forecasting-via-News-Factor) | 通过新闻因子预测股票收益，FinBERT情感分析、LSTM预测、EGARCH风险评估 |
 
----
 
 ## 加密货币交易
 
@@ -143,7 +125,6 @@ description: 精选的量化金融开源项目和资料：多因子框架、回�
 | [Open-Trader/opentrader](https://github.com/Open-Trader/opentrader) | 自托管加密货币交易机器人，内置策略(GRID、DCA、RSI)、纸盘交易、回测 |
 | [Allora_HyperLiquid_AutoTradeBot](https://github.com/HarbhagwanDhaliwal/Allora_HyperLiquid_AutoTradeBot) | AI驱动的交易机器人(AlloraNetwork + HyperLiquid DEX) |
 
----
 
 ## 综合平台与生态
 
@@ -153,7 +134,6 @@ description: 精选的量化金融开源项目和资料：多因子框架、回�
 | [leoncuhk/awesome-quant-ai](https://github.com/leoncuhk/awesome-quant-ai) | 量化投资AI/ML资源精选列表，策略、工具平台、学习资源、研究论文、社区 |
 | [barter-rs/barter-rs](https://github.com/barter-rs/barter-rs) | Rust算法交易生态，高性能、多线程、模块化(策略、风险管理)，支持实盘/纸盘/回测 |
 
----
 
 ## 波动率预测
 
@@ -162,7 +142,6 @@ description: 精选的量化金融开源项目和资料：多因子框架、回�
 | [iskakovs/GARCH-models](https://github.com/iskakovs/GARCH-models) | GARCH模型股票波动率预测，GARCH(1,1)、GARCH-M、EGARCH等 |
 | [tommasograndi/market-vol-forecasting](https://github.com/tommasograndi/market-vol-forecasting-with-GARCH-models) | FTSE MIB 100指数波动率预测，GARCH、EGARCH、TGARCH、GJR-GARCH对比 |
 
----
 
 ## 股票选择与基本面分析
 
@@ -173,7 +152,6 @@ description: 精选的量化金融开源项目和资料：多因子框架、回�
 | [pchernic/Stocks_Quant_Analysis](https://github.com/pchernic/Stocks_Quant_Analysis) | 股票定量分析(yfinance、pandas、matplotlib)，时间序列、相关性、收益等 |
 | [pranjal-joshi/Screeni-py](https://github.com/pranjal-joshi/Screeni-py) | 印度NSE股票筛选器，基于突破概率的技术筛选 |
 
----
 
 ## 财务指标与估值
 
@@ -181,7 +159,6 @@ description: 精选的量化金融开源项目和资料：多因子框架、回�
 |------|------|
 | [JerBouma/FinanceToolkit](https://github.com/JerBouma/FinanceToolkit) | 财务工具包，计算130+财务指标，效率、流动性、盈利能力、偿债能力、估值指标 |
 
----
 
 ## K线图案识别
 
@@ -191,7 +168,6 @@ description: 精选的量化金融开源项目和资料：多因子框架、回�
 | [ruejo2013/ML-Candlestick-Recognition](https://github.com/ruejo2013/Machine-Learning-Candlestick-Recognition-Trading-Strategy) | 机器学习K线图案识别，Naive Bayes、神经网络预测市场走势 |
 | [Narfinsel/Candlestick-Pattern-Scanner](https://github.com/Narfinsel/Candlestick-Pattern-Scanner) | K线图案扫描工具(MQL5)，智能交易系统的反转信号检测 |
 
----
 
 ## 风险分析
 
@@ -201,7 +177,6 @@ description: 精选的量化金融开源项目和资料：多因子框架、回�
 | [jameshopham/Monte-Carlo-VaR](https://github.com/jameshopham/Application-of-Monte-Carlo-Simulations-in-VaR) | 蒙特卡洛模拟在VaR中的应用，时间序列特征工程、风险度量可视化 |
 | [akashdeepo/ML-Finance-Monte-Carlo-RRR](https://github.com/akashdeepo/ML-Finance-Monte-Carlo-RRR) | 集成蒙特卡洛和集成机器学习的市场预测，风险-收益比分析 |
 
----
 
 ## 推荐使用组合方案
 
@@ -227,7 +202,6 @@ description: 精选的量化金融开源项目和资料：多因子框架、回�
 2. **数据源**: ccxt库集成
 3. **策略**: 网格、DCA、技术分析
 
----
 
 ## 学习路径建议
 

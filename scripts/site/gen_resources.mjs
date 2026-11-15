@@ -20,7 +20,7 @@ const args = new Set(process.argv.slice(2))
 const REGISTRY_DIR = process.env.REGISTRY_DIR || DEFAULT_DIR
 const OUT_DIR = process.env.RESOURCES_OUT_DIR || join(ROOT, 'docs', 'resources')
 const README_FILE = process.env.README_FILE || join(ROOT, 'README.md')
-const SITE = 'https://barca0412.github.io/Introduction-to-Quantitative-Finance'
+const SITE = (process.env.SITE_URL || 'https://quant.hfthnu.com').replace(/\/$/, '')
 const README_BLOCK = 'RESOURCES'
 
 const registry = loadRegistry(REGISTRY_DIR)

@@ -9,7 +9,7 @@ import { computed } from 'vue'
 import { useData } from 'vitepress'
 
 const { frontmatter, page } = useData()
-const meta = computed(() => (page.value.relativePath.startsWith('wiki/') ? frontmatter.value.wiki || null : null))
+const meta = computed(() => (page.value.relativePath.startsWith('resources/method-') ? frontmatter.value.wiki || null : null))
 const asList = (v) => (Array.isArray(v) ? v : v ? [v] : [])
 
 const rows = computed(() => {
@@ -18,7 +18,7 @@ const rows = computed(() => {
   return [
     ['难度', w.level],
     ['前置知识', asList(w.prerequisites).join('、')],
-    ['可运行代码', w.code ? '有（免费数据可复现）' : ''],
+    ['可运行代码', w.code ? '有' : ''],
     ['署名', '湖南大学金融科技协会 Quant Group'],
   ].filter(([, v]) => v)
 })
