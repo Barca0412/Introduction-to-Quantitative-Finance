@@ -197,7 +197,7 @@ def _leader_lists(rows: List[Dict[str, Any]], names: Dict[str, Counter], person_
         for key in row["inst_records"]:
             if key in grid:
                 grid[key].update(row["paper"].get("finance_domains") or [])
-    domains = sorted({d for c in grid.values() for d in c})
+    domains = _domain_order()
     return {
         "papers": len(rows),
         "institutions": [inst_entry(k) for k in ranked[:TOP]],
@@ -221,6 +221,13 @@ def _leader_lists(rows: List[Dict[str, Any]], names: Dict[str, Counter], person_
         "cross_country": {"papers": cross, "pairs": [{"pair": k, "names": [COUNTRY_ZH.get(c, c) for c in k.split("-")], "n": n}
                                                      for k, n in pairs.most_common(10)]},
     }
+
+
+def _domain_order() -> List[str]:
+    """The 12 finance domains in taxonomy.yaml order (all of them, zeros included)."""
+    from .enrich import taxonomy
+
+    return [item["id"] for item in taxonomy()["finance_domains"]]
 
 
 def _top(counter: Counter) -> str:
@@ -272,6 +279,7 @@ def build(papers: Iterable[Dict[str, Any]], out_dir: Path, today: Optional[date]
         ordered = sorted(group, key=lambda r: r["paper"]["published_date"], reverse=True)
         return {
             "papers": [r["paper"]["id"] for r in ordered],
+            "core": sum(1 for r in group if r["paper"].get("relevance") == 3),
             "domains": Counter(d for r in group for d in r["paper"].get("finance_domains") or []).most_common(),
             "methods": Counter(m for r in group for m in r["paper"].get("methods") or []).most_common(),
         }

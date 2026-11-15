@@ -9,7 +9,7 @@ from scripts.arxiv_radar import leaders
 def paper(pid, day, authors, ids, insts, affs, rel=2):
     return {"id": pid, "published_date": day, "relevance": rel, "authors": authors, "author_ids": ids,
             "institutions": insts, "author_affiliations": affs,
-            "finance_domains": ["asset_pricing"], "methods": ["llm"]}
+            "finance_domains": ["asset-pricing"], "methods": ["llm"]}
 
 
 NTU = {"ror": "02e7b5302", "name": "Nanyang Technological University", "zh": "南洋理工大学",
@@ -102,8 +102,15 @@ class LeadersTest(unittest.TestCase):
         self.assertEqual(sorted(m["id"] for m in teams[0]["members"]), ["A1", "A2", "A3"])
         self.assertEqual(teams[0]["papers"], 2)  # paper 9 has only one member
         grid = data["periods"]["all"]["institution_domain"]
-        self.assertEqual(grid["domains"], ["asset_pricing"])
-        self.assertEqual(grid["rows"][0], {"id": "02e7b5302", "name": "南洋理工大学", "counts": [2]})
+        from scripts.arxiv_radar.enrich import taxonomy
+        order = [i["id"] for i in taxonomy()["finance_domains"]]
+        self.assertEqual(grid["domains"], order)
+        row = grid["rows"][0]
+        self.assertEqual(row["id"], "02e7b5302")
+        self.assertEqual(row["counts"][order.index("asset-pricing")], 2)
+        self.assertEqual(sum(row["counts"]), 2)
+        inst = json.loads((out / "institution" / "02e7b5302.json").read_text())
+        self.assertEqual(inst["core"], 0)
 
 
 if __name__ == "__main__":
