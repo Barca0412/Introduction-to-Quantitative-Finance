@@ -222,7 +222,6 @@ class RestoreTests(unittest.TestCase):
     def test_site_only_build_publishes_stats(self):
         """push-to-main path: restore -> build_site_data, no arXiv fetch."""
         papers = make_papers(9)
-        # Only LLM-scored papers with relevance >= 1 that are not withdrawn are shown.
         # relevance >= 2, an AI/ML method, not withdrawn: only papers 0 and 1 qualify.
         for paper, relevance in zip(papers, [3, 2, 2, 1, 3, 0, None, None, None]):
             if relevance is not None:
