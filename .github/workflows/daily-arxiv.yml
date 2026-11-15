@@ -27,6 +27,10 @@ on:
         description: 'Backfill up to this date, YYYY-MM-DD (empty = today)'
         type: string
         default: ''
+      library:
+        description: 'Also refresh this year''s top-venue accepted lists and add missed papers (runs by itself on the 1st of each month)'
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -70,6 +74,21 @@ jobs:
       - name: Restore full history
         run: npm run arxiv:restore
 
+      # S11: on the 1st of each month (or on request), re-read this year's accepted
+      # lists of the top venues; conferences publish them at different times.
+      - name: Monthly top-venue library refresh
+        id: library
+        env:
+          FORCE: ${{ github.event_name == 'workflow_dispatch' && inputs.library }}
+          OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
+        run: |
+          if [ "$(date -u +%d)" = "01" ] || [ "${FORCE}" = "true" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+            python -m scripts.arxiv_radar.venue_library fetch --since "$(date -u +%Y)" || echo "::warning title=Venue library::some venue-years failed; see the log"
+          else
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Fetch and tag new arXiv papers
         env:
           # Any OpenAI-compatible endpoint. Defaults to DeepSeek; override with
@@ -86,6 +105,15 @@ jobs:
           LLM_MODEL: ${{ vars.LLM_MODEL }}
           DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
         run: npm run arxiv:fetch
+
+      - name: Add papers the radar missed (from this year's accepted lists)
+        if: steps.library.outputs.run == 'true'
+        env:
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
+          LLM_BASE_URL: ${{ vars.LLM_BASE_URL }}
+          LLM_MODEL: ${{ vars.LLM_MODEL }}
+        run: python -m scripts.arxiv_radar.discover --since-year "$(date -u +%Y)"
 
       - name: Update embeddings (incremental)
         env:

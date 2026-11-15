@@ -28,7 +28,7 @@ from unittest import mock
 
 import numpy as np
 
-from scripts.arxiv_radar import build_site_data, data_store, storage
+from scripts.arxiv_radar import build_site_data, data_store, storage, venue_library
 
 
 def make_papers(count: int, latest_day: int = 10) -> List[Dict]:
@@ -83,12 +83,16 @@ class RadarSandbox:
                 stack.enter_context(mock.patch.object(storage, name, paths[name]))
             stack.enter_context(mock.patch.object(build_site_data, "PAPERS_FILE", paths["PAPERS_FILE"]))
             stack.enter_context(mock.patch.object(build_site_data, "SITE_DATA_DIR", self.site))
+            stack.enter_context(mock.patch.object(venue_library, "LIBRARY_DIR", self.data / "venue_library"))
             yield
 
-    def make_export(self, name: str, papers: List[Dict], last_updated: str, with_stats: bool = True) -> Path:
+    def make_export(self, name: str, papers: List[Dict], last_updated: str, with_stats: bool = True,
+                    library: Optional[List[Dict]] = None) -> Path:
         """Produce a real `data_store.export()` snapshot in root/<name>/."""
         work = RadarSandbox(self.root / f"_work_{name}")
         with work.patched():
+            for row in library or []:
+                venue_library.save(row["venue_id"], row["year"], [row])
             data_store._write_papers_json(papers, last_updated)
             if with_stats:
                 storage.write_atomically(work.data / "stats.json", {**STATS, "last_updated": last_updated})
@@ -218,6 +222,17 @@ class RestoreTests(unittest.TestCase):
         self.restore_with(None, release)
         stats = json.loads((self.box.data / "stats.json").read_text())
         self.assertEqual(stats["summary"]["total_papers"], 4)
+
+    def test_library_travels_with_the_export(self):
+        lib = [venue_library.make_record("icaif", 2026, "test", "LLM Agents for Trading", ["A B"]),
+               venue_library.make_record("kdd", 2025, "test", "Graph Fraud Detection", ["C D"])]
+        release = self.box.make_export("release", make_papers(3), "2026-11-10T00:00:00", library=lib)
+        info = json.loads((release / "export_info.json").read_text(encoding="utf-8"))
+        self.assertEqual(info["library_papers"], 2)
+        self.restore_with(None, release)
+        with self.box.patched():
+            rows = venue_library.load_all()
+        self.assertEqual(sorted((r["venue_id"], r["year"]) for r in rows), [("icaif", 2026), ("kdd", 2025)])
 
     def test_site_only_build_publishes_stats(self):
         """push-to-main path: restore -> build_site_data, no arXiv fetch."""

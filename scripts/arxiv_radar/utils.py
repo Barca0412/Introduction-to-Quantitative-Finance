@@ -208,7 +208,7 @@ def has_any_term(text: str, terms: List[str]) -> bool:
 
 
 class Progress:
-    """Log "Progress <label>: 1200/3342 (36%), 2 failed, 4m10s, ~7m left" lines.
+    """Log "Progress <label>: 1200/3342 (36%), 2 without result, 4m10s, ~7m left" lines.
 
     Reports every 1% and at the end: ~100 lines per step in the log, which the local
     backfill script turns into one progress bar redrawn in place.
@@ -232,8 +232,10 @@ class Progress:
         elapsed = time.monotonic() - self.started
         left = elapsed / self.done * (self.total - self.done) if self.done else 0
         fmt = lambda s: f"{int(s // 60)}m{int(s % 60):02d}s"
+        # Failures are mentioned only when there are some ("0 failed" read like an error).
+        failed = f", {self.failed} without result" if self.failed else ""
         self.logger.info(
-            "Progress %s: %s/%s (%d%%), %s failed, %s elapsed, ~%s left",
+            "Progress %s: %s/%s (%d%%)%s, %s elapsed, ~%s left",
             self.label, self.done, self.total, 100 * self.done // max(1, self.total),
-            self.failed, fmt(elapsed), fmt(left),
+            failed, fmt(elapsed), fmt(left),
         )
