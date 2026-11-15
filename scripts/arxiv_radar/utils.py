@@ -210,15 +210,15 @@ def has_any_term(text: str, terms: List[str]) -> bool:
 class Progress:
     """Log "Progress <label>: 1200/3342 (36%), 2 failed, 4m10s, ~7m left" lines.
 
-    Reports every 5% and at the end, so a long run shows steady progress in the log
-    and the terminal without flooding them.
+    Reports every 1% and at the end: ~100 lines per step in the log, which the local
+    backfill script turns into one progress bar redrawn in place.
     """
 
     def __init__(self, label: str, total: int, logger: Any):
         import time
 
         self.label, self.total, self.logger = label, total, logger
-        self.step = max(1, total // 20)
+        self.step = max(1, total // 100)
         self.done = self.failed = 0
         self.started = time.monotonic()
 
