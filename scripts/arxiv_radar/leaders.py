@@ -206,7 +206,7 @@ def _leader_lists(rows: List[Dict[str, Any]], names: Dict[str, Counter], person_
                      "institution": inst_info[top]["label"] if (top := _top(person_inst[p])) else "",
                      "institution_id": top or "",
                      "n": person_n[p], "core": person_core[p]}
-                    for p in sorted(person_n, key=lambda p: (-person_n[p], -person_core[p], p))[:TOP]],
+                    for p in sorted(person_n, key=lambda p: (-person_n[p], -person_core[p], _ranked(names[p], 1)[0][0].lower(), p))[:TOP]],
         "countries": [{"code": c, "name": COUNTRY_ZH.get(c, c), "n": n} for c, n in _ranked(country_n, TOP)],
         # Papers per institution (the top GRID_INSTITUTIONS) and finance domain (ids in taxonomy.yaml).
         "institution_domain": {"domains": domains,
@@ -235,6 +235,11 @@ def _ranked(counter: Counter, n: Optional[int] = None) -> List[Tuple[Any, int]]:
     lists for the same data, also where the counts came from sets."""
     items = sorted(counter.items(), key=lambda kv: (-kv[1], str(kv[0])))
     return items if n is None else items[:n]
+
+
+def _by_name(entries: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """People / institutions lists: count, then name, then id (ties are shown by name)."""
+    return sorted(entries, key=lambda e: (-e["n"], e["name"].lower(), e["id"]))
 
 
 def _top(counter: Counter) -> str:
@@ -312,8 +317,8 @@ def build(papers: Iterable[Dict[str, Any]], out_dir: Path, today: Optional[date]
         payload = {"id": key, "name": info["label"], "name_en": info["name"], "type": info["type"],
                    "type_zh": TYPE_ZH.get(info["type"], ""), "country": info["country"],
                    "country_zh": COUNTRY_ZH.get(info["country"], info["country"]), **summary(group),
-                   "co_institutions": [inst_ref(k, n) for k, n in _ranked(co_inst, 10)],
-                   "authors": [person_ref(p, n) for p, n in _ranked(authors, 10)]}
+                   "co_institutions": _by_name([inst_ref(k, n) for k, n in co_inst.items()])[:10],
+                   "authors": _by_name([person_ref(p, n) for p, n in authors.items()])[:10]}
         path = out_dir / "institution" / f"{_slug(key)}.json"
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(json.dumps(payload, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
@@ -324,8 +329,8 @@ def build(papers: Iterable[Dict[str, Any]], out_dir: Path, today: Optional[date]
         coauthors = Counter(p for r in group for p, _, _ in r["authors"] if p != person)
         payload = {"id": person, "name": _ranked(names[person], 1)[0][0],
                    "spellings": [n for n, _ in _ranked(names[person])],
-                   "institutions": [inst_ref(k, n) for k, n in _ranked(person_inst[person], 5)], **summary(group),
-                   "coauthors": [person_ref(p, n) for p, n in _ranked(coauthors, 10)],
+                   "institutions": _by_name([inst_ref(k, n) for k, n in person_inst[person].items()])[:5], **summary(group),
+                   "coauthors": _by_name([person_ref(p, n) for p, n in coauthors.items()])[:10],
                    "openalex": f"https://openalex.org/{person}" if re.fullmatch(r"A\d+", person) else ""}
         path = out_dir / "author" / f"{_slug(person)}.json"
         path.parent.mkdir(parents=True, exist_ok=True)
@@ -371,7 +376,7 @@ def build_teams(rows, names, person_inst, inst_info, by_person) -> List[Dict[str
         inst = Counter(k for p in group for k in person_inst[p].elements())
         teams.append({
             "members": sorted(({"id": p, "name": _ranked(names[p], 1)[0][0], "n": len(by_person[p]),
-                                "page": _slug(p)} for p in group), key=lambda m: (-m["n"], m["id"])),
+                                "page": _slug(p)} for p in group), key=lambda m: (-m["n"], m["name"].lower(), m["id"])),
             "papers": len(papers),
             "core": sum(1 for r in papers if r["paper"].get("relevance") == 3),
             "institutions": [{"id": k, "name": inst_info[k]["label"], "n": n} for k, n in _ranked(inst, 3)],
