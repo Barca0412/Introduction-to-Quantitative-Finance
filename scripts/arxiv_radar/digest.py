@@ -117,7 +117,7 @@ def who_facts(papers: List[Dict[str, Any]]) -> Dict[str, Any]:
                                   "type": inst.get("type", ""), "country": inst.get("country", "")})
         for person, name, own in row["authors"]:
             names.setdefault(person, Counter())[name] += 1
-            person_inst.setdefault(person, Counter()).update(info[k]["label"] for k in own)
+            person_inst.setdefault(person, Counter()).update(own)  # institution keys, as in leaders.build
     lists = leaders._leader_lists(rows, names, person_inst, info)
     return {
         "papers_with_institutions": sum(1 for r in rows if r["inst_records"]),

@@ -44,3 +44,16 @@ class DigestTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class WhoFactsTest(unittest.TestCase):
+    def test_who_facts_runs_on_real_shaped_papers(self):
+        from scripts.arxiv_radar.digest import who_facts
+        inst = {"ror": "027m9bs27", "name": "The University of Manchester", "zh": "曼彻斯特大学",
+                "type": "education", "country": "GB"}
+        papers = [{"id": str(i), "published_date": "2026-11-03", "relevance": 3, "authors": [{"name": "Jimin Huang"}],
+                   "author_ids": [{"openalex": "A1"}], "institutions": [inst], "author_affiliations": [[0]]}
+                  for i in range(2)]
+        who = who_facts(papers)
+        self.assertEqual(who["institutions"][0], {"name": "曼彻斯特大学", "type": "高校", "n": 2})
+        self.assertEqual(who["authors_with_2_or_more"][0]["institution"], "曼彻斯特大学")
