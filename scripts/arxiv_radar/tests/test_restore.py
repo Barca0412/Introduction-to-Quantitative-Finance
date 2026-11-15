@@ -223,20 +223,24 @@ class RestoreTests(unittest.TestCase):
         """push-to-main path: restore -> build_site_data, no arXiv fetch."""
         papers = make_papers(9)
         # Only LLM-scored papers with relevance >= 1 that are not withdrawn are shown.
-        for paper, relevance in zip(papers, [3, 2, 1, 0, 1, None, None, None, None]):
+        # relevance >= 2, an AI/ML method, not withdrawn: only papers 0 and 1 qualify.
+        for paper, relevance in zip(papers, [3, 2, 2, 1, 3, 0, None, None, None]):
             if relevance is not None:
                 paper["relevance"] = relevance
+                paper["methods"] = ["llm"]
+        papers[2]["methods"] = ["econometrics"]  # finance, but no AI method
         papers[4]["withdrawn"] = True
         release = self.box.make_export("release", papers, "2026-11-10T00:00:00")
         self.restore_with(None, release)
         with self.box.patched():
             manifest = build_site_data.build()
         self.assertTrue((self.box.site / "manifest.json").exists())
-        self.assertEqual(manifest["total_papers"], 3)
+        self.assertEqual(manifest["total_papers"], 2)
         self.assertEqual(manifest["history_papers"], 9)
         self.assertIsNotNone(manifest["stats"])
         site_stats = json.loads((self.box.site / "stats.json").read_text(encoding="utf-8"))
-        self.assertEqual(site_stats["summary"]["total_papers"], 3)
+        self.assertEqual(site_stats["summary"]["total_papers"], 2)
+        self.assertEqual(site_stats["summary"]["core_papers"], 1)
         self.assertEqual(site_stats["summary"]["history_papers"], 9)
 
 

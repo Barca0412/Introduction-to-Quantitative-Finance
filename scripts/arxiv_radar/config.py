@@ -72,9 +72,14 @@ SITE_MAX_FILE_BYTES = _env_int("RADAR_SITE_MAX_FILE_BYTES", 9_500_000)
 SITE_FIRST_LOAD_BUDGET = _env_int("RADAR_SITE_FIRST_LOAD_BUDGET", 9_000_000)
 SITE_ABSTRACT_SNIPPET_CHARS = 220
 # The site lists only papers the S3 v2 enrichment scored at least this relevant to
-# AI x finance (decided 2026-11-15). Papers never scored (older format) and withdrawn
-# papers are left out; the full history stays on Hugging Face / the Release.
-SITE_MIN_RELEVANCE = _env_int("RADAR_SITE_MIN_RELEVANCE", 1)
+# AI x finance AND that use an AI/ML method (decided 2026-11-15, after the November
+# backfill: relevance 1 was mostly general AI papers mentioning finance in passing, and
+# whole-category q-fin monitoring brought in pure maths/econometrics papers). Never
+# scored, withdrawn and non-AI papers stay in the dataset on Hugging Face / the Release.
+SITE_MIN_RELEVANCE = _env_int("RADAR_SITE_MIN_RELEVANCE", 2)
+SITE_REQUIRE_AI_METHOD = os.getenv("RADAR_SITE_REQUIRE_AI_METHOD", "true").strip().lower() != "false"
+# Method ids (vocab/taxonomy.yaml) that count as AI/ML; econometrics and other do not.
+AI_METHODS = ("llm-agent", "llm", "rl", "deep-ts", "graph", "generative", "classic-ml")
 SITE_MAX_AUTHORS = 8
 
 # ============================================

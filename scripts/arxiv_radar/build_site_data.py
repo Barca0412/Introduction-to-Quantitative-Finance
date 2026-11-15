@@ -1,8 +1,9 @@
 """Build the light-weight Radar data served by the VitePress site.
 
 Reads the full history from ``data/`` (papers.json, embeddings.f32) and writes
-``docs/public/arxiv-data/`` for the papers the site shows: scored relevance >= 1 by
-the LLM and not withdrawn (site_visible). The rest stays in the published dataset.
+``docs/public/arxiv-data/`` for the papers the site shows: scored relevance >= 2 by
+the LLM, using an AI/ML method, not withdrawn (site_visible). The rest stays in the
+published dataset.
 
     manifest.json                    what exists, sizes, theme vectors, schema
     stats.json                       trend statistics of the shown papers (Trends / overview)
@@ -40,7 +41,9 @@ from .config import (
     SITE_MAX_AUTHORS,
     SITE_MAX_FILE_BYTES,
     SITE_MIN_RECENT_DAYS,
+    AI_METHODS,
     SITE_MIN_RELEVANCE,
+    SITE_REQUIRE_AI_METHOD,
     SITE_RECENT_DAYS,
     PAPERS_FILE,
 )
@@ -241,14 +244,19 @@ def _round_vector(values: List[float]) -> List[float]:
     return [round(float(v), 5) for v in values]
 
 
-def site_visible(paper: Dict[str, Any], min_relevance: int = SITE_MIN_RELEVANCE) -> bool:
-    """Scored by the LLM as relevant enough, and not withdrawn by its authors."""
+def site_visible(
+    paper: Dict[str, Any],
+    min_relevance: int = SITE_MIN_RELEVANCE,
+    require_ai: bool = SITE_REQUIRE_AI_METHOD,
+) -> bool:
+    """Scored by the LLM as relevant enough, uses an AI/ML method, not withdrawn."""
     relevance = paper.get("relevance")
     return (
         isinstance(relevance, int)
         and not isinstance(relevance, bool)
         and relevance >= min_relevance
         and not paper.get("withdrawn")
+        and (not require_ai or any(m in AI_METHODS for m in paper.get("methods") or []))
     )
 
 
@@ -257,8 +265,8 @@ def build(today: Optional[date] = None) -> Dict[str, Any]:
     history = [p for p in payload.get("papers", []) if p.get("id")]
     papers = [p for p in history if site_visible(p)]
     logger.info(
-        "Site shows %s of %s papers (relevance >= %s, not withdrawn); the rest stay in the dataset",
-        len(papers), len(history), SITE_MIN_RELEVANCE,
+        "Site shows %s of %s papers (relevance >= %s%s, not withdrawn); the rest stay in the dataset",
+        len(papers), len(history), SITE_MIN_RELEVANCE, ", AI/ML method" if SITE_REQUIRE_AI_METHOD else "",
     )
     papers.sort(
         key=lambda p: (p.get("published_date", ""), (p.get("focus") or {}).get("score", 0), p.get("id", "")),
@@ -317,6 +325,7 @@ def build(today: Optional[date] = None) -> Dict[str, Any]:
     site_stats = build_stats(papers)
     site_stats["summary"]["history_papers"] = len(history)
     site_stats["summary"]["min_relevance"] = SITE_MIN_RELEVANCE
+    site_stats["summary"]["core_papers"] = sum(1 for p in papers if p.get("relevance") == 3)
     stats_info = _write(SITE_DATA_DIR / "stats.json", _dumps(site_stats), SITE_MAX_FILE_BYTES)
 
     manifest = {
@@ -326,6 +335,7 @@ def build(today: Optional[date] = None) -> Dict[str, Any]:
         "total_papers": len(papers),
         "history_papers": len(history),
         "min_relevance": SITE_MIN_RELEVANCE,
+        "require_ai_method": SITE_REQUIRE_AI_METHOD,
         "undated_papers_skipped": undated,
         "latest_published_date": latest,
         "embedding": {

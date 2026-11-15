@@ -7,8 +7,8 @@
             <p class="eyebrow">Focused Radar</p>
             <h2 class="list-title">AI + Finance, agent planning, and deep research first</h2>
             <p class="list-description">
-              Every paper here was read by an LLM and scored relevant to AI × finance. The default view
-              shows the core ones (relevance ≥ 2); "All Papers" adds the rest (relevance ≥ 1).
+              Every paper here was read by an LLM, scored relevant to AI × finance (relevance ≥ 2) and
+              uses an AI/ML method. Lower-scored and non-AI finance papers stay in the open dataset.
             </p>
           </div>
           <div class="list-stats">
@@ -274,7 +274,7 @@ const quickFilters = [
   { id: 'multi-agent', label: 'Multi-Agent', description: 'Coordination and agent teams' },
   { id: 'tool-use', label: 'Tool Use', description: 'Function calling and tools' },
   { id: 'reasoning', label: 'Reasoning', description: 'Inference and multi-step thought' },
-  { id: 'all', label: 'All Papers', description: 'Every paper scored relevant to AI × finance (relevance ≥ 1)' }
+  { id: 'all', label: 'All Papers', description: 'Every AI × finance paper on the site (relevance ≥ 2, AI/ML method)' }
 ]
 
 const embeddingThemeOptions = [
