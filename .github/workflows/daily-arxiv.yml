@@ -164,10 +164,14 @@ jobs:
       pages: write
       id-token: write
     uses: ./.github/workflows/deploy-site.yml
+    with:
+      ref: main
 
   commit-readme:
-    # Only after the site is live, so the README never advertises a deploy that failed.
-    needs: deploy-site
+    # Only after the new data is published and the site is live, so the README never
+    # advertises numbers the site does not show.
+    needs: [publish-data, deploy-site]
+    if: needs.publish-data.result == 'success' && needs.deploy-site.result == 'success'
     runs-on: ubuntu-latest
     permissions:
       contents: write

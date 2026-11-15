@@ -40,6 +40,14 @@ class FocusWholeWordTest(unittest.TestCase):
         self.assertIn("ai-finance", meta["topics"])
         self.assertTrue(meta["is_focus"])
 
+    def test_same_finance_words_as_the_fetch_filter(self):
+        off = build_focus_metadata(paper("Trading off accuracy and cost in LLM model portfolios",
+                                         "A large language model router."))
+        self.assertNotIn("ai-finance", off["topics"])
+        on = build_focus_metadata(paper("LLM agents for insurance claims triage",
+                                        "A large language model agent reviews insurance claims."))
+        self.assertIn("ai-finance", on["topics"])
+
     def test_q_fin_category_still_counts_as_finance(self):
         meta = build_focus_metadata(paper("Rough volatility calibration", categories=("q-fin.MF",)))
         self.assertIn("finance signal", meta["reasons"])

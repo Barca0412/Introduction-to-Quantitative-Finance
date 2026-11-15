@@ -161,6 +161,26 @@ class FinanceFilteredCategoryTest(unittest.TestCase):
         self.assertEqual(lg, ["2610.09048"])
 
 
+class FilteredDefaultTest(unittest.TestCase):
+    def _reload(self, env):
+        import importlib
+        from scripts.arxiv_radar import config
+        with mock.patch.dict(os.environ, env, clear=False):
+            return importlib.reload(config).FINANCE_FILTERED_CATEGORIES
+
+    def tearDown(self):
+        import importlib
+        from scripts.arxiv_radar import config
+        with mock.patch.dict(os.environ, {"RADAR_CATEGORIES": "", "RADAR_FILTERED_CATEGORIES": ""}):
+            importlib.reload(config)
+
+    def test_default_and_overrides(self):
+        self.assertEqual(self._reload({"RADAR_CATEGORIES": "", "RADAR_FILTERED_CATEGORIES": ""}), ["cs.LG", "stat.ML"])
+        self.assertEqual(self._reload({"RADAR_CATEGORIES": "q-fin.ST", "RADAR_FILTERED_CATEGORIES": ""}), [])
+        self.assertEqual(self._reload({"RADAR_CATEGORIES": "", "RADAR_FILTERED_CATEGORIES": "none"}), [])
+        self.assertEqual(self._reload({"RADAR_CATEGORIES": "q-fin.ST", "RADAR_FILTERED_CATEGORIES": "cs.LG"}), ["cs.LG"])
+
+
 class ReportTest(unittest.TestCase):
     def test_failures_become_warnings_and_summary_rows(self):
         report = [

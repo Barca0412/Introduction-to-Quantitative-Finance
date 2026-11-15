@@ -29,6 +29,11 @@ on:
       - '.github/workflows/deploy-site.yml'
   workflow_dispatch:
   workflow_call:
+    inputs:
+      ref:
+        description: 'Branch to build (the Radar workflow passes main)'
+        type: string
+        default: main
 
 permissions:
   contents: read
@@ -50,8 +55,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          # main explicitly: when called from the Radar run, build what is on main now.
-          ref: main
+          # Called from the Radar run: build main as it is now (after README commits).
+          # Push / manual run: the triggering branch (Pages only accepts main).
+          ref: ${{ inputs.ref || github.ref }}
           # Full commit history (but no old file contents) so VitePress can read each
           # page's real last-edit date for "最后更新" and the sitemap <lastmod>.
           fetch-depth: 0

@@ -596,7 +596,11 @@ ARXIV_CATEGORIES = _env_list("RADAR_CATEGORIES") or ARXIV_CATEGORIES
 # NeurIPS 2026) were otherwise never seen; adding cs.LG whole would bring in several
 # hundred off-topic papers a day. Set RADAR_FILTERED_CATEGORIES=none to switch off.
 _filtered = _env_list("RADAR_FILTERED_CATEGORIES")
-FINANCE_FILTERED_CATEGORIES = [] if _filtered == ["none"] else (_filtered or ["cs.LG", "stat.ML"])
+# A RADAR_CATEGORIES override (small local test runs) switches the default off too.
+if _filtered == ["none"] or (not _filtered and _env_list("RADAR_CATEGORIES")):
+    FINANCE_FILTERED_CATEGORIES: List[str] = []
+else:
+    FINANCE_FILTERED_CATEGORIES = _filtered or ["cs.LG", "stat.ML"]
 
 # Step 1, on arXiv's side: deliberately broad. arXiv stems words, so "trading" also
 # matches "trade-off"; the local check below removes that noise.
@@ -604,7 +608,7 @@ FINANCE_QUERY_TERMS = [
     "financ*", "stock", "stocks", "portfolio*", '"asset pricing"', "trading", "hedging",
     '"option pricing"', "cryptocurrenc*", "bitcoin", '"credit risk"', '"credit scoring"',
     "banking", '"limit order"', '"market microstructure"', '"quantitative investment"',
-    '"alpha factor*"', "earnings", "fintech", '"high-frequency trading"',
+    '"alpha factor"', '"alpha factors"', "earnings", "fintech", '"high-frequency trading"',
     '"volatility forecasting"', '"implied volatility"',
     # Added after the third taxonomy trial (2026-11-15): insurance pricing (1904.10890)
     # and Alipay account fraud (2002.12307) sit in stat.AP / cs.LG with none of the above.

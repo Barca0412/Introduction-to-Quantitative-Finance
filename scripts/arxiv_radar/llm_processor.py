@@ -7,7 +7,6 @@ import asyncio
 import ast
 import functools
 import json
-import re
 import logging
 import socket
 from typing import Dict, Any, Optional, List
@@ -26,6 +25,7 @@ from .config import (
     PREDEFINED_TAGS,
     PAPER_ANALYSIS_PROMPT,
 )
+from .utils import has_any_term
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -176,15 +176,8 @@ def _paper_text(paper: Dict[str, Any]) -> str:
     ).lower()
 
 
-@functools.lru_cache(maxsize=None)
-def _term_pattern(term: str) -> "re.Pattern[str]":
-    # Whole words/phrases only, with an optional plural ending: "rag" must not match
-    # "average" or "storage", "api" not "capital", "cot" not "scotland".
-    return re.compile(r"(?<![a-z0-9])" + re.escape(term.lower()) + r"(?:s|es)?(?![a-z0-9])")
-
-
 def _has_any(text: str, terms: List[str]) -> bool:
-    return any(_term_pattern(term).search(text) for term in terms)
+    return has_any_term(text, terms)
 
 
 def validate_tags_for_paper(paper: Dict[str, Any], tags: List[str]) -> List[str]:
