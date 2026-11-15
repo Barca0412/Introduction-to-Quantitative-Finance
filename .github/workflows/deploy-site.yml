@@ -1,26 +1,12 @@
 name: Site build and deploy
 
-# Builds the VitePress site from the stored Radar history and deploys GitHub Pages.
-# It never fetches arXiv and never calls the LLM, so it keeps working while the
-# "arXiv Radar data update" workflow is disabled.
-#
-# Triggers:
-# - push to main that touches the site or the Radar site-data builder;
-# - manual run;
-# - called by the Radar data workflow after it has published new data
-#   (restore then picks up that fresh copy from Hugging Face / the Release).
-#
-# Requires Settings -> Pages -> Source = "GitHub Actions".
-
 on:
   push:
-    branches:
-      - main
+    branches: [main]
     paths:
       - 'docs/**'
       - 'scripts/arxiv_radar/**'
       - 'scripts/site/**'
-      # The /library/ index is generated from these folders at build time.
       - '资料/**'
       - '论文/**'
       - 'data/registry/**'
@@ -31,106 +17,139 @@ on:
   workflow_call:
     inputs:
       ref:
-        description: 'Branch to build (the Radar workflow passes main)'
+        description: 'Branch to build'
         type: string
         default: main
+    secrets:
+      DEPLOY_SSH_KEY:
+        # Optional at workflow entry: a missing key fails only deploy-server,
+        # while the independent GitHub Pages deployment remains available.
+        required: false
 
 permissions:
   contents: read
 
+# Serialize the complete build + both deployments, including reusable calls.
+concurrency:
+  group: site-release
+  cancel-in-progress: false
+
 env:
-  # Repository variable, e.g. "Barca21412/FinPaperRadar". Empty = skip Hugging Face.
   HF_DATASET_REPO: ${{ vars.HF_DATASET_REPO }}
   RADAR_RELEASE_TAG: radar-data
+  SITE_URL: https://quant.hfthnu.com
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    # One Pages build at a time; a newer push waits instead of cancelling a deploy.
-    concurrency:
-      group: site-pages
-      cancel-in-progress: false
     timeout-minutes: 30
+    outputs:
+      source_ref: ${{ steps.source.outputs.ref }}
+      artifact_name: ${{ steps.source.outputs.artifact }}
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
-          # Called from the Radar run: build main as it is now (after README commits).
-          # Push / manual run: the triggering branch (Pages only accepts main).
           ref: ${{ inputs.ref || github.ref }}
-          # Full commit history (but no old file contents) so VitePress can read each
-          # page's real last-edit date for "最后更新" and the sitemap <lastmod>.
           fetch-depth: 0
           filter: blob:none
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - name: Record checked-out revision
+        id: source
+        run: |
+          echo "ref=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+          echo "artifact=quant-site-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}" >> "$GITHUB_OUTPUT"
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
           cache: pip
           cache-dependency-path: scripts/arxiv_radar/requirements.txt
-
-      - name: Set up Node
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
-
       - name: Install dependencies
         run: |
           pip install -r scripts/arxiv_radar/requirements.txt
           npm ci
-
-      - name: Restore full history
+      - name: Restore full history once
         run: npm run arxiv:restore
-
       - name: Load stored embeddings
         env:
-          # Site-only build: reuse stored vectors, do not compute new ones.
           RADAR_EMBED_REFRESH_LIMIT: '0'
         run: npm run arxiv:embeddings
-
-      - name: Build light site data
+      - name: Build public site data
         run: npm run arxiv:site-data
-
-      - name: Build VitePress site
+      - name: Cache verified search assets
+        uses: actions/cache@v4
+        with:
+          path: docs/public/models
+          key: search-assets-${{ hashFiles('scripts/site/search_model.json', 'package-lock.json') }}
+      - name: Build and verify both site paths
         env:
-          # Search-console verification tokens (public by design); unset = no tag.
           GOOGLE_SITE_VERIFICATION: ${{ vars.GOOGLE_SITE_VERIFICATION }}
           BING_SITE_VERIFICATION: ${{ vars.BING_SITE_VERIFICATION }}
           BAIDU_SITE_VERIFICATION: ${{ vars.BAIDU_SITE_VERIFICATION }}
-        run: npm run docs:build
-
-      - name: Check published file sizes
-        run: |
-          big="$(find docs/.vitepress/dist -type f -size +10M)"
-          if [ -n "${big}" ]; then
-            echo "::error::Files above 10 MB in the site build:"
-            echo "${big}"
-            exit 1
-          fi
-
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+        run: npm run docs:build:dual
+      - name: Keep both builds for independent deployment and rollback
+        uses: actions/upload-artifact@v4
         with:
-          path: docs/.vitepress/dist
+          name: ${{ steps.source.outputs.artifact }}
+          path: |
+            .site-build/server
+            .site-build/pages
+          include-hidden-files: true
+          retention-days: 30
 
-  deploy:
+  deploy-pages:
     needs: build
     runs-on: ubuntu-latest
-    concurrency:
-      group: site-pages-deploy
-      cancel-in-progress: false
     permissions:
+      contents: read
       pages: write
       id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Deploy to GitHub Pages
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.build.outputs.source_ref }}
+      - uses: actions/download-artifact@v4
+        with:
+          name: ${{ needs.build.outputs.artifact_name }}
+          path: .site-build
+      - name: Refuse an outdated Pages build
+        run: python3 scripts/site/check_release_freshness.py .site-build/pages https://Barca0412.github.io/Introduction-to-Quantitative-Finance
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .site-build/pages
+          name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
+      - name: Deploy GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          artifact_name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
+
+  deploy-server:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.build.outputs.source_ref }}
+      - uses: actions/download-artifact@v4
+        with:
+          name: ${{ needs.build.outputs.artifact_name }}
+          path: .site-build
+      - name: Refuse an outdated server build
+        run: python3 scripts/site/check_release_freshness.py .site-build/server https://quant.hfthnu.com
+      - name: Publish to the approved webroot and verify
+        env:
+          DEPLOY_HOST: ${{ vars.DEPLOY_HOST }}
+          DEPLOY_PORT: ${{ vars.DEPLOY_PORT }}
+          DEPLOY_USER: ${{ vars.DEPLOY_USER }}
+          DEPLOY_TARGET: ${{ vars.DEPLOY_TARGET }}
+          DEPLOY_KNOWN_HOSTS: ${{ vars.DEPLOY_KNOWN_HOSTS }}
+          DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+        run: bash scripts/site/deploy_server.sh .site-build/server
