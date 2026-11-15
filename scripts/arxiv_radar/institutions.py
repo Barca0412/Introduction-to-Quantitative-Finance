@@ -206,7 +206,8 @@ _SENTENCE = re.compile(r"\b(work (was )?done|while (the author )?(was )?(at|visi
 
 
 # A legal suffix on its own ("Ltd"), or a sentence about a person, is not an institution.
-_NOT_A_NAME = re.compile(r"^(ltd|inc|llc|gmbh|co|corp|plc|s\.?a|ag)\.?$|\b(is|was|are) (an?|the)\b|independent researcher", re.I)
+_NOT_A_NAME = re.compile(r"^(ltd|inc|llc|gmbh|co|corp|plc|s\.?a|ag)\.?$|\b(is|was|are) (an?|the)\b|independent researcher|"
+                         r"contributed equally|equally contributed|equal contribution", re.I)
 
 
 def _level(segment: str) -> int:

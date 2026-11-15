@@ -80,6 +80,7 @@ class HtmlParseTest(unittest.TestCase):
             "Department of Finance": ["Department of Finance"],  # better than nothing
             "Ltd": [],
             "V. Acharya is an Independent Researcher": [],
+            "Both authors contributed equally to this research": [],
         }
         for raw, want in cases.items():
             self.assertEqual(inst.split_raw_affiliations(raw), want, raw)

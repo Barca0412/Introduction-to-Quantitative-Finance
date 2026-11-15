@@ -20,6 +20,9 @@
 - {id: aistats, name: AISTATS, match: '\baistats\b', kind: conference, discipline: cs}
 - {id: uai, name: UAI, match: '\buai\b|uncertainty in artificial intelligence', kind: conference, discipline: cs}
 - {id: colt, name: COLT, match: '\bcolt\b', kind: conference, discipline: cs}
+- {id: ictai, name: ICTAI, match: '\bictai\b', kind: conference, discipline: cs}
+- {id: icmla, name: ICMLA, match: '\bicmla\b', kind: conference, discipline: cs}
+- {id: ieee-bigdata, name: IEEE BigData, match: 'ieee big ?data', kind: conference, discipline: cs}
 - {id: aamas, name: AAMAS, match: '\baamas\b', kind: conference, discipline: cs}
 - {id: ecai, name: ECAI, match: '\becai\b', kind: conference, discipline: cs}
 - {id: tmlr, name: TMLR, match: '\btmlr\b|transactions on machine learning research', kind: journal, discipline: cs}
@@ -65,6 +68,10 @@
 - {id: cvpr, name: CVPR, match: '\bcvpr\b', kind: conference, discipline: cs}
 - {id: iccv, name: ICCV, match: '\biccv\b', kind: conference, discipline: cs}
 - {id: eccv, name: ECCV, match: '\beccv\b', kind: conference, discipline: cs}
+- {id: wacv, name: WACV, match: '\bwacv\b', kind: conference, discipline: cs}
+- {id: bmvc, name: BMVC, match: '\bbmvc\b', kind: conference, discipline: cs}
+- {id: accv, name: ACCV, match: '\baccv\b', kind: conference, discipline: cs}
+- {id: corl, name: CoRL, match: '\bcorl\b|conference on robot learning', kind: conference, discipline: cs}
 - {id: icassp, name: ICASSP, match: '\bicassp\b', kind: conference, discipline: cs}
 - {id: interspeech, name: Interspeech, match: '\binterspeech\b', kind: conference, discipline: cs}
 - {id: icra, name: ICRA, match: '\bicra\b', kind: conference, discipline: cs}
@@ -75,6 +82,7 @@
 - {id: sp, name: IEEE S&P, match: 'ieee s ?& ?p|symposium on security and privacy', kind: conference, discipline: cs}
 - {id: ndss, name: NDSS, match: '\bndss\b', kind: conference, discipline: cs}
 - {id: fc, name: Financial Cryptography, match: 'financial cryptography', kind: conference, discipline: cs}
+- {id: apsec, name: APSEC, match: '\bapsec\b', kind: conference, discipline: cs}
 - {id: icse, name: ICSE, match: '\bicse\b', kind: conference, discipline: cs}
 - {id: fse, name: FSE, match: '\besec ?/ ?fse\b|\bfse\b', kind: conference, discipline: cs}
 - {id: ase, name: ASE, match: '\base\b ?.?\d{2,4}|automated software engineering', kind: conference, discipline: cs}
