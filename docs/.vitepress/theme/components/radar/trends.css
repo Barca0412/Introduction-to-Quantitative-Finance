@@ -1,0 +1,57 @@
+/* 趋势 — an app screen in the .page frame (1440 max, 40px margins; 1360 at 1440).
+   Rows of blocks on a 12-column grid, 40px gutter: 12 x 76.67 + 11 x 40 = 1360.
+   Time: weeks 4 columns (530.67) + days 8 columns (1101.33 - ...); distributions 3 x 4 columns; keywords 7 + rising 5.
+   Blocks sit on a 1px grey rule (--control), no panels, no shadows. Colour only on data (ink core, grey rest). */
+.screen { padding-block: 28px 0; }
+.title-row h1 { font-size: 24px; line-height: 32px; font-weight: 600; letter-spacing: -0.01em; }
+.title-sub { margin-block-start: 4px; font-size: 15px; line-height: 22px; color: var(--muted); max-inline-size: 52em; }
+.grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 40px; row-gap: 40px; margin-block-start: 32px; align-items: start; }
+.block { border-block-start: 1px solid var(--rule); padding-block-start: 10px; min-inline-size: 0; }
+.block-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-block-end: 14px; }
+.block-head h2 { font-size: 15px; line-height: 22px; font-weight: 600; }
+.block-note { font-size: 12.5px; line-height: 18px; color: var(--muted); }
+.block > .block-note, .block > div > .block-note { margin-block-start: 8px; }
+.g-time .block:first-child { grid-column: span 4; }
+.g-time .block:last-child { grid-column: span 8; }
+.g-time .wk-x { font-size: 12px; }
+[data-slot="days"] .wk, [data-slot="days"] .wk-x { column-gap: 6px; }
+.dist-head { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 16px; margin-block-start: 48px; }
+.dist-head h2 { font-size: 18px; line-height: 26px; font-weight: 600; }
+.dist-head .block-note { flex-basis: 100%; }
+.g-dist { margin-block-start: 16px; }
+.g-dist .block { grid-column: span 4; }
+.g-kw { margin-block-start: 48px; }
+.g-kw .block:first-child { grid-column: span 7; }
+.g-kw .block:last-child { grid-column: span 5; }
+.blist a { min-block-size: 28px; }
+
+.kw-table { inline-size: 100%; font-size: 13.5px; }
+.kw-table th, .kw-table td { padding: 0 8px; block-size: 32px; border-block-end: 1px solid var(--rule); font-weight: 400; text-align: start; }
+.kw-table thead th { color: var(--muted); font-size: 12.5px; block-size: 28px; }
+.kw-table th:first-child { padding-inline-start: 0; }
+.kw-table .n { text-align: end; inline-size: 34%; }
+.kw-table td.n { white-space: nowrap; }
+.kw-bar { display: inline-block; inline-size: calc(var(--w) * 120px); block-size: 6px; margin-inline-end: 10px; background: var(--control); vertical-align: 1px; }
+.kw-bar.is-now { background: var(--ink); }
+.kw-table td .num { display: inline-block; min-inline-size: 2ch; }
+.plain { font-size: 15px; line-height: 22px; }
+.plain + .block-note { margin-block-start: 8px; max-inline-size: 30em; }
+.rise-h { font-size: 13px; font-weight: 600; margin-block: 14px 4px; }
+.rise { display: grid; row-gap: 2px; font-size: 14px; }
+.rise li { display: flex; justify-content: space-between; gap: 12px; border-block-end: 1px solid var(--rule); padding-block: 4px; }
+.wk-col:hover .wk-bar { background: var(--muted); }
+
+@media (max-width: 1080px) {
+  .g-time .block:first-child, .g-time .block:last-child, .g-kw .block:first-child, .g-kw .block:last-child { grid-column: 1 / -1; }
+  .g-dist .block { grid-column: span 6; }
+}
+@media (max-width: 700px) {
+  .grid { column-gap: 20px; }
+  .g-dist .block { grid-column: 1 / -1; }
+  [data-slot="days"] .wk-x span:nth-child(even) { visibility: hidden; }
+  .kw-bar { inline-size: calc(var(--w) * 56px); }
+}
+
+/* the work-in-progress note under the title: plain text on a quiet tone, the same 6px corner as the charts */
+.wip { margin-block-start: 16px; max-inline-size: 60em; padding: 12px 16px; border-radius: var(--fig-radius); background: var(--surface); font-size: 14.5px; line-height: 24px; }
+.wip .text-link { min-block-size: 0; margin-inline: 0.15em; color: var(--ink); }

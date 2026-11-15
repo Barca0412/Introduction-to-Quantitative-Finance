@@ -1,11 +1,12 @@
 ---
 title: 论文列表 · FinPaperRadar
-description: 按日期、标签、机构筛选最近的 AI × 金融 arXiv 论文，支持语义检索，每篇附中文摘要和关键词；更早的月份按需加载。
+description: 按日期、金融领域、任务与方法筛选 AI × 金融论文，支持关键词和语义检索，每篇附中文概括、分类与研究解读。
+layout: page
+sidebar: false
 ---
 
-# Papers
+<script setup>
+import RadarPapers from '../.vitepress/theme/components/radar/RadarPapers.vue'
+</script>
 
-This FinPaperRadar view prioritizes the focused subset first, while still keeping the full recall layer,
-semantic search, date filtering, affiliation filtering, and tag filters available.
-
-<PapersList />
+<RadarPapers />

@@ -1,0 +1,30 @@
+/* 说明 — a reading page in the .page frame. At 1440 a 12-column grid on 1360px, 40px gaps:
+   the text takes columns 1-8 (a 42em measure inside them), the contents list columns 10-12 and stays in view,
+   so the right half of the screen is closed by something real. */
+.doc { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 40px; padding-block-start: 56px; align-items: start; }
+.doc-head { grid-column: 1 / span 8; }
+.doc h1 { font-size: var(--step-head); line-height: 1.1; font-weight: 700; letter-spacing: -0.02em; }
+.doc-lead { margin-block-start: 16px; font-size: var(--step-lead); line-height: 1.5; max-inline-size: 26em; }
+.toc { grid-column: 10 / span 3; grid-row: 1 / span 2; position: sticky; inset-block-start: calc(var(--head-h) + 24px); display: grid; padding-block-start: 14px; border-block-start: 1px solid var(--control); }
+.toc a { display: flex; align-items: center; min-block-size: 40px; color: var(--muted); transition: color 100ms ease-out; }
+.toc a:hover { color: var(--ink); }
+.doc-body { grid-column: 1 / span 8; }
+.doc section { max-inline-size: 42em; margin-block-start: 64px; scroll-margin-block-start: 24px; }
+.doc h2 { font-size: 22px; line-height: 30px; font-weight: 600; }
+.doc p, .doc li, .doc dd { font-size: var(--step-body); line-height: 1.75; }
+.doc p { margin-block-start: 12px; }
+.doc .doc-lead { margin-block-start: 16px; }
+.rel { margin-block-start: 16px; display: grid; row-gap: 14px; }
+.rel div { display: grid; grid-template-columns: 7em minmax(0, 1fr); column-gap: 20px; }
+.rel dt { font-weight: 600; line-height: 1.75; }
+.rel dt .core-mark { font-size: inherit; }
+.src { margin-block-start: 12px; display: grid; row-gap: 8px; }
+.src b { font-weight: 600; }
+.links { margin-block-start: 8px; }
+.cite { margin-block-start: 14px; padding: 18px 20px; border-radius: var(--box); background: var(--surface); font-family: var(--font); font-size: 14.5px; line-height: 1.7; white-space: pre-wrap; overflow-wrap: anywhere; }
+.ack { font-family: var(--font-serif); }
+@media (max-width: 960px) {
+  .doc { display: block; padding-block-start: 32px; }
+  .toc { display: none; }
+  .rel div { grid-template-columns: minmax(0, 1fr); row-gap: 2px; }
+}
