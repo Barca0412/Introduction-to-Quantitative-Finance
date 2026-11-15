@@ -5,5 +5,5 @@ python-dateutil
 python-dotenv
 huggingface_hub
 numpy
-pyarrow
+pyarrow>=21  # files written by pyarrow 21+ carry statistics that pyarrow <= 19 cannot read
 pyyaml
