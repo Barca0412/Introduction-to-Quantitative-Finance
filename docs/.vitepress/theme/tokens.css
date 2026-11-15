@@ -94,6 +94,7 @@ img, svg.chart, canvas, .figure, figure img, .chart-box { border-radius: var(--f
 .foot-star p { font-size: var(--step-lead); font-weight: 600; letter-spacing: -0.01em; max-inline-size: 30em; }
 .foot-star .gh-star { background: var(--accent); color: var(--accent-ink); block-size: 48px; padding-inline: 20px 6px; font-size: 1rem; }
 .foot-star .gh-star:hover { background: var(--accent-hover); }
+.foot-star .gh-star:not(:has(.count)) { padding-inline: 20px; }
 .foot-star .gh-star .count { background: var(--ink); color: var(--bg); block-size: 36px; padding-inline: 12px; }
 .foot-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; margin-block-start: 64px; }
 .foot-grid p { font-weight: 600; margin-block-end: 10px; }
@@ -125,7 +126,7 @@ img, svg.chart, canvas, .figure, figure img, .chart-box { border-radius: var(--f
   .site-nav.open .site-links .sub { display: inline; }
 }
 @media (max-width: 420px) {
-  .gh-star .label { display: none; }
+  .site-nav .gh-star .label { display: none; }
   .site-name { font-size: 0.9375rem; gap: 8px; }
   .site-nav { column-gap: 8px; }
   .site-menu { padding-inline: 8px; margin-inline-end: -8px; }
