@@ -21,7 +21,7 @@ import shutil
 from collections import Counter, defaultdict
 from datetime import date, timedelta
 from pathlib import Path
-from typing import Any, Dict, Iterable, List, Optional
+from typing import Any, Dict, Iterable, List, Optional, Tuple
 
 TOP = 50
 GRID_INSTITUTIONS = 15
@@ -190,7 +190,7 @@ def _leader_lists(rows: List[Dict[str, Any]], names: Dict[str, Counter], person_
                 "type_zh": TYPE_ZH.get(info["type"], ""), "country": info["country"],
                 "n": inst_n[key], "core": inst_core[key]}
 
-    ranked = sorted(inst_n, key=lambda k: (-inst_n[k], -inst_core[k], inst_info[k]["label"]))
+    ranked = sorted(inst_n, key=lambda k: (-inst_n[k], -inst_core[k], inst_info[k]["label"], k))
     grid_rows = ranked[:GRID_INSTITUTIONS]
     grid = {k: Counter() for k in grid_rows}
     for row in rows:
@@ -202,12 +202,12 @@ def _leader_lists(rows: List[Dict[str, Any]], names: Dict[str, Counter], person_
         "papers": len(rows),
         "institutions": [inst_entry(k) for k in ranked[:TOP]],
         "companies": [inst_entry(k) for k in ranked if inst_info[k]["type"] == "company"][:TOP],
-        "authors": [{"id": p, "name": names[p].most_common(1)[0][0],
+        "authors": [{"id": p, "name": _ranked(names[p], 1)[0][0],
                      "institution": inst_info[top]["label"] if (top := _top(person_inst[p])) else "",
                      "institution_id": top or "",
                      "n": person_n[p], "core": person_core[p]}
-                    for p in sorted(person_n, key=lambda p: (-person_n[p], -person_core[p]))[:TOP]],
-        "countries": [{"code": c, "name": COUNTRY_ZH.get(c, c), "n": n} for c, n in country_n.most_common(TOP)],
+                    for p in sorted(person_n, key=lambda p: (-person_n[p], -person_core[p], p))[:TOP]],
+        "countries": [{"code": c, "name": COUNTRY_ZH.get(c, c), "n": n} for c, n in _ranked(country_n, TOP)],
         # Papers per institution (the top GRID_INSTITUTIONS) and finance domain (ids in taxonomy.yaml).
         "institution_domain": {"domains": domains,
                                "rows": [{"id": k, "name": inst_info[k]["label"], "counts": [grid[k][d] for d in domains]}
@@ -219,7 +219,7 @@ def _leader_lists(rows: List[Dict[str, Any]], names: Dict[str, Counter], person_
         "collaboration": {"education": mix["education"], "company": mix["company"],
                           "mixed": mix["mixed"], "other": mix["other"], "unknown": mix["unknown"]},
         "cross_country": {"papers": cross, "pairs": [{"pair": k, "names": [COUNTRY_ZH.get(c, c) for c in k.split("-")], "n": n}
-                                                     for k, n in pairs.most_common(10)]},
+                                                     for k, n in _ranked(pairs, 10)]},
     }
 
 
@@ -230,8 +230,15 @@ def _domain_order() -> List[str]:
     return [item["id"] for item in taxonomy()["finance_domains"]]
 
 
+def _ranked(counter: Counter, n: Optional[int] = None) -> List[Tuple[Any, int]]:
+    """Counter.most_common with a fixed order for ties (by key): builds give the same
+    lists for the same data, also where the counts came from sets."""
+    items = sorted(counter.items(), key=lambda kv: (-kv[1], str(kv[0])))
+    return items if n is None else items[:n]
+
+
 def _top(counter: Counter) -> str:
-    return counter.most_common(1)[0][0] if counter else ""
+    return _ranked(counter, 1)[0][0] if counter else ""
 
 
 def build(papers: Iterable[Dict[str, Any]], out_dir: Path, today: Optional[date] = None) -> Dict[str, Any]:
@@ -276,12 +283,12 @@ def build(papers: Iterable[Dict[str, Any]], out_dir: Path, today: Optional[date]
             by_person[person].append(row)
 
     def summary(group: List[Dict[str, Any]]) -> Dict[str, Any]:
-        ordered = sorted(group, key=lambda r: r["paper"]["published_date"], reverse=True)
+        ordered = sorted(group, key=lambda r: (r["paper"]["published_date"], r["paper"]["id"]), reverse=True)
         return {
             "papers": [r["paper"]["id"] for r in ordered],
             "core": sum(1 for r in group if r["paper"].get("relevance") == 3),
-            "domains": Counter(d for r in group for d in r["paper"].get("finance_domains") or []).most_common(),
-            "methods": Counter(m for r in group for m in r["paper"].get("methods") or []).most_common(),
+            "domains": _ranked(Counter(d for r in group for d in r["paper"].get("finance_domains") or [])),
+            "methods": _ranked(Counter(m for r in group for m in r["paper"].get("methods") or [])),
         }
 
     def inst_ref(key: str, n: int) -> Dict[str, Any]:
@@ -290,7 +297,7 @@ def build(papers: Iterable[Dict[str, Any]], out_dir: Path, today: Optional[date]
                 "page": _slug(key) if len(by_inst[key]) >= DETAIL_MIN_PAPERS else ""}
 
     def person_ref(person: str, n: int) -> Dict[str, Any]:
-        return {"id": person, "name": names[person].most_common(1)[0][0], "n": n,
+        return {"id": person, "name": _ranked(names[person], 1)[0][0], "n": n,
                 "page": _slug(person) if len(by_person[person]) >= DETAIL_MIN_PAPERS else ""}
 
     written = {"institution": 0, "author": 0}
@@ -305,8 +312,8 @@ def build(papers: Iterable[Dict[str, Any]], out_dir: Path, today: Optional[date]
         payload = {"id": key, "name": info["label"], "name_en": info["name"], "type": info["type"],
                    "type_zh": TYPE_ZH.get(info["type"], ""), "country": info["country"],
                    "country_zh": COUNTRY_ZH.get(info["country"], info["country"]), **summary(group),
-                   "co_institutions": [inst_ref(k, n) for k, n in co_inst.most_common(10)],
-                   "authors": [person_ref(p, n) for p, n in authors.most_common(10)]}
+                   "co_institutions": [inst_ref(k, n) for k, n in _ranked(co_inst, 10)],
+                   "authors": [person_ref(p, n) for p, n in _ranked(authors, 10)]}
         path = out_dir / "institution" / f"{_slug(key)}.json"
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(json.dumps(payload, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
@@ -315,10 +322,10 @@ def build(papers: Iterable[Dict[str, Any]], out_dir: Path, today: Optional[date]
         if len(group) < DETAIL_MIN_PAPERS:
             continue
         coauthors = Counter(p for r in group for p, _, _ in r["authors"] if p != person)
-        payload = {"id": person, "name": names[person].most_common(1)[0][0],
-                   "spellings": [n for n, _ in names[person].most_common()],
-                   "institutions": [inst_ref(k, n) for k, n in person_inst[person].most_common(5)], **summary(group),
-                   "coauthors": [person_ref(p, n) for p, n in coauthors.most_common(10)],
+        payload = {"id": person, "name": _ranked(names[person], 1)[0][0],
+                   "spellings": [n for n, _ in _ranked(names[person])],
+                   "institutions": [inst_ref(k, n) for k, n in _ranked(person_inst[person], 5)], **summary(group),
+                   "coauthors": [person_ref(p, n) for p, n in _ranked(coauthors, 10)],
                    "openalex": f"https://openalex.org/{person}" if re.fullmatch(r"A\d+", person) else ""}
         path = out_dir / "author" / f"{_slug(person)}.json"
         path.parent.mkdir(parents=True, exist_ok=True)
@@ -363,12 +370,12 @@ def build_teams(rows, names, person_inst, inst_info, by_person) -> List[Dict[str
                   if len(group & {p for p, _, _ in r["authors"]}) >= 2]
         inst = Counter(k for p in group for k in person_inst[p].elements())
         teams.append({
-            "members": sorted(({"id": p, "name": names[p].most_common(1)[0][0], "n": len(by_person[p]),
-                                "page": _slug(p)} for p in group), key=lambda m: -m["n"]),
+            "members": sorted(({"id": p, "name": _ranked(names[p], 1)[0][0], "n": len(by_person[p]),
+                                "page": _slug(p)} for p in group), key=lambda m: (-m["n"], m["id"])),
             "papers": len(papers),
             "core": sum(1 for r in papers if r["paper"].get("relevance") == 3),
-            "institutions": [{"id": k, "name": inst_info[k]["label"], "n": n} for k, n in inst.most_common(3)],
-            "domains": Counter(d for r in papers for d in r["paper"].get("finance_domains") or []).most_common(3),
-            "paper_ids": [r["paper"]["id"] for r in sorted(papers, key=lambda r: r["paper"]["published_date"], reverse=True)],
+            "institutions": [{"id": k, "name": inst_info[k]["label"], "n": n} for k, n in _ranked(inst, 3)],
+            "domains": _ranked(Counter(d for r in papers for d in r["paper"].get("finance_domains") or []), 3),
+            "paper_ids": [r["paper"]["id"] for r in sorted(papers, key=lambda r: (r["paper"]["published_date"], r["paper"]["id"]), reverse=True)],
         })
-    return sorted(teams, key=lambda t: (-t["papers"], -len(t["members"])))
+    return sorted(teams, key=lambda t: (-t["papers"], -len(t["members"]), t["members"][0]["id"]))
