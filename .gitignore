@@ -19,6 +19,8 @@ data/export/
 data/*.tmp
 data/enrich-trial/
 data/enrich_checkpoint.jsonl
+data/venue_library/
+data/digest/
 docs/public/arxiv-data/
 docs/public/arxiv-charts/
 

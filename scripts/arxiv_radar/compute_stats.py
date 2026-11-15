@@ -127,6 +127,16 @@ def compute_keyword_stats(
 def compute_and_save_stats(papers: List[Dict[str, Any]]) -> Dict[str, Any]:
     """Compute statistics over the full history and save them to data/stats.json."""
     stats = build_stats(papers)
+    # What the site shows, for the README status block (full-history numbers above).
+    from .site_filter import site_visible
+
+    shown = [p for p in papers if site_visible(p)]
+    stats["site_summary"] = {
+        "papers": len(shown),
+        "core_papers": sum(1 for p in shown if p.get("relevance") == 3),
+        "since": min((p.get("published_date", "") for p in shown), default=""),
+        "latest": max((p.get("published_date", "") for p in shown), default=""),
+    }
     save_stats(stats)
     return stats
 

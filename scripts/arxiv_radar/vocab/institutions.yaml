@@ -1,0 +1,133 @@
+# Institution names (design doc 4.6.3): Chinese name and a cleaner display name for the
+# institutions that appear most on the site, keyed by ROR id (as OpenAlex gives it).
+# `aliases` are other spellings found on arXiv pages (no ROR there); they are matched
+# case-insensitively after the punctuation is removed.
+#
+# First version 2026-11-15 from the 381 institutions of the 322 site papers (all with
+# >= 2 papers, plus well-known ones). Add rows freely; nothing else needs to change.
+
+# ---------- mainland China ----------
+- {ror: 03cve4549, zh: 清华大学, name: Tsinghua University}
+- {ror: 02v51f717, zh: 北京大学, name: Peking University}
+- {ror: 03rc6as71, zh: 同济大学, name: Tongji University}
+- {ror: 013q1eq08, zh: 复旦大学, name: Fudan University}
+- {ror: 00a2xv884, zh: 浙江大学, name: Zhejiang University}
+- {ror: 0220qvk04, zh: 上海交通大学, name: Shanghai Jiao Tong University}
+- {ror: 04w9fbh59, zh: 北京邮电大学, name: Beijing University of Posts and Telecommunications}
+- {ror: 0530pts50, zh: 华南理工大学, name: South China University of Technology}
+- {ror: 02n96ep67, zh: 华东师范大学, name: East China Normal University}
+- {ror: 00wk2mp56, zh: 北京航空航天大学, name: Beihang University}
+- {ror: 041pakw92, zh: 中国人民大学, name: Renmin University of China}
+- {ror: 035psfh38, zh: 东华大学, name: Donghua University}
+- {ror: 033vjfk17, zh: 武汉大学, name: Wuhan University}
+- {ror: 05qbk4x57, zh: 中国科学院大学, name: University of Chinese Academy of Sciences}
+- {ror: 034t30j35, zh: 中国科学院, name: Chinese Academy of Sciences}
+- {ror: 00wtvfq62, zh: 上海财经大学, name: Shanghai University of Finance and Economics}
+- {ror: 031t68441, zh: 上海对外经贸大学, name: Shanghai University of International Business and Economics}
+- {ror: 04ewct822, zh: 西南财经大学, name: Southwestern University of Finance and Economics}
+- {ror: 01yqg2h08, zh: 哈尔滨工业大学, name: Harbin Institute of Technology}
+- {ror: 037b1pp87, zh: 北京工业大学, name: Beijing University of Technology}
+- {ror: 022k4wk35, zh: 北京师范大学, name: Beijing Normal University}
+- {ror: 03czfbj71, zh: 北京师范大学珠海校区, name: Beijing Normal University (Zhuhai)}
+- {ror: 04qzpec27, zh: 深圳技术大学, name: Shenzhen Technology University}
+- {ror: 01vy4gh70, zh: 深圳大学, name: Shenzhen University}
+- {ror: 00p991c53, zh: 华中科技大学, name: Huazhong University of Science and Technology}
+- {ror: 01rxvg760, zh: 南京大学, name: Nanjing University}
+- {ror: 05t8y2r12, zh: 苏州大学, name: Soochow University}
+- {ror: 042v6xz23, zh: 南昌大学, name: Nanchang University}
+- {ror: 02d5ks197, zh: 香港中文大学（深圳）, name: The Chinese University of Hong Kong, Shenzhen}
+- {ror: 050h0vm43, zh: 香港科技大学（广州）, name: HKUST (Guangzhou)}
+- {ror: 00g5w7n47, zh: 蚂蚁集团, name: Ant Group}
+- {ror: 00hhjss72, zh: 腾讯, name: Tencent}
+- {ror: 00k642b80, zh: 阿里巴巴, name: Alibaba Group}
+- {ror: 00cmhce21, zh: 华为, name: Huawei}
+
+# ---------- Hong Kong, Macau, Taiwan ----------
+- {ror: 00q4vv597, zh: 香港科技大学, name: HKUST}
+- {ror: 02zhqgq86, zh: 香港大学, name: The University of Hong Kong}
+- {ror: 00t33hh48, zh: 香港中文大学, name: The Chinese University of Hong Kong}
+- {ror: 0030zas98, zh: 香港理工大学, name: The Hong Kong Polytechnic University}
+- {ror: 03q8dnn23, zh: 香港城市大学, name: City University of Hong Kong}
+- {ror: 05bqach95, zh: 台湾大学, name: National Taiwan University}
+- {ror: 059dkdx38, zh: 台湾师范大学, name: National Taiwan Normal University}
+
+# ---------- Singapore and Asia ----------
+- {ror: 02e7b5302, zh: 南洋理工大学, name: Nanyang Technological University, aliases: [NTU Singapore]}
+- {ror: 01tgyzw49, zh: 新加坡国立大学, name: National University of Singapore}
+- {ror: 050qmg959, zh: 新加坡管理大学, name: Singapore Management University}
+- {ror: 05apxxy63, zh: 韩国科学技术院, name: KAIST}
+- {ror: 04h9pn542, zh: 首尔大学, name: Seoul National University}
+- {ror: 017cjz748, zh: 蔚山科学技术院, name: UNIST}
+- {ror: 01r9jj364, zh: KakaoBank, name: KakaoBank}
+- {ror: 057zh3y96, zh: 东京大学, name: The University of Tokyo}
+- {ror: 02e16g702, zh: 北海道大学, name: Hokkaido University}
+- {ror: 04ksd4g47, zh: 日本国立情报学研究所, name: National Institute of Informatics}
+- {ror: 01703db54, zh: 日本产业技术综合研究所, name: AIST}
+- {ror: 0258gkt32, zh: 穆罕默德·本·扎耶德人工智能大学, name: MBZUAI}
+- {ror: 01q3tbs38, zh: 阿卜杜拉国王科技大学, name: KAUST}
+- {ror: 03esj4g97, zh: FPT 大学, name: FPT University}
+
+# ---------- United States ----------
+- {ror: 00hj8s172, zh: 哥伦比亚大学, name: Columbia University}
+- {ror: 0190ak572, zh: 纽约大学, name: New York University}
+- {ror: 05x2bcf33, zh: 卡内基梅隆大学, name: Carnegie Mellon University}
+- {ror: 03vek6s52, zh: 哈佛大学, name: Harvard University}
+- {ror: 00f54p054, zh: 斯坦福大学, name: Stanford University}
+- {ror: 042nb2s44, zh: 麻省理工学院, name: MIT}
+- {ror: 03v76x132, zh: 耶鲁大学, name: Yale University}
+- {ror: 05bnh6r87, zh: 康奈尔大学, name: Cornell University}
+- {ror: 01an7q238, zh: 加州大学伯克利分校, name: UC Berkeley}
+- {ror: 046rm7j60, zh: 加州大学洛杉矶分校, name: UCLA}
+- {ror: 0168r3w48, zh: 加州大学圣地亚哥分校, name: UC San Diego}
+- {ror: 03nawhv43, zh: 加州大学河滨分校, name: UC Riverside}
+- {ror: 02t274463, zh: 加州大学圣巴巴拉分校, name: UC Santa Barbara}
+- {ror: 03taz7m60, zh: 南加州大学, name: University of Southern California}
+- {ror: 047426m28, zh: 伊利诺伊大学厄巴纳-香槟分校, name: UIUC}
+- {ror: 00za53h95, zh: 约翰斯·霍普金斯大学, name: Johns Hopkins University}
+- {ror: 01zkghx44, zh: 佐治亚理工学院, name: Georgia Tech}
+- {ror: 00hj54h04, zh: 得克萨斯大学奥斯汀分校, name: UT Austin}
+- {ror: 02y3ad647, zh: 佛罗里达大学, name: University of Florida}
+- {ror: 02gz6gg07, zh: 佛罗里达国际大学, name: Florida International University}
+- {ror: 05vt9qd57, zh: 罗格斯大学, name: Rutgers University}
+- {ror: 02z43xh36, zh: 史蒂文斯理工学院, name: Stevens Institute of Technology}
+- {ror: 01rtyzb94, zh: 伦斯勒理工学院, name: Rensselaer Polytechnic Institute}
+- {ror: 05e74xb87, zh: 新泽西理工学院, name: New Jersey Institute of Technology}
+- {ror: 02smfhw86, zh: 弗吉尼亚理工大学, name: Virginia Tech}
+- {ror: 023qavy03, zh: 纽约市立大学巴鲁克学院, name: Baruch College}
+- {ror: 02e3zdp86, zh: 博伊西州立大学, name: Boise State University}
+- {ror: 04grmx538, zh: 美国国家经济研究局, name: NBER}
+- {ror: 031dc4703, zh: 贝莱德, name: BlackRock}
+- {ror: 01x3kkr08, zh: 摩根大通, name: JPMorgan Chase}
+- {ror: 031rnv444, zh: 高盛, name: Goldman Sachs}
+- {ror: 00svp7168, zh: 第一资本, name: Capital One}
+- {ror: 00d0nc645, zh: 微软, name: Microsoft}
+
+# ---------- Canada ----------
+- {ror: 0161xgx34, zh: 蒙特利尔大学, name: Université de Montréal}
+- {ror: 01pxwe438, zh: 麦吉尔大学, name: McGill University}
+- {ror: 03dbr7087, zh: 多伦多大学, name: University of Toronto}
+- {ror: 05c22rx21, zh: Mila 魁北克人工智能研究所, name: Mila}
+
+# ---------- Europe ----------
+- {ror: 027m9bs27, zh: 曼彻斯特大学, name: The University of Manchester}
+- {ror: 01nrxwf90, zh: 爱丁堡大学, name: The University of Edinburgh}
+- {ror: 052gg0110, zh: 牛津大学, name: University of Oxford}
+- {ror: 0220mzb33, zh: 伦敦国王学院, name: King's College London}
+- {ror: 02jx3x895, zh: 伦敦大学学院, name: UCL}
+- {ror: 041kmwe10, zh: 帝国理工学院, name: Imperial College London}
+- {ror: 0524sp257, zh: 布里斯托大学, name: University of Bristol}
+- {ror: 02nkf1q06, zh: 埃塞克斯大学, name: University of Essex}
+- {ror: 05m7pjf47, zh: 都柏林大学学院, name: University College Dublin}
+- {ror: 05trd4x28, zh: 特伦托大学, name: University of Trento}
+- {ror: 02d4c4y02, zh: 摩德纳和雷焦艾米利亚大学, name: University of Modena and Reggio Emilia}
+- {ror: 04pp8hn57, zh: 乌得勒支大学, name: Utrecht University}
+- {ror: 04dkp9463, zh: 阿姆斯特丹大学, name: University of Amsterdam, aliases: [University of Amsterdam]}
+- {ror: 02s376052, zh: 洛桑联邦理工学院, name: EPFL}
+- {ror: 052bz7812, zh: 巴黎第九大学（PSL）, name: Université Paris Dauphine-PSL}
+- {ror: 03s262162, zh: 雅典经济与商业大学, name: Athens University of Economics and Business}
+
+# ---------- Australia ----------
+- {ror: 0384j8v12, zh: 悉尼大学, name: The University of Sydney}
+- {ror: 03f0f6041, zh: 悉尼科技大学, name: University of Technology Sydney}
+- {ror: 01ej9dk98, zh: 墨尔本大学, name: The University of Melbourne}
+- {ror: 03qn8fb07, zh: 澳大利亚联邦科学与工业研究组织, name: CSIRO}

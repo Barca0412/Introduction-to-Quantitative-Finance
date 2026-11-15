@@ -70,6 +70,8 @@ def normalize_arxiv_id(arxiv_id: str) -> str:
     if candidate.endswith(".pdf"):
         candidate = candidate[:-4]
 
+    if ":" in candidate:  # doi:... / venue:... ids from other sources
+        return candidate
     return re.sub(r"v\d+$", "", candidate)
 
 
@@ -80,16 +82,25 @@ def to_https(url: str) -> str:
     return url.replace("http://", "https://", 1)
 
 
+_ARXIV_ID_SHAPE = re.compile(r"^(\d{4}\.\d{4,5}|[a-z][a-z.-]+/\d{7})$", re.I)
+
+
+def is_arxiv_id(paper_id: str) -> bool:
+    """New-style (2611.12345) or old-style (q-fin/0601001) arXiv id. Papers from other
+    sources use "doi:..." or "venue:..." ids (discover.py) and get no arXiv links."""
+    return bool(_ARXIV_ID_SHAPE.match(normalize_arxiv_id(paper_id or "")))
+
+
 def build_arxiv_abs_link(arxiv_id: str) -> str:
-    """Build a stable arXiv abstract link from a normalized ID."""
+    """Build a stable arXiv abstract link from a normalized ID ('' for other sources)."""
     normalized = normalize_arxiv_id(arxiv_id)
-    return f"https://arxiv.org/abs/{normalized}" if normalized else ""
+    return f"https://arxiv.org/abs/{normalized}" if normalized and is_arxiv_id(normalized) else ""
 
 
 def build_arxiv_pdf_link(arxiv_id: str) -> str:
-    """Build a stable arXiv PDF link from a normalized ID."""
+    """Build a stable arXiv PDF link from a normalized ID ('' for other sources)."""
     normalized = normalize_arxiv_id(arxiv_id)
-    return f"https://arxiv.org/pdf/{normalized}.pdf" if normalized else ""
+    return f"https://arxiv.org/pdf/{normalized}.pdf" if normalized and is_arxiv_id(normalized) else ""
 
 
 def async_retry(max_retries: int = 3, base_delay: float = 1.0):
@@ -208,7 +219,7 @@ def has_any_term(text: str, terms: List[str]) -> bool:
 
 
 class Progress:
-    """Log "Progress <label>: 1200/3342 (36%), 2 failed, 4m10s, ~7m left" lines.
+    """Log "Progress <label>: 1200/3342 (36%), 2 without result, 4m10s, ~7m left" lines.
 
     Reports every 1% and at the end: ~100 lines per step in the log, which the local
     backfill script turns into one progress bar redrawn in place.
@@ -232,8 +243,10 @@ class Progress:
         elapsed = time.monotonic() - self.started
         left = elapsed / self.done * (self.total - self.done) if self.done else 0
         fmt = lambda s: f"{int(s // 60)}m{int(s % 60):02d}s"
+        # Failures are mentioned only when there are some ("0 failed" read like an error).
+        failed = f", {self.failed} without result" if self.failed else ""
         self.logger.info(
-            "Progress %s: %s/%s (%d%%), %s failed, %s elapsed, ~%s left",
+            "Progress %s: %s/%s (%d%%)%s, %s elapsed, ~%s left",
             self.label, self.done, self.total, 100 * self.done // max(1, self.total),
-            self.failed, fmt(elapsed), fmt(left),
+            failed, fmt(elapsed), fmt(left),
         )

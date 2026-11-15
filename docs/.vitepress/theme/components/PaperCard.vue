@@ -87,13 +87,13 @@
         <IconWrapper name="sparkles" :size="16" />
         Similar papers
       </button>
-      <a :href="paper.pdf_link" target="_blank" rel="noopener" class="paper-link primary">
+      <a v-if="paper.pdf_link" :href="paper.pdf_link" target="_blank" rel="noopener" class="paper-link primary">
         <IconWrapper name="file-text" :size="16" />
         PDF
       </a>
       <a :href="paper.abs_link" target="_blank" rel="noopener" class="paper-link secondary">
         <IconWrapper name="external-link" :size="16" />
-        arXiv
+        {{ paper.pdf_link ? 'arXiv' : 'Paper' }}
       </a>
     </div>
   </div>

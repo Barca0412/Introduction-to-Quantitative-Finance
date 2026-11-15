@@ -58,10 +58,16 @@ def normalize_paper(paper: Dict[str, Any]) -> Dict[str, Any]:
     if "T" in published_date or " " in published_date:
         published_date = parse_arxiv_date(published_date)
 
-    normalized_affiliation = normalize_affiliation_fields(
-        paper.get("affiliation", ""),
-        paper.get("affiliations", []),
-    )
+    if paper.get("institutions"):
+        # S6 (institutions.py) already gives clean names; the old splitter would cut
+        # names with commas ("Agency for Science, Technology and Research").
+        names = list(dict.fromkeys(i.get("name", "") for i in paper["institutions"] if i.get("name")))
+        normalized_affiliation = {"affiliation": "; ".join(names), "affiliations": names}
+    else:
+        normalized_affiliation = normalize_affiliation_fields(
+            paper.get("affiliation", ""),
+            paper.get("affiliations", []),
+        )
 
     normalized = {
         "id": paper_id,
@@ -86,18 +92,25 @@ def normalize_paper(paper: Dict[str, Any]) -> Dict[str, Any]:
 
 # arXiv metadata kept since 2026-11-15, plus the S3 v2 enrichment (enrich.py). Old
 # records have none of these; they read as "not enriched with v2 yet".
-ARXIV_EXTRA_FIELDS = ("primary_category", "comment", "journal_ref", "doi")
+ARXIV_EXTRA_FIELDS = ("primary_category", "comment", "journal_ref", "doi", "source")
+# S6 institutions (institutions.py).
+INSTITUTION_FIELDS = (
+    "institutions", "author_affiliations", "affiliation_source", "affiliation_checked_at", "affiliation_raw",
+    "author_ids",
+)
 V2_FIELDS = (
     "relevance", "relevance_reason_zh", "paper_type", "task_types", "finance_domains",
     "methods", "keywords_raw", "data_market", "reproducibility", "tldr_zh", "points_zh",
     "venue_mention", "withdrawn", "schema_version", "stage_versions", "attempts",
-    "last_error", "enrich_warnings", "quality_flags",
+    "last_error", "enrich_warnings", "quality_flags", "keywords_norm",
+    "venue", "team_background", "discipline", "discipline_basis", "venue_list",
+    "nber_programs",
 )
 
 
 def _v2_fields(paper: Dict[str, Any]) -> Dict[str, Any]:
     out: Dict[str, Any] = {key: str(paper.get(key) or "").strip() for key in ARXIV_EXTRA_FIELDS}
-    for key in V2_FIELDS:
+    for key in V2_FIELDS + INSTITUTION_FIELDS:
         if paper.get(key) is not None:
             out[key] = paper[key]
     return out
@@ -135,6 +148,11 @@ def merge_duplicate_paper(existing: Dict[str, Any], incoming: Dict[str, Any]) ->
     merged["categories"] = merge_unique_strings(merged["categories"], candidate["categories"])
     for key in ARXIV_EXTRA_FIELDS:
         merged[key] = candidate[key] or merged[key]
+    if str(candidate.get("affiliation_checked_at") or "") > str(merged.get("affiliation_checked_at") or ""):
+        for key in INSTITUTION_FIELDS:
+            merged[key] = candidate.get(key)
+        merged["affiliations"] = candidate["affiliations"]
+        merged["affiliation"] = candidate["affiliation"]
     if v2_upgrade:
         for key in V2_FIELDS:
             merged.pop(key, None)

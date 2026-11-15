@@ -606,6 +606,23 @@ FETCH_BACKOFF_SECONDS = tuple(
 )
 ARXIV_CATEGORIES = _env_list("RADAR_CATEGORIES") or ARXIV_CATEGORIES
 
+# OpenAlex API key (free, openalex.org/settings/api). Optional: without it everything
+# still works (numbered pages, polite rate); with it OpenAlex allows more. Never logged.
+OPENALEX_API_KEY = os.getenv("OPENALEX_API_KEY", "").strip()
+
+
+def openalex_url(url: str) -> str:
+    """Add the API key to an OpenAlex request URL when one is configured."""
+    if not OPENALEX_API_KEY:
+        return url
+    return f"{url}{'&' if '?' in url else '?'}api_key={OPENALEX_API_KEY}"
+
+
+def redact(text: str) -> str:
+    """Hide the OpenAlex key in anything that may be logged."""
+    return text.replace(OPENALEX_API_KEY, "***") if OPENALEX_API_KEY else text
+
+
 # Big general-ML categories fetched only through a finance-term query. Finance papers
 # that are filed under cs.LG alone (e.g. 2610.09048 "Towards Financial World Modeling",
 # NeurIPS 2026) were otherwise never seen; adding cs.LG whole would bring in several

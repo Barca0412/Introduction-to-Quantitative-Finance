@@ -1,0 +1,186 @@
+# Conferences and journals (design doc 4.3.6). Used to turn the venue an author wrote in
+# the arXiv comment or journal_ref ("Accepted by KDD '23, ADS track") into
+# {name, kind, discipline}. `match` is a regular expression searched case-insensitively
+# in that text, in file order: put specific entries before broader ones (e.g. "ICLR
+# workshop" is caught by the workshop rule in venues.py, not by a separate entry).
+#
+# discipline: cs | finance-econ | interdisciplinary | other
+# kind: conference | journal (workshops and symposia are detected from the text)
+# top: in the first top-venue list for the S11 accepted-paper library (user, 2026-11-15)
+#
+# First version 2026-11-15, written from general knowledge; extend from the weekly list
+# of unmatched venue mentions.
+
+# ---------- CS: machine learning and AI ----------
+- {id: neurips, name: NeurIPS, match: '\bneurips\b|\bnips\b|neural information processing systems', kind: conference, discipline: cs, top: true}
+- {id: icml, name: ICML, match: '\bicml\b|international conference on machine learning', kind: conference, discipline: cs, top: true}
+- {id: iclr, name: ICLR, match: '\biclr\b|international conference on learning representations', kind: conference, discipline: cs, top: true}
+- {id: aaai, name: AAAI, match: '\baaai\b', kind: conference, discipline: cs, top: true}
+- {id: ijcai, name: IJCAI, match: '\bijcai\b', kind: conference, discipline: cs, top: true}
+- {id: aistats, name: AISTATS, match: '\baistats\b', kind: conference, discipline: cs}
+- {id: uai, name: UAI, match: '\buai\b|uncertainty in artificial intelligence', kind: conference, discipline: cs}
+- {id: colt, name: COLT, match: '\bcolt\b', kind: conference, discipline: cs}
+- {id: ictai, name: ICTAI, match: '\bictai\b', kind: conference, discipline: cs}
+- {id: icmla, name: ICMLA, match: '\bicmla\b', kind: conference, discipline: cs}
+- {id: ieee-bigdata, name: IEEE BigData, match: 'ieee big ?data', kind: conference, discipline: cs}
+- {id: aamas, name: AAMAS, match: '\baamas\b', kind: conference, discipline: cs}
+- {id: ecai, name: ECAI, match: '\becai\b', kind: conference, discipline: cs}
+- {id: tmlr, name: TMLR, match: '\btmlr\b|transactions on machine learning research', kind: journal, discipline: cs}
+- {id: jmlr, name: JMLR, match: '\bjmlr\b|journal of machine learning research', kind: journal, discipline: cs}
+- {id: tpami, name: IEEE TPAMI, match: '\btpami\b|pattern analysis and machine intelligence', kind: journal, discipline: cs}
+- {id: tnnls, name: IEEE TNNLS, match: '\btnnls\b|neural networks and learning systems', kind: journal, discipline: cs}
+- {id: aij, name: Artificial Intelligence (journal), match: '^artificial intelligence\b|artificial intelligence journal', kind: journal, discipline: cs}
+- {id: neural-networks, name: Neural Networks, match: '^neural networks\b', kind: journal, discipline: cs}
+- {id: neurocomputing, name: Neurocomputing, match: '\bneurocomputing\b', kind: journal, discipline: cs}
+- {id: nca, name: Neural Computing and Applications, match: 'neural computing and applications', kind: journal, discipline: cs}
+- {id: eswa, name: Expert Systems with Applications, match: 'expert systems with applications|\beswa\b', kind: journal, discipline: cs}
+- {id: kbs, name: Knowledge-Based Systems, match: 'knowledge.based systems', kind: journal, discipline: cs}
+
+# ---------- CS: NLP ----------
+- {id: acl, name: ACL, match: '\bacl\b(?! anthology)|annual meeting of the association for computational linguistics', kind: conference, discipline: cs, top: true}
+- {id: emnlp, name: EMNLP, match: '\bemnlp\b', kind: conference, discipline: cs, top: true}
+- {id: naacl, name: NAACL, match: '\bnaacl\b', kind: conference, discipline: cs, top: true}
+- {id: eacl, name: EACL, match: '\beacl\b', kind: conference, discipline: cs}
+- {id: coling, name: COLING, match: '\bcoling\b', kind: conference, discipline: cs}
+- {id: colm, name: COLM, match: '\bcolm\b|conference on language modeling', kind: conference, discipline: cs}
+- {id: tacl, name: TACL, match: '\btacl\b|transactions of the association for computational linguistics', kind: journal, discipline: cs}
+- {id: lrec, name: LREC, match: '\blrec\b', kind: conference, discipline: cs}
+
+# ---------- CS: data mining, web, IR, multimedia ----------
+- {id: kdd, name: KDD, match: '\bkdd\b|knowledge discovery and data mining', kind: conference, discipline: cs, top: true}
+- {id: www, name: The Web Conference (WWW), match: '\bwww ?.?(19|20)?\d{2}\b|the web conference|\bthewebconf', kind: conference, discipline: cs, top: true}
+- {id: cikm, name: CIKM, match: '\bcikm\b', kind: conference, discipline: cs, top: true}
+- {id: wsdm, name: WSDM, match: '\bwsdm\b', kind: conference, discipline: cs, top: true}
+- {id: icdm, name: ICDM, match: '\bicdm\b', kind: conference, discipline: cs}
+- {id: sdm, name: SDM, match: '\bsiam (international )?conference on data mining|\bsdm\b', kind: conference, discipline: cs}
+- {id: icde, name: ICDE, match: '\bicde\b', kind: conference, discipline: cs}
+- {id: sigmod, name: SIGMOD, match: '\bsigmod\b', kind: conference, discipline: cs}
+- {id: vldb, name: VLDB, match: '\bvldb\b|\bpvldb\b', kind: conference, discipline: cs}
+- {id: sigir, name: SIGIR, match: '\bsigir\b', kind: conference, discipline: cs, top: true}
+- {id: recsys, name: RecSys, match: '\brecsys\b', kind: conference, discipline: cs}
+- {id: acm-mm, name: ACM MM, match: '\bacm mm\b|acm multimedia|acm international conference on multimedia', kind: conference, discipline: cs, top: true}
+- {id: tkde, name: IEEE TKDE, match: '\btkde\b|knowledge and data engineering', kind: journal, discipline: cs}
+- {id: tois, name: ACM TOIS, match: '\btois\b|transactions on information systems', kind: journal, discipline: cs}
+- {id: tkdd, name: ACM TKDD, match: '\btkdd\b', kind: journal, discipline: cs}
+- {id: dmkd, name: Data Mining and Knowledge Discovery, match: 'data mining and knowledge discovery', kind: journal, discipline: cs}
+
+# ---------- CS: vision, speech, robotics ----------
+- {id: cvpr, name: CVPR, match: '\bcvpr\b', kind: conference, discipline: cs}
+- {id: iccv, name: ICCV, match: '\biccv\b', kind: conference, discipline: cs}
+- {id: eccv, name: ECCV, match: '\beccv\b', kind: conference, discipline: cs}
+- {id: wacv, name: WACV, match: '\bwacv\b', kind: conference, discipline: cs}
+- {id: bmvc, name: BMVC, match: '\bbmvc\b', kind: conference, discipline: cs}
+- {id: accv, name: ACCV, match: '\baccv\b', kind: conference, discipline: cs}
+- {id: corl, name: CoRL, match: '\bcorl\b|conference on robot learning', kind: conference, discipline: cs}
+- {id: icassp, name: ICASSP, match: '\bicassp\b', kind: conference, discipline: cs}
+- {id: interspeech, name: Interspeech, match: '\binterspeech\b', kind: conference, discipline: cs}
+- {id: icra, name: ICRA, match: '\bicra\b', kind: conference, discipline: cs}
+
+# ---------- CS: systems, security, software, theory ----------
+- {id: usenix-security, name: USENIX Security, match: 'usenix security', kind: conference, discipline: cs}
+- {id: ccs, name: ACM CCS, match: '\bacm ccs\b|\bccs ?\d{2,4}\b|computer and communications security', kind: conference, discipline: cs}
+- {id: sp, name: IEEE S&P, match: 'ieee s ?& ?p|symposium on security and privacy', kind: conference, discipline: cs}
+- {id: ndss, name: NDSS, match: '\bndss\b', kind: conference, discipline: cs}
+- {id: fc, name: Financial Cryptography, match: 'financial cryptography', kind: conference, discipline: cs}
+- {id: apsec, name: APSEC, match: '\bapsec\b', kind: conference, discipline: cs}
+- {id: icse, name: ICSE, match: '\bicse\b', kind: conference, discipline: cs}
+- {id: fse, name: FSE, match: '\besec ?/ ?fse\b|\bfse\b', kind: conference, discipline: cs}
+- {id: ase, name: ASE, match: '\base\b ?.?\d{2,4}|automated software engineering', kind: conference, discipline: cs}
+- {id: ec, name: ACM EC, match: '\bacm ec\b|\bec ?.?\d{2}\b|economics and computation', kind: conference, discipline: interdisciplinary}
+- {id: wine, name: WINE, match: '\bwine\b ?\d{0,4}|web and internet economics', kind: conference, discipline: interdisciplinary}
+- {id: stoc, name: STOC, match: '\bstoc\b', kind: conference, discipline: cs}
+- {id: focs, name: FOCS, match: '\bfocs\b', kind: conference, discipline: cs}
+- {id: soda, name: SODA, match: '\bsoda\b', kind: conference, discipline: cs}
+- {id: chi, name: CHI, match: '\bchi\b ?.?\d{2,4}|human factors in computing systems', kind: conference, discipline: cs}
+- {id: facct, name: FAccT, match: '\bfacct\b|fairness, accountability', kind: conference, discipline: cs}
+
+# ---------- AI x finance (interdisciplinary) ----------
+- {id: icaif, name: ACM ICAIF, match: '\bicaif\b|ai in finance', kind: conference, discipline: interdisciplinary, top: true}
+- {id: finnlp, name: FinNLP workshop, match: '\bfinnlp\b', kind: conference, discipline: interdisciplinary}
+- {id: quantitative-finance, name: Quantitative Finance, match: '^quantitative finance\b|journal: quantitative finance|in quantitative finance', kind: journal, discipline: interdisciplinary}
+- {id: jfds, name: Journal of Financial Data Science, match: 'journal of financial data science|\bjfds\b', kind: journal, discipline: interdisciplinary}
+- {id: mathematical-finance, name: Mathematical Finance, match: '^mathematical finance\b|in mathematical finance', kind: journal, discipline: interdisciplinary}
+- {id: finance-stochastics, name: Finance and Stochastics, match: 'finance and stochastics', kind: journal, discipline: interdisciplinary}
+- {id: sifin, name: SIAM Journal on Financial Mathematics, match: 'siam journal on financial mathematics|\bsifin\b', kind: journal, discipline: interdisciplinary}
+- {id: amf, name: Applied Mathematical Finance, match: 'applied mathematical finance', kind: journal, discipline: interdisciplinary}
+- {id: ijtaf, name: International Journal of Theoretical and Applied Finance, match: 'theoretical and applied finance|\bijtaf\b', kind: journal, discipline: interdisciplinary}
+- {id: jcf, name: Journal of Computational Finance, match: 'journal of computational finance', kind: journal, discipline: interdisciplinary}
+- {id: risk, name: Risk (magazine), match: '^risk\b|risk\.net', kind: journal, discipline: interdisciplinary}
+- {id: jrisk, name: Journal of Risk, match: '^journal of risk\b', kind: journal, discipline: interdisciplinary}
+- {id: algorithmic-finance, name: Algorithmic Finance, match: 'algorithmic finance', kind: journal, discipline: interdisciplinary}
+- {id: digital-finance, name: Digital Finance, match: '^digital finance\b', kind: journal, discipline: interdisciplinary}
+- {id: financial-innovation, name: Financial Innovation, match: 'financial innovation', kind: journal, discipline: interdisciplinary}
+- {id: frontiers-ai, name: Frontiers in Artificial Intelligence, match: 'frontiers in artificial intelligence', kind: journal, discipline: cs}
+
+# ---------- finance ----------
+- {id: jf, name: Journal of Finance, match: '^journal of finance\b|the journal of finance|\bjf\b', kind: journal, discipline: finance-econ, top: true}
+- {id: jfe, name: Journal of Financial Economics, match: 'journal of financial economics|\bjfe\b', kind: journal, discipline: finance-econ, top: true}
+- {id: rfs, name: Review of Financial Studies, match: 'review of financial studies|\brfs\b', kind: journal, discipline: finance-econ, top: true}
+- {id: jfqa, name: JFQA, match: 'journal of financial and quantitative analysis|\bjfqa\b', kind: journal, discipline: finance-econ}
+- {id: rof, name: Review of Finance, match: '^review of finance\b', kind: journal, discipline: finance-econ}
+- {id: rcfs, name: Review of Corporate Finance Studies, match: 'review of corporate finance studies', kind: journal, discipline: finance-econ}
+- {id: rapstu, name: Review of Asset Pricing Studies, match: 'review of asset pricing studies', kind: journal, discipline: finance-econ}
+- {id: jbf, name: Journal of Banking & Finance, match: 'journal of banking (and|&) finance', kind: journal, discipline: finance-econ}
+- {id: jef, name: Journal of Empirical Finance, match: 'journal of empirical finance', kind: journal, discipline: finance-econ}
+- {id: jfm, name: Journal of Financial Markets, match: 'journal of financial markets', kind: journal, discipline: finance-econ}
+- {id: jfi, name: Journal of Financial Intermediation, match: 'journal of financial intermediation', kind: journal, discipline: finance-econ}
+- {id: jcorpfin, name: Journal of Corporate Finance, match: 'journal of corporate finance', kind: journal, discipline: finance-econ}
+- {id: faj, name: Financial Analysts Journal, match: 'financial analysts journal|\bfaj\b', kind: journal, discipline: finance-econ}
+- {id: jpm, name: Journal of Portfolio Management, match: 'journal of portfolio management', kind: journal, discipline: finance-econ}
+- {id: jfec, name: Journal of Financial Econometrics, match: 'journal of financial econometrics', kind: journal, discipline: finance-econ}
+- {id: irfa, name: International Review of Financial Analysis, match: 'international review of financial analysis', kind: journal, discipline: finance-econ}
+- {id: frl, name: Finance Research Letters, match: 'finance research letters', kind: journal, discipline: finance-econ}
+- {id: jimf, name: Journal of International Money and Finance, match: 'journal of international money and finance', kind: journal, discipline: finance-econ}
+- {id: jar, name: Journal of Accounting Research, match: 'journal of accounting research', kind: journal, discipline: finance-econ}
+- {id: tar, name: The Accounting Review, match: 'the accounting review', kind: journal, discipline: finance-econ}
+- {id: jae-acc, name: Journal of Accounting and Economics, match: 'journal of accounting and economics', kind: journal, discipline: finance-econ}
+- {id: ras, name: Review of Accounting Studies, match: 'review of accounting studies', kind: journal, discipline: finance-econ}
+- {id: afa, name: AFA Annual Meeting, match: '\bafa\b|american finance association', kind: conference, discipline: finance-econ}
+- {id: wfa, name: WFA Annual Meeting, match: '\bwfa\b|western finance association', kind: conference, discipline: finance-econ}
+- {id: efa, name: EFA Annual Meeting, match: '\befa\b|european finance association', kind: conference, discipline: finance-econ}
+- {id: sfs-cavalcade, name: SFS Cavalcade, match: 'sfs cavalcade', kind: conference, discipline: finance-econ}
+- {id: nber, name: NBER Working Paper, match: '\bnber\b', kind: working-paper, discipline: finance-econ}
+- {id: ssrn, name: SSRN, match: '\bssrn\b', kind: working-paper, discipline: finance-econ}
+
+# ---------- insurance and actuarial (counted as finance-econ, user 2026-11-15) ----------
+- {id: ime, name: 'Insurance: Mathematics and Economics', match: 'insurance:? mathematics and economics', kind: journal, discipline: finance-econ}
+- {id: astin, name: ASTIN Bulletin, match: '\bastin\b', kind: journal, discipline: finance-econ}
+- {id: naaj, name: North American Actuarial Journal, match: 'north american actuarial journal|\bnaaj\b', kind: journal, discipline: finance-econ}
+- {id: saj, name: Scandinavian Actuarial Journal, match: 'scandinavian actuarial journal', kind: journal, discipline: finance-econ}
+- {id: jri, name: Journal of Risk and Insurance, match: 'journal of risk and insurance', kind: journal, discipline: finance-econ}
+
+# ---------- economics ----------
+- {id: aer, name: American Economic Review, match: 'american economic review|\baer\b', kind: journal, discipline: finance-econ}
+- {id: econometrica, name: Econometrica, match: '\beconometrica\b', kind: journal, discipline: finance-econ}
+- {id: qje, name: Quarterly Journal of Economics, match: 'quarterly journal of economics|\bqje\b', kind: journal, discipline: finance-econ}
+- {id: jpe, name: Journal of Political Economy, match: 'journal of political economy|\bjpe\b', kind: journal, discipline: finance-econ}
+- {id: restud, name: Review of Economic Studies, match: 'review of economic studies|\brestud\b', kind: journal, discipline: finance-econ}
+- {id: restat, name: Review of Economics and Statistics, match: 'review of economics and statistics', kind: journal, discipline: finance-econ}
+- {id: joe, name: Journal of Econometrics, match: 'journal of econometrics', kind: journal, discipline: finance-econ}
+- {id: jbes, name: Journal of Business & Economic Statistics, match: 'journal of business (and|&) economic statistics|\bjbes\b', kind: journal, discipline: finance-econ}
+- {id: jae, name: Journal of Applied Econometrics, match: 'journal of applied econometrics', kind: journal, discipline: finance-econ}
+- {id: et, name: Econometric Theory, match: 'econometric theory', kind: journal, discipline: finance-econ}
+- {id: ej, name: Economic Journal, match: '^the economic journal|economic journal\b', kind: journal, discipline: finance-econ}
+- {id: jme, name: Journal of Monetary Economics, match: 'journal of monetary economics', kind: journal, discipline: finance-econ}
+- {id: jedc, name: Journal of Economic Dynamics and Control, match: 'economic dynamics and control', kind: journal, discipline: finance-econ}
+- {id: ijf, name: International Journal of Forecasting, match: 'international journal of forecasting', kind: journal, discipline: finance-econ}
+- {id: jof, name: Journal of Forecasting, match: '^journal of forecasting\b', kind: journal, discipline: finance-econ}
+- {id: econ-letters, name: Economics Letters, match: 'economics letters', kind: journal, discipline: finance-econ}
+
+# ---------- management, OR, statistics, signal processing (other) ----------
+- {id: mansci, name: Management Science, match: 'management science', kind: journal, discipline: finance-econ}
+- {id: opre, name: Operations Research, match: '^operations research\b', kind: journal, discipline: other}
+- {id: ejor, name: European Journal of Operational Research, match: 'european journal of operational research|\bejor\b', kind: journal, discipline: other}
+- {id: msom, name: M&SOM, match: 'manufacturing (and|&) service operations management|\bmsom\b', kind: journal, discipline: other}
+- {id: misq, name: MIS Quarterly, match: '\bmis quarterly\b|\bmisq\b', kind: journal, discipline: other}
+- {id: isr, name: Information Systems Research, match: 'information systems research', kind: journal, discipline: other}
+- {id: jasa, name: JASA, match: 'journal of the american statistical association|\bjasa\b', kind: journal, discipline: other}
+- {id: aos, name: Annals of Statistics, match: 'annals of statistics', kind: journal, discipline: other}
+- {id: jrssb, name: JRSS Series B, match: 'royal statistical society', kind: journal, discipline: other}
+- {id: biometrika, name: Biometrika, match: '\bbiometrika\b', kind: journal, discipline: other}
+- {id: aoap, name: Annals of Applied Probability, match: 'annals of applied probability', kind: journal, discipline: other}
+- {id: tsp, name: IEEE Transactions on Signal Processing, match: 'transactions on signal processing', kind: journal, discipline: other}
+- {id: plos-one, name: PLOS ONE, match: '\bplos one\b', kind: journal, discipline: other}
+- {id: sci-rep, name: Scientific Reports, match: 'scientific reports', kind: journal, discipline: other}
+- {id: physica-a, name: Physica A, match: '\bphysica a\b', kind: journal, discipline: other}
+- {id: entropy, name: Entropy, match: '^entropy\b', kind: journal, discipline: other}

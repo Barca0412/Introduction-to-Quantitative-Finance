@@ -60,6 +60,9 @@ logger = logging.getLogger("arxiv_radar.data_store")
 PAPERS_PARQUET = "papers.parquet"
 EMBEDDINGS_PARQUET = "embeddings.parquet"
 EXPORT_INFO = "export_info.json"
+# S11 top-venue accepted-paper library (venue_library.py), all venue-years in one file;
+# no abstracts in it.
+LIBRARY_PARQUET = "venue_library.parquet"
 RESTORE_RECORD = DATA_DIR / "restore_record.json"
 DATASET_CARD_TEMPLATE = Path(__file__).with_name("dataset_card.md")
 EMBEDDING_METADATA_KEY = b"radar_embeddings"
@@ -117,6 +120,7 @@ def _papers_schema():
             ("methods", strings),
             ("keywords_raw", pa.list_(pa.struct([("text", pa.string()), ("kind", pa.string())]))),
             ("data_market", strings),
+            ("nber_programs", strings),
             ("reproducibility", pa.struct([("code", pa.bool_()), ("data_public", pa.bool_())])),
             ("tldr_zh", pa.string()),
             ("points_zh", pa.struct([(k, pa.string()) for k in ("problem", "method", "result", "limitation")])),
@@ -128,11 +132,32 @@ def _papers_schema():
             ("last_error", pa.string()),
             ("enrich_warnings", strings),
             ("quality_flags", strings),
+            # S6 institutions (institutions.py).
+            ("institutions", pa.list_(pa.struct([(k, pa.string()) for k in ("name", "ror", "country", "type", "source", "confidence", "zh", "short")]))),
+            ("author_affiliations", pa.list_(pa.list_(pa.int32()))),
+            ("author_ids", pa.list_(pa.struct([("openalex", pa.string()), ("orcid", pa.string()), ("email_hash", pa.string())]))),
+            ("affiliation_source", pa.string()),
+            ("affiliation_checked_at", pa.string()),
+            ("affiliation_raw", strings),
+            # S5 keywords (keywords.py).
+            ("keywords_norm", pa.list_(pa.struct([("id", pa.string()), ("en", pa.string()), ("zh", pa.string()),
+                                                   ("kind", pa.string()), ("raw", pa.string()), ("new", pa.bool_())]))),
+            # Venue and discipline (venues.py).
+            ("venue", pa.struct([("id", pa.string()), ("name", pa.string()), ("kind", pa.string()),
+                                 ("discipline", pa.string()), ("status", pa.string()), ("year", pa.int32()),
+                                 ("source", pa.string()), ("text", pa.string())])),
+            ("team_background", pa.string()),
+            ("discipline", pa.string()),
+            ("discipline_basis", pa.string()),
+            # S11: match in the top-venue accepted-paper library (venue_library.py).
+            ("venue_list", pa.struct([("venue_id", pa.string()), ("year", pa.int32()), ("track", pa.string()),
+                                      ("decision", pa.string()), ("match_method", pa.string())])),
         ]
     )
 
 
-_V2_LIST_FIELDS = ("task_types", "finance_domains", "methods", "data_market", "enrich_warnings", "quality_flags")
+_V2_LIST_FIELDS = ("task_types", "finance_domains", "methods", "data_market", "enrich_warnings", "quality_flags",
+                   "nber_programs")
 
 
 def _clean_paper_for_parquet(paper: Dict[str, Any]) -> Dict[str, Any]:
@@ -190,6 +215,29 @@ def _clean_paper_for_parquet(paper: Dict[str, Any]) -> Dict[str, Any]:
             "enrich_version": (paper.get("attempts") or {}).get("enrich_version"),
         } if paper.get("attempts") else None,
         "last_error": paper.get("last_error"),
+        "institutions": [
+            {k: str(i.get(k) or "") for k in ("name", "ror", "country", "type", "source", "confidence", "zh", "short")}
+            for i in paper.get("institutions") or [] if isinstance(i, dict)
+        ],
+        "author_affiliations": [[int(x) for x in row] for row in paper.get("author_affiliations") or []],
+        "author_ids": [{k: str((a or {}).get(k) or "") for k in ("openalex", "orcid", "email_hash")}
+                       for a in paper.get("author_ids") or []],
+        "affiliation_source": paper.get("affiliation_source"),
+        "affiliation_checked_at": paper.get("affiliation_checked_at"),
+        "affiliation_raw": list(paper.get("affiliation_raw") or []),
+        "keywords_norm": [
+            {"id": str(k.get("id", "")), "en": str(k.get("en", "")), "zh": str(k.get("zh", "")),
+             "kind": str(k.get("kind", "")), "raw": str(k.get("raw", "")), "new": bool(k.get("new"))}
+            for k in paper.get("keywords_norm") or [] if isinstance(k, dict)
+        ],
+        "venue": {k: (paper["venue"].get(k) if k != "year" else (int(paper["venue"]["year"]) if paper["venue"].get("year") else None))
+                  for k in ("id", "name", "kind", "discipline", "status", "year", "source", "text")}
+                 if isinstance(paper.get("venue"), dict) else None,
+        "team_background": paper.get("team_background"),
+        "discipline": paper.get("discipline"),
+        "discipline_basis": paper.get("discipline_basis"),
+        "venue_list": {k: paper["venue_list"].get(k) for k in ("venue_id", "year", "track", "decision", "match_method")}
+                      if isinstance(paper.get("venue_list"), dict) else None,
     }
 
 
@@ -274,12 +322,16 @@ def _import_parquet_pair(
     embeddings_path: Optional[Path],
     stats_path: Optional[Path] = None,
     last_updated: Optional[str] = None,
+    library_path: Optional[Path] = None,
 ) -> int:
     import numpy as np
     import pyarrow.parquet as pq
 
     papers = pq.read_table(papers_path).to_pylist()
     _write_papers_json(papers, last_updated or None)
+
+    if library_path and library_path.exists():
+        _import_library(library_path)
 
     if stats_path and stats_path.exists():
         shutil.copy2(stats_path, STATS_FILE)
@@ -295,6 +347,22 @@ def _import_parquet_pair(
         meta.update({"ids": ids, "text_hashes": hashes})
         save_local_embeddings(meta, matrix)
     return len(papers)
+
+
+def _import_library(path: Path) -> int:
+    """Split the exported library back into data/venue_library/<venue>-<year>.parquet."""
+    import pyarrow.parquet as pq
+    from collections import defaultdict
+
+    from . import venue_library
+
+    groups: Dict[Tuple[str, int], List[Dict[str, Any]]] = defaultdict(list)
+    for row in pq.read_table(path).to_pylist():
+        groups[(row["venue_id"], int(row["year"]))].append(row)
+    for (venue, year), rows in groups.items():
+        venue_library.save(venue, year, rows)
+    logger.info("Restored the top-venue library: %s papers in %s venue-years", sum(map(len, groups.values())), len(groups))
+    return len(groups)
 
 
 def _hf_fetch(filename: str, workdir: Path) -> Optional[Path]:
@@ -372,6 +440,7 @@ def _remote_candidate(name: str, fetch: Callable[[str, Path], Optional[Path]], w
             fetch(EMBEDDINGS_PARQUET, sub),
             fetch("stats.json", sub),
             updated,
+            fetch(LIBRARY_PARQUET, sub),
         )
 
     logger.info("%s: %s papers, updated %s", name, papers, updated or "unknown")
@@ -627,6 +696,14 @@ def export() -> Dict[str, Any]:
     if STATS_FILE.exists():
         shutil.copy2(STATS_FILE, EXPORT_DIR / "stats.json")
 
+    from . import venue_library
+
+    library_rows = venue_library.load_all()
+    if library_rows:
+        pq.write_table(pa.Table.from_pylist([{k: v for k, v in r.items() if not k.startswith("_")} for r in library_rows],
+                                            schema=venue_library._schema()),
+                       EXPORT_DIR / LIBRARY_PARQUET, compression="zstd")
+
     dates = sorted(p.get("published_date", "") for p in papers if p.get("published_date"))
     info = {
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
@@ -639,7 +716,8 @@ def export() -> Dict[str, Any]:
         "last_date": dates[-1] if dates else "N/A",
         "files": {},
     }
-    for name in (PAPERS_PARQUET, EMBEDDINGS_PARQUET, "stats.json"):
+    info["library_papers"] = len(library_rows)
+    for name in (PAPERS_PARQUET, EMBEDDINGS_PARQUET, "stats.json", LIBRARY_PARQUET):
         path = EXPORT_DIR / name
         if path.exists():
             info["files"][name] = {"bytes": path.stat().st_size, "sha256": _sha256(path)}

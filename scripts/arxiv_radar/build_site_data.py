@@ -41,13 +41,15 @@ from .config import (
     SITE_MAX_AUTHORS,
     SITE_MAX_FILE_BYTES,
     SITE_MIN_RECENT_DAYS,
-    AI_METHODS,
     SITE_MIN_RELEVANCE,
     SITE_REQUIRE_AI_METHOD,
     SITE_RECENT_DAYS,
     PAPERS_FILE,
 )
 from .compute_stats import build_stats
+from . import leaders, trends
+from .site_filter import site_visible
+from .utils import is_arxiv_id
 from .data_store import load_local_embeddings
 
 logger = logging.getLogger("arxiv_radar.build_site_data")
@@ -65,6 +67,7 @@ SCHEMA = {
     "f": "affiliations",
     "s": "abstract (snippet when 'ac' is present)",
     "ac": "index of the abstracts-N.json chunk holding the full abstract",
+    "u": "link for papers not on arXiv (else https://arxiv.org/abs/<id>)",
     "fo": "focus: s=score, f=is_focus(0/1), p=primary topic, t=topics, r=reasons",
 }
 
@@ -109,6 +112,9 @@ def slim_paper(paper: Dict[str, Any]) -> Tuple[Dict[str, Any], Optional[str]]:
     }
     if len(authors) > SITE_MAX_AUTHORS:
         record["an"] = len(authors)
+    if not is_arxiv_id(paper["id"]):
+        # Not on arXiv (added from the top-venue library): the site links here instead.
+        record["u"] = paper.get("abs_link", "")
     # Optional fields are omitted when empty to keep the first load small.
     if paper.get("keywords"):
         record["k"] = paper["keywords"]
@@ -244,22 +250,6 @@ def _round_vector(values: List[float]) -> List[float]:
     return [round(float(v), 5) for v in values]
 
 
-def site_visible(
-    paper: Dict[str, Any],
-    min_relevance: int = SITE_MIN_RELEVANCE,
-    require_ai: bool = SITE_REQUIRE_AI_METHOD,
-) -> bool:
-    """Scored by the LLM as relevant enough, uses an AI/ML method, not withdrawn."""
-    relevance = paper.get("relevance")
-    return (
-        isinstance(relevance, int)
-        and not isinstance(relevance, bool)
-        and relevance >= min_relevance
-        and not paper.get("withdrawn")
-        and (not require_ai or any(m in AI_METHODS for m in paper.get("methods") or []))
-    )
-
-
 def build(today: Optional[date] = None) -> Dict[str, Any]:
     payload = json.loads(PAPERS_FILE.read_text(encoding="utf-8"))
     history = [p for p in payload.get("papers", []) if p.get("id")]
@@ -327,6 +317,10 @@ def build(today: Optional[date] = None) -> Dict[str, Any]:
     site_stats["summary"]["min_relevance"] = SITE_MIN_RELEVANCE
     site_stats["summary"]["core_papers"] = sum(1 for p in papers if p.get("relevance") == 3)
     stats_info = _write(SITE_DATA_DIR / "stats.json", _dumps(site_stats), SITE_MAX_FILE_BYTES)
+    # S8 aggregates for the trends / keyword / institution pages (trends.py).
+    agg_info = trends.build(papers, SITE_DATA_DIR / "agg")
+    # Leaderboards and institution / author pages (leaders.py).
+    agg_info["leaders"] = leaders.build(papers, SITE_DATA_DIR / "agg")
 
     manifest = {
         "version": 2,
@@ -348,6 +342,7 @@ def build(today: Optional[date] = None) -> Dict[str, Any]:
         "recent": {"since": cutoff, "until": anchor.isoformat(), "days": days, **recent_info},
         "archive": archive,
         "stats": stats_info,
+        "agg": agg_info,
         "schema": SCHEMA,
         "limits": {"max_file_bytes": SITE_MAX_FILE_BYTES, "first_load_budget": SITE_FIRST_LOAD_BUDGET},
         "attribution": "Thank you to arXiv for use of its open access interoperability.",

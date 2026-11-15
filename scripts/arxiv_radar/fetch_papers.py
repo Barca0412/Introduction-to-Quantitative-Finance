@@ -9,7 +9,10 @@ from typing import Any, Callable, Dict, List, Optional, Tuple
 
 import arxiv
 
-from .affiliations import enrich_affiliations
+from .institutions import canonicalize, enrich_institutions
+from .keywords import normalize_all
+from .venue_library import tag_papers
+from .venues import classify_all
 from .compute_stats import compute_and_save_stats
 from .config import (
     ARXIV_CATEGORIES,
@@ -137,6 +140,55 @@ def report_enrichment(papers: List[Dict[str, Any]]) -> Dict[str, Any]:
     return summary
 
 
+def report_keywords(report: Dict[str, Any]) -> None:
+    """Coverage and the most frequent new terms, for the weekly vocabulary review."""
+    if not report.get("keywords"):
+        return
+    lines = [
+        "### Keywords", "",
+        f"- {report['matched']} of {report['keywords']} keywords matched a standard keyword ({report['coverage']:.0%})",
+        "- most frequent new terms (candidates for vocab/keywords.yaml): "
+        + ", ".join(f"{term} ({n})" for term, n in report["top_new_terms"][:20]),
+        "",
+    ]
+    path = os.getenv("GITHUB_STEP_SUMMARY")
+    if path:
+        with open(path, "a", encoding="utf-8") as fh:
+            fh.write("\n".join(lines) + "\n")
+
+
+def report_venues(report: Dict[str, Any]) -> None:
+    if not report.get("papers"):
+        return
+    lines = [
+        "### Venue and discipline", "",
+        f"- {report['with_venue']} of {report['papers']} enriched papers name a venue",
+        f"- top-venue library: {report.get('library', {}).get('library_papers', 0)} accepted papers on disk, "
+        f"{report.get('library', {}).get('matched', 0)} radar papers found in it",
+        "- discipline: " + ", ".join(f"{k} {v}" for k, v in sorted(report["discipline"].items())),
+        "- based on: " + ", ".join(f"{k} {v}" for k, v in sorted(report["basis"].items())),
+    ]
+    if report["unknown_venues"]:
+        lines.append("- venues not in vocab/venues.yaml yet: " + "; ".join(f"{n} ({c})" for n, c in report["unknown_venues"][:10]))
+    path = os.getenv("GITHUB_STEP_SUMMARY")
+    if path:
+        with open(path, "a", encoding="utf-8") as fh:
+            fh.write("\n".join(lines) + "\n\n")
+
+
+def report_institutions(counts: Dict[str, int]) -> None:
+    looked = counts.get("looked_up", 0)
+    if not looked:
+        return
+    line = (f"### Authors and institutions\n\n- looked up {looked} relevant papers; "
+            f"{counts['with_institution']} with an institution, {counts['all_authors']} with every author covered, "
+            f"{counts['html_used']} needed the arXiv page\n\n")
+    path = os.getenv("GITHUB_STEP_SUMMARY")
+    if path:
+        with open(path, "a", encoding="utf-8") as fh:
+            fh.write(line)
+
+
 def report_fetch(report: List[Dict[str, Any]]) -> None:
     """Make fetch problems visible: GitHub warning annotations + a job-summary table."""
     lines = ["### arXiv fetch", "", "| Category | Papers | Status |", "| --- | ---: | --- |"]
@@ -218,15 +270,23 @@ def needs_enrichment(fetched: List[Dict[str, Any]], existing: Dict[str, Any]) ->
     return todo
 
 
-async def run_pipeline() -> Optional[Dict[str, Any]]:
-    """Run the daily fetch -> enrich -> persist -> stats pipeline."""
+async def run_pipeline(fetched: Optional[List[Dict[str, Any]]] = None) -> Optional[Dict[str, Any]]:
+    """Run the daily fetch -> enrich -> persist -> stats pipeline.
+
+    ``fetched``: papers to process instead of the arXiv date window (used by
+    discover.py to add papers found in the top-venue library).
+    """
     logger.info("=" * 60)
     logger.info("Starting LLM-Finance-Radar paper fetch pipeline")
     logger.info("=" * 60)
 
-    logger.info("\n[Step 1] Fetching papers from arXiv...")
-    fetched_papers, fetch_report = await fetch_all_categories(ARXIV_CATEGORIES)
-    report_fetch(fetch_report)
+    if fetched is None:
+        logger.info("\n[Step 1] Fetching papers from arXiv...")
+        fetched_papers, fetch_report = await fetch_all_categories(ARXIV_CATEGORIES)
+        report_fetch(fetch_report)
+    else:
+        logger.info("\n[Step 1] %s papers given by the caller (no date-window fetch)", len(fetched))
+        fetched_papers, fetch_report = fetched, []
     if not fetched_papers:
         raise RuntimeError(
             "No papers matched the arXiv date window. Refusing to publish stale Radar data."
@@ -287,8 +347,7 @@ async def run_pipeline() -> Optional[Dict[str, Any]]:
         if LLM_API_KEY:
             report_enrichment(processed_papers)
 
-        logger.info("\n[Step 3] Normalizing affiliations...")
-        enriched_papers = await enrich_affiliations(processed_papers)
+        enriched_papers = processed_papers
     else:
         logger.info("\n[Step 2-3] Nothing new to enrich")
         enriched_papers = []
@@ -299,6 +358,28 @@ async def run_pipeline() -> Optional[Dict[str, Any]]:
     # Papers never seen by the LLM carry rule-based tags; keep them in step with the rules.
     retagged = refresh_rule_tags(merged["papers"], fallback_tags_for_paper)
     logger.info("Re-applied keyword-rule tags to %s papers without an LLM summary", retagged)
+
+    # S5: map the LLM's keywords to the standard vocabulary (vocab/keywords.yaml).
+    keyword_report = normalize_all(merged["papers"])
+    logger.info("Keywords: %s of %s matched a standard keyword (%.0f%%)", keyword_report["matched"],
+                keyword_report["keywords"], 100 * keyword_report["coverage"])
+    report_keywords(keyword_report)
+
+    # S6: institutions for relevant papers (new ones, and young ones OpenAlex had not
+    # covered yet). OpenAlex + arXiv HTML, no LLM. Replaces the old LLM affiliation clean-up.
+    logger.info("\n[Step 4b] Authors and institutions...")
+    institution_counts = await enrich_institutions(merged["papers"])
+    institution_counts.update(canonicalize(merged["papers"]))
+    report_institutions(institution_counts)
+
+    # S11: official accepted lists of the top venues, when the library is on disk.
+    library_report = tag_papers(merged["papers"])
+    logger.info("Top-venue library: %s", library_report)
+
+    # Venue and discipline (4.3.6): needs the institutions above for the team guess.
+    venue_report = classify_all(merged["papers"])
+    venue_report["library"] = library_report
+    report_venues(venue_report)
 
     logger.info("\n[Step 5] Saving papers data...")
     save_papers(merged)
