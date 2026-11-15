@@ -7,6 +7,7 @@ import { normalizePath } from './paths.js'
 const asList = (value) => (Array.isArray(value) ? value : value ? [value] : [])
 
 export default createContentLoader('tutorials/*/index.md', {
+  includeSrc: true,
   transform(pages) {
     return pages
       .filter((page) => page.frontmatter.tutorial && !page.frontmatter.tutorial.draft)
@@ -20,6 +21,10 @@ export default createContentLoader('tutorials/*/index.md', {
           order: Number(t.order ?? 999),
           level: t.level || '',
           duration: t.duration || '',
+          prerequisites: asList(t.prerequisites).join('、'),
+          data: asList(t.data).join('、'),
+          author: t.author || '',
+          steps: [...(page.src || '').matchAll(/^## (.+)$/gm)].map(m => m[1].replace(/\*\*/g, '')),
           wiki: asList(t.wiki).map(normalizePath),
           reports: asList(t.reports),
           papers: asList(t.papers),
