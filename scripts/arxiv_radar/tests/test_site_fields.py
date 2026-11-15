@@ -83,7 +83,8 @@ class ListFieldsTest(unittest.TestCase):
         self.assertEqual(record["v"], {"n": "KDD", "k": "conference", "s": "accepted", "y": 2026, "o": 1, "t": "ADS, oral"})
         self.assertEqual(record["r"], 3)
         arxiv_record, _ = bsd.slim_paper(enriched())
-        self.assertNotIn("u", arxiv_record)
+        self.assertEqual(arxiv_record["u"], "https://arxiv.org/abs/2611.10000")
+        self.assertEqual(arxiv_record["ar"], 1)
         self.assertNotIn("o", arxiv_record["v"])
 
     def test_old_format_paper_gets_no_v2_keys(self):
@@ -158,6 +159,45 @@ class BuildTest(unittest.TestCase):
             self.assertEqual(set(details), {r["id"] for r in records})
             stats = json.loads((box.site / "stats.json").read_text())
             self.assertEqual(stats["facets"]["papers"], 3)
+
+    def test_public_export_has_no_abstracts_and_uses_resolved_identity(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            box = RadarSandbox(Path(tmp))
+            papers = [enriched(i, abstract="INTERNAL ABSTRACT SENTINEL " * 100,
+                               authors=[{"name": "Wei Zhang", "email": "private@example.invalid"}],
+                               author_ids=[{"openalex": "A1"}]) for i in range(2)]
+            papers += [enriched(2, published_date="2025-01-01", authors=[{"name": "Wei Zhang"}],
+                                author_ids=[{"openalex": "A2"}], institutions=[], author_affiliations=[])]
+            (box.data / "papers.json").write_text(json.dumps({"papers": papers}), encoding="utf-8")
+            with box.patched():
+                manifest = bsd.build()
+            self.assertEqual(manifest["version"], 3)
+            self.assertIn("leaders", manifest["agg"])
+            self.assertNotIn("abstracts", manifest["recent"])
+            self.assertFalse(list(box.site.rglob("abstracts-*.json")))
+            for path in box.site.rglob("*.json"):
+                text = path.read_text()
+                self.assertNotIn("INTERNAL ABSTRACT SENTINEL", text)
+                self.assertNotIn("private@example.invalid", text)
+            records = json.loads((box.site / manifest["recent"]["papers"][0]["file"]).read_text())["papers"]
+            self.assertTrue(all("s" not in r and "ac" not in r for r in records))
+            details = json.loads((box.site / manifest["recent"]["details"][0]["file"]).read_text())
+            self.assertEqual(details[papers[0]["id"]]["au"], [{"id": "A1", "n": "Wei Zhang", "page": "a1"}])
+            index = json.loads((box.site / manifest["paper_index"]["file"]).read_text())
+            self.assertEqual(index[papers[2]["id"]], "archive/2025-01")
+            leaders = json.loads((box.site / "agg/leaders.json").read_text())
+            authors = {a["id"]: a for a in leaders["periods"]["all"]["authors"]}
+            self.assertEqual(authors["A1"]["page"], "a1")
+            self.assertEqual(authors["A2"]["page"], "")
+
+    def test_non_arxiv_link_and_absent_pdf_never_become_arxiv_urls(self):
+        for paper_id, url in (("nber:w35987", "https://www.nber.org/papers/w35987"),
+                              ("venue:kdd-2026-paper", "https://kdd.org/paper")):
+            record, abstract = bsd.slim_paper(enriched(id=paper_id, abs_link=url, pdf_link=""))
+            self.assertEqual(record["u"], url)
+            self.assertEqual(record["p"], "")
+            self.assertEqual(record["ar"], 0)
+            self.assertIsNone(abstract)
 
 
 if __name__ == "__main__":

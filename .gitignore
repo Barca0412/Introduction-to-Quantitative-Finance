@@ -21,8 +21,11 @@ data/enrich-trial/
 data/enrich_checkpoint.jsonl
 data/venue_library/
 data/digest/
+data/nber_seen.json
 docs/public/arxiv-data/
 docs/public/arxiv-charts/
+docs/public/models/
+.site-build/
 
 # Library index pages, generated from the PDFs by scripts/site/gen_library.mjs
 docs/library/reports.md
@@ -31,6 +34,7 @@ docs/library/papers.md
 # Resource pages, generated from data/registry/ by scripts/site/gen_resources.mjs
 docs/resources/*.md
 !docs/resources/index.md
+!docs/resources/method-*.md
 
 # OS
 .DS_Store

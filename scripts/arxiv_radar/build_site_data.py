@@ -8,7 +8,7 @@ published dataset.
     manifest.json                    what exists, sizes, theme vectors, schema
     stats.json                       trend statistics of the shown papers (Trends / overview)
     recent/papers-N.json             last ~90 days, slim records (first load)
-    recent/abstracts-N.json          {id: full abstract}, loaded on demand
+    recent/details-N.json           Chinese key points and stable entity links, on demand
     recent/vectors-N.i8              int8 embeddings, row-major, loaded on demand
     recent/vectors-N.json            {"ids": [...], "scales": [...]} for that .i8
     archive/YYYY-MM/...              same four kinds for older months, on demand
@@ -16,8 +16,8 @@ published dataset.
 Constraints (see config.py): every file <= SITE_MAX_FILE_BYTES and the Papers
 page's first load (manifest + recent/papers-*) <= SITE_FIRST_LOAD_BUDGET. If the
 budget is exceeded the recent window shrinks week by week (not below
-SITE_MIN_RECENT_DAYS). Only metadata and abstracts are published; no full text
-or figures.
+SITE_MIN_RECENT_DAYS). Only metadata and our Chinese summaries are published; no English abstracts,
+full text or figures.
 
 Usage::
 
@@ -35,7 +35,6 @@ from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Tuple
 
 from .config import (
-    SITE_ABSTRACT_SNIPPET_CHARS,
     SITE_DATA_DIR,
     SITE_FIRST_LOAD_BUDGET,
     SITE_MAX_AUTHORS,
@@ -56,7 +55,7 @@ from .data_store import load_local_embeddings
 logger = logging.getLogger("arxiv_radar.build_site_data")
 
 SCHEMA = {
-    "id": "arXiv id",
+    "id": "stable paper id (arXiv, DOI, venue or NBER)",
     "t": "title",
     "a": f"author names (first {SITE_MAX_AUTHORS})",
     "an": "total author count, only when authors were truncated",
@@ -66,9 +65,9 @@ SCHEMA = {
     "k": "keywords",
     "z": "Chinese summary",
     "f": "affiliations",
-    "s": "abstract (snippet when 'ac' is present)",
-    "ac": "index of the abstracts-N.json chunk holding the full abstract",
-    "u": "link for papers not on arXiv (else https://arxiv.org/abs/<id>)",
+    "u": "paper landing-page URL",
+    "p": "PDF URL, empty when unavailable",
+    "ar": "1 for arXiv records, 0 for other sources",
     "fo": "focus: s=score, f=is_focus(0/1), p=primary topic, t=topics, r=reasons",
     # S3 v2 enrichment and P2 fields; ids are explained in taxonomy.json.
     "r": "relevance to AI x finance, 2 or 3 on the site (3 = core)",
@@ -92,7 +91,8 @@ DETAIL_SCHEMA = {
     "pz": "Chinese key points: problem, method, result, limitation",
     "rr": "one-line Chinese reason for the relevance score",
     "ins": "institutions: n=name, c=country code, t=type (education/company/...)",
-    "aa": "per author (same order as 'a'), indices into ins",
+    "aa": "per author (same order as au), indices into ins",
+    "au": "authors: id=stable identity, n=name, page=existing author page or empty",
 }
 
 
@@ -100,23 +100,11 @@ def _dumps(payload: Any) -> bytes:
     return json.dumps(payload, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
 
 
-def _snippet(text: str, limit: int) -> Tuple[str, bool]:
-    text = (text or "").strip()
-    # Short abstracts are kept whole: a chunk lookup would cost more than it saves.
-    if len(text) <= limit + 40:
-        return text, False
-    cut = text[:limit]
-    space = cut.rfind(" ")
-    if space > limit * 0.6:
-        cut = cut[:space]
-    return cut.rstrip(" ,.;:") + "…", True
-
-
 def slim_paper(paper: Dict[str, Any]) -> Tuple[Dict[str, Any], Optional[str]]:
-    """Return (slim record, full abstract or None if the snippet is the whole text)."""
+    """Return public metadata and None; abstracts remain in the internal dataset."""
     authors = [a.get("name", "") if isinstance(a, dict) else str(a) for a in paper.get("authors", [])]
     focus = paper.get("focus") or {}
-    snippet, truncated = _snippet(paper.get("abstract", ""), SITE_ABSTRACT_SNIPPET_CHARS)
+    arxiv = is_arxiv_id(paper["id"])
 
     record: Dict[str, Any] = {
         "id": paper["id"],
@@ -125,7 +113,9 @@ def slim_paper(paper: Dict[str, Any]) -> Tuple[Dict[str, Any], Optional[str]]:
         "c": paper.get("categories", []),
         "d": paper.get("published_date", ""),
         "g": paper.get("tags", []),
-        "s": snippet,
+        "u": paper.get("abs_link") or (f"https://arxiv.org/abs/{paper['id']}" if arxiv else ""),
+        "p": paper.get("pdf_link", f"https://arxiv.org/pdf/{paper['id']}" if arxiv else ""),
+        "ar": int(arxiv),
         "fo": {
             "s": int(focus.get("score", 0) or 0),
             "f": 1 if focus.get("is_focus") else 0,
@@ -136,9 +126,6 @@ def slim_paper(paper: Dict[str, Any]) -> Tuple[Dict[str, Any], Optional[str]]:
     }
     if len(authors) > SITE_MAX_AUTHORS:
         record["an"] = len(authors)
-    if not is_arxiv_id(paper["id"]):
-        # Not on arXiv (added from the top-venue library): the site links here instead.
-        record["u"] = paper.get("abs_link", "")
     # Optional fields are omitted when empty to keep the first load small.
     if paper.get("keywords"):
         record["k"] = paper["keywords"]
@@ -147,7 +134,7 @@ def slim_paper(paper: Dict[str, Any]) -> Tuple[Dict[str, Any], Optional[str]]:
     if paper.get("affiliations"):
         record["f"] = paper["affiliations"]
     record.update(_v2_fields(paper))
-    return record, (paper.get("abstract", "").strip() if truncated else None)
+    return record, None
 
 
 def _v2_fields(paper: Dict[str, Any]) -> Dict[str, Any]:
@@ -189,7 +176,7 @@ def _v2_fields(paper: Dict[str, Any]) -> Dict[str, Any]:
     return out
 
 
-def paper_detail(paper: Dict[str, Any]) -> Dict[str, Any]:
+def paper_detail(paper: Dict[str, Any], refs: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
     """What the detail drawer needs beyond the list record (see DETAIL_SCHEMA)."""
     out: Dict[str, Any] = {}
     points = paper.get("points_zh")
@@ -202,11 +189,15 @@ def paper_detail(paper: Dict[str, Any]) -> Dict[str, Any]:
         for inst in paper.get("institutions") or []
         if isinstance(inst, dict) and inst.get("name")
     ]
+    if refs is not None:
+        institutions = [{"id": i["id"], "n": i["name"], "page": i["page"], "c": i["country"], "t": i["type"]}
+                        for i in refs.get("institutions", [])]
+        out["au"] = [{"id": a["id"], "n": a["name"], "page": a["page"]} for a in refs.get("authors", [])]
     if institutions:
         out["ins"] = institutions
         links = paper.get("author_affiliations") or []
         if any(links):
-            out["aa"] = [list(item or []) for item in links[:SITE_MAX_AUTHORS]]
+            out["aa"] = [list(item or []) for item in links]
     return out
 
 
@@ -244,8 +235,8 @@ def _quantize(matrix):
 class SlimCache:
     """slim_paper() results and their serialized sizes, computed once per paper."""
 
-    # `,"ac":N` / `,"dc":N` added to records that point at a chunk file.
-    AC_FIELD_BYTES = 8
+    # `,"dc":N` points at the details chunk.
+    DETAIL_FIELD_BYTES = 8
 
     def __init__(self) -> None:
         self._items: Dict[str, Tuple[Dict[str, Any], Optional[str], int]] = {}
@@ -261,7 +252,7 @@ class SlimCache:
         paper_id = paper["id"]
         if paper_id not in self._items:
             record, full = slim_paper(paper)
-            size = len(_dumps(record)) + 1 + (self.AC_FIELD_BYTES if full else 0) + self.AC_FIELD_BYTES
+            size = len(_dumps(record)) + 1 + self.DETAIL_FIELD_BYTES
             self._items[paper_id] = (record, full, size)
         return self._items[paper_id]
 
@@ -280,23 +271,14 @@ def build_group(
     matrix,
     max_bytes: int,
     cache: Optional[SlimCache] = None,
+    paper_refs: Optional[Dict[str, Any]] = None,
 ) -> Dict[str, Any]:
-    """Write papers/abstracts/vectors chunks for one group (recent or a month)."""
+    """Write papers/details/vectors chunks for one group (recent or a month)."""
     cache = cache or SlimCache()
     slim_and_full = [cache.get(p) for p in papers]
 
-    # Abstract chunks first, so each slim record can point at its chunk.
-    full_abstracts = [(rec["id"], full) for rec, full in slim_and_full if full]
-    abstract_chunks = _chunk(full_abstracts, max_bytes)
-    chunk_of: Dict[str, int] = {}
-    abstract_files = []
-    for index, chunk in enumerate(abstract_chunks):
-        for paper_id, _ in chunk:
-            chunk_of[paper_id] = index
-        abstract_files.append(_write(SITE_DATA_DIR / name / f"abstracts-{index}.json", _dumps(dict(chunk)), max_bytes))
-
     # Detail chunks (key points, institutions per author), loaded when a paper is opened.
-    details = [(p["id"], detail) for p in papers for detail in [paper_detail(p)] if detail]
+    details = [(p["id"], detail) for p in papers for detail in [paper_detail(p, (paper_refs or {}).get(p["id"]))] if detail]
     detail_of: Dict[str, int] = {}
     detail_files = []
     for index, chunk in enumerate(_chunk(details, max_bytes)):
@@ -306,8 +288,6 @@ def build_group(
 
     records = []
     for record, _ in slim_and_full:
-        if record["id"] in chunk_of:
-            record["ac"] = chunk_of[record["id"]]
         if record["id"] in detail_of:
             record["dc"] = detail_of[record["id"]]
         records.append(record)
@@ -336,7 +316,6 @@ def build_group(
     return {
         "count": len(papers),
         "papers": paper_files,
-        "abstracts": abstract_files,
         "details": detail_files,
         "vectors": vector_files,
         "first_load_bytes": sum(f["bytes"] for f in paper_files),
@@ -382,6 +361,11 @@ def build(today: Optional[date] = None) -> Dict[str, Any]:
         shutil.rmtree(SITE_DATA_DIR)
     SITE_DATA_DIR.mkdir(parents=True)
 
+    # Resolve identities once for both the leaderboards and paper drawers.
+    paper_refs: Dict[str, Any] = {}
+    agg_info = trends.build(papers, SITE_DATA_DIR / "agg")
+    agg_info["leaders"] = leaders.build(papers, SITE_DATA_DIR / "agg", paper_refs=paper_refs)
+
     # Pick the window from size estimates first, then write the group once.
     cache = SlimCache()
     days = SITE_RECENT_DAYS
@@ -397,7 +381,7 @@ def build(today: Optional[date] = None) -> Dict[str, Any]:
             estimate / 1e6,
         )
         days = max(SITE_MIN_RECENT_DAYS, days - 7)
-    recent_info = build_group("recent", recent, vectors_by_id, matrix, SITE_MAX_FILE_BYTES, cache)
+    recent_info = build_group("recent", recent, vectors_by_id, matrix, SITE_MAX_FILE_BYTES, cache, paper_refs)
     logger.info(
         "Recent first load: estimated %.3f MB, written %.3f MB",
         estimate / 1e6,
@@ -417,7 +401,7 @@ def build(today: Optional[date] = None) -> Dict[str, Any]:
 
     archive = []
     for month in sorted(by_month, reverse=True):
-        info = build_group(f"archive/{month}", by_month[month], vectors_by_id, matrix, SITE_MAX_FILE_BYTES, cache)
+        info = build_group(f"archive/{month}", by_month[month], vectors_by_id, matrix, SITE_MAX_FILE_BYTES, cache, paper_refs)
         info.pop("first_load_bytes")
         archive.append({"month": month, **info})
 
@@ -427,14 +411,16 @@ def build(today: Optional[date] = None) -> Dict[str, Any]:
     site_stats["summary"]["min_relevance"] = SITE_MIN_RELEVANCE
     site_stats["summary"]["core_papers"] = sum(1 for p in papers if p.get("relevance") == 3)
     stats_info = _write(SITE_DATA_DIR / "stats.json", _dumps(site_stats), SITE_MAX_FILE_BYTES)
-    # S8 aggregates for the trends / keyword / institution pages (trends.py).
-    agg_info = trends.build(papers, SITE_DATA_DIR / "agg")
-    # Leaderboards and institution / author pages (leaders.py).
-    agg_info["leaders"] = leaders.build(papers, SITE_DATA_DIR / "agg")
     taxonomy_info = _write(SITE_DATA_DIR / "taxonomy.json", _dumps(site_taxonomy()), SITE_MAX_FILE_BYTES)
 
+    paper_index = {p["id"]: "recent" for p in recent}
+    for month, group in by_month.items():
+        paper_index.update({p["id"]: f"archive/{month}" for p in group})
+    index_info = _write(SITE_DATA_DIR / "paper-index.json", _dumps(paper_index), SITE_MAX_FILE_BYTES)
+
     manifest = {
-        "version": 2,
+        "version": 3,
+        "paper_index": index_info,
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "source_last_updated": payload.get("last_updated"),
         "total_papers": len(papers),
