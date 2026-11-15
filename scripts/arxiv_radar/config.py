@@ -22,6 +22,9 @@ DATA_DIR.mkdir(exist_ok=True)
 
 # Data file paths (all generated, all git-ignored; history lives in external storage)
 PAPERS_FILE = DATA_DIR / "papers.json"
+# Papers enriched during a run that has not saved yet (one JSON per line). Merged back
+# into the history at the start of the next run, deleted after a successful save.
+ENRICH_CHECKPOINT_FILE = DATA_DIR / "enrich_checkpoint.jsonl"
 STATS_FILE = DATA_DIR / "stats.json"
 # Full-precision embeddings: raw little-endian float32 matrix + JSON sidecar
 # (ids in row order, per-row text hash, model, theme vectors).
@@ -68,6 +71,15 @@ SITE_MIN_RECENT_DAYS = 30
 SITE_MAX_FILE_BYTES = _env_int("RADAR_SITE_MAX_FILE_BYTES", 9_500_000)
 SITE_FIRST_LOAD_BUDGET = _env_int("RADAR_SITE_FIRST_LOAD_BUDGET", 9_000_000)
 SITE_ABSTRACT_SNIPPET_CHARS = 220
+# The site lists only papers the S3 v2 enrichment scored at least this relevant to
+# AI x finance AND that use an AI/ML method (decided 2026-11-15, after the November
+# backfill: relevance 1 was mostly general AI papers mentioning finance in passing, and
+# whole-category q-fin monitoring brought in pure maths/econometrics papers). Never
+# scored, withdrawn and non-AI papers stay in the dataset on Hugging Face / the Release.
+SITE_MIN_RELEVANCE = _env_int("RADAR_SITE_MIN_RELEVANCE", 2)
+SITE_REQUIRE_AI_METHOD = os.getenv("RADAR_SITE_REQUIRE_AI_METHOD", "true").strip().lower() != "false"
+# Method ids (vocab/taxonomy.yaml) that count as AI/ML; econometrics and other do not.
+AI_METHODS = ("llm-agent", "llm", "rl", "deep-ts", "graph", "generative", "classic-ml")
 SITE_MAX_AUTHORS = 8
 
 # ============================================
@@ -571,6 +583,9 @@ THINKING_TOGGLE_PREFIXES = ("glm-", "deepseek-")
 MAX_CONCURRENT = 20
 MAX_RETRIES = 3
 REQUEST_TIMEOUT = 90
+# Save the history after every N papers enriched in a run, so a crash, Ctrl+C or a
+# stop on HTTP 402 loses at most N papers' worth of LLM calls.
+CHECKPOINT_EVERY = max(1, int(os.getenv("RADAR_CHECKPOINT_EVERY", "100") or 100))
 
 # ============================================
 # arXiv Fetching Configuration
@@ -640,82 +655,7 @@ FINANCE_TERM_PATTERN = re.compile(
 # ============================================
 MIN_KEYWORD_COUNT = 3
 
-# ============================================
-# LLM Prompt Templates
-# ============================================
-PAPER_ANALYSIS_PROMPT = """You are an expert AI/Finance research analyst. Analyze the following paper with a precision-first mindset:
-
-Title: {title}
-Abstract: {abstract}
-
-Extract the following information in JSON format:
-
-{{
-  "tags": ["tag1", "tag2"],
-  "keywords": ["keyword1", "keyword2", "keyword3"],
-  "summary_zh": "2-3 sentences Chinese summary of the paper's main contribution and significance"
-}}
-
-Requirements:
-
-1. "tags": Select from these predefined tags. Choose 0-3 tags.
-   False positives are much worse than false negatives.
-   Only assign a tag when the tag is a PRIMARY contribution clearly supported by the title/abstract.
-   If none of the tags are truly central, return an empty list.
-   Prioritize tags that surface AI/LLM/agent + finance, agent planning, deep research,
-   multi-agent, tool-use, reasoning, and memory themes whenever they are truly central.
-
-PREDEFINED TAGS AND STRICT DEFINITIONS:
-
-- ai-finance: ONLY use if the paper's CORE contribution is applying AI/ML to financial domains. Examples: stock price prediction, portfolio optimization, credit scoring, fraud detection, quantitative trading strategies, risk management, financial time series analysis, sentiment analysis of financial markets, automated trading systems. DO NOT use for papers that merely evaluate on financial datasets - the main method must be finance-focused.
-
-- memory: LLM memory mechanisms, working memory, context window management
-- agent-planning: Agent planning, goal-oriented reasoning, hierarchical task planning
-- deep-research: Autonomous research agents, self-improving AI systems
-- benchmark: Evaluation frameworks, new datasets, benchmark comparisons
-- rag: Retrieval-augmented generation, vector databases, document retrieval
-- reasoning: Chain-of-thought, tree-of-thought, reasoning techniques
-- multi-agent: Multi-agent systems, collaborative AI
-- code-generation: AI-assisted programming, code generation, code completion
-- tool-use: Function calling, tool usage, external API integration
-- rlhf-alignment: Reward learning, alignment, human feedback
-- time-series: Time series modeling (not limited to finance)
-- prompt-engineering: Prompt engineering techniques
-- training-efficiency: Efficient training methods, model compression
-- multimodal: Multimodal models, vision-language models
-
-2. "keywords": Extract 3-5 specific technical keywords/phrases from the paper.
-3. "summary_zh": Write in academic Chinese, 2-3 sentences, highlighting main contribution.
-
-IMPORTANT CRITERIA for "ai-finance" tag:
-- The paper MUST address financial problems (stock markets, trading, risk, credit, etc.)
-- The AI/ML method must be the core contribution, not just used as evaluation
-- Papers about general NLP/CV methods that happen to use financial data should NOT get this tag
-- Papers about advertising auctions, general optimization, or unrelated domains should NOT get this tag
-
-IMPORTANT CRITERIA for the agentic focus tags:
-- "agent-planning" ONLY if the paper is about autonomous agents, planning, workflow decomposition,
-  long-horizon execution, re-planning, or reasoning-action loops; do NOT use for generic pipelines.
-- "deep-research" ONLY if the paper is about autonomous multi-step information gathering, literature review,
-  survey generation, evidence collection, or research/report synthesis; do NOT use because a paper is merely academic research.
-- "tool-use" ONLY if using external tools/APIs/browser/computer/function calling is central.
-- "multi-agent" ONLY if interaction or coordination among multiple agents is central.
-- "memory" ONLY if memory, context persistence, retrieval memory, or KV/cache-style memory mechanisms are central.
-
-EXPLICIT NON-EXAMPLES:
-- Online advertising, recommendation, job markets, labor analytics, education, student analytics,
-  renewable energy, generic economics, and e-commerce are NOT "ai-finance" unless the paper explicitly targets finance.
-- A paper is NOT "deep-research" just because it performs analysis, experiments, or academic investigation.
-- A paper is NOT "agent-planning" just because it has multiple stages or uses chain-of-thought.
-
-Return only valid JSON, no extra text."""
-
-TAG_LIST = ", ".join(f'"{tag}"' for tag in PREDEFINED_TAGS.keys())
-FULL_PROMPT_TEMPLATE = PAPER_ANALYSIS_PROMPT.format(
-    title="{title}",
-    abstract="{abstract}",
-    tag_list=TAG_LIST
-)
+# The LLM prompt is built in enrich.py from vocab/taxonomy.yaml.
 
 # ============================================
 # Category Display Names (for frontend)

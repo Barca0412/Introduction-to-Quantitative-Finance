@@ -31,7 +31,9 @@ const BATCH_SIZE = 24
 // Bump when buildPaperText() changes: every stored vector then becomes stale and
 // is refreshed gradually instead of all at once.
 const TEXT_RECIPE = 'v1'
-const REFRESH_LIMIT = Number.parseInt(process.env.RADAR_EMBED_REFRESH_LIMIT || '3000', 10)
+// Default 0 since 2026-11-15: the site shows only LLM-scored papers (Nov 2026 on), all
+// embedded fresh; the old stale vectors belong to papers the site no longer lists.
+const REFRESH_LIMIT = Number.parseInt(process.env.RADAR_EMBED_REFRESH_LIMIT || '0', 10)
 
 const THEME_QUERIES = {
   'ai-finance': 'AI agents and large language models for finance, trading, portfolio management, risk forecasting, quantitative research, financial analysis, market intelligence',

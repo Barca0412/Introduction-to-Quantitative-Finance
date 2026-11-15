@@ -81,7 +81,7 @@ class RadarSandbox:
                 stack.enter_context(mock.patch.object(data_store, name, value))
             for name in ("PAPERS_FILE", "STATS_FILE"):
                 stack.enter_context(mock.patch.object(storage, name, paths[name]))
-                stack.enter_context(mock.patch.object(build_site_data, name, paths[name]))
+            stack.enter_context(mock.patch.object(build_site_data, "PAPERS_FILE", paths["PAPERS_FILE"]))
             stack.enter_context(mock.patch.object(build_site_data, "SITE_DATA_DIR", self.site))
             yield
 
@@ -221,14 +221,26 @@ class RestoreTests(unittest.TestCase):
 
     def test_site_only_build_publishes_stats(self):
         """push-to-main path: restore -> build_site_data, no arXiv fetch."""
-        release = self.box.make_export("release", make_papers(9), "2026-11-10T00:00:00")
+        papers = make_papers(9)
+        # relevance >= 2, an AI/ML method, not withdrawn: only papers 0 and 1 qualify.
+        for paper, relevance in zip(papers, [3, 2, 2, 1, 3, 0, None, None, None]):
+            if relevance is not None:
+                paper["relevance"] = relevance
+                paper["methods"] = ["llm"]
+        papers[2]["methods"] = ["econometrics"]  # finance, but no AI method
+        papers[4]["withdrawn"] = True
+        release = self.box.make_export("release", papers, "2026-11-10T00:00:00")
         self.restore_with(None, release)
         with self.box.patched():
             manifest = build_site_data.build()
-        self.assertTrue((self.box.site / "stats.json").exists())
         self.assertTrue((self.box.site / "manifest.json").exists())
-        self.assertEqual(manifest["total_papers"], 9)
+        self.assertEqual(manifest["total_papers"], 2)
+        self.assertEqual(manifest["history_papers"], 9)
         self.assertIsNotNone(manifest["stats"])
+        site_stats = json.loads((self.box.site / "stats.json").read_text(encoding="utf-8"))
+        self.assertEqual(site_stats["summary"]["total_papers"], 2)
+        self.assertEqual(site_stats["summary"]["core_papers"], 1)
+        self.assertEqual(site_stats["summary"]["history_papers"], 9)
 
 
 if __name__ == "__main__":

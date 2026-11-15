@@ -4,12 +4,10 @@ Handles paper analysis via an OpenAI-compatible chat API (DeepSeek by default).
 """
 
 import asyncio
-import ast
 import functools
-import json
 import logging
 import socket
-from typing import Dict, Any, Optional, List
+from typing import Any, Awaitable, Callable, Dict, List, Optional
 
 import aiohttp
 
@@ -22,10 +20,11 @@ from .config import (
     MAX_CONCURRENT,
     MAX_RETRIES,
     REQUEST_TIMEOUT,
+    CHECKPOINT_EVERY,
     PREDEFINED_TAGS,
-    PAPER_ANALYSIS_PROMPT,
 )
-from .utils import has_any_term
+from . import enrich
+from .utils import Progress, has_any_term
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -222,6 +221,24 @@ def fallback_tags_for_paper(paper: Dict[str, Any]) -> List[str]:
     return validate_tags_for_paper(paper, tags)
 
 
+# The API refuses every request with these (no balance, bad or revoked key): retrying
+# a paper, or moving on to the next one, cannot help. Stop the batch instead.
+FATAL_STATUSES = (401, 402, 403)
+
+
+class FatalLLMError(Exception):
+    """The LLM API refuses all requests (e.g. HTTP 402 Insufficient Balance)."""
+
+
+class LLMBudgetExhausted(RuntimeError):
+    """A batch stopped early on a FatalLLMError. ``papers`` holds the papers that were
+    finished before the stop (enriched, or failed for their own reasons)."""
+
+    def __init__(self, message: str, papers: List[Dict[str, Any]]):
+        super().__init__(message)
+        self.papers = papers
+
+
 def async_retry(max_retries: int = 3, base_delay: float = 2.0):
     """
     Decorator for async function retry with exponential backoff.
@@ -240,6 +257,8 @@ def async_retry(max_retries: int = 3, base_delay: float = 2.0):
             for attempt in range(max_retries):
                 try:
                     return await func(*args, **kwargs)
+                except FatalLLMError:
+                    raise
                 except Exception as e:
                     last_exception = e
                     if attempt < max_retries - 1:
@@ -318,6 +337,8 @@ class LLMClient:
                 json=payload,
                 timeout=aiohttp.ClientTimeout(total=REQUEST_TIMEOUT),
             ) as response:
+                if response.status in FATAL_STATUSES:
+                    raise FatalLLMError(f"API error {response.status}: {(await response.text())[:300]}")
                 if response.status != 200:
                     error_text = await response.text()
                     raise Exception(f"API error {response.status}: {error_text}")
@@ -326,143 +347,66 @@ class LLMClient:
                 return data["choices"][0]["message"]["content"]
 
 
-def parse_llm_response(response_text: str) -> Dict[str, Any]:
-    """
-    Parse LLM JSON response and validate fields.
-
-    Args:
-        response_text: Raw LLM response
-
-    Returns:
-        Parsed dictionary with tags, keywords, and summary_zh
-
-    Raises:
-        ValueError: If response cannot be parsed or is invalid
-    """
-    # Try to extract JSON from response
-    response_text = response_text.strip()
-    response_text = response_text.removeprefix("```json").removeprefix("```")
-    response_text = response_text.removesuffix("```").strip()
-
-    # Find JSON in case there's extra text
-    start_idx = response_text.find("{")
-    end_idx = response_text.rfind("}")
-
-    if start_idx != -1 and end_idx != -1:
-        json_str = response_text[start_idx:end_idx + 1]
-    else:
-        json_str = response_text
-
-    try:
-        parsed = json.loads(json_str)
-    except json.JSONDecodeError as e:
-        repaired = (
-            json_str.replace("\n", " ")
-            .replace("\t", " ")
-            .replace(" null", " None")
-            .replace(": null", ": None")
-            .replace(" true", " True")
-            .replace(": true", ": True")
-            .replace(" false", " False")
-            .replace(": false", ": False")
-        )
-        try:
-            parsed = ast.literal_eval(repaired)
-        except Exception:
-            raise ValueError(f"Failed to parse JSON: {e}")
-
-    # Validate required fields
-    result = {
-        "tags": parsed.get("tags", []),
-        "keywords": parsed.get("keywords", []),
-        "summary_zh": parsed.get("summary_zh", ""),
-    }
-
-    # Validate tags
-    if not isinstance(result["tags"], list):
-        result["tags"] = []
-    # Filter to only valid tags
-    valid_tags = set(PREDEFINED_TAGS.keys())
-    result["tags"] = [t for t in result["tags"] if t in valid_tags]
-
-    # Validate keywords
-    if not isinstance(result["keywords"], list):
-        result["keywords"] = []
-    result["keywords"] = [str(k).strip() for k in result["keywords"] if str(k).strip()]
-    result["keywords"] = result["keywords"][:5]
-
-    # Validate summary
-    if not isinstance(result["summary_zh"], str):
-        result["summary_zh"] = ""
-
-    return result
+# How many times one paper is re-asked when its answer fails validation (S3, 4.3.7).
+VALIDATION_RETRIES = 2
 
 
 async def process_paper(
     paper: Dict[str, Any],
     client: LLMClient
 ) -> Dict[str, Any]:
+    """Enrich one paper with the v2 format (enrich.py): relevance, classification,
+    Chinese TL;DR and points, keywords and more.
+
+    An answer that fails validation is re-asked up to VALIDATION_RETRIES times with the
+    reason attached. If it still fails, the paper keeps what it already had (an older
+    enrichment, or rule tags), and the failure is counted so it is retried later.
     """
-    Process a single paper with LLM to extract tags, keywords, and Chinese summary.
-
-    Args:
-        paper: Paper dictionary with at least 'title' and 'abstract'
-        client: LLMClient instance
-
-    Returns:
-        Paper dictionary with added 'tags', 'keywords', and 'summary_zh'
-    """
-    title = paper.get("title", "")
-    abstract = paper.get("abstract", "")
-
-    if not title or not abstract:
+    if not paper.get("title") or not paper.get("abstract"):
         return paper
 
-    # Build prompt using the improved template from config
-    prompt = PAPER_ANALYSIS_PROMPT.format(
-        title=title,
-        abstract=abstract
-    )
+    error_hint: Optional[str] = None
+    for _ in range(VALIDATION_RETRIES + 1):
+        try:
+            response_text = await client.call_llm(enrich.build_messages(paper, error_hint))
+            result, warnings = enrich.validate(enrich.extract_json(response_text), paper)
+        except enrich.EnrichError as exc:
+            error_hint = str(exc)
+            continue
+        except FatalLLMError:
+            raise  # not this paper's fault: the batch stops, nothing is counted
+        except Exception as exc:  # HTTP errors after call_llm's own retries
+            logger.error("LLM call failed for %s: %s: %r", paper.get("id", "unknown"), type(exc).__name__, exc)
+            error_hint = f"{type(exc).__name__}: {exc}"
+            break
+        result["tags"] = validate_tags_for_paper(paper, result["tags"])
+        if result["relevance"] >= 2 and "ai-finance" not in result["tags"]:
+            result["tags"] = ["ai-finance"] + result["tags"][:2]
+        enrich.apply_result(paper, result, warnings)
+        logger.info("Processed paper %s: relevance %s", paper["id"], result["relevance"])
+        return paper
 
-    messages = [
-        {"role": "system", "content": "You are an expert AI/Finance research analyst who carefully evaluates whether papers actually focus on financial applications of AI."},
-        {"role": "user", "content": prompt}
-    ]
-
-    try:
-        response_text = await client.call_llm(messages)
-        llm_data = parse_llm_response(response_text)
-        llm_data["tags"] = validate_tags_for_paper(paper, llm_data["tags"])
-
-        # Update paper with LLM extracted data
-        paper["tags"] = llm_data["tags"]
-        paper["keywords"] = llm_data["keywords"]
-        paper["summary_zh"] = llm_data["summary_zh"]
-
-        logger.info(f"Processed paper: {paper['id']}")
-    except Exception as e:
-        logger.error(f"Error processing paper {paper.get('id', 'unknown')}: {type(e).__name__}: {e!r}")
-        # Set default values on error
-        paper["tags"] = []
-        paper["keywords"] = []
-        paper["summary_zh"] = ""
-
+    logger.error("Enrichment failed for %s: %s", paper.get("id", "unknown"), error_hint)
+    enrich.record_failure(paper, error_hint or "unknown error")
+    if not paper.get("tags"):
+        paper["tags"] = fallback_tags_for_paper(paper)
     return paper
 
 
 async def process_papers_batch(
     papers: List[Dict[str, Any]],
-    concurrency: int = MAX_CONCURRENT
+    concurrency: int = MAX_CONCURRENT,
+    checkpoint: Optional[Callable[[List[Dict[str, Any]]], Awaitable[None]]] = None,
+    checkpoint_every: Optional[int] = None,
 ) -> List[Dict[str, Any]]:
-    """
-    Process a batch of papers concurrently.
+    """Process a batch of papers concurrently; returns them in input order.
 
-    Args:
-        papers: List of papers to process
-        concurrency: Maximum number of concurrent LLM calls
+    ``checkpoint`` is awaited with all papers finished so far after every
+    ``checkpoint_every`` of them, so a crash or a stop loses at most that many.
 
-    Returns:
-        List of processed papers
+    On a FatalLLMError (e.g. HTTP 402, no balance) no further calls are started and
+    LLMBudgetExhausted is raised with the papers finished before the stop. Papers that
+    were not reached are left untouched and get no failure count.
     """
     if not LLM_API_KEY:
         logger.warning(
@@ -478,11 +422,41 @@ async def process_papers_batch(
             for paper in papers
         ]
 
-    async with LLMClient(LLM_API_KEY, concurrency) as client:
-        tasks = [process_paper(paper.copy(), client) for paper in papers]
-        results = await asyncio.gather(*tasks)
+    every = checkpoint_every or CHECKPOINT_EVERY
+    fatal: List[str] = []
+    finished: List[Dict[str, Any]] = []
+    results: List[Optional[Dict[str, Any]]] = [None] * len(papers)
+    queue: "asyncio.Queue[int]" = asyncio.Queue()
+    for index in range(len(papers)):
+        queue.put_nowait(index)
 
-    return results
+    progress = Progress("LLM enrichment", len(papers), logger)
+
+    async with LLMClient(LLM_API_KEY, concurrency) as client:
+
+        async def worker() -> None:
+            # A fixed pool of workers, each taking the next paper only while no fatal
+            # error has been seen: after a 402 nothing new is sent.
+            while not fatal and not queue.empty():
+                index = queue.get_nowait()
+                try:
+                    result = await process_paper(papers[index].copy(), client)
+                except FatalLLMError as exc:
+                    if not fatal:
+                        fatal.append(str(exc))
+                        logger.error("Stopping the LLM batch: %s", exc)
+                    return
+                results[index] = result
+                finished.append(result)
+                progress.update(ok=not result.get("last_error"))
+                if checkpoint and len(finished) % every == 0:
+                    await checkpoint(list(finished))
+
+        await asyncio.gather(*(worker() for _ in range(max(1, concurrency))))
+
+    if fatal:
+        raise LLMBudgetExhausted(fatal[0], finished)
+    return [result for result in results if result is not None]
 
 
 def process_papers_sync(papers: List[Dict[str, Any]]) -> List[Dict[str, Any]]:

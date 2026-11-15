@@ -14,7 +14,8 @@ from typing import Any, Dict, List, Sequence
 import aiohttp
 
 from .config import AFFILIATION_LLM_CONCURRENCY, LLM_API_KEY
-from .llm_processor import LLMClient
+from .llm_processor import FatalLLMError, LLMClient
+from .utils import Progress
 
 
 logger = logging.getLogger(__name__)
@@ -309,6 +310,8 @@ async def enrich_affiliations(
         timeout=aiohttp.ClientTimeout(total=30),
     ) as session, LLMClient(LLM_API_KEY, AFFILIATION_LLM_CONCURRENCY) as client:
 
+        llm_refused: List[bool] = []  # set once the API refuses all requests (e.g. HTTP 402)
+
         async def enrich_one(paper: Dict[str, Any]) -> Dict[str, Any]:
             current = normalize_affiliation_fields(paper.get("affiliation"), paper.get("affiliations"))
             paper["affiliation"] = current["affiliation"]
@@ -328,11 +331,19 @@ async def enrich_affiliations(
                 paper["affiliations"] = []
                 return paper
 
-            try:
-                normalized_list = await normalize_affiliations_with_llm(client, paper, raw_source)
-            except Exception as exc:
-                logger.warning("Affiliation normalization failed for %s: %r", paper.get("id"), exc)
+            if llm_refused:
                 normalized_list = split_affiliation_candidates(raw_source)
+            else:
+                try:
+                    normalized_list = await normalize_affiliations_with_llm(client, paper, raw_source)
+                except FatalLLMError as exc:
+                    if not llm_refused:
+                        logger.error("LLM refuses requests; affiliations use the rule-based clean-up only: %s", exc)
+                    llm_refused.append(True)
+                    normalized_list = split_affiliation_candidates(raw_source)
+                except Exception as exc:
+                    logger.warning("Affiliation normalization failed for %s: %r", paper.get("id"), exc)
+                    normalized_list = split_affiliation_candidates(raw_source)
 
             if normalized_list:
                 paper["affiliations"] = normalized_list
@@ -343,5 +354,12 @@ async def enrich_affiliations(
 
             return paper
 
-        tasks = [enrich_one(paper.copy()) for paper in papers]
+        progress = Progress("affiliations", len(papers), logger)
+
+        async def tracked(paper: Dict[str, Any]) -> Dict[str, Any]:
+            result = await enrich_one(paper)
+            progress.update()
+            return result
+
+        tasks = [tracked(paper.copy()) for paper in papers]
         return await asyncio.gather(*tasks)

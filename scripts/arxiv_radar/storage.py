@@ -1,13 +1,14 @@
 """Data persistence helpers for papers and statistics."""
 
 import json
+import re
 import tempfile
 from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 from .affiliations import normalize_affiliation_fields
-from .config import PAPERS_FILE, STATS_FILE
+from .config import ENRICH_CHECKPOINT_FILE, PAPERS_FILE, STATS_FILE
 from .focus import build_focus_metadata
 from .utils import (
     build_arxiv_abs_link,
@@ -77,9 +78,35 @@ def normalize_paper(paper: Dict[str, Any]) -> Dict[str, Any]:
         "affiliation": normalized_affiliation["affiliation"],
         "affiliations": normalized_affiliation["affiliations"],
     }
+    normalized.update(_v2_fields(paper))
 
     normalized["focus"] = build_focus_metadata(normalized)
     return normalized
+
+
+# arXiv metadata kept since 2026-11-15, plus the S3 v2 enrichment (enrich.py). Old
+# records have none of these; they read as "not enriched with v2 yet".
+ARXIV_EXTRA_FIELDS = ("primary_category", "comment", "journal_ref", "doi")
+V2_FIELDS = (
+    "relevance", "relevance_reason_zh", "paper_type", "task_types", "finance_domains",
+    "methods", "keywords_raw", "data_market", "reproducibility", "tldr_zh", "points_zh",
+    "venue_mention", "withdrawn", "schema_version", "stage_versions", "attempts",
+    "last_error", "enrich_warnings", "quality_flags",
+)
+
+
+def _v2_fields(paper: Dict[str, Any]) -> Dict[str, Any]:
+    out: Dict[str, Any] = {key: str(paper.get(key) or "").strip() for key in ARXIV_EXTRA_FIELDS}
+    for key in V2_FIELDS:
+        if paper.get(key) is not None:
+            out[key] = paper[key]
+    return out
+
+
+def _enrich_version(paper: Dict[str, Any]) -> tuple:
+    """Comparable form of stage_versions.enrich: "s3-v2.10" > "s3-v2.9" > none."""
+    version = str((paper.get("stage_versions") or {}).get("enrich") or "")
+    return tuple(int(part) for part in re.findall(r"\d+", version))
 
 
 def merge_duplicate_paper(existing: Dict[str, Any], incoming: Dict[str, Any]) -> Dict[str, Any]:
@@ -89,6 +116,9 @@ def merge_duplicate_paper(existing: Dict[str, Any], incoming: Dict[str, Any]) ->
     # The incoming record was enriched by the LLM and the stored one never was: its
     # tags/keywords came from the keyword rules, so replace them instead of merging.
     llm_upgrade = bool(candidate["summary_zh"]) and not merged["summary_zh"]
+    # A newer enrichment version replaces the whole S3 output (tags, keywords, summary,
+    # classification), never merged with the older one.
+    v2_upgrade = _enrich_version(candidate) > _enrich_version(merged)
 
     merged["title"] = candidate["title"] or merged["title"]
     merged["abstract"] = candidate["abstract"] or merged["abstract"]
@@ -103,7 +133,19 @@ def merge_duplicate_paper(existing: Dict[str, Any], incoming: Dict[str, Any]) ->
     merged["pdf_link"] = candidate["pdf_link"] or merged["pdf_link"]
     merged["abs_link"] = candidate["abs_link"] or merged["abs_link"]
     merged["categories"] = merge_unique_strings(merged["categories"], candidate["categories"])
-    if llm_upgrade:
+    for key in ARXIV_EXTRA_FIELDS:
+        merged[key] = candidate[key] or merged[key]
+    if v2_upgrade:
+        for key in V2_FIELDS:
+            merged.pop(key, None)
+            if key in candidate:
+                merged[key] = candidate[key]
+        merged["summary_zh"] = candidate["summary_zh"]
+    elif "attempts" in candidate and _enrich_version(candidate) == _enrich_version(merged):
+        # Same version: keep the failure count and error of the newer attempt.
+        for key in ("attempts", "last_error"):
+            merged[key] = candidate.get(key, merged.get(key))
+    if llm_upgrade or v2_upgrade:
         merged["tags"] = candidate["tags"]
         merged["keywords"] = candidate["keywords"]
     else:
@@ -191,3 +233,30 @@ def refresh_rule_tags(papers: List[Dict[str, Any]], tagger) -> int:
             paper["focus"] = build_focus_metadata(paper)
             changed += 1
     return changed
+
+
+def append_checkpoint(papers: List[Dict[str, Any]]) -> None:
+    """Append freshly enriched papers to the checkpoint file (fast: no full rewrite)."""
+    ENRICH_CHECKPOINT_FILE.parent.mkdir(parents=True, exist_ok=True)
+    with open(ENRICH_CHECKPOINT_FILE, "a", encoding="utf-8") as fh:
+        for paper in papers:
+            fh.write(json.dumps(paper, ensure_ascii=False) + "\n")
+        fh.flush()
+
+
+def read_checkpoint() -> List[Dict[str, Any]]:
+    """Papers left by an interrupted run; a torn last line (crash mid-write) is skipped."""
+    if not ENRICH_CHECKPOINT_FILE.exists():
+        return []
+    papers = []
+    with open(ENRICH_CHECKPOINT_FILE, encoding="utf-8") as fh:
+        for line in fh:
+            try:
+                papers.append(json.loads(line))
+            except json.JSONDecodeError:
+                continue
+    return papers
+
+
+def clear_checkpoint() -> None:
+    ENRICH_CHECKPOINT_FILE.unlink(missing_ok=True)

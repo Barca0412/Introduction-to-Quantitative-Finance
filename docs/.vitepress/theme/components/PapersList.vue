@@ -7,8 +7,8 @@
             <p class="eyebrow">Focused Radar</p>
             <h2 class="list-title">AI + Finance, agent planning, and deep research first</h2>
             <p class="list-description">
-              The default view prioritizes papers that match your target themes, while still keeping
-              the full 10-category arXiv recall layer available.
+              Every paper here was read by an LLM, scored relevant to AI × finance (relevance ≥ 2) and
+              uses an AI/ML method. Lower-scored and non-AI finance papers stay in the open dataset.
             </p>
           </div>
           <div class="list-stats">
@@ -274,7 +274,7 @@ const quickFilters = [
   { id: 'multi-agent', label: 'Multi-Agent', description: 'Coordination and agent teams' },
   { id: 'tool-use', label: 'Tool Use', description: 'Function calling and tools' },
   { id: 'reasoning', label: 'Reasoning', description: 'Inference and multi-step thought' },
-  { id: 'all', label: 'All Papers', description: 'Everything from all monitored categories' }
+  { id: 'all', label: 'All Papers', description: 'Every AI × finance paper on the site (relevance ≥ 2, AI/ML method)' }
 ]
 
 const embeddingThemeOptions = [

@@ -103,8 +103,36 @@ def _papers_schema():
                     ]
                 ),
             ),
+            # arXiv metadata kept since 2026-11-15.
+            ("primary_category", pa.string()),
+            ("comment", pa.string()),
+            ("journal_ref", pa.string()),
+            ("doi", pa.string()),
+            # S3 v2 enrichment (enrich.py); null on papers not enriched with v2 yet.
+            ("relevance", pa.int8()),
+            ("relevance_reason_zh", pa.string()),
+            ("paper_type", pa.string()),
+            ("task_types", strings),
+            ("finance_domains", strings),
+            ("methods", strings),
+            ("keywords_raw", pa.list_(pa.struct([("text", pa.string()), ("kind", pa.string())]))),
+            ("data_market", strings),
+            ("reproducibility", pa.struct([("code", pa.bool_()), ("data_public", pa.bool_())])),
+            ("tldr_zh", pa.string()),
+            ("points_zh", pa.struct([(k, pa.string()) for k in ("problem", "method", "result", "limitation")])),
+            ("venue_mention", pa.string()),
+            ("withdrawn", pa.bool_()),
+            ("schema_version", pa.int8()),
+            ("stage_versions", pa.struct([("enrich", pa.string())])),
+            ("attempts", pa.struct([("enrich", pa.int32()), ("enrich_version", pa.string())])),
+            ("last_error", pa.string()),
+            ("enrich_warnings", strings),
+            ("quality_flags", strings),
         ]
     )
+
+
+_V2_LIST_FIELDS = ("task_types", "finance_domains", "methods", "data_market", "enrich_warnings", "quality_flags")
 
 
 def _clean_paper_for_parquet(paper: Dict[str, Any]) -> Dict[str, Any]:
@@ -137,6 +165,31 @@ def _clean_paper_for_parquet(paper: Dict[str, Any]) -> Dict[str, Any]:
             "matched_categories": list(focus.get("matched_categories", [])),
             "reasons": list(focus.get("reasons", [])),
         },
+        "primary_category": paper.get("primary_category", ""),
+        "comment": paper.get("comment", ""),
+        "journal_ref": paper.get("journal_ref", ""),
+        "doi": paper.get("doi", ""),
+        "relevance": paper.get("relevance"),
+        "relevance_reason_zh": paper.get("relevance_reason_zh"),
+        "paper_type": paper.get("paper_type"),
+        **{key: list(paper.get(key) or []) for key in _V2_LIST_FIELDS},
+        "keywords_raw": [
+            {"text": str(k.get("text", "")), "kind": str(k.get("kind", ""))}
+            for k in paper.get("keywords_raw") or []
+            if isinstance(k, dict)
+        ],
+        "reproducibility": paper.get("reproducibility"),
+        "tldr_zh": paper.get("tldr_zh"),
+        "points_zh": paper.get("points_zh"),
+        "venue_mention": paper.get("venue_mention"),
+        "withdrawn": paper.get("withdrawn"),
+        "schema_version": paper.get("schema_version"),
+        "stage_versions": {"enrich": (paper.get("stage_versions") or {}).get("enrich")} if paper.get("stage_versions") else None,
+        "attempts": {
+            "enrich": int((paper.get("attempts") or {}).get("enrich", 0) or 0),
+            "enrich_version": (paper.get("attempts") or {}).get("enrich_version"),
+        } if paper.get("attempts") else None,
+        "last_error": paper.get("last_error"),
     }
 
 

@@ -43,7 +43,6 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    # Embedding refresh is capped (RADAR_EMBED_REFRESH_LIMIT, ~3000 papers ≈ 5-10 min).
     # Backfill runs (inputs.since) tag and embed ~1,500 new papers per half month.
     timeout-minutes: 120
     steps:
@@ -88,7 +87,8 @@ jobs:
 
       - name: Update embeddings (incremental)
         env:
-          RADAR_EMBED_REFRESH_LIMIT: '3000'
+          # Only new or changed papers; old stale vectors are not refreshed (2026-11-15).
+          RADAR_EMBED_REFRESH_LIMIT: '0'
         run: npm run arxiv:embeddings
 
       - name: Export full history as Parquet

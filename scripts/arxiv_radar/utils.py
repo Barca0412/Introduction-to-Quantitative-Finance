@@ -182,6 +182,10 @@ def build_paper_record(result: Any) -> Dict[str, Any]:
         "abstract": str(result.summary).replace("\n", " ").strip(),
         "authors": format_authors(result.authors),
         "categories": list(result.categories),
+        "primary_category": str(getattr(result, "primary_category", "") or ""),
+        "comment": " ".join(str(getattr(result, "comment", "") or "").split()),
+        "journal_ref": str(getattr(result, "journal_ref", "") or "").strip(),
+        "doi": str(getattr(result, "doi", "") or "").strip(),
         "published_date": parse_arxiv_date(str(result.published)),
         "pdf_link": build_arxiv_pdf_link(arxiv_id),
         "abs_link": build_arxiv_abs_link(arxiv_id),
@@ -201,3 +205,35 @@ def term_pattern(term: str) -> "re.Pattern[str]":
 
 def has_any_term(text: str, terms: List[str]) -> bool:
     return any(term_pattern(term).search(text) for term in terms)
+
+
+class Progress:
+    """Log "Progress <label>: 1200/3342 (36%), 2 failed, 4m10s, ~7m left" lines.
+
+    Reports every 1% and at the end: ~100 lines per step in the log, which the local
+    backfill script turns into one progress bar redrawn in place.
+    """
+
+    def __init__(self, label: str, total: int, logger: Any):
+        import time
+
+        self.label, self.total, self.logger = label, total, logger
+        self.step = max(1, total // 100)
+        self.done = self.failed = 0
+        self.started = time.monotonic()
+
+    def update(self, ok: bool = True) -> None:
+        import time
+
+        self.done += 1
+        self.failed += 0 if ok else 1
+        if self.done % self.step and self.done != self.total:
+            return
+        elapsed = time.monotonic() - self.started
+        left = elapsed / self.done * (self.total - self.done) if self.done else 0
+        fmt = lambda s: f"{int(s // 60)}m{int(s % 60):02d}s"
+        self.logger.info(
+            "Progress %s: %s/%s (%d%%), %s failed, %s elapsed, ~%s left",
+            self.label, self.done, self.total, 100 * self.done // max(1, self.total),
+            self.failed, fmt(elapsed), fmt(left),
+        )

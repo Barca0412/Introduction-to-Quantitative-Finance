@@ -5,7 +5,7 @@ import logging
 import os
 import time
 from pathlib import Path
-from typing import Any, Callable, Dict, List, Optional, Set, Tuple
+from typing import Any, Callable, Dict, List, Optional, Tuple
 
 import arxiv
 
@@ -18,11 +18,21 @@ from .config import (
     FINANCE_FILTERED_CATEGORIES,
     FINANCE_QUERY,
     FINANCE_TERM_PATTERN,
+    LLM_API_KEY,
     MAX_RESULTS_PER_CATEGORY,
 )
 from .generate_charts import generate_all_charts, generate_combined_chart
-from .llm_processor import fallback_tags_for_paper, process_papers_batch
-from .storage import load_papers, merge_papers, refresh_rule_tags, save_papers
+from .enrich import ENRICH_VERSION, needs_enrich
+from .llm_processor import LLMBudgetExhausted, fallback_tags_for_paper, process_papers_batch
+from .storage import (
+    append_checkpoint,
+    clear_checkpoint,
+    load_papers,
+    merge_papers,
+    read_checkpoint,
+    refresh_rule_tags,
+    save_papers,
+)
 from .utils import build_paper_record, get_target_dates, normalize_arxiv_id
 
 
@@ -93,6 +103,40 @@ def looks_financial(paper: Dict[str, Any]) -> bool:
     return bool(FINANCE_TERM_PATTERN.search(f"{paper.get('title', '')} {paper.get('abstract', '')}"))
 
 
+def report_enrichment(papers: List[Dict[str, Any]]) -> Dict[str, Any]:
+    """Job-summary table for the S3 run: done/failed, relevance mix, warnings, flags."""
+    from collections import Counter
+
+    done = [p for p in papers if (p.get("stage_versions") or {}).get("enrich") == ENRICH_VERSION]
+    failed = [p for p in papers if p not in done]
+    relevance = Counter(p.get("relevance") for p in done)
+    flags = Counter(flag for p in done for flag in p.get("quality_flags", []))
+    warned = sum(1 for p in done if p.get("enrich_warnings"))
+    tldr = [len(p.get("tldr_zh", "")) for p in done]
+    summary = {
+        "processed": len(papers), "succeeded": len(done), "failed": len(failed),
+        "relevance": {str(k): relevance.get(k, 0) for k in (3, 2, 1, 0)},
+        "with_warnings": warned, "flags": dict(flags),
+        "tldr_avg_chars": round(sum(tldr) / len(tldr)) if tldr else 0,
+    }
+    lines = [
+        f"### LLM enrichment ({ENRICH_VERSION})", "",
+        f"- processed {summary['processed']}, succeeded {summary['succeeded']}, failed {summary['failed']}",
+        "- relevance 3/2/1/0: " + " / ".join(str(summary["relevance"][k]) for k in ("3", "2", "1", "0")),
+        f"- answers with soft fixes: {warned}; average TL;DR length: {summary['tldr_avg_chars']} chars",
+        "- suspicious (S4): " + (", ".join(f"{k} {v}" for k, v in flags.most_common()) or "none"),
+    ]
+    if failed:
+        lines.append("- failed ids: " + ", ".join(str(p.get("id")) for p in failed[:20]))
+        print(f"::warning title=LLM enrichment::{len(failed)} of {len(papers)} papers failed; they are retried on the next run", flush=True)
+    logger.info("Enrichment: %s", summary)
+    path = os.getenv("GITHUB_STEP_SUMMARY")
+    if path:
+        with open(path, "a", encoding="utf-8") as fh:
+            fh.write("\n".join(lines) + "\n\n")
+    return summary
+
+
 def report_fetch(report: List[Dict[str, Any]]) -> None:
     """Make fetch problems visible: GitHub warning annotations + a job-summary table."""
     lines = ["### arXiv fetch", "", "| Category | Papers | Status |", "| --- | ---: | --- |"]
@@ -156,17 +200,22 @@ async def fetch_all_categories(
 
 
 def needs_enrichment(fetched: List[Dict[str, Any]], existing: Dict[str, Any]) -> List[Dict[str, Any]]:
-    """Drop papers already stored with an LLM summary, so the LLM only sees new ones.
+    """Papers the LLM should (re)process: new ones, and stored ones without a
+    current-version enrichment that have not failed too often (enrich.needs_enrich).
 
-    Papers stored without a summary (LLM failure or rule-based fallback) are kept,
-    so they get another chance on the next run.
+    Each returned paper starts from its stored record (old enrichment, failure count),
+    with the freshly fetched arXiv metadata on top, so a failed attempt keeps both.
     """
-    enriched: Set[str] = {
-        normalize_arxiv_id(str(p.get("id", "")))
-        for p in existing.get("papers", [])
-        if str(p.get("summary_zh", "")).strip()
-    }
-    return [p for p in fetched if normalize_arxiv_id(str(p.get("id", ""))) not in enriched]
+    stored = {normalize_arxiv_id(str(p.get("id", ""))): p for p in existing.get("papers", [])}
+    todo: List[Dict[str, Any]] = []
+    for paper in fetched:
+        old = stored.get(normalize_arxiv_id(str(paper.get("id", ""))))
+        if old is None:
+            todo.append(paper)
+        elif needs_enrich(old):
+            fresh = {key: value for key, value in paper.items() if value not in ("", [], None)}
+            todo.append({**old, **fresh})
+    return todo
 
 
 async def run_pipeline() -> Optional[Dict[str, Any]]:
@@ -191,6 +240,11 @@ async def run_pipeline() -> Optional[Dict[str, Any]]:
         )
 
     existing = load_papers()
+    recovered = read_checkpoint()
+    if recovered:
+        # An earlier run was interrupted after enriching these: keep its work.
+        existing = merge_papers(existing, recovered)
+        logger.info("Recovered %s enriched papers from the checkpoint of an interrupted run", len(recovered))
     new_batch = needs_enrichment(deduped_batch, existing)
     logger.info(
         "%s fetched papers are already stored with a summary; %s are new or need another try",
@@ -200,7 +254,38 @@ async def run_pipeline() -> Optional[Dict[str, Any]]:
 
     if new_batch:
         logger.info("\n[Step 2] Processing %s papers with LLM...", len(new_batch))
-        processed_papers = await process_papers_batch(new_batch)
+        written = 0
+
+        async def checkpoint(done: List[Dict[str, Any]]) -> None:
+            # Append only what is new since the last checkpoint: milliseconds, whereas
+            # rewriting the 30k-paper history takes ~10 s. Merged back on the next run.
+            nonlocal written
+            append_checkpoint(done[written:])
+            written = len(done)
+            logger.info("Checkpoint: %s of %s papers enriched and kept", written, len(new_batch))
+
+        try:
+            processed_papers = await process_papers_batch(new_batch, checkpoint=checkpoint)
+        except LLMBudgetExhausted as exc:
+            save_papers(merge_papers(existing, exc.papers))
+            clear_checkpoint()
+            if LLM_API_KEY:
+                report_enrichment(exc.papers)
+            untouched = len(new_batch) - len(exc.papers)
+            message = (
+                f"LLM API refused requests ({exc}). Saved {len(exc.papers)} finished papers; "
+                f"{untouched} were not attempted and keep no failure count. "
+                "Top up / fix the key, then run again (locally: RESUME=1)."
+            )
+            print(f"::error title=LLM stopped::{message}", flush=True)
+            summary_path = os.getenv("GITHUB_STEP_SUMMARY")
+            if summary_path:
+                with open(summary_path, "a", encoding="utf-8") as fh:
+                    fh.write(f"**Stopped early:** {message}\n\n")
+            raise SystemExit(message) from exc
+
+        if LLM_API_KEY:
+            report_enrichment(processed_papers)
 
         logger.info("\n[Step 3] Normalizing affiliations...")
         enriched_papers = await enrich_affiliations(processed_papers)
@@ -217,6 +302,7 @@ async def run_pipeline() -> Optional[Dict[str, Any]]:
 
     logger.info("\n[Step 5] Saving papers data...")
     save_papers(merged)
+    clear_checkpoint()
     logger.info("Papers saved successfully")
 
     logger.info("\n[Step 6] Computing statistics...")
