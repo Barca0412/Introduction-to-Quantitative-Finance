@@ -1,10 +1,11 @@
 """Build the light-weight Radar data served by the VitePress site.
 
-Reads the full history from ``data/`` (papers.json, stats.json, embeddings.f32)
-and writes ``docs/public/arxiv-data/``:
+Reads the full history from ``data/`` (papers.json, embeddings.f32) and writes
+``docs/public/arxiv-data/`` for the papers the site shows: scored relevance >= 1 by
+the LLM and not withdrawn (site_visible). The rest stays in the published dataset.
 
     manifest.json                    what exists, sizes, theme vectors, schema
-    stats.json                       trend statistics (Trends / overview pages)
+    stats.json                       trend statistics of the shown papers (Trends / overview)
     recent/papers-N.json             last ~90 days, slim records (first load)
     recent/abstracts-N.json          {id: full abstract}, loaded on demand
     recent/vectors-N.i8              int8 embeddings, row-major, loaded on demand
@@ -39,10 +40,11 @@ from .config import (
     SITE_MAX_AUTHORS,
     SITE_MAX_FILE_BYTES,
     SITE_MIN_RECENT_DAYS,
+    SITE_MIN_RELEVANCE,
     SITE_RECENT_DAYS,
     PAPERS_FILE,
-    STATS_FILE,
 )
+from .compute_stats import build_stats
 from .data_store import load_local_embeddings
 
 logger = logging.getLogger("arxiv_radar.build_site_data")
@@ -239,9 +241,25 @@ def _round_vector(values: List[float]) -> List[float]:
     return [round(float(v), 5) for v in values]
 
 
+def site_visible(paper: Dict[str, Any], min_relevance: int = SITE_MIN_RELEVANCE) -> bool:
+    """Scored by the LLM as relevant enough, and not withdrawn by its authors."""
+    relevance = paper.get("relevance")
+    return (
+        isinstance(relevance, int)
+        and not isinstance(relevance, bool)
+        and relevance >= min_relevance
+        and not paper.get("withdrawn")
+    )
+
+
 def build(today: Optional[date] = None) -> Dict[str, Any]:
     payload = json.loads(PAPERS_FILE.read_text(encoding="utf-8"))
-    papers = [p for p in payload.get("papers", []) if p.get("id")]
+    history = [p for p in payload.get("papers", []) if p.get("id")]
+    papers = [p for p in history if site_visible(p)]
+    logger.info(
+        "Site shows %s of %s papers (relevance >= %s, not withdrawn); the rest stay in the dataset",
+        len(papers), len(history), SITE_MIN_RELEVANCE,
+    )
     papers.sort(
         key=lambda p: (p.get("published_date", ""), (p.get("focus") or {}).get("score", 0), p.get("id", "")),
         reverse=True,
@@ -295,15 +313,19 @@ def build(today: Optional[date] = None) -> Dict[str, Any]:
         info.pop("first_load_bytes")
         archive.append({"month": month, **info})
 
-    stats_info = None
-    if STATS_FILE.exists():
-        stats_info = _write(SITE_DATA_DIR / "stats.json", _dumps(json.loads(STATS_FILE.read_text(encoding="utf-8"))), SITE_MAX_FILE_BYTES)
+    # Trends, keywords and the overview count only the papers the site shows.
+    site_stats = build_stats(papers)
+    site_stats["summary"]["history_papers"] = len(history)
+    site_stats["summary"]["min_relevance"] = SITE_MIN_RELEVANCE
+    stats_info = _write(SITE_DATA_DIR / "stats.json", _dumps(site_stats), SITE_MAX_FILE_BYTES)
 
     manifest = {
         "version": 2,
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "source_last_updated": payload.get("last_updated"),
         "total_papers": len(papers),
+        "history_papers": len(history),
+        "min_relevance": SITE_MIN_RELEVANCE,
         "undated_papers_skipped": undated,
         "latest_published_date": latest,
         "embedding": {

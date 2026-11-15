@@ -125,15 +125,14 @@ def compute_keyword_stats(
 
 
 def compute_and_save_stats(papers: List[Dict[str, Any]]) -> Dict[str, Any]:
-    """
-    Compute all statistics and save to file.
+    """Compute statistics over the full history and save them to data/stats.json."""
+    stats = build_stats(papers)
+    save_stats(stats)
+    return stats
 
-    Args:
-        papers: List of paper dictionaries
 
-    Returns:
-        Complete statistics dictionary
-    """
+def build_stats(papers: List[Dict[str, Any]]) -> Dict[str, Any]:
+    """All statistics for a set of papers (the full history, or the site's subset)."""
     tag_stats = compute_tag_stats(papers)
     keyword_stats = compute_keyword_stats(papers)
     summary = compute_site_summary(papers, tag_stats)
@@ -148,9 +147,6 @@ def compute_and_save_stats(papers: List[Dict[str, Any]]) -> Dict[str, Any]:
         },
         "summary": summary,
     }
-
-    save_stats(stats)
-
     return stats
 
 

@@ -13,7 +13,7 @@ const stats = ref({
   summary: {
     total_papers: 0,
     focus_papers: 0,
-    monitored_categories: 10,
+    monitored_categories: 15,
     tracked_tags: 15,
     focus_tag_counts: {}
   }
@@ -230,14 +230,14 @@ onMounted(() => {
   <div class="stats-grid">
     <div class="stat-card">
       <div class="stat-value">{{ summary.total_papers || 0 }}</div>
-      <div class="stat-label">Indexed papers</div>
+      <div class="stat-label">AI × 金融相关论文（相关度 ≥1）</div>
     </div>
     <div class="stat-card">
       <div class="stat-value">{{ summary.focus_papers || 0 }}</div>
-      <div class="stat-label">Focus-matched papers</div>
+      <div class="stat-label">重点论文（相关度 ≥2）</div>
     </div>
     <div class="stat-card">
-      <div class="stat-value">{{ summary.monitored_categories || 10 }}</div>
+      <div class="stat-value">{{ summary.monitored_categories || 15 }}</div>
       <div class="stat-label">Monitored categories</div>
     </div>
     <div class="stat-card">
