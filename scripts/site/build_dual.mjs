@@ -16,9 +16,19 @@ const manifest = readFileSync('docs/public/arxiv-data/manifest.json')
 const digest = createHash('sha256').update(manifest).digest('hex')
 const siteUrl = process.env.SITE_URL || 'https://quant.hfthnu.com'
 const builtAt = new Date().toISOString()
-for (const [name, base] of [['server', '/'], ['pages', '/Introduction-to-Quantitative-Finance/']]) {
+// Umami website IDs are public; they come from repository variables. Unset = no tracker.
+const targets = [
+  ['server', '/', process.env.UMAMI_WEBSITE_ID_MAIN, new URL(siteUrl).hostname],
+  ['pages', '/Introduction-to-Quantitative-Finance/', process.env.UMAMI_WEBSITE_ID_PAGES, 'barca0412.github.io'],
+]
+for (const [name, base, umamiId, umamiDomain] of targets) {
   const outDir = join(output, name)
-  run('npm', ['run', 'docs:build', '--', '--outDir', outDir], { SITE_BASE: base, SITE_URL: siteUrl })
+  run('npm', ['run', 'docs:build', '--', '--outDir', outDir], {
+    SITE_BASE: base,
+    SITE_URL: siteUrl,
+    UMAMI_WEBSITE_ID: (umamiId || '').trim(),
+    UMAMI_DOMAINS: umamiDomain,
+  })
   const actual = createHash('sha256').update(readFileSync(join(outDir, 'arxiv-data/manifest.json'))).digest('hex')
   if (actual !== digest) throw new Error('Data changed between the two site builds')
   writeFileSync(join(outDir, 'build-info.json'), JSON.stringify({ commit: execFileSync('git', ['rev-parse', 'HEAD'], { encoding: 'utf8' }).trim(), built_at: builtAt, manifest_sha256: digest, latest_published_date: JSON.parse(manifest).latest_published_date, site_url: siteUrl, base }) + '\n')
