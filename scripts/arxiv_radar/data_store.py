@@ -160,9 +160,39 @@ _V2_LIST_FIELDS = ("task_types", "finance_domains", "methods", "data_market", "e
                    "nber_programs")
 
 
+_PLAINTEXT_EMAIL = re.compile(
+    r"(?<![A-Za-z0-9_.+-])[A-Za-z0-9.!#$%&'*+/=?^_`{|}~-]+@"
+    r"(?:[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?\.)+"
+    # A numeric final label is a metric/version (e.g. mAP@0.5), not a public TLD.
+    r"(?:[A-Za-z]{2,63}|[xX][nN]--[A-Za-z0-9](?:[A-Za-z0-9-]{0,57}[A-Za-z0-9])?)"
+    # Do not redact just the valid-looking prefix of an invalid longer domain.
+    r"(?![A-Za-z0-9-]|\.[A-Za-z0-9-])"
+)
+
+
+def _without_plaintext_emails(value: Any) -> Any:
+    """Copy public metadata, redacting addresses without normalizing other text."""
+    if isinstance(value, str):
+        return _PLAINTEXT_EMAIL.sub("[redacted-email]", value)
+    if isinstance(value, dict):
+        cleaned = {}
+        for key, item in value.items():
+            public_key = _without_plaintext_emails(key)
+            # A stats key can contain an address. Never silently merge two buckets.
+            if public_key in cleaned:
+                raise ValueError("Email redaction would merge dictionary keys; refusing export")
+            cleaned[public_key] = _without_plaintext_emails(item)
+        return cleaned
+    if isinstance(value, list):
+        return [_without_plaintext_emails(item) for item in value]
+    if isinstance(value, tuple):
+        return tuple(_without_plaintext_emails(item) for item in value)
+    return value
+
+
 def _clean_paper_for_parquet(paper: Dict[str, Any]) -> Dict[str, Any]:
     focus = paper.get("focus") or {}
-    return {
+    return _without_plaintext_emails({
         "id": paper.get("id", ""),
         "title": paper.get("title", ""),
         "abstract": paper.get("abstract", ""),
@@ -238,7 +268,7 @@ def _clean_paper_for_parquet(paper: Dict[str, Any]) -> Dict[str, Any]:
         "discipline_basis": paper.get("discipline_basis"),
         "venue_list": {k: paper["venue_list"].get(k) for k in ("venue_id", "year", "track", "decision", "match_method")}
                       if isinstance(paper.get("venue_list"), dict) else None,
-    }
+    })
 
 
 # --------------------------------------------------------------------------
@@ -675,6 +705,7 @@ def export() -> Dict[str, Any]:
     pq.write_table(papers_table, EXPORT_DIR / PAPERS_PARQUET, compression="zstd")
 
     meta, matrix = load_local_embeddings()
+    meta = _without_plaintext_emails(meta)
     if meta.get("ids"):
         dim = int(matrix.shape[1])
         emb_meta = {k: v for k, v in meta.items() if k not in ("ids", "text_hashes")}
@@ -692,17 +723,25 @@ def export() -> Dict[str, Any]:
             schema=schema,
         )
         pq.write_table(table, EXPORT_DIR / EMBEDDINGS_PARQUET, compression="zstd")
+    else:
+        (EXPORT_DIR / EMBEDDINGS_PARQUET).unlink(missing_ok=True)
 
     if STATS_FILE.exists():
-        shutil.copy2(STATS_FILE, EXPORT_DIR / "stats.json")
+        write_atomically(EXPORT_DIR / "stats.json",
+                         _without_plaintext_emails(json.loads(STATS_FILE.read_text(encoding="utf-8"))))
+    else:
+        (EXPORT_DIR / "stats.json").unlink(missing_ok=True)
 
     from . import venue_library
 
     library_rows = venue_library.load_all()
     if library_rows:
-        pq.write_table(pa.Table.from_pylist([{k: v for k, v in r.items() if not k.startswith("_")} for r in library_rows],
+        pq.write_table(pa.Table.from_pylist([_without_plaintext_emails({k: v for k, v in r.items() if not k.startswith("_")})
+                                            for r in library_rows],
                                             schema=venue_library._schema()),
                        EXPORT_DIR / LIBRARY_PARQUET, compression="zstd")
+    else:
+        (EXPORT_DIR / LIBRARY_PARQUET).unlink(missing_ok=True)
 
     dates = sorted(p.get("published_date", "") for p in papers if p.get("published_date"))
     info = {
@@ -722,7 +761,8 @@ def export() -> Dict[str, Any]:
         if path.exists():
             info["files"][name] = {"bytes": path.stat().st_size, "sha256": _sha256(path)}
 
-    (EXPORT_DIR / "README.md").write_text(_render_dataset_card(info), encoding="utf-8")
+    info = _without_plaintext_emails(info)
+    (EXPORT_DIR / "README.md").write_text(_without_plaintext_emails(_render_dataset_card(info)), encoding="utf-8")
     write_atomically(EXPORT_DIR / EXPORT_INFO, info)
     logger.info("Exported %s papers to %s", len(papers), EXPORT_DIR)
     return info
