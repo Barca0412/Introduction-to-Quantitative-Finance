@@ -88,6 +88,9 @@ jobs:
           GOOGLE_SITE_VERIFICATION: ${{ vars.GOOGLE_SITE_VERIFICATION }}
           BING_SITE_VERIFICATION: ${{ vars.BING_SITE_VERIFICATION }}
           BAIDU_SITE_VERIFICATION: ${{ vars.BAIDU_SITE_VERIFICATION }}
+          # Public Umami website IDs (analysis.hfthnu.com); unset = build without tracking.
+          UMAMI_WEBSITE_ID_MAIN: ${{ vars.UMAMI_WEBSITE_ID_MAIN }}
+          UMAMI_WEBSITE_ID_PAGES: ${{ vars.UMAMI_WEBSITE_ID_PAGES }}
         run: npm run docs:build:dual
       - name: Keep both builds for independent deployment and rollback
         uses: actions/upload-artifact@v4

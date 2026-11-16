@@ -54,6 +54,15 @@ description: 量化研究入门由湖南大学金融科技协会 Quant Group 维
 - [湖南大学金融科技协会介绍](https://www.guohaoqi.cn/hft-association)
 - 问题和建议：[GitHub Discussions](https://github.com/Barca0412/Introduction-to-Quantitative-Finance/discussions)
 
+## 访问统计
+
+为了了解哪些内容对读者有用，本站使用我们自己部署的开源统计工具 [Umami](https://umami.is/) 记录访问情况，比如页面浏览量、来源网站、停留时间，以及打开 PDF、点击代码链接这类操作。
+
+- 不使用 cookie，也不跨站追踪；
+- 不保存你的 IP 地址，也不收集姓名、邮箱等个人信息；
+- 不记录你在论文雷达里搜索的内容，只记录"搜索过一次"；
+- 数据保存在协会自己的服务器上，只用来改进内容，不提供给任何第三方。
+
 本项目用于教育与研究，不构成投资建议。
 
 </SiteArticle>

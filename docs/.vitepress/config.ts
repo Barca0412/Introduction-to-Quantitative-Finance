@@ -72,6 +72,20 @@ const siteVerification = [
   .filter(([, content]) => content && content.trim())
   .map(([name, content]) => ['meta', { name, content: (content as string).trim() }] as [string, Record<string, string>])
 
+// Self-hosted Umami (https://analysis.hfthnu.com). Each deployment target gets its own
+// website ID from build_dual.mjs; no ID (local dev, forks) means no tracker at all.
+const UMAMI_WEBSITE_ID = (process.env.UMAMI_WEBSITE_ID || '').trim()
+const UMAMI_SCRIPT_URL = (process.env.UMAMI_SCRIPT_URL || 'https://analysis.hfthnu.com/hft.js').trim()
+const UMAMI_DOMAINS = (process.env.UMAMI_DOMAINS || '').trim()
+const umamiTracker: [string, Record<string, string>][] = UMAMI_WEBSITE_ID
+  ? [['script', {
+      defer: '',
+      src: UMAMI_SCRIPT_URL,
+      'data-website-id': UMAMI_WEBSITE_ID,
+      ...(UMAMI_DOMAINS ? { 'data-domains': UMAMI_DOMAINS } : {})
+    }]]
+  : []
+
 export default defineConfig({
   vite: {
     define: {
@@ -194,6 +208,7 @@ export default defineConfig({
   },
 
   head: [
+    ...umamiTracker,
     ...siteVerification,
     ['meta', { name: 'author', content: '湖南大学金融科技协会 Quant Group' }],
     ['script', { type: 'application/ld+json' }, JSON.stringify({
