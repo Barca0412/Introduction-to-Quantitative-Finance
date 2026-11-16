@@ -3,10 +3,10 @@
 > 中文开源量化知识库：用免费数据一步步做完的**项目式量化教程**，配合概念知识库、研报与论文目录，以及每天更新的 **FinPaperRadar（AI × 金融论文雷达）**。
 
 <p align="center">
-  <a href="https://barca0412.github.io/Introduction-to-Quantitative-Finance/"><strong>文档站</strong></a> ·
-  <a href="https://barca0412.github.io/Introduction-to-Quantitative-Finance/tutorials/"><strong>教程</strong></a> ·
-  <a href="https://barca0412.github.io/Introduction-to-Quantitative-Finance/arxiv/"><strong>论文雷达</strong></a> ·
-  <a href="https://barca0412.github.io/Introduction-to-Quantitative-Finance/library/"><strong>研报与论文</strong></a> ·
+  <a href="https://quant.hfthnu.com/"><strong>网站 quant.hfthnu.com</strong></a> ·
+  <a href="https://quant.hfthnu.com/tutorials/"><strong>教程</strong></a> ·
+  <a href="https://quant.hfthnu.com/arxiv/"><strong>论文雷达</strong></a> ·
+  <a href="https://quant.hfthnu.com/library/"><strong>研报与论文</strong></a> ·
   <a href="https://github.com/Barca0412/Introduction-to-Quantitative-Finance/discussions"><strong>参与讨论</strong></a>
 </p>
 
@@ -24,11 +24,11 @@
 
 | 栏目 | 内容 |
 | --- | --- |
-| [教程](https://barca0412.github.io/Introduction-to-Quantitative-Finance/tutorials/) | 每一讲是一个完整小项目，附代码、样例数据和练习 |
-| [知识库](https://barca0412.github.io/Introduction-to-Quantitative-Finance/wiki/) | 多因子框架、数据源、因子、回测、组合优化的概念页 |
-| [研报与论文](https://barca0412.github.io/Introduction-to-Quantitative-Finance/library/) | 194 份卖方金工研报、一百多篇学术论文的目录，以及讲义复现过的研报 |
-| [论文雷达](https://barca0412.github.io/Introduction-to-Quantitative-Finance/arxiv/) | 每天抓取 arXiv 新论文，打标签、写中文摘要，支持语义检索 |
-| [资源](https://barca0412.github.io/Introduction-to-Quantitative-Finance/resources/) | 精选开源项目、数据接口、论坛和课程 |
+| [教程](https://quant.hfthnu.com/tutorials/) | 每一讲是一个完整小项目，附代码、样例数据和练习 |
+| [知识库](https://quant.hfthnu.com/wiki/) | 多因子框架、数据源、因子、回测、组合优化的概念页 |
+| [研报与论文](https://quant.hfthnu.com/library/) | 194 份卖方金工研报、一百多篇学术论文的目录，以及讲义复现过的研报 |
+| [论文雷达](https://quant.hfthnu.com/arxiv/) | 每天抓取 arXiv 新论文，打标签、写中文摘要，支持语义检索 |
+| [资源](https://quant.hfthnu.com/resources/) | 精选开源项目、数据接口、论坛和课程 |
 
 如果这个项目对你有帮助，欢迎点一个 Star ⭐，让更多量化学习者看到它。
 
@@ -38,16 +38,16 @@
 
 | 讲义 | 内容 |
 | --- | --- |
-| [实战一：计算 A 股个股与行业的 CAPM Beta](https://barca0412.github.io/Introduction-to-Quantitative-Finance/tutorials/01-capm-beta/) | 按证监会行业估计行业和个股 Beta，画时变 Beta，比较个股与行业的差异 |
-| [实战二：中国股票市场的价值效应与规模效应](https://barca0412.github.io/Introduction-to-Quantitative-Finance/tutorials/02-size-value-effects/) | 按账面市值比和市值分十组，检验价值效应与规模效应，讨论壳价值的影响 |
+| [实战一：计算 A 股个股与行业的 CAPM Beta](https://quant.hfthnu.com/tutorials/01-capm-beta/) | 按证监会行业估计行业和个股 Beta，画时变 Beta，比较个股与行业的差异 |
+| [实战二：中国股票市场的价值效应与规模效应](https://quant.hfthnu.com/tutorials/02-size-value-effects/) | 按账面市值比和市值分十组，检验价值效应与规模效应，讨论壳价值的影响 |
 
-这两讲使用 CSMAR 国泰安数据库（需要高校或机构账号）。更多讲义会陆续上线，见[教程页](https://barca0412.github.io/Introduction-to-Quantitative-Finance/tutorials/)。
+这两讲使用 CSMAR 国泰安数据库（需要高校或机构账号）。更多讲义会陆续上线，见[教程页](https://quant.hfthnu.com/tutorials/)。
 
 <a id="section-arxiv"></a>
 
 ## FinPaperRadar · AI × 金融论文雷达
 
-每天从 arXiv 的 15 个分类抓取新论文（cs.LG、stat.ML 只收金融相关的），用大模型打研究标签、提取关键词、写中文摘要，并提供趋势图、机构筛选和语义检索。入口：[barca0412.github.io/Introduction-to-Quantitative-Finance/arxiv/](https://barca0412.github.io/Introduction-to-Quantitative-Finance/arxiv/)。
+每天从 arXiv 的 15 个分类抓取新论文（cs.LG、stat.ML 只收金融相关的），用大模型打研究标签、提取关键词、写中文摘要，并提供趋势图、机构筛选和语义检索。入口：[quant.hfthnu.com/arxiv](https://quant.hfthnu.com/arxiv/)。
 
 完整历史数据以 Parquet 格式发布在 [Hugging Face 数据集](https://huggingface.co/datasets/Barca21412/FinPaperRadar)，GitHub Release [`radar-data`](https://github.com/Barca0412/Introduction-to-Quantitative-Finance/releases/tag/radar-data) 留有镜像，都不进 git。我们生成的标签、中文摘要、评分和向量按 CC BY 4.0 授权，arXiv 元数据本身是 CC0。流水线代码在 `scripts/arxiv_radar/`。
 
@@ -66,8 +66,8 @@
 
 ## 仓库里的资料
 
-- [卖方金工研报](https://barca0412.github.io/Introduction-to-Quantitative-Finance/library/reports)：华泰人工智能、华泰多因子、海通、另类交易策略、基金研究等系列，原文件在 [`资料/卖方金工研报`](./资料/卖方金工研报)
-- [论文](https://barca0412.github.io/Introduction-to-Quantitative-Finance/library/papers)：投资者情绪、行为金融学等方向，原文件在 [`论文`](./论文)
+- [卖方金工研报](https://quant.hfthnu.com/library/reports)：华泰人工智能、华泰多因子、海通、另类交易策略、基金研究等系列，原文件在 [`资料/卖方金工研报`](./资料/卖方金工研报)
+- [论文](https://quant.hfthnu.com/library/papers)：投资者情绪、行为金融学等方向，原文件在 [`论文`](./论文)
 - [技术指标回测代码](./资料/技术指标回测代码)
 - [量化研究实习中的代码笔记](https://github.com/Barca0412/Note-for-Programming)
 
@@ -139,7 +139,7 @@
 ### 基金研究
 
 - [FundCombination](https://github.com/MrDujing/FundCombination)
-- 基金研究相关的卖方研报见 [研报目录 · 基金研究](https://barca0412.github.io/Introduction-to-Quantitative-Finance/library/reports#基金研究)
+- 基金研究相关的卖方研报见 [研报目录 · 基金研究](https://quant.hfthnu.com/library/reports#基金研究)
 - ...
 
 ### 量化论坛
@@ -193,7 +193,7 @@
   <img width="420" alt="扫码加入湖南大学金融科技协会 HFT 成员群和实习群" src="https://github.com/user-attachments/assets/60a940e6-88b6-4c6d-ae86-6c125085ca14" />
 </div>
 
-署名、授权和引用方式见[关于页](https://barca0412.github.io/Introduction-to-Quantitative-Finance/about)。
+署名、授权和引用方式见[关于页](https://quant.hfthnu.com/about)。
 
 <a id="contributing"></a>
 
