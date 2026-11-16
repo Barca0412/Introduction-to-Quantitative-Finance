@@ -41,6 +41,12 @@
 - {ror: 00hhjss72, zh: 腾讯, name: Tencent}
 - {ror: 00k642b80, zh: 阿里巴巴, name: Alibaba Group}
 - {ror: 00cmhce21, zh: 华为, name: Huawei}
+- {ror: 028w99c90, zh: 中国联通, name: China Unicom}
+- {ror: 05gftfe97, zh: 中国移动, name: China Mobile}
+- {ror: 02ksqcf75, zh: 滴滴出行, name: DiDi}
+- {ror: 037b6wy35, zh: 中信集团, name: CITIC Group}
+- {ror: 033mgm122, zh: 中国大唐集团, name: China Datang}
+- {ror: 0300m5276, zh: 微软亚洲研究院, name: Microsoft Research Asia}
 
 # ---------- Hong Kong, Macau, Taiwan ----------
 - {ror: 00q4vv597, zh: 香港科技大学, name: HKUST}
@@ -59,6 +65,7 @@
 - {ror: 04h9pn542, zh: 首尔大学, name: Seoul National University}
 - {ror: 017cjz748, zh: 蔚山科学技术院, name: UNIST}
 - {ror: 01r9jj364, zh: KakaoBank, name: KakaoBank}
+- {ror: 00nt82y31, zh: LG AI 研究院, name: LG AI Research}
 - {ror: 057zh3y96, zh: 东京大学, name: The University of Tokyo}
 - {ror: 02e16g702, zh: 北海道大学, name: Hokkaido University}
 - {ror: 04ksd4g47, zh: 日本国立情报学研究所, name: National Institute of Informatics}
@@ -72,7 +79,7 @@
 - {ror: 0190ak572, zh: 纽约大学, name: New York University}
 - {ror: 05x2bcf33, zh: 卡内基梅隆大学, name: Carnegie Mellon University}
 - {ror: 03vek6s52, zh: 哈佛大学, name: Harvard University}
-- {ror: 00f54p054, zh: 斯坦福大学, name: Stanford University}
+- {ror: 00f54p054, zh: 斯坦福大学, name: Stanford University, aliases: [Stanford Graduate School of Business]}
 - {ror: 042nb2s44, zh: 麻省理工学院, name: MIT}
 - {ror: 03v76x132, zh: 耶鲁大学, name: Yale University}
 - {ror: 05bnh6r87, zh: 康奈尔大学, name: Cornell University}
@@ -101,6 +108,13 @@
 - {ror: 031rnv444, zh: 高盛, name: Goldman Sachs}
 - {ror: 00svp7168, zh: 第一资本, name: Capital One}
 - {ror: 00d0nc645, zh: 微软, name: Microsoft}
+- {ror: 03jdj4y14, zh: 英伟达, name: NVIDIA}
+- {ror: 00njsd438, zh: 谷歌, name: Google}
+- {ror: 04mv4n011, zh: 亚马逊, name: Amazon}
+- {ror: 02rdpzb15, zh: 彭博, name: Bloomberg}
+- {ror: 049mrbr98, zh: Intuit, name: Intuit}
+- {ror: 02grspc61, zh: Hugging Face, name: Hugging Face}
+- {ror: 04f2n1245, zh: 英特尔（印度）, name: Intel India}
 
 # ---------- Canada ----------
 - {ror: 0161xgx34, zh: 蒙特利尔大学, name: Université de Montréal}
@@ -125,9 +139,26 @@
 - {ror: 02s376052, zh: 洛桑联邦理工学院, name: EPFL}
 - {ror: 052bz7812, zh: 巴黎第九大学（PSL）, name: Université Paris Dauphine-PSL}
 - {ror: 03s262162, zh: 雅典经济与商业大学, name: Athens University of Economics and Business}
+- {ror: 01few5909, zh: 巴克莱, name: Barclays}
+- {ror: 02ybv7q93, zh: 法国恩吉集团, name: Engie}
 
 # ---------- Australia ----------
 - {ror: 0384j8v12, zh: 悉尼大学, name: The University of Sydney}
 - {ror: 03f0f6041, zh: 悉尼科技大学, name: University of Technology Sydney}
 - {ror: 01ej9dk98, zh: 墨尔本大学, name: The University of Melbourne}
 - {ror: 03qn8fb07, zh: 澳大利亚联邦科学与工业研究组织, name: CSIRO}
+
+# ---------- without a ROR id (OpenAlex does not know them): keyed by name ----------
+# type and country are written here because nothing else supplies them.
+- {name: eBay, zh: eBay, type: company, country: US}
+- {name: Meta, zh: Meta, type: company, country: US, aliases: [Meta Platforms, Meta AI, Meta Platforms Inc]}
+- {name: NEC Laboratories America, zh: NEC 美国实验室, type: company, country: US}
+- {name: Sber, zh: 俄罗斯联邦储蓄银行, type: company, country: RU, aliases: [Sber AI Lab, Sberbank]}
+- {name: Ant International, zh: 蚂蚁国际, type: company, country: SG}
+- {name: Wood Mackenzie, zh: Wood Mackenzie, type: company, country: GB}
+- {name: Dunamu, zh: Dunamu, type: company, country: KR}
+- {name: Douzone, zh: Douzone, type: company, country: KR}
+- {name: Korea Investment Corporation, zh: 韩国投资公司, type: government, country: KR}
+- {name: ReSolve Asset Management, zh: ReSolve Asset Management, type: company, country: CA}
+- {name: DATEV eG, zh: DATEV, type: company, country: DE}
+- {name: Julius Research, zh: Julius Research, type: company, country: US}

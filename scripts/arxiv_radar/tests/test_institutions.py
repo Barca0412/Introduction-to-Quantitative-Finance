@@ -192,3 +192,52 @@ class AuthorIdentityTest(unittest.TestCase):
             out = inst.combine(paper, oa, html)
         self.assertEqual(out["author_ids"][0], {"openalex": "A111", "orcid": "0000-0001"})
         self.assertEqual(out["author_ids"][1], {"email_hash": h})
+
+
+class CleanupTest(unittest.TestCase):
+    def test_name_key_ignores_the_and_country_suffix(self):
+        from scripts.arxiv_radar.institutions import _name_index_key
+        self.assertEqual(_name_index_key("NVIDIA"), _name_index_key("Nvidia (United States)"))
+        self.assertEqual(_name_index_key("The Hong Kong University of Science and Technology"),
+                         _name_index_key("Hong Kong University of Science and Technology"))
+
+    def test_junk_and_guessed_type(self):
+        from scripts.arxiv_radar.institutions import guess_type, is_junk_institution
+        for junk in ("London", "github.com/someone", "Both authors contributed equally to this research"):
+            self.assertTrue(is_junk_institution(junk), junk)
+        self.assertFalse(is_junk_institution("London School of Economics"))
+        self.assertEqual(guess_type("Boğaziçi University"), "education")
+        self.assertEqual(guess_type("Zanista AI Ltd"), "company")
+        self.assertEqual(guess_type("Domyn"), "")
+
+    def test_canonicalize_cleans_a_paper(self):
+        from scripts.arxiv_radar.institutions import canonicalize
+        oa = {"name": "Hong Kong Polytechnic University", "ror": "0030zas98", "type": "education", "country": "HK", "source": "openalex"}
+        paper = {"institutions": [
+            {"name": "London", "ror": "", "source": "html"},
+            {"name": "The Hong Kong Polytechnic University", "ror": "0030zas98", "type": "", "country": "", "source": "html"},
+            {"name": "Sber AI Lab", "ror": "", "source": "html"},
+            {"name": "NVIDIA", "ror": "", "source": "html"},
+        ], "author_affiliations": [[0, 1], [2], [3]]}
+        nv = {"name": "Nvidia (United States)", "ror": "03jdj4y14", "type": "company", "country": "US", "source": "openalex"}
+        canonicalize([{"institutions": [oa, nv]}, paper])
+        insts = paper["institutions"]
+        self.assertEqual([i["name"] for i in insts], ["The Hong Kong Polytechnic University", "Sber", "NVIDIA"])
+        self.assertEqual((insts[0]["type"], insts[0]["country"], insts[0]["zh"]), ("education", "HK", "香港理工大学"))
+        self.assertEqual((insts[1]["zh"], insts[1]["type"], insts[1]["country"]), ("俄罗斯联邦储蓄银行", "company", "RU"))
+        self.assertEqual((insts[2]["ror"], insts[2]["zh"]), ("03jdj4y14", "英伟达"))
+        self.assertEqual(paper["author_affiliations"], [[0], [1], [2]])
+
+
+class NetworkTest(unittest.TestCase):
+    def test_nber_counts_only_without_another_institution(self):
+        from scripts.arxiv_radar.institutions import drop_network_memberships
+        nber = {"name": "National Bureau of Economic Research", "ror": "04grmx538"}
+        mit = {"name": "MIT", "ror": "042nb2s44"}
+        paper = {"institutions": [nber, mit], "author_affiliations": [[0, 1], [1]]}
+        self.assertEqual(drop_network_memberships(paper), 1)
+        self.assertEqual(paper["institutions"], [mit])
+        self.assertEqual(paper["author_affiliations"], [[0], [0]])
+        alone = {"institutions": [nber, mit], "author_affiliations": [[0], [1]]}
+        self.assertEqual(drop_network_memberships(alone), 0)  # NBER is that author's only institution
+        self.assertEqual(alone["author_affiliations"], [[0], [1]])

@@ -271,7 +271,7 @@ def split_raw_affiliations(raw: str) -> List[str]:
         if len(line) < 4 or not re.search(r"[A-Za-z一-鿿]", line):
             continue
         name, level = institution_from_line(line)
-        if len(name) < 3 or len(name.split()) > 12 or _NOT_A_NAME.search(name):
+        if len(name) < 3 or len(name.split()) > 12 or is_junk_institution(name):
             continue
         if level == len(_LEVELS) and len(found) and found[-1][1] < len(_LEVELS):
             continue  # stray fragment next to a real institution
@@ -484,7 +484,71 @@ INSTITUTIONS_FILE = __import__("pathlib").Path(__file__).resolve().parent / "voc
 
 
 def _name_index_key(name: str) -> str:
-    return re.sub(r"[^a-z0-9]+", "", unicodedata.normalize("NFKD", name or "").encode("ascii", "ignore").decode().lower())
+    """Comparable form of an institution name: no accents, case, punctuation, leading
+    "The" or OpenAlex's country suffix ("Nvidia (United States)" == "NVIDIA")."""
+    name = re.sub(r"\s*\([^()]*\)\s*$", "", name or "")
+    name = re.sub(r"^\s*the\s+", "", name, flags=re.I)
+    return re.sub(r"[^a-z0-9]+", "", unicodedata.normalize("NFKD", name).encode("ascii", "ignore").decode().lower())
+
+
+# Not institutions, found in stored data from arXiv pages: a bare place, a web address,
+# a note about the authors. Removed by canonicalize (new pages are filtered on parsing).
+_PLACES = {
+    "london", "new york", "beijing", "shanghai", "shenzhen", "hong kong", "singapore", "paris", "tokyo", "seoul",
+    "berlin", "zurich", "toronto", "boston", "cambridge", "oxford", "sydney", "melbourne", "dubai", "istanbul",
+    "china", "usa", "united states", "united kingdom", "uk", "germany", "france", "japan", "korea", "india",
+    "canada", "australia", "italy", "spain", "switzerland", "netherlands",
+}
+_WEB = re.compile(r"(https?://|www\.|\b[\w-]+\.(com|org|io|net|ai)(/|\b))", re.I)
+
+
+def is_junk_institution(name: str) -> bool:
+    text = (name or "").strip(" .,;:")
+    return (len(text) < 3 or text.lower() in _PLACES or bool(_WEB.search(text))
+            or bool(_NOT_A_NAME.search(text)) or bool(_SENTENCE.search(text)))
+
+
+_COMPANY_WORDS = re.compile(r"\b(ltd|limited|inc|llc|gmbh|ag|eg|plc|corp|corporation|company|co\.|s\.a\.|as|fze|pjsc|bank|"
+                            r"capital|asset management|investments?|securities|technologies|labs?)\b", re.I)
+_EDUCATION_WORDS = re.compile(r"\b(universit|college|school|institute of technology|polytechnic|école|ecole|"
+                              r"hochschule|academy)|大学|学院", re.I)
+
+
+# Research networks whose members list them next to their own university (NBER research
+# associates): counted only for authors with no other institution.
+NETWORK_RORS = {"04grmx538"}  # NBER
+
+
+def drop_network_memberships(paper: Dict[str, Any]) -> int:
+    """Remove a network (NBER) from authors who have another institution; drop the
+    network from the paper when no author keeps it. Returns entries removed."""
+    insts = paper.get("institutions") or []
+    network = {i for i, inst in enumerate(insts) if inst.get("ror") in NETWORK_RORS}
+    affs = paper.get("author_affiliations") or []
+    if not network or not affs:
+        return 0
+    paper["author_affiliations"] = [[i for i in row if i not in network] if set(row) - network else list(row)
+                                    for row in affs]
+    used = {i for row in paper["author_affiliations"] for i in row}
+    gone = [i for i in network if i not in used]
+    if not gone:
+        return 0
+    keep = [i for i in range(len(insts)) if i not in gone]
+    new_index = {old: new for new, old in enumerate(keep)}
+    paper["institutions"] = [insts[i] for i in keep]
+    paper["author_affiliations"] = [[new_index[i] for i in row] for row in paper["author_affiliations"]]
+    paper["affiliations"] = [inst["name"] for inst in paper["institutions"]]
+    paper["affiliation"] = "; ".join(paper["affiliations"])
+    return len(gone)
+
+
+def guess_type(name: str) -> str:
+    """Type of an institution OpenAlex does not know, from its name (rule; may be "")."""
+    if _EDUCATION_WORDS.search(name or ""):
+        return "education"
+    if _COMPANY_WORDS.search(name or ""):
+        return "company"
+    return ""
 
 
 def load_institution_table() -> Dict[str, Dict[str, Any]]:
@@ -494,6 +558,8 @@ def load_institution_table() -> Dict[str, Dict[str, Any]]:
         rows = yaml.safe_load(fh) or []
     table = {}
     for row in rows:
+        if not row.get("ror"):  # institutions without a ROR id: keyed by name
+            row = {**row, "ror": "name:" + _name_index_key(row["name"])}
         if row["ror"] in table:
             raise ValueError(f"duplicate ror {row['ror']} in institutions.yaml")
         table[row["ror"]] = row
@@ -507,31 +573,61 @@ def canonicalize(papers: List[Dict[str, Any]]) -> Dict[str, int]:
     Returns how many entries got a ROR id and how many got a Chinese name."""
     table = load_institution_table()
     by_name: Dict[str, Dict[str, Any]] = {}
+    by_ror: Dict[str, Dict[str, Any]] = {}  # type and country as OpenAlex gives them
     for paper in papers:
         for inst in paper.get("institutions") or []:
             if inst.get("ror") and inst.get("source") == "openalex":
                 by_name.setdefault(_name_index_key(inst["name"]), inst)
+                if inst.get("type") or inst.get("country"):
+                    by_ror.setdefault(inst["ror"], inst)
     for ror, row in table.items():
         for alias in [row.get("name", "")] + list(row.get("aliases") or []):
-            by_name.setdefault(_name_index_key(alias), {"ror": ror, "name": row.get("name", ""), "type": "", "country": ""})
+            by_name.setdefault(_name_index_key(alias), {"ror": "" if ror.startswith("name:") else ror,
+                                                        "name": row.get("name", ""), "table_key": ror,
+                                                        "type": row.get("type", ""), "country": row.get("country", "")})
 
-    linked = named = 0
+    linked = named = dropped = typed = 0
     for paper in papers:
         insts = paper.get("institutions") or []
         if not insts:
             continue
+        # Drop entries that are not institutions; remap the author -> institution indices.
+        keep = [i for i, inst in enumerate(insts) if not is_junk_institution(inst.get("name", ""))]
+        if len(keep) != len(insts):
+            dropped += len(insts) - len(keep)
+            new_index = {old: new for new, old in enumerate(keep)}
+            insts = [insts[i] for i in keep]
+            paper["institutions"] = insts
+            paper["author_affiliations"] = [sorted({new_index[i] for i in row if i in new_index})
+                                            for row in paper.get("author_affiliations") or []]
+            paper["affiliations"] = [inst["name"] for inst in insts]
+            paper["affiliation"] = "; ".join(paper["affiliations"])
         for inst in insts:
-            if not inst.get("ror"):
-                hit = by_name.get(_name_index_key(inst.get("name", "")))
-                if hit:
+            hit = None if inst.get("ror") else by_name.get(_name_index_key(inst.get("name", "")))
+            if hit:
+                if hit["ror"]:
                     inst["ror"] = hit["ror"]
-                    inst["type"] = inst.get("type") or hit.get("type", "")
-                    inst["country"] = inst.get("country") or hit.get("country", "")
                     linked += 1
-            row = table.get(inst.get("ror", ""))
+                elif inst.get("name") != hit["name"]:
+                    # No ROR id: the table's name is the key, so "Sber AI Lab" and "Sber" merge.
+                    inst["name_raw"], inst["name"] = inst.get("name", ""), hit["name"]
+                inst["type"] = inst.get("type") or hit.get("type", "")
+                inst["country"] = inst.get("country") or hit.get("country", "")
+            known = by_ror.get(inst.get("ror", "")) or {}
+            row = table.get(inst.get("ror", "")) or table.get((hit or {}).get("table_key", "")) or {}
+            for field in ("type", "country"):
+                if not inst.get(field):
+                    inst[field] = known.get(field) or row.get(field, "")
+            if not inst.get("type"):
+                guessed = guess_type(inst.get("name", ""))
+                if guessed:
+                    inst["type"], inst["type_source"] = guessed, "name"
+                    typed += 1
             if row:
                 inst["zh"], inst["short"] = row.get("zh", ""), row.get("name", "")
                 named += 1
+        dropped += drop_network_memberships(paper)
+        insts = paper.get("institutions") or []
         # Merge entries that now share a ROR id; remap the author -> institution indices.
         merged: List[Dict[str, Any]] = []
         position: Dict[str, int] = {}
@@ -548,7 +644,7 @@ def canonicalize(papers: List[Dict[str, Any]]) -> Dict[str, int]:
                                             for row in paper.get("author_affiliations") or []]
             paper["affiliations"] = [m["name"] for m in merged]
             paper["affiliation"] = "; ".join(paper["affiliations"])
-    return {"linked": linked, "named": named}
+    return {"linked": linked, "named": named, "dropped": dropped, "typed_by_name": typed}
 
 
 async def fill_author_ids(papers: List[Dict[str, Any]]) -> int:
