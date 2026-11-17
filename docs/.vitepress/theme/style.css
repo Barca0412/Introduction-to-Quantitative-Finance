@@ -141,6 +141,7 @@ mjx-container { max-width:100%; overflow-x:auto; overflow-y:hidden; }
  .VPSidebar { left:calc((100vw - 1440px)/2) !important; }
 }
 @media(max-width:1100px){ .site-nav {column-gap:18px;} .site-links {gap:16px;} }
+@media(max-width:1240px){ .site-tools {display:none;position:static;} .site-nav.open .site-tools {display:block;order:10;margin-bottom:10px;} .site-tools > div {position:static;margin-top:8px;} }
 @media(max-width:959px){
  .VPDoc {padding:28px 20px 0 !important;} .VPDoc .content {padding:0 !important;}
  .VPSidebar {padding-left:24px !important;} .lecture-heading h1 {font-size:30px;}
@@ -149,7 +150,6 @@ mjx-container { max-width:100%; overflow-x:auto; overflow-y:hidden; }
  #site-header .gh-star { flex:0 0 44px; inline-size:44px; min-inline-size:44px; block-size:44px; padding:0; gap:0; justify-content:center; }
  #site-header .gh-star :is(.label,.count) { display:none; }
  #site-header .gh-star > svg { display:block; flex:none; inline-size:20px; block-size:20px; }
- .site-tools {display:none;position:static;} .site-nav.open .site-tools {display:block;order:10;margin-bottom:10px;} .site-tools > div {position:static;margin-top:8px;}
  .content-view .sheet-steps {columns:1;} .content-view .lecture-grid,.vp-doc .lecture-grid {grid-template-columns:1fr !important;}
  .content-view.home main {padding-top:0;}
  .content-view .hero-fig img {max-height:none;}

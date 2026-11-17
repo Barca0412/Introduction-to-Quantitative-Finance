@@ -108,22 +108,23 @@ img, svg.chart, canvas, .figure, figure img, .chart-box { border-radius: var(--f
   .site-links { gap: 18px; }
   .site-links .sub { display: none; }
 }
-@media (max-width: 860px) {
-  :root { --margin: 20px; }
+/* 顶栏：放不下一行时改用"菜单"按钮，避免 GitHub 按钮掉到第二行 */
+@media (max-width: 1240px) {
   .site-links { display: none; }
   .site-nav { gap: 12px; }
   .site-nav .gh-star { margin-inline-start: auto; }
   .site-menu { display: inline-flex; align-items: center; }
+  .site-nav.open .site-links { display: flex; flex-direction: column; gap: 0; order: 9; flex-basis: 100%; margin-inline-start: 0; padding-block: 4px 16px; }
+  .site-nav.open .site-links a { display: flex; align-items: center; min-block-size: 44px; border-block-start: 1px solid var(--rule); }
+  .site-nav.open .site-links .sub { display: inline; }
+}
+@media (max-width: 860px) {
+  :root { --margin: 20px; }
   .radar-tabs { gap: 22px; overflow-x: auto; scrollbar-width: none; }
   .radar-tabs::-webkit-scrollbar { display: none; }
   .radar-fresh { display: none; }
   .foot-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .site-foot { margin-block-start: 96px; }
-}
-@media (max-width: 860px) {
-  .site-nav.open .site-links { display: flex; flex-direction: column; gap: 0; order: 9; flex-basis: 100%; margin-inline-start: 0; padding-block: 4px 16px; }
-  .site-nav.open .site-links a { display: flex; align-items: center; min-block-size: 44px; border-block-start: 1px solid var(--rule); }
-  .site-nav.open .site-links .sub { display: inline; }
 }
 @media (max-width: 420px) {
   .site-nav .gh-star .label { display: none; }
