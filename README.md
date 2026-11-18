@@ -54,11 +54,11 @@
 <!-- ARXIV_RADAR_STATUS:START -->
 > [!NOTE]
 > FinPaperRadar（AI × 金融论文雷达）machine-updated status
-> - Latest update: 2026-11-17
-> - AI × finance papers on the site: 383 (core 281; relevance ≥ 2 with an AI/ML method, since 2022-01-01)
-> - Latest publication date: 2026-11-16
+> - Latest update: 2026-11-18
+> - AI × finance papers on the site: 397 (core 288; relevance ≥ 2 with an AI/ML method, since 2022-01-01)
+> - Latest publication date: 2026-11-17
 > - Monitored arXiv categories: 15 (plus finance papers from cs.LG and stat.ML)
-> - Papers in the open dataset (all fetched, incl. not relevant): 31717
+> - Papers in the open dataset (all fetched, incl. not relevant): 32060
 > - Full dataset (CC BY 4.0 for FinPaperRadar additions): [Hugging Face](https://huggingface.co/datasets/Barca21412/FinPaperRadar) · [GitHub Release mirror](https://github.com/Barca0412/Introduction-to-Quantitative-Finance/releases/tag/radar-data)
 <!-- ARXIV_RADAR_STATUS:END -->
 
