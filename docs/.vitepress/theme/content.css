@@ -31,8 +31,9 @@
 
 /* ============ 首页 ============ */
 .content-view.home main { padding-block-start: 24px; }
-.content-view .hero { display: grid; grid-template-columns: minmax(0, 34fr) minmax(0, 66fr); column-gap: 32px; padding-block-start: 28px; }
-.content-view .hero-talk { padding-block-start: clamp(96px, 10.5vw, 160px); }
+/* 宽屏首屏：整块在第一屏里上下居中，左边介绍对着右边的标题和图上下居中，四周留白均衡 */
+.content-view .hero { display: grid; grid-template-columns: minmax(0, 34fr) minmax(0, 66fr); column-gap: 32px; align-items: center; align-content: center; min-block-size: calc(100svh - 85px); padding-block: 16px 40px; }
+.content-view .hero-talk { padding-block-start: 0; }
 .content-view .hero-sentence { font-size: var(--step-lead); line-height: 1.45; max-inline-size: 17em; letter-spacing: -0.01em; }
 .content-view .hero-action { margin-block-start: 32px; }
 .content-view .hero-by { margin-block-start: 28px; color: var(--muted); font-size: var(--step-small); max-inline-size: 22em; }
@@ -226,7 +227,7 @@
 }
 /* 中等宽度：首屏改成上下排（标题 → 介绍和按钮 → 图），避免左栏太窄、下面空一大块 */
 @media (min-width: 861px) and (max-width: 1240px) {
-  .content-view .hero { display: flex; flex-direction: column; }
+  .content-view .hero { display: flex; flex-direction: column; min-block-size: 0; padding-block: 28px 0; }
   .content-view .hero-main { display: contents; }
   .content-view .hero-main h1 { order: 1; font-size: clamp(3rem, 1rem + 5vw, 5rem); }
   .content-view .hero-talk { order: 2; padding-block-start: 32px; display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 40px; align-items: end; }
@@ -238,7 +239,7 @@
 @media (max-width: 860px) {
   .content-view.home section + section { margin-block-start: 112px; }
   .content-view .hero, .content-view .home-lectures { grid-template-columns: minmax(0, 1fr); }
-  .content-view .hero { padding-block-start: 24px; }
+  .content-view .hero { min-block-size: 0; padding-block: 24px 0; }
   .content-view .hero-main { order: -1; }
   .content-view .hero-main h1 { font-size: clamp(2.25rem, 10.2vw, 3.75rem); }
   .content-view .hero-talk { padding-block-start: 28px; }

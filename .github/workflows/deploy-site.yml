@@ -91,6 +91,8 @@ jobs:
           # Public Umami website IDs (analysis.hfthnu.com); unset = build without tracking.
           UMAMI_WEBSITE_ID_MAIN: ${{ vars.UMAMI_WEBSITE_ID_MAIN }}
           UMAMI_WEBSITE_ID_PAGES: ${{ vars.UMAMI_WEBSITE_ID_PAGES }}
+          # Read-only token for the GitHub Star count (anonymous calls get rate-limited on shared runners).
+          GITHUB_TOKEN: ${{ github.token }}
         run: npm run docs:build:dual
       - name: Keep both builds for independent deployment and rollback
         uses: actions/upload-artifact@v4
