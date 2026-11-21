@@ -13,6 +13,8 @@ import WikiBacklinks from './components/WikiBacklinks.vue'
 import WikiMeta from './components/WikiMeta.vue'
 import TutorialList from './components/TutorialList.vue'
 import { installAnalytics } from './analytics.js'
+import SubscribeCard from './components/SubscribeCard.vue'
+import { installSubscribeTimer } from './subscribe.js'
 const TutorialIndex = defineAsyncComponent(() => import('./components/TutorialIndex.vue'))
 const HomePage = defineAsyncComponent(() => import('./components/HomePage.vue'))
 const LibraryIndex = defineAsyncComponent(() => import('./components/LibraryIndex.vue'))
@@ -35,10 +37,11 @@ const Layout = {setup(){const {frontmatter,page}=useData();const tutorial=comput
  'doc-before':()=>tutorial.value?null:[resource.value?h(ResourceIntro):null,h(WikiMeta)],
  'aside-outline-before':()=>resource.value?h(ResourceOutline):null,
  'doc-after':()=>h(WikiBacklinks),
- 'layout-bottom':()=>h(SiteFooter)
+ 'layout-bottom':()=>[h(SiteFooter),h(SubscribeCard)]
 })}}
 export default {extends:DefaultTheme,Layout,enhanceApp({app,router}){
  if(typeof window!=='undefined') installAnalytics(router)
+ if(typeof window!=='undefined') installSubscribeTimer()
  if(typeof window!=='undefined') document.addEventListener('click',event=>{const img=event.target.closest?.('.vp-doc img');if(img&&!img.closest('a'))window.open(img.currentSrc||img.src,'_blank','noopener')})
  for(const [name,component] of Object.entries({HomePage,TutorialIndex,TutorialList,LibraryIndex,SiteArticle,RadarOverview,RadarPapers,RadarTrends,RadarPeople,RadarEntity,RadarAbout,IconWrapper,RadarDatasetLinks}))app.component(name,component)
 }}

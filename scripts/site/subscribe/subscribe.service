@@ -1,0 +1,21 @@
+# systemd unit for the weekly-digest subscription service.
+# Install (needs sudo, done by the server admin):
+#   sudo cp subscribe.service /etc/systemd/system/iqf-subscribe.service
+#   sudo systemctl daemon-reload && sudo systemctl enable --now iqf-subscribe
+[Unit]
+Description=quant.hfthnu.com weekly digest subscriptions (127.0.0.1:8731)
+After=network.target
+
+[Service]
+User=qgh
+WorkingDirectory=/home/qgh/subscribe
+ExecStart=/usr/bin/python3 /home/qgh/subscribe/subscribe_server.py --config /home/qgh/subscribe/config.env serve
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ReadWritePaths=/home/qgh/subscribe
+
+[Install]
+WantedBy=multi-user.target

@@ -3,6 +3,7 @@ import { computed, ref, watch } from 'vue'
 import { useData, useRoute, withBase } from 'vitepress'
 import GitHubStar from './GitHubStar.vue'
 import RadarNav from './RadarNav.vue'
+import { openSubscribe } from '../subscribe.js'
 const route = useRoute()
 const { isDark } = useData()
 const open = ref(false)
@@ -17,7 +18,8 @@ function search() { window.dispatchEvent(new KeyboardEvent('keydown', { key: 'k'
 <header id="site-header" :class="{ 'has-radar-nav': radar }">
   <div class="site-nav" :class="{open}">
     <a class="site-name" :href="withBase('/')"><i aria-hidden="true"></i>量化研究入门与AI+金融</a>
-    <nav class="site-links" id="site-links" aria-label="站点导航"><a v-for="[name,url] in nav" :key="url" :href="withBase(url)" :aria-current="current(url)?'page':undefined">{{ name }}<span v-if="url === '/arxiv/'" class="sub">FinPaperRadar</span></a></nav>
+    <nav class="site-links" id="site-links" aria-label="站点导航"><button type="button" class="sub-menu-item" @click="open = false; openSubscribe('menu')"><i aria-hidden="true"></i>一键订阅每周 AI × 金融</button><a v-for="[name,url] in nav" :key="url" :href="withBase(url)" :aria-current="current(url)?'page':undefined">{{ name }}<span v-if="url === '/arxiv/'" class="sub">FinPaperRadar</span></a></nav>
+    <button type="button" class="sub-btn" @click="openSubscribe('header')"><i aria-hidden="true"></i>一键订阅</button>
     <GitHubStar />
     <button type="button" class="site-menu" :aria-expanded="open" aria-controls="site-links" @click="open = !open">{{ open ? '收起' : '菜单' }}</button>
     <details class="site-tools"><summary aria-label="站内搜索与显示设置">···</summary><div><button type="button" @click="search">搜索站内内容 <kbd>⌘ K</kbd></button><button type="button" @click="isDark = !isDark">切换深浅色</button></div></details>
