@@ -44,12 +44,13 @@ onBeforeUnmount(() => clearInterval(timer))
     </p>
     <p class="live-total">
       累计&nbsp;<template v-if="total.visitors != null"><span class="num">{{ fmt(total.visitors) }}</span> 位访客 · </template>
-      <span class="num">{{ fmt(total.agent_requests || 0) }}</span> 个 agent
+      <span class="num">{{ fmt(total.agent_requests || 0) }}</span> 个 agent<span class="since">（自 2026 年 11 月 17 日起）</span>
     </p>
   </div>
 </template>
 
 <style scoped>
+.since { white-space: nowrap; }
 .live-stats { margin-block-start: 20px; color: var(--muted); font-size: var(--step-small); line-height: 1.7; max-inline-size: 26em; }
 .live-now { display: flex; align-items: center; flex-wrap: wrap; gap: 0 4px; color: var(--ink); }
 .live-dot { inline-size: 8px; block-size: 8px; border-radius: 50%; background: var(--accent); border: 1.5px solid var(--ink); margin-inline-end: 4px; flex: none; }
