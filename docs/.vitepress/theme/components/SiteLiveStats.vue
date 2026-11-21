@@ -1,5 +1,5 @@
 <script setup>
-// 首页的访问统计：此刻多少人在看、多少 AI 在读取，以及累计访客和 AI 读取次数。
+// 首页的访问统计：此刻多少人在看、多少 agent 在读，以及累计访客和 agent 读取次数。
 // 数据由服务器每分钟生成一次（scripts/site/stats/site_stats.py），只有总数，没有任何访客信息。
 // 读不到、或数据超过 10 分钟没更新时，整块隐藏，不显示 0。
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
@@ -43,16 +43,16 @@ onBeforeUnmount(() => clearInterval(timer))
     <p class="live-now">
       <i class="live-dot" aria-hidden="true"></i>
       <template v-if="online.humans != null">此刻 <span class="num">{{ fmt(online.humans) }}</span> 人在看 · </template>
-      <span class="num">{{ fmt(online.agents || 0) }}</span> 个 AI 正在读取
+      <span class="num">{{ fmt(online.agents || 0) }}</span> 个 agent 正在读
     </p>
     <p class="live-total">
       累计&nbsp;<template v-if="total.visitors != null"><span class="num">{{ fmt(total.visitors) }}</span> 位访客 · </template>
-      AI 读取 <span class="num">{{ fmt(total.agent_requests || 0) }}</span> 次
+      agent 读取 <span class="num">{{ fmt(total.agent_requests || 0) }}</span> 次
     </p>
     <details class="live-how">
       <summary>怎么数的</summary>
-      <p>人数来自本站自己部署的统计工具 Umami，"此刻"指最近 5 分钟内有活动的访客；已识别出的 AI 爬虫不计入。AI 来自网站服务器日志，只统计在请求里自报身份的 AI，比如 GPTBot、ClaudeBot、ChatGPT-User；伪装成普通浏览器的 AI 识别不出来。访客从 {{ day(since.visitors) }}起算，AI 从 {{ day(since.agents) }}起算。每分钟更新一次，只公开总数。</p>
-      <p v-if="agentsTop.length">来过的 AI：<template v-for="([name, n], i) in agentsTop" :key="name">{{ i ? '、' : '' }}{{ name }} <span class="num">{{ fmt(n) }}</span> 次</template>。<a :href="withBase('/about#访问统计')">详细说明</a></p>
+      <p>人数来自本站自己部署的统计工具 Umami，"此刻"指最近 5 分钟内有活动的访客；已识别出的 AI 爬虫不计入。agent 指 AI 爬虫和 AI 助手，数据来自网站服务器日志，只统计在请求里自报身份的，比如 GPTBot、ClaudeBot、ChatGPT-User；伪装成普通浏览器的 agent 识别不出来。访客从 {{ day(since.visitors) }}起算，agent 从 {{ day(since.agents) }}起算。每分钟更新一次，只公开总数。</p>
+      <p v-if="agentsTop.length">来过的 agent：<template v-for="([name, n], i) in agentsTop" :key="name">{{ i ? '、' : '' }}{{ name }} <span class="num">{{ fmt(n) }}</span> 次</template>。<a :href="withBase('/about#访问统计')">详细说明</a></p>
     </details>
   </div>
 </template>
