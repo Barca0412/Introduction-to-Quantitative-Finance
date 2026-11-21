@@ -208,6 +208,9 @@ export default defineConfig({
   },
 
   head: [
+    ['link', { rel: 'icon', href: `${BASE}favicon.ico`, sizes: '48x48' }],
+    ['link', { rel: 'icon', type: 'image/png', href: `${BASE}favicon-48.png` }],
+    ['link', { rel: 'apple-touch-icon', href: `${BASE}apple-touch-icon.png` }],
     ...umamiTracker,
     ...siteVerification,
     ['meta', { name: 'author', content: '湖南大学金融科技协会 Quant Group' }],
