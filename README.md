@@ -54,7 +54,7 @@
 <!-- ARXIV_RADAR_STATUS:START -->
 > [!NOTE]
 > FinPaperRadar（AI × 金融论文雷达）machine-updated status
-> - Latest update: 2026-11-21
+> - Latest update: 2026-11-22
 > - AI × finance papers on the site: 415 (core 298; relevance ≥ 2 with an AI/ML method, since 2022-01-01)
 > - Latest publication date: 2026-11-19
 > - Monitored arXiv categories: 15 (plus finance papers from cs.LG and stat.ML)
