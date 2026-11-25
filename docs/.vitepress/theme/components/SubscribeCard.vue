@@ -23,6 +23,7 @@ const website = ref('') // 陷阱字段，真人看不到
 const picked = ref([])
 const showDomains = ref(false)
 const state = ref('idle') // idle | sending | done | error
+const queued = ref(false) // 发信服务开通前：先登记，周报发出前再补发确认信
 const error = ref('')
 const input = ref(null)
 const card = ref(null)
@@ -61,6 +62,7 @@ async function submit() {
     })
     const body = await res.json().catch(() => ({}))
     if (!res.ok || !body.ok) throw new Error(body.error || 'failed')
+    queued.value = Boolean(body.queued)
     state.value = 'done'
     markSubscribed()
   } catch (e) {
@@ -107,8 +109,14 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKey))
         </div>
       </template>
       <template v-else>
-        <h2 id="sub-title" class="sub-title"><i class="sub-dot" aria-hidden="true"></i>还差一步：去邮箱点确认</h2>
-        <p class="sub-lead">确认信已经发到 <strong>{{ email.trim() }}</strong>。点信里的链接就订阅好了；没收到的话，看看垃圾邮件。</p>
+        <template v-if="queued">
+          <h2 id="sub-title" class="sub-title"><i class="sub-dot" aria-hidden="true"></i>订阅成功</h2>
+          <p class="sub-lead">已经记下 <strong>{{ email.trim() }}</strong>。第一期周报发出前，我们会先给这个邮箱发一封确认信，点一下确认就好。</p>
+        </template>
+        <template v-else>
+          <h2 id="sub-title" class="sub-title"><i class="sub-dot" aria-hidden="true"></i>还差一步：去邮箱点确认</h2>
+          <p class="sub-lead">确认信已经发到 <strong>{{ email.trim() }}</strong>。点信里的链接就订阅好了；没收到的话，看看垃圾邮件。</p>
+        </template>
       </template>
       <div class="sub-foot">
         <div class="sub-star"><GitHubStar /><span>觉得有用，去点个 Star</span></div>

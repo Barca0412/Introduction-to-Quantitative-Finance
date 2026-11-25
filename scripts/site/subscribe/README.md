@@ -21,6 +21,25 @@
 3. 已经订阅的邮箱再提交一次，不会再发信，只更新关心的方向。提交后的回复也一样，不会透露这个邮箱以前订没订过。
 4. 防机器人：同一个 IP 每小时最多提交 5 次；表单里有一个隐藏的陷阱字段，填了它的提交直接丢掉。
 
+## 没有发信服务时：先登记，后补发确认信
+
+- 配置文件里没有填 SMTP 时，服务自动进入"先登记"模式：
+  - 邮箱照常存进数据库，状态是"待确认"，但不发确认信；
+  - 页面提示读者："第一期周报发出前，我们会先给这个邮箱发一封确认信"。
+- 发信服务开通、SMTP 填进配置文件并重启服务以后，运行一次：
+  ```bash
+  python3 ~/subscribe/subscribe_server.py send-confirms --dry-run   # 先看要发多少封
+  python3 ~/subscribe/subscribe_server.py send-confirms             # 真正补发
+  ```
+  补发后，读者点了确认才算正式订阅。之后新来的订阅恢复正常流程：订阅后马上发确认信。
+
+## 飞书通知
+
+- 在协会内部的飞书群里添加一个"自定义机器人"，把它的 Webhook 地址写进 `config.env`：`FEISHU_WEBHOOK=…`。
+- 如果机器人开了"签名校验"，再把签名密钥写进 `FEISHU_SECRET=…`。
+- 写好后重启服务（`sudo systemctl restart iqf-subscribe`）。之后每来一个新订阅、每有一个退订，群里都会收到一条消息。
+- 推送失败不影响订阅本身，只在日志里记一笔。
+
 ## 服务器上的文件
 
 | 文件 | 说明 |
@@ -30,7 +49,7 @@
 | `~qgh/subscribe/subscribers.db` | 订阅数据 |
 | `/etc/systemd/system/iqf-subscribe.service` | 开机自启，由管理员安装，见 `subscribe.service` |
 
-`config.env` 示例（没填 SMTP 时，信件会写进 `~/subscribe/outbox.txt`，不会真的发出去，方便先测试）：
+`config.env` 示例（没填 SMTP 时进入"先登记"模式，见上文）：
 
 ```
 SITE_URL=https://quant.hfthnu.com
@@ -42,6 +61,8 @@ SMTP_PORT=465
 SMTP_USER=（发信服务给的用户名）
 SMTP_PASS=（发信服务给的密码，只写在服务器上）
 DOMAINS=asset-pricing,trading,portfolio-risk,derivatives,credit-banking,corporate-finance,fin-nlp,crypto-defi,macro-policy,insurance-household,market-structure
+FEISHU_WEBHOOK=（飞书群自定义机器人的地址）
+FEISHU_SECRET=（开了签名校验才需要）
 ```
 
 ## nginx（加在 `/etc/nginx/conf.d/quant.hfthnu.com.conf` 的 HTTPS server 里）
