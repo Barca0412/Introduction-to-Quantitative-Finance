@@ -18,7 +18,7 @@ function search() { window.dispatchEvent(new KeyboardEvent('keydown', { key: 'k'
 <header id="site-header" :class="{ 'has-radar-nav': radar }">
   <div class="site-nav" :class="{open}">
     <a class="site-name" :href="withBase('/')"><i aria-hidden="true"></i>量化研究入门与AI+金融资源站</a>
-    <nav class="site-links" id="site-links" aria-label="站点导航"><button type="button" class="sub-menu-item" @click="open = false; openSubscribe('menu')"><i aria-hidden="true"></i>一键订阅每周 AI × 金融</button><a v-for="[name,url] in nav" :key="url" :href="withBase(url)" :aria-current="current(url)?'page':undefined">{{ name }}<span v-if="url === '/arxiv/'" class="sub">FinPaperRadar</span></a></nav>
+    <nav class="site-links" id="site-links" aria-label="站点导航"><button type="button" class="sub-menu-item" @click="open = false; openSubscribe('menu')"><i aria-hidden="true"></i>一键订阅 AI × 金融资讯</button><a v-for="[name,url] in nav" :key="url" :href="withBase(url)" :aria-current="current(url)?'page':undefined">{{ name }}<span v-if="url === '/arxiv/'" class="sub">FinPaperRadar</span></a></nav>
     <button type="button" class="sub-btn" @click="openSubscribe('header')"><i aria-hidden="true"></i>一键订阅</button>
     <GitHubStar />
     <button type="button" class="site-menu" :aria-expanded="open" aria-controls="site-links" @click="open = !open">{{ open ? '收起' : '菜单' }}</button>

@@ -6,7 +6,7 @@ head:
     - name: robots
       content: noindex
 title: 订阅好了
-description: 从下周一开始，每周一封全球 AI × 金融资讯会发到你的邮箱。每封信底部都有退订链接，随时可以退订。
+description: 之后每周一份全球 AI × 金融资讯精选会发到你的邮箱。每封信底部都有退订链接，随时可以退订。
 ---
 
 <script setup>
@@ -20,7 +20,7 @@ onMounted(() => { markSubscribed(); track('subscribe-confirmed') })
 
 ## 接下来
 
-- 每周一早上收到一封信：本周三件大事、产业动态、监管与政策，以及值得读的研究。
+- 每周收到一份精选：本周大事、产业动态、监管与政策，以及顶会顶刊与权威机构的新研究，每条都有中文摘要和原文链接。
 - 看到值得分享的 AI × 金融资讯，直接回复周报邮件推荐给大家，我们会在下一期选登并署上你的名字。
 - 觉得有用，欢迎去 [GitHub](https://github.com/Barca0412/Introduction-to-Quantitative-Finance) 点一个 Star。
 

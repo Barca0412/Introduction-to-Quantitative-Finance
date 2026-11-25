@@ -117,8 +117,8 @@ onBeforeUnmount(() => { window.removeEventListener('keydown', onKey); document.d
     <section v-if="open" class="sub-card" :class="{ centered }" role="dialog" :aria-modal="centered ? 'true' : 'false'" aria-labelledby="sub-title">
       <button type="button" class="sub-close" aria-label="关闭" @click="close">×</button>
       <template v-if="state !== 'done'">
-        <h2 id="sub-title" class="sub-title"><i class="sub-dot" aria-hidden="true"></i>每周一，3 分钟读完全球 AI × 金融</h2>
-        <p class="sub-lead">产业动态 · 监管政策 · 顶会顶刊与权威机构的最新研究，一封邮件读完。随时可以退订。</p>
+        <h2 id="sub-title" class="sub-title"><i class="sub-dot" aria-hidden="true"></i><span><span class="nb">全球 AI × 金融资讯，</span><span class="nb">每周一份精选</span></span></h2>
+        <p class="sub-lead">产业动态、监管政策、顶会顶刊与权威机构的新研究，我们每周替你读遍全网、筛出重点，配上中文摘要和原文链接，发到你的邮箱。免费订阅，随时退订。</p>
         <form class="sub-form" novalidate @submit.prevent="submit">
           <label class="sr-only" for="sub-email">邮箱</label>
           <input id="sub-email" ref="input" v-model="email" type="email" inputmode="email" autocomplete="email" placeholder="你的邮箱" maxlength="254" required>
@@ -193,6 +193,7 @@ onBeforeUnmount(() => { window.removeEventListener('keydown', onKey); document.d
 .sub-close:hover { background: var(--surface); color: var(--ink); }
 .sub-title { display: flex; gap: 10px; align-items: baseline; text-wrap: balance; padding-inline-end: 28px; font-size: 1.1875rem; font-weight: 700; line-height: 1.35; letter-spacing: -0.01em; }
 .centered .sub-title { font-size: 1.375rem; }
+.sub-title .nb { white-space: nowrap; }
 .sub-dot { flex: none; inline-size: 11px; block-size: 11px; border-radius: 50%; background: var(--accent); border: 1.5px solid var(--ink); transform: translateY(-1px); }
 .sub-lead { margin-block-start: 8px; color: var(--muted); font-size: 0.9375rem; line-height: 1.6; }
 .sub-lead strong { color: var(--ink); font-weight: 600; word-break: break-all; }
