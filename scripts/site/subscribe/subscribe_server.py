@@ -51,8 +51,10 @@ from typing import Dict, List, Optional
 from urllib.parse import parse_qs, urlencode, urlsplit
 
 EMAIL_RE = re.compile(r"^[A-Za-z0-9._%+\-]+@[A-Za-z0-9\-]+(\.[A-Za-z0-9\-]+)*\.[A-Za-z]{2,}$")
-DOMAIN_RE = re.compile(r"^[a-z0-9][a-z0-9\-]{0,40}$")
-MAX_DOMAINS = 3
+ID_RE = r"[a-z0-9][a-z0-9\-]{0,40}"
+# an interest is a whole row (d:<domain>), a whole column (t:<task>) or one cell (d:<domain>|t:<task>)
+PICK_RE = re.compile(rf"^(?:d:(?P<d>{ID_RE})(?:\|t:(?P<t>{ID_RE}))?|t:(?P<t2>{ID_RE}))$")
+MAX_DOMAINS = 9
 MAX_BODY = 4096
 RATE_LIMIT = (5, 3600)  # at most 5 subscribe requests per IP per hour
 CONFIRM_TTL_DAYS = 7
@@ -61,6 +63,11 @@ DOMAIN_NAMES = {
     "derivatives": "衍生品", "credit-banking": "信用、银行与支付", "corporate-finance": "公司金融与会计",
     "fin-nlp": "金融文本与舆情", "crypto-defi": "加密资产", "macro-policy": "宏观与政策",
     "insurance-household": "保险与个人金融", "market-structure": "市场结构与行为",
+}
+TASK_NAMES = {
+    "forecasting": "预测", "pricing": "定价", "decision": "交易决策", "signal-mining": "因子挖掘",
+    "understanding": "理解问答", "risk-assessment": "风险评估", "generation": "生成", "simulation": "市场模拟",
+    "multi-task": "多任务",
 }
 
 SCHEMA = """
@@ -314,8 +321,15 @@ class Feishu:
             t.join()
 
 
-def domain_label(domains: List[str]) -> str:
-    return "、".join(DOMAIN_NAMES.get(d, d) for d in domains) or "全部"
+def domain_label(picks: List[str]) -> str:
+    def one(key: str) -> str:
+        m = PICK_RE.match(key if ":" in key else f"d:{key}")
+        if not m:
+            return key
+        d, t = m.group("d"), m.group("t") or m.group("t2")
+        dn, tn = DOMAIN_NAMES.get(d or "", d), TASK_NAMES.get(t or "", t)
+        return f"{dn}×{tn}" if d and t else (f"{dn}（整行）" if d else f"{tn}（整列）")
+    return "、".join(one(k) for k in picks) or "全部"
 
 
 class RateLimiter:
@@ -336,17 +350,27 @@ class RateLimiter:
             return True
 
 
-def clean_domains(raw, allowed: List[str]) -> Optional[List[str]]:
+def clean_domains(raw, allowed: List[str], tasks: Optional[List[str]] = None) -> Optional[List[str]]:
+    """Normalise the reader's interests: up to 9 of 'd:<domain>', 't:<task>', 'd:<domain>|t:<task>'.
+    A bare domain id (older form) is read as 'd:<id>'. Returns None for anything invalid."""
+    tasks = list(TASK_NAMES) if tasks is None else tasks
     if raw is None:
         return []
     if not isinstance(raw, list) or len(raw) > MAX_DOMAINS:
         return None
     out = []
-    for d in raw:
-        if not isinstance(d, str) or not DOMAIN_RE.match(d) or (allowed and d not in allowed):
+    for item in raw:
+        if not isinstance(item, str):
             return None
-        if d not in out:
-            out.append(d)
+        key = item if ":" in item else f"d:{item}"
+        m = PICK_RE.match(key)
+        if not m:
+            return None
+        d, t = m.group("d"), m.group("t") or m.group("t2")
+        if (d and allowed and d not in allowed) or (t and t not in tasks):
+            return None
+        if key not in out:
+            out.append(key)
     return out
 
 

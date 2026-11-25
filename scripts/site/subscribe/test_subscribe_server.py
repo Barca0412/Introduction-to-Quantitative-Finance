@@ -108,7 +108,7 @@ class FlowTest(unittest.TestCase):
         self.assertEqual(len(tokens), 1)
         self.assertEqual(self.get(f"/api/subscribe/confirm?t={tokens[0]}"), (303, "https://site.test/subscribe/confirmed"))
         subs = self.store.subscribed()
-        self.assertEqual([(s["email"], s["domains"]) for s in subs], [("reader@example.com", ["trading"])])
+        self.assertEqual([(s["email"], s["domains"]) for s in subs], [("reader@example.com", ["d:trading"])])
         # confirm link works once
         self.assertEqual(self.get(f"/api/subscribe/confirm?t={tokens[0]}")[1], "https://site.test/subscribe/invalid")
         # topics can be changed with the unsubscribe token from the digest
@@ -118,7 +118,7 @@ class FlowTest(unittest.TestCase):
                          "https://site.test/subscribe/unsubscribed")
         self.assertEqual(self.store.subscribed(), [])
         self.assertEqual(self.store.counts(), {"unsubscribed": 1})
-        self.assertEqual(self.feishu.texts(2), ["新订阅：reader@example.com｜关心：交易与执行｜现有 1 人", "退订：reader@example.com｜现有 0 人"])
+        self.assertEqual(self.feishu.texts(2), ["新订阅：reader@example.com｜关心：交易与执行（整行）｜现有 1 人", "退订：reader@example.com｜现有 0 人"])
 
     def test_known_address_gets_no_new_mail_and_same_answer(self):
         self.post("/api/subscribe/", {"email": "a@example.com"})
@@ -126,7 +126,7 @@ class FlowTest(unittest.TestCase):
         code, body, _ = self.post("/api/subscribe/", {"email": "a@example.com", "domains": ["credit-banking"]})
         self.assertEqual((code, body), (200, {"ok": True}))
         self.assertEqual(len(self.outbox_tokens()), 1)
-        self.assertEqual(self.store.subscribed()[0]["domains"], ["credit-banking"])
+        self.assertEqual(self.store.subscribed()[0]["domains"], ["d:credit-banking"])
 
     def test_pending_resend_is_throttled(self):
         self.post("/api/subscribe/", {"email": "b@example.com"})
@@ -141,7 +141,7 @@ class FlowTest(unittest.TestCase):
         self.assertEqual(self.post("/api/subscribe/", {"email": "c@example.com", "domains": ["unknown"]})[1]["error"], "bad-domains")
         # invalid attempts count toward the per-IP limit too (3 in this test setup)
         self.assertEqual(self.post("/api/subscribe/", {"email": "c@example.com", "domains": ["x", "y", "z", "w"]})[0], 429)
-        self.assertEqual(ss.clean_domains(["x", "y", "z", "w"], []), None)
+        self.assertEqual(ss.clean_domains([f"d:x{i}" for i in range(10)], []), None)
         self.assertEqual(self.get("/api/subscribe/unsubscribe?t=nope")[1], "https://site.test/subscribe/invalid")
 
     def test_rate_limit(self):
@@ -180,7 +180,7 @@ class QueueModeTest(FlowTest):
         self.assertEqual((code, body), (200, {"ok": True, "queued": True}))
         self.assertEqual(self.outbox_tokens(), [])  # nothing mailed
         self.assertEqual(self.store.counts(), {"pending": 1})
-        self.assertEqual(self.feishu.texts(1), ["新订阅：q@example.com｜关心：交易与执行、信用、银行与支付｜现有 1 人（确认信待发）"])
+        self.assertEqual(self.feishu.texts(1), ["新订阅：q@example.com｜关心：交易与执行（整行）、信用、银行与支付（整行）｜现有 1 人（确认信待发）"])
         # same address again: same answer, no second notification
         self.assertEqual(self.post("/api/subscribe/", {"email": "q@example.com"})[1], {"ok": True, "queued": True})
         time.sleep(0.2)
@@ -202,6 +202,18 @@ class QueueModeTest(FlowTest):
         self.post("/api/subscribe/", {"email": "z@example.com"})
         self.assertEqual(ss.send_confirms(self.store, ss.Mailer(self.cfg), self.cfg, ss.Feishu({})), 1)
         self.assertEqual(self.store.pending_unsent(), [{"email": "z@example.com"}])
+
+
+class PicksTest(unittest.TestCase):
+    def test_rows_columns_and_cells(self):
+        allowed = ["trading", "credit-banking"]
+        self.assertEqual(ss.clean_domains(["d:trading", "t:forecasting", "d:credit-banking|t:pricing", "trading"], allowed),
+                         ["d:trading", "t:forecasting", "d:credit-banking|t:pricing"])
+        self.assertIsNone(ss.clean_domains(["t:unknown"], allowed))
+        self.assertIsNone(ss.clean_domains(["d:other|t:pricing"], allowed))
+        self.assertIsNone(ss.clean_domains(["d:trading|x:pricing"], allowed))
+        self.assertEqual(len(ss.clean_domains([f"t:{t}" for t in ss.TASK_NAMES], allowed)), 9)
+        self.assertEqual(ss.domain_label(["d:trading|t:forecasting", "t:pricing", "d:trading"]), "交易与执行×预测、定价（整列）、交易与执行（整行）")
 
 
 class FeishuSignTest(unittest.TestCase):
