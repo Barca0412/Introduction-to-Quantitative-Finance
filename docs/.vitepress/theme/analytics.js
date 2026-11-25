@@ -8,7 +8,7 @@
 const REPO = 'github.com/barca0412/introduction-to-quantitative-finance'
 const MAX_VALUE = 120
 
-function track(name, data) {
+export function track(name, data) {
   try {
     if (typeof window !== 'undefined' && window.umami && typeof window.umami.track === 'function') {
       window.umami.track(name, data)

@@ -59,6 +59,12 @@ html { scroll-padding-top: calc(var(--head-h) + 16px); }
 .gh-star .count svg.star { inline-size: 12px; block-size: 12px; }
 .gh-star svg { inline-size: 17px; block-size: 17px; fill: currentColor; }
 .gh-star .count { display: inline-flex; align-items: center; gap: 5px; block-size: 28px; padding-inline: 10px; border-radius: var(--radius); background: var(--accent); color: var(--accent-ink); font-variant-numeric: tabular-nums; }
+/* 一键订阅：顶栏里 GitHub 左边的文字按钮；窄屏收进菜单的第一行 */
+.sub-btn { display: inline-flex; align-items: center; gap: 8px; block-size: 36px; padding-inline: 14px; border-radius: var(--radius); background: var(--accent); color: var(--accent-ink); font-weight: 600; font-size: 0.9375rem; white-space: nowrap; transition: background-color 120ms ease-out, transform 120ms ease-out; }
+.sub-btn:hover { background: var(--accent-hover); }
+.sub-btn:active { transform: scale(0.97); }
+.sub-btn i, .sub-menu-item i { inline-size: 9px; block-size: 9px; border-radius: 50%; background: var(--accent-ink); flex: none; } /* 深绿色，深色模式下也不变 */
+.sub-menu-item { display: none; }
 .site-menu { display: none; block-size: 44px; padding-inline: 12px; margin-inline-end: -12px; white-space: nowrap; flex: none; }
 
 /* 雷达自己的页面切换：顶栏下面一条细线，和站点导航用同一套字，只是更小、用下划线标出当前页；不再重复雷达的名字和小球 */
@@ -117,6 +123,9 @@ img, svg.chart, canvas, .figure, figure img, .chart-box { border-radius: var(--f
   .site-nav.open .site-links { display: flex; flex-direction: column; gap: 0; order: 9; flex-basis: 100%; margin-inline-start: 0; padding-block: 4px 16px; }
   .site-nav.open .site-links a { display: flex; align-items: center; min-block-size: 44px; border-block-start: 1px solid var(--rule); }
   .site-nav.open .site-links .sub { display: inline; }
+  .site-nav .sub-btn { display: none; }
+  .site-nav.open .sub-menu-item { display: flex; align-items: center; gap: 10px; min-block-size: 44px; font-weight: 600; color: var(--ink); text-align: start; }
+  .site-nav.open .sub-menu-item i { background: var(--accent); border: 1.5px solid var(--ink); }
 }
 @media (max-width: 860px) {
   :root { --margin: 20px; }
