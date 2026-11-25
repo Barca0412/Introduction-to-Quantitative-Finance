@@ -197,7 +197,9 @@ onBeforeUnmount(() => { window.removeEventListener('keydown', onKey); document.d
 .sub-lead { margin-block-start: 8px; color: var(--muted); font-size: 0.9375rem; line-height: 1.6; }
 .sub-lead strong { color: var(--ink); font-weight: 600; word-break: break-all; }
 .sub-form { display: flex; gap: 8px; margin-block-start: 16px; }
-.sub-form input[type="email"] { flex: 1; min-inline-size: 0; block-size: 44px; padding-inline: 16px; border: 1px solid var(--control); border-radius: var(--radius); background: #fff; color: var(--ink); font-size: 1rem; }
+/* 邮箱框在浅色、深色模式下都是白底，所以文字、光标、占位字都用固定的深色，不跟主题变 */
+.sub-form input[type="email"] { flex: 1; min-inline-size: 0; block-size: 44px; padding-inline: 16px; border: 1px solid var(--control); border-radius: var(--radius); background: #fff; color: #0d2a1c; caret-color: #0d2a1c; font-size: 1rem; }
+.sub-form input[type="email"]::placeholder { color: #6b7670; opacity: 1; }
 .sub-form input[type="email"]:focus-visible { outline: 2px solid var(--focus); outline-offset: 1px; }
 .sub-submit { block-size: 44px; padding-inline: 20px; }
 .sub-submit:disabled { opacity: 0.6; }
@@ -225,6 +227,8 @@ onBeforeUnmount(() => { window.removeEventListener('keydown', onKey); document.d
 .row-h button { min-block-size: 28px; padding-inline: 8px; border-radius: 8px; text-align: start; }
 .col-h button:hover:not(:disabled), .row-h button:hover:not(:disabled) { background: var(--surface); }
 .col-h button[aria-pressed="true"], .row-h button[aria-pressed="true"] { background: var(--ink); color: var(--bg); font-weight: 600; }
+/* 已选中的行名/列名：悬停时背景变浅，文字同时换成深色，保证看得清 */
+.col-h button[aria-pressed="true"]:hover, .row-h button[aria-pressed="true"]:hover { background: var(--surface); color: var(--ink); }
 .sub-grid th button:disabled { opacity: 0.4; }
 .cell { inline-size: var(--cell); block-size: 30px; padding: 0; text-align: center; }
 .cell button { display: inline-grid; place-items: center; inline-size: 30px; block-size: 28px; border-radius: 8px; }

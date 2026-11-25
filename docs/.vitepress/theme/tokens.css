@@ -63,7 +63,7 @@ html { scroll-padding-top: calc(var(--head-h) + 16px); }
 .sub-btn { display: inline-flex; align-items: center; gap: 8px; block-size: 36px; padding-inline: 14px; border-radius: var(--radius); background: var(--accent); color: var(--accent-ink); font-weight: 600; font-size: 0.9375rem; white-space: nowrap; transition: background-color 120ms ease-out, transform 120ms ease-out; }
 .sub-btn:hover { background: var(--accent-hover); }
 .sub-btn:active { transform: scale(0.97); }
-.sub-btn i, .sub-menu-item i { inline-size: 9px; block-size: 9px; border-radius: 50%; background: var(--ink); flex: none; }
+.sub-btn i, .sub-menu-item i { inline-size: 9px; block-size: 9px; border-radius: 50%; background: var(--accent-ink); flex: none; } /* 深绿色，深色模式下也不变 */
 .sub-menu-item { display: none; }
 .site-menu { display: none; block-size: 44px; padding-inline: 12px; margin-inline-end: -12px; white-space: nowrap; flex: none; }
 

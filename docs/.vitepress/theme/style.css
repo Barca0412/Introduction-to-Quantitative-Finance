@@ -21,6 +21,9 @@ body { background: var(--bg); color: var(--ink); font-family: var(--font); }
 button, input, select { font-family: inherit; }
 a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visible, select:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; }
 .VPNav, .VPFooter { display: none !important; }
+/* 站内搜索框：输入框本身不再画聚焦外框（会超出搜索栏），改为整条搜索栏的边框变色 */
+.VPLocalSearchBox .search-input:focus-visible, .VPLocalSearchBox input:focus-visible { outline: none; }
+.VPLocalSearchBox .search-bar:focus-within { border-color: var(--focus); }
 .VPContent { padding-top: 0 !important; }
 .VPPage { padding: 0 !important; }
 .VPLocalNav { top: 61px !important; }
