@@ -1,6 +1,6 @@
-# 量化研究入门 · Introduction to Quantitative Finance
-
-> 中文开源量化知识库：用免费数据一步步做完的**项目式量化教程**，配合概念知识库、研报与论文目录，以及每天更新的 **FinPaperRadar（AI × 金融论文雷达）**。
+<p align="center">
+  <a href="https://quant.hfthnu.com/"><img src="./assets/readme/hero.svg" width="100%" alt="量化研究入门 · Introduction to Quantitative Finance：量化课程讲义、研报与论文目录，和每天更新的 AI × 金融论文雷达"></a>
+</p>
 
 <p align="center">
   <a href="https://quant.hfthnu.com/"><strong>网站 quant.hfthnu.com</strong></a> ·
@@ -20,7 +20,7 @@
 
 ## 这里有什么
 
-网上的量化资料很多，但大多只给概念或只给清单，初学者很难把"数据、因子、回测、组合"真正串起来做一遍。这个项目的核心是教程：每一讲用免费数据完成一个具体的研究任务，并说明结果怎么读、哪里容易出错。
+网上的量化资料很多，但大多只给概念或只给清单，初学者很难把"数据、因子、回测、组合"真正串起来做一遍。这个项目的核心是教程：每一讲完成一个具体的研究任务，并说明结果怎么读、哪里容易出错。
 
 | 栏目 | 内容 |
 | --- | --- |
@@ -29,6 +29,12 @@
 | [研报与论文](https://quant.hfthnu.com/library/) | 194 份卖方金工研报、一百多篇学术论文的目录，以及讲义复现过的研报 |
 | [论文雷达](https://quant.hfthnu.com/arxiv/) | 每天抓取 arXiv 新论文，打标签、写中文摘要，支持语义检索 |
 | [资源](https://quant.hfthnu.com/resources/) | 精选开源项目、数据接口、论坛和课程 |
+
+### 从哪里开始
+
+1. 先做[实战一：计算 A 股个股与行业的 CAPM Beta](https://quant.hfthnu.com/tutorials/01-capm-beta/)，从取数据到读懂 Beta，一讲做完（数据来自 CSMAR，需要高校或机构账号）。
+2. 打开[论文雷达](https://quant.hfthnu.com/arxiv/)，看最近 AI × 金融有哪些新论文，每篇都有中文摘要。
+3. 想自己分析这些论文，就到 [Hugging Face 数据集](https://huggingface.co/datasets/Barca21412/FinPaperRadar)下载完整数据。
 
 如果这个项目对你有帮助，欢迎点一个 Star ⭐，让更多量化学习者看到它。
 
@@ -52,16 +58,33 @@
 完整历史数据以 Parquet 格式发布在 [Hugging Face 数据集](https://huggingface.co/datasets/Barca21412/FinPaperRadar)，GitHub Release [`radar-data`](https://github.com/Barca0412/Introduction-to-Quantitative-Finance/releases/tag/radar-data) 留有镜像，都不进 git。我们生成的标签、中文摘要、评分和向量按 CC BY 4.0 授权，arXiv 元数据本身是 CC0。流水线代码在 `scripts/arxiv_radar/`。
 
 <!-- ARXIV_RADAR_STATUS:START -->
-> [!NOTE]
-> FinPaperRadar（AI × 金融论文雷达）machine-updated status
-> - Latest update: 2026-11-28
-> - AI × finance papers on the site: 471 (core 325; relevance ≥ 2 with an AI/ML method, since 2022-01-01)
-> - Latest publication date: 2026-11-25
-> - arXiv schedule: No announcement on 2026-11-26 (Thu, US Thanksgiving, on arXiv's holiday list); arXiv does not announce on Fridays or Saturdays. Next announcement expected 2026-11-29 20:00 US Eastern ([arXiv schedule](https://info.arxiv.org/help/availability.html)).
-> - Monitored arXiv categories: 15 (plus finance papers from cs.LG and stat.ML)
-> - Papers in the open dataset (all fetched, incl. not relevant): 34461
-> - Full dataset (CC BY 4.0 for FinPaperRadar additions): [Hugging Face](https://huggingface.co/datasets/Barca21412/FinPaperRadar) · [GitHub Release mirror](https://github.com/Barca0412/Introduction-to-Quantitative-Finance/releases/tag/radar-data)
+<p align="center">
+  <a href="https://quant.hfthnu.com/arxiv/"><img src="./assets/readme/radar-snapshot.svg" width="100%" alt="论文雷达快照：网站收录 471 篇 AI × 金融论文，核心 325 篇，最新论文 2026-11-25。按金融领域：资产定价与因子 84，信用、银行与支付 78，交易与执行 70，组合与风险管理 70，金融文本与舆情 70，公司金融与会计 66。arXiv 停发：11 月 26 日（周四）美国感恩节；周五、周六本来不发。下一期预计北京时间 11 月 30 日（周一）上午。"></a>
+</p>
+
+截至 2026-11-28，网站收录 471 篇 AI × 金融论文（核心 325 篇，2022 年起），最新一篇发表于 2026-11-25。11 月 26 日（周四）是美国感恩节，在 [arXiv 官方的 2026 假期名单](https://info.arxiv.org/help/availability.html)上，当天晚上那一期停发了；周五、周六 arXiv 本来不发新论文。所以这几天没有新论文，不是本站出了问题。下一期预计北京时间 11 月 30 日（周一）上午发布，本站当天自动更新。
+
+<details>
+<summary>FinPaperRadar machine-updated status (English)</summary>
+
+- Latest update: 2026-11-28
+- AI × finance papers on the site: 471 (core 325; relevance ≥ 2 with an AI/ML method, since 2022-01-01)
+- Latest publication date: 2026-11-25
+- arXiv schedule: No announcement on 2026-11-26 (Thu, US Thanksgiving, on arXiv's holiday list); arXiv does not announce on Fridays or Saturdays. Next announcement expected 2026-11-29 20:00 US Eastern ([arXiv schedule](https://info.arxiv.org/help/availability.html)).
+- Monitored arXiv categories: 15 (plus finance papers from cs.LG and stat.ML)
+- Papers in the open dataset (all fetched, incl. not relevant): 34461
+- Full dataset (CC BY 4.0 for FinPaperRadar additions): [Hugging Face](https://huggingface.co/datasets/Barca21412/FinPaperRadar) · [GitHub Release mirror](https://github.com/Barca0412/Introduction-to-Quantitative-Finance/releases/tag/radar-data)
+
+</details>
 <!-- ARXIV_RADAR_STATUS:END -->
+
+<p align="center">
+  <img src="./assets/readme/radar-pipeline.svg" width="100%" alt="论文雷达每天怎么更新：arXiv 15 个分类的新论文，经 GitHub Actions 每日抓取，由大模型打研究标签、写中文摘要、评相关度，再发布到网站 quant.hfthnu.com、Hugging Face 数据集和这份 README">
+</p>
+
+- **每天自动更新**：GitHub Actions 每天抓一次 arXiv，处理完自动发布到网站、数据集和这份 README，上面的数字和图也是当天重画的。
+- **arXiv 停发会写明**：遇到 arXiv 的假期或周五、周六不发，网站和这里会说明原因和下一期时间，不会让人误以为雷达坏了。
+- **数据完全公开**：完整历史数据在 Hugging Face 和 GitHub Release，可以直接下载自己分析。
 
 <a id="section1"></a>
 
