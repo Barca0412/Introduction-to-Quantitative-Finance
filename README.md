@@ -54,9 +54,10 @@
 <!-- ARXIV_RADAR_STATUS:START -->
 > [!NOTE]
 > FinPaperRadar（AI × 金融论文雷达）machine-updated status
-> - Latest update: 2026-11-27
+> - Latest update: 2026-11-28
 > - AI × finance papers on the site: 471 (core 325; relevance ≥ 2 with an AI/ML method, since 2022-01-01)
 > - Latest publication date: 2026-11-25
+> - arXiv schedule: No announcement on 2026-11-26 (Thu, US Thanksgiving, on arXiv's holiday list); arXiv does not announce on Fridays or Saturdays. Next announcement expected 2026-11-29 20:00 US Eastern ([arXiv schedule](https://info.arxiv.org/help/availability.html)).
 > - Monitored arXiv categories: 15 (plus finance papers from cs.LG and stat.ML)
 > - Papers in the open dataset (all fetched, incl. not relevant): 34461
 > - Full dataset (CC BY 4.0 for FinPaperRadar additions): [Hugging Face](https://huggingface.co/datasets/Barca21412/FinPaperRadar) · [GitHub Release mirror](https://github.com/Barca0412/Introduction-to-Quantitative-Finance/releases/tag/radar-data)
