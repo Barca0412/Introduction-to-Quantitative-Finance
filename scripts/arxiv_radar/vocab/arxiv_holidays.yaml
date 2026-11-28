@@ -1,0 +1,31 @@
+# arXiv's announcement calendar, for the "arXiv did not announce, so no new papers"
+# notice on the Radar site and in the README (arxiv_calendar.py).
+#
+# Rules from arXiv (https://info.arxiv.org/help/availability.html):
+#   - an announcement every Sunday to Thursday at 20:00 US Eastern; none on Friday or Saturday;
+#   - on the dates under `holidays` there is no announcement that evening.
+#
+# holidays: copied date by date from the "2026 Holidays" list on that page (checked
+#   2026-11-28). arXiv lists only dates; name_zh / name_en are our own labels for the US
+#   holidays that fall on them.
+# deferred: one-off pauses arXiv announces on https://status.arxiv.org or
+#   https://blog.arxiv.org. Add by hand: {date, reason_zh, reason_en, source_url}.
+# years: years whose holiday list is complete. Add next year's dates (and the year here)
+#   when arXiv publishes them; the daily run warns when the current year is missing.
+
+source_url: https://info.arxiv.org/help/availability.html
+checked: 2026-11-28
+years: [2026]
+
+holidays:
+  - {date: 2026-01-01, name_zh: 元旦, name_en: New Year's Day}
+  - {date: 2026-01-19, name_zh: 美国马丁·路德·金纪念日, name_en: Martin Luther King Jr. Day}
+  - {date: 2026-06-19, name_zh: 美国六月节, name_en: Juneteenth}
+  - {date: 2026-07-03, name_zh: 美国独立日（补休）, name_en: Independence Day (observed)}
+  - {date: 2026-09-07, name_zh: 美国劳动节, name_en: Labor Day}
+  - {date: 2026-10-12, name_zh: 美国原住民日（哥伦布日）, name_en: Indigenous Peoples' Day / Columbus Day}
+  - {date: 2026-11-11, name_zh: 美国退伍军人节, name_en: Veterans Day}
+  - {date: 2026-11-26, name_zh: 美国感恩节, name_en: US Thanksgiving}
+  - {date: 2026-12-25, name_zh: 圣诞节, name_en: Christmas Day}
+
+deferred: []

@@ -36,6 +36,9 @@ function buildStatusBlock(statsPayload, papersPayload) {
   const papers = papersPayload.papers || []
   const latestPaperDate = summary.latest_published_date || papers[0]?.published_date || 'N/A'
   const latestUpdate = formatDate(statsPayload.last_updated || papersPayload.last_updated)
+  // Written by arxiv_calendar.py when arXiv itself paused (weekend, holiday list, deferral).
+  const schedule = statsPayload.arxiv_schedule
+  const scheduleLine = schedule?.notice_en ? [`> - arXiv schedule: ${schedule.notice_en}`] : []
 
   return [
     START_MARKER,
@@ -44,6 +47,7 @@ function buildStatusBlock(statsPayload, papersPayload) {
     `> - Latest update: ${latestUpdate}`,
     `> - AI × finance papers on the site: ${site.papers ?? 0} (core ${site.core_papers ?? 0}; relevance ≥ 2 with an AI/ML method, since ${site.since || 'N/A'})`,
     `> - Latest publication date: ${site.latest || latestPaperDate}`,
+    ...scheduleLine,
     `> - Monitored arXiv categories: ${summary.monitored_categories ?? 15} (plus finance papers from cs.LG and stat.ML)`,
     `> - Papers in the open dataset (all fetched, incl. not relevant): ${summary.total_papers ?? papers.length}`,
     datasetLine(),

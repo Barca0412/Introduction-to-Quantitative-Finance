@@ -125,8 +125,12 @@ def compute_keyword_stats(
     return {"daily": daily, "cumulative": cumulative}
 
 
-def compute_and_save_stats(papers: List[Dict[str, Any]]) -> Dict[str, Any]:
-    """Compute statistics over the full history and save them to data/stats.json."""
+def compute_and_save_stats(papers: List[Dict[str, Any]], data_updated_at: Any = None) -> Dict[str, Any]:
+    """Compute statistics over the full history and save them to data/stats.json.
+
+    ``data_updated_at``: when the papers were last fetched. The daily fetch passes "now";
+    callers that only recompute old data leave it out, so no arXiv-pause notice is written.
+    """
     stats = build_stats(papers)
     # What the site shows, for the README status block (full-history numbers above).
     from .site_filter import site_visible
@@ -138,6 +142,10 @@ def compute_and_save_stats(papers: List[Dict[str, Any]]) -> Dict[str, Any]:
         "since": min((p.get("published_date", "") for p in shown), default=""),
         "latest": max((p.get("published_date", "") for p in shown), default=""),
     }
+    # Why the newest date may stand still (arXiv weekend / holiday); the README uses the text.
+    from .arxiv_calendar import announcement_status
+
+    stats["arxiv_schedule"] = announcement_status(datetime.utcnow(), data_updated_at)
     save_stats(stats)
     return stats
 
