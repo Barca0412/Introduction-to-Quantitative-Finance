@@ -141,6 +141,7 @@ def compute_and_save_stats(papers: List[Dict[str, Any]], data_updated_at: Any = 
         "core_papers": sum(1 for p in shown if p.get("relevance") == 3),
         "since": min((p.get("published_date", "") for p in shown), default=""),
         "latest": max((p.get("published_date", "") for p in shown), default=""),
+        "domains": site_domain_counts(shown),
     }
     # Why the newest date may stand still (arXiv weekend / holiday); the README uses the text.
     from .arxiv_calendar import announcement_status
@@ -148,6 +149,20 @@ def compute_and_save_stats(papers: List[Dict[str, Any]], data_updated_at: Any = 
     stats["arxiv_schedule"] = announcement_status(datetime.utcnow(), data_updated_at)
     save_stats(stats)
     return stats
+
+
+def site_domain_counts(shown: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """Papers per finance domain among the papers the site shows, most first (README chart).
+
+    A paper with two domains counts once in each. Ties keep the taxonomy order.
+    """
+    from .enrich import taxonomy
+
+    labels = {item["id"]: item["zh"] for item in taxonomy()["finance_domains"]}
+    order = list(labels)
+    counts = Counter(d for p in shown for d in dict.fromkeys(p.get("finance_domains") or []) if d in labels)
+    ranked = sorted(counts, key=lambda d: (-counts[d], order.index(d)))
+    return [{"id": d, "zh": labels[d], "papers": counts[d]} for d in ranked]
 
 
 FACET_DIMENSIONS = (

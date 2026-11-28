@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="384" viewBox="0 0 1200 384" role="img" aria-labelledby="t d">
+<title id="t">FinPaperRadar 论文雷达快照</title>
+<desc id="d">论文雷达快照：网站收录 471 篇 AI × 金融论文，核心 325 篇，最新论文 2026-11-25。按金融领域：资产定价与因子 84，信用、银行与支付 78，交易与执行 70，组合与风险管理 70，金融文本与舆情 70，公司金融与会计 66。arXiv 停发：11 月 26 日（周四）美国感恩节；周五、周六本来不发。下一期预计北京时间 11 月 30 日（周一）上午。</desc>
+<rect width="1200" height="384" rx="16" fill="#0d2a1c"/>
+<circle cx="60" cy="60" r="8" fill="#f6e016"/>
+<text x="78" y="66" fill="#f7f7f7" font-family="Jost, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="18" font-weight="600" text-anchor="start">FinPaperRadar · AI × 金融论文雷达</text>
+<text x="1148" y="66" fill="#a7b6ad" font-family="Jost, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="18" font-weight="400" text-anchor="end">数据截至 2026-11-25</text>
+<text x="52" y="176" fill="#f6e016" font-family="Jost, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="76" font-weight="600" text-anchor="start" letter-spacing="-1">471</text>
+<text x="52" y="216" fill="#f7f7f7" font-family="Jost, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="21" font-weight="400" text-anchor="start">篇 AI × 金融论文在网站上</text>
+<text x="52" y="246" fill="#a7b6ad" font-family="Jost, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="18" font-weight="400" text-anchor="start">其中核心论文 325 篇 · 2022 年起</text>
+<text x="52" y="274" fill="#a7b6ad" font-family="Jost, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="18" font-weight="400" text-anchor="start">监控 15 个 arXiv 分类，每天更新</text>
+<text x="536" y="112" fill="#a7b6ad" font-family="Jost, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="17" font-weight="400" text-anchor="start">按金融领域（前 6 个，一篇可属多个领域）</text>
+<text x="536" y="150" fill="#f7f7f7" font-family="Jost, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="18" font-weight="400" text-anchor="start">资产定价与因子</text>
+<rect x="712" y="136" width="360" height="14" rx="3" fill="#1c3d2e"/>
+<rect x="712" y="136" width="360" height="14" rx="3" fill="#f6e016"/>
+<text x="1148" y="150" fill="#f7f7f7" font-family="Jost, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="18" font-weight="500" text-anchor="end">84</text>
+<text x="536" y="180" fill="#f7f7f7" font-family="Jost, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="18" font-weight="400" text-anchor="start">信用、银行与支付</text>
+<rect x="712" y="166" width="360" height="14" rx="3" fill="#1c3d2e"/>
+<rect x="712" y="166" width="334" height="14" rx="3" fill="#f6e016"/>
+<text x="1148" y="180" fill="#f7f7f7" font-family="Jost, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="18" font-weight="500" text-anchor="end">78</text>
+<text x="536" y="210" fill="#f7f7f7" font-family="Jost, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="18" font-weight="400" text-anchor="start">交易与执行</text>
+<rect x="712" y="196" width="360" height="14" rx="3" fill="#1c3d2e"/>
+<rect x="712" y="196" width="300" height="14" rx="3" fill="#f6e016"/>
+<text x="1148" y="210" fill="#f7f7f7" font-family="Jost, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="18" font-weight="500" text-anchor="end">70</text>
+<text x="536" y="240" fill="#f7f7f7" font-family="Jost, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="18" font-weight="400" text-anchor="start">组合与风险管理</text>
+<rect x="712" y="226" width="360" height="14" rx="3" fill="#1c3d2e"/>
+<rect x="712" y="226" width="300" height="14" rx="3" fill="#f6e016"/>
+<text x="1148" y="240" fill="#f7f7f7" font-family="Jost, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="18" font-weight="500" text-anchor="end">70</text>
+<text x="536" y="270" fill="#f7f7f7" font-family="Jost, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="18" font-weight="400" text-anchor="start">金融文本与舆情</text>
+<rect x="712" y="256" width="360" height="14" rx="3" fill="#1c3d2e"/>
+<rect x="712" y="256" width="300" height="14" rx="3" fill="#f6e016"/>
+<text x="1148" y="270" fill="#f7f7f7" font-family="Jost, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="18" font-weight="500" text-anchor="end">70</text>
+<text x="536" y="300" fill="#f7f7f7" font-family="Jost, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="18" font-weight="400" text-anchor="start">公司金融与会计</text>
+<rect x="712" y="286" width="360" height="14" rx="3" fill="#1c3d2e"/>
+<rect x="712" y="286" width="283" height="14" rx="3" fill="#f6e016"/>
+<text x="1148" y="300" fill="#f7f7f7" font-family="Jost, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="18" font-weight="500" text-anchor="end">66</text>
+<line x1="52" y1="320" x2="1148" y2="320" stroke="#2a4a3c" stroke-width="1"/>
+<circle cx="60" cy="350" r="6" fill="#f6e016"/>
+<text x="76" y="357" fill="#f7f7f7" font-family="Jost, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="19" font-weight="400" text-anchor="start">arXiv 停发：11 月 26 日（周四）美国感恩节；周五、周六本来不发。下一期预计北京时间 11 月 30 日（周一）上午。</text>
+</svg>

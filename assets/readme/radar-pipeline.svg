@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="276" viewBox="0 0 1200 276" role="img" aria-labelledby="t d">
+<title id="t">论文雷达每天怎么更新</title>
+<desc id="d">arXiv 15 个分类 → 每日抓取（GitHub Actions）→ 大模型打标签、写中文摘要、评相关度 → 网站、Hugging Face 数据集、本 README。</desc>
+<rect width="1200" height="276" rx="16" fill="#0d2a1c"/>
+<circle cx="60" cy="56" r="8" fill="#f6e016"/>
+<text x="78" y="62" fill="#f7f7f7" font-family="Jost, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="20" font-weight="600" text-anchor="start">论文雷达每天怎么更新</text>
+<rect x="52" y="96" width="240" height="140" rx="6" fill="#123526"/>
+<text x="72" y="138" fill="#f7f7f7" font-family="Jost, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="21" font-weight="600" text-anchor="start">arXiv</text>
+<text x="72" y="176" fill="#a7b6ad" font-family="Jost, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="17" font-weight="400" text-anchor="start">15 个分类的新论文</text>
+<text x="72" y="204" fill="#a7b6ad" font-family="Jost, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="17" font-weight="400" text-anchor="start">cs.LG、stat.ML 只收金融的</text>
+<line x1="300" y1="166" x2="328" y2="166" stroke="#a7b6ad" stroke-width="1.5"/>
+<path d="M326 161 L334 166 L326 171 Z" fill="#a7b6ad"/>
+<rect x="340" y="96" width="240" height="140" rx="6" fill="#123526"/>
+<text x="360" y="138" fill="#f7f7f7" font-family="Jost, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="21" font-weight="600" text-anchor="start">每日抓取</text>
+<text x="360" y="176" fill="#a7b6ad" font-family="Jost, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="17" font-weight="400" text-anchor="start">GitHub Actions</text>
+<text x="360" y="204" fill="#a7b6ad" font-family="Jost, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="17" font-weight="400" text-anchor="start">每天自动运行一次</text>
+<line x1="588" y1="166" x2="616" y2="166" stroke="#a7b6ad" stroke-width="1.5"/>
+<path d="M614 161 L622 166 L614 171 Z" fill="#a7b6ad"/>
+<rect x="628" y="96" width="240" height="140" rx="6" fill="#123526"/>
+<text x="648" y="138" fill="#f7f7f7" font-family="Jost, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="21" font-weight="600" text-anchor="start">大模型处理</text>
+<text x="648" y="176" fill="#a7b6ad" font-family="Jost, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="17" font-weight="400" text-anchor="start">打研究标签、提取关键词</text>
+<text x="648" y="204" fill="#a7b6ad" font-family="Jost, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="17" font-weight="400" text-anchor="start">写中文摘要、评相关度</text>
+<line x1="876" y1="166" x2="904" y2="166" stroke="#a7b6ad" stroke-width="1.5"/>
+<path d="M902 161 L910 166 L902 171 Z" fill="#a7b6ad"/>
+<rect x="916" y="96" width="232" height="40" rx="6" fill="#123526"/>
+<circle cx="934" cy="116" r="4" fill="#f6e016"/>
+<text x="948" y="122" fill="#f7f7f7" font-family="Jost, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="17" font-weight="400" text-anchor="start">网站 quant.hfthnu.com</text>
+<rect x="916" y="146" width="232" height="40" rx="6" fill="#123526"/>
+<circle cx="934" cy="166" r="4" fill="#f6e016"/>
+<text x="948" y="172" fill="#f7f7f7" font-family="Jost, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="17" font-weight="400" text-anchor="start">Hugging Face 数据集</text>
+<rect x="916" y="196" width="232" height="40" rx="6" fill="#123526"/>
+<circle cx="934" cy="216" r="4" fill="#f6e016"/>
+<text x="948" y="222" fill="#f7f7f7" font-family="Jost, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="17" font-weight="400" text-anchor="start">本 README</text>
+</svg>

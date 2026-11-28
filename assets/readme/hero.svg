@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="t d">
+<title id="t">量化研究入门 · Introduction to Quantitative Finance</title>
+<desc id="d">量化课程讲义、研报与论文目录，和每天更新的 AI × 金融论文雷达。讲义，每讲一个完整项目 2 讲，卖方金工研报 194 份，雷达收录 AI × 金融论文 471 篇，开放数据集论文 34,461 篇。每天自动更新 · 论文数据截至 2026-11-25。</desc>
+<rect width="1200" height="360" rx="16" fill="#0d2a1c"/>
+<circle cx="60" cy="64" r="8" fill="#f6e016"/>
+<text x="78" y="70" fill="#a7b6ad" font-family="Jost, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="20" font-weight="500" text-anchor="start">quant.hfthnu.com</text>
+<text x="52" y="156" fill="#f7f7f7" font-family="Jost, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="60" font-weight="700" text-anchor="start" letter-spacing="-1">量化研究入门</text>
+<text x="52" y="196" fill="#a7b6ad" font-family="Jost, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="21" font-weight="400" text-anchor="start">Introduction to Quantitative Finance</text>
+<text x="52" y="248" fill="#f7f7f7" font-family="Jost, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="21" font-weight="400" text-anchor="start">量化课程讲义、研报与论文目录，</text>
+<text x="52" y="280" fill="#f7f7f7" font-family="Jost, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="21" font-weight="400" text-anchor="start">和每天更新的 AI × 金融论文雷达</text>
+<text x="52" y="326" fill="#a7b6ad" font-family="Jost, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="17" font-weight="400" text-anchor="start">每天自动更新 · 论文数据截至 2026-11-25</text>
+<rect x="680" y="44" width="226" height="128" rx="6" fill="#123526"/>
+<text x="702" y="106" fill="#f6e016" font-family="Jost, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="38" font-weight="600" text-anchor="start">2<tspan font-size="19" font-weight="500" fill="#a7b6ad" dx="6">讲</tspan></text>
+<text x="702" y="144" fill="#a7b6ad" font-family="Jost, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="17" font-weight="400" text-anchor="start">讲义，每讲一个完整项目</text>
+<rect x="922" y="44" width="226" height="128" rx="6" fill="#123526"/>
+<text x="944" y="106" fill="#f6e016" font-family="Jost, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="38" font-weight="600" text-anchor="start">194<tspan font-size="19" font-weight="500" fill="#a7b6ad" dx="6">份</tspan></text>
+<text x="944" y="144" fill="#a7b6ad" font-family="Jost, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="17" font-weight="400" text-anchor="start">卖方金工研报</text>
+<rect x="680" y="188" width="226" height="128" rx="6" fill="#123526"/>
+<text x="702" y="250" fill="#f6e016" font-family="Jost, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="38" font-weight="600" text-anchor="start">471<tspan font-size="19" font-weight="500" fill="#a7b6ad" dx="6">篇</tspan></text>
+<text x="702" y="288" fill="#a7b6ad" font-family="Jost, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="17" font-weight="400" text-anchor="start">雷达收录 AI × 金融论文</text>
+<rect x="922" y="188" width="226" height="128" rx="6" fill="#123526"/>
+<text x="944" y="250" fill="#f6e016" font-family="Jost, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="38" font-weight="600" text-anchor="start">34,461<tspan font-size="19" font-weight="500" fill="#a7b6ad" dx="6">篇</tspan></text>
+<text x="944" y="288" fill="#a7b6ad" font-family="Jost, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="17" font-weight="400" text-anchor="start">开放数据集论文</text>
+</svg>
