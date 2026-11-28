@@ -303,7 +303,7 @@ export default defineConfig({
     footer: {
       message: [
         `<a href="${BASE}about">关于</a>`,
-        '<a href="https://github.com/Barca0412/Introduction-to-Quantitative-Finance/blob/main/CONTRIBUTING.md">参与贡献</a>',
+        '<a href="https://github.com/Barca0412/Introduction-to-Quantitative-Finance/blob/main/.github/CONTRIBUTING.md">参与贡献</a>',
         `<a href="${BASE}about#如何引用">如何引用</a>`,
         `<a href="${BASE}about#合作与联系">合作联系</a>`
       ].join(' · '),

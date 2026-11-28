@@ -13,7 +13,7 @@
 | `docs/resources/` | 资源清单 |
 | `资料/`、`论文/` | 研报、论文和代码原文件 |
 | `data/registry/` | 资源清单的数据（YAML），站点资源页和 README 精选由它生成 |
-| `templates/tutorial/`、`templates/wiki-page.md` | 讲义模板、知识库概念页模板 |
+| `.github/templates/tutorial/`、`.github/templates/wiki-page.md` | 讲义模板、知识库概念页模板 |
 | `scripts/` | 论文雷达流水线（`arxiv_radar/`）和站点生成脚本（`site/`） |
 
 本地预览：
@@ -25,7 +25,7 @@ npm run docs:dev
 
 ## 写一讲新讲义
 
-1. 把 `templates/tutorial/` 整个复制到 `docs/tutorials/<两位编号>-<英文短名>/`，例如 `docs/tutorials/01-factor-ic-test/`。
+1. 把 `.github/templates/tutorial/` 整个复制到 `docs/tutorials/<两位编号>-<英文短名>/`，例如 `docs/tutorials/01-factor-ic-test/`。
 2. 改 `index.md` 开头的字段：标题、80–120 字的描述、难度、时长、前置知识、数据来源、署名、授权，以及用到的知识库页面和研报。
 3. 正文按模板的八节写：要解决的问题、你会做出什么、数据与环境、分步实现、结果与解读、常见的坑、延伸阅读、练习。
 4. 完整代码放 `code/`，要能在全新环境里从头跑通；只能用读者免费拿得到的数据，必要时在 `data/sample/` 放小样本。
@@ -40,7 +40,7 @@ npm run docs:dev
 
 ## 往资源清单里加项目
 
-资源清单由 `data/registry/` 里的 YAML 生成，站点页面和 README 精选都不要手改。字段和命令见 [data/registry/README.md](./data/registry/README.md)。
+资源清单由 `data/registry/` 里的 YAML 生成，站点页面和 README 精选都不要手改。字段和命令见 [data/registry/README.md](../data/registry/README.md)。
 
 两种方式都可以：
 

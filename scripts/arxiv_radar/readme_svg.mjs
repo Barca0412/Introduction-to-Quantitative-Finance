@@ -1,5 +1,5 @@
 // README 里的三张图：顶部横幅、论文雷达快照卡、雷达流程图。
-// update_readme.mjs 每天用 data/stats.json 重画，写到 assets/readme/。
+// update_readme.mjs 每天用 data/stats.json 重画，写到 .github/assets/。
 // 配色取自网站 docs/.vitepress/theme/tokens.css：墨绿底、浅色字、黄色只用在数据和小圆点上；
 // 不用渐变和阴影，图形小圆角。墨绿底在 GitHub 浅色、深色模式下都能看，所以每张图只出一份。
 // SVG 作为 <img> 显示时加载不了网页字体，字体栈退回系统字体，中文照常显示。

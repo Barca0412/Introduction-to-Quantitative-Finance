@@ -11,7 +11,7 @@ const BASE_DIR = path.resolve(__dirname, '..', '..')
 const README_FILE = path.join(BASE_DIR, 'README.md')
 const PAPERS_FILE = path.join(BASE_DIR, 'data', 'papers.json')
 const STATS_FILE = path.join(BASE_DIR, 'data', 'stats.json')
-const SVG_DIR = path.join(BASE_DIR, 'assets', 'readme')
+const SVG_DIR = path.join(BASE_DIR, '.github', 'assets')
 const TUTORIALS_DIR = path.join(BASE_DIR, 'docs', 'tutorials')
 const REPORTS_DIR = path.join(BASE_DIR, '资料', '卖方金工研报')
 
@@ -64,7 +64,7 @@ export function buildStatusBlock(statsPayload, papersPayload) {
   return [
     START_MARKER,
     '<p align="center">',
-    `  <a href="${RADAR_URL}"><img src="./assets/readme/radar-snapshot.svg" width="100%" alt="${esc(snapshotDescription(statsPayload))}"></a>`,
+    `  <a href="${RADAR_URL}"><img src="./.github/assets/radar-snapshot.svg" width="100%" alt="${esc(snapshotDescription(statsPayload))}"></a>`,
     '</p>',
     '',
     summaryZh(statsPayload, latestUpdate),
@@ -140,7 +140,7 @@ async function main() {
   const next = readme.replace(pattern, () => replacement)
   await fs.writeFile(README_FILE, next)
   const facts = await writeSvgs(statsPayload)
-  console.log(`Updated README arXiv radar status block and assets/readme/*.svg (${JSON.stringify(facts)})`)
+  console.log(`Updated README arXiv radar status block and .github/assets/*.svg (${JSON.stringify(facts)})`)
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === __filename) {

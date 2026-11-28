@@ -1,5 +1,5 @@
 ---
-# 讲义模板。复制整个 templates/tutorial/ 到 docs/tutorials/<编号-英文短名>/，
+# 讲义模板。复制整个 .github/templates/tutorial/ 到 docs/tutorials/<编号-英文短名>/，
 # 例如 docs/tutorials/01-factor-ic-test/，再改下面的字段。以 # 开头的注释行可以删掉。
 title: 第 N 讲 · 用一句话说清这一讲做什么
 # 80–120 字，写给搜索引擎和讲义列表看：谁、用什么数据、做出什么结果。
