@@ -93,7 +93,7 @@ test('pipeline diagram', () => {
 test('status block: card, Chinese summary with the arXiv link, English details', () => {
   const block = buildStatusBlock(stats(HOLIDAY), { papers: [] })
   assert.ok(block.startsWith('<!-- ARXIV_RADAR_STATUS:START -->') && block.endsWith('<!-- ARXIV_RADAR_STATUS:END -->'))
-  assert.ok(block.includes('src="./assets/readme/radar-snapshot.svg"'))
+  assert.ok(block.includes('src="./.github/assets/radar-snapshot.svg"'))
   assert.ok(block.includes('alt="论文雷达快照：网站收录 471 篇') && block.includes('R&amp;D &lt;测试&gt;'))
   assert.ok(block.includes('[arXiv 官方的 2026 假期名单](https://info.arxiv.org/help/availability.html)上'))
   assert.ok(block.includes('<details>') && block.includes('- arXiv schedule: No announcement on 2026-11-26.'))

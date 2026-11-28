@@ -31,7 +31,7 @@ description: 讲义来源于湖南大学金融与统计学院唐国豪老师的�
 
 我们也欢迎更多人一起把这套教程做好：
 
-- **改进讲义**：发现错误、想补充例子或练习，直接提 issue 或 Pull Request，写法见 [CONTRIBUTING.md](https://github.com/Barca0412/Introduction-to-Quantitative-Finance/blob/main/CONTRIBUTING.md)。
+- **改进讲义**：发现错误、想补充例子或练习，直接提 issue 或 Pull Request，写法见 [CONTRIBUTING.md](https://github.com/Barca0412/Introduction-to-Quantitative-Finance/blob/main/.github/CONTRIBUTING.md)。
 - **贡献新项目**：有好的量化研究小项目，欢迎按讲义模板整理后投稿。
 - **课程与研究合作**：如果你在高校任教、带学生社团，或者在机构从事量化研究，想在课程、数据或研究上合作，欢迎通过[关于页](/about#合作与联系)的方式联系我们。
 

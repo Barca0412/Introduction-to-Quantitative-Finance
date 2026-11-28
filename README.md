@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://quant.hfthnu.com/"><img src="./assets/readme/hero.svg" width="100%" alt="量化研究入门 · Introduction to Quantitative Finance：量化课程讲义、研报与论文目录，和每天更新的 AI × 金融论文雷达"></a>
+  <a href="https://quant.hfthnu.com/"><img src="./.github/assets/hero.svg" width="100%" alt="量化研究入门 · Introduction to Quantitative Finance：量化课程讲义、研报与论文目录，和每天更新的 AI × 金融论文雷达"></a>
 </p>
 
 <p align="center">
@@ -15,7 +15,7 @@
   <a href="https://github.com/Barca0412/Introduction-to-Quantitative-Finance/forks"><img src="https://img.shields.io/github/forks/Barca0412/Introduction-to-Quantitative-Finance?style=flat" alt="GitHub forks"></a>
   <a href="LICENSE"><img src="https://img.shields.io/github/license/Barca0412/Introduction-to-Quantitative-Finance" alt="MIT License"></a>
   <a href="https://huggingface.co/datasets/Barca21412/FinPaperRadar"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20dataset-FinPaperRadar-yellow" alt="FinPaperRadar dataset on Hugging Face"></a>
-  <a href="https://atomgit.com/Barca12345/Introduction-to-Quantitative-Finance"><img src="https://atomgit.com/Barca12345/Introduction-to-Quantitative-Finance/star/new_badge.svg" alt="AtomGit G-Star"></a>
+  <a href="https://atomgit.com/Barca12345/Introduction-to-Quantitative-Finance"><img src="https://atomgit.com/Barca12345/Introduction-to-Quantitative-Finance/star/new_badge.svg" height="20" alt="AtomGit G-Star"></a>
 </p>
 
 ## 这里有什么
@@ -59,7 +59,7 @@
 
 <!-- ARXIV_RADAR_STATUS:START -->
 <p align="center">
-  <a href="https://quant.hfthnu.com/arxiv/"><img src="./assets/readme/radar-snapshot.svg" width="100%" alt="论文雷达快照：网站收录 471 篇 AI × 金融论文，核心 325 篇，最新论文 2026-11-25。按金融领域：资产定价与因子 84，信用、银行与支付 78，交易与执行 70，组合与风险管理 70，金融文本与舆情 70，公司金融与会计 66。arXiv 停发：11 月 26 日（周四）美国感恩节；周五、周六本来不发。下一期预计北京时间 11 月 30 日（周一）上午。"></a>
+  <a href="https://quant.hfthnu.com/arxiv/"><img src="./.github/assets/radar-snapshot.svg" width="100%" alt="论文雷达快照：网站收录 471 篇 AI × 金融论文，核心 325 篇，最新论文 2026-11-25。按金融领域：资产定价与因子 84，信用、银行与支付 78，交易与执行 70，组合与风险管理 70，金融文本与舆情 70，公司金融与会计 66。arXiv 停发：11 月 26 日（周四）美国感恩节；周五、周六本来不发。下一期预计北京时间 11 月 30 日（周一）上午。"></a>
 </p>
 
 截至 2026-11-28，网站收录 471 篇 AI × 金融论文（核心 325 篇，2022 年起），最新一篇发表于 2026-11-25。11 月 26 日（周四）是美国感恩节，在 [arXiv 官方的 2026 假期名单](https://info.arxiv.org/help/availability.html)上，当天晚上那一期停发了；周五、周六 arXiv 本来不发新论文。所以这几天没有新论文，不是本站出了问题。下一期预计北京时间 11 月 30 日（周一）上午发布，本站当天自动更新。
@@ -79,7 +79,7 @@
 <!-- ARXIV_RADAR_STATUS:END -->
 
 <p align="center">
-  <img src="./assets/readme/radar-pipeline.svg" width="100%" alt="论文雷达每天怎么更新：arXiv 15 个分类的新论文，经 GitHub Actions 每日抓取，由大模型打研究标签、写中文摘要、评相关度，再发布到网站 quant.hfthnu.com、Hugging Face 数据集和这份 README">
+  <img src="./.github/assets/radar-pipeline.svg" width="100%" alt="论文雷达每天怎么更新：arXiv 15 个分类的新论文，经 GitHub Actions 每日抓取，由大模型打研究标签、写中文摘要、评相关度，再发布到网站 quant.hfthnu.com、Hugging Face 数据集和这份 README">
 </p>
 
 - **每天自动更新**：GitHub Actions 每天抓一次 arXiv，处理完自动发布到网站、数据集和这份 README，上面的数字和图也是当天重画的。
@@ -223,7 +223,7 @@
 
 ## 参与贡献
 
-欢迎修正错误、补充资料、改进讲义。怎么写一讲新讲义、资源清单收录什么样的项目，见 [CONTRIBUTING.md](./CONTRIBUTING.md)。有想法可以先在 [Discussions](https://github.com/Barca0412/Introduction-to-Quantitative-Finance/discussions) 交流。
+欢迎修正错误、补充资料、改进讲义。怎么写一讲新讲义、资源清单收录什么样的项目，见 [CONTRIBUTING.md](./.github/CONTRIBUTING.md)。有想法可以先在 [Discussions](https://github.com/Barca0412/Introduction-to-Quantitative-Finance/discussions) 交流。
 
 ## Star History
 

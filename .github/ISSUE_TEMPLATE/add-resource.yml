@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        感谢推荐！收录标准见 [CONTRIBUTING.md](https://github.com/Barca0412/Introduction-to-Quantitative-Finance/blob/main/CONTRIBUTING.md#往资源清单里加项目)。维护者会在 7 天内回复。
+        感谢推荐！收录标准见 [CONTRIBUTING.md](https://github.com/Barca0412/Introduction-to-Quantitative-Finance/blob/main/.github/CONTRIBUTING.md#往资源清单里加项目)。维护者会在 7 天内回复。
   - type: input
     id: name
     attributes:

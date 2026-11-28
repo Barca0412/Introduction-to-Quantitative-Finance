@@ -27,8 +27,8 @@ description: 这个站点由湖南大学金融科技协会 Quant Group 开源维
 ## 改讲义，或者投一讲新教程
 
 - 小的修正可以直接提 [Pull Request](https://github.com/Barca0412/Introduction-to-Quantitative-Finance/pulls)。
-- 想写一讲新教程：先在 [Discussions](https://github.com/Barca0412/Introduction-to-Quantitative-Finance/discussions) 说一下想法，再按仓库 `templates/tutorial/` 的模板写。一讲是一项完整的小研究，代码要能从头跑通。
-- 投稿规则见仓库的 [CONTRIBUTING.md](https://github.com/Barca0412/Introduction-to-Quantitative-Finance/blob/main/CONTRIBUTING.md)。
+- 想写一讲新教程：先在 [Discussions](https://github.com/Barca0412/Introduction-to-Quantitative-Finance/discussions) 说一下想法，再按仓库 `.github/templates/tutorial/` 的模板写。一讲是一项完整的小研究，代码要能从头跑通。
+- 投稿规则见仓库的 [CONTRIBUTING.md](https://github.com/Barca0412/Introduction-to-Quantitative-Finance/blob/main/.github/CONTRIBUTING.md)。
 
 ## 给论文雷达提建议
 
