@@ -7,6 +7,7 @@ import './style.css'
 import SiteHeader from './components/SiteHeader.vue'
 import SiteFooter from './components/SiteFooter.vue'
 import TutorialSidebar from './components/TutorialSidebar.vue'
+import RadarNotice from './components/radar/RadarNotice.vue'
 import ResourceIntro from './components/ResourceIntro.vue'
 import ResourceOutline from './components/ResourceOutline.vue'
 import WikiBacklinks from './components/WikiBacklinks.vue'
@@ -31,8 +32,8 @@ const externalLink = (href,text) => h('a',{href,target:'_blank',rel:'noopener'},
 export const RadarDatasetLinks = {setup(){ return ()=>h('span',{class:'radar-dataset-links'},[
  '完整数据：', ...(__HF_DATASET_REPO__ ? [externalLink(`https://huggingface.co/datasets/${__HF_DATASET_REPO__}`,'Hugging Face'),' · '] : []), externalLink(__RADAR_RELEASE_URL__,'GitHub Release')
 ])}}
-const Layout = {setup(){const {frontmatter,page}=useData();const tutorial=computed(()=>Boolean(frontmatter.value.tutorial));const resource=computed(()=>page.value.relativePath.startsWith('resources/'));return ()=>h(DefaultTheme.Layout,{class:{'lecture-page':tutorial.value,'resource-page':resource.value}},{
- 'layout-top':()=>[h(SiteHeader), tutorial.value ? h('div',{class:'lecture-intro page'},[h('nav',{class:'lecture-crumbs','aria-label':'位置'},[h('a',{href:withBase('/tutorials/')},'教程')]),h('header',{class:'lecture-heading'},[h('h1',frontmatter.value.title),h('p',{class:'read-lead'},frontmatter.value.description)]),h(TutorialSidebar,{class:'lecture-mobile-sidebar',mobile:true})]) : null],
+const Layout = {setup(){const {frontmatter,page}=useData();const tutorial=computed(()=>Boolean(frontmatter.value.tutorial));const resource=computed(()=>page.value.relativePath.startsWith('resources/'));const radar=computed(()=>page.value.relativePath.startsWith('arxiv/'));return ()=>h(DefaultTheme.Layout,{class:{'lecture-page':tutorial.value,'resource-page':resource.value}},{
+ 'layout-top':()=>[h(SiteHeader), radar.value ? h(RadarNotice) : null, tutorial.value ? h('div',{class:'lecture-intro page'},[h('nav',{class:'lecture-crumbs','aria-label':'位置'},[h('a',{href:withBase('/tutorials/')},'教程')]),h('header',{class:'lecture-heading'},[h('h1',frontmatter.value.title),h('p',{class:'read-lead'},frontmatter.value.description)]),h(TutorialSidebar,{class:'lecture-mobile-sidebar',mobile:true})]) : null],
  'sidebar-nav-before':()=>tutorial.value?h(TutorialSidebar):null,
  'doc-before':()=>tutorial.value?null:[resource.value?h(ResourceIntro):null,h(WikiMeta)],
  'aside-outline-before':()=>resource.value?h(ResourceOutline):null,

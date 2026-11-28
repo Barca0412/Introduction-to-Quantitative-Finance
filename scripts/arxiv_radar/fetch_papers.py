@@ -4,6 +4,7 @@ import asyncio
 import logging
 import os
 import time
+from datetime import datetime
 from pathlib import Path
 from typing import Any, Callable, Dict, List, Optional, Tuple
 
@@ -387,7 +388,7 @@ async def run_pipeline(fetched: Optional[List[Dict[str, Any]]] = None) -> Option
     logger.info("Papers saved successfully")
 
     logger.info("\n[Step 6] Computing statistics...")
-    stats = compute_and_save_stats(merged["papers"])
+    stats = compute_and_save_stats(merged["papers"], data_updated_at=datetime.utcnow())
     logger.info("Statistics saved. Tracked dates: %s", len(stats["tag_stats"]["_all"]["daily"]))
 
     logger.info("\n[Step 7] Generating charts...")

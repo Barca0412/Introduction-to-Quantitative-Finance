@@ -47,6 +47,7 @@ from .config import (
 )
 from .compute_stats import build_stats
 from . import leaders, trends
+from .arxiv_calendar import announcement_status
 from .enrich import ENRICH_VERSION, taxonomy
 from .site_filter import site_visible
 from .utils import is_arxiv_id
@@ -339,7 +340,7 @@ def site_taxonomy() -> Dict[str, Any]:
     return out
 
 
-def build(today: Optional[date] = None) -> Dict[str, Any]:
+def build(today: Optional[date] = None, now: Optional[datetime] = None) -> Dict[str, Any]:
     payload = json.loads(PAPERS_FILE.read_text(encoding="utf-8"))
     history = [p for p in payload.get("papers", []) if p.get("id")]
     papers = [p for p in history if site_visible(p)]
@@ -429,6 +430,9 @@ def build(today: Optional[date] = None) -> Dict[str, Any]:
         "require_ai_method": SITE_REQUIRE_AI_METHOD,
         "undated_papers_skipped": undated,
         "latest_published_date": latest,
+        # arXiv's own pauses (weekend, holiday list, one-off deferral), so the site can say
+        # why the newest date stands still; None when arXiv announced as usual or our data is stale.
+        "arxiv_schedule": announcement_status(now, payload.get("last_updated")),
         "embedding": {
             "model": meta.get("model"),
             "dimension": int(matrix.shape[1]) if matrix.size else 0,

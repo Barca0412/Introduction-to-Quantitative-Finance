@@ -110,7 +110,7 @@ class PipelineStopTest(unittest.TestCase):
              mock.patch.object(fp, "load_papers", lambda: existing), \
              mock.patch.object(fp, "save_papers", lambda data: saved.append(data)), \
              mock.patch.object(fp, "enrich_institutions", self.no_institutions), \
-             mock.patch.object(fp, "compute_and_save_stats", lambda papers: {"tag_stats": {"_all": {"daily": {}}}}), \
+             mock.patch.object(fp, "compute_and_save_stats", lambda papers, **_: {"tag_stats": {"_all": {"daily": {}}}}), \
              mock.patch.object(fp, "generate_all_charts", lambda stats: None), \
              mock.patch.object(fp, "generate_combined_chart", lambda stats: None), \
              mock.patch.object(storage, "ENRICH_CHECKPOINT_FILE", checkpoint_file), \

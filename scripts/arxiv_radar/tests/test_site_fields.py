@@ -160,6 +160,25 @@ class BuildTest(unittest.TestCase):
             stats = json.loads((box.site / "stats.json").read_text())
             self.assertEqual(stats["facets"]["papers"], 3)
 
+    def test_manifest_explains_an_arxiv_holiday_only_when_our_data_is_fresh(self):
+        from datetime import datetime, timezone
+
+        now = datetime(2026, 11, 27, 12, 18, tzinfo=timezone.utc)
+        for updated, level in [("2026-11-27T12:11:23.552198", "holiday"), ("2026-11-24T12:00:00", None)]:
+            with tempfile.TemporaryDirectory() as tmp:
+                box = RadarSandbox(Path(tmp))
+                payload = {"last_updated": updated, "papers": [enriched(i) for i in range(2)]}
+                (box.data / "papers.json").write_text(json.dumps(payload), encoding="utf-8")
+                with box.patched():
+                    manifest = bsd.build(now=now)
+                written = json.loads((box.site / "manifest.json").read_text())
+                self.assertIn("arxiv_schedule", written)
+                got = written["arxiv_schedule"]
+                self.assertEqual(got and got["level"], level)
+                if level:
+                    self.assertIn("美国感恩节", got["notice_zh"])
+                    self.assertEqual(manifest["arxiv_schedule"]["next_bj"], "2026-11-30T09:00+08:00")
+
     def test_public_export_has_no_abstracts_and_uses_resolved_identity(self):
         with tempfile.TemporaryDirectory() as tmp:
             box = RadarSandbox(Path(tmp))
